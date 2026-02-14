@@ -25,9 +25,9 @@
   const EXPORT_TEMPLATE_URL = "../assets/images/places/stats_export_base.jpg";
 
   const EXPORT_STAT_COLOR = {
-    red:   "#e34b4b",
-    white: "#f2f2f2",
-    green: "#48c774",
+    red:   "#ff0000",
+    white: "#fefefe",
+    green: "#00ff00",
   };
 
   const BONUS_KEYS = ["hp", "spd", "ea", "pa", "ed", "pd"];
@@ -138,7 +138,7 @@
     title: { x: 0.50, y: 0.135, size: 24, dx: 0, dy: 0 },
 
     // Miscrit (centro)
-    avatar: { cx: 0.53, cy: 0.40, maxW: 0.62, maxH: 0.48, dx: 0, dy: 0 },
+    avatar: { cx: 0.53, cy: 0.40, maxW: 0.5, maxH: 0.5, dx: 0, dy: 0 },
 
     // Reliquias (columna izquierda, 4)
     relics: { x: 0.1, y0: 0.11, gapY: 0.145, size: 0.115, dx: 0, dy: 0 },
@@ -164,8 +164,7 @@
       dy: 0,
     },
 
-    // Stats totales (panel derecho)
-    statsRight: { x: 0.86, y0: 0.71, gapY: 0.042, iconDx: -50, iconSize: 30, textSize: 28, dx: 0, dy: 0 },
+    statsRight: { x: 0.86, y0: 0.71, gapX: 0.1, gapY: 0.040, iconDx: -50, iconSize: 30, textSize: 24, dx: 0, dy: 0 },
   };
 
   let EXPORT_TWEAK_MODE = false;
@@ -903,10 +902,10 @@
     const LTitle = EXPORT_LAYOUT.title;
     drawText(
       ctx,
-      `${LAST_RENDER.name} • Lv ${LAST_RENDER.level}`,
+      `${LAST_RENDER.name}`,
       W * LTitle.x + (LTitle.dx || 0),
       H * LTitle.y + (LTitle.dy || 0),
-      { size: LTitle.size, weight: 800, align: "center", baseline: "middle", color: "rgba(0,0,0,0.55)", shadow: false }
+      { size: LTitle.size, weight: 800, align: "center", baseline: "middle", color: "rgb(255, 255, 255)", shadow: false }
     );
 
     // 3) avatar
@@ -1067,14 +1066,25 @@
         const xIcon = W * SR.x + (SR.dx || 0) + (SR.iconDx || -80);
         ctx.drawImage(icon, xIcon, y - is / 2, is, is);
       }
-
+      const userColor = LAST_RENDER.colors[k] || "white";
+      const textColor = EXPORT_STAT_COLOR[userColor] || "#ffffff";
       // value
       drawText(
         ctx,
         String(val ?? 0),
         W * SR.x + (SR.dx || 0),
         y,
-        { size: SR.textSize, weight: 900, align: "left", baseline: "middle", color: "white", shadow: true, shadowColor: "rgba(0,0,0,0.45)", shadowBlur: 10, shadowDy: 4 }
+        {
+          size: SR.textSize,
+          weight: 900,
+          align: "left",
+          baseline: "middle",
+          color: textColor,
+          shadow: true,
+          shadowColor: "rgba(0,0,0,0.45)",
+          shadowBlur: 10,
+          shadowDy: 4
+        }
       );
     }
   }

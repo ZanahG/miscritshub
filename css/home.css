@@ -342,3 +342,40 @@
   color: rgba(255,255,255,0.70);
   font-size: 12px;
 }
+
+.hero{
+  position: relative;
+  overflow: hidden; /* para que el fondo no se salga del radius */
+}
+
+/* Imagen de fondo sutil */
+.hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: url("../assets/images/places/cave.webp") center/cover no-repeat;
+  opacity: .16;               /* súbelo/bájalo a gusto (0.10–0.22) */
+  filter: blur(2px);
+  transform: scale(1.05);
+  z-index: 0;
+}
+
+/* Overlay para mantener legibilidad (azul oscuro) */
+.hero::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: linear-gradient(
+    135deg,
+    rgba(8, 16, 32, .75),
+    rgba(10, 20, 45, .88)
+  );
+  z-index: 1;
+}
+
+/* Asegura que tu contenido quede arriba */
+.hero__content,
+.hero__panel{
+  position: relative;
+  z-index: 2;
+}

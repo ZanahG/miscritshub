@@ -1,0 +1,6985 @@
+{
+  "miscrits": [
+    {
+      "id": 0,
+      "name": "Aebex",
+      "rarity": "Common",
+      "best_rank": "RS",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": ["CLOUD_CAKE"],
+        "20": ["STONY_SHIELD"],
+        "30": ["ARROW_OF_LOVE","MAGICITE_STAFF"],"35": ["SHARD_OF_RUDOLFE"]
+      }
+    },
+    {
+      "id": 1,
+      "name": "Alpha",
+      "rarity": "Exotic",
+      "best_rank": "S+",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "WOODMANS_AXE_HEAD"
+        ],
+        "20": [
+          "OBSIDIAN_LAVA"
+        ],
+        "30": [
+          "CACTUS_FLOWER",
+          "NOXS_NIGHTMARE"
+        ],
+        "35": [
+          "CAGE_OF_DESPAIR",
+          "SCENT_OF_SKUSTUNK"
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "name": "Ampupine",
+      "rarity": "Rare",
+      "best_rank": "RS",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "WOODMANS_AXE_HEAD"
+        ],
+        "20": [
+          "OBSIDIAN_LAVA"
+        ],
+        "30": [
+          "CACTUS_FLOWER",
+          "PALMDAS_TALON"
+        ],
+        "35": [
+          "CAGE_OF_DESPAIR",
+          "GOGS_COG"
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "name": "Aquarion",
+      "rarity": "Legendary",
+      "best_rank": "S+",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "BLESSED_POLLEN",
+          "QUARTEX_CRYSTAL"
+        ],
+        "20": [
+          "FORGING_HAMMER"
+        ],
+        "30": [
+          "MONASTERY_IDOL",
+          "SHACKLERS_GEM"
+        ],
+        "35": [
+          "MOLTEN_COIN",
+          "MOON_ROCK"
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "name": "Aria",
+      "rarity": "Common",
+      "best_rank": "S+",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "CLOUD_CAKE"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "ARROW_OF_LOVE",
+          "MAGICITE_STAFF"
+        ],
+        "35": [
+          "SHARD_OF_RUDOLFE"
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "name": "Arigato",
+      "rarity": "Common",
+      "best_rank": "RS",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "CLOUD_CAKE"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "MAGICITE_STAFF"
+        ],
+        "35": [
+          "SHARD_OF_RUDOLFE"
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "name": "Auger",
+      "rarity": "Common",
+      "best_rank": "S+",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "WOODMANS_AXE_HEAD"
+        ],
+        "20": [
+          "EMERALD_SCALES"
+        ],
+        "30": [
+          "LOST_SWORDS"
+        ],
+        "35": [
+          "SAYAMS_TRIDENT"
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "name": "Avarus",
+      "rarity": "Common",
+      "best_rank": "RS",
+      "tierlist": "C",
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER"
+        ],
+        "20": [
+          "STONY_SHIELD",
+          "SUNFALL_SHORES_BANNER"
+        ],
+        "30": [
+          "MAGICITE_STAFF",
+          "TEMPLE_STONE"
+        ],
+        "35": [
+          "SHARD_OF_RUDOLFE"
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "name": "Babakku",
+      "rarity": "Epic",
+      "best_rank": "RS",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "PEEPSIE_EGGS",
+          "TEMPLE_STONE"
+        ],
+        "35": [
+          "FLYING_CARPET_FRAGMENT"
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "name": "Beakka",
+      "rarity": "Common",
+      "best_rank": "S+",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "WOODMANS_AXE_HEAD"
+        ],
+        "20": [
+          "EMERALD_SCALES"
+        ],
+        "30": [
+          "VANQUISHED_SOUL"
+        ],
+        "35": [
+          "GOGS_COG"
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "name": "Beateorite",
+      "rarity": "Legendary",
+      "best_rank": "S+",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "FROOST_ROOT",
+          "BLESSED_POLLEN",
+          "WOODMANS_AXE_HEAD"
+        ],
+        "20": [
+          "FORGING_HAMMER"
+        ],
+        "30": [
+          "GOLD_PIECE_DIE",
+          "MONASTERY_IDOL",
+          "SHACKLERS_GEM"
+        ],
+        "35": [
+          "FROZEN_COIN",
+          "MOLTEN_COIN",
+          "MOON_ROCK"
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "name": "Beelzebug",
+      "rarity": "Epic",
+      "best_rank": "RS",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "GKS_SLIPPERS"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "ARROW_OF_LOVE"
+        ],
+        "35": [
+          "SHARD_OF_RUDOLFE"
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "name": "Beldame",
+      "rarity": "Legendary",
+      "best_rank": "RS",
+      "tierlist": "A",
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "PEEPSIE_EGGS",
+          "MAGICITE_STAFF"
+        ],
+        "35": [
+          "SHARD_OF_RUDOLFE",
+          "MOON_ROCK"
+        ]
+      }
+    },
+    {
+      "id": 13,
+      "name": "Blazebit",
+      "rarity": "Rare",
+      "best_rank": "RS",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER"
+        ],
+        "20": [
+          "ELEMENTAL_EXPLOSION"
+        ],
+        "30": [
+          "MAGICITE_STAFF",
+          "TEMPLE_STONE"
+        ],
+        "35": [
+          "SHARD_OF_RUDOLFE"
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "name": "Blazertooth",
+      "rarity": "Epic",
+      "best_rank": "RS/S+_(RS_Better)",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "PEEPSIE_EGGS",
+          "TEMPLE_STONE"
+        ],
+        "35": [
+          "FLYING_CARPET_FRAGMENT"
+        ]
+      }
+    },
+    {
+      "id": 15,
+      "name": "Blighted Cubsprout",
+      "rarity": "Exotic",
+      "best_rank": "RS",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "WOODMANS_AXE_HEAD"
+        ],
+        "20": [
+          "EMERALD_SCALES"
+        ],
+        "30": [
+          "LOST_SWORDS",
+          "VANQUISHED_SOUL"
+        ],
+        "35": [
+          "SAYAMS_TRIDENT"
+        ]
+      }
+    },
+    {
+      "id": 16,
+      "name": "Blighted Fiender",
+      "rarity": "Exotic",
+      "best_rank": "S+",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "CLOUD_CAKE"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "ARROW_OF_LOVE",
+          "MAGICITE_STAFF"
+        ],
+        "35": [
+          "SHARD_OF_RUDOLFE"
+        ]
+      }
+    },
+    {
+      "id": 17,
+      "name": "Blighted Flowerpiller",
+      "rarity": "Legendary",
+      "best_rank": "S+",
+      "tierlist": "B",
+      "relics_by_level": {
+        "10": [
+          "GKS_SLIPPERS",
+          "CLOUD_CAKE",
+          "ELEFAUNA_FLOWER"
+        ],
+        "20": [
+          "HELZBELZ_BELLS",
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "ARROW_OF_LOVE",
+          "MAGICITE_STAFF"
+        ],
+        "35": [
+          "SHARD_OF_RUDOLFE"
+        ]
+      }
+    },
+    {
+      "id": 18,
+      "name": "Blighted Flue",
+      "rarity": "Legendary",
+      "best_rank": "RS/S+_(RS_Better)",
+      "tierlist": "S",
+      "relics_by_level": {
+        "10": [
+          "WOODMANS_AXE_HEAD"
+        ],
+        "20": [
+          "EMERALD_SCALES"
+        ],
+        "30": [
+          "LOST_SWORDS",
+          "VANQUISHED_SOUL"
+        ],
+        "35": [
+          "SAYAMS_TRIDENT"
+        ]
+      }
+    },
+    {
+      "id": 19,
+      "name": "Blighted Kiloray",
+      "rarity": "Exotic",
+      "best_rank": "S+",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "WOODMANS_AXE_HEAD"
+        ],
+        "20": [
+          "EMERALD_SCALES",
+          "NEROS_ORB"
+        ],
+        "30": [
+          "LOST_SWORDS"
+        ],
+        "35": [
+          "SAYAMS_TRIDENT"
+        ]
+      }
+    },
+    {
+      "id": 20,
+      "name": "Blobroller",
+      "rarity": "Exotic",
+      "best_rank": "S+",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER"
+        ],
+        "20": [
+          "OBSIDIAN_LAVA",
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "CACTUS_FLOWER",
+          "SHACKLERS_GEM"
+        ],
+        "35": [
+          "CAGE_OF_DESPAIR",
+          "FLYING_CARPET_FRAGMENT"
+        ]
+      }
+    },
+    {
+      "id": 21,
+      "name": "Bloomple",
+      "rarity": "Epic",
+      "best_rank": "RS",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "MAGICITE_STAFF"
+        ],
+        "35": [
+          "SHARD_OF_RUDOLFE"
+        ]
+      }
+    },
+    {
+      "id": 22,
+      "name": "Blub",
+      "rarity": "Common",
+      "best_rank": "RS",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "FROOST_ROOT", "BLESSED_POLLEN"
+        ],
+        "20": [
+          "EMERALD_SCALES", "OBSIDIAN_LAVA"
+        ],
+        "30": [
+          "VANQUISHED_SOUL", "PALMDAS_TALON"
+        ],
+        "35": [
+          "GOGS_COG"
+        ]
+      }
+    },
+    {
+      "id": 23,
+      "name": "Bludger",
+      "rarity": "Common",
+      "best_rank": "RS",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "WOODMANS_AXE_HEAD"
+        ],
+        "20": [
+          "EMERALD_SCALES"
+        ],
+        "30": [
+          "VANQUISHED_SOUL"
+        ],
+        "35": [
+          "GOGS_COG"
+        ]
+      }
+    },
+    {
+      "id": 24,
+      "name": "Boltzee",
+      "rarity": "Epic",
+      "best_rank": "RS",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER",
+          "GKS_SLIPPERS"
+        ],
+        "20": [
+          "HELZBELZ_BELLS",
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "ARROW_OF_LOVE"
+        ],
+        "35": [
+          "SHARD_OF_RUDOLFE"
+        ]
+      }
+    },
+    {
+      "id": 25,
+      "name": "Boneshee",
+      "rarity": "Epic",
+      "best_rank": "S+",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "CACTUS_FLOWER",
+          "PEEPSIE_EGGS",
+          "TEMPLE_STONE"
+        ],
+        "35": [
+          "FLYING_CARPET_FRAGMENT"
+        ]
+      }
+    },
+    {
+      "id": 26,
+      "name": "Boo Blazertooth",
+      "rarity": "Exotic",
+      "best_rank": "S+",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "PEEPSIE_EGGS",
+          "TEMPLE_STONE"
+        ],
+        "35": [
+          "FLYING_CARPET_FRAGMENT"
+        ]
+      }
+    },
+    {
+      "id": 27,
+      "name": "Brainzer",
+      "rarity": "Common",
+      "best_rank": "RS",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER"
+        ],
+        "20": [
+          "OBSIDIAN_LAVA"
+        ],
+        "30": [
+          "CACTUS_FLOWER",
+          "MYSTIC_MAP"
+        ],
+        "35": [
+          "FLYING_CARPET_FRAGMENT"
+        ]
+      }
+    },
+    {
+      "id": 28,
+      "name": "Breezycheeks",
+      "rarity": "Common",
+      "best_rank": "S+",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "MAGICITE_STAFF",
+          "TEMPLE_STONE"
+        ],
+        "35": [
+          "SHARD_OF_RUDOLFE"
+        ]
+      }
+    },
+    {
+      "id": 29,
+      "name": "Bubbles",
+      "rarity": "Common",
+      "best_rank": "RS",
+      "tierlist": "C",
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "PEEPSIE_EGGS",
+          "TEMPLE_STONE"
+        ],
+        "35": [
+          "FLYING_CARPET_FRAGMENT"
+        ]
+      }
+    },
+    {
+      "id": 30,
+      "name": "Bunplop",
+      "rarity": "Epic",
+      "best_rank": "RS",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "CLOUD_CAKE",
+          "GKS_SLIPPERS"
+        ],
+        "20": [
+          "SHIP_CAPTAINS_LOG"
+        ],
+        "30": [
+          "ARROW_OF_LOVE"
+        ],
+        "35": [
+          "SHARD_OF_RUDOLFE"
+        ]
+      }
+    },
+    {
+      "id": 31,
+      "name": "Cadbunny",
+      "rarity": "Exotic",
+      "best_rank": "RS",
+      "tierlist": "C",
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER",
+          "GKS_SLIPPERS",
+          "FROOST_ROOT"
+        ],
+        "20": [
+          "STONY_SHIELD",
+          "SHIP_CAPTAINS_LOG"
+        ],
+        "30": [
+          "MAGICITE_STAFF",
+          "ARROW_OF_LOVE"
+        ],
+        "35": [
+          "SHARD_OF_RUDOLFE"
+        ]
+      }
+    },
+    {
+      "id": 32,
+      "name": "Cerberuff",
+      "rarity": "Common",
+      "best_rank": "S+",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "WOODMANS_AXE_HEAD"
+        ],
+        "20": [
+          "EMERALD_SCALES"
+        ],
+        "30": [
+          "LOST_SWORDS"
+        ],
+        "35": [
+          "SAYAMS_TRIDENT"
+        ]
+      }
+    },
+    {
+      "id": 33,
+      "name": "Charix",
+      "rarity": "Rare",
+      "best_rank": "S+",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "PEEPSIE_EGGS",
+          "TEMPLE_STONE"
+        ],
+        "35": [
+          "FLYING_CARPET_FRAGMENT"
+        ]
+      }
+    },
+    {
+      "id": 34,
+      "name": "Charpy",
+      "rarity": "Legendary",
+      "best_rank": "S+",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "BLESSED_POLLEN"
+        ],
+        "20": [
+          "FORGING_HAMMER"
+        ],
+        "30": [
+          "GOLD_PIECE_DIE",
+          "MONASTERY_IDOL"
+        ],
+        "35": [
+          "MOLTEN_COIN",
+          "MOON_ROCK"
+        ]
+      }
+    },
+    {
+      "id": 35,
+      "name": "Crabbles",
+      "rarity": "Rare",
+      "best_rank": "S+",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "WOODMANS_AXE_HEAD"
+        ],
+        "20": [
+          "EMERALD_SCALES"
+        ],
+        "30": [
+          "DARK_WARRO_THORN"
+        ],
+        "35": [
+          "SAYAMS_TRIDENT"
+        ]
+      }
+    },
+    {
+      "id": 36,
+      "name": "Craggy",
+      "rarity": "Common",
+      "best_rank": "S+",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "WOODMANS_AXE_HEAD"
+        ],
+        "20": [
+          "EMERALD_SCALES"
+        ],
+        "30": [
+          "VANQUISHED_SOUL"
+        ],
+        "35": [
+          "GOGS_COG"
+        ]
+      }
+    },
+    {
+      "id": 37,
+      "name": "Crickin",
+      "rarity": "Common",
+      "best_rank": "RS",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "PEEPSIE_EGGS",
+          "TEMPLE_STONE"
+        ],
+        "35": [
+          "FLYING_CARPET_FRAGMENT",
+          "MOON_ROCK"
+        ]
+      }
+    },
+    {
+      "id": 38,
+      "name": "Croaky",
+      "rarity": "Common",
+      "best_rank": "RS/S+_(RS_Better)",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "CLOUD_CAKE"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "MAGICITE_STAFF",
+          "TEMPLE_STONE"
+        ],
+        "35": [
+          "SHARD_OF_RUDOLFE"
+        ]
+      }
+    },
+    {
+      "id": 39,
+      "name": "Cubsprout",
+      "rarity": "Common",
+      "best_rank": "RS",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "WOODMANS_AXE_HEAD"
+        ],
+        "20": [
+          "EMERALD_SCALES"
+        ],
+        "30": [
+          "VANQUISHED_SOUL"
+        ],
+        "35": [
+          "FROZEN_COIN"
+        ]
+      }
+    },
+    {
+      "id": 40,
+      "name": "Da Windy",
+      "rarity": "Legendary",
+      "best_rank": "S+",
+      "tierlist": "B",
+      "relics_by_level": {
+        "10": [
+          "BLESSED_POLLEN",
+          "ELEFAUNA_FLOWER"
+        ],
+        "20": [
+          "MT._GEMMA_BANNER",
+          "OBSIDIAN_LAVA",
+          "BEAN_STALK"
+        ],
+        "30": [
+          "CACTUS_FLOWER",
+          "NOXS_NIGHTMARE"
+        ],
+        "35": [
+          "CAGE_OF_DESPAIR",
+          "DARK_WINDS_VENOM",
+          "PETRIFIED_MAMA_BABY"
+        ]
+      }
+    },
+    {
+      "id": 41,
+      "name": "Damse",
+      "rarity": "Exotic",
+      "best_rank": "RS",
+      "tierlist": "S",
+      "relics_by_level": {
+        "10": [
+          "WOODMANS_AXE_HEAD"
+        ],
+        "20": [
+          "FORGING_HAMMER"
+        ],
+        "30": [
+          "VANQUISHED_SOUL",
+          "SHACKLERS_GEM"
+        ],
+        "35": [
+          "MOLTEN_COIN",
+          "MOON_ROCK"
+        ]
+      }
+    },
+    {
+      "id": 42,
+      "name": "Dark Aria",
+      "rarity": "Rare",
+      "best_rank": "RS",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "CLOUD_CAKE"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "ARROW_OF_LOVE",
+          "MAGICITE_STAFF"
+        ],
+        "35": [
+          "SHARD_OF_RUDOLFE"
+        ]
+      }
+    },
+    {
+      "id": 43,
+      "name": "Dark Arigato",
+      "rarity": "Rare",
+      "best_rank": "RS/S+_(RS_Better)",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER"
+        ],
+        "20": [
+          "OBSIDIAN_LAVA"
+        ],
+        "30": [
+          "CACTUS_FLOWER",
+          "MYSTIC_MAP"
+        ],
+        "35": [
+          "CAGE_OF_DESPAIR",
+          "FLYING_CARPET_FRAGMENT"
+        ]
+      }
+    },
+    {
+      "id": 44,
+      "name": "Dark Auger",
+      "rarity": "Epic",
+      "best_rank": "S+",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "WOODMANS_AXE_HEAD"
+        ],
+        "20": [
+          "EMERALD_SCALES"
+        ],
+        "30": [
+          "LOST_SWORDS"
+        ],
+        "35": [
+          "SAYAMS_TRIDENT"
+        ]
+      }
+    },
+    {
+      "id": 45,
+      "name": "Dark Breezycheeks",
+      "rarity": "Rare",
+      "best_rank": "RS",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER",
+          "GKS_SLIPPERS"
+        ],
+        "20": [
+          "HELZBELZ_BELLS",
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "ARROW_OF_LOVE",
+          "MAGICITE_STAFF"
+        ],
+        "35": [
+          "SHARD_OF_RUDOLFE"
+        ]
+      }
+    },
+    {
+      "id": 46,
+      "name": "Dark Croaky",
+      "rarity": "Rare",
+      "best_rank": "S+",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER"
+        ],
+        "20": [
+          "OBSIDIAN_LAVA"
+        ],
+        "30": [
+          "CACTUS_FLOWER",
+          "PEEPSIE_EGGS",
+          "TEMPLE_STONE"
+        ],
+        "35": [
+          "CAGE_OF_DESPAIR"
+        ]
+      }
+    },
+    {
+      "id": 47,
+      "name": "Dark Cubsprout",
+      "rarity": "Rare",
+      "best_rank": "RS",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "WOODMANS_AXE_HEAD"
+        ],
+        "20": [
+          "EMERALD_SCALES"
+        ],
+        "30": [
+          "PAPAS_ANTLERS",
+          "VANQUISHED_SOUL"
+        ],
+        "35": [
+          "FROZEN_COIN"
+        ]
+      }
+    },
+    {
+      "id": 48,
+      "name": "Dark Echino",
+      "rarity": "Rare",
+      "best_rank": "S+",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "BLESSED_POLLEN"
+        ],
+        "20": [
+          "OBSIDIAN_LAVA"
+        ],
+        "30": [
+          "CACTUS_FLOWER",
+          "TEMPLE_STONE"
+        ],
+        "35": [
+          "MOON_ROCK"
+        ]
+      }
+    },
+    {
+      "id": 49,
+      "name": "Dark Eggy",
+      "rarity": "Epic",
+      "best_rank": "S+",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "WOODMANS_AXE_HEAD"
+        ],
+        "20": [
+          "EMERALD_SCALES"
+        ],
+        "30": [
+          "DARK_WARRO_THORN"
+        ],
+        "35": [
+          "GOGS_COG",
+          "MOON_ROCK"
+        ]
+      }
+    },
+    {
+      "id": 50,
+      "name": "Dark Elefauna",
+      "rarity": "Epic",
+      "best_rank": "RS",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "PEEPSIE_EGGS",
+          "TEMPLE_STONE"
+        ],
+        "35": [
+          "FLYING_CARPET_FRAGMENT"
+        ]
+      }
+    },
+    {
+      "id": 51,
+      "name": "Dark Flameling",
+      "rarity": "Rare",
+      "best_rank": "RS",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "PEEPSIE_EGGS",
+          "TEMPLE_STONE"
+        ],
+        "35": [
+          "FLYING_CARPET_FRAGMENT"
+        ]
+      }
+    },
+    {
+      "id": 52,
+      "name": "Dark Flowerpiller",
+      "rarity": "Rare",
+      "best_rank": "RS",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "PEEPSIE_EGGS",
+          "TEMPLE_STONE"
+        ],
+        "35": [
+          "FLYING_CARPET_FRAGMENT"
+        ]
+      }
+    },
+    {
+      "id": 53,
+      "name": "Dark Flue",
+      "rarity": "Rare",
+      "best_rank": "RS",
+      "tierlist": "B",
+      "relics_by_level": {
+        "10": [
+          "WOODMANS_AXE_HEAD",
+          "FROOST_ROOT"
+        ],
+        "20": [
+          "EMERALD_SCALES",
+          "MONKS_ROBE"
+        ],
+        "30": [
+          "VANQUISHED_SOUL",
+          "PAPAS_ANTLERS"
+        ],
+        "35": [
+          "GOGS_COG"
+        ]
+      }
+    },
+    {
+      "id": 54,
+      "name": "Dark Flutterpat",
+      "rarity": "Epic",
+      "best_rank": "S+",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER"
+        ],
+        "20": [
+          "BEAN_STALK",
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "PEEPSIE_EGGS",
+          "TEMPLE_STONE"
+        ],
+        "35": [
+          "FLYING_CARPET_FRAGMENT"
+        ]
+      }
+    },
+    {
+      "id": 55,
+      "name": "Dark Frostmite",
+      "rarity": "Rare",
+      "best_rank": "S+",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "MAGICITE_STAFF"
+        ],
+        "35": [
+          "SHARD_OF_RUDOLFE"
+        ]
+      }
+    },
+    {
+      "id": 56,
+      "name": "Dark Hotfoot",
+      "rarity": "Rare",
+      "best_rank": "RS",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "WOODMANS_AXE_HEAD"
+        ],
+        "20": [
+          "EMERALD_SCALES"
+        ],
+        "30": [
+          "VANQUISHED_SOUL"
+        ],
+        "35": [
+          "GOGS_COG"
+        ]
+      }
+    },
+    {
+      "id": 57,
+      "name": "Dark Hydroseal",
+      "rarity": "Rare",
+      "best_rank": "RS",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "CLOUD_CAKE",
+          "ELEFAUNA_FLOWER"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "MAGICITE_STAFF",
+          "TEMPLE_STONE"
+        ],
+        "35": [
+          "FLYING_CARPET_FRAGMENT",
+          "SHARD_OF_RUDOLFE"
+        ]
+      }
+    },
+    {
+      "id": 58,
+      "name": "Dark Jellyshock",
+      "rarity": "Epic",
+      "best_rank": "S+",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "WOODMANS_AXE_HEAD"
+        ],
+        "20": [
+          "NEROS_ORB"
+        ],
+        "30": [
+          "DARK_WARRO_THORN"
+        ],
+        "35": [
+          "MOLTEN_COIN"
+        ]
+      }
+    },
+    {
+      "id": 59,
+      "name": "Dark Kiloray",
+      "rarity": "Rare",
+      "best_rank": "S+",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "FROOST_ROOT"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "PEEPSIE_EGGS",
+          "TEMPLE_STONE"
+        ],
+        "35": [
+          "FLYING_CARPET_FRAGMENT"
+        ]
+      }
+    },
+    {
+      "id": 60,
+      "name": "Dark Lavarilla",
+      "rarity": "Rare",
+      "best_rank": "RS",
+      "tierlist": "C",
+      "relics_by_level": {
+        "10": [
+          "FROOST_ROOT",
+          "WOODMANS_AXE_HEAD"
+        ],
+        "20": [
+          "EMERALD_SCALES",
+          "MONKS_ROBE"
+        ],
+        "30": [
+          "PAPAS_ANTLERS",
+          "VANQUISHED_SOUL"
+        ],
+        "35": [
+          "GOGS_COG"
+        ]
+      }
+    },
+    {
+      "id": 61,
+      "name": "Dark Lumera",
+      "rarity": "Rare",
+      "best_rank": "RS",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER",
+          "GKS_SLIPPERS"
+        ],
+        "20": [
+          "HELZBELZ_BELLS",
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "ARROW_OF_LOVE",
+          "MAGICITE_STAFF"
+        ],
+        "35": [
+          "SHARD_OF_RUDOLFE"
+        ]
+      }
+    },
+    {
+      "id": 62,
+      "name": "Dark Luna",
+      "rarity": "Epic",
+      "best_rank": "S+",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "CLOUD_CAKE"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "MAGICITE_STAFF"
+        ],
+        "35": [
+          "SHARD_OF_RUDOLFE"
+        ]
+      }
+    },
+    {
+      "id": 63,
+      "name": "Dark Nessy",
+      "rarity": "Exotic",
+      "best_rank": "RS",
+      "tierlist": "B",
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER"
+        ],
+        "20": [
+          "ELEMENTAL_EXPLOSION",
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "MAGICITE_STAFF"
+        ],
+        "35": [
+          "SHARD_OF_RUDOLFE"
+        ]
+      }
+    },
+    {
+      "id": 64,
+      "name": "Dark Owlie",
+      "rarity": "Rare",
+      "best_rank": "S+",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "PEEPSIE_EGGS",
+          "TEMPLE_STONE"
+        ],
+        "35": [
+          "SHARD_OF_RUDOLFE"
+        ]
+      }
+    },
+    {
+      "id": 65,
+      "name": "Dark Pillblaze",
+      "rarity": "Epic",
+      "best_rank": "S+",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER"
+        ],
+        "20": [
+          "FORGING_HAMMER"
+        ],
+        "30": [
+          "NOXS_NIGHTMARE"
+        ],
+        "35": [
+          "MOLTEN_COIN",
+          "MOON_ROCK"
+        ]
+      }
+    },
+    {
+      "id": 66,
+      "name": "Dark Poltergust",
+      "rarity": "Legendary",
+      "best_rank": "S+",
+      "tierlist": "S",
+      "relics_by_level": {
+        "10": [
+          "CLOUD_CAKE",
+          "ELEFAUNA_FLOWER",
+          "GKS_SLIPPERS"
+        ],
+        "20": [
+          "SHIP_CAPTAINS_LOG",
+          "HELZBELZ_BELLS",
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "ARROW_OF_LOVE",
+          "MAGICITE_STAFF"
+        ],
+        "35": [
+          "SHARD_OF_RUDOLFE"
+        ]
+      }
+    },
+    {
+      "id": 67,
+      "name": "Dark Prawnja",
+      "rarity": "Rare",
+      "best_rank": "S+",
+      "tierlist": "C",
+      "relics_by_level": {
+        "10": [
+          "WOODMANS_AXE_HEAD"
+        ],
+        "20": [
+          "OBSIDIAN_LAVA"
+        ],
+        "30": [
+          "CACTUS_FLOWER"
+        ],
+        "35": [
+          "CAGE_OF_DESPAIR",
+          "GOGS_COG"
+        ]
+      }
+    },
+    {
+      "id": 68,
+      "name": "Dark Quirk",
+      "rarity": "Rare",
+      "best_rank": "RS",
+      "tierlist": "C",
+      "relics_by_level": {
+        "10": [
+          "WOODMANS_AXE_HEAD"
+        ],
+        "20": [
+          "MT._GEMMA_BANNER",
+          "EMERALD_SCALES"
+        ],
+        "30": [
+          "CACTUS_FLOWER"
+        ],
+        "35": [
+          "CAGE_OF_DESPAIR",
+          "MOON_ROCK"
+        ]
+      }
+    },
+    {
+      "id": 69,
+      "name": "Dark Shellbee",
+      "rarity": "Rare",
+      "best_rank": "RS",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "CLOUD_CAKE"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "MAGICITE_STAFF",
+          "TEMPLE_STONE"
+        ],
+        "35": [
+          "SHARD_OF_RUDOLFE"
+        ]
+      }
+    },
+    {
+      "id": 70,
+      "name": "Dark Slithero",
+      "rarity": "Exotic",
+      "best_rank": "S+",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER"
+        ],
+        "20": [
+          "OBSIDIAN_LAVA",
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "CACTUS_FLOWER",
+          "TEMPLE_STONE"
+        ],
+        "35": [
+          "FLYING_CARPET_FRAGMENT"
+        ]
+      }
+    },
+    {
+      "id": 71,
+      "name": "Dark Snortus",
+      "rarity": "Epic",
+      "best_rank": "RS/S+_(RS_Better)",
+      "tierlist": "C",
+      "relics_by_level": {
+        "10": [
+          "WOODMANS_AXE_HEAD"
+        ],
+        "20": [
+          "EMERALD_SCALES"
+        ],
+        "30": [
+          "TRUNCHEROUS_HAMMER",
+          "VANQUISHED_SOUL"
+        ],
+        "35": [
+          "GOGS_COG"
+        ]
+      }
+    },
+    {
+      "id": 72,
+      "name": "Dark Sparkitten",
+      "rarity": "Rare",
+      "best_rank": "RS",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "CLOUD_CAKE"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "MAGICITE_STAFF",
+          "TEMPLE_STONE"
+        ],
+        "35": [
+          "SHARD_OF_RUDOLFE"
+        ]
+      }
+    },
+    {
+      "id": 73,
+      "name": "Dark Sparkslug",
+      "rarity": "Rare",
+      "best_rank": "S+",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "PEEPSIE_EGGS",
+          "TEMPLE_STONE"
+        ],
+        "35": [
+          "FLYING_CARPET_FRAGMENT",
+          "MOON_ROCK"
+        ]
+      }
+    },
+    {
+      "id": 74,
+      "name": "Dark Sparkupine",
+      "rarity": "Rare",
+      "best_rank": "S+",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "WOODMANS_AXE_HEAD"
+        ],
+        "20": [
+          "EMERALD_SCALES"
+        ],
+        "30": [
+          "VANQUISHED_SOUL"
+        ],
+        "35": [
+          "FROZEN_COIN"
+        ]
+      }
+    },
+    {
+      "id": 75,
+      "name": "Dark Spinnerette",
+      "rarity": "Exotic",
+      "best_rank": "S+",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER",
+          "GKS_SLIPPERS"
+        ],
+        "20": [
+          "HELZBELZ_BELLS",
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "ARROW_OF_LOVE",
+          "MAGICITE_STAFF"
+        ],
+        "35": [
+          "SHARD_OF_RUDOLFE"
+        ]
+      }
+    },
+    {
+      "id": 76,
+      "name": "Dark Squibee",
+      "rarity": "Rare",
+      "best_rank": "RS",
+      "tierlist": "B",
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "CACTUS_FLOWER",
+          "MYSTIC_MAP",
+          "TEMPLE_STONE"
+        ],
+        "35": [
+          "FLYING_CARPET_FRAGMENT"
+        ]
+      }
+    },
+    {
+      "id": 77,
+      "name": "Dark Squirmle",
+      "rarity": "Rare",
+      "best_rank": "S+",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "CLOUD_CAKE"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "MAGICITE_STAFF"
+        ],
+        "35": [
+          "SHARD_OF_RUDOLFE"
+        ]
+      }
+    },
+    {
+      "id": 78,
+      "name": "Dark Steamguin",
+      "rarity": "Rare",
+      "best_rank": "S+",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "TEMPLE_STONE"
+        ],
+        "35": [
+          "SHARD_OF_RUDOLFE"
+        ]
+      }
+    },
+    {
+      "id": 79,
+      "name": "Dark Tongutail",
+      "rarity": "Rare",
+      "best_rank": "RS",
+      "tierlist": "C",
+      "relics_by_level": {
+        "10": [
+          "WOODMANS_AXE_HEAD"
+        ],
+        "20": [
+          "EMERALD_SCALES"
+        ],
+        "30": [
+          "PAPAS_ANTLERS",
+          "VANQUISHED_SOUL"
+        ],
+        "35": [
+          "GOGS_COG"
+        ]
+      }
+    },
+    {
+      "id": 80,
+      "name": "Dark Treemur",
+      "rarity": "Epic",
+      "best_rank": "RS",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "MAGICITE_STAFF"
+        ],
+        "35": [
+          "SHARD_OF_RUDOLFE"
+        ]
+      }
+    },
+    {
+      "id": 81,
+      "name": "Dark Tulipinny",
+      "rarity": "Epic",
+      "best_rank": "RS",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "PEEPSIE_EGGS",
+          "TEMPLE_STONE"
+        ],
+        "35": [
+          "FLYING_CARPET_FRAGMENT"
+        ]
+      }
+    },
+    {
+      "id": 82,
+      "name": "Dark Twiggum",
+      "rarity": "Epic",
+      "best_rank": "RS",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "CACTUS_FLOWER",
+          "TEMPLE_STONE"
+        ],
+        "35": [
+          "FLYING_CARPET_FRAGMENT"
+        ]
+      }
+    },
+    {
+      "id": 83,
+      "name": "Dark Vexie",
+      "rarity": "Rare",
+      "best_rank": "RS/S+_(RS_Better)",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER",
+          "GKS_SLIPPERS"
+        ],
+        "20": [
+          "HELZBELZ_BELLS",
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "ARROW_OF_LOVE",
+          "MAGICITE_STAFF"
+        ],
+        "35": [
+          "SHARD_OF_RUDOLFE"
+        ]
+      }
+    },
+    {
+      "id": 84,
+      "name": "Dark Waddles",
+      "rarity": "Epic",
+      "best_rank": "RS",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "PEEPSIE_EGGS",
+          "TEMPLE_STONE"
+        ],
+        "35": [
+          "FLYING_CARPET_FRAGMENT"
+        ]
+      }
+    },
+    {
+      "id": 85,
+      "name": "Deetlee",
+      "rarity": "Rare",
+      "best_rank": "RS",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "WOODMANS_AXE_HEAD",
+          "FROOST_ROOT"
+        ],
+        "20": [
+          "EMERALD_SCALES",
+          "BEAN_STALK"
+        ],
+        "30": [
+          "FRACTURED_SHELL"
+        ],
+        "35": [
+          "DARK_WINDS_VENOM"
+        ]
+      }
+    },
+    {
+      "id": 86,
+      "name": "Defilio",
+      "rarity": "Exotic",
+      "best_rank": "RS",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "TEMPLE_STONE"
+        ],
+        "35": [
+          "FLYING_CARPET_FRAGMENT",
+          "MOON_ROCK"
+        ]
+      }
+    },
+    {
+      "id": 87,
+      "name": "Digsy",
+      "rarity": "Common",
+      "best_rank": "S+",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "WOODMANS_AXE_HEAD"
+        ],
+        "20": [
+          "EMERALD_SCALES"
+        ],
+        "30": [
+          "VANQUISHED_SOUL"
+        ],
+        "35": [
+          "GOGS_COG"
+        ]
+      }
+    },
+    {
+      "id": 88,
+      "name": "Dorux",
+      "rarity": "Epic",
+      "best_rank": "RS/S+_(S+_Better)",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "FROOST_ROOT"
+        ],
+        "20": [
+          "OBSIDIAN_LAVA",
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "ECHINO_SHELL",
+          "PEEPSIE_EGGS",
+          "TEMPLE_STONE"
+        ],
+        "35": [
+          "FLYING_CARPET_FRAGMENT"
+        ]
+      }
+    },
+    {
+      "id": 89,
+      "name": "Dreamger",
+      "rarity": "Rare",
+      "best_rank": "S+",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "WOODMANS_AXE_HEAD"
+        ],
+        "20": [
+          "EMERALD_SCALES"
+        ],
+        "30": [
+          "LOST_SWORDS",
+          "VANQUISHED_SOUL"
+        ],
+        "35": [
+          "SAYAMS_TRIDENT"
+        ]
+      }
+    },
+    {
+      "id": 90,
+      "name": "Drilldent",
+      "rarity": "Common",
+      "best_rank": "RS",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "WOODMANS_AXE_HEAD"
+        ],
+        "20": [
+          "EMERALD_SCALES"
+        ],
+        "30": [
+          "VANQUISHED_SOUL"
+        ],
+        "35": [
+          "GOGS_COG"
+        ]
+      }
+    },
+    {
+      "id": 91,
+      "name": "Drilune",
+      "rarity": "Common",
+      "best_rank": "S+",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "CLOUD_CAKE",
+          "ELEFAUNA_FLOWER"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "MAGICITE_STAFF",
+          "TEMPLE_STONE"
+        ],
+        "35": [
+          "FLYING_CARPET_FRAGMENT",
+          "SHARD_OF_RUDOLFE"
+        ]
+      }
+    },
+    {
+      "id": 92,
+      "name": "Echino",
+      "rarity": "Common",
+      "best_rank": "RS",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "PEEPSIE_EGGS",
+          "TEMPLE_STONE"
+        ],
+        "35": [
+          "FLYING_CARPET_FRAGMENT"
+        ]
+      }
+    },
+    {
+      "id": 93,
+      "name": "Eclipso",
+      "rarity": "Exotic",
+      "best_rank": "S+",
+      "tierlist": "S",
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "MAGICITE_STAFF",
+          "ARROW_OF_LOVE"
+        ],
+        "35": [
+          "SHARD_OF_RUDOLFE"
+        ]
+      }
+    },
+    {
+      "id": 94,
+      "name": "Eggy",
+      "rarity": "Rare",
+      "best_rank": "RS",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "WOODMANS_AXE_HEAD"
+        ],
+        "20": [
+          "EMERALD_SCALES"
+        ],
+        "30": [
+          "DARK_WARRO_THORN"
+        ],
+        "35": [
+          "GOGS_COG"
+        ]
+      }
+    },
+    {
+      "id": 95,
+      "name": "Ekkult",
+      "rarity": "Exotic",
+      "best_rank": "RS",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "BLESSED_POLLEN"
+        ],
+        "20": [
+          "FORGING_HAMMER",
+          "OBSIDIAN_LAVA"
+        ],
+        "30": [
+          "CACTUS_FLOWER",
+          "GOLD_PIECE_DIE"
+        ],
+        "35": [
+          "MOLTEN_COIN"
+        ]
+      }
+    },
+    {
+      "id": 96,
+      "name": "Elefauna",
+      "rarity": "Common",
+      "best_rank": "S+",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "PEEPSIE_EGGS",
+          "TEMPLE_STONE"
+        ],
+        "35": [
+          "FLYING_CARPET_FRAGMENT"
+        ]
+      }
+    },
+    {
+      "id": 97,
+      "name": "Elphin",
+      "rarity": "Epic",
+      "best_rank": "RS",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "TEMPLE_STONE"
+        ],
+        "35": [
+          "CAGE_OF_DESPAIR",
+          "FLYING_CARPET_FRAGMENT"
+        ]
+      }
+    },
+    {
+      "id": 98,
+      "name": "Eluzar",
+      "rarity": "Common",
+      "best_rank": "S+",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "WOODMANS_AXE_HEAD"
+        ],
+        "20": [
+          "EMERALD_SCALES"
+        ],
+        "30": [
+          "VANQUISHED_SOUL"
+        ],
+        "35": [
+          "GOGS_COG"
+        ]
+      }
+    },
+    {
+      "id": 99,
+      "name": "Enex",
+      "rarity": "Common",
+      "best_rank": "RS",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "MAGICITE_STAFF",
+          "TEMPLE_STONE"
+        ],
+        "35": [
+          "FLYING_CARPET_FRAGMENT",
+          "SHARD_OF_RUDOLFE"
+        ]
+      }
+    },
+    {
+      "id": 100,
+      "name": "Equestrion",
+      "rarity": "Common",
+      "best_rank": "RS",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "PEEPSIE_EGGS",
+          "TEMPLE_STONE"
+        ],
+        "35": [
+          "FLYING_CARPET_FRAGMENT"
+        ]
+      }
+    },
+    {
+      "id": 101,
+      "name": "Fangly",
+      "rarity": "Epic",
+      "best_rank": "RS",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "CLOUD_CAKE"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "MAGICITE_STAFF",
+          "TEMPLE_STONE"
+        ],
+        "35": [
+          "SHARD_OF_RUDOLFE"
+        ]
+      }
+    },
+    {
+      "id": 102,
+      "name": "Felis",
+      "rarity": "Common",
+      "best_rank": "S+",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "WOODMANS_AXE_HEAD"
+        ],
+        "20": [
+          "EMERALD_SCALES"
+        ],
+        "30": [
+          "VANQUISHED_SOUL"
+        ],
+        "35": [
+          "GOGS_COG"
+        ]
+      }
+    },
+    {
+      "id": 103,
+      "name": "Fennie",
+      "rarity": "Epic",
+      "best_rank": "RS",
+      "tierlist": "C",
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "MAGICITE_STAFF",
+          "PEEPSIE_EGGS",
+          "TEMPLE_STONE"
+        ],
+        "35": [
+          "SHARD_OF_RUDOLFE"
+        ]
+      }
+    },
+    {
+      "id": 104,
+      "name": "Fickra",
+      "rarity": "Common",
+      "best_rank": "S+",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "EVERLASTING_SNOWBALL",
+          "TEMPLE_STONE"
+        ],
+        "35": [
+          "DARK_WINDS_VENOM",
+          "FLYING_CARPET_FRAGMENT"
+        ]
+      }
+    },
+    {
+      "id": 105,
+      "name": "Fiender",
+      "rarity": "Rare",
+      "best_rank": "RS",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "CLOUD_CAKE"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "MAGICITE_STAFF"
+        ],
+        "35": [
+          "SHARD_OF_RUDOLFE"
+        ]
+      }
+    },
+    {
+      "id": 106,
+      "name": "Flaclay",
+      "rarity": "Common",
+      "best_rank": "RS",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "PEEPSIE_EGGS",
+          "TEMPLE_STONE"
+        ],
+        "35": [
+          "FLYING_CARPET_FRAGMENT"
+        ]
+      }
+    },
+    {
+      "id": 107,
+      "name": "Flameling",
+      "rarity": "Common",
+      "best_rank": "RS",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER",
+          "GKS_SLIPPERS"
+        ],
+        "20": [
+          "HELZBELZ_BELLS",
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "ARROW_OF_LOVE"
+        ],
+        "35": [
+          "SHARD_OF_RUDOLFE"
+        ]
+      }
+    },
+    {
+      "id": 108,
+      "name": "Flaring",
+      "rarity": "Epic",
+      "best_rank": "S+",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER",
+          "GKS_SLIPPERS"
+        ],
+        "20": [
+          "HELZBELZ_BELLS",
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "ARROW_OF_LOVE"
+        ],
+        "35": [
+          "SHARD_OF_RUDOLFE"
+        ]
+      }
+    },
+    {
+      "id": 109,
+      "name": "Flintly",
+      "rarity": "Rare",
+      "best_rank": "RS",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "PEEPSIE_EGGS",
+          "TEMPLE_STONE"
+        ],
+        "35": [
+          "FLYING_CARPET_FRAGMENT"
+        ]
+      }
+    },
+    {
+      "id": 110,
+      "name": "Flowerpiller",
+      "rarity": "Common",
+      "best_rank": "S+",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "CLOUD_CAKE"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "ARROW_OF_LOVE",
+          "MAGICITE_STAFF"
+        ],
+        "35": [
+          "SHARD_OF_RUDOLFE"
+        ]
+      }
+    },
+    {
+      "id": 111,
+      "name": "Flue",
+      "rarity": "Common",
+      "best_rank": "S+",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "WOODMANS_AXE_HEAD"
+        ],
+        "20": [
+          "EMERALD_SCALES"
+        ],
+        "30": [
+          "VANQUISHED_SOUL"
+        ],
+        "35": [
+          "GOGS_COG"
+        ]
+      }
+    },
+    {
+      "id": 112,
+      "name": "Flurfy",
+      "rarity": "Common",
+      "best_rank": "S+",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "PEEPSIE_EGGS",
+          "TEMPLE_STONE"
+        ],
+        "35": [
+          "FLYING_CARPET_FRAGMENT"
+        ]
+      }
+    },
+    {
+      "id": 113,
+      "name": "Flurrious",
+      "rarity": "Exotic",
+      "best_rank": "S+",
+      "tierlist": "B",
+      "relics_by_level": {
+        "10": [
+          "WOODMANS_AXE_HEAD"
+        ],
+        "20": [
+          "EMERALD_SCALES"
+        ],
+        "30": [
+          "VANQUISHED_SOUL"
+        ],
+        "35": [
+          "GOGS_COG"
+        ]
+      }
+    },
+    {
+      "id": 114,
+      "name": "Flutterpat",
+      "rarity": "Rare",
+      "best_rank": "RS/S+_(RS_Better)",
+      "tierlist": "C",
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "PEEPSIE_EGGS",
+          "TEMPLE_STONE"
+        ],
+        "35": [
+          "FLYING_CARPET_FRAGMENT"
+        ]
+      }
+    },
+    {
+      "id": 115,
+      "name": "Foil Croaky",
+      "rarity": "Legendary",
+      "best_rank": "RS",
+      "tierlist": "A",
+      "relics_by_level": {
+        "10": [
+          "FROOST_ROOT",
+          "BLESSED_POLLEN"
+        ],
+        "20": [
+          "FROZEN_CLAWS",
+          "OBSIDIAN_LAVA",
+          "BEAN_STALK"
+        ],
+        "30": [
+          "CACTUS_FLOWER"
+        ],
+        "35": [
+          "CAGE_OF_DESPAIR",
+          "DARK_WINDS_VENOM"
+        ]
+      }
+    },
+    {
+      "id": 116,
+      "name": "Foil Flintly",
+      "rarity": "Exotic",
+      "best_rank": "RS",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "MAGICITE_STAFF",
+          "TEMPLE_STONE"
+        ],
+        "35": [
+          "SHARD_OF_RUDOLFE"
+        ]
+      }
+    },
+    {
+      "id": 117,
+      "name": "Foil Fossillia",
+      "rarity": "Exotic",
+      "best_rank": "RS",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "WOODMANS_AXE_HEAD"
+        ],
+        "20": [
+          "OBSIDIAN_LAVA"
+        ],
+        "30": [
+          "SHACKLERS_GEM"
+        ],
+        "35": [
+          "CAGE_OF_DESPAIR",
+          "MOON_ROCK"
+        ]
+      }
+    },
+    {
+      "id": 118,
+      "name": "Foil Kiloray",
+      "rarity": "Exotic",
+      "best_rank": "S+",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "PEEPSIE_EGGS",
+          "TEMPLE_STONE"
+        ],
+        "35": [
+          "FLYING_CARPET_FRAGMENT"
+        ]
+      }
+    },
+    {
+      "id": 119,
+      "name": "Foil Luna",
+      "rarity": "Exotic",
+      "best_rank": "RS",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "BLESSED_POLLEN"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "MAGICITE_STAFF"
+        ],
+        "35": [
+          "FLYING_CARPET_FRAGMENT",
+          "MOON_ROCK"
+        ]
+      }
+    },
+    {
+      "id": 120,
+      "name": "Foil Thundercracker",
+      "rarity": "Exotic",
+      "best_rank": "RS/S+_(RS_Better)",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "BLESSED_POLLEN"
+        ],
+        "20": [
+          "FORGING_HAMMER"
+        ],
+        "30": [
+          "GOLD_PIECE_DIE"
+        ],
+        "35": [
+          "FROZEN_COIN"
+        ]
+      }
+    },
+    {
+      "id": 121,
+      "name": "Foil Vexie",
+      "rarity": "Exotic",
+      "best_rank": "S+",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER"
+        ],
+        "20": [
+          "OBSIDIAN_LAVA"
+        ],
+        "30": [
+          "PEEPSIE_EGGS",
+          "TEMPLE_STONE"
+        ],
+        "35": [
+          "FLYING_CARPET_FRAGMENT"
+        ]
+      }
+    },
+    {
+      "id": 122,
+      "name": "Foil Vhisp",
+      "rarity": "Exotic",
+      "best_rank": "S+",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "ARROW_OF_LOVE",
+          "MAGICITE_STAFF"
+        ],
+        "35": [
+          "SHARD_OF_RUDOLFE"
+        ]
+      }
+    },
+    {
+      "id": 123,
+      "name": "Foil Waddles",
+      "rarity": "Exotic",
+      "best_rank": "S+",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "PEEPSIE_EGGS",
+          "TEMPLE_STONE"
+        ],
+        "35": [
+          "FLYING_CARPET_FRAGMENT"
+        ]
+      }
+    },
+    {
+      "id": 124,
+      "name": "Fossillia",
+      "rarity": "Rare",
+      "best_rank": "S+",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "WOODMANS_AXE_HEAD"
+        ],
+        "20": [
+          "EMERALD_SCALES"
+        ],
+        "30": [
+          "VANQUISHED_SOUL"
+        ],
+        "35": [
+          "GOGS_COG"
+        ]
+      }
+    },
+    {
+      "id": 125,
+      "name": "Freedom",
+      "rarity": "Exotic",
+      "best_rank": "RS",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "SKELEPUPS_SPARK"
+        ],
+        "20": [
+          "FORGING_HAMMER"
+        ],
+        "30": [
+          "CACTUS_FLOWER"
+        ],
+        "35": [
+          "FROZEN_COIN",
+          "MOLTEN_COIN"
+        ]
+      }
+    },
+    {
+      "id": 126,
+      "name": "Freezet",
+      "rarity": "Common",
+      "best_rank": "S+",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "WOODMANS_AXE_HEAD"
+        ],
+        "20": [
+          "EMERALD_SCALES"
+        ],
+        "30": [
+          "VANQUISHED_SOUL"
+        ],
+        "35": [
+          "GOGS_COG"
+        ]
+      }
+    },
+    {
+      "id": 127,
+      "name": "Frostmite",
+      "rarity": "Common",
+      "best_rank": "RS",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "MAGICITE_STAFF"
+        ],
+        "35": []
+      }
+    },
+    {
+      "id": 128,
+      "name": "Frozy",
+      "rarity": "Common",
+      "best_rank": "RS",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "SHACKLERS_GEM"
+        ],
+        "35": [
+          "DARK_WINDS_VENOM",
+          "FLYING_CARPET_FRAGMENT"
+        ]
+      }
+    },
+    {
+      "id": 129,
+      "name": "Fubby",
+      "rarity": "Exotic",
+      "best_rank": "S+",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "WOODMANS_AXE_HEAD"
+        ],
+        "20": [
+          "EMERALD_SCALES"
+        ],
+        "30": [
+          "LOST_SWORDS"
+        ],
+        "35": [
+          "SAYAMS_TRIDENT"
+        ]
+      }
+    },
+    {
+      "id": 130,
+      "name": "Fungask",
+      "rarity": "Common",
+      "best_rank": "RS",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "MAGICITE_STAFF",
+          "TEMPLE_STONE"
+        ],
+        "35": [
+          "SHARD_OF_RUDOLFE"
+        ]
+      }
+    },
+    {
+      "id": 131,
+      "name": "Furiko",
+      "rarity": "Rare",
+      "best_rank": "RS",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "TEMPLE_STONE"
+        ],
+        "35": [
+          "FLYING_CARPET_FRAGMENT"
+        ]
+      }
+    },
+    {
+      "id": 132,
+      "name": "Gemix",
+      "rarity": "Epic",
+      "best_rank": "RS",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER",
+          "GKS_SLIPPERS"
+        ],
+        "20": [
+          "HELZBELZ_BELLS",
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "ARROW_OF_LOVE"
+        ],
+        "35": [
+          "SHARD_OF_RUDOLFE"
+        ]
+      }
+    },
+    {
+      "id": 133,
+      "name": "Geneseed",
+      "rarity": "Legendary",
+      "best_rank": "S+",
+      "tierlist": "S",
+      "relics_by_level": {
+        "10": [
+          "BLESSED_POLLEN",
+          "ELEFAUNA_FLOWER"
+        ],
+        "20": [
+          "STONY_SHIELD",
+          "OBSIDIAN_LAVA",
+          "SHORES_BANNER"
+        ],
+        "30": [
+          "SHACKLERS_GEM",
+          "MAGICITE_STAFF",
+          "TEMPLE_STONE"
+        ],
+        "35": [
+          "MOON_ROCK"
+        ]
+      }
+    },
+    {
+      "id": 134,
+      "name": "Gog",
+      "rarity": "Epic",
+      "best_rank": "S+",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "WOODMANS_AXE_HEAD"
+        ],
+        "20": [
+          "MONKS_ROBE",
+          "OBSIDIAN_LAVA"
+        ],
+        "30": [
+          "VANQUISHED_SOUL"
+        ],
+        "35": [
+          "GOGS_COG"
+        ]
+      }
+    },
+    {
+      "id": 135,
+      "name": "Goo",
+      "rarity": "Common",
+      "best_rank": "RS",
+      "tierlist": "B",
+      "relics_by_level": {
+        "10": [
+          "BLESSED_POLLEN",
+          "ELEFAUNA_FLOWER"
+        ],
+        "20": [
+          "BEAN_STALK",
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "PEEPSIE_EGGS",
+          "TEMPLE_STONE",
+          "FRACTURED_SHELL"
+        ],
+        "35": [
+          "DARK_WINDS_VENOM",
+          "FLYING_CARPET_FRAGMENT"
+        ]
+      }
+    },
+    {
+      "id": 136,
+      "name": "Gravitron",
+      "rarity": "Exotic",
+      "best_rank": "S+",
+      "tierlist": "C",
+      "relics_by_level": {
+        "10": [
+          "WOODMANS_AXE_HEAD"
+        ],
+        "20": [
+          "EMERALD_SCALES"
+        ],
+        "30": [
+          "LOST_SWORDS",
+          "VANQUISHED_SOUL"
+        ],
+        "35": [
+          "SAYAMS_TRIDENT"
+        ]
+      }
+    },
+    {
+      "id": 137,
+      "name": "Grimm Kiloray",
+      "rarity": "Epic",
+      "best_rank": "RS",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "TEMPLE_STONE"
+        ],
+        "35": [
+          "FLYING_CARPET_FRAGMENT",
+          "MOON_ROCK"
+        ]
+      }
+    },
+    {
+      "id": 138,
+      "name": "Grubbean",
+      "rarity": "Common",
+      "best_rank": "S+",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "PEEPSIE_EGGS",
+          "TEMPLE_STONE"
+        ],
+        "35": [
+          "FLYING_CARPET_FRAGMENT"
+        ]
+      }
+    },
+    {
+      "id": 139,
+      "name": "Hawkai",
+      "rarity": "Common",
+      "best_rank": "S+",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "CLOUD_CAKE"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "ARROW_OF_LOVE"
+        ],
+        "35": [
+          "SHARD_OF_RUDOLFE"
+        ]
+      }
+    },
+    {
+      "id": 140,
+      "name": "Hekatom",
+      "rarity": "Epic",
+      "best_rank": "S+",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "PEEPSIE_EGGS",
+          "TEMPLE_STONE"
+        ],
+        "35": [
+          "DARK_WINDS_VENOM",
+          "FLYING_CARPET_FRAGMENT"
+        ]
+      }
+    },
+    {
+      "id": 141,
+      "name": "Hippoke",
+      "rarity": "Common",
+      "best_rank": "S+",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "CLOUD_CAKE"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "MAGICITE_STAFF"
+        ],
+        "35": [
+          "SHARD_OF_RUDOLFE"
+        ]
+      }
+    },
+    {
+      "id": 142,
+      "name": "Hoopty",
+      "rarity": "Epic",
+      "best_rank": "S+",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "BLESSED_POLLEN"
+        ],
+        "20": [
+          "MONKS_ROBE"
+        ],
+        "30": [
+          "MUSHLES"
+        ],
+        "35": [
+          "FROZEN_COIN"
+        ]
+      }
+    },
+    {
+      "id": 143,
+      "name": "Hotdog",
+      "rarity": "Epic",
+      "best_rank": "S+",
+      "tierlist": "B",
+      "relics_by_level": {
+        "10": [
+          "WOODMANS_AXE_HEAD"
+        ],
+        "20": [
+          "EMERALD_SCALES",
+          "MONKS_BANNER"
+        ],
+        "30": [
+          "LOST_SWORDS",
+          "VANQUISHED_SOUL"
+        ],
+        "35": [
+          "SAYAMS_TRIDENT",
+          "GOGS_COG"
+        ]
+      }
+    },
+    {
+      "id": 144,
+      "name": "Hotfoot",
+      "rarity": "Common",
+      "best_rank": "RS",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "BLESSED_POLLEN"
+        ],
+        "20": [
+          "FORGING_HAMMER"
+        ],
+        "30": [
+          "GOLD_PIECE_DIE"
+        ],
+        "35": [
+          "MOLTEN_COIN"
+        ]
+      }
+    },
+    {
+      "id": 145,
+      "name": "Humbug",
+      "rarity": "Common",
+      "best_rank": "S+",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "MAGICITE_STAFF",
+          "TEMPLE_STONE"
+        ],
+        "35": [
+          "SHARD_OF_RUDOLFE"
+        ]
+      }
+    },
+    {
+      "id": 146,
+      "name": "Hydroseal",
+      "rarity": "Common",
+      "best_rank": "S+",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "TEMPLE_STONE"
+        ],
+        "35": [
+          "FLYING_CARPET_FRAGMENT"
+        ]
+      }
+    },
+    {
+      "id": 147,
+      "name": "Ignios",
+      "rarity": "Rare",
+      "best_rank": "RS",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "PEEPSIE_EGGS",
+          "TEMPLE_STONE"
+        ],
+        "35": [
+          "FLYING_CARPET_FRAGMENT"
+        ]
+      }
+    },
+    {
+      "id": 148,
+      "name": "Inferno",
+      "rarity": "Epic",
+      "best_rank": "S+",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "WOODMANS_AXE_HEAD"
+        ],
+        "20": [
+          "EMERALD_SCALES"
+        ],
+        "30": [
+          "VANQUISHED_SOUL"
+        ],
+        "35": [
+          "GOGS_COG"
+        ]
+      }
+    },
+    {
+      "id": 149,
+      "name": "Jack",
+      "rarity": "Common",
+      "best_rank": "RS/S+_(S+_Better)",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "CLOUD_CAKE"
+        ],
+        "20": [
+          "FORGING_HAMMER"
+        ],
+        "30": [
+          "GOLD_PIECE_DIE"
+        ],
+        "35": [
+          "FROZEN_COIN"
+        ]
+      }
+    },
+    {
+      "id": 150,
+      "name": "Jellyshock",
+      "rarity": "Common",
+      "best_rank": "S+",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "WOODMANS_AXE_HEAD"
+        ],
+        "20": [
+          "NEROS_ORB"
+        ],
+        "30": [
+          "DARK_WARRO_THORN"
+        ],
+        "35": [
+          "FROZEN_COIN"
+        ]
+      }
+    },
+    {
+      "id": 151,
+      "name": "Keeper",
+      "rarity": "Legendary",
+      "best_rank": "S+",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "ARROW_OF_LOVE",
+          "MAGICITE_STAFF"
+        ],
+        "35": [
+          "SHARD_OF_RUDOLFE"
+        ]
+      }
+    },
+    {
+      "id": 152,
+      "name": "Kelpa",
+      "rarity": "Rare",
+      "best_rank": "RS",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER"
+        ],
+        "20": [
+          "OBSIDIAN_LAVA"
+        ],
+        "30": [
+          "SHACKLERS_GEM",
+          "TEMPLE_STONE"
+        ],
+        "35": [
+          "CAGE_OF_DESPAIR",
+          "FLYING_CARPET_FRAGMENT"
+        ]
+      }
+    },
+    {
+      "id": 153,
+      "name": "Kiloray",
+      "rarity": "Common",
+      "best_rank": "S+",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "PEEPSIE_EGGS",
+          "TEMPLE_STONE"
+        ],
+        "35": [
+          "FLYING_CARPET_FRAGMENT"
+        ]
+      }
+    },
+    {
+      "id": 154,
+      "name": "Lagoony",
+      "rarity": "Exotic",
+      "best_rank": "S+",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "CLOUD_CAKE",
+          "GKS_SLIPPERS",
+          "ELEFAUNA_FLOWER"
+        ],
+        "20": [
+          "SHIP_CAPTAINS_LOG",
+          "HELZBELZ_BELLS"
+        ],
+        "30": [
+          "ARROW_OF_LOVE",
+          "MAGICITE_STAFF"
+        ],
+        "35": [
+          "SHARD_OF_RUDOLFE"
+        ]
+      }
+    },
+    {
+      "id": 155,
+      "name": "Lambolt",
+      "rarity": "Rare",
+      "best_rank": "RS",
+      "tierlist": "B",
+      "relics_by_level": {
+        "10": [
+          "WOODMANS_AXE_HEAD"
+        ],
+        "20": [
+          "EMERALD_SCALES",
+          "FORGING_HAMMER"
+        ],
+        "30": [
+          "VANQUISHED_SOUL"
+        ],
+        "35": [
+          "GOGS_COG"
+        ]
+      }
+    },
+    {
+      "id": 156,
+      "name": "Larbunni",
+      "rarity": "Epic",
+      "best_rank": "RS",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "MAGICITE_STAFF",
+          "TEMPLE_STONE"
+        ],
+        "35": [
+          "SHARD_OF_RUDOLFE"
+        ]
+      }
+    },
+    {
+      "id": 157,
+      "name": "Lavarilla",
+      "rarity": "Common",
+      "best_rank": "S+",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "WOODMANS_AXE_HEAD"
+        ],
+        "20": [
+          "EMERALD_SCALES"
+        ],
+        "30": [
+          "VANQUISHED_SOUL"
+        ],
+        "35": [
+          "GOGS_COG"
+        ]
+      }
+    },
+    {
+      "id": 158,
+      "name": "Lavazard",
+      "rarity": "Epic",
+      "best_rank": "RS/S+_(S+_Better)",
+      "tierlist": "A",
+      "relics_by_level": {
+        "10": [
+          "WOODMANS_AXE_HEAD",
+          "BLESSED_POLLEN"
+        ],
+        "20": [
+          "MONKS_BANNER",
+          "EMERALD_SCALES"
+        ],
+        "30": [
+          "VANQUISHED_SOUL",
+          "PAPAS_ANTLERS"
+        ],
+        "35": [
+          "GOGS_COG"
+        ]
+      }
+    },
+    {
+      "id": 159,
+      "name": "Leggy",
+      "rarity": "Common",
+      "best_rank": "RS",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "WOODMANS_AXE_HEAD"
+        ],
+        "20": [
+          "EMERALD_SCALES"
+        ],
+        "30": [
+          "VANQUISHED_SOUL"
+        ],
+        "35": [
+          "SAYAMS_TRIDENT"
+        ]
+      }
+    },
+    {
+      "id": 160,
+      "name": "Light Bludger",
+      "rarity": "Exotic",
+      "best_rank": "S+",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "FROOST_ROOT",
+          "WOODMANS_AXE_HEAD"
+        ],
+        "20": [
+          "EMERALD_SCALES"
+        ],
+        "30": [
+          "VANQUISHED_SOUL"
+        ],
+        "35": [
+          "GOGS_COG"
+        ]
+      }
+    },
+    {
+      "id": 161,
+      "name": "Light Crickin",
+      "rarity": "Exotic",
+      "best_rank": "S+",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "BLESSED_POLLEN"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "MAGICITE_STAFF"
+        ],
+        "35": [
+          "MOON_ROCK",
+          "SHARD_OF_RUDOLFE"
+        ]
+      }
+    },
+    {
+      "id": 162,
+      "name": "Light Digsy",
+      "rarity": "Epic",
+      "best_rank": "RS",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "BLESSED_POLLEN"
+        ],
+        "20": [
+          "FORGING_HAMMER"
+        ],
+        "30": [
+          "GOLD_PIECE_DIE"
+        ],
+        "35": [
+          "MOLTEN_COIN"
+        ]
+      }
+    },
+    {
+      "id": 163,
+      "name": "Light Flue",
+      "rarity": "Epic",
+      "best_rank": "S+",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "TEMPLE_STONE"
+        ],
+        "35": [
+          "FLYING_CARPET_FRAGMENT"
+        ]
+      }
+    },
+    {
+      "id": 164,
+      "name": "Light Flurfy",
+      "rarity": "Rare",
+      "best_rank": "RS",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "PEEPSIE_EGGS",
+          "TEMPLE_STONE"
+        ],
+        "35": [
+          "FLYING_CARPET_FRAGMENT"
+        ]
+      }
+    },
+    {
+      "id": 165,
+      "name": "Light Fossillia",
+      "rarity": "Epic",
+      "best_rank": "RS",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "CLOUD_CAKE"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "MAGICITE_STAFF",
+          "TEMPLE_STONE"
+        ],
+        "35": [
+          "SHARD_OF_RUDOLFE"
+        ]
+      }
+    },
+    {
+      "id": 166,
+      "name": "Light Frostmite",
+      "rarity": "Exotic",
+      "best_rank": "S+",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "ARROW_OF_LOVE",
+          "MAGICITE_STAFF"
+        ],
+        "35": [
+          "SHARD_OF_RUDOLFE"
+        ]
+      }
+    },
+    {
+      "id": 167,
+      "name": "Light Grubbean",
+      "rarity": "Epic",
+      "best_rank": "RS",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER",
+          "GKS_SLIPPERS"
+        ],
+        "20": [
+          "HELZBELZ_BELLS",
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "ARROW_OF_LOVE"
+        ],
+        "35": [
+          "SHARD_OF_RUDOLFE"
+        ]
+      }
+    },
+    {
+      "id": 168,
+      "name": "Light Hawkai",
+      "rarity": "Rare",
+      "best_rank": "S+",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "BLESSED_POLLEN"
+        ],
+        "20": [
+          "FORGING_HAMMER"
+        ],
+        "30": [
+          "GOLD_PIECE_DIE"
+        ],
+        "35": [
+          "FROZEN_COIN"
+        ]
+      }
+    },
+    {
+      "id": 169,
+      "name": "Light Ignios",
+      "rarity": "Legendary",
+      "best_rank": "S+",
+      "tierlist": "C",
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER",
+          "GKS_SLIPPERS"
+        ],
+        "20": [
+          "HELZBELZ_BELLS",
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "ARROW_OF_LOVE",
+          "MAGICITE_STAFF"
+        ],
+        "35": [
+          "SHARD_OF_RUDOLFE"
+        ]
+      }
+    },
+    {
+      "id": 170,
+      "name": "Light Jack",
+      "rarity": "Rare",
+      "best_rank": "S+",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "BLESSED_POLLEN"
+        ],
+        "20": [
+          "FORGING_HAMMER"
+        ],
+        "30": [
+          "CACTUS_FLOWER",
+          "SHACKLERS_GEM"
+        ],
+        "35": [
+          "FLYING_CARPET_FRAGMENT"
+        ]
+      }
+    },
+    {
+      "id": 171,
+      "name": "Light Mumbah",
+      "rarity": "Rare",
+      "best_rank": "S+",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "CLOUD_CAKE"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "ARROW_OF_LOVE",
+          "MAGICITE_STAFF"
+        ],
+        "35": [
+          "SHARD_OF_RUDOLFE"
+        ]
+      }
+    },
+    {
+      "id": 172,
+      "name": "Light Nanaslug",
+      "rarity": "Exotic",
+      "best_rank": "RS",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "CLOUD_CAKE"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "MAGICITE_STAFF"
+        ],
+        "35": [
+          "SHARD_OF_RUDOLFE"
+        ]
+      }
+    },
+    {
+      "id": 173,
+      "name": "Light Nibbles",
+      "rarity": "Epic",
+      "best_rank": "S+",
+      "tierlist": "B",
+      "relics_by_level": {
+        "10": [
+          "GKS_SLIPPERS",
+          "ELEFAUNA_FLOWER"
+        ],
+        "20": [
+          "SHIP_CAPTAINS_LOG",
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "ARROW_OF_LOVE",
+          "MAGICITE_STAFF"
+        ],
+        "35": [
+          "SHARD_OF_RUDOLFE"
+        ]
+      }
+    },
+    {
+      "id": 174,
+      "name": "Light Quirk",
+      "rarity": "Epic",
+      "best_rank": "S+",
+      "tierlist": "B",
+      "relics_by_level": {
+        "10": [
+          "WOODMANS_AXE_HEAD",
+          "BLESSED_POLLEN"
+        ],
+        "20": [
+          "MONKS_BANNER",
+          "EMERALD_SCALES"
+        ],
+        "30": [
+          "DARK_WARRO_THORN",
+          "VANQUISHED_SOUL"
+        ],
+        "35": [
+          "SAYAMS_TRIDENT",
+          "MOON_ROCK"
+        ]
+      }
+    },
+    {
+      "id": 175,
+      "name": "Light Rafiery",
+      "rarity": "Epic",
+      "best_rank": "S+",
+      "tierlist": "B",
+      "relics_by_level": {
+        "10": [
+          "SKELEPUPS_SPARK",
+          "FROOST_ROOT"
+        ],
+        "20": [
+          "SHIP_CAPTAINS_LOG"
+        ],
+        "30": [
+          "ARROW_OF_LOVE"
+        ],
+        "35": [
+          "SHARD_OF_RUDOLFE"
+        ]
+      }
+    },
+    {
+      "id": 176,
+      "name": "Light Slithero",
+      "rarity": "Rare",
+      "best_rank": "S+",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "WOODMANS_AXE_HEAD"
+        ],
+        "20": [
+          "FORGING_HAMMER"
+        ],
+        "30": [
+          "DARK_WARRO_THORN"
+        ],
+        "35": [
+          "MOLTEN_COIN"
+        ]
+      }
+    },
+    {
+      "id": 177,
+      "name": "Light Snorkels",
+      "rarity": "Exotic",
+      "best_rank": "RS",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER",
+          "GKS_SLIPPERS"
+        ],
+        "20": [
+          "HELZBELZ_BELLS",
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "ARROW_OF_LOVE"
+        ],
+        "35": [
+          "SHARD_OF_RUDOLFE"
+        ]
+      }
+    },
+    {
+      "id": 178,
+      "name": "Light Sparkspeck",
+      "rarity": "Rare",
+      "best_rank": "S+",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "CLOUD_CAKE"
+        ],
+        "20": [
+          "HELZBELZ_BELLS"
+        ],
+        "30": [
+          "ARROW_OF_LOVE"
+        ],
+        "35": [
+          "SHARD_OF_RUDOLFE"
+        ]
+      }
+    },
+    {
+      "id": 179,
+      "name": "Light Squibee",
+      "rarity": "Rare",
+      "best_rank": "RS",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "WOODMANS_AXE_HEAD"
+        ],
+        "20": [
+          "FORGING_HAMMER"
+        ],
+        "30": [
+          "DARK_WARRO_THORN"
+        ],
+        "35": [
+          "MOLTEN_COIN",
+          "MOON_ROCK"
+        ]
+      }
+    },
+    {
+      "id": 180,
+      "name": "Light Statikat",
+      "rarity": "Exotic",
+      "best_rank": "RS",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "BLESSED_POLLEN"
+        ],
+        "20": [
+          "OBSIDIAN_LAVA"
+        ],
+        "30": [
+          "SHACKLERS_GEM",
+          "TEMPLE_STONE"
+        ],
+        "35": [
+          "FLYING_CARPET_FRAGMENT"
+        ]
+      }
+    },
+    {
+      "id": 181,
+      "name": "Light Tectonyx",
+      "rarity": "Exotic",
+      "best_rank": "RS",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "WOODMANS_AXE_HEAD"
+        ],
+        "20": [
+          "EMERALD_SCALES"
+        ],
+        "30": [
+          "VANQUISHED_SOUL"
+        ],
+        "35": [
+          "GOGS_COG"
+        ]
+      }
+    },
+    {
+      "id": 182,
+      "name": "Light Twiggum",
+      "rarity": "Exotic",
+      "best_rank": "RS",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "CACTUS_FLOWER",
+          "TEMPLE_STONE"
+        ],
+        "35": [
+          "FLYING_CARPET_FRAGMENT"
+        ]
+      }
+    },
+    {
+      "id": 183,
+      "name": "Light Wavesling",
+      "rarity": "Rare",
+      "best_rank": "S+",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "MAGICITE_STAFF",
+          "TEMPLE_STONE"
+        ],
+        "35": [
+          "FLYING_CARPET_FRAGMENT",
+          "SHARD_OF_RUDOLFE"
+        ]
+      }
+    },
+    {
+      "id": 184,
+      "name": "Light Weevern",
+      "rarity": "Epic",
+      "best_rank": "S+",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER",
+          "GKS_SLIPPERS"
+        ],
+        "20": [
+          "HELZBELZ_BELLS",
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "ARROW_OF_LOVE"
+        ],
+        "35": [
+          "SHARD_OF_RUDOLFE"
+        ]
+      }
+    },
+    {
+      "id": 185,
+      "name": "Light Zaptor",
+      "rarity": "Exotic",
+      "best_rank": "S+",
+      "tierlist": "C",
+      "relics_by_level": {
+        "10": [
+          "CLOUD_CAKE"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "ARROW_OF_LOVE"
+        ],
+        "35": [
+          "SHARD_OF_RUDOLFE"
+        ]
+      }
+    },
+    {
+      "id": 186,
+      "name": "Lil Bubs",
+      "rarity": "Rare",
+      "best_rank": "RS/S+_(S+_Better)",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "TEMPLE_STONE"
+        ],
+        "35": [
+          "FLYING_CARPET_FRAGMENT"
+        ]
+      }
+    },
+    {
+      "id": 187,
+      "name": "Liothning",
+      "rarity": "Epic",
+      "best_rank": "S+",
+      "tierlist": "B",
+      "relics_by_level": {
+        "10": [
+          "WOODMANS_AXE_HEAD"
+        ],
+        "20": [
+          "EMERALD_SCALES",
+          "OBSIDIAN_LAVA"
+        ],
+        "30": [
+          "VANQUISHED_SOUL"
+        ],
+        "35": [
+          "GOGS_COG",
+          "MOON_ROCK"
+        ]
+      }
+    },
+    {
+      "id": 188,
+      "name": "Lithos",
+      "rarity": "Exotic",
+      "best_rank": "S+",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "MAGICITE_STAFF",
+          "TEMPLE_STONE"
+        ],
+        "35": [
+          "DARK_WINDS_VENOM",
+          "MOON_ROCK",
+          "SHARD_OF_RUDOLFE"
+        ]
+      }
+    },
+    {
+      "id": 189,
+      "name": "Lumera",
+      "rarity": "Common",
+      "best_rank": "RS",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "CLOUD_CAKE"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "ARROW_OF_LOVE"
+        ],
+        "35": [
+          "SHARD_OF_RUDOLFE"
+        ]
+      }
+    },
+    {
+      "id": 190,
+      "name": "Lumite",
+      "rarity": "Common",
+      "best_rank": "S+",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "TEMPLE_STONE"
+        ],
+        "35": [
+          "FLYING_CARPET_FRAGMENT"
+        ]
+      }
+    },
+    {
+      "id": 191,
+      "name": "Luna",
+      "rarity": "Rare",
+      "best_rank": "RS",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "PEEPSIE_EGGS",
+          "TEMPLE_STONE"
+        ],
+        "35": [
+          "SHARD_OF_RUDOLFE"
+        ]
+      }
+    },
+    {
+      "id": 192,
+      "name": "Lunako",
+      "rarity": "Rare",
+      "best_rank": "S+",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "CLOUD_CAKE"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "MAGICITE_STAFF",
+          "TEMPLE_STONE"
+        ],
+        "35": [
+          "SHARD_OF_RUDOLFE"
+        ]
+      }
+    },
+    {
+      "id": 193,
+      "name": "Lutox",
+      "rarity": "Rare",
+      "best_rank": "RS/S+_(S+_Better)",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "BLESSED_POLLEN"
+        ],
+        "20": [
+          "OBSIDIAN_LAVA"
+        ],
+        "30": [
+          "GOLD_PIECE_DIE"
+        ],
+        "35": [
+          "CAGE_OF_DESPAIR",
+          "SCENT_OF_SKUSTUNK"
+        ]
+      }
+    },
+    {
+      "id": 194,
+      "name": "Luvcraft",
+      "rarity": "Exotic",
+      "best_rank": "RS",
+      "tierlist": "C",
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "ARROW_OF_LOVE",
+          "MAGICITE_STAFF"
+        ],
+        "35": [
+          "SHARD_OF_RUDOLFE"
+        ]
+      }
+    },
+    {
+      "id": 195,
+      "name": "Mama",
+      "rarity": "Exotic",
+      "best_rank": "RS",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER"
+        ],
+        "20": [
+          "FORGING_HAMMER"
+        ],
+        "30": [
+          "CACTUS_FLOWER",
+          "TEMPLE_STONE"
+        ],
+        "35": [
+          "FLYING_CARPET_FRAGMENT",
+          "MOLTEN_COIN"
+        ]
+      }
+    },
+    {
+      "id": 196,
+      "name": "Manio",
+      "rarity": "Legendary",
+      "best_rank": "RS",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER",
+          "FROOST_ROOT"
+        ],
+        "20": [
+          "FORGING_HAMMER",
+          "OBSIDIAN_LAVA"
+        ],
+        "30": [
+          "GOLD_PIECE_DIE",
+          "MONASTERY_IDOL"
+        ],
+        "35": [
+          "MOLTEN_COIN"
+        ]
+      }
+    },
+    {
+      "id": 197,
+      "name": "Mech",
+      "rarity": "Common",
+      "best_rank": "RS",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "WOODMANS_AXE_HEAD"
+        ],
+        "20": [
+          "MONKS_BANNER",
+          "EMERALD_SCALES"
+        ],
+        "30": [
+          "VANQUISHED_SOUL"
+        ],
+        "35": [
+          "SAYAMS_TRIDENT",
+          "GOGS_COG"
+        ]
+      }
+    },
+    {
+      "id": 198,
+      "name": "Microblast",
+      "rarity": "Epic",
+      "best_rank": "RS",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "MAGICITE_STAFF",
+          "TEMPLE_STONE"
+        ],
+        "35": [
+          "SHARD_OF_RUDOLFE"
+        ]
+      }
+    },
+    {
+      "id": 199,
+      "name": "Mistraxol",
+      "rarity": "Common",
+      "best_rank": "S+",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "CLOUD_CAKE"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "MAGICITE_STAFF"
+        ],
+        "35": [
+          "SHARD_OF_RUDOLFE"
+        ]
+      }
+    },
+    {
+      "id": 200,
+      "name": "Mooncrit",
+      "rarity": "Rare",
+      "best_rank": "S+",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER"
+        ],
+        "20": [
+          "OBSIDIAN_LAVA",
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "CACTUS_FLOWER",
+          "TEMPLE_STONE"
+        ],
+        "35": [
+          "CAGE_OF_DESPAIR",
+          "FLYING_CARPET_FRAGMENT"
+        ]
+      }
+    },
+    {
+      "id": 201,
+      "name": "Moondrip",
+      "rarity": "Common",
+      "best_rank": "RS",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "WOODMANS_AXE_HEAD"
+        ],
+        "20": [
+          "EMERALD_SCALES"
+        ],
+        "30": [
+          "VANQUISHED_SOUL"
+        ],
+        "35": [
+          "GOGS_COG"
+        ]
+      }
+    },
+    {
+      "id": 202,
+      "name": "Mucora",
+      "rarity": "Common",
+      "best_rank": "RS",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "SHACKLERS_GEM",
+          "TEMPLE_STONE"
+        ],
+        "35": [
+          "FLYING_CARPET_FRAGMENT",
+          "MOON_ROCK"
+        ]
+      }
+    },
+    {
+      "id": 203,
+      "name": "Mumbah",
+      "rarity": "Common",
+      "best_rank": "S+",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "CLOUD_CAKE"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "ARROW_OF_LOVE",
+          "MAGICITE_STAFF"
+        ],
+        "35": [
+          "SHARD_OF_RUDOLFE"
+        ]
+      }
+    },
+    {
+      "id": 204,
+      "name": "Mun Kee",
+      "rarity": "Rare",
+      "best_rank": "RS",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "TEMPLE_STONE"
+        ],
+        "35": [
+          "FLYING_CARPET_FRAGMENT"
+        ]
+      }
+    },
+    {
+      "id": 205,
+      "name": "Nanaslug",
+      "rarity": "Epic",
+      "best_rank": "RS",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "MAGICITE_STAFF",
+          "TEMPLE_STONE"
+        ],
+        "35": [
+          "SHARD_OF_RUDOLFE"
+        ]
+      }
+    },
+    {
+      "id": 206,
+      "name": "Narlope",
+      "rarity": "Common",
+      "best_rank": "RS",
+      "tierlist": "B",
+      "relics_by_level": {
+        "10": [
+          "FROOST_ROOT",
+          "ELEFAUNA_FLOWER"
+        ],
+        "20": [
+          "STONY_SHIELD",
+          "OBSIDIAN_LAVA"
+        ],
+        "30": [
+          "TEMPLE_STONE",
+          "CACTUS_FLOWER",
+          "PEEPSIE_EGGS"
+        ],
+        "35": [
+          "FLYING_CARPET_FRAGMENT",
+          "CAGE_OF_DESPAIR"
+        ]
+      }
+    },
+    {
+      "id": 207,
+      "name": "Nero",
+      "rarity": "Common",
+      "best_rank": "S+",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "WOODMANS_AXE_HEAD"
+        ],
+        "20": [
+          "FORGING_HAMMER"
+        ],
+        "30": [
+          "VANQUISHED_SOUL"
+        ],
+        "35": [
+          "MOON_ROCK"
+        ]
+      }
+    },
+    {
+      "id": 208,
+      "name": "Nessy",
+      "rarity": "Common",
+      "best_rank": "S+",
+      "tierlist": "C",
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER"
+        ],
+        "20": [
+          "OBSIDIAN_LAVA"
+        ],
+        "30": [
+          "PEEPSIE_EGGS",
+          "TEMPLE_STONE"
+        ],
+        "35": [
+          "FLYING_CARPET_FRAGMENT"
+        ]
+      }
+    },
+    {
+      "id": 209,
+      "name": "Nibbles",
+      "rarity": "Common",
+      "best_rank": "S+",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "WOODMANS_AXE_HEAD"
+        ],
+        "20": [
+          "EMERALD_SCALES"
+        ],
+        "30": [
+          "DARK_WARRO_THORN"
+        ],
+        "35": [
+          "MOON_ROCK",
+          "SAYAMS_TRIDENT"
+        ]
+      }
+    },
+    {
+      "id": 210,
+      "name": "Niboro",
+      "rarity": "Epic",
+      "best_rank": "S+",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "CLOUD_CAKE"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "MAGICITE_STAFF",
+          "TEMPLE_STONE"
+        ],
+        "35": [
+          "SHARD_OF_RUDOLFE"
+        ]
+      }
+    },
+    {
+      "id": 211,
+      "name": "Nubyll",
+      "rarity": "Rare",
+      "best_rank": "S+",
+      "tierlist": "B",
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "ARROW_OF_LOVE",
+          "MAGICITE_STAFF"
+        ],
+        "35": [
+          "SHARD_OF_RUDOLFE"
+        ]
+      }
+    },
+    {
+      "id": 212,
+      "name": "Octavio",
+      "rarity": "Epic",
+      "best_rank": "S+",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER"
+        ],
+        "20": [
+          "OBSIDIAN_LAVA"
+        ],
+        "30": [
+          "SHACKLERS_GEM",
+          "TEMPLE_STONE"
+        ],
+        "35": [
+          "FLYING_CARPET_FRAGMENT"
+        ]
+      }
+    },
+    {
+      "id": 213,
+      "name": "Oozie",
+      "rarity": "Rare",
+      "best_rank": "RS",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "CACTUS_FLOWER",
+          "TEMPLE_STONE"
+        ],
+        "35": [
+          "FLYING_CARPET_FRAGMENT"
+        ]
+      }
+    },
+    {
+      "id": 214,
+      "name": "Opigum",
+      "rarity": "Rare",
+      "best_rank": "S+",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "BLESSED_POLLEN"
+        ],
+        "20": [
+          "OBSIDIAN_LAVA"
+        ],
+        "30": [
+          "CACTUS_FLOWER",
+          "SHACKLERS_GEM"
+        ],
+        "35": [
+          "CAGE_OF_DESPAIR",
+          "MOON_ROCK"
+        ]
+      }
+    },
+    {
+      "id": 215,
+      "name": "Orbling",
+      "rarity": "Common",
+      "best_rank": "S+",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "BLESSED_POLLEN"
+        ],
+        "20": [
+          "OBSIDIAN_LAVA"
+        ],
+        "30": [
+          "CACTUS_FLOWER",
+          "SHACKLERS_GEM"
+        ],
+        "35": [
+          "CAGE_OF_DESPAIR",
+          "MOON_ROCK"
+        ]
+      }
+    },
+    {
+      "id": 216,
+      "name": "Orcatide",
+      "rarity": "Common",
+      "best_rank": "S+",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "WOODMANS_AXE_HEAD"
+        ],
+        "20": [
+          "EMERALD_SCALES"
+        ],
+        "30": [
+          "VANQUISHED_SOUL"
+        ],
+        "35": [
+          "GOGS_COG"
+        ]
+      }
+    },
+    {
+      "id": 217,
+      "name": "Osmeron",
+      "rarity": "Rare",
+      "best_rank": "S+",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "SHACKLERS_GEM",
+          "TEMPLE_STONE"
+        ],
+        "35": [
+          "SHARD_OF_RUDOLFE"
+        ]
+      }
+    },
+    {
+      "id": 218,
+      "name": "Owlie",
+      "rarity": "Common",
+      "best_rank": "S+",
+      "tierlist": "C",
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER",
+          "BLESSED_POLLEN"
+        ],
+        "20": [
+          "STONY_SHIELD",
+          "BEAN_STALK"
+        ],
+        "30": [
+          "CACTUS_FLOWER",
+          "TEMPLE_STONE"
+        ],
+        "35": [
+          "FLYING_CARPET_FRAGMENT",
+          "CAGE_OF_DESPAIR"
+        ]
+      }
+    },
+    {
+      "id": 219,
+      "name": "Pamboo",
+      "rarity": "Rare",
+      "best_rank": "RS",
+      "tierlist": "C",
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER",
+          "BLESSED_POLLEN"
+        ],
+        "20": [
+          "OBSIDIAN_LAVA",
+          "SUNFALL_SHORES_BANNER",
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "CACTUS_FLOWER",
+          "TEMPLE_STONE"
+        ],
+        "35": [
+          "FLYING_CARPET_FRAGMENT"
+        ]
+      }
+    },
+    {
+      "id": 220,
+      "name": "Papa",
+      "rarity": "Exotic",
+      "best_rank": "S+",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "FROOST_ROOT"
+        ],
+        "20": [
+          "FORGING_HAMMER"
+        ],
+        "30": [
+          "GOLD_PIECE_DIE"
+        ],
+        "35": [
+          "MOLTEN_COIN"
+        ]
+      }
+    },
+    {
+      "id": 221,
+      "name": "Patchkin",
+      "rarity": "Exotic",
+      "best_rank": "RS",
+      "tierlist": "C",
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "PATCHKINS_RIND",
+          "TEMPLE_STONE"
+        ],
+        "35": [
+          "MOLTEN_COIN"
+        ]
+      }
+    },
+    {
+      "id": 222,
+      "name": "Peekly",
+      "rarity": "Common",
+      "best_rank": "RS",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "WOODMANS_AXE_HEAD"
+        ],
+        "20": [
+          "EMERALD_SCALES"
+        ],
+        "30": [
+          "LOST_SWORDS",
+          "VANQUISHED_SOUL"
+        ],
+        "35": [
+          "GOGS_COG"
+        ]
+      }
+    },
+    {
+      "id": 223,
+      "name": "Peepsie",
+      "rarity": "Exotic",
+      "best_rank": "RS",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER",
+          "QUARTEX_CRYSTAL"
+        ],
+        "20": [
+          "OBSIDIAN_LAVA",
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "CACTUS_FLOWER",
+          "PEEPSIE_EGGS"
+        ],
+        "35": [
+          "FLYING_CARPET_FRAGMENT"
+        ]
+      }
+    },
+    {
+      "id": 224,
+      "name": "Pennon",
+      "rarity": "Epic",
+      "best_rank": "RS/S+_(RS_Better)",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "WOODMANS_AXE_HEAD"
+        ],
+        "20": [
+          "EMERALD_SCALES"
+        ],
+        "30": [
+          "VANQUISHED_SOUL"
+        ],
+        "35": [
+          "MOON_ROCK",
+          "SAYAMS_TRIDENT"
+        ]
+      }
+    },
+    {
+      "id": 225,
+      "name": "Pestling",
+      "rarity": "Common",
+      "best_rank": "RS",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "PEEPSIE_EGGS",
+          "TEMPLE_STONE"
+        ],
+        "35": [
+          "FLYING_CARPET_FRAGMENT"
+        ]
+      }
+    },
+    {
+      "id": 226,
+      "name": "Phoboros",
+      "rarity": "Epic",
+      "best_rank": "S+",
+      "tierlist": "A",
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER"
+        ],
+        "20": [
+          "SUNFALL_SHORES_BANNER",
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "MAGICITE_STAFF",
+          "TEMPLE_STONE"
+        ],
+        "35": [
+          "SHARD_OF_RUDOLFE"
+        ]
+      }
+    },
+    {
+      "id": 227,
+      "name": "Pillblaze",
+      "rarity": "Rare",
+      "best_rank": "RS",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "CACTUS_FLOWER",
+          "TEMPLE_STONE"
+        ],
+        "35": [
+          "SCENT_OF_SKUSTUNK"
+        ]
+      }
+    },
+    {
+      "id": 228,
+      "name": "Pinplar",
+      "rarity": "Exotic",
+      "best_rank": "S+",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "WOODMANS_AXE_HEAD"
+        ],
+        "20": [
+          "OBSIDIAN_LAVA"
+        ],
+        "30": [
+          "VANQUISHED_SOUL"
+        ],
+        "35": [
+          "GOGS_COG"
+        ]
+      }
+    },
+    {
+      "id": 229,
+      "name": "Pirate Bludger",
+      "rarity": "Rare",
+      "best_rank": "RS",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "WOODMANS_AXE_HEAD"
+        ],
+        "20": [
+          "EMERALD_SCALES"
+        ],
+        "30": [
+          "VANQUISHED_SOUL"
+        ],
+        "35": [
+          "GOGS_COG"
+        ]
+      }
+    },
+    {
+      "id": 230,
+      "name": "Podo",
+      "rarity": "Epic",
+      "best_rank": "RS",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "PEEPSIE_EGGS",
+          "TEMPLE_STONE"
+        ],
+        "35": [
+          "FLYING_CARPET_FRAGMENT"
+        ]
+      }
+    },
+    {
+      "id": 231,
+      "name": "Pollifog",
+      "rarity": "Rare",
+      "best_rank": "RS",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER",
+          "GKS_SLIPPERS"
+        ],
+        "20": [
+          "HELZBELZ_BELLS",
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "ARROW_OF_LOVE"
+        ],
+        "35": [
+          "SHARD_OF_RUDOLFE"
+        ]
+      }
+    },
+    {
+      "id": 232,
+      "name": "Poltergust",
+      "rarity": "Rare",
+      "best_rank": "RS/S+_(S+_Better)",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "TEMPLE_STONE"
+        ],
+        "35": [
+          "FLYING_CARPET_FRAGMENT"
+        ]
+      }
+    },
+    {
+      "id": 233,
+      "name": "Poppet",
+      "rarity": "Common",
+      "best_rank": "RS",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER"
+        ],
+        "20": [
+          "OBSIDIAN_LAVA",
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "SHACKLERS_GEM",
+          "TEMPLE_STONE"
+        ],
+        "35": [
+          "FLYING_CARPET_FRAGMENT",
+          "MOON_ROCK"
+        ]
+      }
+    },
+    {
+      "id": 234,
+      "name": "Prawnja",
+      "rarity": "Common",
+      "best_rank": "S+",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "WOODMANS_AXE_HEAD"
+        ],
+        "20": [
+          "OBSIDIAN_LAVA"
+        ],
+        "30": [
+          "CACTUS_FLOWER"
+        ],
+        "35": [
+          "CAGE_OF_DESPAIR",
+          "GOGS_COG"
+        ]
+      }
+    },
+    {
+      "id": 235,
+      "name": "Pyrex",
+      "rarity": "Exotic",
+      "best_rank": "RS",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "ARROW_OF_LOVE",
+          "MAGICITE_STAFF"
+        ],
+        "35": [
+          "SHARD_OF_RUDOLFE"
+        ]
+      }
+    },
+    {
+      "id": 236,
+      "name": "Quebble",
+      "rarity": "Common",
+      "best_rank": "S+",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "PEEPSIE_EGGS",
+          "TEMPLE_STONE"
+        ],
+        "35": [
+          "FLYING_CARPET_FRAGMENT"
+        ]
+      }
+    },
+    {
+      "id": 237,
+      "name": "Quirk",
+      "rarity": "Common",
+      "best_rank": "S+",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "WOODMANS_AXE_HEAD"
+        ],
+        "20": [
+          "EMERALD_SCALES"
+        ],
+        "30": [
+          "VANQUISHED_SOUL"
+        ],
+        "35": [
+          "GOGS_COG"
+        ]
+      }
+    },
+    {
+      "id": 238,
+      "name": "Rafiery",
+      "rarity": "Rare",
+      "best_rank": "RS",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "WOODMANS_AXE_HEAD"
+        ],
+        "20": [
+          "EMERALD_SCALES"
+        ],
+        "30": [
+          "VANQUISHED_SOUL"
+        ],
+        "35": [
+          "MOON_ROCK",
+          "SAYAMS_TRIDENT"
+        ]
+      }
+    },
+    {
+      "id": 239,
+      "name": "Raldio",
+      "rarity": "Rare",
+      "best_rank": "S+",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER",
+          "GKS_SLIPPERS"
+        ],
+        "20": [
+          "HELZBELZ_BELLS",
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "ARROW_OF_LOVE"
+        ],
+        "35": [
+          "SHARD_OF_RUDOLFE"
+        ]
+      }
+    },
+    {
+      "id": 240,
+      "name": "Rephily",
+      "rarity": "Rare",
+      "best_rank": "RS",
+      "tierlist": "C",
+      "relics_by_level": {
+        "10": [
+          "WOODMANS_AXE_HEAD"
+        ],
+        "20": [
+          "EMERALD_SCALES"
+        ],
+        "30": [
+          "VANQUISHED_SOUL"
+        ],
+        "35": [
+          "GOGS_COG"
+        ]
+      }
+    },
+    {
+      "id": 241,
+      "name": "Rexie",
+      "rarity": "Common",
+      "best_rank": "S+",
+      "tierlist": "C",
+      "relics_by_level": {
+        "10": [
+          "WOODMANS_AXE_HEAD"
+        ],
+        "20": [
+          "EMERALD_SCALES"
+        ],
+        "30": [
+          "LOST_SWORDS",
+          "VANQUISHED_SOUL"
+        ],
+        "35": [
+          "SAYAMS_TRIDENT"
+        ]
+      }
+    },
+    {
+      "id": 242,
+      "name": "Ribos",
+      "rarity": "Rare",
+      "best_rank": "RS",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "SHACKLERS_GEM",
+          "TEMPLE_STONE"
+        ],
+        "35": [
+          "FLYING_CARPET_FRAGMENT"
+        ]
+      }
+    },
+    {
+      "id": 243,
+      "name": "Rocker Octavio",
+      "rarity": "Exotic",
+      "best_rank": "S+",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER"
+        ],
+        "20": [
+          "OBSIDIAN_LAVA"
+        ],
+        "30": [
+          "CACTUS_FLOWER",
+          "TEMPLE_STONE"
+        ],
+        "35": [
+          "FLYING_CARPET_FRAGMENT"
+        ]
+      }
+    },
+    {
+      "id": 244,
+      "name": "Rockodile",
+      "rarity": "Rare",
+      "best_rank": "RS",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER"
+        ],
+        "20": [
+          "OBSIDIAN_LAVA"
+        ],
+        "30": [
+          "PEEPSIE_EGGS",
+          "TEMPLE_STONE"
+        ],
+        "35": [
+          "FLYING_CARPET_FRAGMENT"
+        ]
+      }
+    },
+    {
+      "id": 245,
+      "name": "Rudy",
+      "rarity": "Exotic",
+      "best_rank": "RS",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "WOODMANS_AXE_HEAD"
+        ],
+        "20": [
+          "FORGING_HAMMER"
+        ],
+        "30": [
+          "VANQUISHED_SOUL"
+        ],
+        "35": [
+          "FROZEN_COIN"
+        ]
+      }
+    },
+    {
+      "id": 246,
+      "name": "Sapphron",
+      "rarity": "Epic",
+      "best_rank": "RS",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "MAGICITE_STAFF",
+          "TEMPLE_STONE"
+        ],
+        "35": [
+          "SHARD_OF_RUDOLFE"
+        ]
+      }
+    },
+    {
+      "id": 247,
+      "name": "Scarecrow Charix",
+      "rarity": "Epic",
+      "best_rank": "S+",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "MAGICITE_STAFF",
+          "TEMPLE_STONE"
+        ],
+        "35": [
+          "FLYING_CARPET_FRAGMENT",
+          "SHARD_OF_RUDOLFE"
+        ]
+      }
+    },
+    {
+      "id": 248,
+      "name": "Shellbee",
+      "rarity": "Common",
+      "best_rank": "S+",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "CLOUD_CAKE"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "MAGICITE_STAFF"
+        ],
+        "35": [
+          "SHARD_OF_RUDOLFE"
+        ]
+      }
+    },
+    {
+      "id": 249,
+      "name": "Shroolet",
+      "rarity": "Rare",
+      "best_rank": "RS/S+_(RS_Better)",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER"
+        ],
+        "20": [
+          "OBSIDIAN_LAVA"
+        ],
+        "30": [
+          "CACTUS_FLOWER",
+          "TEMPLE_STONE"
+        ],
+        "35": [
+          "CAGE_OF_DESPAIR",
+          "FLYING_CARPET_FRAGMENT"
+        ]
+      }
+    },
+    {
+      "id": 250,
+      "name": "Shurikoon",
+      "rarity": "Epic",
+      "best_rank": "S+",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER",
+          "GKS_SLIPPERS"
+        ],
+        "20": [
+          "HELZBELZ_BELLS",
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "ARROW_OF_LOVE"
+        ],
+        "35": [
+          "SHARD_OF_RUDOLFE"
+        ]
+      }
+    },
+    {
+      "id": 251,
+      "name": "Silkire",
+      "rarity": "Common",
+      "best_rank": "RS",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "TEMPLE_STONE"
+        ],
+        "35": [
+          "FLYING_CARPET_FRAGMENT"
+        ]
+      }
+    },
+    {
+      "id": 252,
+      "name": "Skelepup",
+      "rarity": "Exotic",
+      "best_rank": "S+",
+      "tierlist": "S",
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER",
+          "FROOST_ROOT"
+        ],
+        "20": [
+          "VOLCANO_BANNER",
+          "OBSIDIAN_LAVA",
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "MYSTIC_MAP",
+          "CACTUS_FLOWER"
+        ],
+        "35": [
+          "CAGE_OF_DESPAIR"
+        ]
+      }
+    },
+    {
+      "id": 253,
+      "name": "Skustunk",
+      "rarity": "Rare",
+      "best_rank": "RS",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "PEEPSIE_EGGS",
+          "TEMPLE_STONE"
+        ],
+        "35": [
+          "FLYING_CARPET_FRAGMENT"
+        ]
+      }
+    },
+    {
+      "id": 254,
+      "name": "Sledgehog",
+      "rarity": "Epic",
+      "best_rank": "RS/S+_(S+_Better)",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "WOODMANS_AXE_HEAD"
+        ],
+        "20": [
+          "OBSIDIAN_LAVA"
+        ],
+        "30": [
+          "VANQUISHED_SOUL"
+        ],
+        "35": [
+          "CAGE_OF_DESPAIR",
+          "GOGS_COG"
+        ]
+      }
+    },
+    {
+      "id": 255,
+      "name": "Slithero",
+      "rarity": "Common",
+      "best_rank": "RS",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER"
+        ],
+        "20": [
+          "STONY_SHIELD",
+          "OBSIDIAN_LAVA"
+        ],
+        "30": [
+          "TEMPLE_STONE",
+          "MYSTIC_MAP"
+        ],
+        "35": [
+          "FLYING_CARPET_FRAGMENT"
+        ]
+      }
+    },
+    {
+      "id": 256,
+      "name": "Smolderfry",
+      "rarity": "Exotic",
+      "best_rank": "RS",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "WOODMANS_AXE_HEAD"
+        ],
+        "20": [
+          "EMERALD_SCALES"
+        ],
+        "30": [
+          "MONASTERY_IDOL"
+        ],
+        "35": [
+          "GOGS_COG"
+        ]
+      }
+    },
+    {
+      "id": 257,
+      "name": "Snatcher",
+      "rarity": "Common",
+      "best_rank": "RS",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "TEMPLE_STONE"
+        ],
+        "35": [
+          "FLYING_CARPET_FRAGMENT"
+        ]
+      }
+    },
+    {
+      "id": 258,
+      "name": "Snorkels",
+      "rarity": "Rare",
+      "best_rank": "S+",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER",
+          "GKS_SLIPPERS"
+        ],
+        "20": [
+          "HELZBELZ_BELLS",
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "ARROW_OF_LOVE"
+        ],
+        "35": [
+          "SHARD_OF_RUDOLFE"
+        ]
+      }
+    },
+    {
+      "id": 259,
+      "name": "Snortus",
+      "rarity": "Common",
+      "best_rank": "RS",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "WOODMANS_AXE_HEAD"
+        ],
+        "20": [
+          "EMERALD_SCALES"
+        ],
+        "30": [
+          "VANQUISHED_SOUL"
+        ],
+        "35": [
+          "GOGS_COG"
+        ]
+      }
+    },
+    {
+      "id": 260,
+      "name": "Sol",
+      "rarity": "Rare",
+      "best_rank": "RS",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "CLOUD_CAKE"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "MAGICITE_STAFF"
+        ],
+        "35": [
+          "SHARD_OF_RUDOLFE"
+        ]
+      }
+    },
+    {
+      "id": 261,
+      "name": "Sora",
+      "rarity": "Common",
+      "best_rank": "S+",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "WOODMANS_AXE_HEAD"
+        ],
+        "20": [
+          "MONKS_BANNER"
+        ],
+        "30": [
+          "VANQUISHED_SOUL"
+        ],
+        "35": [
+          "GOGS_COG",
+          "MOON_ROCK"
+        ]
+      }
+    },
+    {
+      "id": 262,
+      "name": "Spangles",
+      "rarity": "Exotic",
+      "best_rank": "S+",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "MAGICITE_STAFF"
+        ],
+        "35": [
+          "SHARD_OF_RUDOLFE"
+        ]
+      }
+    },
+    {
+      "id": 263,
+      "name": "Sparkitten",
+      "rarity": "Common",
+      "best_rank": "S+",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "MAGICITE_STAFF",
+          "TEMPLE_STONE"
+        ],
+        "35": [
+          "SHARD_OF_RUDOLFE"
+        ]
+      }
+    },
+    {
+      "id": 264,
+      "name": "Sparkslug",
+      "rarity": "Common",
+      "best_rank": "S+",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "CACTUS_FLOWER",
+          "TEMPLE_STONE"
+        ],
+        "35": [
+          "FLYING_CARPET_FRAGMENT"
+        ]
+      }
+    },
+    {
+      "id": 265,
+      "name": "Sparkspeck",
+      "rarity": "Common",
+      "best_rank": "RS",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "CLOUD_CAKE"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "MAGICITE_STAFF"
+        ],
+        "35": [
+          "SHARD_OF_RUDOLFE"
+        ]
+      }
+    },
+    {
+      "id": 266,
+      "name": "Sparkupine",
+      "rarity": "Common",
+      "best_rank": "RS/S+_(S+_Better)",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "WOODMANS_AXE_HEAD"
+        ],
+        "20": [
+          "EMERALD_SCALES"
+        ],
+        "30": [
+          "VANQUISHED_SOUL"
+        ],
+        "35": [
+          "FROZEN_COIN"
+        ]
+      }
+    },
+    {
+      "id": 267,
+      "name": "Spinnerette",
+      "rarity": "Common",
+      "best_rank": "RS",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER",
+          "GKS_SLIPPERS"
+        ],
+        "20": [
+          "HELZBELZ_BELLS",
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "ARROW_OF_LOVE"
+        ],
+        "35": [
+          "SHARD_OF_RUDOLFE"
+        ]
+      }
+    },
+    {
+      "id": 268,
+      "name": "Splender",
+      "rarity": "Exotic",
+      "best_rank": "RS",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER",
+          "GKS_SLIPPERS"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "ARROW_OF_LOVE",
+          "MAGICITE_STAFF"
+        ],
+        "35": [
+          "SHARD_OF_RUDOLFE"
+        ]
+      }
+    },
+    {
+      "id": 269,
+      "name": "Squibee",
+      "rarity": "Common",
+      "best_rank": "S+",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER",
+          "GKS_SLIPPERS"
+        ],
+        "20": [
+          "HELZBELZ_BELLS",
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "ARROW_OF_LOVE"
+        ],
+        "35": [
+          "SHARD_OF_RUDOLFE"
+        ]
+      }
+    },
+    {
+      "id": 270,
+      "name": "Squirmle",
+      "rarity": "Common",
+      "best_rank": "S+",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "CLOUD_CAKE"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "MAGICITE_STAFF"
+        ],
+        "35": [
+          "SHARD_OF_RUDOLFE"
+        ]
+      }
+    },
+    {
+      "id": 271,
+      "name": "Stalkra",
+      "rarity": "Common",
+      "best_rank": "S+",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "WOODMANS_AXE_HEAD"
+        ],
+        "20": [
+          "EMERALD_SCALES"
+        ],
+        "30": [
+          "VANQUISHED_SOUL"
+        ],
+        "35": [
+          "GOGS_COG"
+        ]
+      }
+    },
+    {
+      "id": 272,
+      "name": "Statikat",
+      "rarity": "Common",
+      "best_rank": "RS",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "CLOUD_CAKE"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "MAGICITE_STAFF"
+        ],
+        "35": [
+          "SHARD_OF_RUDOLFE"
+        ]
+      }
+    },
+    {
+      "id": 273,
+      "name": "Steamguin",
+      "rarity": "Common",
+      "best_rank": "RS",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "TEMPLE_STONE"
+        ],
+        "35": [
+          "FLYING_CARPET_FRAGMENT"
+        ]
+      }
+    },
+    {
+      "id": 274,
+      "name": "Tectonyx",
+      "rarity": "Common",
+      "best_rank": "S+",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "WOODMANS_AXE_HEAD"
+        ],
+        "20": [
+          "EMERALD_SCALES"
+        ],
+        "30": [
+          "VANQUISHED_SOUL"
+        ],
+        "35": [
+          "SAYAMS_TRIDENT"
+        ]
+      }
+    },
+    {
+      "id": 275,
+      "name": "Thundercracker",
+      "rarity": "Rare",
+      "best_rank": "RS",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "BLESSED_POLLEN"
+        ],
+        "20": [
+          "FORGING_HAMMER"
+        ],
+        "30": [
+          "GOLD_PIECE_DIE"
+        ],
+        "35": [
+          "MOLTEN_COIN"
+        ]
+      }
+    },
+    {
+      "id": 276,
+      "name": "Tongutail",
+      "rarity": "Common",
+      "best_rank": "S+",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "WOODMANS_AXE_HEAD"
+        ],
+        "20": [
+          "EMERALD_SCALES"
+        ],
+        "30": [
+          "VANQUISHED_SOUL"
+        ],
+        "35": [
+          "GOGS_COG"
+        ]
+      }
+    },
+    {
+      "id": 277,
+      "name": "Treemur",
+      "rarity": "Rare",
+      "best_rank": "RS",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "TEMPLE_STONE"
+        ],
+        "35": [
+          "FLYING_CARPET_FRAGMENT"
+        ]
+      }
+    },
+    {
+      "id": 278,
+      "name": "Tulipinny",
+      "rarity": "Rare",
+      "best_rank": "RS",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "PEEPSIE_EGGS",
+          "TEMPLE_STONE"
+        ],
+        "35": [
+          "FLYING_CARPET_FRAGMENT"
+        ]
+      }
+    },
+    {
+      "id": 279,
+      "name": "Twiggum",
+      "rarity": "Common",
+      "best_rank": "RS",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "BLESSED_POLLEN"
+        ],
+        "20": [
+          "OBSIDIAN_LAVA"
+        ],
+        "30": [
+          "TEMPLE_STONE"
+        ],
+        "35": [
+          "FLYING_CARPET_FRAGMENT"
+        ]
+      }
+    },
+    {
+      "id": 280,
+      "name": "Ursiwave",
+      "rarity": "Epic",
+      "best_rank": "S+",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "MAGICITE_STAFF"
+        ],
+        "35": [
+          "MOON_ROCK",
+          "SHARD_OF_RUDOLFE"
+        ]
+      }
+    },
+    {
+      "id": 281,
+      "name": "Valentino",
+      "rarity": "Exotic",
+      "best_rank": "RS",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "ARROW_OF_LOVE",
+          "MAGICITE_STAFF"
+        ],
+        "35": [
+          "SHARD_OF_RUDOLFE"
+        ]
+      }
+    },
+    {
+      "id": 282,
+      "name": "Vamp Skustunk",
+      "rarity": "Epic",
+      "best_rank": "RS",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "WOODMANS_AXE_HEAD"
+        ],
+        "20": [
+          "EMERALD_SCALES"
+        ],
+        "30": [
+          "VANQUISHED_SOUL"
+        ],
+        "35": [
+          "GOGS_COG"
+        ]
+      }
+    },
+    {
+      "id": 283,
+      "name": "Vexie",
+      "rarity": "Common",
+      "best_rank": "S+",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "PEEPSIE_EGGS",
+          "TEMPLE_STONE"
+        ],
+        "35": [
+          "FLYING_CARPET_FRAGMENT"
+        ]
+      }
+    },
+    {
+      "id": 284,
+      "name": "Vhisp",
+      "rarity": "Common",
+      "best_rank": "RS",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "CLOUD_CAKE"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "ARROW_OF_LOVE"
+        ],
+        "35": [
+          "SHARD_OF_RUDOLFE"
+        ]
+      }
+    },
+    {
+      "id": 285,
+      "name": "Voidotron",
+      "rarity": "Legendary",
+      "best_rank": "RS/S+_(Both_work)",
+      "tierlist": "B",
+      "relics_by_level": {
+        "10": [
+          "BLESSED_POLLEN",
+          "ELEFAUNA_FLOWER"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "MAGICITE_STAFF",
+          "MONASTERY_IDOL"
+        ],
+        "35": [
+          "MOON_ROCK"
+        ]
+      }
+    },
+    {
+      "id": 286,
+      "name": "Voltombra",
+      "rarity": "Common",
+      "best_rank": "RS",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "MAGICITE_STAFF"
+        ],
+        "35": [
+          "SHARD_OF_RUDOLFE"
+        ]
+      }
+    },
+    {
+      "id": 287,
+      "name": "Waddles",
+      "rarity": "Rare",
+      "best_rank": "RS",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "CLOUD_CAKE",
+          "ELEFAUNA_FLOWER"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "MAGICITE_STAFF",
+          "TEMPLE_STONE"
+        ],
+        "35": [
+          "FLYING_CARPET_FRAGMENT",
+          "SHARD_OF_RUDOLFE"
+        ]
+      }
+    },
+    {
+      "id": 288,
+      "name": "Warrian",
+      "rarity": "Common",
+      "best_rank": "RS/S+_(S+_Better)",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "TEMPLE_STONE"
+        ],
+        "35": [
+          "MOON_ROCK"
+        ]
+      }
+    },
+    {
+      "id": 289,
+      "name": "Wavesling",
+      "rarity": "Common",
+      "best_rank": "RS",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "TEMPLE_STONE"
+        ],
+        "35": [
+          "FLYING_CARPET_FRAGMENT"
+        ]
+      }
+    },
+    {
+      "id": 290,
+      "name": "Weevern",
+      "rarity": "Common",
+      "best_rank": "RS",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER",
+          "GKS_SLIPPERS"
+        ],
+        "20": [
+          "HELZBELZ_BELLS",
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "ARROW_OF_LOVE"
+        ],
+        "35": [
+          "SHARD_OF_RUDOLFE"
+        ]
+      }
+    },
+    {
+      "id": 291,
+      "name": "Whik",
+      "rarity": "Common",
+      "best_rank": "RS/S+_(S+_Better)",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "CLOUD_CAKE"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "MAGICITE_STAFF"
+        ],
+        "35": [
+          "SHARD_OF_RUDOLFE"
+        ]
+      }
+    },
+    {
+      "id": 292,
+      "name": "Whispen",
+      "rarity": "Common",
+      "best_rank": "S+",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "ARROW_OF_LOVE",
+          "MAGICITE_STAFF"
+        ],
+        "35": [
+          "SHARD_OF_RUDOLFE"
+        ]
+      }
+    },
+    {
+      "id": 293,
+      "name": "Winnebeargo",
+      "rarity": "Epic",
+      "best_rank": "RS",
+      "tierlist": "C",
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "MAGICITE_STAFF",
+          "TEMPLE_STONE",
+          "PEEPSIE_EGGS"
+        ],
+        "35": [
+          "SHARD_OF_RUDOLFE"
+        ]
+      }
+    },
+    {
+      "id": 294,
+      "name": "Woolly",
+      "rarity": "Legendary",
+      "best_rank": "S+",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "WOODMANS_AXE_HEAD"
+        ],
+        "20": [
+          "EMERALD_SCALES",
+          "OBSIDIAN_LAVA"
+        ],
+        "30": [
+          "VANQUISHED_SOUL"
+        ],
+        "35": [
+          "GOGS_COG"
+        ]
+      }
+    },
+    {
+      "id": 295,
+      "name": "Yuefira",
+      "rarity": "Common",
+      "best_rank": "RS",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "MAGICITE_STAFF"
+        ],
+        "35": [
+          "SHARD_OF_RUDOLFE"
+        ]
+      }
+    },
+    {
+      "id": 296,
+      "name": "Zappup",
+      "rarity": "Common",
+      "best_rank": "S+",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "GKS_SLIPPERS"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "ARROW_OF_LOVE"
+        ],
+        "35": [
+          "SHARD_OF_RUDOLFE"
+        ]
+      }
+    },
+    {
+      "id": 297,
+      "name": "Zaptor",
+      "rarity": "Common",
+      "best_rank": "RS/S+_(RS_Better)",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "MAGICITE_STAFF"
+        ],
+        "35": [
+          "SHARD_OF_RUDOLFE"
+        ]
+      }
+    },
+    {
+      "id": 298,
+      "name": "Zephry",
+      "rarity": "Common",
+      "best_rank": "S+",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER"
+        ],
+        "20": [
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "TEMPLE_STONE"
+        ],
+        "35": [
+          "FLYING_CARPET_FRAGMENT"
+        ]
+      }
+    },
+    {
+      "id": 299,
+      "name": "Viper",
+      "rarity": "Common",
+      "best_rank": "RS",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [],
+        "20": [],
+        "30": [],
+        "35": []
+      }
+    },
+    {
+      "id": 300,
+      "name": "Blowpuffle",
+      "rarity": "Common",
+      "best_rank": "RS",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [],
+        "20": [],
+        "30": [],
+        "35": []
+      }
+    },
+    {
+      "id": 301,
+      "name": "Squawcat",
+      "rarity": "Rare",
+      "best_rank": "RS/S+_(RS_Better)",
+      "tierlist": "B",
+      "relics_by_level": {
+        "10": [],
+        "20": [],
+        "30": [],
+        "35": []
+      }
+    },
+    {
+      "id": 302,
+      "name": "Dark Weevern",
+      "rarity": "Rare",
+      "best_rank": "S+",
+      "tierlist": "A",
+      "relics_by_level": {
+        "10": ["GKS_SLIPPERS"],
+        "20": ["SHIP_CAPTAINS_LOG",
+              "HELZBELZ_BELLS"],
+        "30": ["ARROW_OF_LOVE"],
+        "35": ["SHARD_OF_RUDOLFE"]
+      }
+    },
+    {
+      "id": 303,
+      "name": "Pangoleaf",
+      "rarity": "Epic",
+      "best_rank": "RS",
+      "tierlist": "A",
+      "relics_by_level": {
+        "10": ["WOODMANS_AXE_HEAD",
+              "BLESSED_POLLEN"],
+        "20": ["EMERALD_SCALES",
+              "MONKS_BANNER"],
+        "30": ["PAPAS_ANTLERS",
+              "VANQUISHED_SOUL"],
+        "35": ["SCENT_OF_SKUSTUNK",
+              "CAGE_OF_DESPAIR"]
+      }
+    },
+    {
+      "id": 304,
+      "name": "Foil Pamboo",
+      "rarity": "Exotic",
+      "best_rank": "RS",
+      "tierlist": "C",
+      "relics_by_level": {
+        "10": [
+          "ELEFAUNA_FLOWER",
+          "BLESSED_POLLEN"
+        ],
+        "20": [
+          "OBSIDIAN_LAVA",
+          "SUNFALL_SHORES_BANNER",
+          "STONY_SHIELD"
+        ],
+        "30": [
+          "CACTUS_FLOWER",
+          "TEMPLE_STONE"
+        ],
+        "35": [
+          "FLYING_CARPET_FRAGMENT"
+        ]
+      }
+    },
+    {
+      "id": 305,
+      "name": "Gippo",
+      "rarity": "Common",
+      "best_rank": "S+",
+      "tierlist": "C",
+      "relics_by_level": {
+        "10": [],
+        "20": [],
+        "30": [],
+        "35": []
+      }
+    },
+    {
+      "id": 306,
+      "name": "Hoghedge",
+      "rarity": "Common",
+      "best_rank": "RS",
+      "tierlist": "C",
+      "relics_by_level": {
+        "10": [],
+        "20": [],
+        "30": [],
+        "35": []
+      }
+    },
+    {
+      "id": 307,
+      "name": "Shroomer",
+      "rarity": "Common",
+      "best_rank": "RS",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [],
+        "20": [],
+        "30": [],
+        "35": []
+      }
+    },
+    {
+      "id": 308,
+      "name": "Daloo",
+      "rarity": "Common",
+      "best_rank": "RS",
+      "tierlist": "C",
+      "relics_by_level": {
+        "10": [],
+        "20": [],
+        "30": [],
+        "35": []
+      }
+    },
+    {
+      "id": 309,
+      "name": "Dark Whik",
+      "rarity": "Rare",
+      "best_rank": "S+",
+      "tierlist": "A",
+      "relics_by_level": {
+        "10": ["ELEFAUNA_FLOWER"],
+        "20": ["SUNFALL_SHORES_BANNER", "SHIP_CAPTAINS_LOG"],
+        "30": ["MAGICITE_STAFF", "PEEPSIE_EGGS"],
+        "35": ["SHARD_OF_RUDOLFE"]
+      }
+    },
+    {
+      "id": 310,
+      "name": "Bloombat",
+      "rarity": "Rare",
+      "best_rank": "RS",
+      "tierlist": "B",
+      "relics_by_level": {
+        "10": [],
+        "20": [],
+        "30": [],
+        "35": []
+      }
+    },
+    {
+      "id": 311,
+      "name": "Nyma",
+      "rarity": "Epic",
+      "best_rank": "S+",
+      "tierlist": "B",
+      "relics_by_level": {
+        "10": [],
+        "20": [],
+        "30": [],
+        "35": []
+      }
+    },
+    {
+      "id": 312,
+      "name": "Kitpole",
+      "rarity": "Exotic",
+      "best_rank": "RS/S+ (RS Better)",
+      "tierlist": "B",
+      "relics_by_level": {
+        "10": ["FROOST_ROOT"],
+        "20": ["STONY_SHIELD"],
+        "30": ["PEEPSIE_EGGS"],
+        "35": ["FLYING_CARPET_FRAGMENT"]
+      }
+    },
+    {
+      "id": 313,
+      "name": "Magpole",
+      "rarity": "Common",
+      "best_rank": "S+",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [],
+        "20": [],
+        "30": [],
+        "35": []
+      }
+    },
+    {
+      "id": 314,
+      "name": "Beetor",
+      "rarity": "Common",
+      "best_rank": "RS/S+_(Both_work)",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [],
+        "20": [],
+        "30": [],
+        "35": []
+      }
+    },
+    {
+      "id": 315,
+      "name": "Liquifien",
+      "rarity": "Rare",
+      "best_rank": "S+",
+      "tierlist": "A",
+      "relics_by_level": {
+        "10": ["BLESSED_POLLEN" ],
+        "20": ["SUNFALL_SHORES_BANNER", "OBSIDIAN_LAVA"],
+        "30": ["PEEPSIE_EGGS"],
+        "35": ["FLYING_CARPET_FRAGMENT"]
+      }
+    },
+    {
+      "id": 316,
+      "name": "Glary",
+      "rarity": "Epic",
+      "best_rank": "RS",
+      "tierlist": "C",
+      "relics_by_level": {
+        "10": [],
+        "20": [],
+        "30": [],
+        "35": []
+      }
+    },
+    {
+      "id": 317,
+      "name": "Foil Liquifien",
+      "rarity": "Exotic",
+      "best_rank": "S+",
+      "tierlist": "A",
+      "relics_by_level": {
+        "10": ["ELEFAUNA_FLOWER"],
+        "20": ["STONY_SHIELD", "SUNFALL_SHORES_BANNER"],
+        "30": ["MAGICITE_STAFF", "PEEPSIE_EGGS"],
+        "35": ["SHARD_OF_RUDOLFE"]
+      }
+    },
+    {
+      "id": 318,
+      "name": "Pachydo",
+      "rarity": "Common",
+      "best_rank": "RS",
+      "tierlist": "C",
+      "relics_by_level": {
+        "10": [],
+        "20": [],
+        "30": [],
+        "35": []
+      }
+    },
+    {
+      "id": 319,
+      "name": "Gurgleplops",
+      "rarity": "Common",
+      "best_rank": "RS",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [],
+        "20": [],
+        "30": [],
+        "35": []
+      }
+    },
+    {
+      "id": 320,
+      "name": "Budillo",
+      "rarity": "Common",
+      "best_rank": "RS",
+      "tierlist": "C",
+      "relics_by_level": {
+        "10": ["BLESSED_POLLEN", "ELEFAUNA_FLOWER"],
+        "20": ["OBSIDIAN_LAVA", "BEAN_STALK"],
+        "30": ["PEEPSIE_EGGS", "CACTUS_FLOWER"],
+        "35": ["PETRIFIED_MAMA_BABY", "FLYING_CARPET_FRAGMENT"]
+      }
+    },
+    {
+      "id": 321,
+      "name": "Pithapillar",
+      "rarity": "Common",
+      "best_rank": "RS",
+      "tierlist": "C",
+      "relics_by_level": {
+        "10": [],
+        "20": [],
+        "30": [],
+        "35": []
+      }
+    },
+    {
+      "id": 322,
+      "name": "Dark Bubbles",
+      "rarity": "Rare",
+      "best_rank": "RS",
+      "tierlist": "C",
+      "relics_by_level": {
+        "10": [],
+        "20": [],
+        "30": [],
+        "35": []
+      }
+    },
+    {
+      "id": 323,
+      "name": "Pyras",
+      "rarity": "Epic",
+      "best_rank": "S+",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [],
+        "20": [],
+        "30": [],
+        "35": []
+      }
+    },
+    {
+      "id": 324,
+      "name": "Foil Rockodile",
+      "rarity": "Exotic",
+      "best_rank": "RS",
+      "tierlist": null,
+      "relics_by_level": {
+        "10": [],
+        "20": [],
+        "30": [],
+        "35": []
+      }
+    },
+    {
+      "id": 325,
+      "name": "Bunaken",
+      "rarity": "Legendary",
+      "best_rank": "S+",
+      "tierlist": "B",
+      "relics_by_level": {
+        "10": ["SKELEPUPS_SPARK"],
+        "20": ["HELZBELZ_BELLS", "SHIP_CAPTAINS_LOG"],
+        "30": ["ARROW_OF_LOVE"],
+        "35": ["SHARD_OF_RUDOLFE"]
+      }
+    }
+  ]
+}
