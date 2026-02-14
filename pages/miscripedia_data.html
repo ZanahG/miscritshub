@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Miscripedia | Miscrits HUB</title>
+  <title>Miscrits Data | Miscrits HUB</title>
 
   <link rel="icon" href="../assets/images/logo.png" sizes="32x32" />
   <link rel="apple-touch-icon" href="../assets/images/logo.png" />
@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="../css/navbar.css" />
 
   <!-- Page styles -->
-  <link rel="stylesheet" href="../css/miscripedia.css" />
+  <link rel="stylesheet" href="../css/miscripedia_data.css" />
 
   <script defer src="../js/navbar.js"></script>
 </head>
@@ -51,7 +51,7 @@
             Tools <span class="nav__chev" aria-hidden="true">▾</span>
           </button>
           <div class="nav__dropMenu" role="menu">
-            <a role="menuitem" class="nav__dropItem" href="./stats_calculator.html">Stats Calculator</a>
+            <a role="menuitem" class="nav__dropItem" href="./stats-calculator.html">Stats Calculator</a>
             <a role="menuitem" class="nav__dropItem" href="./breeding-calculator.html">Breeding Calculator</a>
           </div>
         </div>
@@ -63,75 +63,66 @@
   </header>
 
   <!-- MAIN -->
-  <main class="wrap mp">
-    <header class="mp__head card">
-      <div class="mp__titleRow">
-        <div>
-          <h1 class="mp__title">Miscripedia</h1>
-          <p class="mp__desc">Search, filter, and min-max faster. Built for PVP brain.</p>
-        </div>
-      </div>
+  <main class="wrap md">
+    <a class="md__back" href="./miscripedia.html">← Back to Miscripedia</a>
 
-      <div class="mp__controls">
-        <div class="mpSearch">
-          <span class="mpSearch__ico" aria-hidden="true">🔎</span>
-          <input id="q" type="search" placeholder="Search Miscrits..." autocomplete="off" />
-        </div>
-
-        <div class="miscritpicker miscritpicker--md">
-          <div class="mpSearch mpSearch--full">
-            <span class="mpSearch__ico" aria-hidden="true">⚔️</span>
-            <input
-              id="attackFilter"
-              type="text"
-              placeholder="Filter by attack name..."
-              autocomplete="off"
-            />
-          </div>
-          <div id="attackDropdown" class="miscritpicker__dropdown" hidden></div>
-        </div>
-
-        <div class="mpFilters filtersRow">
-          <select id="rarity">
-            <option value="">All Rarities</option>
-          </select>
-
-          <select id="sort">
-            <option value="nameAsc">Sort: Name (A→Z)</option>
-            <option value="nameDesc">Sort: Name (Z→A)</option>
-            <option value="idAsc">Sort: ID (↑)</option>
-            <option value="idDesc">Sort: ID (↓)</option>
-          </select>
-
-          <select id="tag">
-            <option value="">Filter by Tags</option>
-          </select>
-
-          <div class="statsFilter" id="statsFilter">
-            <button class="statsBtn" id="statsBtn" type="button" aria-expanded="false">
-              Stats <span class="statsBtn__chev">▾</span>
-            </button>
-
-            <div class="statsPanel" id="statsPanel" hidden>
-              <div class="statsPanel__head">
-                <div class="statsPanel__title">Filter by Stats</div>
-                <button class="statsClear" id="statsClear" type="button">Clear</button>
-              </div>
-              <div class="statsPanel__grid" id="statsGrid"></div>
+    <section class="md__shell card">
+      <div class="md__head">
+        <div class="md__titleRow">
+          <div class="md__elemBadge" id="elemBadge"></div>
+          <div class="md__titleText">
+            <h1 id="name" class="md__name"></h1>
+            <div class="md__metaLine">
+              <span id="rarityText" class="md__rarity"></span>
+              <span class="md__dot">•</span>
+              <span id="location" class="md__location"></span>
             </div>
           </div>
         </div>
 
-        <div class="pills" id="elementsPills"></div>
+        <div id="tags" class="md__tags"></div>
       </div>
-    </header>
 
-    <section class="mp__results">
-      <div id="grid" class="grid"></div>
-      <div id="empty" class="empty hidden">No results.</div>
+      <div class="md__grid">
+        <!-- LEFT -->
+        <section class="md__left card">
+          <div class="md__spriteBox">
+            <img id="sprite" alt="" />
+          </div>
+
+          <h2 class="md__sectionTitle">Stats</h2>
+          <div class="md__stats" id="stats"></div>
+        </section>
+
+        <!-- RIGHT -->
+        <section class="md__right card">
+          <div class="md__block">
+            <h2 class="md__sectionTitle">Miscrit Lore</h2>
+            <p id="lore" class="md__lore"></p>
+          </div>
+
+          <div class="md__metaGrid">
+            <div class="md__meta">
+              <div class="md__metaLabel">Type</div>
+              <div id="type" class="md__metaValue"></div>
+            </div>
+            <div class="md__meta">
+              <div class="md__metaLabel">Location</div>
+              <div id="location2" class="md__metaValue"></div>
+            </div>
+          </div>
+
+          <div class="md__block">
+            <h2 class="md__sectionTitle">Abilities</h2>
+            <div id="abilities" class="md__abilities"></div>
+          </div>
+        </section>
+      </div>
     </section>
   </main>
 
-  <script src="../js/miscripedia.js"></script>
+  <div id="abTip" class="abTip" hidden></div>
+
+  <script src="../js/miscripedia_data.js"></script>
 </body>
 </html>

@@ -1,0 +1,4658 @@
+{
+  "version": 1,
+  "stats_scale": {
+    "min": 1,
+    "max": 5
+  },
+  "rating_map": {
+    "Weak": 1,
+    "Moderate": 2,
+    "Strong": 3,
+    "Max": 4,
+    "Elite": 5
+  },
+  "stat_keys": [
+    "hp",
+    "spd",
+    "ea",
+    "pa",
+    "ed",
+    "pd"
+  ],
+  "miscrits": [
+    {
+      "id": "001",
+      "name": "Flue",
+      "type": "Fire",
+      "rarity": "Common",
+      "baseStats": {
+        "hp": 3,
+        "spd": 1,
+        "ea": 1,
+        "pa": 4,
+        "ed": 3,
+        "pd": 3
+      }
+    },
+    {
+      "id": "002",
+      "name": "Flowerpiller",
+      "type": "Nature",
+      "rarity": "Common",
+      "baseStats": {
+        "hp": 2,
+        "spd": 4,
+        "ea": 5,
+        "pa": 1,
+        "ed": 2,
+        "pd": 1
+      }
+    },
+    {
+      "id": "003",
+      "name": "Prawnja",
+      "type": "Water",
+      "rarity": "Common",
+      "baseStats": {
+        "hp": 3,
+        "spd": 1,
+        "ea": 1,
+        "pa": 4,
+        "ed": 3,
+        "pd": 3
+      }
+    },
+    {
+      "id": "004",
+      "name": "Weevern",
+      "type": "Nature",
+      "rarity": "Common",
+      "baseStats": {
+        "hp": 2,
+        "spd": 5,
+        "ea": 4,
+        "pa": 1,
+        "ed": 2,
+        "pd": 1
+      }
+    },
+    {
+      "id": "005",
+      "name": "Cubsprout",
+      "type": "Nature",
+      "rarity": "Common",
+      "baseStats": {
+        "hp": 2,
+        "spd": 2,
+        "ea": 3,
+        "pa": 4,
+        "ed": 2,
+        "pd": 2
+      }
+    },
+    {
+      "id": "006",
+      "name": "Sparkupine",
+      "type": "Fire",
+      "rarity": "Common",
+      "baseStats": {
+        "hp": 3,
+        "spd": 1,
+        "ea": 2,
+        "pa": 3,
+        "ed": 3,
+        "pd": 3
+      }
+    },
+    {
+      "id": "007",
+      "name": "Hydroseal",
+      "type": "Water",
+      "rarity": "Common",
+      "baseStats": {
+        "hp": 3,
+        "spd": 2,
+        "ea": 5,
+        "pa": 3,
+        "ed": 1,
+        "pd": 1
+      }
+    },
+    {
+      "id": "008",
+      "name": "Snortus",
+      "type": "Water",
+      "rarity": "Common",
+      "baseStats": {
+        "hp": 4,
+        "spd": 1,
+        "ea": 2,
+        "pa": 4,
+        "ed": 2,
+        "pd": 2
+      }
+    },
+    {
+      "id": "009",
+      "name": "Quirk",
+      "type": "Nature",
+      "rarity": "Common",
+      "baseStats": {
+        "hp": 2,
+        "spd": 2,
+        "ea": 1,
+        "pa": 4,
+        "ed": 3,
+        "pd": 3
+      }
+    },
+    {
+      "id": "010",
+      "name": "Flameling",
+      "type": "Fire",
+      "rarity": "Common",
+      "baseStats": {
+        "hp": 2,
+        "spd": 5,
+        "ea": 4,
+        "pa": 1,
+        "ed": 2,
+        "pd": 1
+      }
+    },
+    {
+      "id": "011",
+      "name": "Lumera",
+      "type": "Fire",
+      "rarity": "Common",
+      "baseStats": {
+        "hp": 1,
+        "spd": 4,
+        "ea": 4,
+        "pa": 1,
+        "ed": 3,
+        "pd": 2
+      }
+    },
+    {
+      "id": "012",
+      "name": "Snatcher",
+      "type": "Nature",
+      "rarity": "Common",
+      "baseStats": {
+        "hp": 2,
+        "spd": 2,
+        "ea": 4,
+        "pa": 2,
+        "ed": 3,
+        "pd": 2
+      }
+    },
+    {
+      "id": "013",
+      "name": "Elefauna",
+      "type": "Nature",
+      "rarity": "Common",
+      "baseStats": {
+        "hp": 4,
+        "spd": 1,
+        "ea": 3,
+        "pa": 1,
+        "ed": 3,
+        "pd": 3
+      }
+    },
+    {
+      "id": "014",
+      "name": "Nessy",
+      "type": "Water",
+      "rarity": "Common",
+      "baseStats": {
+        "hp": 3,
+        "spd": 1,
+        "ea": 4,
+        "pa": 1,
+        "ed": 3,
+        "pd": 3
+      }
+    },
+    {
+      "id": "015",
+      "name": "Hotfoot",
+      "type": "Fire",
+      "rarity": "Common",
+      "baseStats": {
+        "hp": 2,
+        "spd": 2,
+        "ea": 4,
+        "pa": 4,
+        "ed": 2,
+        "pd": 2
+      }
+    },
+    {
+      "id": "016",
+      "name": "Twiggum",
+      "type": "Nature",
+      "rarity": "Common",
+      "baseStats": {
+        "hp": 2,
+        "spd": 1,
+        "ea": 4,
+        "pa": 2,
+        "ed": 3,
+        "pd": 3
+      }
+    },
+    {
+      "id": "017",
+      "name": "Shellbee",
+      "type": "Water",
+      "rarity": "Common",
+      "baseStats": {
+        "hp": 2,
+        "spd": 4,
+        "ea": 5,
+        "pa": 1,
+        "ed": 2,
+        "pd": 1
+      }
+    },
+    {
+      "id": "018",
+      "name": "Squibee",
+      "type": "Water",
+      "rarity": "Common",
+      "baseStats": {
+        "hp": 1,
+        "spd": 5,
+        "ea": 4,
+        "pa": 1,
+        "ed": 2,
+        "pd": 2
+      }
+    },
+    {
+      "id": "019",
+      "name": "Steamguin",
+      "type": "Fire",
+      "rarity": "Common",
+      "baseStats": {
+        "hp": 2,
+        "spd": 2,
+        "ea": 4,
+        "pa": 2,
+        "ed": 3,
+        "pd": 2
+      }
+    },
+    {
+      "id": "020",
+      "name": "Waddles",
+      "type": "Water",
+      "rarity": "Rare",
+      "baseStats": {
+        "hp": 3,
+        "spd": 2,
+        "ea": 5,
+        "pa": 1,
+        "ed": 3,
+        "pd": 2
+      }
+    },
+    {
+      "id": "021",
+      "name": "Treemur",
+      "type": "Nature",
+      "rarity": "Rare",
+      "baseStats": {
+        "hp": 4,
+        "spd": 2,
+        "ea": 4,
+        "pa": 1,
+        "ed": 3,
+        "pd": 2
+      }
+    },
+    {
+      "id": "022",
+      "name": "Tulipinny",
+      "type": "Nature",
+      "rarity": "Rare",
+      "baseStats": {
+        "hp": 3,
+        "spd": 1,
+        "ea": 4,
+        "pa": 2,
+        "ed": 2,
+        "pd": 4
+      }
+    },
+    {
+      "id": "023",
+      "name": "Dark Flue",
+      "type": "Fire",
+      "rarity": "Rare",
+      "baseStats": {
+        "hp": 4,
+        "spd": 1,
+        "ea": 1,
+        "pa": 4,
+        "ed": 2,
+        "pd": 4
+      }
+    },
+    {
+      "id": "024",
+      "name": "Dark Flowerpiller",
+      "type": "Nature",
+      "rarity": "Rare",
+      "baseStats": {
+        "hp": 3,
+        "spd": 1,
+        "ea": 4,
+        "pa": 2,
+        "ed": 3,
+        "pd": 3
+      }
+    },
+    {
+      "id": "025",
+      "name": "Dark Prawnja",
+      "type": "Water",
+      "rarity": "Rare",
+      "baseStats": {
+        "hp": 4,
+        "spd": 1,
+        "ea": 1,
+        "pa": 4,
+        "ed": 3,
+        "pd": 3
+      }
+    },
+    {
+      "id": "026",
+      "name": "Blazebit",
+      "type": "Fire",
+      "rarity": "Rare",
+      "baseStats": {
+        "hp": 2,
+        "spd": 3,
+        "ea": 5,
+        "pa": 1,
+        "ed": 3,
+        "pd": 2
+      }
+    },
+    {
+      "id": "027",
+      "name": "Frostmite",
+      "type": "Water",
+      "rarity": "Common",
+      "baseStats": {
+        "hp": 2,
+        "spd": 3,
+        "ea": 4,
+        "pa": 1,
+        "ed": 2,
+        "pd": 3
+      }
+    },
+    {
+      "id": "028",
+      "name": "Blazertooth",
+      "type": "Fire",
+      "rarity": "Epic",
+      "baseStats": {
+        "hp": 3,
+        "spd": 1,
+        "ea": 5,
+        "pa": 2,
+        "ed": 3,
+        "pd": 3
+      }
+    },
+    {
+      "id": "029",
+      "name": "Statikat",
+      "type": "Lightning",
+      "rarity": "Common",
+      "baseStats": {
+        "hp": 3,
+        "spd": 3,
+        "ea": 4,
+        "pa": 1,
+        "ed": 2,
+        "pd": 2
+      }
+    },
+    {
+      "id": "030",
+      "name": "Equestrion",
+      "type": "Wind",
+      "rarity": "Common",
+      "baseStats": {
+        "hp": 3,
+        "spd": 1,
+        "ea": 4,
+        "pa": 1,
+        "ed": 3,
+        "pd": 3
+      }
+    },
+    {
+      "id": "031",
+      "name": "Drilldent",
+      "type": "Earth",
+      "rarity": "Common",
+      "baseStats": {
+        "hp": 3,
+        "spd": 1,
+        "ea": 1,
+        "pa": 4,
+        "ed": 3,
+        "pd": 3
+      }
+    },
+    {
+      "id": "032",
+      "name": "Kiloray",
+      "type": "Lightning",
+      "rarity": "Common",
+      "baseStats": {
+        "hp": 2,
+        "spd": 2,
+        "ea": 4,
+        "pa": 2,
+        "ed": 2,
+        "pd": 3
+      }
+    },
+    {
+      "id": "033",
+      "name": "Breezycheeks",
+      "type": "Wind",
+      "rarity": "Common",
+      "baseStats": {
+        "hp": 3,
+        "spd": 3,
+        "ea": 3,
+        "pa": 1,
+        "ed": 4,
+        "pd": 1
+      }
+    },
+    {
+      "id": "034",
+      "name": "Mumbah",
+      "type": "Earth",
+      "rarity": "Common",
+      "baseStats": {
+        "hp": 2,
+        "spd": 4,
+        "ea": 3,
+        "pa": 2,
+        "ed": 1,
+        "pd": 3
+      }
+    },
+    {
+      "id": "035",
+      "name": "Aria",
+      "type": "Wind",
+      "rarity": "Common",
+      "baseStats": {
+        "hp": 2,
+        "spd": 4,
+        "ea": 4,
+        "pa": 1,
+        "ed": 2,
+        "pd": 2
+      }
+    },
+    {
+      "id": "036",
+      "name": "Jellyshock",
+      "type": "Lightning",
+      "rarity": "Common",
+      "baseStats": {
+        "hp": 3,
+        "spd": 4,
+        "ea": 2,
+        "pa": 3,
+        "ed": 1,
+        "pd": 2
+      }
+    },
+    {
+      "id": "037",
+      "name": "Croaky",
+      "type": "Earth",
+      "rarity": "Common",
+      "baseStats": {
+        "hp": 1,
+        "spd": 3,
+        "ea": 5,
+        "pa": 1,
+        "ed": 3,
+        "pd": 2
+      }
+    },
+    {
+      "id": "038",
+      "name": "Sparkslug",
+      "type": "Lightning",
+      "rarity": "Common",
+      "baseStats": {
+        "hp": 3,
+        "spd": 1,
+        "ea": 4,
+        "pa": 1,
+        "ed": 3,
+        "pd": 3
+      }
+    },
+    {
+      "id": "039",
+      "name": "Craggy",
+      "type": "Earth",
+      "rarity": "Common",
+      "baseStats": {
+        "hp": 3,
+        "spd": 2,
+        "ea": 1,
+        "pa": 4,
+        "ed": 2,
+        "pd": 3
+      }
+    },
+    {
+      "id": "040",
+      "name": "Owlie",
+      "type": "Wind",
+      "rarity": "Common",
+      "baseStats": {
+        "hp": 3,
+        "spd": 1,
+        "ea": 3,
+        "pa": 1,
+        "ed": 4,
+        "pd": 3
+      }
+    },
+    {
+      "id": "041",
+      "name": "Luna",
+      "type": "Lightning",
+      "rarity": "Rare",
+      "baseStats": {
+        "hp": 3,
+        "spd": 3,
+        "ea": 3,
+        "pa": 2,
+        "ed": 2,
+        "pd": 3
+      }
+    },
+    {
+      "id": "042",
+      "name": "Poltergust",
+      "type": "Wind",
+      "rarity": "Rare",
+      "baseStats": {
+        "hp": 3,
+        "spd": 2,
+        "ea": 4,
+        "pa": 2,
+        "ed": 3,
+        "pd": 2
+      }
+    },
+    {
+      "id": "043",
+      "name": "Fossillia",
+      "type": "Earth",
+      "rarity": "Rare",
+      "baseStats": {
+        "hp": 3,
+        "spd": 2,
+        "ea": 1,
+        "pa": 4,
+        "ed": 3,
+        "pd": 3
+      }
+    },
+    {
+      "id": "044",
+      "name": "Eggy",
+      "type": "Earth",
+      "rarity": "Rare",
+      "baseStats": {
+        "hp": 4,
+        "spd": 2,
+        "ea": 1,
+        "pa": 4,
+        "ed": 2,
+        "pd": 3
+      }
+    },
+    {
+      "id": "045",
+      "name": "Thundercracker",
+      "type": "Lightning",
+      "rarity": "Rare",
+      "baseStats": {
+        "hp": 2,
+        "spd": 3,
+        "ea": 3,
+        "pa": 4,
+        "ed": 2,
+        "pd": 2
+      }
+    },
+    {
+      "id": "046",
+      "name": "Mun Kee",
+      "type": "Wind",
+      "rarity": "Rare",
+      "baseStats": {
+        "hp": 3,
+        "spd": 1,
+        "ea": 4,
+        "pa": 1,
+        "ed": 4,
+        "pd": 3
+      }
+    },
+    {
+      "id": "047",
+      "name": "Microblast",
+      "type": "Lightning",
+      "rarity": "Epic",
+      "baseStats": {
+        "hp": 3,
+        "spd": 3,
+        "ea": 4,
+        "pa": 1,
+        "ed": 4,
+        "pd": 2
+      }
+    },
+    {
+      "id": "048",
+      "name": "Sledgehog",
+      "type": "Earth",
+      "rarity": "Epic",
+      "baseStats": {
+        "hp": 3,
+        "spd": 1,
+        "ea": 2,
+        "pa": 5,
+        "ed": 3,
+        "pd": 3
+      }
+    },
+    {
+      "id": "049",
+      "name": "Sapphron",
+      "type": "Earth",
+      "rarity": "Epic",
+      "baseStats": {
+        "hp": 3,
+        "spd": 3,
+        "ea": 5,
+        "pa": 1,
+        "ed": 3,
+        "pd": 2
+      }
+    },
+    {
+      "id": "050",
+      "name": "Sparkspeck",
+      "type": "Lightning",
+      "rarity": "Common",
+      "baseStats": {
+        "hp": 2,
+        "spd": 3,
+        "ea": 3,
+        "pa": 2,
+        "ed": 4,
+        "pd": 1
+      }
+    },
+    {
+      "id": "051",
+      "name": "Grubbean",
+      "type": "Nature",
+      "rarity": "Common",
+      "baseStats": {
+        "hp": 1,
+        "spd": 2,
+        "ea": 4,
+        "pa": 2,
+        "ed": 2,
+        "pd": 4
+      }
+    },
+    {
+      "id": "052",
+      "name": "Echino",
+      "type": "Nature",
+      "rarity": "Common",
+      "baseStats": {
+        "hp": 3,
+        "spd": 2,
+        "ea": 4,
+        "pa": 1,
+        "ed": 2,
+        "pd": 3
+      }
+    },
+    {
+      "id": "053",
+      "name": "Wavesling",
+      "type": "Water",
+      "rarity": "Common",
+      "baseStats": {
+        "hp": 3,
+        "spd": 2,
+        "ea": 4,
+        "pa": 2,
+        "ed": 3,
+        "pd": 1
+      }
+    },
+    {
+      "id": "054",
+      "name": "Sparkitten",
+      "type": "Fire",
+      "rarity": "Common",
+      "baseStats": {
+        "hp": 3,
+        "spd": 3,
+        "ea": 4,
+        "pa": 1,
+        "ed": 2,
+        "pd": 2
+      }
+    },
+    {
+      "id": "055",
+      "name": "Arigato",
+      "type": "Lightning",
+      "rarity": "Common",
+      "baseStats": {
+        "hp": 2,
+        "spd": 4,
+        "ea": 4,
+        "pa": 1,
+        "ed": 2,
+        "pd": 2
+      }
+    },
+    {
+      "id": "056",
+      "name": "Jack",
+      "type": "Wind",
+      "rarity": "Common",
+      "baseStats": {
+        "hp": 2,
+        "spd": 3,
+        "ea": 3,
+        "pa": 3,
+        "ed": 2,
+        "pd": 2
+      }
+    },
+    {
+      "id": "057",
+      "name": "Quebble",
+      "type": "Earth",
+      "rarity": "Common",
+      "baseStats": {
+        "hp": 3,
+        "spd": 2,
+        "ea": 4,
+        "pa": 1,
+        "ed": 2,
+        "pd": 3
+      }
+    },
+    {
+      "id": "058",
+      "name": "Digsy",
+      "type": "Earth",
+      "rarity": "Common",
+      "baseStats": {
+        "hp": 2,
+        "spd": 1,
+        "ea": 2,
+        "pa": 4,
+        "ed": 3,
+        "pd": 3
+      }
+    },
+    {
+      "id": "059",
+      "name": "Hippoke",
+      "type": "Earth",
+      "rarity": "Common",
+      "baseStats": {
+        "hp": 2,
+        "spd": 3,
+        "ea": 4,
+        "pa": 1,
+        "ed": 2,
+        "pd": 3
+      }
+    },
+    {
+      "id": "060",
+      "name": "Leggy",
+      "type": "Wind",
+      "rarity": "Common",
+      "baseStats": {
+        "hp": 2,
+        "spd": 4,
+        "ea": 1,
+        "pa": 4,
+        "ed": 2,
+        "pd": 2
+      }
+    },
+    {
+      "id": "061",
+      "name": "Orcatide",
+      "type": "Water",
+      "rarity": "Common",
+      "baseStats": {
+        "hp": 3,
+        "spd": 2,
+        "ea": 1,
+        "pa": 5,
+        "ed": 2,
+        "pd": 2
+      }
+    },
+    {
+      "id": "062",
+      "name": "Flutterpat",
+      "type": "Wind",
+      "rarity": "Rare",
+      "baseStats": {
+        "hp": 3,
+        "spd": 1,
+        "ea": 4,
+        "pa": 2,
+        "ed": 2,
+        "pd": 4
+      }
+    },
+    {
+      "id": "063",
+      "name": "Snorkels",
+      "type": "Water",
+      "rarity": "Rare",
+      "baseStats": {
+        "hp": 2,
+        "spd": 5,
+        "ea": 4,
+        "pa": 1,
+        "ed": 2,
+        "pd": 2
+      }
+    },
+    {
+      "id": "064",
+      "name": "Kelpa",
+      "type": "Nature",
+      "rarity": "Rare",
+      "baseStats": {
+        "hp": 5,
+        "spd": 1,
+        "ea": 4,
+        "pa": 1,
+        "ed": 3,
+        "pd": 2
+      }
+    },
+    {
+      "id": "065",
+      "name": "Ignios",
+      "type": "Fire",
+      "rarity": "Rare",
+      "baseStats": {
+        "hp": 3,
+        "spd": 2,
+        "ea": 5,
+        "pa": 1,
+        "ed": 3,
+        "pd": 2
+      }
+    },
+    {
+      "id": "066",
+      "name": "Beelzebug",
+      "type": "Lightning",
+      "rarity": "Epic",
+      "baseStats": {
+        "hp": 3,
+        "spd": 5,
+        "ea": 4,
+        "pa": 1,
+        "ed": 2,
+        "pd": 2
+      }
+    },
+    {
+      "id": "067",
+      "name": "Winnebeargo",
+      "type": "Wind",
+      "rarity": "Epic",
+      "baseStats": {
+        "hp": 4,
+        "spd": 2,
+        "ea": 4,
+        "pa": 1,
+        "ed": 3,
+        "pd": 3
+      }
+    },
+    {
+      "id": "068",
+      "name": "Fennie",
+      "type": "Earth",
+      "rarity": "Epic",
+      "baseStats": {
+        "hp": 3,
+        "spd": 2,
+        "ea": 5,
+        "pa": 1,
+        "ed": 3,
+        "pd": 3
+      }
+    },
+    {
+      "id": "069",
+      "name": "Patchkin",
+      "type": "Nature",
+      "rarity": "Exotic",
+      "baseStats": {
+        "hp": 4,
+        "spd": 1,
+        "ea": 4,
+        "pa": 3,
+        "ed": 4,
+        "pd": 2
+      }
+    },
+    {
+      "id": "070",
+      "name": "Flurrious",
+      "type": "Water",
+      "rarity": "Exotic",
+      "baseStats": {
+        "hp": 4,
+        "spd": 2,
+        "ea": 2,
+        "pa": 4,
+        "ed": 3,
+        "pd": 3
+      }
+    },
+    {
+      "id": "071",
+      "name": "Fangly",
+      "type": "Wind",
+      "rarity": "Epic",
+      "baseStats": {
+        "hp": 4,
+        "spd": 2,
+        "ea": 5,
+        "pa": 1,
+        "ed": 3,
+        "pd": 2
+      }
+    },
+    {
+      "id": "072",
+      "name": "Dark Kiloray",
+      "type": "Lightning",
+      "rarity": "Rare",
+      "baseStats": {
+        "hp": 3,
+        "spd": 2,
+        "ea": 4,
+        "pa": 1,
+        "ed": 3,
+        "pd": 3
+      }
+    },
+    {
+      "id": "073",
+      "name": "Dark Croaky",
+      "type": "Earth",
+      "rarity": "Rare",
+      "baseStats": {
+        "hp": 4,
+        "spd": 1,
+        "ea": 3,
+        "pa": 1,
+        "ed": 4,
+        "pd": 3
+      }
+    },
+    {
+      "id": "074",
+      "name": "Valentino",
+      "type": "Lightning",
+      "rarity": "Exotic",
+      "baseStats": {
+        "hp": 3,
+        "spd": 4,
+        "ea": 5,
+        "pa": 1,
+        "ed": 3,
+        "pd": 2
+      }
+    },
+    {
+      "id": "075",
+      "name": "Dark Cubsprout",
+      "type": "Nature",
+      "rarity": "Rare",
+      "baseStats": {
+        "hp": 2,
+        "spd": 2,
+        "ea": 2,
+        "pa": 5,
+        "ed": 2,
+        "pd": 3
+      }
+    },
+    {
+      "id": "076",
+      "name": "Dark Sparkitten",
+      "type": "Fire",
+      "rarity": "Rare",
+      "baseStats": {
+        "hp": 3,
+        "spd": 4,
+        "ea": 4,
+        "pa": 1,
+        "ed": 2,
+        "pd": 2
+      }
+    },
+    {
+      "id": "077",
+      "name": "Dark Snortus",
+      "type": "Water",
+      "rarity": "Epic",
+      "baseStats": {
+        "hp": 4,
+        "spd": 1,
+        "ea": 2,
+        "pa": 4,
+        "ed": 4,
+        "pd": 2
+      }
+    },
+    {
+      "id": "078",
+      "name": "Boltzee",
+      "type": "Lightning",
+      "rarity": "Epic",
+      "baseStats": {
+        "hp": 2,
+        "spd": 5,
+        "ea": 5,
+        "pa": 1,
+        "ed": 2,
+        "pd": 2
+      }
+    },
+    {
+      "id": "079",
+      "name": "Dark Owlie",
+      "type": "Wind",
+      "rarity": "Rare",
+      "baseStats": {
+        "hp": 3,
+        "spd": 3,
+        "ea": 4,
+        "pa": 1,
+        "ed": 2,
+        "pd": 3
+      }
+    },
+    {
+      "id": "080",
+      "name": "Dark Echino",
+      "type": "Nature",
+      "rarity": "Rare",
+      "baseStats": {
+        "hp": 2,
+        "spd": 2,
+        "ea": 2,
+        "pa": 1,
+        "ed": 5,
+        "pd": 4
+      }
+    },
+    {
+      "id": "081",
+      "name": "Dark Arigato",
+      "type": "Lightning",
+      "rarity": "Rare",
+      "baseStats": {
+        "hp": 5,
+        "spd": 1,
+        "ea": 3,
+        "pa": 1,
+        "ed": 3,
+        "pd": 3
+      }
+    },
+    {
+      "id": "082",
+      "name": "Dark Hydroseal",
+      "type": "Water",
+      "rarity": "Rare",
+      "baseStats": {
+        "hp": 2,
+        "spd": 2,
+        "ea": 4,
+        "pa": 2,
+        "ed": 3,
+        "pd": 3
+      }
+    },
+    {
+      "id": "083",
+      "name": "Peepsie",
+      "type": "Wind",
+      "rarity": "Exotic",
+      "baseStats": {
+        "hp": 4,
+        "spd": 1,
+        "ea": 4,
+        "pa": 2,
+        "ed": 3,
+        "pd": 4
+      }
+    },
+    {
+      "id": "084",
+      "name": "Dark Eggy",
+      "type": "Earth",
+      "rarity": "Epic",
+      "baseStats": {
+        "hp": 4,
+        "spd": 2,
+        "ea": 1,
+        "pa": 4,
+        "ed": 3,
+        "pd": 3
+      }
+    },
+    {
+      "id": "085",
+      "name": "Dark Flameling",
+      "type": "Fire",
+      "rarity": "Rare",
+      "baseStats": {
+        "hp": 3,
+        "spd": 2,
+        "ea": 4,
+        "pa": 2,
+        "ed": 3,
+        "pd": 2
+      }
+    },
+    {
+      "id": "086",
+      "name": "Dark Elefauna",
+      "type": "Nature",
+      "rarity": "Epic",
+      "baseStats": {
+        "hp": 3,
+        "spd": 1,
+        "ea": 4,
+        "pa": 2,
+        "ed": 3,
+        "pd": 4
+      }
+    },
+    {
+      "id": "087",
+      "name": "Mama",
+      "type": "Nature",
+      "rarity": "Exotic",
+      "baseStats": {
+        "hp": 2,
+        "spd": 1,
+        "ea": 5,
+        "pa": 4,
+        "ed": 3,
+        "pd": 3
+      }
+    },
+    {
+      "id": "088",
+      "name": "Dark Nessy",
+      "type": "Water",
+      "rarity": "Exotic",
+      "baseStats": {
+        "hp": 4,
+        "spd": 3,
+        "ea": 4,
+        "pa": 1,
+        "ed": 3,
+        "pd": 3
+      }
+    },
+    {
+      "id": "089",
+      "name": "Dark Hotfoot",
+      "type": "Fire",
+      "rarity": "Rare",
+      "baseStats": {
+        "hp": 3,
+        "spd": 2,
+        "ea": 2,
+        "pa": 5,
+        "ed": 2,
+        "pd": 2
+      }
+    },
+    {
+      "id": "090",
+      "name": "Dark Breezycheeks",
+      "type": "Wind",
+      "rarity": "Rare",
+      "baseStats": {
+        "hp": 3,
+        "spd": 5,
+        "ea": 4,
+        "pa": 1,
+        "ed": 2,
+        "pd": 1
+      }
+    },
+    {
+      "id": "091",
+      "name": "Papa",
+      "type": "Lightning",
+      "rarity": "Exotic",
+      "baseStats": {
+        "hp": 2,
+        "spd": 1,
+        "ea": 4,
+        "pa": 5,
+        "ed": 3,
+        "pd": 3
+      }
+    },
+    {
+      "id": "092",
+      "name": "Whik",
+      "type": "Fire",
+      "rarity": "Common",
+      "baseStats": {
+        "hp": 2,
+        "spd": 3,
+        "ea": 4,
+        "pa": 1,
+        "ed": 3,
+        "pd": 2
+      }
+    },
+    {
+      "id": "093",
+      "name": "Slithero",
+      "type": "Fire",
+      "rarity": "Common",
+      "baseStats": {
+        "hp": 2,
+        "spd": 1,
+        "ea": 3,
+        "pa": 2,
+        "ed": 3,
+        "pd": 4
+      }
+    },
+    {
+      "id": "094",
+      "name": "Spinnerette",
+      "type": "Water",
+      "rarity": "Common",
+      "baseStats": {
+        "hp": 3,
+        "spd": 5,
+        "ea": 3,
+        "pa": 1,
+        "ed": 2,
+        "pd": 1
+      }
+    },
+    {
+      "id": "095",
+      "name": "Crickin",
+      "type": "Fire",
+      "rarity": "Common",
+      "baseStats": {
+        "hp": 2,
+        "spd": 2,
+        "ea": 3,
+        "pa": 3,
+        "ed": 3,
+        "pd": 2
+      }
+    },
+    {
+      "id": "096",
+      "name": "Bubbles",
+      "type": "Water",
+      "rarity": "Common",
+      "baseStats": {
+        "hp": 3,
+        "spd": 1,
+        "ea": 5,
+        "pa": 1,
+        "ed": 4,
+        "pd": 1
+      }
+    },
+    {
+      "id": "097",
+      "name": "Humbug",
+      "type": "Nature",
+      "rarity": "Common",
+      "baseStats": {
+        "hp": 2,
+        "spd": 3,
+        "ea": 4,
+        "pa": 2,
+        "ed": 2,
+        "pd": 2
+      }
+    },
+    {
+      "id": "098",
+      "name": "Lavarilla",
+      "type": "Fire",
+      "rarity": "Common",
+      "baseStats": {
+        "hp": 3,
+        "spd": 1,
+        "ea": 1,
+        "pa": 5,
+        "ed": 2,
+        "pd": 3
+      }
+    },
+    {
+      "id": "099",
+      "name": "Bloomple",
+      "type": "Nature",
+      "rarity": "Epic",
+      "baseStats": {
+        "hp": 3,
+        "spd": 3,
+        "ea": 4,
+        "pa": 1,
+        "ed": 3,
+        "pd": 3
+      }
+    },
+    {
+      "id": "100",
+      "name": "Pamboo",
+      "type": "Nature",
+      "rarity": "Rare",
+      "baseStats": {
+        "hp": 3,
+        "spd": 1,
+        "ea": 4,
+        "pa": 1,
+        "ed": 4,
+        "pd": 3
+      }
+    },
+    {
+      "id": "101",
+      "name": "Rockodile",
+      "type": "Water",
+      "rarity": "Rare",
+      "baseStats": {
+        "hp": 4,
+        "spd": 1,
+        "ea": 4,
+        "pa": 1,
+        "ed": 2,
+        "pd": 4
+      }
+    },
+    {
+      "id": "102",
+      "name": "Boneshee",
+      "type": "Wind",
+      "rarity": "Epic",
+      "baseStats": {
+        "hp": 4,
+        "spd": 1,
+        "ea": 4,
+        "pa": 2,
+        "ed": 4,
+        "pd": 2
+      }
+    },
+    {
+      "id": "103",
+      "name": "Ursiwave",
+      "type": "Water",
+      "rarity": "Epic",
+      "baseStats": {
+        "hp": 3,
+        "spd": 3,
+        "ea": 4,
+        "pa": 1,
+        "ed": 4,
+        "pd": 2
+      }
+    },
+    {
+      "id": "104",
+      "name": "Bludger",
+      "type": "Earth",
+      "rarity": "Common",
+      "baseStats": {
+        "hp": 5,
+        "spd": 2,
+        "ea": 1,
+        "pa": 3,
+        "ed": 3,
+        "pd": 1
+      }
+    },
+    {
+      "id": "105",
+      "name": "Zaptor",
+      "type": "Lightning",
+      "rarity": "Common",
+      "baseStats": {
+        "hp": 3,
+        "spd": 3,
+        "ea": 4,
+        "pa": 2,
+        "ed": 1,
+        "pd": 2
+      }
+    },
+    {
+      "id": "106",
+      "name": "Narlope",
+      "type": "Lightning",
+      "rarity": "Common",
+      "baseStats": {
+        "hp": 3,
+        "spd": 1,
+        "ea": 5,
+        "pa": 1,
+        "ed": 2,
+        "pd": 3
+      }
+    },
+    {
+      "id": "107",
+      "name": "Vexie",
+      "type": "Earth",
+      "rarity": "Common",
+      "baseStats": {
+        "hp": 2,
+        "spd": 2,
+        "ea": 3,
+        "pa": 2,
+        "ed": 2,
+        "pd": 4
+      }
+    },
+    {
+      "id": "108",
+      "name": "Tongutail",
+      "type": "Earth",
+      "rarity": "Common",
+      "baseStats": {
+        "hp": 2,
+        "spd": 1,
+        "ea": 1,
+        "pa": 5,
+        "ed": 2,
+        "pd": 4
+      }
+    },
+    {
+      "id": "109",
+      "name": "Hawkai",
+      "type": "Wind",
+      "rarity": "Common",
+      "baseStats": {
+        "hp": 2,
+        "spd": 5,
+        "ea": 4,
+        "pa": 1,
+        "ed": 2,
+        "pd": 1
+      }
+    },
+    {
+      "id": "110",
+      "name": "Nero",
+      "type": "Lightning",
+      "rarity": "Common",
+      "baseStats": {
+        "hp": 3,
+        "spd": 2,
+        "ea": 1,
+        "pa": 4,
+        "ed": 2,
+        "pd": 3
+      }
+    },
+    {
+      "id": "111",
+      "name": "Pollifog",
+      "type": "Wind",
+      "rarity": "Rare",
+      "baseStats": {
+        "hp": 2,
+        "spd": 5,
+        "ea": 4,
+        "pa": 1,
+        "ed": 3,
+        "pd": 1
+      }
+    },
+    {
+      "id": "112",
+      "name": "Felis",
+      "type": "Lightning",
+      "rarity": "Common",
+      "baseStats": {
+        "hp": 2,
+        "spd": 2,
+        "ea": 2,
+        "pa": 4,
+        "ed": 2,
+        "pd": 3
+      }
+    },
+    {
+      "id": "113",
+      "name": "Tectonyx",
+      "type": "Earth",
+      "rarity": "Common",
+      "baseStats": {
+        "hp": 2,
+        "spd": 3,
+        "ea": 2,
+        "pa": 4,
+        "ed": 2,
+        "pd": 2
+      }
+    },
+    {
+      "id": "114",
+      "name": "Nibbles",
+      "type": "Water",
+      "rarity": "Common",
+      "baseStats": {
+        "hp": 3,
+        "spd": 3,
+        "ea": 2,
+        "pa": 3,
+        "ed": 1,
+        "pd": 3
+      }
+    },
+    {
+      "id": "115",
+      "name": "Skustunk",
+      "type": "Wind",
+      "rarity": "Rare",
+      "baseStats": {
+        "hp": 2,
+        "spd": 2,
+        "ea": 5,
+        "pa": 1,
+        "ed": 2,
+        "pd": 4
+      }
+    },
+    {
+      "id": "116",
+      "name": "Flintly",
+      "type": "Fire",
+      "rarity": "Rare",
+      "baseStats": {
+        "hp": 3,
+        "spd": 2,
+        "ea": 4,
+        "pa": 1,
+        "ed": 3,
+        "pd": 3
+      }
+    },
+    {
+      "id": "117",
+      "name": "Gog",
+      "type": "Earth",
+      "rarity": "Epic",
+      "baseStats": {
+        "hp": 2,
+        "spd": 1,
+        "ea": 2,
+        "pa": 5,
+        "ed": 3,
+        "pd": 4
+      }
+    },
+    {
+      "id": "118",
+      "name": "Octavio",
+      "type": "Wind",
+      "rarity": "Epic",
+      "baseStats": {
+        "hp": 3,
+        "spd": 1,
+        "ea": 5,
+        "pa": 2,
+        "ed": 3,
+        "pd": 3
+      }
+    },
+    {
+      "id": "119",
+      "name": "Crabbles",
+      "type": "Fire",
+      "rarity": "Rare",
+      "baseStats": {
+        "hp": 3,
+        "spd": 3,
+        "ea": 1,
+        "pa": 5,
+        "ed": 2,
+        "pd": 2
+      }
+    },
+    {
+      "id": "120",
+      "name": "Inferno",
+      "type": "Fire",
+      "rarity": "Epic",
+      "baseStats": {
+        "hp": 4,
+        "spd": 1,
+        "ea": 1,
+        "pa": 5,
+        "ed": 3,
+        "pd": 3
+      }
+    },
+    {
+      "id": "121",
+      "name": "Hotdog",
+      "type": "Fire",
+      "rarity": "Epic",
+      "baseStats": {
+        "hp": 3,
+        "spd": 2,
+        "ea": 1,
+        "pa": 5,
+        "ed": 3,
+        "pd": 3
+      }
+    },
+    {
+      "id": "122",
+      "name": "Rafiery",
+      "type": "Fire",
+      "rarity": "Rare",
+      "baseStats": {
+        "hp": 1,
+        "spd": 4,
+        "ea": 1,
+        "pa": 5,
+        "ed": 3,
+        "pd": 2
+      }
+    },
+    {
+      "id": "123",
+      "name": "Nanaslug",
+      "type": "WaterWind",
+      "rarity": "Epic",
+      "baseStats": {
+        "hp": 4,
+        "spd": 2,
+        "ea": 5,
+        "pa": 2,
+        "ed": 3,
+        "pd": 1
+      }
+    },
+    {
+      "id": "124",
+      "name": "Vhisp",
+      "type": "Wind",
+      "rarity": "Common",
+      "baseStats": {
+        "hp": 2,
+        "spd": 5,
+        "ea": 3,
+        "pa": 1,
+        "ed": 2,
+        "pd": 2
+      }
+    },
+    {
+      "id": "125",
+      "name": "Raldio",
+      "type": "Earth",
+      "rarity": "Rare",
+      "baseStats": {
+        "hp": 2,
+        "spd": 5,
+        "ea": 4,
+        "pa": 1,
+        "ed": 2,
+        "pd": 2
+      }
+    },
+    {
+      "id": "126",
+      "name": "Freedom",
+      "type": "FireWind",
+      "rarity": "Exotic",
+      "baseStats": {
+        "hp": 3,
+        "spd": 1,
+        "ea": 4,
+        "pa": 3,
+        "ed": 5,
+        "pd": 2
+      }
+    },
+    {
+      "id": "127",
+      "name": "Gemix",
+      "type": "Earth",
+      "rarity": "Epic",
+      "baseStats": {
+        "hp": 2,
+        "spd": 5,
+        "ea": 4,
+        "pa": 1,
+        "ed": 3,
+        "pd": 2
+      }
+    },
+    {
+      "id": "128",
+      "name": "Podo",
+      "type": "Lightning",
+      "rarity": "Epic",
+      "baseStats": {
+        "hp": 4,
+        "spd": 1,
+        "ea": 4,
+        "pa": 2,
+        "ed": 2,
+        "pd": 4
+      }
+    },
+    {
+      "id": "129",
+      "name": "Lavazard",
+      "type": "Fire",
+      "rarity": "Epic",
+      "baseStats": {
+        "hp": 4,
+        "spd": 1,
+        "ea": 1,
+        "pa": 4,
+        "ed": 4,
+        "pd": 3
+      }
+    },
+    {
+      "id": "130",
+      "name": "Shurikoon",
+      "type": "FireWind",
+      "rarity": "Epic",
+      "baseStats": {
+        "hp": 2,
+        "spd": 5,
+        "ea": 5,
+        "pa": 1,
+        "ed": 2,
+        "pd": 2
+      }
+    },
+    {
+      "id": "131",
+      "name": "Skelepup",
+      "type": "Lightning",
+      "rarity": "Exotic",
+      "baseStats": {
+        "hp": 5,
+        "spd": 1,
+        "ea": 4,
+        "pa": 3,
+        "ed": 3,
+        "pd": 2
+      }
+    },
+    {
+      "id": "132",
+      "name": "Foil Waddles",
+      "type": "Water",
+      "rarity": "Exotic",
+      "baseStats": {
+        "hp": 4,
+        "spd": 1,
+        "ea": 5,
+        "pa": 1,
+        "ed": 3,
+        "pd": 4
+      }
+    },
+    {
+      "id": "133",
+      "name": "Foil Fossillia",
+      "type": "Earth",
+      "rarity": "Exotic",
+      "baseStats": {
+        "hp": 3,
+        "spd": 1,
+        "ea": 3,
+        "pa": 4,
+        "ed": 3,
+        "pd": 4
+      }
+    },
+    {
+      "id": "134",
+      "name": "Foil Thundercracker",
+      "type": "Lightning",
+      "rarity": "Exotic",
+      "baseStats": {
+        "hp": 2,
+        "spd": 1,
+        "ea": 5,
+        "pa": 5,
+        "ed": 3,
+        "pd": 2
+      }
+    },
+    {
+      "id": "135",
+      "name": "Hoopty",
+      "type": "Earth",
+      "rarity": "Epic",
+      "baseStats": {
+        "hp": 3,
+        "spd": 3,
+        "ea": 1,
+        "pa": 4,
+        "ed": 3,
+        "pd": 3
+      }
+    },
+    {
+      "id": "136",
+      "name": "Foil Kiloray",
+      "type": "Lightning",
+      "rarity": "Exotic",
+      "baseStats": {
+        "hp": 4,
+        "spd": 1,
+        "ea": 5,
+        "pa": 2,
+        "ed": 3,
+        "pd": 3
+      }
+    },
+    {
+      "id": "137",
+      "name": "Spangles",
+      "type": "Lightning",
+      "rarity": "Exotic",
+      "baseStats": {
+        "hp": 4,
+        "spd": 3,
+        "ea": 4,
+        "pa": 1,
+        "ed": 4,
+        "pd": 2
+      }
+    },
+    {
+      "id": "138",
+      "name": "Opigum",
+      "type": "Earth",
+      "rarity": "Rare",
+      "baseStats": {
+        "hp": 3,
+        "spd": 2,
+        "ea": 1,
+        "pa": 2,
+        "ed": 4,
+        "pd": 4
+      }
+    },
+    {
+      "id": "139",
+      "name": "Foil Flintly",
+      "type": "Fire",
+      "rarity": "Exotic",
+      "baseStats": {
+        "hp": 4,
+        "spd": 3,
+        "ea": 5,
+        "pa": 1,
+        "ed": 3,
+        "pd": 2
+      }
+    },
+    {
+      "id": "140",
+      "name": "Light Tectonyx",
+      "type": "Earth",
+      "rarity": "Exotic",
+      "baseStats": {
+        "hp": 3,
+        "spd": 3,
+        "ea": 1,
+        "pa": 5,
+        "ed": 3,
+        "pd": 3
+      }
+    },
+    {
+      "id": "141",
+      "name": "Flaring",
+      "type": "Fire",
+      "rarity": "Epic",
+      "baseStats": {
+        "hp": 3,
+        "spd": 5,
+        "ea": 4,
+        "pa": 1,
+        "ed": 2,
+        "pd": 2
+      }
+    },
+    {
+      "id": "142",
+      "name": "Cadbunny",
+      "type": "WaterEarth",
+      "rarity": "Exotic",
+      "baseStats": {
+        "hp": 3,
+        "spd": 4,
+        "ea": 4,
+        "pa": 1,
+        "ed": 4,
+        "pd": 2
+      }
+    },
+    {
+      "id": "143",
+      "name": "Fiender",
+      "type": "Wind",
+      "rarity": "Rare",
+      "baseStats": {
+        "hp": 2,
+        "spd": 4,
+        "ea": 4,
+        "pa": 1,
+        "ed": 3,
+        "pd": 2
+      }
+    },
+    {
+      "id": "144",
+      "name": "Pillblaze",
+      "type": "Fire",
+      "rarity": "Rare",
+      "baseStats": {
+        "hp": 3,
+        "spd": 1,
+        "ea": 4,
+        "pa": 3,
+        "ed": 3,
+        "pd": 2
+      }
+    },
+    {
+      "id": "145",
+      "name": "Blub",
+      "type": "Lightning",
+      "rarity": "Common",
+      "baseStats": {
+        "hp": 4,
+        "spd": 1,
+        "ea": 2,
+        "pa": 4,
+        "ed": 2,
+        "pd": 2
+      }
+    },
+    {
+      "id": "146",
+      "name": "Cerberuff",
+      "type": "Earth",
+      "rarity": "Common",
+      "baseStats": {
+        "hp": 2,
+        "spd": 5,
+        "ea": 1,
+        "pa": 4,
+        "ed": 2,
+        "pd": 1
+      }
+    },
+    {
+      "id": "147",
+      "name": "Auger",
+      "type": "Earth",
+      "rarity": "Common",
+      "baseStats": {
+        "hp": 4,
+        "spd": 4,
+        "ea": 1,
+        "pa": 4,
+        "ed": 1,
+        "pd": 1
+      }
+    },
+    {
+      "id": "148",
+      "name": "Flurfy",
+      "type": "Nature",
+      "rarity": "Common",
+      "baseStats": {
+        "hp": 3,
+        "spd": 2,
+        "ea": 4,
+        "pa": 2,
+        "ed": 2,
+        "pd": 2
+      }
+    },
+    {
+      "id": "149",
+      "name": "Squirmle",
+      "type": "Water",
+      "rarity": "Common",
+      "baseStats": {
+        "hp": 3,
+        "spd": 3,
+        "ea": 4,
+        "pa": 1,
+        "ed": 2,
+        "pd": 2
+      }
+    },
+    {
+      "id": "150",
+      "name": "Lil Bubs",
+      "type": "Water",
+      "rarity": "Rare",
+      "baseStats": {
+        "hp": 4,
+        "spd": 2,
+        "ea": 5,
+        "pa": 1,
+        "ed": 2,
+        "pd": 2
+      }
+    },
+    {
+      "id": "151",
+      "name": "Peekly",
+      "type": "Wind",
+      "rarity": "Common",
+      "baseStats": {
+        "hp": 2,
+        "spd": 3,
+        "ea": 1,
+        "pa": 4,
+        "ed": 2,
+        "pd": 3
+      }
+    },
+    {
+      "id": "152",
+      "name": "Splender",
+      "type": "NatureEarth",
+      "rarity": "Exotic",
+      "baseStats": {
+        "hp": 4,
+        "spd": 5,
+        "ea": 4,
+        "pa": 1,
+        "ed": 2,
+        "pd": 2
+      }
+    },
+    {
+      "id": "153",
+      "name": "Dorux",
+      "type": "FireLightning",
+      "rarity": "Epic",
+      "baseStats": {
+        "hp": 3,
+        "spd": 1,
+        "ea": 4,
+        "pa": 2,
+        "ed": 2,
+        "pd": 5
+      }
+    },
+    {
+      "id": "154",
+      "name": "Fubby",
+      "type": "Earth",
+      "rarity": "Exotic",
+      "baseStats": {
+        "hp": 3,
+        "spd": 4,
+        "ea": 1,
+        "pa": 5,
+        "ed": 2,
+        "pd": 3
+      }
+    },
+    {
+      "id": "155",
+      "name": "Pennon",
+      "type": "Wind",
+      "rarity": "Epic",
+      "baseStats": {
+        "hp": 3,
+        "spd": 3,
+        "ea": 1,
+        "pa": 4,
+        "ed": 3,
+        "pd": 3
+      }
+    },
+    {
+      "id": "156",
+      "name": "Ekkult",
+      "type": "Water",
+      "rarity": "Exotic",
+      "baseStats": {
+        "hp": 3,
+        "spd": 1,
+        "ea": 4,
+        "pa": 3,
+        "ed": 3,
+        "pd": 4
+      }
+    },
+    {
+      "id": "157",
+      "name": "Defilio",
+      "type": "NatureEarth",
+      "rarity": "Exotic",
+      "baseStats": {
+        "hp": 3,
+        "spd": 2,
+        "ea": 5,
+        "pa": 2,
+        "ed": 4,
+        "pd": 2
+      }
+    },
+    {
+      "id": "158",
+      "name": "Blighted Cubsprout",
+      "type": "Nature",
+      "rarity": "Exotic",
+      "baseStats": {
+        "hp": 4,
+        "spd": 2,
+        "ea": 2,
+        "pa": 4,
+        "ed": 3,
+        "pd": 3
+      }
+    },
+    {
+      "id": "159",
+      "name": "Blighted Flue",
+      "type": "Fire",
+      "rarity": "Legendary",
+      "baseStats": {
+        "hp": 3,
+        "spd": 2,
+        "ea": 2,
+        "pa": 5,
+        "ed": 4,
+        "pd": 4
+      }
+    },
+    {
+      "id": "160",
+      "name": "Blobroller",
+      "type": "NatureLightning",
+      "rarity": "Exotic",
+      "baseStats": {
+        "hp": 5,
+        "spd": 1,
+        "ea": 4,
+        "pa": 2,
+        "ed": 3,
+        "pd": 3
+      }
+    },
+    {
+      "id": "161",
+      "name": "Light Nibbles",
+      "type": "WaterLightning",
+      "rarity": "Epic",
+      "baseStats": {
+        "hp": 3,
+        "spd": 4,
+        "ea": 5,
+        "pa": 1,
+        "ed": 2,
+        "pd": 2
+      }
+    },
+    {
+      "id": "162",
+      "name": "Light Frostmite",
+      "type": "Water",
+      "rarity": "Exotic",
+      "baseStats": {
+        "hp": 3,
+        "spd": 4,
+        "ea": 4,
+        "pa": 1,
+        "ed": 3,
+        "pd": 3
+      }
+    },
+    {
+      "id": "163",
+      "name": "Light Bludger",
+      "type": "Earth",
+      "rarity": "Exotic",
+      "baseStats": {
+        "hp": 5,
+        "spd": 2,
+        "ea": 1,
+        "pa": 4,
+        "ed": 4,
+        "pd": 2
+      }
+    },
+    {
+      "id": "164",
+      "name": "Light Zaptor",
+      "type": "NatureLightning",
+      "rarity": "Exotic",
+      "baseStats": {
+        "hp": 3,
+        "spd": 5,
+        "ea": 5,
+        "pa": 1,
+        "ed": 2,
+        "pd": 2
+      }
+    },
+    {
+      "id": "165",
+      "name": "Light Quirk",
+      "type": "Nature",
+      "rarity": "Epic",
+      "baseStats": {
+        "hp": 3,
+        "spd": 2,
+        "ea": 1,
+        "pa": 4,
+        "ed": 4,
+        "pd": 3
+      }
+    },
+    {
+      "id": "166",
+      "name": "Light Statikat",
+      "type": "FireLightning",
+      "rarity": "Exotic",
+      "baseStats": {
+        "hp": 5,
+        "spd": 2,
+        "ea": 4,
+        "pa": 1,
+        "ed": 3,
+        "pd": 3
+      }
+    },
+    {
+      "id": "167",
+      "name": "Dark Spinnerette",
+      "type": "Water",
+      "rarity": "Exotic",
+      "baseStats": {
+        "hp": 4,
+        "spd": 5,
+        "ea": 4,
+        "pa": 1,
+        "ed": 2,
+        "pd": 2
+      }
+    },
+    {
+      "id": "168",
+      "name": "Light Twiggum",
+      "type": "Nature",
+      "rarity": "Exotic",
+      "baseStats": {
+        "hp": 5,
+        "spd": 1,
+        "ea": 5,
+        "pa": 1,
+        "ed": 3,
+        "pd": 3
+      }
+    },
+    {
+      "id": "169",
+      "name": "Aquarion",
+      "type": "Water",
+      "rarity": "Legendary",
+      "baseStats": {
+        "hp": 3,
+        "spd": 3,
+        "ea": 4,
+        "pa": 4,
+        "ed": 3,
+        "pd": 3
+      }
+    },
+    {
+      "id": "170",
+      "name": "Blighted Fiender",
+      "type": "Wind",
+      "rarity": "Exotic",
+      "baseStats": {
+        "hp": 4,
+        "spd": 4,
+        "ea": 5,
+        "pa": 1,
+        "ed": 2,
+        "pd": 2
+      }
+    },
+    {
+      "id": "171",
+      "name": "Blighted Kiloray",
+      "type": "Lightning",
+      "rarity": "Exotic",
+      "baseStats": {
+        "hp": 2,
+        "spd": 4,
+        "ea": 1,
+        "pa": 5,
+        "ed": 3,
+        "pd": 3
+      }
+    },
+    {
+      "id": "172",
+      "name": "Dark Shellbee",
+      "type": "Water",
+      "rarity": "Rare",
+      "baseStats": {
+        "hp": 2,
+        "spd": 5,
+        "ea": 5,
+        "pa": 1,
+        "ed": 2,
+        "pd": 1
+      }
+    },
+    {
+      "id": "173",
+      "name": "Liothning",
+      "type": "Lightning",
+      "rarity": "Epic",
+      "baseStats": {
+        "hp": 3,
+        "spd": 2,
+        "ea": 1,
+        "pa": 4,
+        "ed": 3,
+        "pd": 4
+      }
+    },
+    {
+      "id": "174",
+      "name": "Dark Lumera",
+      "type": "Fire",
+      "rarity": "Rare",
+      "baseStats": {
+        "hp": 2,
+        "spd": 5,
+        "ea": 4,
+        "pa": 1,
+        "ed": 2,
+        "pd": 2
+      }
+    },
+    {
+      "id": "175",
+      "name": "Dark Steamguin",
+      "type": "Fire",
+      "rarity": "Rare",
+      "baseStats": {
+        "hp": 3,
+        "spd": 1,
+        "ea": 4,
+        "pa": 3,
+        "ed": 4,
+        "pd": 1
+      }
+    },
+    {
+      "id": "176",
+      "name": "Dark Poltergust",
+      "type": "Wind",
+      "rarity": "Legendary",
+      "baseStats": {
+        "hp": 4,
+        "spd": 5,
+        "ea": 5,
+        "pa": 2,
+        "ed": 2,
+        "pd": 2
+      }
+    },
+    {
+      "id": "177",
+      "name": "Dark Treemur",
+      "type": "Nature",
+      "rarity": "Epic",
+      "baseStats": {
+        "hp": 3,
+        "spd": 3,
+        "ea": 4,
+        "pa": 2,
+        "ed": 3,
+        "pd": 2
+      }
+    },
+    {
+      "id": "178",
+      "name": "Foil Vexie",
+      "type": "Earth",
+      "rarity": "Exotic",
+      "baseStats": {
+        "hp": 3,
+        "spd": 1,
+        "ea": 5,
+        "pa": 2,
+        "ed": 3,
+        "pd": 4
+      }
+    },
+    {
+      "id": "179",
+      "name": "Foil Vhisp",
+      "type": "Wind",
+      "rarity": "Exotic",
+      "baseStats": {
+        "hp": 2,
+        "spd": 5,
+        "ea": 5,
+        "pa": 1,
+        "ed": 2,
+        "pd": 3
+      }
+    },
+    {
+      "id": "180",
+      "name": "Dark Sparkupine",
+      "type": "Fire",
+      "rarity": "Rare",
+      "baseStats": {
+        "hp": 2,
+        "spd": 1,
+        "ea": 2,
+        "pa": 4,
+        "ed": 4,
+        "pd": 3
+      }
+    },
+    {
+      "id": "181",
+      "name": "Dark Squibee",
+      "type": "Water",
+      "rarity": "Rare",
+      "baseStats": {
+        "hp": 3,
+        "spd": 1,
+        "ea": 4,
+        "pa": 2,
+        "ed": 3,
+        "pd": 3
+      }
+    },
+    {
+      "id": "182",
+      "name": "Dark Waddles",
+      "type": "Water",
+      "rarity": "Epic",
+      "baseStats": {
+        "hp": 4,
+        "spd": 1,
+        "ea": 5,
+        "pa": 2,
+        "ed": 3,
+        "pd": 2
+      }
+    },
+    {
+      "id": "183",
+      "name": "Dark Twiggum",
+      "type": "Nature",
+      "rarity": "Epic",
+      "baseStats": {
+        "hp": 4,
+        "spd": 2,
+        "ea": 4,
+        "pa": 2,
+        "ed": 3,
+        "pd": 2
+      }
+    },
+    {
+      "id": "184",
+      "name": "Dark Auger",
+      "type": "Earth",
+      "rarity": "Epic",
+      "baseStats": {
+        "hp": 4,
+        "spd": 5,
+        "ea": 1,
+        "pa": 5,
+        "ed": 1,
+        "pd": 1
+      }
+    },
+    {
+      "id": "185",
+      "name": "Dark Aria",
+      "type": "Wind",
+      "rarity": "Rare",
+      "baseStats": {
+        "hp": 2,
+        "spd": 4,
+        "ea": 4,
+        "pa": 1,
+        "ed": 3,
+        "pd": 2
+      }
+    },
+    {
+      "id": "186",
+      "name": "Light Rafiery",
+      "type": "FireLightning",
+      "rarity": "Epic",
+      "baseStats": {
+        "hp": 2,
+        "spd": 4,
+        "ea": 5,
+        "pa": 1,
+        "ed": 3,
+        "pd": 2
+      }
+    },
+    {
+      "id": "187",
+      "name": "Light Fossillia",
+      "type": "WaterEarth",
+      "rarity": "Epic",
+      "baseStats": {
+        "hp": 3,
+        "spd": 2,
+        "ea": 5,
+        "pa": 2,
+        "ed": 2,
+        "pd": 3
+      }
+    },
+    {
+      "id": "188",
+      "name": "Light Nanaslug",
+      "type": "Wind",
+      "rarity": "Exotic",
+      "baseStats": {
+        "hp": 4,
+        "spd": 3,
+        "ea": 5,
+        "pa": 1,
+        "ed": 2,
+        "pd": 3
+      }
+    },
+    {
+      "id": "189",
+      "name": "Light Crickin",
+      "type": "Fire",
+      "rarity": "Exotic",
+      "baseStats": {
+        "hp": 4,
+        "spd": 3,
+        "ea": 4,
+        "pa": 1,
+        "ed": 3,
+        "pd": 3
+      }
+    },
+    {
+      "id": "190",
+      "name": "Light Flue",
+      "type": "FireWind",
+      "rarity": "Epic",
+      "baseStats": {
+        "hp": 4,
+        "spd": 1,
+        "ea": 4,
+        "pa": 1,
+        "ed": 4,
+        "pd": 3
+      }
+    },
+    {
+      "id": "191",
+      "name": "Light Grubbean",
+      "type": "NatureWind",
+      "rarity": "Epic",
+      "baseStats": {
+        "hp": 2,
+        "spd": 5,
+        "ea": 5,
+        "pa": 1,
+        "ed": 2,
+        "pd": 2
+      }
+    },
+    {
+      "id": "192",
+      "name": "Ribos",
+      "type": "Water",
+      "rarity": "Rare",
+      "baseStats": {
+        "hp": 2,
+        "spd": 2,
+        "ea": 2,
+        "pa": 1,
+        "ed": 5,
+        "pd": 4
+      }
+    },
+    {
+      "id": "193",
+      "name": "Light Sparkspeck",
+      "type": "Lightning",
+      "rarity": "Rare",
+      "baseStats": {
+        "hp": 3,
+        "spd": 5,
+        "ea": 4,
+        "pa": 1,
+        "ed": 2,
+        "pd": 1
+      }
+    },
+    {
+      "id": "194",
+      "name": "Light Wavesling",
+      "type": "WaterWind",
+      "rarity": "Rare",
+      "baseStats": {
+        "hp": 3,
+        "spd": 2,
+        "ea": 5,
+        "pa": 1,
+        "ed": 3,
+        "pd": 2
+      }
+    },
+    {
+      "id": "195",
+      "name": "Light Jack",
+      "type": "Wind",
+      "rarity": "Rare",
+      "baseStats": {
+        "hp": 3,
+        "spd": 1,
+        "ea": 2,
+        "pa": 2,
+        "ed": 4,
+        "pd": 4
+      }
+    },
+    {
+      "id": "196",
+      "name": "Light Flurfy",
+      "type": "Nature",
+      "rarity": "Rare",
+      "baseStats": {
+        "hp": 4,
+        "spd": 2,
+        "ea": 4,
+        "pa": 1,
+        "ed": 3,
+        "pd": 2
+      }
+    },
+    {
+      "id": "197",
+      "name": "Light Slithero",
+      "type": "Fire",
+      "rarity": "Rare",
+      "baseStats": {
+        "hp": 2,
+        "spd": 1,
+        "ea": 3,
+        "pa": 4,
+        "ed": 3,
+        "pd": 3
+      }
+    },
+    {
+      "id": "198",
+      "name": "Light Squibee",
+      "type": "Water",
+      "rarity": "Rare",
+      "baseStats": {
+        "hp": 3,
+        "spd": 1,
+        "ea": 3,
+        "pa": 4,
+        "ed": 2,
+        "pd": 3
+      }
+    },
+    {
+      "id": "199",
+      "name": "Light Digsy",
+      "type": "FireEarth",
+      "rarity": "Epic",
+      "baseStats": {
+        "hp": 4,
+        "spd": 1,
+        "ea": 3,
+        "pa": 3,
+        "ed": 3,
+        "pd": 3
+      }
+    },
+    {
+      "id": "200",
+      "name": "Light Ignios",
+      "type": "FireLightning",
+      "rarity": "Legendary",
+      "baseStats": {
+        "hp": 3,
+        "spd": 5,
+        "ea": 5,
+        "pa": 2,
+        "ed": 3,
+        "pd": 2
+      }
+    },
+    {
+      "id": "201",
+      "name": "Light Mumbah",
+      "type": "Earth",
+      "rarity": "Rare",
+      "baseStats": {
+        "hp": 2,
+        "spd": 4,
+        "ea": 3,
+        "pa": 2,
+        "ed": 3,
+        "pd": 2
+      }
+    },
+    {
+      "id": "202",
+      "name": "Dark Tongutail",
+      "type": "Earth",
+      "rarity": "Rare",
+      "baseStats": {
+        "hp": 2,
+        "spd": 1,
+        "ea": 2,
+        "pa": 5,
+        "ed": 3,
+        "pd": 3
+      }
+    },
+    {
+      "id": "203",
+      "name": "Dark Lavarilla",
+      "type": "Fire",
+      "rarity": "Rare",
+      "baseStats": {
+        "hp": 3,
+        "spd": 1,
+        "ea": 1,
+        "pa": 5,
+        "ed": 3,
+        "pd": 3
+      }
+    },
+    {
+      "id": "204",
+      "name": "Dark Frostmite",
+      "type": "Water",
+      "rarity": "Rare",
+      "baseStats": {
+        "hp": 3,
+        "spd": 3,
+        "ea": 4,
+        "pa": 1,
+        "ed": 2,
+        "pd": 3
+      }
+    },
+    {
+      "id": "205",
+      "name": "Dark Tulipinny",
+      "type": "Nature",
+      "rarity": "Epic",
+      "baseStats": {
+        "hp": 4,
+        "spd": 1,
+        "ea": 4,
+        "pa": 2,
+        "ed": 2,
+        "pd": 4
+      }
+    },
+    {
+      "id": "206",
+      "name": "Dark Flutterpat",
+      "type": "Wind",
+      "rarity": "Epic",
+      "baseStats": {
+        "hp": 4,
+        "spd": 1,
+        "ea": 4,
+        "pa": 1,
+        "ed": 3,
+        "pd": 4
+      }
+    },
+    {
+      "id": "207",
+      "name": "Dark Slithero",
+      "type": "Fire",
+      "rarity": "Exotic",
+      "baseStats": {
+        "hp": 3,
+        "spd": 1,
+        "ea": 4,
+        "pa": 2,
+        "ed": 4,
+        "pd": 4
+      }
+    },
+    {
+      "id": "208",
+      "name": "Keeper",
+      "type": "NatureEarth",
+      "rarity": "Legendary",
+      "baseStats": {
+        "hp": 4,
+        "spd": 5,
+        "ea": 2,
+        "pa": 1,
+        "ed": 4,
+        "pd": 4
+      }
+    },
+    {
+      "id": "209",
+      "name": "Dark Luna",
+      "type": "Lightning",
+      "rarity": "Epic",
+      "baseStats": {
+        "hp": 4,
+        "spd": 2,
+        "ea": 4,
+        "pa": 2,
+        "ed": 2,
+        "pd": 3
+      }
+    },
+    {
+      "id": "210",
+      "name": "Foil Luna",
+      "type": "Lightning",
+      "rarity": "Exotic",
+      "baseStats": {
+        "hp": 3,
+        "spd": 3,
+        "ea": 3,
+        "pa": 2,
+        "ed": 4,
+        "pd": 3
+      }
+    },
+    {
+      "id": "211",
+      "name": "Sol",
+      "type": "Fire",
+      "rarity": "Rare",
+      "baseStats": {
+        "hp": 3,
+        "spd": 3,
+        "ea": 3,
+        "pa": 1,
+        "ed": 3,
+        "pd": 3
+      }
+    },
+    {
+      "id": "212",
+      "name": "Dreamger",
+      "type": "Wind",
+      "rarity": "Rare",
+      "baseStats": {
+        "hp": 2,
+        "spd": 3,
+        "ea": 1,
+        "pa": 5,
+        "ed": 3,
+        "pd": 2
+      }
+    },
+    {
+      "id": "213",
+      "name": "Light Weevern",
+      "type": "NatureEarth",
+      "rarity": "Epic",
+      "baseStats": {
+        "hp": 2,
+        "spd": 5,
+        "ea": 5,
+        "pa": 1,
+        "ed": 2,
+        "pd": 2
+      }
+    },
+    {
+      "id": "214",
+      "name": "Dark Quirk",
+      "type": "Nature",
+      "rarity": "Rare",
+      "baseStats": {
+        "hp": 3,
+        "spd": 1,
+        "ea": 2,
+        "pa": 4,
+        "ed": 3,
+        "pd": 3
+      }
+    },
+    {
+      "id": "215",
+      "name": "Dark Squirmle",
+      "type": "Water",
+      "rarity": "Rare",
+      "baseStats": {
+        "hp": 4,
+        "spd": 3,
+        "ea": 4,
+        "pa": 1,
+        "ed": 2,
+        "pd": 2
+      }
+    },
+    {
+      "id": "216",
+      "name": "Blighted Flowerpiller",
+      "type": "Nature",
+      "rarity": "Legendary",
+      "baseStats": {
+        "hp": 3,
+        "spd": 5,
+        "ea": 5,
+        "pa": 3,
+        "ed": 2,
+        "pd": 2
+      }
+    },
+    {
+      "id": "217",
+      "name": "Dark Jellyshock",
+      "type": "Lightning",
+      "rarity": "Epic",
+      "baseStats": {
+        "hp": 1,
+        "spd": 4,
+        "ea": 3,
+        "pa": 4,
+        "ed": 2,
+        "pd": 3
+      }
+    },
+    {
+      "id": "218",
+      "name": "Light Hawkai",
+      "type": "Wind",
+      "rarity": "Rare",
+      "baseStats": {
+        "hp": 2,
+        "spd": 3,
+        "ea": 4,
+        "pa": 3,
+        "ed": 2,
+        "pd": 2
+      }
+    },
+    {
+      "id": "219",
+      "name": "Dark Vexie",
+      "type": "Earth",
+      "rarity": "Rare",
+      "baseStats": {
+        "hp": 2,
+        "spd": 5,
+        "ea": 4,
+        "pa": 1,
+        "ed": 2,
+        "pd": 2
+      }
+    },
+    {
+      "id": "220",
+      "name": "Da Windy",
+      "type": "Wind",
+      "rarity": "Legendary",
+      "baseStats": {
+        "hp": 4,
+        "spd": 1,
+        "ea": 4,
+        "pa": 4,
+        "ed": 3,
+        "pd": 4
+      }
+    },
+    {
+      "id": "221",
+      "name": "Light Snorkels",
+      "type": "WaterWind",
+      "rarity": "Exotic",
+      "baseStats": {
+        "hp": 2,
+        "spd": 5,
+        "ea": 4,
+        "pa": 1,
+        "ed": 3,
+        "pd": 3
+      }
+    },
+    {
+      "id": "222",
+      "name": "Foil Croaky",
+      "type": "Earth",
+      "rarity": "Legendary",
+      "baseStats": {
+        "hp": 4,
+        "spd": 1,
+        "ea": 4,
+        "pa": 1,
+        "ed": 5,
+        "pd": 5
+      }
+    },
+    {
+      "id": "223",
+      "name": "Freezet",
+      "type": "Water",
+      "rarity": "Common",
+      "baseStats": {
+        "hp": 3,
+        "spd": 2,
+        "ea": 1,
+        "pa": 4,
+        "ed": 3,
+        "pd": 2
+      }
+    },
+    {
+      "id": "224",
+      "name": "Dark Pillblaze",
+      "type": "Fire",
+      "rarity": "Epic",
+      "baseStats": {
+        "hp": 3,
+        "spd": 1,
+        "ea": 4,
+        "pa": 3,
+        "ed": 3,
+        "pd": 3
+      }
+    },
+    {
+      "id": "225",
+      "name": "Rudy",
+      "type": "Earth",
+      "rarity": "Exotic",
+      "baseStats": {
+        "hp": 3,
+        "spd": 2,
+        "ea": 2,
+        "pa": 4,
+        "ed": 3,
+        "pd": 4
+      }
+    },
+    {
+      "id": "226",
+      "name": "Manio",
+      "type": "Lightning",
+      "rarity": "Legendary",
+      "baseStats": {
+        "hp": 4,
+        "spd": 2,
+        "ea": 4,
+        "pa": 4,
+        "ed": 3,
+        "pd": 3
+      }
+    },
+    {
+      "id": "227",
+      "name": "Mistraxol",
+      "type": "Wind",
+      "rarity": "Common",
+      "baseStats": {
+        "hp": 2,
+        "spd": 3,
+        "ea": 5,
+        "pa": 1,
+        "ed": 2,
+        "pd": 2
+      }
+    },
+    {
+      "id": "228",
+      "name": "Orbling",
+      "type": "Earth",
+      "rarity": "Common",
+      "baseStats": {
+        "hp": 3,
+        "spd": 1,
+        "ea": 2,
+        "pa": 3,
+        "ed": 3,
+        "pd": 3
+      }
+    },
+    {
+      "id": "229",
+      "name": "Zappup",
+      "type": "Lightning",
+      "rarity": "Common",
+      "baseStats": {
+        "hp": 2,
+        "spd": 5,
+        "ea": 4,
+        "pa": 1,
+        "ed": 2,
+        "pd": 1
+      }
+    },
+    {
+      "id": "230",
+      "name": "Pestling",
+      "type": "Nature",
+      "rarity": "Common",
+      "baseStats": {
+        "hp": 3,
+        "spd": 1,
+        "ea": 4,
+        "pa": 2,
+        "ed": 2,
+        "pd": 3
+      }
+    },
+    {
+      "id": "231",
+      "name": "Woolly",
+      "type": "Water",
+      "rarity": "Legendary",
+      "baseStats": {
+        "hp": 5,
+        "spd": 1,
+        "ea": 2,
+        "pa": 5,
+        "ed": 3,
+        "pd": 4
+      }
+    },
+    {
+      "id": "232",
+      "name": "Frozy",
+      "type": "Water",
+      "rarity": "Common",
+      "baseStats": {
+        "hp": 2,
+        "spd": 2,
+        "ea": 4,
+        "pa": 1,
+        "ed": 3,
+        "pd": 3
+      }
+    },
+    {
+      "id": "233",
+      "name": "Stalkra",
+      "type": "Nature",
+      "rarity": "Common",
+      "baseStats": {
+        "hp": 2,
+        "spd": 2,
+        "ea": 1,
+        "pa": 5,
+        "ed": 2,
+        "pd": 3
+      }
+    },
+    {
+      "id": "234",
+      "name": "Mech",
+      "type": "Water",
+      "rarity": "Common",
+      "baseStats": {
+        "hp": 2,
+        "spd": 2,
+        "ea": 1,
+        "pa": 4,
+        "ed": 4,
+        "pd": 2
+      }
+    },
+    {
+      "id": "235",
+      "name": "Rexie",
+      "type": "Fire",
+      "rarity": "Common",
+      "baseStats": {
+        "hp": 2,
+        "spd": 3,
+        "ea": 1,
+        "pa": 5,
+        "ed": 2,
+        "pd": 2
+      }
+    },
+    {
+      "id": "236",
+      "name": "Warrian",
+      "type": "Fire",
+      "rarity": "Common",
+      "baseStats": {
+        "hp": 2,
+        "spd": 2,
+        "ea": 4,
+        "pa": 1,
+        "ed": 4,
+        "pd": 2
+      }
+    },
+    {
+      "id": "237",
+      "name": "Aebex",
+      "type": "NatureWind",
+      "rarity": "Common",
+      "baseStats": {
+        "hp": 2,
+        "spd": 4,
+        "ea": 4,
+        "pa": 1,
+        "ed": 2,
+        "pd": 2
+      }
+    },
+    {
+      "id": "238",
+      "name": "Charix",
+      "type": "Nature",
+      "rarity": "Rare",
+      "baseStats": {
+        "hp": 3,
+        "spd": 2,
+        "ea": 5,
+        "pa": 1,
+        "ed": 3,
+        "pd": 2
+      }
+    },
+    {
+      "id": "239",
+      "name": "Alpha",
+      "type": "Nature",
+      "rarity": "Exotic",
+      "baseStats": {
+        "hp": 4,
+        "spd": 1,
+        "ea": 3,
+        "pa": 4,
+        "ed": 3,
+        "pd": 3
+      }
+    },
+    {
+      "id": "240",
+      "name": "Charpy",
+      "type": "Fire",
+      "rarity": "Legendary",
+      "baseStats": {
+        "hp": 3,
+        "spd": 3,
+        "ea": 4,
+        "pa": 4,
+        "ed": 3,
+        "pd": 3
+      }
+    },
+    {
+      "id": "241",
+      "name": "Lambolt",
+      "type": "Lightning",
+      "rarity": "Rare",
+      "baseStats": {
+        "hp": 3,
+        "spd": 1,
+        "ea": 2,
+        "pa": 4,
+        "ed": 3,
+        "pd": 3
+      }
+    },
+    {
+      "id": "242",
+      "name": "Gravitron",
+      "type": "Earth",
+      "rarity": "Exotic",
+      "baseStats": {
+        "hp": 3,
+        "spd": 4,
+        "ea": 1,
+        "pa": 5,
+        "ed": 3,
+        "pd": 2
+      }
+    },
+    {
+      "id": "243",
+      "name": "Babakku",
+      "type": "Earth",
+      "rarity": "Epic",
+      "baseStats": {
+        "hp": 3,
+        "spd": 1,
+        "ea": 4,
+        "pa": 1,
+        "ed": 3,
+        "pd": 5
+      }
+    },
+    {
+      "id": "244",
+      "name": "Smolderfry",
+      "type": "Fire",
+      "rarity": "Exotic",
+      "baseStats": {
+        "hp": 4,
+        "spd": 2,
+        "ea": 2,
+        "pa": 4,
+        "ed": 3,
+        "pd": 3
+      }
+    },
+    {
+      "id": "245",
+      "name": "Moondrip",
+      "type": "Water",
+      "rarity": "Common",
+      "baseStats": {
+        "hp": 3,
+        "spd": 2,
+        "ea": 1,
+        "pa": 5,
+        "ed": 3,
+        "pd": 1
+      }
+    },
+    {
+      "id": "246",
+      "name": "Shroolet",
+      "type": "Water",
+      "rarity": "Rare",
+      "baseStats": {
+        "hp": 5,
+        "spd": 1,
+        "ea": 4,
+        "pa": 1,
+        "ed": 3,
+        "pd": 2
+      }
+    },
+    {
+      "id": "247",
+      "name": "Lumite",
+      "type": "Earth",
+      "rarity": "Common",
+      "baseStats": {
+        "hp": 3,
+        "spd": 1,
+        "ea": 4,
+        "pa": 1,
+        "ed": 3,
+        "pd": 3
+      }
+    },
+    {
+      "id": "248",
+      "name": "Voidotron",
+      "type": "FireWind",
+      "rarity": "Legendary",
+      "baseStats": {
+        "hp": 4,
+        "spd": 5,
+        "ea": 4,
+        "pa": 1,
+        "ed": 3,
+        "pd": 3
+      }
+    },
+    {
+      "id": "249",
+      "name": "Niboro",
+      "type": "Wind",
+      "rarity": "Epic",
+      "baseStats": {
+        "hp": 2,
+        "spd": 4,
+        "ea": 4,
+        "pa": 1,
+        "ed": 3,
+        "pd": 3
+      }
+    },
+    {
+      "id": "250",
+      "name": "Pinplar",
+      "type": "Water",
+      "rarity": "Exotic",
+      "baseStats": {
+        "hp": 4,
+        "spd": 2,
+        "ea": 1,
+        "pa": 5,
+        "ed": 4,
+        "pd": 2
+      }
+    },
+    {
+      "id": "251",
+      "name": "Lithos",
+      "type": "Lightning",
+      "rarity": "Exotic",
+      "baseStats": {
+        "hp": 3,
+        "spd": 5,
+        "ea": 5,
+        "pa": 1,
+        "ed": 2,
+        "pd": 2
+      }
+    },
+    {
+      "id": "252",
+      "name": "Brainzer",
+      "type": "Lightning",
+      "rarity": "Common",
+      "baseStats": {
+        "hp": 2,
+        "spd": 1,
+        "ea": 4,
+        "pa": 1,
+        "ed": 3,
+        "pd": 4
+      }
+    },
+    {
+      "id": "253",
+      "name": "Pyrex",
+      "type": "Fire",
+      "rarity": "Exotic",
+      "baseStats": {
+        "hp": 3,
+        "spd": 5,
+        "ea": 5,
+        "pa": 1,
+        "ed": 3,
+        "pd": 1
+      }
+    },
+    {
+      "id": "254",
+      "name": "Oozie",
+      "type": "WaterLightning",
+      "rarity": "Rare",
+      "baseStats": {
+        "hp": 3,
+        "spd": 1,
+        "ea": 3,
+        "pa": 2,
+        "ed": 4,
+        "pd": 3
+      }
+    },
+    {
+      "id": "255",
+      "name": "Lunako",
+      "type": "FireEarth",
+      "rarity": "Rare",
+      "baseStats": {
+        "hp": 3,
+        "spd": 2,
+        "ea": 4,
+        "pa": 1,
+        "ed": 3,
+        "pd": 3
+      }
+    },
+    {
+      "id": "256",
+      "name": "Rephily",
+      "type": "Wind",
+      "rarity": "Rare",
+      "baseStats": {
+        "hp": 3,
+        "spd": 2,
+        "ea": 1,
+        "pa": 4,
+        "ed": 3,
+        "pd": 3
+      }
+    },
+    {
+      "id": "257",
+      "name": "Eluzar",
+      "type": "Water",
+      "rarity": "Common",
+      "baseStats": {
+        "hp": 3,
+        "spd": 1,
+        "ea": 1,
+        "pa": 5,
+        "ed": 2,
+        "pd": 3
+      }
+    },
+    {
+      "id": "258",
+      "name": "Furiko",
+      "type": "Fire",
+      "rarity": "Rare",
+      "baseStats": {
+        "hp": 2,
+        "spd": 1,
+        "ea": 5,
+        "pa": 2,
+        "ed": 3,
+        "pd": 3
+      }
+    },
+    {
+      "id": "259",
+      "name": "Bunplop",
+      "type": "WaterEarth",
+      "rarity": "Epic",
+      "baseStats": {
+        "hp": 3,
+        "spd": 5,
+        "ea": 4,
+        "pa": 1,
+        "ed": 2,
+        "pd": 2
+      }
+    },
+    {
+      "id": "260",
+      "name": "Drilune",
+      "type": "Nature",
+      "rarity": "Common",
+      "baseStats": {
+        "hp": 2,
+        "spd": 2,
+        "ea": 4,
+        "pa": 1,
+        "ed": 3,
+        "pd": 3
+      }
+    },
+    {
+      "id": "261",
+      "name": "Flaclay",
+      "type": "FireEarth",
+      "rarity": "Common",
+      "baseStats": {
+        "hp": 2,
+        "spd": 1,
+        "ea": 4,
+        "pa": 1,
+        "ed": 4,
+        "pd": 3
+      }
+    },
+    {
+      "id": "262",
+      "name": "Enex",
+      "type": "Fire",
+      "rarity": "Common",
+      "baseStats": {
+        "hp": 3,
+        "spd": 2,
+        "ea": 5,
+        "pa": 1,
+        "ed": 2,
+        "pd": 2
+      }
+    },
+    {
+      "id": "263",
+      "name": "Voltombra",
+      "type": "Lightning",
+      "rarity": "Common",
+      "baseStats": {
+        "hp": 2,
+        "spd": 3,
+        "ea": 4,
+        "pa": 1,
+        "ed": 3,
+        "pd": 2
+      }
+    },
+    {
+      "id": "264",
+      "name": "Eclipso",
+      "type": "Wind",
+      "rarity": "Exotic",
+      "baseStats": {
+        "hp": 4,
+        "spd": 4,
+        "ea": 4,
+        "pa": 1,
+        "ed": 3,
+        "pd": 2
+      }
+    },
+    {
+      "id": "265",
+      "name": "Osmeron",
+      "type": "Water",
+      "rarity": "Rare",
+      "baseStats": {
+        "hp": 3,
+        "spd": 3,
+        "ea": 4,
+        "pa": 1,
+        "ed": 3,
+        "pd": 2
+      }
+    },
+    {
+      "id": "266",
+      "name": "Mooncrit",
+      "type": "WaterEarth",
+      "rarity": "Rare",
+      "baseStats": {
+        "hp": 3,
+        "spd": 1,
+        "ea": 4,
+        "pa": 2,
+        "ed": 4,
+        "pd": 2
+      }
+    },
+    {
+      "id": "267",
+      "name": "Beateorite",
+      "type": "Earth",
+      "rarity": "Legendary",
+      "baseStats": {
+        "hp": 3,
+        "spd": 2,
+        "ea": 4,
+        "pa": 4,
+        "ed": 4,
+        "pd": 3
+      }
+    },
+    {
+      "id": "268",
+      "name": "Silkire",
+      "type": "Fire",
+      "rarity": "Common",
+      "baseStats": {
+        "hp": 2,
+        "spd": 1,
+        "ea": 4,
+        "pa": 2,
+        "ed": 3,
+        "pd": 3
+      }
+    },
+    {
+      "id": "269",
+      "name": "Zephry",
+      "type": "Wind",
+      "rarity": "Common",
+      "baseStats": {
+        "hp": 2,
+        "spd": 2,
+        "ea": 4,
+        "pa": 1,
+        "ed": 3,
+        "pd": 3
+      }
+    },
+    {
+      "id": "270",
+      "name": "Fungask",
+      "type": "Water",
+      "rarity": "Common",
+      "baseStats": {
+        "hp": 2,
+        "spd": 3,
+        "ea": 4,
+        "pa": 1,
+        "ed": 2,
+        "pd": 3
+      }
+    },
+    {
+      "id": "271",
+      "name": "Larbunni",
+      "type": "Wind",
+      "rarity": "Epic",
+      "baseStats": {
+        "hp": 2,
+        "spd": 3,
+        "ea": 4,
+        "pa": 1,
+        "ed": 4,
+        "pd": 3
+      }
+    },
+    {
+      "id": "272",
+      "name": "Yuefira",
+      "type": "Nature",
+      "rarity": "Common",
+      "baseStats": {
+        "hp": 3,
+        "spd": 3,
+        "ea": 5,
+        "pa": 1,
+        "ed": 2,
+        "pd": 1
+      }
+    },
+    {
+      "id": "273",
+      "name": "Mucora",
+      "type": "Wind",
+      "rarity": "Common",
+      "baseStats": {
+        "hp": 2,
+        "spd": 2,
+        "ea": 3,
+        "pa": 1,
+        "ed": 3,
+        "pd": 4
+      }
+    },
+    {
+      "id": "274",
+      "name": "Goo",
+      "type": "WaterEarth",
+      "rarity": "Common",
+      "baseStats": {
+        "hp": 2,
+        "spd": 1,
+        "ea": 4,
+        "pa": 1,
+        "ed": 5,
+        "pd": 2
+      }
+    },
+    {
+      "id": "275",
+      "name": "Avarus",
+      "type": "FireWind",
+      "rarity": "Common",
+      "baseStats": {
+        "hp": 2,
+        "spd": 3,
+        "ea": 4,
+        "pa": 1,
+        "ed": 3,
+        "pd": 2
+      }
+    },
+    {
+      "id": "276",
+      "name": "Beakka",
+      "type": "Wind",
+      "rarity": "Common",
+      "baseStats": {
+        "hp": 3,
+        "spd": 1,
+        "ea": 1,
+        "pa": 5,
+        "ed": 2,
+        "pd": 3
+      }
+    },
+    {
+      "id": "277",
+      "name": "Whispen",
+      "type": "Wind",
+      "rarity": "Common",
+      "baseStats": {
+        "hp": 2,
+        "spd": 4,
+        "ea": 4,
+        "pa": 1,
+        "ed": 2,
+        "pd": 2
+      }
+    },
+    {
+      "id": "278",
+      "name": "Fickra",
+      "type": "Lightning",
+      "rarity": "Common",
+      "baseStats": {
+        "hp": 3,
+        "spd": 2,
+        "ea": 3,
+        "pa": 1,
+        "ed": 3,
+        "pd": 3
+      }
+    },
+    {
+      "id": "279",
+      "name": "Pirate Bludger",
+      "type": "Earth",
+      "rarity": "Rare",
+      "baseStats": {
+        "hp": 5,
+        "spd": 2,
+        "ea": 1,
+        "pa": 4,
+        "ed": 3,
+        "pd": 1
+      }
+    },
+    {
+      "id": "280",
+      "name": "Lutox",
+      "type": "Earth",
+      "rarity": "Rare",
+      "baseStats": {
+        "hp": 3,
+        "spd": 1,
+        "ea": 4,
+        "pa": 3,
+        "ed": 2,
+        "pd": 3
+      }
+    },
+    {
+      "id": "281",
+      "name": "Deetlee",
+      "type": "Earth",
+      "rarity": "Rare",
+      "baseStats": {
+        "hp": 2,
+        "spd": 2,
+        "ea": 1,
+        "pa": 3,
+        "ed": 3,
+        "pd": 5
+      }
+    },
+    {
+      "id": "282",
+      "name": "Ampupine",
+      "type": "Lightning",
+      "rarity": "Rare",
+      "baseStats": {
+        "hp": 2,
+        "spd": 1,
+        "ea": 1,
+        "pa": 4,
+        "ed": 4,
+        "pd": 4
+      }
+    },
+    {
+      "id": "283",
+      "name": "Hekatom",
+      "type": "NatureWind",
+      "rarity": "Epic",
+      "baseStats": {
+        "hp": 3,
+        "spd": 1,
+        "ea": 4,
+        "pa": 2,
+        "ed": 2,
+        "pd": 5
+      }
+    },
+    {
+      "id": "284",
+      "name": "Scarecrow Charix",
+      "type": "Nature",
+      "rarity": "Epic",
+      "baseStats": {
+        "hp": 4,
+        "spd": 2,
+        "ea": 5,
+        "pa": 1,
+        "ed": 3,
+        "pd": 2
+      }
+    },
+    {
+      "id": "285",
+      "name": "Vamp Skustunk",
+      "type": "Wind",
+      "rarity": "Epic",
+      "baseStats": {
+        "hp": 2,
+        "spd": 2,
+        "ea": 1,
+        "pa": 5,
+        "ed": 3,
+        "pd": 4
+      }
+    },
+    {
+      "id": "286",
+      "name": "Grimm Kiloray",
+      "type": "Lightning",
+      "rarity": "Epic",
+      "baseStats": {
+        "hp": 2,
+        "spd": 2,
+        "ea": 4,
+        "pa": 1,
+        "ed": 5,
+        "pd": 3
+      }
+    },
+    {
+      "id": "287",
+      "name": "Rocker Octavio",
+      "type": "Wind",
+      "rarity": "Exotic",
+      "baseStats": {
+        "hp": 3,
+        "spd": 1,
+        "ea": 5,
+        "pa": 2,
+        "ed": 4,
+        "pd": 3
+      }
+    },
+    {
+      "id": "288",
+      "name": "Boo Blazertooth",
+      "type": "Fire",
+      "rarity": "Exotic",
+      "baseStats": {
+        "hp": 3,
+        "spd": 1,
+        "ea": 5,
+        "pa": 2,
+        "ed": 3,
+        "pd": 4
+      }
+    },
+    {
+      "id": "289",
+      "name": "Geneseed",
+      "type": "Nature",
+      "rarity": "Legendary",
+      "baseStats": {
+        "hp": 4,
+        "spd": 2,
+        "ea": 4,
+        "pa": 2,
+        "ed": 4,
+        "pd": 4
+      }
+    },
+    {
+      "id": "290",
+      "name": "Sora",
+      "type": "Wind",
+      "rarity": "Common",
+      "baseStats": {
+        "hp": 2,
+        "spd": 2,
+        "ea": 1,
+        "pa": 4,
+        "ed": 3,
+        "pd": 3
+      }
+    },
+    {
+      "id": "291",
+      "name": "Dark Sparkslug",
+      "type": "Lightning",
+      "rarity": "Rare",
+      "baseStats": {
+        "hp": 3,
+        "spd": 1,
+        "ea": 4,
+        "pa": 1,
+        "ed": 3,
+        "pd": 4
+      }
+    },
+    {
+      "id": "292",
+      "name": "Phoboros",
+      "type": "Fire",
+      "rarity": "Epic",
+      "baseStats": {
+        "hp": 3,
+        "spd": 2,
+        "ea": 4,
+        "pa": 1,
+        "ed": 4,
+        "pd": 3
+      }
+    },
+    {
+      "id": "293",
+      "name": "Lagoony",
+      "type": "Water",
+      "rarity": "Exotic",
+      "baseStats": {
+        "hp": 2,
+        "spd": 5,
+        "ea": 5,
+        "pa": 1,
+        "ed": 2,
+        "pd": 3
+      }
+    },
+    {
+      "id": "294",
+      "name": "Poppet",
+      "type": "Fire",
+      "rarity": "Common",
+      "baseStats": {
+        "hp": 4,
+        "spd": 2,
+        "ea": 4,
+        "pa": 1,
+        "ed": 2,
+        "pd": 2
+      }
+    },
+    {
+      "id": "295",
+      "name": "Nubyll",
+      "type": "Lightning",
+      "rarity": "Rare",
+      "baseStats": {
+        "hp": 2,
+        "spd": 4,
+        "ea": 5,
+        "pa": 1,
+        "ed": 2,
+        "pd": 2
+      }
+    },
+    {
+      "id": "296",
+      "name": "Elphin",
+      "type": "Water",
+      "rarity": "Epic",
+      "baseStats": {
+        "hp": 3,
+        "spd": 1,
+        "ea": 4,
+        "pa": 1,
+        "ed": 3,
+        "pd": 5
+      }
+    },
+    {
+      "id": "297",
+      "name": "Luvcraft",
+      "type": "Fire",
+      "rarity": "Exotic",
+      "baseStats": {
+        "hp": 3,
+        "spd": 4,
+        "ea": 4,
+        "pa": 1,
+        "ed": 3,
+        "pd": 3
+      }
+    },
+    {
+      "id": "298",
+      "name": "Damse",
+      "type": "Lightning",
+      "rarity": "Exotic",
+      "baseStats": {
+        "hp": 3,
+        "spd": 2,
+        "ea": 2,
+        "pa": 4,
+        "ed": 4,
+        "pd": 3
+      }
+    },
+    {
+      "id": "299",
+      "name": "Beldame",
+      "type": "Lightning",
+      "rarity": "Legendary",
+      "baseStats": {
+        "hp": 3,
+        "spd": 4,
+        "ea": 4,
+        "pa": 1,
+        "ed": 4,
+        "pd": 4
+      }
+    },
+    {
+      "id": "300",
+      "name": "Viperd",
+      "type": "Nature",
+      "rarity": "Common",
+      "baseStats": {
+        "hp": 2,
+        "spd": 2,
+        "ea": 4,
+        "pa": 1,
+        "ed": 4,
+        "pd": 2
+      }
+    },
+    {
+      "id": "301",
+      "name": "Blowpuffle",
+      "type": "Water",
+      "rarity": "Common",
+      "baseStats": {
+        "hp": 2,
+        "spd": 1,
+        "ea": 3,
+        "pa": 2,
+        "ed": 3,
+        "pd": 4
+      }
+    },
+    {
+      "id": "302",
+      "name": "Squawcat",
+      "type": "Fire",
+      "rarity": "Rare",
+      "baseStats": {
+        "hp": 3,
+        "spd": 4,
+        "ea": 4,
+        "pa": 1,
+        "ed": 4,
+        "pd": 4
+      }
+    },
+    {
+      "id": "303",
+      "name": "Dark Weevern",
+      "type": "Nature",
+      "rarity": "Rare",
+      "baseStats": {
+        "hp": 2,
+        "spd": 5,
+        "ea": 4,
+        "pa": 1,
+        "ed": 2,
+        "pd": 2
+      }
+    },
+    {
+      "id": "304",
+      "name": "Pangoleaf",
+      "type": "Nature",
+      "rarity": "Epic",
+      "baseStats": {
+        "hp": 3,
+        "spd": 1,
+        "ea": 2,
+        "pa": 5,
+        "ed": 3,
+        "pd": 3
+      }
+    },
+    {
+      "id": "305",
+      "name": "Foil Pamboo",
+      "type": "Nature",
+      "rarity": "Exotic",
+      "baseStats": {
+        "hp": 4,
+        "spd": 1,
+        "ea": 4,
+        "pa": 1,
+        "ed": 4,
+        "pd": 4
+      }
+    },
+    {
+      "id": "306",
+      "name": "Gippo",
+      "type": "Water",
+      "rarity": "Common",
+      "baseStats": {
+        "hp": 2,
+        "spd": 3,
+        "ea": 1,
+        "pa": 5,
+        "ed": 2,
+        "pd": 2
+      }
+    },
+    {
+      "id": "307",
+      "name": "Hoghedge",
+      "type": "Nature",
+      "rarity": "Common",
+      "baseStats": {
+        "hp": 2,
+        "spd": 1,
+        "ea": 1,
+        "pa": 4,
+        "ed": 3,
+        "pd": 4
+      }
+    },
+    {
+      "id": "308",
+      "name": "Shroomer",
+      "type": "Nature",
+      "rarity": "Common",
+      "baseStats": {
+        "hp": 2,
+        "spd": 2,
+        "ea": 5,
+        "pa": 1,
+        "ed": 2,
+        "pd": 3
+      }
+    },
+    {
+      "id": "309",
+      "name": "Daloo",
+      "type": "Water",
+      "rarity": "Common",
+      "baseStats": {
+        "hp": 2,
+        "spd": 2,
+        "ea": 4,
+        "pa": 1,
+        "ed": 4,
+        "pd": 2
+      }
+    },
+    {
+      "id": "310",
+      "name": "Dark Whik",
+      "type": "Fire",
+      "rarity": "Rare",
+      "baseStats": {
+        "hp": 3,
+        "spd": 3,
+        "ea": 4,
+        "pa": 1,
+        "ed": 3,
+        "pd": 2
+      }
+    },
+    {
+      "id": "311",
+      "name": "Bloombat",
+      "type": "Nature",
+      "rarity": "Rare",
+      "baseStats": {
+        "hp": 3,
+        "spd": 2,
+        "ea": 4,
+        "pa": 1,
+        "ed": 3,
+        "pd": 3
+      }
+    },
+    {
+      "id": "312",
+      "name": "Nyma",
+      "type": "Water",
+      "rarity": "Epic",
+      "baseStats": {
+        "hp": 2,
+        "spd": 4,
+        "ea": 4,
+        "pa": 1,
+        "ed": 3,
+        "pd": 3
+      }
+    },
+    {
+      "id": "313",
+      "name": "Kitpole",
+      "type": "Fire",
+      "rarity": "Exotic",
+      "baseStats": {
+        "hp": 5,
+        "spd": 2,
+        "ea": 4,
+        "pa": 1,
+        "ed": 4,
+        "pd": 2
+      }
+    },
+    {
+      "id": "314",
+      "name": "Magpole",
+      "type": "Fire",
+      "rarity": "Common",
+      "baseStats": {
+        "hp": 2,
+        "spd": 4,
+        "ea": 4,
+        "pa": 1,
+        "ed": 2,
+        "pd": 2
+      }
+    },
+    {
+      "id": "315",
+      "name": "Beetor",
+      "type": "Fire",
+      "rarity": "Common",
+      "baseStats": {
+        "hp": 3,
+        "spd": 2,
+        "ea": 4,
+        "pa": 1,
+        "ed": 3,
+        "pd": 2
+      }
+    },
+    {
+      "id": "316",
+      "name": "Liquifien",
+      "type": "Water",
+      "rarity": "Common",
+      "baseStats": {
+        "hp": 3,
+        "spd": 2,
+        "ea": 4,
+        "pa": 1,
+        "ed": 3,
+        "pd": 3
+      }
+    },
+    {
+      "id": "317",
+      "name": "Glary",
+      "type": "Water",
+      "rarity": "Epic",
+      "baseStats": {
+        "hp": 4,
+        "spd": 1,
+        "ea": 4,
+        "pa": 2,
+        "ed": 3,
+        "pd": 3
+      }
+    },
+    {
+      "id": "318",
+      "name": "Foil Liquifien",
+      "type": "Water",
+      "rarity": "Exotic",
+      "baseStats": {
+        "hp": 4,
+        "spd": 2,
+        "ea": 5,
+        "pa": 1,
+        "ed": 3,
+        "pd": 3
+      }
+    },
+    {
+      "id": "319",
+      "name": "Pachydo",
+      "type": "Water",
+      "rarity": "Common",
+      "baseStats": {
+        "hp": 2,
+        "spd": 1,
+        "ea": 1,
+        "pa": 4,
+        "ed": 2,
+        "pd": 5
+      }
+    },
+    {
+      "id": "320",
+      "name": "Gurgleplops",
+      "type": "Water",
+      "rarity": "Common",
+      "baseStats": {
+        "hp": 1,
+        "spd": 1,
+        "ea": 2,
+        "pa": 3,
+        "ed": 4,
+        "pd": 4
+      }
+    },
+    {
+      "id": "321",
+      "name": "Budillo",
+      "type": "Nature",
+      "rarity": "Common",
+      "baseStats": {
+        "hp": 4,
+        "spd": 1,
+        "ea": 4,
+        "pa": 1,
+        "ed": 3,
+        "pd": 2
+      }
+    },
+    {
+      "id": "322",
+      "name": "Pithapillar",
+      "type": "Nature",
+      "rarity": "Common",
+      "baseStats": {
+        "hp": 2,
+        "spd": 1,
+        "ea": 2,
+        "pa": 4,
+        "ed": 3,
+        "pd": 3
+      }
+    },
+    {
+      "id": "323",
+      "name": "Dark Bubbles",
+      "type": "Water",
+      "rarity": "Rare",
+      "baseStats": {
+        "hp": 4,
+        "spd": 1,
+        "ea": 5,
+        "pa": 1,
+        "ed": 4,
+        "pd": 1
+      }
+    },
+    {
+      "id": "324",
+      "name": "Pyras",
+      "type": "Fire",
+      "rarity": "Epic",
+      "baseStats": {
+        "hp": 3,
+        "spd": 4,
+        "ea": 5,
+        "pa": 1,
+        "ed": 2,
+        "pd": 2
+      }
+    },
+    {
+      "id": "325",
+      "name": "Foil Rockodile",
+      "type": "Water",
+      "rarity": "Exotic",
+      "baseStats": {
+        "hp": 3,
+        "spd": 1,
+        "ea": 4,
+        "pa": 2,
+        "ed": 5,
+        "pd": 3
+      }
+    },
+    {
+      "id": "326",
+      "name": "Bunaken",
+      "type": "Water",
+      "rarity": "Legendary",
+      "baseStats": {
+        "hp": 3,
+        "spd": 5,
+        "ea": 5,
+        "pa": 1,
+        "ed": 3,
+        "pd": 3
+      }
+    },
+    {
+      "id": "327",
+      "name": "Lheon",
+      "type": "Fire",
+      "rarity": "Common",
+      "baseStats": {
+        "hp": 2,
+        "spd": 1,
+        "ea": 2,
+        "pa": 4,
+        "ed": 3,
+        "pd": 3
+      }
+    },
+    {
+      "id": "328",
+      "name": "Dark Hoghedge",
+      "type": "Nature",
+      "rarity": "Rare",
+      "baseStats": {
+        "hp": 2,
+        "spd": 2,
+        "ea": 1,
+        "pa": 4,
+        "ed": 3,
+        "pd": 4
+      }
+    },
+    {
+      "id": "329",
+      "name": "Dark Beetor",
+      "type": "Fire",
+      "rarity": "Rare",
+      "baseStats": {
+        "hp": 3,
+        "spd": 1,
+        "ea": 4,
+        "pa": 1,
+        "ed": 3,
+        "pd": 4
+      }
+    },
+    {
+      "id": "330",
+      "name": "Zhakor",
+      "type": "Fire",
+      "rarity": "Epic",
+      "baseStats": {
+        "hp": 2,
+        "spd": 2,
+        "ea": 4,
+        "pa": 3,
+        "ed": 3,
+        "pd": 3
+      }
+    },
+    {
+      "id": "331",
+      "name": "Foil Pangoleaf",
+      "type": "Nature",
+      "rarity": "Exotic",
+      "baseStats": {
+        "hp": 3,
+        "spd": 1,
+        "ea": 2,
+        "pa": 4,
+        "ed": 3,
+        "pd": 5
+      }
+    }
+  ]
+}

@@ -1,0 +1,716 @@
+[
+  {
+    "name": "Pamboo Cane",
+    "level": 10,
+    "icon": "pamboo_cane.png",
+    "stats": {
+      "HP": 4
+    }
+  },
+  {
+    "name": "Lake Azore Pearl",
+    "level": 10,
+    "icon": "lake_azore_pearl.png",
+    "stats": {
+      "ED": 1,
+      "HP": 2,
+      "PD": 1
+    }
+  },
+  {
+    "name": "GK's Slippers",
+    "level": 10,
+    "icon": "gks_slippers.png",
+    "stats": {
+      "SPD": 4
+    }
+  },
+  {
+    "name": "Skelepup's Spark",
+    "level": 10,
+    "icon": "skelepups_spark.png",
+    "stats": {
+      "EA": 1,
+      "SPD": 3
+    }
+  },
+  {
+    "name": "Eternal Fall Mushroom",
+    "level": 10,
+    "icon": "eternal_fall_mushroom.png",
+    "stats": {
+      "ED": 1,
+      "HP": 3
+    }
+  },
+  {
+    "name": "Cloud Cake",
+    "level": 10,
+    "icon": "cloud_cake.png",
+    "stats": {
+      "EA": 3,
+      "SPD": 1
+    }
+  },
+  {
+    "name": "Dark Owlie Feather",
+    "level": 10,
+    "icon": "dark_owlie_feather.png",
+    "stats": {
+      "PA": 1,
+      "SPD": 3
+    }
+  },
+  {
+    "name": "Woodman's Axe Head",
+    "level": 10,
+    "icon": "woodmans_axe_head.png",
+    "stats": {
+      "HP": 1,
+      "PA": 3
+    }
+  },
+  {
+    "name": "Blessed Pollen",
+    "level": 10,
+    "icon": "blessed_pollen.png",
+    "stats": {
+      "ED": 2,
+      "PD": 2
+    }
+  },
+  {
+    "name": "Elefauna Flower",
+    "level": 10,
+    "icon": "elefauna_flower.png",
+    "stats": {
+      "EA": 3,
+      "HP": 1
+    }
+  },
+  {
+    "name": "Quartex Crystal",
+    "level": 10,
+    "icon": "quartex_crystal.png",
+    "stats": {
+      "HP": -7
+    }
+  },
+  {
+    "name": "Frost Root",
+    "level": 10,
+    "icon": "frost_root.png",
+    "stats": {
+      "HP": -7
+    }
+  },
+  {
+    "name": "Mt. Gemma Banner",
+    "level": 20,
+    "icon": "mt._gemma_banner.png",
+    "stats": {
+      "EA": -3,
+      "ED": 4,
+      "HP": 10,
+      "PA": -3,
+      "PD": 4
+    }
+  },
+  {
+    "name": "Sunfall Shores Banner",
+    "level": 20,
+    "icon": "sunfall_shores_banner.png",
+    "stats": {
+      "EA": 9,
+      "PD": 3
+    }
+  },
+  {
+    "name": "Monk's Banner",
+    "level": 20,
+    "icon": "monks_banner.png",
+    "stats": {
+      "ED": 8,
+      "PA": 4
+    }
+  },
+  {
+    "name": "Forest Banner",
+    "level": 20,
+    "icon": "forest_banner.png",
+    "stats": {
+      "HP": 10,
+      "PD": 4
+    }
+  },
+  {
+    "name": "Volcano Banner",
+    "level": 20,
+    "icon": "volcano_banner.png",
+    "stats": {
+      "EA": 9,
+      "PA": 9
+    }
+  },
+  {
+    "name": "Helzbelz Bells",
+    "level": 20,
+    "icon": "helzbelz_bells.png",
+    "stats": {
+      "HP": 6,
+      "SPD": 10
+    }
+  },
+  {
+    "name": "Emerald Scales",
+    "level": 20,
+    "icon": "emerald_scales.png",
+    "stats": {
+      "PA": 9,
+      "PD": 3
+    }
+  },
+  {
+    "name": "Elemental Explosion",
+    "level": 20,
+    "icon": "elemental_explosion.png",
+    "stats": {
+      "EA": 6,
+      "HP": 6
+    }
+  },
+  {
+    "name": "Flower of Despair",
+    "level": 20,
+    "icon": "flower_of_despair.png",
+    "stats": {
+      "HP": 6,
+      "PA": 6
+    }
+  },
+  {
+    "name": "Jungle Banner",
+    "level": 20,
+    "icon": "jungle_banner.png",
+    "stats": {
+      "ED": 4,
+      "HP": 10
+    }
+  },
+  {
+    "name": "Frozen Claws",
+    "level": 20,
+    "icon": "frozen_claws.png",
+    "stats": {
+      "ED": 5,
+      "HP": 4,
+      "PD": 5
+    }
+  },
+  {
+    "name": "Ship Captain's Log",
+    "level": 20,
+    "icon": "ship_captains_log.png",
+    "stats": {
+      "EA": 4,
+      "HP": 6,
+      "SPD": 6
+    }
+  },
+  {
+    "name": "Forging Hammer",
+    "level": 20,
+    "icon": "forging_hammer.png",
+    "stats": {
+      "EA": 5,
+      "ED": -1,
+      "HP": 9,
+      "PA": 5,
+      "PD": -1
+    }
+  },
+  {
+    "name": "Stony Shield",
+    "level": 20,
+    "icon": "stony_shield.png",
+    "stats": {
+      "EA": 4,
+      "ED": 8
+    }
+  },
+  {
+    "name": "Skyline Peak Gem",
+    "level": 20,
+    "icon": "skyline_peak_gem.png",
+    "stats": {
+      "HP": 14,
+      "SPD": 2
+    }
+  },
+  {
+    "name": "Obsidian Lava",
+    "level": 20,
+    "icon": "obsidian_lava.png",
+    "stats": {
+      "ED": 7,
+      "PD": 7
+    }
+  },
+  {
+    "name": "Bean Stalk",
+    "level": 20,
+    "icon": "bean_stalk.png",
+    "stats": {
+      "ED": 11,
+      "HP": 2
+    }
+  },
+  {
+    "name": "Monk's Robe",
+    "level": 20,
+    "icon": "monks_robe.png",
+    "stats": {
+      "HP": 2,
+      "PD": 11
+    }
+  },
+  {
+    "name": "Nero's Orb",
+    "level": 20,
+    "icon": "neros_orb.png",
+    "stats": {
+      "EA": 6,
+      "PD": 6,
+      "SPD": 3
+    }
+  },
+  {
+    "name": "Gold Piece Die",
+    "level": 30,
+    "icon": "gold_piece_die.png",
+    "stats": {
+      "EA": 12,
+      "ED": 6,
+      "PA": 12,
+      "PD": 6
+    }
+  },
+  {
+    "name": "Palmda's Talon",
+    "level": 30,
+    "icon": "palmdas_talon.png",
+    "stats": {
+      "HP": 9,
+      "PA": 9,
+      "SPD": -10
+    }
+  },
+  {
+    "name": "Nox's Nightmare",
+    "level": 30,
+    "icon": "noxs_nightmare.png",
+    "stats": {
+      "EA": 12,
+      "PA": 12,
+      "SPD": -10
+    }
+  },
+  {
+    "name": "Cactus Flower",
+    "level": 30,
+    "icon": "cactus_flower.png",
+    "stats": {
+      "ED": 9,
+      "PD": 9,
+      "SPD": -10
+    }
+  },
+  {
+    "name": "Everlasting Snowball",
+    "level": 30,
+    "icon": "everlasting_snowball.png",
+    "stats": {
+      "EA": 15,
+      "PD": 15
+    }
+  },
+  {
+    "name": "Mystic Map",
+    "level": 30,
+    "icon": "mystic_map.png",
+    "stats": {
+      "EA": 9,
+      "HP": 9,
+      "SPD": -10
+    }
+  },
+  {
+    "name": "Echino Shell",
+    "level": 30,
+    "icon": "echino_shell.png",
+    "stats": {
+      "HP": 18,
+      "PD": 18
+    }
+  },
+  {
+    "name": "Fractured Shell",
+    "level": 30,
+    "icon": "fractured_shell.png",
+    "stats": {
+      "ED": 18,
+      "HP": 18
+    }
+  },
+  {
+    "name": "Vanquished Soul",
+    "level": 30,
+    "icon": "vanquished_soul.png",
+    "stats": {
+      "HP": 16,
+      "PA": 16
+    }
+  },
+  {
+    "name": "Monastery Idol",
+    "level": 30,
+    "icon": "monastery_idol.png",
+    "stats": {
+      "ED": 9,
+      "HP": 18,
+      "PD": 9
+    }
+  },
+  {
+    "name": "Dark Warro Thorn",
+    "level": 30,
+    "icon": "dark_warro_thorn.png",
+    "stats": {
+      "ED": 7,
+      "PA": 17,
+      "PD": 7,
+      "SPD": 3
+    }
+  },
+  {
+    "name": "Temple Stone",
+    "level": 30,
+    "icon": "temple_stone.png",
+    "stats": {
+      "EA": 16,
+      "HP": 16
+    }
+  },
+  {
+    "name": "Magicite Staff",
+    "level": 30,
+    "icon": "magicite_staff.png",
+    "stats": {
+      "EA": 17,
+      "ED": 7,
+      "PD": 7,
+      "SPD": 3
+    }
+  },
+  {
+    "name": "Peepsie Eggs",
+    "level": 30,
+    "icon": "peepsie_eggs.png",
+    "stats": {
+      "EA": 15,
+      "ED": 15
+    }
+  },
+  {
+    "name": "Truncherous Hammer",
+    "level": 30,
+    "icon": "truncherous_hammer.png",
+    "stats": {
+      "PA": 15,
+      "PD": 15
+    }
+  },
+  {
+    "name": "Mushles",
+    "level": 30,
+    "icon": "mushles.png",
+    "stats": {
+      "HP": 14,
+      "PD": 16,
+      "SPD": 10
+    }
+  },
+  {
+    "name": "Shacklers Gem",
+    "level": 30,
+    "icon": "shacklers_gem.png",
+    "stats": {
+      "ED": 14,
+      "HP": 7,
+      "PD": 14
+    }
+  },
+  {
+    "name": "Bauble of the Dawn",
+    "level": 30,
+    "icon": "bauble_of_the_dawn.png",
+    "stats": {
+      "EA": 7,
+      "HP": 28,
+      "PA": 7
+    }
+  },
+  {
+    "name": "Papa's Antlers",
+    "level": 30,
+    "icon": "papas_antlers.png",
+    "stats": {
+      "ED": 15,
+      "PA": 15
+    }
+  },
+  {
+    "name": "Nanaslug's Horn",
+    "level": 30,
+    "icon": "nanaslugs_horn.png",
+    "stats": {
+      "EA": 12,
+      "HP": 12,
+      "SPD": -5
+    }
+  },
+  {
+    "name": "Geotoad Teeth",
+    "level": 30,
+    "icon": "geotoad_teeth.png",
+    "stats": {
+      "HP": 12,
+      "PA": 12,
+      "SPD": -5
+    }
+  },
+  {
+    "name": "Patchkin's Rind",
+    "level": 30,
+    "icon": "patchkins_rind.png",
+    "stats": {
+      "EA": 14,
+      "HP": 7,
+      "PA": 14,
+      "SPD": -5
+    }
+  },
+  {
+    "name": "Tiki Idol",
+    "level": 30,
+    "icon": "tiki_idol.png",
+    "stats": {
+      "PD": 26,
+      "SPD": 13
+    }
+  },
+  {
+    "name": "Lost Swords",
+    "level": 30,
+    "icon": "lost_swords.png",
+    "stats": {
+      "HP": 4,
+      "PA": 20,
+      "SPD": 14
+    }
+  },
+  {
+    "name": "Gravitron Pebble",
+    "level": 30,
+    "icon": "gravitron_pebble.png",
+    "stats": {
+      "ED": 26,
+      "SPD": 13
+    }
+  },
+  {
+    "name": "Arrow of Love",
+    "level": 30,
+    "icon": "arrow_of_love.png",
+    "stats": {
+      "EA": 20,
+      "HP": 4,
+      "SPD": 14
+    }
+  },
+  {
+    "name": "Shard of Dawn's Landing",
+    "level": 30,
+    "icon": "shard_of_dawns_landing.png",
+    "stats": {
+      "EA": 16,
+      "PA": 16,
+      "SPD": 8
+    }
+  },
+  {
+    "name": "Shattered Gatestone",
+    "level": 30,
+    "icon": "shattered_gatestone.png",
+    "stats": {
+      "ED": 16,
+      "HP": 14,
+      "SPD": 10
+    }
+  },
+  {
+    "name": "Dragon Shackle",
+    "level": 30,
+    "icon": "dragon_shackle.png",
+    "stats": {
+      "ED": 13,
+      "PD": 13,
+      "SPD": -5
+    }
+  },
+  {
+    "name": "Moon Rock",
+    "level": 35,
+    "icon": "moon_rock.png",
+    "stats": {
+      "ED": 17,
+      "HP": 10,
+      "PD": 17
+    }
+  },
+  {
+    "name": "Flying Carpet Fragment",
+    "level": 35,
+    "icon": "flying_carpet_fragment.png",
+    "stats": {
+      "EA": 20,
+      "HP": 15,
+      "PA": -10,
+      "SPD": -10
+    }
+  },
+  {
+    "name": "Gog's Cog",
+    "level": 35,
+    "icon": "gogs_cog.png",
+    "stats": {
+      "EA": -10,
+      "HP": 15,
+      "PA": 20,
+      "SPD": -10
+    }
+  },
+  {
+    "name": "Shard of Rudolfe",
+    "level": 35,
+    "icon": "shard_of_rudolfe.png",
+    "stats": {
+      "EA": 20,
+      "HP": 18,
+      "SPD": 10
+    }
+  },
+  {
+    "name": "Saiyam's Trident",
+    "level": 35,
+    "icon": "saiyams_trident.png",
+    "stats": {
+      "HP": 15,
+      "PA": 20,
+      "SPD": 10
+    }
+  },
+  {
+    "name": "Cage of Despair",
+    "level": 35,
+    "icon": "cage_of_despair.png",
+    "stats": {
+      "ED": 12,
+      "HP": 16,
+      "PD": 12,
+      "SPD": -10
+    }
+  },
+  {
+    "name": "Frozen Coin",
+    "level": 35,
+    "icon": "frozen_coin.png",
+    "stats": {
+      "EA": 15,
+      "ED": 7,
+      "PA": 15,
+      "PD": 7
+    }
+  },
+  {
+    "name": "Molten Coin",
+    "level": 35,
+    "icon": "molten_coin.png",
+    "stats": {
+      "EA": 8,
+      "ED": 16,
+      "PA": 8,
+      "PD": 16
+    }
+  },
+  {
+    "name": "Petrified Dragon Egg",
+    "level": 35,
+    "icon": "petrified_dragon_egg.png",
+    "stats": {
+      "HP": 15,
+      "PD": 24,
+      "SPD": -10
+    }
+  },
+  {
+    "name": "Petrified Mama Baby",
+    "level": 35,
+    "icon": "petrified_mama_baby.png",
+    "stats": {
+      "ED": 24,
+      "HP": 15,
+      "SPD": -10
+    }
+  },
+  {
+    "name": "Leggy Eggs",
+    "level": 35,
+    "icon": "leggy_eggs.png",
+    "stats": {
+      "HP": 20,
+      "PD": 25
+    }
+  },
+  {
+    "name": "Dark Winds Venom",
+    "level": 35,
+    "icon": "dark_winds_venom.png",
+    "stats": {
+      "ED": 25,
+      "HP": 20
+    }
+  },
+  {
+    "name": "Scent of Skustunk",
+    "level": 35,
+    "icon": "scent_of_skustunk.png",
+    "stats": {
+      "EA": 16,
+      "HP": 10,
+      "PA": 16,
+      "SPD": -10
+    }
+  },
+  {
+    "name": "Charcoal Idol",
+    "level": 35,
+    "icon": "charcoal_idol.png",
+    "stats": {
+      "EA": 5,
+      "HP": 26,
+      "PA": 5,
+      "SPD": 26
+    }
+  }
+]

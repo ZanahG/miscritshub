@@ -1,0 +1,372 @@
+/* Page wrapper */
+.md{
+  padding: 26px 0 56px;
+}
+
+.md__back{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  text-decoration:none;
+  color: rgba(255,255,255,0.70);
+  margin: 2px 0 14px;
+}
+.md__back:hover{ color: rgba(255,255,255,0.92); }
+
+.md__shell{
+  padding: 18px;
+}
+
+/* Header */
+.md__head{
+  display:flex;
+  justify-content: space-between;
+  align-items:flex-start;
+  gap: 14px;
+  padding: 8px 6px 16px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  margin-bottom: 16px;
+}
+
+.md__titleRow{
+  display:flex;
+  align-items:flex-start;
+  gap: 12px;
+  min-width: 0;
+}
+
+.md__elemBadge{
+  width: 46px;
+  height: 46px;
+  border-radius: 14px;
+  display:grid;
+  place-items:center;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.05);
+}
+.md__elemBadge img{
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+  filter: drop-shadow(0 6px 12px rgba(0,0,0,0.45));
+}
+
+.md__name{
+  margin: 0 0 6px;
+  font-size: 30px;
+  line-height: 1.05;
+  letter-spacing: 0.2px;
+}
+
+.md__metaLine{
+  display:flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items:center;
+  color: rgba(255,255,255,0.65);
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.md__rarity{ color: rgba(255,255,255,0.85); }
+.md__dot{ opacity: 0.6; }
+
+.md__tags{
+  display:flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content:flex-end;
+}
+
+/* Content grid */
+.md__grid{
+  display:grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: 14px;
+}
+
+.md__left,
+.md__right{
+  padding: 16px;
+}
+
+/* Sprite */
+.md__spriteBox{
+  height: 230px;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.10);
+  background:
+    radial-gradient(500px 260px at 35% 25%, rgba(96,165,250,0.18), transparent 60%),
+    radial-gradient(500px 260px at 75% 60%, rgba(34,197,94,0.10), transparent 65%),
+    rgba(0,0,0,0.18);
+  display:grid;
+  place-items:center;
+  overflow:hidden;
+  margin-bottom: 14px;
+}
+.md__spriteBox img{
+  width: 170px;
+  height: 170px;
+  object-fit: contain;
+  image-rendering: pixelated;
+  filter: drop-shadow(0 18px 40px rgba(0,0,0,0.45));
+}
+
+/* Sections */
+.md__sectionTitle{
+  margin: 10px 0 10px;
+  font-size: 18px;
+  letter-spacing: 0.2px;
+}
+
+.md__lore{
+  margin: 0;
+  color: rgba(255,255,255,0.72);
+  line-height: 1.6;
+}
+
+.md__block + .md__block{
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+/* Meta grid */
+.md__metaGrid{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.md__meta{
+  border: 1px solid rgba(255,255,255,0.10);
+  border-radius: 16px;
+  background: rgba(255,255,255,0.04);
+  padding: 12px;
+}
+.md__metaLabel{
+  color: rgba(255,255,255,0.65);
+  font-weight: 800;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-bottom: 8px;
+}
+.md__metaValue{
+  color: rgba(255,255,255,0.88);
+  font-weight: 800;
+}
+
+/* Tags reuse your .tag look from miscripedia.css? */
+/* If you already have .tag in miscripedia.css, keep it. If not, define a local one: */
+.tag{
+  display:inline-flex;
+  align-items:center;
+  gap: 8px;
+  padding: 7px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.10);
+  background: rgba(255,255,255,0.05);
+  color: rgba(255,255,255,0.78);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+/* Stats pips */
+.md__stats .statRow--pips{
+  display:grid;
+  grid-template-columns: 170px 1fr;
+  gap: 14px;
+  align-items:center;
+  margin: 12px 0;
+}
+.md__stats .statLabel{
+  color: rgba(255,255,255,0.70);
+  font-weight: 800;
+}
+.pips{
+  display:flex;
+  gap: 6px;
+  align-items:center;
+}
+.pip{
+  width: 18px;
+  height: 12px;
+  border-radius: 4px;
+  background: rgba(255,255,255,0.16);
+  border: 1px solid rgba(255,255,255,0.10);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.20) inset;
+}
+.pips--hp .pip.is-on{ background: rgba(34,197,94,0.9); }
+.pips--spd .pip.is-on{ background: rgba(250,204,21,0.9); }
+.pips--ea .pip.is-on{ background: rgba(96,165,250,0.95); }
+.pips--ed .pip.is-on{ background: rgba(167,139,250,0.95); }
+.pips--pa .pip.is-on{ background: rgba(251,113,133,0.95); }
+.pips--pd .pip.is-on{ background: rgba(59,130,246,0.9); }
+
+/* Evolutions */
+.md__evolutions{
+  display:flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.evo{
+  width: 120px;
+  border: 1px solid rgba(255,255,255,0.10);
+  border-radius: 16px;
+  background: rgba(255,255,255,0.04);
+  padding: 10px;
+  text-align:center;
+  cursor:pointer;
+  transition: transform .12s ease, border-color .12s ease, background .12s ease;
+}
+.evo:hover{
+  transform: translateY(-2px);
+  border-color: rgba(96,165,250,0.35);
+  background: rgba(255,255,255,0.06);
+}
+.evo.active{
+  border-color: rgba(96,165,250,0.45);
+  background: rgba(96,165,250,0.10);
+}
+.evo img{
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+  image-rendering: pixelated;
+}
+.evoName{
+  margin-top: 8px;
+  color: rgba(255,255,255,0.82);
+  font-weight: 900;
+  font-size: 13px;
+}
+
+/* Abilities */
+.md__abilities{
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+}
+
+.ab{
+  position: relative;
+  border: 1px solid rgba(255,255,255,0.10);
+  border-radius: 16px;
+  background: rgba(255,255,255,0.04);
+  padding: 10px;
+  display:flex;
+  gap: 10px;
+  align-items:flex-start;
+}
+
+.abIco{
+  width: 34px;
+  height: 34px;
+  border-radius: 12px;
+  display:grid;
+  place-items:center;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.10);
+  flex: 0 0 auto;
+}
+
+.abIcon{
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  filter: drop-shadow(0 6px 14px rgba(0,0,0,0.35));
+  opacity: .95;
+}
+
+.abName{
+  font-weight: 900;
+  color: rgba(255,255,255,0.88);
+}
+.abMeta{
+  margin-top: 4px;
+  color: rgba(255,255,255,0.60);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* Tooltip (keep your existing styles, just align to theme) */
+.abTip{
+  position: fixed;
+  z-index: 9999;
+  width: 260px;
+  padding: 12px 12px 10px;
+  border-radius: 14px;
+  background: rgba(12,18,34,0.96);
+  border: 1px solid rgba(96,165,250,0.40);
+  box-shadow: 0 22px 60px rgba(0,0,0,0.55);
+  color: rgba(255,255,255,0.92);
+  font-size: 13px;
+  line-height: 1.25;
+  pointer-events: none;
+}
+.abTip__top{
+  display:flex;
+  justify-content:space-between;
+  gap:10px;
+  font-weight: 900;
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+.abTip__row{
+  display:flex;
+  justify-content:space-between;
+  gap:10px;
+  font-weight: 800;
+  color: rgba(255,255,255,0.85);
+  margin-bottom: 8px;
+}
+.abTip__label{
+  color: rgba(255,255,255,0.75);
+  font-weight: 900;
+}
+.abTip__desc{
+  padding-top: 8px;
+  margin-top: 8px;
+  border-top: 1px solid rgba(255,255,255,0.10);
+  color: rgba(255,255,255,0.85);
+  font-weight: 700;
+}
+.abTip__enchantTitle{
+  margin-top: 10px;
+  color: rgba(255,255,255,0.80);
+  font-weight: 900;
+}
+.abTip__enchant{
+  margin-top: 4px;
+  color: rgba(255,255,255,0.80);
+  font-weight: 700;
+}
+
+/* Rarity classes (keep same as before) */
+.rarity-common { color: #9ca3af; }
+.rarity-rare { color: #60a5fa; }
+.rarity-epic { color: #4ade80; }
+.rarity-exotic { color: #a78bfa; }
+.rarity-legendary { color: #facc15; }
+
+/* Responsive */
+@media (max-width: 980px){
+  .md__grid{ grid-template-columns: 1fr; }
+  .md__tags{ justify-content:flex-start; }
+  .md__abilities{ grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 560px){
+  .md__head{ flex-direction: column; }
+  .md__abilities{ grid-template-columns: 1fr; }
+  .md__metaGrid{ grid-template-columns: 1fr; }
+  .md__stats .statRow--pips{ grid-template-columns: 120px 1fr; }
+  .evo{ width: calc(50% - 5px); }
+}
+
+@media (max-width: 360px){
+  .evo{ width: 100%; }
+}

@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Stats Calculator - Miscrits HUB</title>
+  <link rel="icon" href="../assets/images/logo.png" sizes="32x32" />
+  <link rel="apple-touch-icon" href="../assets/images/logo.png" />
+  <link rel="stylesheet" href="../css/global.css" />
+  <link rel="stylesheet" href="../css/navbar.css" />
+  <link rel="stylesheet" href="../css/stats_calculator.css" />
+</head>
+
+<body>
+  <main class="wrap scPage">
+    <header class="nav">
+      <div class="nav__inner">
+        <a class="nav__brand" href="../index.html" aria-label="Ir al inicio">
+          <img src="../assets/images/logo.png" alt="Miscrits HUB" class="nav__logo" />
+          <span class="nav__brandText">Miscrits HUB</span>
+        </a>
+
+        <button class="nav__toggle" type="button" aria-label="Abrir menú" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+
+        <nav class="nav__menu" aria-label="Navegación principal">
+          <a class="nav__link" href="./spawns.html">Spawns</a>
+          <a class="nav__link" href="./miscripedia.html">Miscripedia</a>
+
+          <div class="nav__dropdown" data-dropdown>
+            <button class="nav__link nav__dropBtn" type="button" aria-haspopup="true" aria-expanded="false">
+              PVP <span class="nav__chev" aria-hidden="true">▾</span>
+            </button>
+            <div class="nav__dropMenu" role="menu">
+              <a role="menuitem" class="nav__dropItem" href="./team_builder.html">Team Builder</a>
+              <a role="menuitem" class="nav__dropItem" href="./damage_calculator.html">Damage Calculator</a>
+              <a role="menuitem" class="nav__dropItem" href="./pvp_teams.html">PVP Teams</a>
+            </div>
+          </div>
+
+          <div class="nav__dropdown" data-dropdown>
+            <button class="nav__link nav__dropBtn" type="button" aria-haspopup="true" aria-expanded="false">
+              Tools <span class="nav__chev" aria-hidden="true">▾</span>
+            </button>
+            <div class="nav__dropMenu" role="menu">
+              <a role="menuitem" class="nav__dropItem" href="./stats_calculator.html">Stats Calculator</a>
+              <a role="menuitem" class="nav__dropItem" href="./breeding_calculator.html">Breeding Calculator</a>
+            </div>
+          </div>
+
+          <a class="nav__link" href="./miscritdle.html">Miscritdle</a>
+          <a class="nav__link" href="./patch_notes.html">Patch notes</a>
+        </nav>
+      </div>
+    </header>
+
+
+    <section class="scGrid">
+      <!-- Left: Picker + Preview -->
+      <article class="card scPickerCard">
+        <div class="card__head">
+          <h2 class="card__title">Miscrit</h2>
+          <div class="levelRow">
+            <label class="label" for="levelInput">Nivel</label>
+            <input id="levelInput" class="input input--sm" type="number" min="1" max="35" value="35" />
+          </div>
+        </div>
+
+        <div class="miscritPicker">
+          <label class="label" for="sc-guess">Buscar</label>
+          <input id="sc-guess" class="input" type="text" placeholder="Ej: Flue..." autocomplete="off" />
+          <div id="scDropdown" class="dropdown" hidden></div>
+        </div>
+
+        <div class="preview preview--imageOnly">
+          <img id="avatarImg" class="preview__img preview__img--xl" src="" alt="" />
+        </div>
+
+        <div class="actionsRow">
+          <button id="presetAllGreen" class="btn presetBtn" type="button">S+</button>
+          <button id="presetRedSpeed" class="btn presetBtn" type="button">RS</button>
+          <button id="toggleCustomBtn" class="btn btn--ghost" type="button" aria-pressed="false">Custom</button>
+          <button id="resetBtn" class="btn btn--ghost" type="button">Reset Colors</button>
+        </div>
+      </article>
+
+      <!-- Middle: Colors + Output -->
+      <article class="card scStatsCard">
+        <div class="card__head">
+          <h2 class="card__title">Stats</h2>
+        </div>
+
+        <div class="scTable">
+          <!-- row template: stat -->
+          <div class="scRow" data-color="white">
+            <div class="scRow__left">
+              <img class="scRow__icon" src="../assets/images/icons/hp.png" alt="HP">
+              <div class="scRow__label">HP</div>
+            </div>
+            <select id="cHp" class="select">
+              <option value="white" selected>White</option>
+              <option value="red">Red</option>
+              <option value="green">Green</option>
+            </select>
+            <div id="outHp" class="scRow__value">—</div>
+          </div>
+
+          <div class="scRow" data-color="white">
+            <div class="scRow__left">
+              <img class="scRow__icon" src="../assets/images/icons/spd.png" alt="SPD">
+              <div class="scRow__label">SPD</div>
+            </div>
+            <select id="cSpd" class="select">
+              <option value="white" selected>White</option>
+              <option value="red">Red</option>
+              <option value="green">Green</option>
+            </select>
+            <div id="outSpd" class="scRow__value">—</div>
+          </div>
+
+          <div class="scRow" data-color="white">
+            <div class="scRow__left">
+              <img class="scRow__icon" src="../assets/images/icons/ea.png" alt="EA">
+              <div class="scRow__label">EA</div>
+            </div>
+            <select id="cEa" class="select">
+              <option value="white" selected>White</option>
+              <option value="red">Red</option>
+              <option value="green">Green</option>
+            </select>
+            <div id="outEa" class="scRow__value">—</div>
+          </div>
+
+          <div class="scRow" data-color="white">
+            <div class="scRow__left">
+              <img class="scRow__icon" src="../assets/images/icons/pa.png" alt="PA">
+              <div class="scRow__label">PA</div>
+            </div>
+            <select id="cPa" class="select">
+              <option value="white" selected>White</option>
+              <option value="red">Red</option>
+              <option value="green">Green</option>
+            </select>
+            <div id="outPa" class="scRow__value">—</div>
+          </div>
+
+          <div class="scRow" data-color="white">
+            <div class="scRow__left">
+              <img class="scRow__icon" src="../assets/images/icons/ed.png" alt="ED">
+              <div class="scRow__label">ED</div>
+            </div>
+            <select id="cEd" class="select">
+              <option value="white" selected>White</option>
+              <option value="red">Red</option>
+              <option value="green">Green</option>
+            </select>
+            <div id="outEd" class="scRow__value">—</div>
+          </div>
+
+          <div class="scRow" data-color="white">
+            <div class="scRow__left">
+              <img class="scRow__icon" src="../assets/images/icons/pd.png" alt="PD">
+              <div class="scRow__label">PD</div>
+            </div>
+            <select id="cPd" class="select">
+              <option value="white" selected>White</option>
+              <option value="red">Red</option>
+              <option value="green">Green</option>
+            </select>
+            <div id="outPd" class="scRow__value">—</div>
+          </div>
+        </div>
+
+        <div class="actionsRow">
+          <button id="exportImgBtn" class="btn btn--accent" type="button">Export IMG</button>
+        </div>
+      </article>
+
+      <!-- Right: Bonus + Relics -->
+      <aside class="card scSideCard">
+        <div class="card__head">
+          <h2 class="card__title">Bonus</h2>
+        </div>
+
+        <div class="bonusGrid bonusGrid--icons">
+          <label class="bonusItem">
+            <div class="bonusItem__left">
+              <img src="../assets/images/icons/hp.png" alt="HP">
+              <span>HP</span>
+            </div>
+            <input id="bHp" class="input input--sm" type="number" min="0" value="0">
+          </label>
+
+          <label class="bonusItem">
+            <div class="bonusItem__left">
+              <img src="../assets/images/icons/spd.png" alt="SPD">
+              <span>SPD</span>
+            </div>
+            <input id="bSpd" class="input input--sm" type="number" min="0" value="0">
+          </label>
+
+          <label class="bonusItem">
+            <div class="bonusItem__left">
+              <img src="../assets/images/icons/ea.png" alt="EA">
+              <span>EA</span>
+            </div>
+            <input id="bEa" class="input input--sm" type="number" min="0" value="0">
+          </label>
+
+          <label class="bonusItem">
+            <div class="bonusItem__left">
+              <img src="../assets/images/icons/pa.png" alt="PA">
+              <span>PA</span>
+            </div>
+            <input id="bPa" class="input input--sm" type="number" min="0" value="0">
+          </label>
+
+          <label class="bonusItem">
+            <div class="bonusItem__left">
+              <img src="../assets/images/icons/ed.png" alt="ED">
+              <span>ED</span>
+            </div>
+            <input id="bEd" class="input input--sm" type="number" min="0" value="0">
+          </label>
+
+          <label class="bonusItem">
+            <div class="bonusItem__left">
+              <img src="../assets/images/icons/pd.png" alt="PD">
+              <span>PD</span>
+            </div>
+            <input id="bPd" class="input input--sm" type="number" min="0" value="0">
+          </label>
+        </div>
+
+
+        <div class="actionsRow">
+          <button id="regenBonusBtn" class="btn" type="button">Random</button>
+          <button id="applyBonusBtn_dup" class="btn btn--ghost" type="button">Toggle Bonus</button>
+        </div>
+
+        <hr class="hr">
+
+        <div class="card__head">
+          <h2 class="card__title">Relics</h2>
+        </div>
+
+        <div class="relicSlots">
+          <button class="relicSlot" type="button" data-slot="0" aria-label="Slot 1"></button>
+          <button class="relicSlot" type="button" data-slot="1" aria-label="Slot 2"></button>
+          <button class="relicSlot" type="button" data-slot="2" aria-label="Slot 3"></button>
+          <button class="relicSlot" type="button" data-slot="3" aria-label="Slot 4"></button>
+        </div>
+
+        <!-- Hidden selects (state) -->
+        <select class="scRelic" data-slot="0" hidden></select>
+        <select class="scRelic" data-slot="1" hidden></select>
+        <select class="scRelic" data-slot="2" hidden></select>
+        <select class="scRelic" data-slot="3" hidden></select>
+
+        <div id="relicTotals" class="relicTotals"></div>
+      </aside>
+    </section>
+
+    <!-- Relic modal -->
+    <div id="relicModal" class="modal" hidden>
+      <div class="modal__backdrop" data-action="close-relic"></div>
+      <div class="modal__panel" role="dialog" aria-modal="true" aria-labelledby="relicModalTitle">
+        <div class="modal__head">
+          <div id="relicModalTitle" class="modal__title">Relics</div>
+          <button class="btn btn--ghost" type="button" data-action="close-relic">Close</button>
+        </div>
+        <input id="relicSearch" class="input" type="text" placeholder="Search relic..." />
+        <div id="relicGrid" class="relicGrid"></div>
+      </div>
+    </div>
+
+    <!-- Export modal -->
+    <div id="exportModal" class="modal" hidden>
+      <div class="modal__backdrop" data-action="close-export"></div>
+
+      <div class="modal__panel modal__panel--export" role="dialog" aria-modal="true" aria-labelledby="exportModalTitle">
+        <div class="modal__head">
+          <div id="exportModalTitle" class="modal__title">Export Image</div>
+          <button class="btn btn--ghost" type="button" data-action="close-export">Close</button>
+        </div>
+
+        <div class="exportWrap">
+          <div class="exportPreview">
+            <canvas id="exportCanvas" width="663" height="750"></canvas>
+          </div>
+
+          <div class="exportActions">
+            <button id="exportDownloadBtn" class="btn btn--accent" type="button">Download PNG</button>
+          </div>
+
+          <div class="muted exportHint">
+            Tip: si algo sale “vacío”, revisa rutas del template o sprites. Todo debe ser same-origin para no “taint” el canvas.
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script type="module" src="../js/stats_calculator.js"></script>
+</body>
+</html>
