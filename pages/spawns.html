@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Spawns • Miscrits HUB</title>
+
+  <link rel="icon" href="../assets/images/logo.png" sizes="32x32" />
+  <link rel="apple-touch-icon" href="../assets/images/logo.png" />
+
+  <link rel="stylesheet" href="../css/global.css" />
+  <link rel="stylesheet" href="../css/navbar.css" />
+  <link rel="stylesheet" href="../css/spawns.css" />
+
+  <script defer src="../js/navbar.js"></script>
+  <script defer src="../js/spawns.js"></script>
+</head>
+
+<body>
+  <header class="nav">
+    <div class="nav__inner">
+      <a class="nav__brand" href="../index.html" aria-label="Go to home">
+        <img src="../assets/images/logo.png" alt="Miscrits HUB" class="nav__logo" />
+        <span class="nav__brandText">Miscrits HUB</span>
+      </a>
+
+      <button class="nav__toggle" type="button" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav__menu" aria-label="Primary">
+        <a class="nav__link" href="./spawns.html">Spawns</a>
+        <a class="nav__link" href="./miscripedia.html">Miscripedia</a>
+
+        <div class="nav__dropdown" data-dropdown>
+          <button class="nav__link nav__dropBtn" type="button" aria-haspopup="true" aria-expanded="false">
+            PVP <span class="nav__chev" aria-hidden="true">▾</span>
+          </button>
+          <div class="nav__dropMenu" role="menu">
+            <a role="menuitem" class="nav__dropItem" href="./team-builder.html">Team Builder</a>
+            <a role="menuitem" class="nav__dropItem" href="./damage-calculator.html">Damage Calculator</a>
+            <a role="menuitem" class="nav__dropItem" href="./pvp-teams.html">PVP Teams</a>
+          </div>
+        </div>
+
+        <div class="nav__dropdown" data-dropdown>
+          <button class="nav__link nav__dropBtn" type="button" aria-haspopup="true" aria-expanded="false">
+            Tools <span class="nav__chev" aria-hidden="true">▾</span>
+          </button>
+          <div class="nav__dropMenu" role="menu">
+            <a role="menuitem" class="nav__dropItem" href="./stats-calculator.html">Stats Calculator</a>
+            <a role="menuitem" class="nav__dropItem" href="./breeding-calculator.html">Breeding Calculator</a>
+          </div>
+        </div>
+
+        <a class="nav__link" href="./miscritdle.html">Miscritdle</a>
+        <a class="nav__link" href="./patch-notes.html">Patch notes</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap spawns">
+    <section class="spawns__head">
+      <div>
+        <h1 class="spawns__title">Spawns</h1>
+      </div>
+
+      <div class="spawns__actions">
+        <button class="btn" id="btnClear" type="button">Clear filters</button>
+        <button class="btn btn--accent" id="btnFavorites" type="button">Show favorites</button>
+      </div>
+    </section>
+
+    <section class="card filters">
+      <!-- ROW 1 -->
+      <div class="filters__row">
+        <label class="field">
+          <span class="field__label">Search</span>
+          <input class="field__input" id="q" type="search" placeholder="Miscrit name..." autocomplete="off" />
+        </label>
+
+        <label class="field">
+          <span class="field__label">Day</span>
+          <select class="field__input" id="day">
+            <option value="">All days</option>
+            <option value="__today__">Today</option>
+            <option value="Lunes">Monday</option>
+            <option value="Martes">Tuesday</option>
+            <option value="Miércoles">Wednesday</option>
+            <option value="Jueves">Thursday</option>
+            <option value="Viernes">Friday</option>
+            <option value="Sábado">Saturday</option>
+            <option value="Domingo">Sunday</option>
+          </select>
+        </label>
+
+        <label class="field">
+          <span class="field__label">Place</span>
+          <select class="field__input" id="place">
+            <option value="">All places</option>
+          </select>
+        </label>
+
+        <label class="field">
+          <span class="field__label">Zone</span>
+          <select class="field__input" id="zone">
+            <option value="">All zones</option>
+          </select>
+        </label>
+      </div>
+
+      <!-- ROW 2 -->
+      <div class="filters__row">
+        <label class="field">
+          <span class="field__label">Rarity</span>
+          <select class="field__input" id="rarity">
+            <option value="">All rarities</option>
+          </select>
+        </label>
+
+        <label class="field">
+          <span class="field__label">Type</span>
+          <select class="field__input" id="type">
+            <option value="">All types</option>
+          </select>
+        </label>
+
+        <label class="field">
+          <span class="field__label">Sort</span>
+          <select class="field__input" id="sort">
+            <option value="placeRarityName">Place → Rarity → Name</option>
+            <option value="nameAsc">Name (A–Z)</option>
+            <option value="placeAsc">Place (A–Z)</option>
+            <option value="rarityDesc">Rarity (High → Low)</option>
+          </select>
+        </label>
+
+        <label class="field field--check">
+          <span class="field__label">Today only</span>
+          <span class="check">
+            <input id="onlyTodayNoAll" type="checkbox" />
+            <span>Exclude “all days”</span>
+          </span>
+        </label>
+      </div>
+
+      <div class="chips" id="activeChips" aria-label="Active filters"></div>
+    </section>
+
+
+
+    <section class="results">
+      <div class="results__meta">
+        <div class="results__count" id="count">0 results</div>
+        <div class="results__hint">Tip: click a card to open details.</div>
+      </div>
+
+      <div class="grid" id="grid"></div>
+    </section>
+
+    <div class="modal" id="modal" hidden>
+      <div class="modal__backdrop" data-close></div>
+      <div class="modal__panel card" role="dialog" aria-modal="true" aria-labelledby="mTitle">
+        <div class="modal__top">
+          <div>
+            <div class="modal__kicker" id="mKicker">Place</div>
+            <div class="modal__title" id="mTitle">Spawn</div>
+          </div>
+
+          <div class="modal__topActions">
+            <button class="btn" id="mFav" type="button">☆ Favorite</button>
+            <button class="btn" data-close type="button">Close</button>
+          </div>
+        </div>
+
+        <div class="modal__body">
+          <div class="kv">
+            <div class="kv__item">
+              <div class="kv__label">Miscrit</div>
+              <div class="kv__value" id="mMiscrit">—</div>
+            </div>
+
+            <div class="kv__item">
+              <div class="kv__label">Type</div>
+              <div class="kv__value" id="mType">—</div>
+            </div>
+
+            <div class="kv__item">
+              <div class="kv__label">Rarity</div>
+              <div class="kv__value" id="mRarity">—</div>
+            </div>
+
+            <div class="kv__item">
+              <div class="kv__label">Zones</div>
+              <div class="kv__value" id="mZones">—</div>
+            </div>
+
+            <div class="kv__item">
+              <div class="kv__label">Days</div>
+              <div class="kv__value" id="mDays">—</div>
+            </div>
+          </div>
+
+          <!-- ✅ ya no hay botón “Open map”, solo la imagen -->
+          <div class="modal__footer">
+            <div class="modal__map" id="mMapWrap">
+              <img id="mMapImg" alt="Spawn location map" loading="lazy" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="pager" id="pager">
+      <!-- ✅ IDs que espera el JS -->
+      <button class="btn ghost" id="btnPrev" type="button">Previous</button>
+
+      <div class="pager__mid">
+        <span id="pageInfo">Page 1 / 1</span>
+
+        <label class="pager__label">
+          Per page
+          <select id="pageSize">
+            <option value="24">24</option>
+            <option value="36" selected>36</option>
+            <option value="48">48</option>
+            <option value="72">72</option>
+          </select>
+        </label>
+      </div>
+
+      <!-- ✅ IDs que espera el JS -->
+      <button class="btn" id="btnNext" type="button">Next</button>
+    </footer>
+  </main>
+</body>
+</html>

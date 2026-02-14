@@ -3,9 +3,14 @@
   --bg-1:#0b1224;
   --bg-2:#0f1a33;
 
-  --card: rgba(255,255,255,0.06);
-  --card-2: rgba(255,255,255,0.09);
-  --stroke: rgba(255,255,255,0.10);
+  --card: linear-gradient(
+    145deg,
+    rgba(30, 41, 72, 0.65),
+    rgba(17, 24, 39, 0.75)
+  );
+
+  --card-solid: rgba(20, 28, 48, 0.85);
+  --stroke: rgba(96,165,250,0.18);
 
   --text: rgba(255,255,255,0.92);
   --muted: rgba(255,255,255,0.65);
@@ -23,7 +28,11 @@
 
 /* Base */
 *{ box-sizing:border-box; }
-html, body{ height:100%; }
+html, body{
+  width: 100%;
+  overflow-x: hidden;
+}
+
 body{
   margin:0;
   color: var(--text);
@@ -67,9 +76,11 @@ p{ margin: 0 0 12px; color: var(--muted); line-height: 1.6; }
   background: var(--card);
   border: 1px solid var(--stroke);
   border-radius: var(--radius);
-  box-shadow: var(--shadow-soft);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  box-shadow:
+    0 15px 40px rgba(0,0,0,0.45),
+    inset 0 1px 0 rgba(255,255,255,0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
 
 /* Buttons */
