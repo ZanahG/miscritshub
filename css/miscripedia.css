@@ -460,20 +460,18 @@
 .miscritpicker__dropdown{
   z-index: 300;
 }
-/* NAV siempre sobre el contenido */
+
 .siteHeader{
-  position: sticky; /* o fixed si lo usas fijo */
+  position: sticky;
   top: 0;
   z-index: 9999;
 }
 
-/* el contenedor interno también “crea capa” */
 .siteHeader__inner{
   position: relative;
   z-index: 9999;
 }
 
-/* dropdowns del navbar arriba de todo */
 .navDropdown,
 .navMenu,
 .dropdown,
@@ -482,7 +480,6 @@
   z-index: 10000;
 }
 
-/* si tienes overlay/blur en main que lo tapa, esto ayuda */
 main, .main, .page, .wrap{
   position: relative;
   z-index: 1;

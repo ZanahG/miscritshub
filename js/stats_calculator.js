@@ -49,14 +49,13 @@
     presetRedSpeed: byId("presetRedSpeed"),
     presetAllGreen: byId("presetAllGreen"),
     reset: byId("resetBtn"),
-    custom: byId("customBtn"),
+    custom: byId("toggleCustomBtn"),
 
     title: byId("title"),
     subtitle: byId("subtitle"),
     avatar: byId("avatarImg"),
     err: byId("err"),
 
-    // stats outputs
     out: {
       hp: byId("outHp"),
       spd: byId("outSpd"),
@@ -66,7 +65,6 @@
       pd: byId("outPd"),
     },
 
-    // color selects (custom)
     colors: {
       hp: byId("cHp"),
       spd: byId("cSpd"),
@@ -76,13 +74,12 @@
       pd: byId("cPd"),
     },
 
-    // stats card root (para esconder selects)
     statsCard: $(".scStatsCard"),
 
     bonus: {
       title: byId("bonusTitle"),
       regen: byId("regenBonusBtn"),
-      applyBtn: byId("applyBonusBtn"),
+      applyBtn: byId("applyBonusBtn_dup"),
       applyBtnDup: byId("applyBonusBtn_dup"),
       inputs: {
         hp: byId("bHp"),
@@ -140,13 +137,13 @@
     // Miscrit (centro)
     avatar: { cx: 0.53, cy: 0.40, maxW: 0.5, maxH: 0.5, dx: 0, dy: 0 },
 
-    // Reliquias (columna izquierda, 4)
+    // Reliquias
     relics: { x: 0.1, y0: 0.11, gapY: 0.145, size: 0.115, dx: 0, dy: 0 },
 
     // Texto BONUS
     bonusTitle: { x: 0.45, y: 0.74, size: 36, textColor: "rgba(177, 253, 0, 0.99)", dx: 0, dy: 0 },
 
-    // Bonus izquierdo (HP/SPD por defecto)
+    // Bonus izquierdo
     bonusBlock: {
       col1IconX: 0.30,
       col1TextX: 0.35,
@@ -221,7 +218,7 @@
     const c = normalize(color);
     if (c === "red") return 1;
     if (c === "white") return 2;
-    return 3; // green
+    return 3;
   }
 
   function getSelectedColors() {
@@ -235,7 +232,6 @@
     };
   }
 
-  // Tu misma fórmula
   function statAtLevel(baseStat15, level, color, isHp) {
     const C = colorFactor(color);
     const L = level;
@@ -297,7 +293,6 @@
   }
 
   function syncChips() {
-    // bonus
     const bonusText = applyBonus ? "BONUS: ON" : "BONUS: OFF";
     if (ui.bonus.applyBtn) {
       ui.bonus.applyBtn.textContent = bonusText;
@@ -306,7 +301,6 @@
     }
     if (ui.bonus.applyBtnDup) ui.bonus.applyBtnDup.textContent = bonusText;
 
-    // relics
     const relicText = applyRelics ? "RELICS: ON" : "RELICS: OFF";
     if (ui.applyRelicsBtn) {
       ui.applyRelicsBtn.textContent = relicText;
@@ -338,45 +332,48 @@
   }
 
   function setPresetButtonsUI() {
-    // si tu CSS usa .presetBtn .is-green .is-red, esto los pinta
     const splus = ui.presetAllGreen;
     const rs = ui.presetRedSpeed;
 
-    // limpia
     [splus, rs].forEach((b) => {
       if (!b) return;
-      b.classList.remove("presetBtn", "is-green", "is-red", "is-active");
+      b.classList.remove("is-green", "is-red", "is-active");
       b.setAttribute("aria-pressed", "false");
       b.disabled = false;
     });
 
-    // si no hay customBtn, igual no pasa nada
-    if (colorMode === "splus" && splus) {
-      splus.classList.add("presetBtn", "is-green", "is-active");
-      splus.setAttribute("aria-pressed", "true");
-    }
-    if (colorMode === "rs" && rs) {
-      rs.classList.add("presetBtn", "is-red", "is-active");
-      rs.setAttribute("aria-pressed", "true");
-    }
-
-    // Custom activa: desactiva presets (lo pediste)
     if (colorMode === "custom") {
       if (splus) splus.disabled = true;
       if (rs) rs.disabled = true;
+      return;
+    }
+
+    if (colorMode === "splus" && splus) {
+      splus.classList.add("is-green", "is-active");
+      splus.setAttribute("aria-pressed", "true");
+    }
+
+    if (colorMode === "rs" && rs) {
+      rs.classList.add("is-red", "is-active");
+      rs.setAttribute("aria-pressed", "true");
     }
   }
 
+
   function setCustomVisibility() {
-    // Oculta selects salvo custom
-    // Solución simple: disable + visibility
     const show = colorMode === "custom";
+
+    document.body.classList.toggle("scCustomOn", show);
+
     Object.values(ui.colors).forEach((sel) => {
       if (!sel) return;
       sel.disabled = !show;
-      sel.style.visibility = show ? "visible" : "hidden";
-      sel.style.pointerEvents = show ? "auto" : "none";
     });
+
+    if (ui.custom) {
+      ui.custom.classList.toggle("is-active", show);
+      ui.custom.setAttribute("aria-pressed", String(show));
+    }
   }
 
   function applyMode(mode) {
@@ -393,7 +390,6 @@
         setRowColorFromSelect(ui.colors.spd);
       }
     } else if (mode === "custom") {
-      // no forzar colors: deja lo que ya haya
     }
 
     setPresetButtonsUI();
@@ -557,7 +553,7 @@
     btn.style.backgroundImage = `url("${img}")`;
     btn.style.backgroundRepeat = "no-repeat";
     btn.style.backgroundPosition = "center";
-    btn.style.backgroundSize = "70% 70%"; // fija para evitar “multiplicar”
+    btn.style.backgroundSize = "70% 70%";
     btn.title = name ? `${name} (lvl ${getSlotLevel(slot)})` : `Empty (lvl ${getSlotLevel(slot)})`;
     btn.setAttribute("aria-label", btn.title);
   }
@@ -594,7 +590,6 @@
         .filter((r) => !qq || normalize(r.name).includes(qq))
         .sort((a, b) => a.name.localeCompare(b.name, "en", { sensitivity: "base" }));
 
-      // Empty
       const empty = document.createElement("div");
       empty.className = "relicItem";
       empty.innerHTML = `
@@ -738,13 +733,11 @@
       pd: statAtLevel(t.pd, level, c.pd, false),
     };
 
-    // Bonus manual
     const manualBonus = sumInputs(ui.bonus.inputs);
     if (applyBonus) {
       for (const k of BONUS_KEYS) s[k] += manualBonus[k];
     }
 
-    // Relics
     const relicAdd = sumRelicsStats();
     renderRelicTotalsUI(relicAdd);
     if (applyRelics) {
@@ -769,14 +762,13 @@
     setAvatar(selected.name);
     syncColorRowsFromSelects();
 
-    // cache para export
     LAST_RENDER = {
       name: selected.name,
       level,
       stats: { ...s },
       colors: { ...c },
-      bonusManual: { ...manualBonus },
-      relics: getSelectedRelicsForExport(), // 4 slots
+      bonusManual: applyBonus ? { ...manualBonus } : { hp:0, spd:0, ea:0, pa:0, ed:0, pd:0 },
+      relics: getSelectedRelicsForExport(),
     };
   }
 
@@ -884,7 +876,6 @@
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
 
-    // base template decide canvas size
     const tpl = await loadImage(EXPORT_TEMPLATE_URL);
 
     canvas.width = tpl.naturalWidth || tpl.width || 700;
@@ -894,11 +885,8 @@
     const H = canvas.height;
 
     ctx.clearRect(0, 0, W, H);
-
-    // 1) draw template
     ctx.drawImage(tpl, 0, 0, W, H);
 
-    // 2) title
     const LTitle = EXPORT_LAYOUT.title;
     drawText(
       ctx,
@@ -908,7 +896,6 @@
       { size: LTitle.size, weight: 800, align: "center", baseline: "middle", color: "rgb(255, 255, 255)", shadow: false }
     );
 
-    // 3) avatar
     const avatarImg = await loadImage(avatarSrcFromName(LAST_RENDER.name)).catch(async () => loadImage(AVATAR_FALLBACK));
     const A = EXPORT_LAYOUT.avatar;
 
@@ -917,7 +904,6 @@
     const avX = W * A.cx - avMaxW / 2 + (A.dx || 0);
     const avY = H * A.cy - avMaxH / 2 + (A.dy || 0);
 
-    // soft shadow behind avatar
     ctx.save();
     ctx.shadowColor = "rgba(0,0,0,0.28)";
     ctx.shadowBlur = 16;
@@ -926,7 +912,6 @@
     drawImageContain(ctx, avatarImg, avX, avY, avMaxW, avMaxH);
     ctx.restore();
 
-    // 4) relics (4)
     const R = EXPORT_LAYOUT.relics;
     for (let i = 0; i < 4; i++) {
       const rr = LAST_RENDER.relics[i];
@@ -937,7 +922,6 @@
       const x = W * R.x - size / 2 + (R.dx || 0);
       const y = H * (R.y0 + i * R.gapY) - size / 2 + (R.dy || 0);
 
-      // draw circle-ish via clipping (optional)
       ctx.save();
       ctx.beginPath();
       ctx.arc(x + size / 2, y + size / 2, size / 2, 0, Math.PI * 2);
@@ -947,7 +931,6 @@
       ctx.restore();
     }
 
-    // 5) BONUS title
     const BT = EXPORT_LAYOUT.bonusTitle;
     drawText(
       ctx,
@@ -1059,7 +1042,6 @@
       const [k, val] = statsToShow[i];
       const y = H * (SR.y0 + i * SR.gapY) + (SR.dy || 0);
 
-      // icon
       const icon = await loadImage(STAT_ICON[k]).catch(() => null);
       if (icon) {
         const is = SR.iconSize;
@@ -1068,7 +1050,6 @@
       }
       const userColor = LAST_RENDER.colors[k] || "white";
       const textColor = EXPORT_STAT_COLOR[userColor] || "#ffffff";
-      // value
       drawText(
         ctx,
         String(val ?? 0),
@@ -1129,7 +1110,6 @@
     INIT + EVENTS
   ========================================================= */
   function bindEvents() {
-    // colors (custom only; igual escucha cambios)
     Object.values(ui.colors).forEach((sel) => {
       if (!sel) return;
       setRowColorFromSelect(sel);
@@ -1139,14 +1119,9 @@
       });
     });
 
-    // Presets
     ui.presetAllGreen?.addEventListener("click", () => applyMode("splus"));
     ui.presetRedSpeed?.addEventListener("click", () => applyMode("rs"));
-
-    // Reset -> none (todo blanco)
     ui.reset?.addEventListener("click", () => applyMode("none"));
-
-    // Custom -> activa selects y desactiva S+/RS
     ui.custom?.addEventListener("click", () => applyMode("custom"));
 
     ui.level?.addEventListener("input", () => {
@@ -1154,7 +1129,6 @@
       render();
     });
 
-    // bonus toggle (2 botones controlan el mismo estado)
     const toggleBonus = () => {
       applyBonus = !applyBonus;
       render();
@@ -1170,13 +1144,11 @@
 
     Object.values(ui.bonus.inputs).forEach((inp) => inp?.addEventListener("input", render));
 
-    // relics toggle
     ui.applyRelicsBtn?.addEventListener("click", () => {
       applyRelics = !applyRelics;
       render();
     });
 
-    // relic modal open
     document.addEventListener("click", (e) => {
       const btn = e.target.closest(".relicSlot");
       if (!btn) return;
@@ -1184,7 +1156,6 @@
       openRelicModalForStats(slot);
     });
 
-    // relic modal close
     document.addEventListener("click", (e) => {
       if (e.target.closest('[data-action="close-relic"]')) closeRelicModal();
     });
@@ -1193,7 +1164,6 @@
       if (e.key === "Escape") closeRelicModal();
     });
 
-    // hidden selects change => refresh slots
     $$(".scRelic").forEach((sel) => {
       sel.addEventListener("change", () => {
         refreshAllScRelicSlots();
@@ -1201,25 +1171,21 @@
       });
     });
 
-    // EXPORT: open/close/download
     ui.export?.openBtn?.addEventListener("click", openExportModal);
     document.addEventListener("click", (e) => {
       if (e.target.closest('[data-action="close-export"]')) closeExportModal();
     });
     ui.export?.downloadBtn?.addEventListener("click", downloadExport);
 
-    // EXPORT: teclado para mover pixel a pixel
     document.addEventListener("keydown", async (e) => {
       if (!ui.export?.modal || ui.export.modal.hidden) return;
 
-      // toggle modo tweak
       if (e.key.toLowerCase() === "e") {
         EXPORT_TWEAK_MODE = !EXPORT_TWEAK_MODE;
         console.log("EXPORT_TWEAK_MODE:", EXPORT_TWEAK_MODE ? "ON" : "OFF");
         return;
       }
 
-      // seleccionar qué mover
       if (EXPORT_TWEAK_MODE && /^[1-6]$/.test(e.key)) {
         EXPORT_ACTIVE_KEY = EXPORT_KEYS[Number(e.key) - 1];
         console.log("Active:", EXPORT_ACTIVE_KEY);
@@ -1250,12 +1216,10 @@
     try {
       setError("");
 
-      // default mode: none (todo white) y selects ocultos
       applyMode("none");
 
       bindEvents();
 
-      // Load base stats
       const res = await fetch(DATA_URL, { cache: "no-store" });
       if (!res.ok) throw new Error(`No pude cargar ${DATA_URL} (HTTP ${res.status}).`);
       const data = await res.json();
@@ -1268,7 +1232,6 @@
 
       if (!MISCRITS.length) throw new Error("No hay miscrits válidos en base_stats.json");
 
-      // Load relics (opcional)
       try {
         const relicRes = await fetch(RELICS_URL, { cache: "no-store" });
         if (!relicRes.ok) throw new Error(`No pude cargar ${RELICS_URL} (HTTP ${relicRes.status}).`);
@@ -1281,15 +1244,12 @@
         console.warn("Relics load failed:", e);
       }
 
-      // picker
       bindPicker();
 
-      // default selected
       selected = MISCRITS.find((m) => normalize(m.name) === "flue") || MISCRITS[0];
       if (ui.guess) ui.guess.value = selected.name;
       setAvatar(selected.name);
 
-      // default bonus random
       const lvl = clampInt(ui.level?.value, 1, 35);
       if (ui.bonus.inputs.hp) writeInputs(ui.bonus.inputs, randomDistribution(totalBonusPoints(lvl)));
 
