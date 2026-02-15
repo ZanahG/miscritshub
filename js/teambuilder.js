@@ -9,7 +9,7 @@ const PATH = {
   RELICS: "../assets/data/relics.json",
 
   AVATAR_FOLDER: "../assets/images/miscrits_avatar/",
-  AVATAR_FALLBACK: "../assets/images/relics/cruz.png",
+  AVATAR_FALLBACK: "../assets/images/relics/CRUZ.png",
 
   RELIC_ICON_FOLDER: "../assets/images/relics/",
   STAT_ICON_DIR: "../assets/images/icons/",
