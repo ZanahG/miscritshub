@@ -379,3 +379,88 @@
   position: relative;
   z-index: 2;
 }
+.latestPatchCard{ padding: 16px; }
+
+.latestPatchTop{
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap:14px;
+}
+
+.latestPatchKicker{
+  font-weight:900;
+  opacity:.75;
+  letter-spacing:.3px;
+  font-size:12px;
+  text-transform: uppercase;
+}
+
+.latestPatchTitle{
+  font-size:18px;
+  font-weight:900;
+  margin-top:6px;
+}
+
+.latestPatchDesc{
+  margin-top:6px;
+  opacity:.75;
+  font-size:13px;
+  max-width: 70ch;
+}
+
+.latestMiscrits{
+  margin-top:14px;
+  display:grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.latestMiscrit{
+  text-decoration:none;
+  color: inherit;
+  border: 1px solid rgba(255,255,255,0.10);
+  background: rgba(255,255,255,0.04);
+  border-radius: 16px;
+  padding: 10px;
+  transition: transform .12s ease, border-color .12s ease, background .12s ease;
+}
+
+.latestMiscrit:hover{
+  transform: translateY(-2px);
+  border-color: rgba(96,165,250,0.35);
+  background: rgba(255,255,255,0.06);
+}
+
+.latestMiscrit img{
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  object-fit: cover;
+  box-shadow: 0 10px 22px rgba(0,0,0,.35);
+}
+
+.latestMiscritName{
+  margin-top:8px;
+  font-weight:900;
+}
+
+.latestMiscritQuote{
+  margin-top:6px;
+  font-size:12px;
+  opacity:.72;
+  line-height: 1.35;
+}
+
+.latestEmpty{
+  margin-top:12px;
+  opacity:.7;
+  font-size:13px;
+}
+
+@media (max-width: 980px){
+  .latestMiscrits{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 520px){
+  .latestMiscrits{ grid-template-columns: 1fr; }
+}

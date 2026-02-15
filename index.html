@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="./css/home.css" />
 
   <script defer src="./js/navbar.js"></script>
+  <script defer src="./js/home.js"></script>
 </head>
 
 <body>
@@ -76,12 +77,6 @@
       </div>
 
       <div class="hero__panel">
-        <div class="stat card">
-          <div class="stat__label">Quick start</div>
-          <div class="stat__value">Arena Toolkit</div>
-          <div class="stat__hint">Team Builder, Damage Calc, and curated teams.</div>
-        </div>
-
         <!-- Team Builder Preview -->
         <a class="teamPreview card" href="./pages/team_builder.html" aria-label="Open Team Builder">
           <div class="teamPreview__top">
@@ -124,43 +119,9 @@
 
     </section>
 
-    <!-- QUICK LINKS -->
     <section class="section">
-      <div class="section__head">
-        <h2 class="section__title">Accesos rápidos</h2>
-        <p class="section__desc">Entra directo a lo que usas más sin buscar.</p>
-      </div>
-
-      <div class="cards">
-        <a class="tile card" href="./pages/spawns.html">
-          <div class="tile__title">Spawns</div>
-          <div class="tile__desc">Encuentra miscrits y rutas.</div>
-        </a>
-
-        <a class="tile card" href="./pages/miscripedia.html">
-          <div class="tile__title">Miscripedia</div>
-          <div class="tile__desc">Base de datos, elementos, rarezas.</div>
-        </a>
-
-        <a class="tile card" href="./pages/team_builder.html">
-          <div class="tile__title">Team Builder</div>
-          <div class="tile__desc">Arma comps y exporta.</div>
-        </a>
-
-        <a class="tile card" href="./pages/damage_calculator.html">
-          <div class="tile__title">Damage Calculator</div>
-          <div class="tile__desc">Matchups, moves, cálculo rápido.</div>
-        </a>
-
-        <a class="tile card" href="./pages/miscritdle.html">
-          <div class="tile__title">Miscritdle</div>
-          <div class="tile__desc">Daily game para la comunidad.</div>
-        </a>
-
-        <a class="tile card" href="./pages/patch_list.html">
-          <div class="tile__title">Patch notes</div>
-          <div class="tile__desc">Cambios por versión.</div>
-        </a>
+      <div id="latestPatch" class="card" style="padding:16px;">
+        <div style="opacity:.75;">Loading…</div>
       </div>
     </section>
   </main>

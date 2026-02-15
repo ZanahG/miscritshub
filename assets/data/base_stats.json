@@ -4653,6 +4653,62 @@
         "ed": 3,
         "pd": 5
       }
+    },
+    {
+      "id": "332",
+      "name": "Blug",
+      "type": "Fire",
+      "rarity": "Common",
+      "baseStats": {
+        "hp": 3,
+        "spd": 2,
+        "ea": 1,
+        "pa": 4,
+        "ed": 3,
+        "pd": 2
+      }
+    },
+    {
+      "id": "333",
+      "name": "Dark Humbug",
+      "type": "Nature",
+      "rarity": "Rare",
+      "baseStats": {
+        "hp": 2,
+        "spd": 4,
+        "ea": 5,
+        "pa": 1,
+        "ed": 2,
+        "pd": 2
+      }
+    },
+    {
+      "id": "334",
+      "name": "Kawanko",
+      "type": "Water",
+      "rarity": "Epic",
+      "baseStats": {
+        "hp": 2,
+        "spd": 1,
+        "ea": 4,
+        "pa": 4,
+        "ed": 3,
+        "pd": 3
+      }
+    },
+    {
+      "id": "335",
+      "name": "Casanova",
+      "type": "Fire",
+      "rarity": "Exotic",
+      "baseStats": {
+        "hp": 4,
+        "spd": 2,
+        "ea": 4,
+        "pa": 1,
+        "ed": 3,
+        "pd": 4
+      }
     }
   ]
 }
