@@ -199,7 +199,7 @@
       "type": "Water",
       "rarity": "Rare",
       "spawns": [
-        {"place": "Forest","zone": ["Forest 1"],"view": "object","objectImage": "../assets/images/spawns/Waddles.png","days": "LUN_JUE_DOM"}
+        {"place": "Forest","zone": ["Forest 1"],"view": "object","objectImage": "../assets/images/spawns/Waddles.png","days": ["LUNES", "JUEVES", "DOMINGO"]}
       ],
       "avatar": "waddles_avatar.png"
     },
@@ -209,7 +209,7 @@
       "type": "Nature",
       "rarity": "Rare",
       "spawns": [
-        {"place": "Forest","zone": ["Forest 1"],"view": "object","objectImage": "../assets/images/spawns/DeadTree.png","days": "LUN_JUE_DOM"}
+        {"place": "Forest","zone": ["Forest 1"],"view": "object","objectImage": "../assets/images/spawns/DeadTree.png","days": ["LUNES", "JUEVES", "DOMINGO"]}
       ],
       "avatar": "treemur_avatar.png"
     },
@@ -219,7 +219,7 @@
       "type": "Nature",
       "rarity": "Rare",
       "spawns": [
-        {"place": "Forest","zone": ["Forest 3"],"view": "object","objectImage": "../assets/images/spawns/Tulipinny.png","days": "MIE_SAB_DOM"}
+        {"place": "Forest","zone": ["Forest 3"],"view": "object","objectImage": "../assets/images/spawns/Tulipinny.png","days": ["Miercoles", "Sabado", "Domingo"]}
       ],
       "avatar": "tulipinny_avatar.png"
     },
@@ -229,7 +229,7 @@
       "type": "Fire",
       "rarity": "Rare",
       "spawns": [
-        {"place": "Forest","zone": ["Forest 2"],"view": "object","objectImage": "../assets/images/spawns/PalmTree2.png","days": "MAR_VIE_DOM"}
+        {"place": "Forest","zone": ["Forest 2"],"view": "object","objectImage": "../assets/images/spawns/PalmTree2.png","days": ["Martes", "Viernes", "Domingo"]}
       ],
       "avatar": "dark_flue_avatar.png"
     },
@@ -259,7 +259,7 @@
       "type": "Fire",
       "rarity": "Rare",
       "spawns": [
-        {"place": "Forest","zone": ["Forest 4"],"view": "object","objectImage": "../assets/images/spawns/HugeTree.png","days": "LUN_JUE_DOM"}
+        {"place": "Forest","zone": ["Forest 4"],"view": "object","objectImage": "../assets/images/spawns/HugeTree.png","days": ["Lunes", "Jueves", "Domingo"]}
       ],
       "avatar": "blazebit_avatar.png"
     },
@@ -340,7 +340,7 @@
       "rarity": "Common",
       "avatar": "breezycheeks_avatar.png",
       "spawns": [
-        {"place": "Mount Gemma","zone": ["Cualquier Objeto en el Area 1 del MT Gemma"],"view": "object","objectImage": "../assets/images/spawns/mount_gemma.jpg","days": "ALL_DAYS"}
+        {"place": "Mount Gemma","zone": ["Any Object 1st Area in MT Gemma"],"view": "object","objectImage": "../assets/images/spawns/mount_gemma.jpg","days": "ALL_DAYS"}
       ]
     },
     {
@@ -350,7 +350,7 @@
       "rarity": "Common",
       "avatar": "mumbah_avatar.png",
       "spawns": [
-        {"place": "Mount Gemma","zone": ["Cualquier Objeto en el Area 1 del MT Gemma"],"view": "object","objectImage": "../assets/images/spawns/mount_gemma.jpg","days": "ALL_DAYS"}
+        {"place": "Mount Gemma","zone": ["Any Object 1st Area in MT Gemma"],"view": "object","objectImage": "../assets/images/spawns/mount_gemma.jpg","days": "ALL_DAYS"}
       ]
     },
     {
@@ -360,7 +360,7 @@
       "rarity": "Common",
       "avatar": "aria_avatar.png",
       "spawns": [
-        {"place": "Mount Gemma","zone": ["Cualquier Objeto en el Area 2 del MT Gemma"],"view": "object","objectImage": "../assets/images/spawns/mount_gemma.jpg","days": "ALL_DAYS"}
+        {"place": "Mount Gemma","zone": ["Any Object 2nd Area in MT Gemma"],"view": "object","objectImage": "../assets/images/spawns/mount_gemma.jpg","days": "ALL_DAYS"}
       ]
     },
     {
@@ -370,7 +370,7 @@
       "rarity": "Common",
       "avatar": "jellyshock_avatar.png",
       "spawns": [
-        {"place": "Mount Gemma","zone": ["Cualquier Objeto en el Area 2 del MT Gemma"],"view": "object","objectImage": "../assets/images/spawns/mount_gemma.jpg","days": "ALL_DAYS"}
+        {"place": "Mount Gemma","zone": ["Any Object 2nd Area in MT Gemma"],"view": "object","objectImage": "../assets/images/spawns/mount_gemma.jpg","days": "ALL_DAYS"}
       ]
     },
     {
@@ -380,7 +380,7 @@
       "rarity": "Common",
       "avatar": "croaky_avatar.png",
       "spawns": [
-        {"place": "Mount Gemma","zone": ["Cualquier Objeto en el Area 2 del MT Gemma"],"view": "object","objectImage": "../assets/images/spawns/mount_gemma.jpg","days": "ALL_DAYS"}
+        {"place": "Mount Gemma","zone": ["Any Object 2nd Area in MT Gemma"],"view": "object","objectImage": "../assets/images/spawns/mount_gemma.jpg","days": "ALL_DAYS"}
       ]
     },
     {
@@ -390,7 +390,7 @@
       "rarity": "Common",
       "avatar": "sparkslug_avatar.png",
       "spawns": [
-        {"place": "Mount Gemma","zone": ["Cualquier Objeto en el Area 3 del MT Gemma"],"view": "object","objectImage": "../assets/images/spawns/mount_gemma.jpg","days": "ALL_DAYS"}
+        {"place": "Mount Gemma","zone": ["Any Object 3rd Area in MT Gemma"],"view": "object","objectImage": "../assets/images/spawns/mount_gemma.jpg","days": "ALL_DAYS"}
       ]
     },
     {
@@ -400,7 +400,7 @@
       "rarity": "Common",
       "avatar": "craggy_avatar.png",
       "spawns": [
-        {"place": "Mount Gemma","zone": ["Cualquier Objeto en el Area 3 del MT Gemma"],"view": "object","objectImage": "../assets/images/spawns/mount_gemma.jpg","days": "ALL_DAYS"}
+        {"place": "Mount Gemma","zone": ["Any Object 3rd Area in MT Gemma"],"view": "object","objectImage": "../assets/images/spawns/mount_gemma.jpg","days": "ALL_DAYS"}
       ]
     },
     {
@@ -410,7 +410,7 @@
       "rarity": "Common",
       "avatar": "owlie_avatar.png",
       "spawns": [
-        {"place": "Mount Gemma","zone": ["Cualquier Objeto en el Area 3 del MT Gemma"],"view": "object","objectImage": "../assets/images/spawns/mount_gemma.jpg","days": "ALL_DAYS"}
+        {"place": "Mount Gemma","zone": ["Any Object 3rd Area in MT Gemma"],"view": "object","objectImage": "../assets/images/spawns/mount_gemma.jpg","days": "ALL_DAYS"}
       ]
     },
     {
@@ -430,7 +430,7 @@
       "rarity": "Rare",
       "avatar": "poltergust_avatar.png",
       "spawns": [
-        {"place": "Mount Gemma","zone": ["Cualquier Objeto en el Area 1 del MT Gemma"],"view": "object","objectImage": "../assets/images/spawns/mount_gemma.jpg","days": ["Martes", "Viernes"]}
+        {"place": "Mount Gemma","zone": ["Any Object 1st Area in MT Gemma"],"view": "object","objectImage": "../assets/images/spawns/mount_gemma.jpg","days": ["Martes", "Viernes"]}
       ]
     },
     {
@@ -480,7 +480,7 @@
       "rarity": "Epic",
       "avatar": "microblast_avatar.png",
       "spawns": [
-        {"place": "Cave","zone": ["Zona 1 de la Cueva"],"view": "object","objectImage": "../assets/images/spawns/CaveChest.png","days": "ALL_DAYS"}
+        {"place": "Cave","zone": ["Cave 1"],"view": "object","objectImage": "../assets/images/spawns/CaveChest.png","days": "ALL_DAYS"}
       ]
     },
     {
@@ -490,7 +490,7 @@
       "rarity": "Epic",
       "avatar": "sledgehog_avatar.png",
       "spawns": [
-        {"place": "Cave","zone": ["Zona 1 de la Cueva"],"view": "object","objectImage": "../assets/images/spawns/MineCart.png","days": "ALL_DAYS"}
+        {"place": "Cave","zone": ["Cave 1"],"view": "object","objectImage": "../assets/images/spawns/MineCart.png","days": "ALL_DAYS"}
       ]
     },
     {
@@ -500,7 +500,7 @@
       "rarity": "Epic",
       "avatar": "sapphron_avatar.png",
       "spawns": [
-        {"place": "Cave","zone": ["Zona 4 de la Cueva"],"view": "object","objectImage": "../assets/images/spawns/Trolley.png","days": "ALL_DAYS"}
+        {"place": "Cave","zone": ["Cave 4"],"view": "object","objectImage": "../assets/images/spawns/Trolley.png","days": "ALL_DAYS"}
       ]
     },
     {
@@ -510,7 +510,7 @@
       "rarity": "Common",
       "avatar": "sparkspeck_avatar.png",
       "spawns": [
-        {"place": "Shores","zone": ["Cualquier Objeto Zona 1 de la Playa"],"view": "object","objectImage": "../assets/images/spawns/beach.jpg","days": "ALL_DAYS"}
+        {"place": "Shores","zone": ["Any Object in 1st Area in Shores"],"view": "object","objectImage": "../assets/images/spawns/beach.jpg","days": "ALL_DAYS"}
       ]
     },
     {
@@ -520,7 +520,7 @@
       "rarity": "Common",
       "avatar": "grubbean_avatar.png",
       "spawns": [
-        {"place": "Shores","zone": ["Cualquier Objeto Zona 1 de la Playa"],"view": "object","objectImage": "../assets/images/spawns/beach.jpg","days": "ALL_DAYS"}
+        {"place": "Shores","zone": ["Any Object in 1st Area in Shores"],"view": "object","objectImage": "../assets/images/spawns/beach.jpg","days": "ALL_DAYS"}
       ]
     },
     {
@@ -530,7 +530,7 @@
       "rarity": "Common",
       "avatar": "echino_avatar.png",
       "spawns": [
-        {"place": "Shores","zone": ["Cualquier Objeto Zona 2 de la Playa"],"view": "object","objectImage": "../assets/images/spawns/beach.jpg","days": "ALL_DAYS"}
+        {"place": "Shores","zone": ["Any Object in 2nd Area in Shores"],"view": "object","objectImage": "../assets/images/spawns/beach.jpg","days": "ALL_DAYS"}
       ]
     },
     {
@@ -540,7 +540,7 @@
       "rarity": "Common",
       "avatar": "wavesling_avatar.png",
       "spawns": [
-        {"place": "Shores","zone": ["Cualquier Objeto Zona 2 de la Playa"],"view": "object","objectImage": "../assets/images/spawns/beach.jpg","days": "ALL_DAYS"}
+        {"place": "Shores","zone": ["Any Object in 2nd Area in Shores"],"view": "object","objectImage": "../assets/images/spawns/beach.jpg","days": "ALL_DAYS"}
       ]
     },
     {
@@ -550,7 +550,7 @@
       "rarity": "Common",
       "avatar": "sparkitten_avatar.png",
       "spawns": [
-        {"place": "Shores","zone": ["Cualquier Objeto Zona 2 de la Playa"],"view": "object","objectImage": "../assets/images/spawns/beach.jpg","days": "ALL_DAYS"}
+        {"place": "Shores","zone": ["Any Object in 2nd Area in Shores"],"view": "object","objectImage": "../assets/images/spawns/beach.jpg","days": "ALL_DAYS"}
       ]
     },
     {
@@ -560,7 +560,7 @@
       "rarity": "Common",
       "avatar": "arigato_avatar.png",
       "spawns": [
-        {"place": "Shores","zone": ["Cualquier Objeto Zona 2 de la Playa"],"view": "object","objectImage": "../assets/images/spawns/beach.jpg","days": "ALL_DAYS"}
+        {"place": "Shores","zone": ["Any Object in 2nd Area in Shores"],"view": "object","objectImage": "../assets/images/spawns/beach.jpg","days": "ALL_DAYS"}
       ]
     },
     {
@@ -570,7 +570,7 @@
       "rarity": "Common",
       "avatar": "jack_avatar.png",
       "spawns": [
-        {"place": "Shores","zone": ["Cualquier Objeto Zona 1 de la Playa"],"view": "object","objectImage": "../assets/images/spawns/beach.jpg","days": "ALL_DAYS"}
+        {"place": "Shores","zone": ["Any Object in 1st Area in Shores"],"view": "object","objectImage": "../assets/images/spawns/beach.jpg","days": "ALL_DAYS"}
       ]
     },
     {
@@ -580,7 +580,7 @@
       "rarity": "Common",
       "avatar": "quebble_avatar.png",
       "spawns": [
-        {"place": "Shores","zone": ["Cualquier Objeto Zona 4 de la Playa"],"view": "object","objectImage": "../assets/images/spawns/beach.jpg","days": "ALL_DAYS"}
+        {"place": "Shores","zone": ["Any Object in 4th Area in Shores"],"view": "object","objectImage": "../assets/images/spawns/beach.jpg","days": "ALL_DAYS"}
       ]
     },
     {
@@ -590,7 +590,7 @@
       "rarity": "Common",
       "avatar": "digsy_avatar.png",
       "spawns": [
-        {"place": "Shores","zone": ["Cualquier Objeto Zona 1 de la Playa"],"view": "object","objectImage": "../assets/images/spawns/beach.jpg","days": "ALL_DAYS"}
+        {"place": "Shores","zone": ["Any Object in 1st Area in Shores"],"view": "object","objectImage": "../assets/images/spawns/beach.jpg","days": "ALL_DAYS"}
       ]
     },
     {
@@ -600,7 +600,7 @@
       "rarity": "Common",
       "avatar": "hippoke_avatar.png",
       "spawns": [
-        {"place": "Shores","zone": ["Cualquier Objeto Zona 2 de la Playa"],"view": "object","objectImage": "../assets/images/spawns/beach.jpg","days": "ALL_DAYS"}
+        {"place": "Shores","zone": ["Any Object in 2nd Area in Shores"],"view": "object","objectImage": "../assets/images/spawns/beach.jpg","days": "ALL_DAYS"}
       ]
     },
     {
@@ -610,7 +610,7 @@
       "rarity": "Common",
       "avatar": "leggy_avatar.png",
       "spawns": [
-        {"place": "Shores","zone": ["Cualquier Objeto Zona 4 de la Playa"],"view": "object","objectImage": "../assets/images/spawns/beach.jpg","days": "ALL_DAYS"}
+        {"place": "Shores","zone": ["Any Object in 4th Area in Shores"],"view": "object","objectImage": "../assets/images/spawns/beach.jpg","days": "ALL_DAYS"}
       ]
     },
     {
@@ -620,7 +620,7 @@
       "rarity": "Common",
       "avatar": "orcatide_avatar.png",
       "spawns": [
-        {"place": "Shores","zone": ["Cualquier Objeto Zona 4 de la Playa"],"view": "object","objectImage": "../assets/images/spawns/beach.jpg","days": "ALL_DAYS"}
+        {"place": "Shores","zone": ["Any Object in 4th Area in Shores"],"view": "object","objectImage": "../assets/images/spawns/beach.jpg","days": "ALL_DAYS"}
       ]
     },
     {
@@ -640,7 +640,7 @@
       "rarity": "Rare",
       "avatar": "snorkels_avatar.png",
       "spawns": [
-        {"place": "Shores","zone": ["Playa Zona 3"],"view": "object","objectImage": "../assets/images/spawns/ShoresChest.png","days": ["Miercoles", "Sabado", "Domingo"]}
+        {"place": "Shores","zone": ["Shores 3"],"view": "object","objectImage": "../assets/images/spawns/ShoresChest.png","days": ["Miercoles", "Sabado", "Domingo"]}
       ]
     },
     {
@@ -650,7 +650,7 @@
       "rarity": "Rare",
       "avatar": "kelpa_avatar.png",
       "spawns": [
-        {"place": "Shores","zone": ["Playa Zona 1"],"view": "object","objectImage": "../assets/images/spawns/SandCastle.png","days": ["Martes", "Viernes", "Domingo"]}
+        {"place": "Shores","zone": ["Shores 1"],"view": "object","objectImage": "../assets/images/spawns/SandCastle.png","days": ["Martes", "Viernes", "Domingo"]}
       ]
     },
     {
@@ -660,7 +660,7 @@
       "rarity": "Rare",
       "avatar": "ignios_avatar.png",
       "spawns": [
-        {"place": "Shores","zone": ["Playa Zona 2"],"view": "object","objectImage": "../assets/images/spawns/Eggs.png","days": ["Miercoles", "Sabado", "Domingo"]}
+        {"place": "Shores","zone": ["Shores 2"],"view": "object","objectImage": "../assets/images/spawns/Eggs.png","days": ["Miercoles", "Sabado", "Domingo"]}
       ]
     },
     {
@@ -670,7 +670,7 @@
       "rarity": "Epic",
       "avatar": "beelzebug_avatar.png",
       "spawns": [
-        {"place": "Moon of Miscria","zone": ["Luna"],"view": "object","objectImage": "../assets/images/spawns/Starship.png","days": ["Jueves", "Viernes", "Sabado"]}
+        {"place": "Moon of Miscria","zone": ["Moon of Miscria"],"view": "object","objectImage": "../assets/images/spawns/Starship.png","days": ["Jueves", "Viernes", "Sabado"]}
       ]
     },
     {
@@ -680,7 +680,7 @@
       "rarity": "Epic",
       "avatar": "winnebeargo_avatar.png",
       "spawns": [
-        {"place": "Shores","zone": ["Playa Zona 1"],"view": "object","objectImage": "../assets/images/spawns/Leaves.png","days": ["Jueves", "Viernes", "Sabado"]}
+        {"place": "Shores","zone": ["Shores 1"],"view": "object","objectImage": "../assets/images/spawns/Leaves.png","days": ["Jueves", "Viernes", "Sabado"]}
       ]
     },
     {
@@ -690,7 +690,7 @@
       "rarity": "Epic",
       "avatar": "fennie_avatar.png",
       "spawns": [
-        {"place": "Shores","zone": ["Playa Zona 2"],"view": "object","objectImage": "../assets/images/spawns/Cave.png","days": ["Jueves", "Viernes", "Sabado"]}
+        {"place": "Shores","zone": ["Shores 2"],"view": "object","objectImage": "../assets/images/spawns/Cave.png","days": ["Jueves", "Viernes", "Sabado"]}
       ]
     },
     {
@@ -730,7 +730,7 @@
       "rarity": "Rare",
       "avatar": "dark_kiloray_avatar.png",
       "spawns": [
-        {"place": "Cave","zone": ["Cualquier Objeto Zona 1 de la Cueva"],"view": "object","objectImage": "../assets/images/spawns/cave.jpg","days": ["Lunes", "Miercoles", "Viernes"]}
+        {"place": "Cave","zone": ["Any Object in 1st Area in Cave"],"view": "object","objectImage": "../assets/images/spawns/cave.jpg","days": ["Lunes", "Miercoles", "Viernes"]}
       ]
     },
     {
@@ -740,7 +740,7 @@
       "rarity": "Rare",
       "avatar": "dark_croaky_avatar.png",
       "spawns": [
-        {"place": "Cave","zone": ["Cualquier Objeto Zona 2 de la Cueva"],"view": "object","objectImage": "../assets/images/spawns/cave.jpg","days": ["Martes", "Jueves", "Sabado"]}
+        {"place": "Cave","zone": ["Any Object in 2nd Area in Cave"],"view": "object","objectImage": "../assets/images/spawns/cave.jpg","days": ["Martes", "Jueves", "Sabado"]}
       ]
     },
     {
@@ -760,7 +760,7 @@
       "rarity": "Rare",
       "avatar": "dark_cubsprout_avatar.png",
       "spawns": [
-        {"place": "Forest","zone": ["Cualquier Objeto en el Area 1 del Bosque"],"view": "object","objectImage": "../assets/images/spawns/forest.jpg","days": ["Miercoles", "Sabado"]}
+        {"place": "Forest","zone": ["Any Object 1st Area in Forest"],"view": "object","objectImage": "../assets/images/spawns/forest.jpg","days": ["Miercoles", "Sabado"]}
       ]
     },
     {
@@ -770,7 +770,7 @@
       "rarity": "Rare",
       "avatar": "dark_sparkitten_avatar.png",
       "spawns": [
-        {"place": "Shores","zone": ["Cualquier Objeto Zona 2 de la Playa"],"view": "object","objectImage": "../assets/images/spawns/beach.jpg","days": ["Martes", "Viernes"]}
+        {"place": "Shores","zone": ["Any Object in 2nd Area in Shores"],"view": "object","objectImage": "../assets/images/spawns/beach.jpg","days": ["Martes", "Viernes"]}
       ]
     },
     {
@@ -780,7 +780,7 @@
       "rarity": "Epic",
       "avatar": "dark_snortus_avatar.png",
       "spawns": [
-        {"place": "Cave","zone": ["Zona 3 de la Cueva"],"view": "object","objectImage": "../assets/images/spawns/OpenChest.png","days": ["Martes", "Jueves", "Sabado"]}
+        {"place": "Cave","zone": ["Cave 3"],"view": "object","objectImage": "../assets/images/spawns/OpenChest.png","days": ["Martes", "Jueves", "Sabado"]}
       ]
     },
     {
@@ -800,7 +800,7 @@
       "rarity": "Rare",
       "avatar": "dark_owlie_avatar.png",
       "spawns": [
-        {"place": "Cave","zone": ["Cualquier Objeto Zona 3 de la Cueva"],"view": "object","objectImage": "../assets/images/spawns/cave.jpg","days": ["Martes", "Jueves", "Sabado"]}
+        {"place": "Cave","zone": ["Any Object in 3rd Area in Cave"],"view": "object","objectImage": "../assets/images/spawns/cave.jpg","days": ["Martes", "Jueves", "Sabado"]}
       ]
     },
     {
@@ -810,7 +810,7 @@
       "rarity": "Rare",
       "avatar": "dark_echino_avatar.png",
       "spawns": [
-        {"place": "Cave","zone": ["Cualquier Objeto Zona 3 de la Cueva"],"view": "object","objectImage": "../assets/images/spawns/cave.jpg","days": ["Lunes", "Miercoles", "Viernes"]}
+        {"place": "Cave","zone": ["Any Object in 3rd Area in Cave"],"view": "object","objectImage": "../assets/images/spawns/cave.jpg","days": ["Lunes", "Miercoles", "Viernes"]}
       ]
     },
     {
@@ -820,7 +820,7 @@
       "rarity": "Rare",
       "avatar": "dark_arigato_avatar.png",
       "spawns": [
-        {"place": "Cave","zone": ["Cualquier Objeto Zona 1 de la Cueva"],"view": "object","objectImage": "../assets/images/spawns/cave.jpg","days": ["Martes", "Jueves", "Sabado"]}
+        {"place": "Cave","zone": ["Any Object in 1st Area in Cave"],"view": "object","objectImage": "../assets/images/spawns/cave.jpg","days": ["Martes", "Jueves", "Sabado"]}
       ]
     },
     {
@@ -830,7 +830,7 @@
       "rarity": "Rare",
       "avatar": "dark_hydroseal_avatar.png",
       "spawns": [
-        {"place": "Mansion","zone": ["Cualquier Objeto en el atico de la Mansion"],"view": "object","objectImage": "../assets/images/spawns/mansion.jpg","days": "ALL_DAYS"}
+        {"place": "Mansion","zone": ["Any Object in Attic Mansion"],"view": "object","objectImage": "../assets/images/spawns/mansion.jpg","days": "ALL_DAYS"}
       ]
     },
     {
@@ -850,7 +850,7 @@
       "rarity": "Epic",
       "avatar": "dark_eggy_avatar.png",
       "spawns": [
-        {"place": "Cave","zone": ["Zona 2 de la Cueva"],"view": "object","objectImage": "../assets/images/spawns/Hourglass.png","days": "ALL_DAYS"}
+        {"place": "Cave","zone": ["Cave 2"],"view": "object","objectImage": "../assets/images/spawns/Hourglass.png","days": "ALL_DAYS"}
       ]
     },
     {
@@ -860,7 +860,7 @@
       "rarity": "Rare",
       "avatar": "dark_flameling_avatar.png",
       "spawns": [
-        {"place": "Mansion","zone": ["Cualquier Objeto en el atico de la Mansion"],"view": "object","objectImage": "../assets/images/spawns/mansion.jpg","days": "ALL_DAYS"}
+        {"place": "Mansion","zone": ["Any Object in Attic Mansion"],"view": "object","objectImage": "../assets/images/spawns/mansion.jpg","days": "ALL_DAYS"}
       ]
     },
     {
@@ -870,7 +870,7 @@
       "rarity": "Epic",
       "avatar": "dark_elefauna_avatar.png",
       "spawns": [
-        {"place": "Cave","zone": ["Zona 3 de la Cueva"],"view": "object","objectImage": "../assets/images/spawns/OpenChest.png","days": ["Lunes", "Miercoles", "Viernes"]}
+        {"place": "Cave","zone": ["Cave 3"],"view": "object","objectImage": "../assets/images/spawns/OpenChest.png","days": ["Lunes", "Miercoles", "Viernes"]}
       ]
     },
     {
@@ -880,7 +880,7 @@
       "rarity": "Exotic",
       "avatar": "mama_avatar.png",
       "spawns": [
-        {"place": "Forest","zone": ["Area 3 del Bosque"],"view": "object","objectImage": "../assets/images/spawns/Log.png","days": "ALL_DAYS"}
+        {"place": "Forest","zone": ["Forest 3"],"view": "object","objectImage": "../assets/images/spawns/Log.png","days": "ALL_DAYS"}
       ]
     },
     {
@@ -890,7 +890,7 @@
       "rarity": "Exotic",
       "avatar": "dark_nessy_avatar.png",
       "spawns": [
-        {"place": "Forest","zone": ["Area 4 del Bosque"],"view": "object","objectImage": "../assets/images/spawns/DCattail.png","days": "ALL_DAYS"}
+        {"place": "Forest","zone": ["Forest 4"],"view": "object","objectImage": "../assets/images/spawns/DCattail.png","days": "ALL_DAYS"}
       ]
     },
     {
@@ -900,7 +900,7 @@
       "rarity": "Rare",
       "avatar": "dark_hotfoot_avatar.png",
       "spawns": [
-        {"place": "Forest","zone": ["Cualquier Objeto en el Area 3 del Bosque"],"view": "object","objectImage": "../assets/images/spawns/forest.jpg","days": ["Martes", "Viernes"]}
+        {"place": "Forest","zone": ["Any Object 3rd Area in Forest"],"view": "object","objectImage": "../assets/images/spawns/forest.jpg","days": ["Martes", "Viernes"]}
       ]
     },
     {
@@ -910,7 +910,7 @@
       "rarity": "Rare",
       "avatar": "dark_breezycheeks_avatar.png",
       "spawns": [
-        {"place": "Cave","zone": ["Cualquier Objeto Zona 4 de la Cueva"],"view": "object","objectImage": "../assets/images/spawns/cave.jpg","days": ["Martes", "Jueves", "Sabado"]}
+        {"place": "Cave","zone": ["Any Object in 4th Area in Cave"],"view": "object","objectImage": "../assets/images/spawns/cave.jpg","days": ["Martes", "Jueves", "Sabado"]}
       ]
     },
     {
@@ -930,7 +930,7 @@
       "rarity": "Common",
       "avatar": "whik_avatar.png",
       "spawns": [
-        {"place": "Forest","zone": ["Cualquier Objeto en el Area 3 del Bosque"],"view": "object","objectImage": "../assets/images/spawns/forest.jpg","days": "ALL_DAYS"}
+        {"place": "Forest","zone": ["Any Object 3rd Area in Forest"],"view": "object","objectImage": "../assets/images/spawns/forest.jpg","days": "ALL_DAYS"}
       ]
     },
     {
@@ -940,7 +940,7 @@
       "rarity": "Common",
       "avatar": "slithero_avatar.png",
       "spawns": [
-        {"place": "Mansion","zone": ["Cualquier Objeto 1er piso de la Mansion"],"view": "object","objectImage": "../assets/images/spawns/mansion.jpg","days": "ALL_DAYS"}
+        {"place": "Mansion","zone": ["Any Object in 1st Floor in Mansion"],"view": "object","objectImage": "../assets/images/spawns/mansion.jpg","days": "ALL_DAYS"}
       ]
     },
     {
@@ -950,7 +950,7 @@
       "rarity": "Common",
       "avatar": "spinnerette_avatar.png",
       "spawns": [
-        {"place": "Mansion","zone": ["Cualquier Objeto de la Mansion"],"view": "object","objectImage": "../assets/images/spawns/mansion.jpg","days": "ALL_DAYS"}
+        {"place": "Mansion","zone": ["Any Object in 2nd Floor Mansion"],"view": "object","objectImage": "../assets/images/spawns/mansion.jpg","days": "ALL_DAYS"}
       ]
     },
     {
@@ -960,7 +960,7 @@
       "rarity": "Common",
       "avatar": "crickin_avatar.png",
       "spawns": [
-        {"place": "Forest","zone": ["Cualquier Objeto en el Area 3 del Bosque"],"view": "object","objectImage": "../assets/images/spawns/forest.jpg","days": "ALL_DAYS"}
+        {"place": "Forest","zone": ["Any Object 3rd Area in Forest"],"view": "object","objectImage": "../assets/images/spawns/forest.jpg","days": "ALL_DAYS"}
       ]
     },
     {
@@ -970,7 +970,7 @@
       "rarity": "Common",
       "avatar": "bubbles_avatar.png",
       "spawns": [
-        {"place": "Mansion","zone": ["Cualquier Objeto de la Mansion"],"view": "object","objectImage": "../assets/images/spawns/mansion.jpg","days": "ALL_DAYS"}
+        {"place": "Mansion","zone": ["Any Object in Mansion Outside"],"view": "object","objectImage": "../assets/images/spawns/mansion.jpg","days": "ALL_DAYS"}
       ]
     },
     {
@@ -980,7 +980,7 @@
       "rarity": "Common",
       "avatar": "humbug_avatar.png",
       "spawns": [
-        {"place": "Mansion","zone": ["Cualquier Objeto de la Mansion"],"view": "object","objectImage": "../assets/images/spawns/mansion.jpg","days": "ALL_DAYS"}
+        {"place": "Mansion","zone": ["Any Object in 2nd Floor Mansion"],"view": "object","objectImage": "../assets/images/spawns/mansion.jpg","days": "ALL_DAYS"}
       ]
     },
     {
@@ -990,7 +990,7 @@
       "rarity": "Common",
       "avatar": "lavarilla_avatar.png",
       "spawns": [
-        {"place": "Mansion","zone": ["Cualquier Objeto de la Mansion"],"view": "object","objectImage": "../assets/images/spawns/mansion.jpg","days": "ALL_DAYS"}
+        {"place": "Mansion","zone": ["Any Object in Mansion Outside"],"view": "object","objectImage": "../assets/images/spawns/mansion.jpg","days": "ALL_DAYS"}
       ]
     },
     {
@@ -1010,7 +1010,7 @@
       "rarity": "Rare",
       "avatar": "pamboo_avatar.png",
       "spawns": [
-        {"place": "Shores","zone": ["Cualquier Objeto Zona 2 de la Playa"],"view": "object","objectImage": "../assets/images/spawns/beach.jpg","days": ["Lunes", "Jueves"]}
+        {"place": "Shores","zone": ["Any Object in 2nd Area in Shores"],"view": "object","objectImage": "../assets/images/spawns/beach.jpg","days": ["Lunes", "Jueves"]}
       ]
     },
     {
@@ -1020,7 +1020,7 @@
       "rarity": "Rare",
       "avatar": "rockodile_avatar.png",
       "spawns": [
-        {"place": "Shores","zone": ["Playa Zona 4"],"view": "object","objectImage": "../assets/images/spawns/Bones.png","days": ["Lunes", "Jueves", "Domingo"]}
+        {"place": "Shores","zone": ["Shores 4"],"view": "object","objectImage": "../assets/images/spawns/Bones.png","days": ["Lunes", "Jueves", "Domingo"]}
       ]
     },
     {
@@ -1030,7 +1030,7 @@
       "rarity": "Epic",
       "avatar": "boneshee_avatar.png",
       "spawns": [
-        {"place": "Shores","zone": ["Playa Zona 4"],"view": "object","objectImage": "../assets/images/spawns/Sand.png","days": ["Lunes", "Martes", "Miercoles"]}
+        {"place": "Shores","zone": ["Shores 4"],"view": "object","objectImage": "../assets/images/spawns/Sand.png","days": ["Lunes", "Martes", "Miercoles"]}
       ]
     },
     {
@@ -1040,7 +1040,7 @@
       "rarity": "Epic",
       "avatar": "ursiwave_avatar.png",
       "spawns": [
-        {"place": "Shores","zone": ["Playa Zona 1"],"view": "object","objectImage": "../assets/images/spawns/Conch.png","days": ["Lunes", "Martes", "Miercoles"]}
+        {"place": "Shores","zone": ["Shores 1"],"view": "object","objectImage": "../assets/images/spawns/Conch.png","days": ["Lunes", "Martes", "Miercoles"]}
       ]
     },
     {
@@ -1050,7 +1050,7 @@
       "rarity": "Common",
       "avatar": "bludger_avatar.png",
       "spawns": [
-        {"place": "Mansion","zone": ["Cualquier Objeto de la Mansion"],"view": "object","objectImage": "../assets/images/spawns/mansion.jpg","days": "ALL_DAYS"}
+        {"place": "Mansion","zone": ["Any Object in 2nd Floor Mansion"],"view": "object","objectImage": "../assets/images/spawns/mansion.jpg","days": "ALL_DAYS"}
       ]
     },
     {
@@ -1060,7 +1060,7 @@
       "rarity": "Common",
       "avatar": "zaptor_avatar.png",
       "spawns": [
-        {"place": "Shores","zone": ["Cualquier Objeto de la Mansion"],"view": "object","objectImage": "../assets/images/spawns/beach.jpg","days": "ALL_DAYS"}
+        {"place": "Shores","zone": ["Any Object in 3rd Area in Shores"],"view": "object","objectImage": "../assets/images/spawns/beach.jpg","days": "ALL_DAYS"}
       ]
     },
     {
@@ -1070,7 +1070,7 @@
       "rarity": "Common",
       "avatar": "narlope_avatar.png",
       "spawns": [
-        {"place": "Mansion","zone": ["Cualquier Objeto de la Mansion"],"view": "object","objectImage": "../assets/images/spawns/mansion.jpg","days": "ALL_DAYS"}
+        {"place": "Mansion","zone": ["Any Object in 2nd Floor Mansion"],"view": "object","objectImage": "../assets/images/spawns/mansion.jpg","days": "ALL_DAYS"}
       ]
     },
     {
@@ -1080,7 +1080,7 @@
       "rarity": "Common",
       "avatar": "vexie_avatar.png",
       "spawns": [
-        {"place": "Mount Gemma","zone": ["Cualquier Objeto de la Mansion"],"view": "object","objectImage": "../assets/images/spawns/mansion.jpg","days": "ALL_DAYS"}
+        {"place": "Mount Gemma","zone": ["Any Object 2nd Area in MT Gemma"],"view": "object","objectImage": "../assets/images/spawns/mansion.jpg","days": "ALL_DAYS"}
       ]
     },
     {
@@ -1090,7 +1090,7 @@
       "rarity": "Common",
       "avatar": "tongutail_avatar.png",
       "spawns": [
-        {"place": "Mansion","zone": ["Cualquier Objeto de la Mansion"],"view": "object","objectImage": "../assets/images/spawns/mansion.jpg","days": "ALL_DAYS"}
+        {"place": "Mansion","zone": ["Any Object in 1st Floor Mansion"],"view": "object","objectImage": "../assets/images/spawns/mansion.jpg","days": "ALL_DAYS"}
       ]
     },
     {
@@ -1100,7 +1100,7 @@
       "rarity": "Common",
       "avatar": "hawkai_avatar.png",
       "spawns": [
-        {"place": "Shores","zone": ["Cualquier Objeto de la Mansion"],"view": "object","objectImage": "../assets/images/spawns/beach.jpg","days": "ALL_DAYS"}
+        {"place": "Shores","zone": ["Any Object in 1st Area in Shores"],"view": "object","objectImage": "../assets/images/spawns/beach.jpg","days": "ALL_DAYS"}
       ]
     },
     {
@@ -1110,7 +1110,7 @@
       "rarity": "Common",
       "avatar": "nero_avatar.png",
       "spawns": [
-        {"place": "Mansion","zone": ["Cualquier Objeto de la Mansion"],"view": "object","objectImage": "../assets/images/spawns/mansion.jpg","days": "ALL_DAYS"}
+        {"place": "Mansion","zone": ["Any Object in Attic Mansion"],"view": "object","objectImage": "../assets/images/spawns/mansion.jpg","days": "ALL_DAYS"}
       ]
     },
     {
@@ -1120,7 +1120,7 @@
       "rarity": "Rare",
       "avatar": "pollifog_avatar.png",
       "spawns": [
-        {"place": "Mount Gemma","zone": ["Cualquier Objeto en el Area 3 del MT Gemma"],"view": "object","objectImage": "../assets/images/spawns/mount_gemma.jpg","days": ["Miercoles", "Sabado"]}
+        {"place": "Mount Gemma","zone": ["Any Object 3rd Area in MT Gemma"],"view": "object","objectImage": "../assets/images/spawns/mount_gemma.jpg","days": ["Miercoles", "Sabado"]}
       ]
     },
     {
@@ -1130,7 +1130,7 @@
       "rarity": "Common",
       "avatar": "felis_avatar.png",
       "spawns": [
-        {"place": "Mount Gemma","zone": ["Cualquier Objeto de Monte Gema"],"view": "object","objectImage": "../assets/images/spawns/mount_gemma.jpg","days": "ALL_DAYS"}
+        {"place": "Mount Gemma","zone": ["Any Object in 3rd Area MT Gemma"],"view": "object","objectImage": "../assets/images/spawns/mount_gemma.jpg","days": "ALL_DAYS"}
       ]
     },
     {
@@ -1140,7 +1140,7 @@
       "rarity": "Common",
       "avatar": "tectonyx_avatar.png",
       "spawns": [
-        {"place": "Shores","zone": ["Cualquier Objeto en la Playa"],"view": "object","objectImage": "../assets/images/spawns/beach.jpg","days": "ALL_DAYS"}
+        {"place": "Shores","zone": ["Any Object in 3rd Area Shores"],"view": "object","objectImage": "../assets/images/spawns/beach.jpg","days": "ALL_DAYS"}
       ]
     },
     {
@@ -1150,7 +1150,7 @@
       "rarity": "Common",
       "avatar": "nibbles_avatar.png",
       "spawns": [
-        {"place": "Shores","zone": ["Cualquier Objeto en la Playa"],"view": "object","objectImage": "../assets/images/spawns/beach.jpg","days": "ALL_DAYS"}
+        {"place": "Shores","zone": ["Any Object in 3rd Area Shores"],"view": "object","objectImage": "../assets/images/spawns/beach.jpg","days": "ALL_DAYS"}
       ]
     },
     {
@@ -1160,7 +1160,7 @@
       "rarity": "Rare",
       "avatar": "skustunk_avatar.png",
       "spawns": [
-        {"place": "Shores","zone": ["Cualquier Objeto Zona 1 de la Playa"],"view": "object","objectImage": "../assets/images/spawns/beach.jpg","days": ["Miercoles", "Sabado"]}
+        {"place": "Shores","zone": ["Any Object in 1st Area in Shores"],"view": "object","objectImage": "../assets/images/spawns/beach.jpg","days": ["Miercoles", "Sabado"]}
       ]
     },
     {
@@ -1170,7 +1170,7 @@
       "rarity": "Rare",
       "avatar": "flintly_avatar.png",
       "spawns": [
-        {"place": "Cave","zone": ["Cualquier Objeto Zona 2 de la Cueva"],"view": "object","objectImage": "../assets/images/spawns/cave.jpg","days": ["Lunes", "Miercoles", "Viernes"]}
+        {"place": "Cave","zone": ["Any Object in 2nd Area in Cave"],"view": "object","objectImage": "../assets/images/spawns/cave.jpg","days": ["Lunes", "Miercoles", "Viernes"]}
       ]
     },
     {
@@ -1200,7 +1200,7 @@
       "rarity": "Rare",
       "avatar": "crabbles_avatar.png",
       "spawns": [
-        {"place": "Shores","zone": ["Cualquier Objeto Zona 4 de la Playa"],"view": "object","objectImage": "../assets/images/spawns/beach.jpg","days": ["Martes", "Viernes"]}
+        {"place": "Shores","zone": ["Any Object in 4th Area in Shores"],"view": "object","objectImage": "../assets/images/spawns/beach.jpg","days": ["Martes", "Viernes"]}
       ]
     },
     {
@@ -1230,13 +1230,13 @@
       "rarity": "Rare",
       "avatar": "rafiery_avatar.png",
       "spawns": [
-        {"place": "Mansion","zone": ["Cualquier Objeto 2do piso de la Mansion"],"view": "object","objectImage": "../assets/images/spawns/mansion.jpg","days": ["Lunes", "Jueves"]}
+        {"place": "Mansion","zone": ["Any Object in 2nd Floor in Mansion"],"view": "object","objectImage": "../assets/images/spawns/mansion.jpg","days": ["Lunes", "Jueves"]}
       ]
     },
     {
       "id": "123",
       "name": "Nanaslug",
-      "type": "WaterWind",
+      "type": "Water Wind",
       "rarity": "Epic",
       "avatar": "nanaslug_avatar.png",
       "spawns": [
@@ -1250,7 +1250,7 @@
       "rarity": "Common",
       "avatar": "vhisp_avatar.png",
       "spawns": [
-        {"place": "Mansion","zone": ["Cualquier Objeto en la Mansion"],"view": "object","objectImage": "../assets/images/spawns/mansion.jpg","days": "ALL_DAYS"}
+        {"place": "Mansion","zone": ["Any Object in Attic Mansion"],"view": "object","objectImage": "../assets/images/spawns/mansion.jpg","days": "ALL_DAYS"}
       ]
     },
     {
@@ -1260,13 +1260,13 @@
       "rarity": "Rare",
       "avatar": "raldio_avatar.png",
       "spawns": [
-        {"place": "Mansion","zone": ["Cualquier Objeto 1er piso de la Mansion"],"view": "object","objectImage": "../assets/images/spawns/BlueGem.jpg","days": ["Lunes", "Miercoles", "Sabado"]}
+        {"place": "Mansion","zone": ["Any Object in 1st Floor in Mansion"],"view": "object","objectImage": "../assets/images/spawns/BlueGem.jpg","days": ["Lunes", "Miercoles", "Sabado"]}
       ]
     },
     {
       "id": "126",
       "name": "Freedom",
-      "type": "FireWind",
+      "type": "Fire Wind",
       "rarity": "Exotic",
       "avatar": "freedom_avatar.png",
       "spawns": [
@@ -1290,7 +1290,7 @@
       "rarity": "Epic",
       "avatar": "podo_avatar.png",
       "spawns": [
-        {"place": "Cave","zone": ["Zona 2 de la Cueva"],"view": "object","objectImage": "../assets/images/spawns/CaveBox.png","days": "ALL_DAYS"}
+        {"place": "Cave","zone": ["Cave 2"],"view": "object","objectImage": "../assets/images/spawns/CaveBox.png","days": "ALL_DAYS"}
       ]
     },
     {
@@ -1300,13 +1300,13 @@
       "rarity": "Epic",
       "avatar": "lavazard_avatar.png",
       "spawns": [
-        {"place": "Shores","zone": ["Playa Zona 4"],"view": "object","objectImage": "../assets/images/spawns/BrokenBox.png","days": ["Jueves", "Viernes", "Sabado"]}
+        {"place": "Shores","zone": ["Shores 4"],"view": "object","objectImage": "../assets/images/spawns/BrokenBox.png","days": ["Jueves", "Viernes", "Sabado"]}
       ]
     },
     {
       "id": "130",
       "name": "Shurikoon",
-      "type": "FireWind",
+      "type": "Fire Wind",
       "rarity": "Epic",
       "avatar": "shurikoon_avatar.png",
       "spawns": [
@@ -1330,7 +1330,7 @@
       "rarity": "Exotic",
       "avatar": "foil_waddles_avatar.png",
       "spawns": [
-        {"place": "Cave","zone": ["Zona 3 de la Cueva"],"view": "object","objectImage": "../assets/images/spawns/TreasureChest.png","days": "ALL_DAYS"}
+        {"place": "Cave","zone": ["Cave 3"],"view": "object","objectImage": "../assets/images/spawns/TreasureChest.png","days": "ALL_DAYS"}
       ]
     },
     {
@@ -1390,7 +1390,7 @@
       "rarity": "Rare",
       "avatar": "opigum_avatar.png",
       "spawns": [
-        {"place": "Mount Gemma","zone": ["Cualquier Objeto en el Area 1 del MT Gemma"],"view": "object","objectImage": "../assets/images/spawns/mount_gemma.jpg","days": ["Miercoles", "Sabado"]}
+        {"place": "Mount Gemma","zone": ["Any Object 1st Area in MT Gemma"],"view": "object","objectImage": "../assets/images/spawns/mount_gemma.jpg","days": ["Miercoles", "Sabado"]}
       ]
     },
     {
@@ -1400,7 +1400,7 @@
       "rarity": "Exotic",
       "avatar": "foil_flintly_avatar.png",
       "spawns": [
-        {"place": "Cave","zone": ["Zona 2 de la Cueva"],"view": "object","objectImage": "../assets/images/spawns/TreasureChest2.png","days": "ALL_DAYS"}
+        {"place": "Cave","zone": ["Cave 2"],"view": "object","objectImage": "../assets/images/spawns/TreasureChest2.png","days": "ALL_DAYS"}
       ]
     },
     {
@@ -1420,17 +1420,17 @@
       "rarity": "Epic",
       "avatar": "flaring_avatar.png",
       "spawns": [
-        {"place": "Forest","zone": ["Area 3 del Bosque"],"view": "object","objectImage": "../assets/images/spawns/GrassPile.jpg","days": ["Lunes", "Martes", "Miercoles"]}
+        {"place": "Forest","zone": ["Forest 3"],"view": "object","objectImage": "../assets/images/spawns/GrassPile.jpg","days": ["Lunes", "Martes", "Miercoles"]}
       ]
     },
     {
       "id": "142",
       "name": "Cadbunny",
-      "type": "WaterEarth",
+      "type": "Water Earth",
       "rarity": "Exotic",
       "avatar": "cadbunny_avatar.png",
       "spawns": [
-        {"place": "Cave","zone": ["Zona 1 de la Cueva"],"view": "object","objectImage": "../assets/images/spawns/EmptyEgg.png","days": "ALL_DAYS"}
+        {"place": "Cave","zone": ["Cave 1"],"view": "object","objectImage": "../assets/images/spawns/EmptyEgg.png","days": "ALL_DAYS"}
       ]
     },
     {
@@ -1440,7 +1440,7 @@
       "rarity": "Rare",
       "avatar": "fiender_avatar.png",
       "spawns": [
-        {"place": "Mount Gemma","zone": ["Cualquier Objeto en el Area 2 del MT Gemma"],"view": "object","objectImage": "../assets/images/spawns/mount_gemma.jpg","days": ["Lunes", "Jueves"]}
+        {"place": "Mount Gemma","zone": ["Any Object 2nd Area in MT Gemma"],"view": "object","objectImage": "../assets/images/spawns/mount_gemma.jpg","days": ["Lunes", "Jueves"]}
       ]
     },
     {
@@ -1450,7 +1450,7 @@
       "rarity": "Rare",
       "avatar": "pillblaze_avatar.png",
       "spawns": [
-        {"place": "Mansion","zone": ["Cualquier Objeto 1er piso de la Mansion"],"view": "object","objectImage": "../assets/images/spawns/mansion.jpg","days": ["Martes", "Viernes", "Domingo"]}
+        {"place": "Mansion","zone": ["Any Object in 1st Floor in Mansion"],"view": "object","objectImage": "../assets/images/spawns/mansion.jpg","days": ["Martes", "Viernes", "Domingo"]}
       ]
     },
     {
@@ -1460,7 +1460,7 @@
       "rarity": "Common",
       "avatar": "blub_avatar.png",
       "spawns": [
-        {"place": "Shores","zone": ["Cualquier Objeto en la Playa"],"view": "object","objectImage": "../assets/images/spawns/beach.jpg","days": "ALL_DAYS"}
+        {"place": "Shores","zone": ["Any Object in 4th Area Shores"],"view": "object","objectImage": "../assets/images/spawns/beach.jpg","days": "ALL_DAYS"}
       ]
     },
     {
@@ -1470,7 +1470,7 @@
       "rarity": "Common",
       "avatar": "cerberuff_avatar.png",
       "spawns": [
-        {"place": "Mansion","zone": ["Cualquier Objeto en la Mansion"],"view": "object","objectImage": "../assets/images/spawns/mansion.jpg","days": "ALL_DAYS"}
+        {"place": "Mansion","zone": ["Any Object 1st Floor of Mansion"],"view": "object","objectImage": "../assets/images/spawns/mansion.jpg","days": "ALL_DAYS"}
       ]
     },
     {
@@ -1480,7 +1480,7 @@
       "rarity": "Common",
       "avatar": "auger_avatar.png",
       "spawns": [
-        {"place": "Mount Gemma","zone": ["Cualquier Objeto en Monte Gema"],"view": "object","objectImage": "../assets/images/spawns/mount_gemma.jpg","days": "ALL_DAYS"}
+        {"place": "Mount Gemma","zone": ["Any Object in 2nd Area MT Gemma"],"view": "object","objectImage": "../assets/images/spawns/mount_gemma.jpg","days": "ALL_DAYS"}
       ]
     },
     {
@@ -1490,7 +1490,7 @@
       "rarity": "Common",
       "avatar": "flurfy_avatar.png",
       "spawns": [
-        {"place": "Forest","zone": ["Cualquier Objeto en el Bosque"],"view": "object","objectImage": "../assets/images/spawns/forest.jpg","days": "ALL_DAYS"}
+        {"place": "Forest","zone": ["Any Object in Hidden Forest"],"view": "object","objectImage": "../assets/images/spawns/forest.jpg","days": "ALL_DAYS"}
       ]
     },
     {
@@ -1500,7 +1500,7 @@
       "rarity": "Common",
       "avatar": "squirmle_avatar.png",
       "spawns": [
-        {"place": "Forest","zone": ["Cualquier Objeto en el Bosque"],"view": "object","objectImage": "../assets/images/spawns/forest.jpg","days": "ALL_DAYS"}
+        {"place": "Forest","zone": ["Any Object 3rd Area in Forest"],"view": "object","objectImage": "../assets/images/spawns/forest.jpg","days": "ALL_DAYS"}
       ]
     },
     {
@@ -1510,7 +1510,7 @@
       "rarity": "Rare",
       "avatar": "lil_bubs_avatar.png",
       "spawns": [
-        {"place": "Mount Gemma","zone": ["Cualquier Objeto a las afueras de la Mansion"],"view": "object","objectImage": "../assets/images/spawns/mansion_outside.png","days": ["Lunes", "Jueves", "Sabado"]}
+        {"place": "Mount Gemma","zone": ["Any Object in Mansion Outside"],"view": "object","objectImage": "../assets/images/spawns/mansion_outside.png","days": ["Lunes", "Jueves", "Sabado"]}
       ]
     },
     {
@@ -1520,13 +1520,13 @@
       "rarity": "Common",
       "avatar": "peekly_avatar.png",
       "spawns": [
-        {"place": "Mount Gemma","zone": ["Cualquier Objeto en Monte Gema"],"view": "object","objectImage": "../assets/images/spawns/mount_gemma.jpg","days": "ALL_DAYS"}
+        {"place": "Mount Gemma","zone": ["Any Object 4th Area in MT Gemma"], "view": "object","objectImage": "../assets/images/spawns/mount_gemma.jpg","days": "ALL_DAYS"}
       ]
     },
     {
       "id": "152",
       "name": "Splender",
-      "type": "NatureEarth",
+      "type": "Nature Earth",
       "rarity": "Exotic",
       "avatar": "splender_avatar.png",
       "spawns": [
@@ -1536,7 +1536,7 @@
     {
       "id": "153",
       "name": "Dorux",
-      "type": "FireLightning",
+      "type": "Fire Lightning",
       "rarity": "Epic",
       "avatar": "dorux_avatar.png",
       "spawns": [
@@ -1560,7 +1560,7 @@
       "rarity": "Epic",
       "avatar": "pennon_avatar.png",
       "spawns": [
-        {"place": "Shores","zone": ["Playa Zona 3"],"view": "object","objectImage": "../assets/images/spawns/SeaGrass.png","days": ["Lunes", "Martes", "Miercoles"]}
+        {"place": "Shores","zone": ["Shores 3"],"view": "object","objectImage": "../assets/images/spawns/SeaGrass.png","days": ["Lunes", "Martes", "Miercoles"]}
       ]
     },
     {
@@ -1576,11 +1576,11 @@
     {
       "id": "157",
       "name": "Defilio",
-      "type": "NatureEarth",
+      "type": "Nature Earth",
       "rarity": "Exotic",
       "avatar": "defilio_avatar.png",
       "spawns": [
-        {"place": "Forest","zone": ["Area 3 del Bosque"],"view": "object","objectImage": "../assets/images/spawns/BlightedBush.png","days": "ALL_DAYS"}
+        {"place": "Forest","zone": ["Forest 3"],"view": "object","objectImage": "../assets/images/spawns/BlightedBush.png","days": "ALL_DAYS"}
       ]
     },
     {
@@ -1590,7 +1590,7 @@
       "rarity": "Exotic",
       "avatar": "blighted_cubsprout_avatar.png",
       "spawns": [
-        {"place": "Forest","zone": ["Area 2 del Bosque"],"view": "object","objectImage": "../assets/images/spawns/DBlightedBush.png","days": "ALL_DAYS"}
+        {"place": "Forest","zone": ["Forest 2"],"view": "object","objectImage": "../assets/images/spawns/DBlightedBush.png","days": "ALL_DAYS"}
       ]
     },
     {
@@ -1600,7 +1600,7 @@
       "rarity": "Legendary",
       "avatar": "blighted_flue_avatar.png",
       "spawns": [
-        {"place": "Forest","zone": ["Area 4 del Bosque"],"view": "object","objectImage": "../assets/images/spawns/BlightedStone.png","days": "ALL_DAYS"}
+        {"place": "Forest","zone": ["Forest 4"],"view": "object","objectImage": "../assets/images/spawns/BlightedStone.png","days": "ALL_DAYS"}
       ]
     },
     {
@@ -1616,11 +1616,11 @@
     {
       "id": "161",
       "name": "Light Nibbles",
-      "type": "WaterLightning",
+      "type": "Water Lightning",
       "rarity": "Epic",
       "avatar": "light_nibbles_avatar.png",
       "spawns": [
-        {"place": "Shores","zone": ["Playa Zona 3"],"view": "object","objectImage": "../assets/images/spawns/Laguna.png","days": ["Jueves", "Viernes", "Sabado"]}
+        {"place": "Shores","zone": ["Shores 3"],"view": "object","objectImage": "../assets/images/spawns/Laguna.png","days": ["Jueves", "Viernes", "Sabado"]}
       ]
     },
     {
@@ -1646,7 +1646,7 @@
     {
       "id": "164",
       "name": "Light Zaptor",
-      "type": "NatureLightning",
+      "type": "Nature Lightning",
       "rarity": "Exotic",
       "avatar": "light_zaptor_avatar.png",
       "spawns": [
@@ -1660,13 +1660,13 @@
       "rarity": "Epic",
       "avatar": "light_quirk_avatar.png",
       "spawns": [
-        {"place": "Shores","zone": ["Playa Zona 2"],"view": "object","objectImage": "../assets/images/spawns/Quirk.png","days": ["Lunes", "Martes", "Miercoles"]}
+        {"place": "Shores","zone": ["Shores 2"],"view": "object","objectImage": "../assets/images/spawns/Quirk.png","days": ["Lunes", "Martes", "Miercoles"]}
       ]
     },
     {
       "id": "166",
       "name": "Light Statikat",
-      "type": "FireLightning",
+      "type": "Fire Lightning",
       "rarity": "Exotic",
       "avatar": "light_statikat_avatar.png",
       "spawns": [
@@ -1730,7 +1730,7 @@
       "rarity": "Rare",
       "avatar": "dark_shellbee_avatar.png",
       "spawns": [
-        {"place": "Forest","zone": ["Cualquier Objeto en el Area 3 del Bosque"],"view": "object","objectImage": "../assets/images/spawns/forest.jpg","days": ["Lunes", "Jueves"]}
+        {"place": "Forest","zone": ["Any Object 3rd Area in Forest"],"view": "object","objectImage": "../assets/images/spawns/forest.jpg","days": ["Lunes", "Jueves"]}
       ]
     },
     {
@@ -1740,7 +1740,7 @@
       "rarity": "Epic",
       "avatar": "liothning_avatar.png",
       "spawns": [
-        {"place": "Moon of Miscria","zone": ["Luna"],"view": "object","objectImage": "../assets/images/spawns/StatueNero.png","days": ["Lunes", "Martes", "Miercoles"]}
+        {"place": "Moon of Miscria","zone": ["Moon of Miscria"],"view": "object","objectImage": "../assets/images/spawns/StatueNero.png","days": ["Lunes", "Martes", "Miercoles"]}
       ]
     },
     {
@@ -1750,7 +1750,7 @@
       "rarity": "Rare",
       "avatar": "dark_lumera_avatar.png",
       "spawns": [
-        {"place": "Mansion","zone": ["Cualquier Objeto en el atico de la Mansion"],"view": "object","objectImage": "../assets/images/spawns/mansion.jpg","days": "ALL_DAYS"}
+        {"place": "Mansion","zone": ["Any Object in Attic Mansion"],"view": "object","objectImage": "../assets/images/spawns/mansion.jpg","days": "ALL_DAYS"}
       ]
     },
     {
@@ -1760,7 +1760,7 @@
       "rarity": "Rare",
       "avatar": "dark_steamguin_avatar.png",
       "spawns": [
-        {"place": "Forest","zone": ["Cualquier Objeto en Hidden Forest"],"view": "object","objectImage": "../assets/images/spawns/forest.jpg","days": ["Miercoles", "Sabado"]}
+        {"place": "Forest","zone": ["Any Object in Hidden Forest"],"view": "object","objectImage": "../assets/images/spawns/forest.jpg","days": ["Miercoles", "Sabado"]}
       ]
     },
     {
@@ -1780,7 +1780,7 @@
       "rarity": "Epic",
       "avatar": "dark_treemur_avatar.png",
       "spawns": [
-        {"place": "Forest","zone": ["Area 3 del Bosque"],"view": "object","objectImage": "../assets/images/spawns/BigDeadTree.png","days": ["Jueves", "Viernes", "Sabado"]}
+        {"place": "Forest","zone": ["Forest 3"],"view": "object","objectImage": "../assets/images/spawns/BigDeadTree.png","days": ["Jueves", "Viernes", "Sabado"]}
       ]
     },
     {
@@ -1810,7 +1810,7 @@
       "rarity": "Rare",
       "avatar": "dark_sparkupine_avatar.png",
       "spawns": [
-        {"place": "Forest","zone": ["Cualquier Objeto en el Area 1 del Bosque"],"view": "object","objectImage": "../assets/images/spawns/forest.jpg","days": ["Martes", "Viernes"]}
+        {"place": "Forest","zone": ["Any Object 1st Area in Forest"],"view": "object","objectImage": "../assets/images/spawns/forest.jpg","days": ["Martes", "Viernes"]}
       ]
     },
     {
@@ -1820,7 +1820,7 @@
       "rarity": "Rare",
       "avatar": "dark_squibee_avatar.png",
       "spawns": [
-        {"place": "Forest","zone": ["Cualquier Objeto en Hidden Forest"],"view": "object","objectImage": "../assets/images/spawns/forest.jpg","days": ["Lunes", "Jueves"]}
+        {"place": "Forest","zone": ["Any Object in Hidden Forest"],"view": "object","objectImage": "../assets/images/spawns/forest.jpg","days": ["Lunes", "Jueves"]}
       ]
     },
     {
@@ -1830,7 +1830,7 @@
       "rarity": "Epic",
       "avatar": "dark_waddles_avatar.png",
       "spawns": [
-        {"place": "Forest","zone": ["Area 1 del Bosque"],"view": "object","objectImage": "../assets/images/spawns/Cattail.png","days": ["Lunes", "Martes", "Miercoles"]}
+        {"place": "Forest","zone": ["Forest 1"],"view": "object","objectImage": "../assets/images/spawns/Cattail.png","days": ["Lunes", "Martes", "Miercoles"]}
       ]
     },
     {
@@ -1840,7 +1840,7 @@
       "rarity": "Epic",
       "avatar": "dark_twiggum_avatar.png",
       "spawns": [
-        {"place": "Forest","zone": ["Area 4 del Bosque"],"view": "object","objectImage": "../assets/images/spawns/HugeTree.png","days": ["Jueves", "Viernes", "Sabado"]}
+        {"place": "Forest","zone": ["Forest 4"],"view": "object","objectImage": "../assets/images/spawns/HugeTree.png","days": ["Jueves", "Viernes", "Sabado"]}
       ]
     },
     {
@@ -1860,13 +1860,13 @@
       "rarity": "Rare",
       "avatar": "dark_aria_avatar.png",
       "spawns": [
-        {"place": "Mount Gemma","zone": ["Cualquier Objeto en el Area 3 del MT Gemma"],"view": "object","objectImage": "../assets/images/spawns/mount_gemma.jpg","days": ["Martes", "Viernes"]}
+        {"place": "Mount Gemma","zone": ["Any Object 3rd Area in MT Gemma"],"view": "object","objectImage": "../assets/images/spawns/mount_gemma.jpg","days": ["Martes", "Viernes"]}
       ]
     },
     {
       "id": "186",
       "name": "Light Rafiery",
-      "type": "FireLightning",
+      "type": "Fire Lightning",
       "rarity": "Epic",
       "avatar": "light_rafiery_avatar.png",
       "spawns": [
@@ -1876,7 +1876,7 @@
     {
       "id": "187",
       "name": "Light Fossillia",
-      "type": "WaterEarth",
+      "type": "Water Earth",
       "rarity": "Epic",
       "avatar": "light_fossillia_avatar.png",
       "spawns": [
@@ -1906,7 +1906,7 @@
     {
       "id": "190",
       "name": "Light Flue",
-      "type": "FireWind",
+      "type": "Fire Wind",
       "rarity": "Epic",
       "avatar": "light_flue_avatar.png",
       "spawns": [
@@ -1916,7 +1916,7 @@
     {
       "id": "191",
       "name": "Light Grubbean",
-      "type": "NatureWind",
+      "type": "Nature Wind",
       "rarity": "Epic",
       "avatar": "light_grubbean_avatar.png",
       "spawns": [
@@ -1940,13 +1940,13 @@
       "rarity": "Rare",
       "avatar": "light_sparkspeck_avatar.png",
       "spawns": [
-        {"place": "Shores","zone": ["Cualquier Objeto Zona 1 de la Playa"],"view": "object","objectImage": "../assets/images/spawns/beach.jpg","days": ["Lunes", "Jueves"]}
+        {"place": "Shores","zone": ["Any Object in 1st Area in Shores"],"view": "object","objectImage": "../assets/images/spawns/beach.jpg","days": ["Lunes", "Jueves"]}
       ]
     },
     {
       "id": "194",
       "name": "Light Wavesling",
-      "type": "WaterWind",
+      "type": "Water Wind",
       "rarity": "Rare",
       "avatar": "light_wavesling_avatar.png",
       "spawns": [
@@ -1996,7 +1996,7 @@
     {
       "id": "199",
       "name": "Light Digsy",
-      "type": "FireEarth",
+      "type": "Fire Earth",
       "rarity": "Epic",
       "avatar": "light_digsy_avatar.png",
       "spawns": [
@@ -2020,7 +2020,7 @@
       "rarity": "Rare",
       "avatar": "light_mumbah_avatar.png",
       "spawns": [
-        {"place": "Shores","zone": ["Cualquier Objeto Zona 4 de la Playa"],"view": "object","objectImage": "../assets/images/spawns/beach.jpg","days": ["Miercoles", "Sabado"]}
+        {"place": "Shores","zone": ["Any Object in 4th Area in Shores"],"view": "object","objectImage": "../assets/images/spawns/beach.jpg","days": ["Miercoles", "Sabado"]}
       ]
     },
     {
@@ -2030,7 +2030,7 @@
       "rarity": "Rare",
       "avatar": "dark_tongutail_avatar.png",
       "spawns": [
-        {"place": "Mansion","zone": ["Cualquier Objeto 2do piso de la Mansion"],"view": "object","objectImage": "../assets/images/spawns/mansion.jpg","days": ["Miercoles", "Sabado"]}
+        {"place": "Mansion","zone": ["Any Object in 2nd Floor in Mansion"],"view": "object","objectImage": "../assets/images/spawns/mansion.jpg","days": ["Miercoles", "Sabado"]}
       ]
     },
     {
@@ -2040,7 +2040,7 @@
       "rarity": "Rare",
       "avatar": "dark_lavarilla_avatar.png",
       "spawns": [
-        {"place": "Mansion","zone": ["Cualquier Objeto fuera de la Mansion"],"view": "object","objectImage": "../assets/images/spawns/mansion_outside.png","days": ["Lunes", "Jueves", "Sabado"]}
+        {"place": "Mansion","zone": ["Any Object in Mansion Outside"],"view": "object","objectImage": "../assets/images/spawns/mansion_outside.png","days": ["Lunes", "Jueves", "Sabado"]}
       ]
     },
     {
@@ -2050,7 +2050,7 @@
       "rarity": "Rare",
       "avatar": "dark_frostmite_avatar.png",
       "spawns": [
-        {"place": "Cave","zone": ["Cualquier Objeto Zona 4 de la Cueva"],"view": "object","objectImage": "../assets/images/spawns/cave.jpg","days": ["Lunes", "Miercoles", "Viernes"]}
+        {"place": "Cave","zone": ["Any Object in 4th Area in Cave"],"view": "object","objectImage": "../assets/images/spawns/cave.jpg","days": ["Lunes", "Miercoles", "Viernes"]}
       ]
     },
     {
@@ -2120,7 +2120,7 @@
       "rarity": "Rare",
       "avatar": "sol_avatar.png",
       "spawns": [
-        {"place": "Shores","zone": ["Cualquier Objeto Zona 3 de la Playa"],"view": "object","objectImage": "../assets/images/spawns/beach.jpg","days": ["Lunes", "Jueves"]}
+        {"place": "Shores","zone": ["Any Object in 3rd Area in Shores"],"view": "object","objectImage": "../assets/images/spawns/beach.jpg","days": ["Lunes", "Jueves"]}
       ]
     },
     {
@@ -2130,13 +2130,13 @@
       "rarity": "Rare",
       "avatar": "dreamger_avatar.png",
       "spawns": [
-        {"place": "Shores","zone": ["Cualquier Objeto Zona 3 de la Playa"],"view": "object","objectImage": "../assets/images/spawns/beach.jpg","days": ["Martes", "Viernes"]}
+        {"place": "Shores","zone": ["Any Object in 3rd Area in Shores"],"view": "object","objectImage": "../assets/images/spawns/beach.jpg","days": ["Martes", "Viernes"]}
       ]
     },
     {
       "id": "213",
       "name": "Light Weevern",
-      "type": "NatureEarth",
+      "type": "Nature Earth",
       "rarity": "Epic",
       "avatar": "light_weevern_avatar.png",
       "spawns": [
@@ -2150,7 +2150,7 @@
       "rarity": "Rare",
       "avatar": "dark_quirk_avatar.png",
       "spawns": [
-        {"place": "Forest","zone": ["Cualquier Objeto en el Area 2 del Bosque"],"view": "object","objectImage": "../assets/images/spawns/forest.jpg","days": ["Lunes", "Jueves"]}
+        {"place": "Forest","zone": ["Any Object 2nd Area in Forest"],"view": "object","objectImage": "../assets/images/spawns/forest.jpg","days": ["Lunes", "Jueves"]}
       ]
     },
     {
@@ -2160,7 +2160,7 @@
       "rarity": "Rare",
       "avatar": "dark_squirmle_avatar.png",
       "spawns": [
-        {"place": "Forest","zone": ["Cualquier Objeto en el Area 2 del Bosque"],"view": "object","objectImage": "../assets/images/spawns/forest.jpg","days": ["Miercoles", "Sabado"]}
+        {"place": "Forest","zone": ["Any Object 2nd Area in Forest"],"view": "object","objectImage": "../assets/images/spawns/forest.jpg","days": ["Miercoles", "Sabado"]}
       ]
     },
     {
@@ -2170,7 +2170,7 @@
       "rarity": "Legendary",
       "avatar": "blighted_flowerpiller_avatar.png",
       "spawns": [
-        {"place": "Forest","zone": ["Area 4 del Bosque"],"view": "object","objectImage": "../assets/images/spawns/BlightedFlower.png","days": "ALL_DAYS"}
+        {"place": "Forest","zone": ["Forest 4"],"view": "object","objectImage": "../assets/images/spawns/BlightedFlower.png","days": "ALL_DAYS"}
       ]
     },
     {
@@ -2200,7 +2200,7 @@
       "rarity": "Rare",
       "avatar": "dark_vexie_avatar.png",
       "spawns": [
-        {"place": "Mount Gemma","zone": ["Cualquier Objeto en el Area 2 del MT Gemma"],"view": "object","objectImage": "../assets/images/spawns/mount_gemma.jpg","days": ["Martes", "Viernes"]}
+        {"place": "Mount Gemma","zone": ["Any Object 2nd Area in MT Gemma"],"view": "object","objectImage": "../assets/images/spawns/mount_gemma.jpg","days": ["Martes", "Viernes"]}
       ]
     },
     {
@@ -2216,7 +2216,7 @@
     {
       "id": "221",
       "name": "Light Snorkels",
-      "type": "WaterWind",
+      "type": "Water Wind",
       "rarity": "Exotic",
       "avatar": "light_snorkels_avatar.png",
       "spawns": [
@@ -2240,7 +2240,7 @@
       "rarity": "Common",
       "avatar": "freezet_avatar.png",
       "spawns": [
-        {"place": "Cave","zone": ["Cualquier Objeto en Cave"],"view": "object","objectImage": "../assets/images/spawns/cave.jpg","days": "ALL_DAYS"}
+        {"place": "Cave","zone": ["Any Object 1st Area in Cave"],"view": "object","objectImage": "../assets/images/spawns/cave.jpg","days": "ALL_DAYS"}
       ]
     },
     {
@@ -2250,7 +2250,7 @@
       "rarity": "Epic",
       "avatar": "dark_pillblaze_avatar.png",
       "spawns": [
-        {"place": "Cave","zone": ["Zona 4 de la Cueva"],"view": "object","objectImage": "../assets/images/spawns/RightChest.png","days": "ALL_DAYS"}
+        {"place": "Cave","zone": ["Cave 4"],"view": "object","objectImage": "../assets/images/spawns/RightChest.png","days": "ALL_DAYS"}
       ]
     },
     {
@@ -2280,7 +2280,7 @@
       "rarity": "Common",
       "avatar": "mistraxol_avatar.png",
       "spawns": [
-        {"place": "Cave","zone": ["Zona 1 de la Cueva"],"view": "object","objectImage": "../assets/images/spawns/cave.jpg","days": "ALL_DAYS"}
+        {"place": "Cave","zone": ["Cave 1"],"view": "object","objectImage": "../assets/images/spawns/cave.jpg","days": "ALL_DAYS"}
       ]
     },
     {
@@ -2290,7 +2290,7 @@
       "rarity": "Common",
       "avatar": "orbling_avatar.png",
       "spawns": [
-        {"place": "Cave","zone": ["Zona 1 de la Cueva"],"view": "object","objectImage": "../assets/images/spawns/cave.jpg","days": "ALL_DAYS"}
+        {"place": "Cave","zone": ["Cave 1"],"view": "object","objectImage": "../assets/images/spawns/cave.jpg","days": "ALL_DAYS"}
       ]
     },
     {
@@ -2300,7 +2300,7 @@
       "rarity": "Common",
       "avatar": "zappup_avatar.png",
       "spawns": [
-        {"place": "Cave","zone": ["Zona 1 de la Cueva"],"view": "object","objectImage": "../assets/images/spawns/cave.jpg","days": "ALL_DAYS"}
+        {"place": "Cave","zone": ["Any Objects 1st Area in Cave"],"view": "object","objectImage": "../assets/images/spawns/cave.jpg","days": "ALL_DAYS"}
       ]
     },
     {
@@ -2310,7 +2310,7 @@
       "rarity": "Common",
       "avatar": "pestling_avatar.png",
       "spawns": [
-        {"place": "Mansion","zone": ["Cualquier Objeto de la Mansion"],"view": "object","objectImage": "../assets/images/spawns/mansion.jpg","days": "ALL_DAYS"}
+        {"place": "Mansion","zone": ["Any Object in Attic Mansion"],"view": "object","objectImage": "../assets/images/spawns/mansion.jpg","days": "ALL_DAYS"}
       ]
     },
     {
@@ -2320,7 +2320,7 @@
       "rarity": "Legendary",
       "avatar": "woolly_avatar.png",
       "spawns": [
-        {"place": "Cave","zone": ["Zona 4 de la Cueva"],"view": "object","objectImage": "../assets/images/spawns/IceChest.png","days": "ALL_DAYS"}
+        {"place": "Cave","zone": ["Cave Zone 4"],"view": "object","objectImage": "../assets/images/spawns/IceChest.png","days": "ALL_DAYS"}
       ]
     },
     {
@@ -2330,7 +2330,7 @@
       "rarity": "Common",
       "avatar": "frozy_avatar.png",
       "spawns": [
-        {"place": "Cave","zone": ["Cualquier objeto de la Cueva"],"view": "object","objectImage": "../assets/images/spawns/cave.jpg","days": "ALL_DAYS"}
+        {"place": "Cave","zone": ["Any Object in Cave"],"view": "object","objectImage": "../assets/images/spawns/cave.jpg","days": "ALL_DAYS"}
       ]
     },
     {
@@ -2350,7 +2350,7 @@
       "rarity": "Common",
       "avatar": "mech_avatar.png",
       "spawns": [
-        {"place": "Forest","zone": ["Cualquier objeto del Bosque"],"view": "object","objectImage": "../assets/images/spawns/forest.jpg","days": "ALL_DAYS"}
+        {"place": "Forest","zone": ["Any Object in Hidden Forest"],"view": "object","objectImage": "../assets/images/spawns/forest.jpg","days": "ALL_DAYS"}
       ]
     },
     {
@@ -2360,7 +2360,7 @@
       "rarity": "Common",
       "avatar": "rexie_avatar.png",
       "spawns": [
-        {"place": "Forest","zone": ["Cualquier objeto del Bosque"],"view": "object","objectImage": "../assets/images/spawns/forest.jpg","days": "ALL_DAYS"}
+        {"place": "Forest","zone": ["Any Object in Hidden Forest"],"view": "object","objectImage": "../assets/images/spawns/forest.jpg","days": "ALL_DAYS"}
       ]
     },
     {
@@ -2376,11 +2376,11 @@
     {
       "id": "237",
       "name": "Aebex",
-      "type": "NatureWind",
+      "type": "Nature Wind",
       "rarity": "Common",
       "avatar": "aebex_avatar.png",
       "spawns": [
-        {"place": "Forest","zone": ["Cualquier objeto del Bosque"],"view": "object","objectImage": "../assets/images/spawns/forest.jpg","days": "ALL_DAYS"}
+        {"place": "Forest","zone": ["Any Object in Hidden Forest"],"view": "object","objectImage": "../assets/images/spawns/forest.jpg","days": "ALL_DAYS"}
       ]
     },
     {
@@ -2390,7 +2390,7 @@
       "rarity": "Rare",
       "avatar": "charix_avatar.png",
       "spawns": [
-        {"place": "Forest","zone": ["Cualquier Objeto en Hidden Forest"],"view": "object","objectImage": "../assets/images/spawns/forest.jpg","days": ["Martes", "Viernes", "Domingo"]}
+        {"place": "Forest","zone": ["Any Object in Hidden Forest"],"view": "object","objectImage": "../assets/images/spawns/forest.jpg","days": ["Martes", "Viernes", "Domingo"]}
       ]
     },
     {
@@ -2420,7 +2420,7 @@
       "rarity": "Rare",
       "avatar": "lambolt_avatar.png",
       "spawns": [
-        {"place": "Moon of Miscria","zone": ["Cualquier Objeto en la Luna"],"view": "object","objectImage": "../assets/images/spawns/moon_of_miscria.jpg","days": ["Miercoles", "Jueves"]}
+        {"place": "Moon of Miscria","zone": ["Any Object in Moon of Miscria"],"view": "object","objectImage": "../assets/images/spawns/moon_of_miscria.jpg","days": ["Miercoles", "Jueves"]}
       ]
     },
     {
@@ -2430,7 +2430,7 @@
       "rarity": "Exotic",
       "avatar": "gravitron_avatar.png",
       "spawns": [
-        {"place": "Moon of Miscria","zone": ["Luna"],"view": "object","objectImage": "../assets/images/spawns/BluePortal.png","days": "ALL_DAYS"}
+        {"place": "Moon of Miscria","zone": ["Moon of Miscria"],"view": "object","objectImage": "../assets/images/spawns/BluePortal.png","days": "ALL_DAYS"}
       ]
     },
     {
@@ -2440,7 +2440,7 @@
       "rarity": "Epic",
       "avatar": "babakku_avatar.png",
       "spawns": [
-        {"place": "Moon of Miscria","zone": ["Cualquier Objeto en la Luna"],"view": "object","objectImage": "../assets/images/spawns/moon_of_miscria.jpg","days": ["Domingo"]}
+        {"place": "Moon of Miscria","zone": ["Any Object in Moon of Miscria"],"view": "object","objectImage": "../assets/images/spawns/moon_of_miscria.jpg","days": ["Domingo"]}
       ]
     },
     {
@@ -2450,7 +2450,7 @@
       "rarity": "Exotic",
       "avatar": "smolderfry_avatar.png",
       "spawns": [
-        {"place": "Moon of Miscria","zone": ["Luna"],"view": "object","objectImage": "../assets/images/spawns/Crater.png","days": "ALL_DAYS"}
+        {"place": "Moon of Miscria","zone": ["Moon of Miscria"],"view": "object","objectImage": "../assets/images/spawns/Crater.png","days": "ALL_DAYS"}
       ]
     },
     {
@@ -2460,7 +2460,7 @@
       "rarity": "Common",
       "avatar": "moondrip_avatar.png",
       "spawns": [
-        {"place": "Moon of Miscria","zone": ["Cualquier objeto de la Luna"],"view": "object","objectImage": "../assets/images/spawns/moon_of_miscria.jpg","days": "ALL_DAYS"}
+        {"place": "Moon of Miscria","zone": ["Any Object in Moon of Miscria"],"view": "object","objectImage": "../assets/images/spawns/moon_of_miscria.jpg","days": "ALL_DAYS"}
       ]
     },
     {
@@ -2470,7 +2470,7 @@
       "rarity": "Rare",
       "avatar": "shroolet_avatar.png",
       "spawns": [
-        {"place": "Moon of Miscria","zone": ["Cualquier Objeto en la Cueva de la Luna"],"view": "object","objectImage": "../assets/images/spawns/moon_cave.jpg","days": ["Viernes", "Sabado"]}
+        {"place": "Moon of Miscria","zone": ["Any Object in Moon Cave"],"view": "object","objectImage": "../assets/images/spawns/moon_cave.jpg","days": ["Viernes", "Sabado"]}
       ]
     },
     {
@@ -2480,17 +2480,17 @@
       "rarity": "Common",
       "avatar": "lumite_avatar.png",
       "spawns": [
-        {"place": "Moon of Miscria","zone": ["Cualquier objeto de la Luna"],"view": "object","objectImage": "../assets/images/spawns/moon_of_miscria.jpg","days": "ALL_DAYS"}
+        {"place": "Moon of Miscria","zone": ["Any Object in Moon of Miscria"],"view": "object","objectImage": "../assets/images/spawns/moon_of_miscria.jpg","days": "ALL_DAYS"}
       ]
     },
     {
       "id": "248",
       "name": "Voidotron",
-      "type": "FireWind",
+      "type": "Fire Wind",
       "rarity": "Legendary",
       "avatar": "voidotron_avatar.png",
       "spawns": [
-        {"place": "Moon of Miscria","zone": ["Cueva de la Luna"],"view": "object","objectImage": "../assets/images/spawns/SmallVoid.png","days": "ALL_DAYS"}
+        {"place": "Moon of Miscria","zone": ["Moon Cave"],"view": "object","objectImage": "../assets/images/spawns/SmallVoid.png","days": "ALL_DAYS"}
       ]
     },
     {
@@ -2500,7 +2500,7 @@
       "rarity": "Epic",
       "avatar": "niboro_avatar.png",
       "spawns": [
-        {"place": "Moon of Miscria","zone": ["Cueva de la Luna"],"view": "object","objectImage": "../assets/images/spawns/StatueNero2.png","days": ["Jueves", "Viernes", "Sabado"]}
+        {"place": "Moon of Miscria","zone": ["Moon Cave"],"view": "object","objectImage": "../assets/images/spawns/StatueNero2.png","days": ["Jueves", "Viernes", "Sabado"]}
       ]
     },
     {
@@ -2510,7 +2510,7 @@
       "rarity": "Exotic",
       "avatar": "pinplar_avatar.png",
       "spawns": [
-        {"place": "Moon of Miscria","zone": ["Cueva de la Luna"],"view": "object","objectImage": "../assets/images/spawns/Skeleton.png","days": "ALL_DAYS"}
+        {"place": "Moon of Miscria","zone": ["Moon Cave"],"view": "object","objectImage": "../assets/images/spawns/Skeleton.png","days": "ALL_DAYS"}
       ]
     },
     {
@@ -2520,7 +2520,7 @@
       "rarity": "Exotic",
       "avatar": "lithos_avatar.png",
       "spawns": [
-        {"place": "Moon of Miscria","zone": ["Luna"],"view": "object","objectImage": "../assets/images/spawns/Artifact.png","days": "ALL_DAYS"}
+        {"place": "Moon of Miscria","zone": ["Moon of Miscria"],"view": "object","objectImage": "../assets/images/spawns/Artifact.png","days": "ALL_DAYS"}
       ]
     },
     {
@@ -2530,7 +2530,7 @@
       "rarity": "Common",
       "avatar": "brainzer_avatar.png",
       "spawns": [
-        {"place": "Moon of Miscria","zone": ["Cualquier objeto de la Luna"],"view": "object","objectImage": "../assets/images/spawns/moon_of_miscria.jpg","days": "ALL_DAYS"}
+        {"place": "Moon of Miscria","zone": ["Any Object in Moon of Miscria"],"view": "object","objectImage": "../assets/images/spawns/moon_of_miscria.jpg","days": "ALL_DAYS"}
       ]
     },
     {
@@ -2540,27 +2540,27 @@
       "rarity": "Exotic",
       "avatar": "pyrex_avatar.png",
       "spawns": [
-        {"place": "Moon of Miscria","zone": ["Cueva de la Luna"],"view": "object","objectImage": "../assets/images/spawns/Void.png","days": "ALL_DAYS"}
+        {"place": "Moon of Miscria","zone": ["Moon Cave"],"view": "object","objectImage": "../assets/images/spawns/Void.png","days": "ALL_DAYS"}
       ]
     },
     {
       "id": "254",
       "name": "Oozie",
-      "type": "WaterLightning",
+      "type": "Water Lightning",
       "rarity": "Rare",
       "avatar": "oozie_avatar.png",
       "spawns": [
-        {"place": "Moon of Miscria","zone": ["Cualquier Objeto en la Cueva de la Luna"],"view": "object","objectImage": "../assets/images/spawns/moon_cave.jpg","days": ["Miercoles", "Jueves"]}
+        {"place": "Moon of Miscria","zone": ["Any Object in Moon Cave"],"view": "object","objectImage": "../assets/images/spawns/moon_cave.jpg","days": ["Miercoles", "Jueves"]}
       ]
     },
     {
       "id": "255",
       "name": "Lunako",
-      "type": "FireEarth",
+      "type": "Fire Earth",
       "rarity": "Rare",
       "avatar": "lunako_avatar.png",
       "spawns": [
-        {"place": "Moon of Miscria","zone": ["Cualquier Objeto en la Luna"],"view": "object","objectImage": "../assets/images/spawns/moon_of_miscria.jpg","days": ["Viernes", "Sabado"]}
+        {"place": "Moon of Miscria","zone": ["Any Object in Moon of Miscria"],"view": "object","objectImage": "../assets/images/spawns/moon_of_miscria.jpg","days": ["Viernes", "Sabado"]}
       ]
     },
     {
@@ -2570,7 +2570,7 @@
       "rarity": "Rare",
       "avatar": "rephily_avatar.png",
       "spawns": [
-        {"place": "Moon of Miscria","zone": ["Cualquier Objeto en la Luna"],"view": "object","objectImage": "../assets/images/spawns/moon_of_miscria.jpg","days": ["Lunes", "Martes"]}
+        {"place": "Moon of Miscria","zone": ["Any Object in Moon of Miscria"],"view": "object","objectImage": "../assets/images/spawns/moon_of_miscria.jpg","days": ["Lunes", "Martes"]}
       ]
     },
     {
@@ -2580,7 +2580,7 @@
       "rarity": "Common",
       "avatar": "eluzar_avatar.png",
       "spawns": [
-        {"place": "Moon of Miscria","zone": ["Cualquier objeto de la Luna"],"view": "object","objectImage": "../assets/images/spawns/moon_of_miscria.jpg","days": "ALL_DAYS"}
+        {"place": "Moon of Miscria","zone": ["Any Object in Moon of Miscria"],"view": "object","objectImage": "../assets/images/spawns/moon_of_miscria.jpg","days": "ALL_DAYS"}
       ]
     },
     {
@@ -2590,17 +2590,17 @@
       "rarity": "Rare",
       "avatar": "furiko_avatar.png",
       "spawns": [
-        {"place": "Moon of Miscria","zone": ["Cualquier Objeto en la Cueva de la Luna"],"view": "object","objectImage": "../assets/images/spawns/moon_cave.jpg","days": ["Lunes", "Martes"]}
+        {"place": "Moon of Miscria","zone": ["Any Object in Moon Cave"],"view": "object","objectImage": "../assets/images/spawns/moon_cave.jpg","days": ["Lunes", "Martes"]}
       ]
     },
     {
       "id": "259",
       "name": "Bunplop",
-      "type": "WaterEarth",
+      "type": "Water Earth",
       "rarity": "Epic",
       "avatar": "bunplop_avatar.png",
       "spawns": [
-        {"place": "Moon of Miscria","zone": ["Cueva de la Luna"],"view": "object","objectImage": "../assets/images/spawns/StatueNero2.png","days": ["Lunes", "Martes", "Miercoles"]}
+        {"place": "Moon of Miscria","zone": ["Moon Cave"],"view": "object","objectImage": "../assets/images/spawns/StatueNero2.png","days": ["Lunes", "Martes", "Miercoles"]}
       ]
     },
     {
@@ -2610,17 +2610,17 @@
       "rarity": "Common",
       "avatar": "drilune_avatar.png",
       "spawns": [
-        {"place": "Moon of Miscria","zone": ["Cualquier objeto de la Luna"],"view": "object","objectImage": "../assets/images/spawns/moon_of_miscria.jpg","days": "ALL_DAYS"}
+        {"place": "Moon of Miscria","zone": ["Any Object in Moon of Miscria"],"view": "object","objectImage": "../assets/images/spawns/moon_of_miscria.jpg","days": "ALL_DAYS"}
       ]
     },
     {
       "id": "261",
       "name": "Flaclay",
-      "type": "FireEarth",
+      "type": "Fire Earth",
       "rarity": "Common",
       "avatar": "flaclay_avatar.png",
       "spawns": [
-        {"place": "Moon of Miscria","zone": ["Cualquier objeto de la Luna"],"view": "object","objectImage": "../assets/images/spawns/moon_of_miscria.jpg","days": "ALL_DAYS"}
+        {"place": "Moon of Miscria","zone": ["Any Object in Moon of Miscria"],"view": "object","objectImage": "../assets/images/spawns/moon_of_miscria.jpg","days": "ALL_DAYS"}
       ]
     },
     {
@@ -2630,7 +2630,7 @@
       "rarity": "Common",
       "avatar": "enex_avatar.png",
       "spawns": [
-        {"place": "Moon of Miscria","zone": ["Cualquier objeto de la Luna"],"view": "object","objectImage": "../assets/images/spawns/moon_of_miscria.jpg","days": "ALL_DAYS"}
+        {"place": "Moon of Miscria","zone": ["Any Object in Moon of Miscria"],"view": "object","objectImage": "../assets/images/spawns/moon_of_miscria.jpg","days": "ALL_DAYS"}
       ]
     },
     {
@@ -2640,7 +2640,7 @@
       "rarity": "Common",
       "avatar": "voltombra_avatar.png",
       "spawns": [
-        {"place": "Moon of Miscria","zone": ["Cualquier objeto de la Luna"],"view": "object","objectImage": "../assets/images/spawns/moon_of_miscria.jpg","days": "ALL_DAYS"}
+        {"place": "Moon of Miscria","zone": ["Any Object in Moon of Miscria"],"view": "object","objectImage": "../assets/images/spawns/moon_of_miscria.jpg","days": "ALL_DAYS"}
       ]
     },
     {
@@ -2650,7 +2650,7 @@
       "rarity": "Exotic",
       "avatar": "eclipso_avatar.png",
       "spawns": [
-        {"place": "Moon of Miscria","zone": ["Cueva de la Luna"],"view": "object","objectImage": "../assets/images/spawns/Rock.png","days": "ALL_DAYS"}
+        {"place": "Moon of Miscria","zone": ["Moon Cave"],"view": "object","objectImage": "../assets/images/spawns/Rock.png","days": "ALL_DAYS"}
       ]
     },
     {
@@ -2660,17 +2660,17 @@
       "rarity": "Rare",
       "avatar": "osmeron_avatar.png",
       "spawns": [
-        {"place": "Moon of Miscria","zone": ["Cualquier Objeto en la Cueva de la Luna"],"view": "object","objectImage": "../assets/images/spawns/moon_cave.jpg","days": ["Domingo"]}
+        {"place": "Moon of Miscria","zone": ["Any Object in Moon Cave"],"view": "object","objectImage": "../assets/images/spawns/moon_cave.jpg","days": ["Domingo"]}
       ]
     },
     {
       "id": "266",
       "name": "Mooncrit",
-      "type": "WaterEarth",
+      "type": "Water Earth",
       "rarity": "Rare",
       "avatar": "mooncrit_avatar.png",
       "spawns": [
-        {"place": "Moon of Miscria","zone": ["Cualquier Objeto en la Luna"],"view": "object","objectImage": "../assets/images/spawns/moon_of_miscria.jpg","days": ["Domingo"]}
+        {"place": "Moon of Miscria","zone": ["Any Object in Moon of Miscria"],"view": "object","objectImage": "../assets/images/spawns/moon_of_miscria.jpg","days": ["Domingo"]}
       ]
     },
     {
@@ -2680,7 +2680,7 @@
       "rarity": "Legendary",
       "avatar": "beateorite_avatar.png",
       "spawns": [
-        {"place": "Moon of Miscria","zone": ["Luna"],"view": "object","objectImage": "../assets/images/spawns/FloatRock.png","days": "ALL_DAYS"}
+        {"place": "Moon of Miscria","zone": ["Moon of Miscria"],"view": "object","objectImage": "../assets/images/spawns/FloatRock.png","days": "ALL_DAYS"}
       ]
     },
     {
@@ -2690,7 +2690,7 @@
       "rarity": "Common",
       "avatar": "silkire_avatar.png",
       "spawns": [
-        {"place": "Moon of Miscria","zone": ["Cualquier objeto de la Luna"],"view": "object","objectImage": "../assets/images/spawns/moon_of_miscria.jpg","days": "ALL_DAYS"}
+        {"place": "Moon of Miscria","zone": ["Any Object in Moon of Miscria"],"view": "object","objectImage": "../assets/images/spawns/moon_of_miscria.jpg","days": "ALL_DAYS"}
       ]
     },
     {
@@ -2700,7 +2700,7 @@
       "rarity": "Common",
       "avatar": "zephry_avatar.png",
       "spawns": [
-        {"place": "Moon of Miscria","zone": ["Cualquier objeto de la Luna"],"view": "object","objectImage": "../assets/images/spawns/moon_of_miscria.jpg","days": "ALL_DAYS"}
+        {"place": "Moon of Miscria","zone": ["Any Object in Moon of Miscria"],"view": "object","objectImage": "../assets/images/spawns/moon_of_miscria.jpg","days": "ALL_DAYS"}
       ]
     },
     {
@@ -2710,7 +2710,7 @@
       "rarity": "Common",
       "avatar": "fungask_avatar.png",
       "spawns": [
-        {"place": "Moon of Miscria","zone": ["Cualquier objeto de la Luna"],"view": "object","objectImage": "../assets/images/spawns/moon_of_miscria.jpg","days": "ALL_DAYS"}
+        {"place": "Moon of Miscria","zone": ["Any Object in Moon of Miscria"],"view": "object","objectImage": "../assets/images/spawns/moon_of_miscria.jpg","days": "ALL_DAYS"}
       ]
     },
     {
@@ -2720,7 +2720,7 @@
       "rarity": "Epic",
       "avatar": "larbunni_avatar.png",
       "spawns": [
-        {"place": "Moon of Miscria","zone": ["Cualquier Objeto en la Cueva de la Luna"],"view": "object","objectImage": "../assets/images/spawns/moon_cave.jpg","days": ["Domingo"]}
+        {"place": "Moon of Miscria","zone": ["Any Object in Moon Cave"],"view": "object","objectImage": "../assets/images/spawns/moon_cave.jpg","days": ["Domingo"]}
       ]
     },
     {
@@ -2730,7 +2730,7 @@
       "rarity": "Common",
       "avatar": "yuefira_avatar.png",
       "spawns": [
-        {"place": "Moon of Miscria","zone": ["Cualquier objeto de la Luna"],"view": "object","objectImage": "../assets/images/spawns/moon_of_miscria.jpg","days": "ALL_DAYS"}
+        {"place": "Moon of Miscria","zone": ["Any Object in Moon of Miscria"],"view": "object","objectImage": "../assets/images/spawns/moon_of_miscria.jpg","days": "ALL_DAYS"}
       ]
     },
     {
@@ -2740,27 +2740,27 @@
       "rarity": "Common",
       "avatar": "mucora_avatar.png",
       "spawns": [
-        {"place": "The Shac","zone": ["Cualquier objeto del Shac"],"view": "object","objectImage": "../assets/images/spawns/the_shac.jpg","days": "ALL_DAYS"}
+        {"place": "The Shac","zone": ["Any Object in The Shac"],"view": "object","objectImage": "../assets/images/spawns/the_shac.jpg","days": "ALL_DAYS"}
       ]
     },
     {
       "id": "274",
       "name": "Goo",
-      "type": "WaterEarth",
+      "type": "Water Earth",
       "rarity": "Common",
       "avatar": "goo_avatar.png",
       "spawns": [
-        {"place": "The Shac","zone": ["Cualquier objeto del Shac"],"view": "object","objectImage": "../assets/images/spawns/the_shac.jpg","days": "ALL_DAYS"}
+        {"place": "The Shac","zone": ["Any Object in The Shac"],"view": "object","objectImage": "../assets/images/spawns/the_shac.jpg","days": "ALL_DAYS"}
       ]
     },
     {
       "id": "275",
       "name": "Avarus",
-      "type": "FireWind",
+      "type": "Fire Wind",
       "rarity": "Common",
       "avatar": "avarus_avatar.png",
       "spawns": [
-        {"place": "The Shac","zone": ["Cualquier objeto del Shac"],"view": "object","objectImage": "../assets/images/spawns/the_shac.jpg","days": "ALL_DAYS"}
+        {"place": "The Shac","zone": ["Any Object in The Shac"],"view": "object","objectImage": "../assets/images/spawns/the_shac.jpg","days": "ALL_DAYS"}
       ]
     },
     {
@@ -2770,7 +2770,7 @@
       "rarity": "Common",
       "avatar": "beakka_avatar.png",
       "spawns": [
-        {"place": "The Shac","zone": ["Cualquier objeto del Shac"],"view": "object","objectImage": "../assets/images/spawns/the_shac.jpg","days": "ALL_DAYS"}
+        {"place": "The Shac","zone": ["Any Object in The Shac"],"view": "object","objectImage": "../assets/images/spawns/the_shac.jpg","days": "ALL_DAYS"}
       ]
     },
     {
@@ -2780,7 +2780,7 @@
       "rarity": "Common",
       "avatar": "whispen_avatar.png",
       "spawns": [
-        {"place": "The Shac","zone": ["Cualquier objeto del Shac"],"view": "object","objectImage": "../assets/images/spawns/the_shac.jpg","days": "ALL_DAYS"}
+        {"place": "The Shac","zone": ["Any Object in The Shac"],"view": "object","objectImage": "../assets/images/spawns/the_shac.jpg","days": "ALL_DAYS"}
       ]
     },
     {
@@ -2790,7 +2790,7 @@
       "rarity": "Common",
       "avatar": "fickra_avatar.png",
       "spawns": [
-        {"place": "The Shac","zone": ["Cualquier objeto del Shac"],"view": "object","objectImage": "../assets/images/spawns/the_shac.jpg","days": "ALL_DAYS"}
+        {"place": "The Shac","zone": ["Any Object in The Shac"],"view": "object","objectImage": "../assets/images/spawns/the_shac.jpg","days": "ALL_DAYS"}
       ]
     },
     {
@@ -2800,7 +2800,7 @@
       "rarity": "Rare",
       "avatar": "pirate_bludger_avatar.png",
       "spawns": [
-        {"place": "The Shac","zone": ["Cualquier Objeto 2do piso del Shac"],"view": "object","objectImage": "../assets/images/spawns/the_shac.jpg","days": ["Viernes", "Sabado", "Domingo"]}
+        {"place": "The Shac","zone": ["Any Object in 2nd Floor of The Shac"],"view": "object","objectImage": "../assets/images/spawns/the_shac.jpg","days": ["Viernes", "Sabado", "Domingo"]}
       ]
     },
     {
@@ -2810,7 +2810,7 @@
       "rarity": "Rare",
       "avatar": "lutox_avatar.png",
       "spawns": [
-        {"place": "The Shac","zone": ["Cualquier Objeto 1er piso del Shac"],"view": "object","objectImage": "../assets/images/spawns/the_shac.jpg","days": "ALL_DAYS"}
+        {"place": "The Shac","zone": ["Any Object in 1st Floor of The Shac"],"view": "object","objectImage": "../assets/images/spawns/the_shac.jpg","days": "ALL_DAYS"}
       ]
     },
     {
@@ -2820,7 +2820,7 @@
       "rarity": "Rare",
       "avatar": "deetlee_avatar.png",
       "spawns": [
-        {"place": "The Shac","zone": ["Cualquier Objeto en Lower Basement del Shac"],"view": "object","objectImage": "../assets/images/spawns/the_shac.jpg","days": ["Lunes", "Martes", "Miercoles", "Jueves"]}
+        {"place": "The Shac","zone": ["Any Object in Lower Basement of The Shac"],"view": "object","objectImage": "../assets/images/spawns/the_shac.jpg","days": ["Lunes", "Martes", "Miercoles", "Jueves"]}
       ]
     },
     {
@@ -2830,17 +2830,17 @@
       "rarity": "Rare",
       "avatar": "ampupine_avatar.png",
       "spawns": [
-        {"place": "The Shac","zone": ["Cualquier Objeto en Basement del Shac"],"view": "object","objectImage": "../assets/images/spawns/the_shac.jpg","days": "ALL_DAYS"}
+        {"place": "The Shac","zone": ["Any Object in Basement of The Shac"],"view": "object","objectImage": "../assets/images/spawns/the_shac.jpg","days": "ALL_DAYS"}
       ]
     },
     {
       "id": "283",
       "name": "Hekatom",
-      "type": "NatureWind",
+      "type": "Nature Wind",
       "rarity": "Epic",
       "avatar": "hekatom_avatar.png",
       "spawns": [
-        {"place": "The Shac","zone": ["2do piso del Shac"],"view": "object","objectImage": "../assets/images/spawns/Miscripedia.png","days": "ALL_DAYS"}
+        {"place": "The Shac","zone": ["2nd Floor of The Shac"],"view": "object","objectImage": "../assets/images/spawns/Miscripedia.png","days": "ALL_DAYS"}
       ]
     },
     {
@@ -2850,7 +2850,7 @@
       "rarity": "Epic",
       "avatar": "scarecrow_charix_avatar.png",
       "spawns": [
-        {"place": "The Shac","zone": ["1er piso del Shac"],"view": "object","objectImage": "../assets/images/spawns/Earth.png","days": ["Viernes", "Sabado", "Domingo"]}
+        {"place": "The Shac","zone": ["1st Floor of The Shac"],"view": "object","objectImage": "../assets/images/spawns/Earth.png","days": ["Viernes", "Sabado", "Domingo"]}
       ]
     },
     {
@@ -2870,7 +2870,7 @@
       "rarity": "Epic",
       "avatar": "grimm_kiloray_avatar.png",
       "spawns": [
-        {"place": "The Shac","zone": ["1er piso del Shac"],"view": "object","objectImage": "../assets/images/spawns/DustyTable.png","days": ["Lunes", "Martes", "Miercoles", "Jueves"]}
+        {"place": "The Shac","zone": ["1st Floor of The Shac"],"view": "object","objectImage": "../assets/images/spawns/DustyTable.png","days": ["Lunes", "Martes", "Miercoles", "Jueves"]}
       ]
     },
     {
@@ -2910,7 +2910,7 @@
       "rarity": "Common",
       "avatar": "sora_avatar.png",
       "spawns": [
-        {"place": "The Shac","zone": ["Cualquier objeto del Shac"],"view": "object","objectImage": "../assets/images/spawns/the_shac.jpg","days": "ALL_DAYS"}
+        {"place": "The Shac","zone": ["Any Object in The Shac"],"view": "object","objectImage": "../assets/images/spawns/the_shac.jpg","days": "ALL_DAYS"}
       ]
     },
     {
@@ -2920,7 +2920,7 @@
       "rarity": "Rare",
       "avatar": "dark_sparkslug_avatar.png",
       "spawns": [
-        {"place": "The Shac","zone": ["Cualquier Objeto 2do piso del Shac"],"view": "object","objectImage": "../assets/images/spawns/the_shac.jpg","days": ["Lunes", "Martes", "Miercoles", "Jueves"]}
+        {"place": "The Shac","zone": ["Any Object in 2nd Floor of The Shac"],"view": "object","objectImage": "../assets/images/spawns/the_shac.jpg","days": ["Lunes", "Martes", "Miercoles", "Jueves"]}
       ]
     },
     {
@@ -2950,7 +2950,7 @@
       "rarity": "Common",
       "avatar": "poppet_avatar.png",
       "spawns": [
-        {"place": "The Shac","zone": ["Cualquier objeto del Shac"],"view": "object","objectImage": "../assets/images/spawns/the_shac.jpg","days": "ALL_DAYS"}
+        {"place": "The Shac","zone": ["Any Object in The Shac"],"view": "object","objectImage": "../assets/images/spawns/the_shac.jpg","days": "ALL_DAYS"}
       ]
     },
     {
@@ -2960,7 +2960,7 @@
       "rarity": "Rare",
       "avatar": "nubyll_avatar.png",
       "spawns": [
-        {"place": "The Shac","zone": ["Cualquier Objeto en Lower Basement del Shac"],"view": "object","objectImage": "../assets/images/spawns/the_shac.jpg","days": ["Viernes", "Sabado", "Domingo"]}
+        {"place": "The Shac","zone": ["Any Object in Lower Basement of The Shac"],"view": "object","objectImage": "../assets/images/spawns/the_shac.jpg","days": ["Viernes", "Sabado", "Domingo"]}
       ]
     },
     {

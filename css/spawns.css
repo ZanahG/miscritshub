@@ -1,3 +1,14 @@
+:root{
+  --bg:#0b0f14;
+  --card:#121926;
+  --muted:#9aa4b2;
+  --text:#e6edf3;
+  --line:#223049;
+  --accent:#ffffff;
+  --accent2:#4ade80;
+  --danger:#fb7185;
+}
+
 .spawns{ padding: 28px 0 56px; }
 
 .spawns__head{
@@ -19,13 +30,13 @@
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 14px;
-  align-items: end; /* alinea bottoms de inputs/selects */
+  align-items: end;
 }
 .field--check .check{
   display: flex;
   align-items: center;
   gap: 10px;
-  min-height: 44px; /* similar a input height */
+  min-height: 44px;
   padding: 10px 12px;
   border-radius: 14px;
   border: 1px solid var(--line);
@@ -160,7 +171,6 @@
 }
 .muted{ color: rgba(255,255,255,0.60); }
 
-/* Modal */
 .modal{ position: fixed; inset: 0; z-index: 60; }
 .modal__backdrop{ position:absolute; inset:0; background: rgba(0,0,0,0.55); }
 .modal__panel{
@@ -237,7 +247,7 @@
   }
 }
 /* =========================
-   Spawn Cards V2 (screenshot style)
+   Spawn Cards V2
 ========================= */
 #activeChips{
   margin-top: 12px;
@@ -250,11 +260,10 @@
 }
 .spawnCardV2{
   content-visibility: auto;
-  contain-intrinsic-size: 220px; /* altura estimada de la card */
+  contain-intrinsic-size: 220px;
   contain: layout paint style;
 }
 .card{
-  /* backdrop-filter: blur(14px); */
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
 }
@@ -317,7 +326,6 @@
   font-weight: 700;
 }
 
-/* Body */
 .spawnBody{
   display:flex;
   flex-direction: column;
@@ -329,12 +337,11 @@
   color: rgba(255,255,255,0.92);
 }
 
-/* Panel with map background */
 .spawnPanel{
   position: relative;
   border-radius: 16px;
   border: 1px solid rgba(255,255,255,0.10);
-  background: rgba(15,22,36,0.35);  /* glass base */
+  background: rgba(15,22,36,0.35);
   overflow: hidden;
   padding: 12px;
   min-height: 92px;
@@ -372,38 +379,114 @@
 
 .spawnDays{
   display: flex;
-  flex-wrap: wrap;        /* <-- clave */
+  flex-wrap: wrap;
   gap: 8px;
   align-items: center;
   max-width: 100%;
-  overflow: hidden;       /* por si acaso */
+  overflow: hidden;
 }
 
 .dayChip{
-  padding: 7px 10px;
-  border-radius: 999px;
-  border: 1px solid rgba(255,255,255,0.18);
-  background: rgba(10,14,20,0.28);
-  color: rgba(255,255,255,0.92);
   font-size: 12px;
-  backdrop-filter: none;
-  max-width: 100%;
-  white-space: nowrap;
-}
-
-.dayChip{
-  padding: 7px 12px;
+  padding: 6px 10px;
   border-radius: 999px;
-  border: 1px solid rgb(96, 165, 250);
-  background: rgba(66, 90, 88, 0.89);
+  border: 1px solid rgba(96,165,250,.9);
+  background: rgba(96,165,250,.18);
   color: #ffffff;
+  text-shadow:
+    0 0 8px rgba(96,165,250,1),
+    0 0 18px rgba(96,165,250,.75),
+    0 0 28px rgba(96,165,250,.5);
+}
+
+.rarityPill--common{
+  color: #d8d8d8;
+}
+
+.rarityPill--rare{
+  color: #60a5fa;
+  text-shadow: 0 0 6px rgba(21, 44, 250, 0.35);
+  border-color: rgba(21, 25, 250, 0.5);
+}
+
+.rarityPill--epic{
+  color: #00ff00;
+  text-shadow: 0 0 6px rgba(21, 250, 59, 0.35);
+  border-color: rgba(93, 250, 21, 0.5);
+}
+
+.rarityPill--exotic{
+  color: #a78bfa;
+  text-shadow: 0 0 6px rgba(196, 21, 250, 0.35);
+  border-color: rgba(158, 21, 250, 0.5);
+}
+
+.rarityPill--legendary{
+  color: #facc15;
+  text-shadow: 0 0 6px rgba(250, 204, 21, .35);
+  border-color: rgba(250, 204, 21, .5);
+}
+.spawnElemIcon{
+  width: 22px;
+  height: 22px;
+  flex: 0 0 auto;
+  object-fit: contain;
+  background: none;
+  border: none;
+  padding: 0;
+  box-shadow: none;
+  opacity: 0.95;
+}
+
+.mDayPill{
+  display:inline-flex;
+  align-items:center;
+  padding: 6px 10px;
+  border-radius: 999px;
+
+  border: 1px solid rgba(96,165,250,.55);
+  background: rgba(96,165,250,.14);
+
+  color: #fff;
   font-size: 12px;
-  
-  white-space: nowrap;
+  font-weight: 700;
+}
+
+#mDays{
+  display:flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.kv__label{
+  color: rgba(255,255,255,0.65);
+  font-size: 11px;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.field__selectWithIcon{
+  position: relative;
+}
+
+.field__selectIcon{
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  pointer-events: none;
+  opacity: .95;
+  filter: drop-shadow(0 2px 6px rgba(0,0,0,.35));
+}
+
+.field__selectWithIcon .field__input{
+  padding-left: 42px;
 }
 
 
-/* Responsive */
 @media (max-width: 1100px){
   .grid{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }

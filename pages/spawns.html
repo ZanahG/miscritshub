@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Spawns • Miscrits HUB</title>
+  <title>Spawns | Miscrits HUB</title>
 
   <link rel="icon" href="../assets/images/logo.png" sizes="32x32" />
   <link rel="apple-touch-icon" href="../assets/images/logo.png" />
@@ -112,9 +112,13 @@
 
         <label class="field">
           <span class="field__label">Type</span>
-          <select class="field__input" id="type">
-            <option value="">All types</option>
-          </select>
+
+          <div class="field__selectWithIcon">
+            <img id="typeIcon" class="field__selectIcon" alt="" />
+            <select class="field__input" id="type">
+              <option value="">All types</option>
+            </select>
+          </div>
         </label>
 
         <label class="field">
@@ -160,28 +164,12 @@
           </div>
 
           <div class="modal__topActions">
-            <button class="btn" id="mFav" type="button">☆ Favorite</button>
             <button class="btn" data-close type="button">Close</button>
           </div>
         </div>
 
         <div class="modal__body">
           <div class="kv">
-            <div class="kv__item">
-              <div class="kv__label">Miscrit</div>
-              <div class="kv__value" id="mMiscrit">—</div>
-            </div>
-
-            <div class="kv__item">
-              <div class="kv__label">Type</div>
-              <div class="kv__value" id="mType">—</div>
-            </div>
-
-            <div class="kv__item">
-              <div class="kv__label">Rarity</div>
-              <div class="kv__value" id="mRarity">—</div>
-            </div>
-
             <div class="kv__item">
               <div class="kv__label">Zones</div>
               <div class="kv__value" id="mZones">—</div>
@@ -193,7 +181,6 @@
             </div>
           </div>
 
-          <!-- ✅ ya no hay botón “Open map”, solo la imagen -->
           <div class="modal__footer">
             <div class="modal__map" id="mMapWrap">
               <img id="mMapImg" alt="Spawn location map" loading="lazy" />
@@ -204,7 +191,6 @@
     </div>
 
     <footer class="pager" id="pager">
-      <!-- ✅ IDs que espera el JS -->
       <button class="btn ghost" id="btnPrev" type="button">Previous</button>
 
       <div class="pager__mid">
@@ -221,7 +207,6 @@
         </label>
       </div>
 
-      <!-- ✅ IDs que espera el JS -->
       <button class="btn" id="btnNext" type="button">Next</button>
     </footer>
   </main>

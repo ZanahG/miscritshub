@@ -2,6 +2,7 @@
   const $ = (s) => document.querySelector(s);
 
   const PATH = {
+    TYPE_ICON_DIR: "../assets/images/type/",
     SPAWNS: "../assets/data/spawns.json",
     AVATAR_DIR: "../assets/images/miscrits_avatar/",
     PLACES_DIR: "../assets/images/places/",
@@ -10,14 +11,8 @@
   let PAGE = 1;
   let PER_PAGE = 36;
 
-  const RARITY_ORDER = {
-    common: 1,
-    uncommon: 2,
-    rare: 3,
-    epic: 4,
-    exotic: 5,
-    legendary: 6,
-  };
+  const TYPE_BASE_ORDER = ["fire","nature","water","earth","lightning","wind"];
+  const RARITY_ORDER = {common: 1,rare: 2,epic: 3,exotic: 4,legendary: 5,};
 
   const PLACE_ORDER = {
     "forest": 1,
@@ -91,6 +86,7 @@
     rarity: $("#rarity"),
     element: $("#element"),
     type: $("#type"),
+    typeIcon: $("#typeIcon"),
     sort: $("#sort"),
     onlyTodayNoAll: $("#onlyTodayNoAll"),
     pageSize: $("#pageSize"),
@@ -190,7 +186,56 @@
     return RARITY_ORDER[normalize(r)] ?? 999;
   }
 
-  const ELEMENTS = ["fire", "water", "nature", "earth", "wind", "lightning", "physical", "misc"];
+  const ELEMENTS = ["fire", "water", "nature", "earth", "wind", "lightning"];
+
+  function typeRank(typeRaw){
+    const elems = parseElements(typeRaw);
+    if (!elems.length) return 999999;
+
+    const isCombo = elems.length > 1 ? 1 : 0;
+    const primary = TYPE_BASE_ORDER.indexOf(elems[0]);
+    const primaryRank = primary === -1 ? 99 : primary;
+    const secondary = elems[1] ? TYPE_BASE_ORDER.indexOf(elems[1]) : -1;
+    const secondaryRank = secondary === -1 ? 99 : secondary;
+
+    return isCombo * 10000 + primaryRank * 100 + secondaryRank;
+  }
+
+
+  function primaryElement(entry){
+    const elems = parseElements(entry?.type ?? "");
+    const priority = ["fire","water","nature","earth","wind","lightning"];
+    return priority.find(p => elems.includes(p)) || elems[0] || "misc";
+  }
+
+  function elementIconSrc(elKey){
+    const key = normalize(elKey || "misc");
+    return `${PATH.TYPE_ICON_DIR}${key}.png`;
+  }
+
+  function updateTypeSelectIcon(){
+    if (!el.typeIcon) return;
+
+    const val = el.type?.value || "";
+    if (!val){
+      el.typeIcon.style.display = "none";
+      return;
+    }
+
+    el.typeIcon.style.display = "";
+
+    const comboKey = normalize(val).replace(/[^a-z]/g, "");
+    const elem = primaryElement({ type: val });
+    const fallback = elementIconSrc(elem);
+
+    el.typeIcon.onerror = () => {
+      el.typeIcon.onerror = null;
+      el.typeIcon.src = fallback;
+    };
+
+    el.typeIcon.src = `${PATH.TYPE_ICON_DIR}${comboKey}.png`;
+    el.typeIcon.alt = val;
+  }
 
   function parseElements(typeRaw) {
     const s = normalize(typeRaw).replace(/[^a-z]/g, "");
@@ -390,13 +435,21 @@
           <div class="spawnTop__left">
             <img class="spawnAvatar" src="${escapeHtml(e.avatar)}" alt="${escapeHtml(e.name)}" loading="lazy"
               onerror="this.src='${escapeHtml(PATH.AVATAR_DIR)}preset_avatar.png'"/>
+            <img class="spawnElemIcon"
+              src="${escapeHtml(PATH.TYPE_ICON_DIR + normalize(e.type).replace(/[^a-z]/g,'') + '.png')}"
+              onerror="this.onerror=null; this.src='${escapeHtml(elementIconSrc(primaryElement(e)))}'"
+              alt="${escapeHtml(primaryElement(e))}"
+              loading="lazy"
+              onerror="this.style.display='none'"/>
             <div class="spawnTitle">
               <div class="spawnName">${escapeHtml(e.name)}</div>
             </div>
           </div>
 
           <div class="spawnTop__right">
-            <span class="rarityPill">${escapeHtml(e.rarity || "-")}</span>
+            <span class="rarityPill rarityPill--${escapeHtml(normalize(e.rarity || "common"))}">
+              ${escapeHtml(e.rarity || "-")}
+            </span>
           </div>
         </div>
 
@@ -462,8 +515,12 @@
     if (el.mRarity) el.mRarity.textContent = e.rarity || "—";
     if (el.mZones) el.mZones.textContent = (e.zones?.length ? e.zones.join(", ") : "—");
 
-    const daysText = (e.daysEN?.length ? e.daysEN : ["Mon","Tue","Wed","Thu","Fri","Sat","Sun"]).join(" • ");
-    if (el.mDays) el.mDays.textContent = daysText;
+    const daysArr = (e.daysEN?.length ? e.daysEN : ["Mon","Tue","Wed","Thu","Fri","Sat","Sun"]);
+    if (el.mDays){
+      el.mDays.innerHTML = daysArr
+        .map(d => `<span class="mDayPill">${escapeHtml(dayLabelShortToFull(d))}</span>`)
+        .join("");
+    }
 
     if (el.mMapImg) {
       if (e.map) {
@@ -566,8 +623,14 @@
 
     fillSelect(el.place, uniqSorted(STATE.entries.map(e => e.place)), "All places");
     fillSelect(el.zone, uniqSorted(STATE.entries.flatMap(e => e.zones ?? [])), "All zones");
-    fillSelect(el.rarity, uniqSorted(STATE.entries.map(e => e.rarity)), "All rarities");
-    fillSelect(el.type, uniqSorted(STATE.entries.map(e => e.type)), "All types");
+    const rarityVals = [...new Set(STATE.entries.map(e => e.rarity).filter(Boolean))]
+      .sort((a, b) => rarityRank(a) - rarityRank(b) || a.localeCompare(b));
+    fillSelect(el.rarity, rarityVals, "All rarities");
+    const typeVals = [...new Set(STATE.entries.map(e => e.type).filter(Boolean))]
+      .sort((a, b) => typeRank(a) - typeRank(b) || normalize(a).localeCompare(normalize(b)));
+
+    fillSelect(el.type, typeVals, "All types");
+    updateTypeSelectIcon();
 
     if (el.element) fillSelect(el.element, ["fire","water","nature","earth","wind","lightning"], "All elements");
 
@@ -577,7 +640,10 @@
     el.zone?.addEventListener("change", () => requestSync(true));
     el.rarity?.addEventListener("change", () => requestSync(true));
     el.element?.addEventListener("change", () => requestSync(true));
-    el.type?.addEventListener("change", () => requestSync(true));
+    el.type?.addEventListener("change", () => {
+      updateTypeSelectIcon();
+      requestSync(true);
+    });
     el.sort?.addEventListener("change", () => requestSync(true));
     el.onlyTodayNoAll?.addEventListener("change", () => requestSync(true));
     el.pageSize?.addEventListener("change", () => requestSync(true));
