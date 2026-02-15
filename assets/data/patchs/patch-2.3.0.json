@@ -1,0 +1,38 @@
+{
+  "version": "2.3.0",
+  "title": "New Miscrits in Miscrian Jungle",
+  "intro": [
+    "PATCH NOTES VER 2.3.0",
+    "This version brings 4 New Miscrits to the Jungle, hurry up and catch them all!"
+  ],
+  "sections": [
+    {
+      "type": "Miscrit",
+      "name": "Blug",
+      "quote": "Blug's wings are very fragile and can be damaged by even the slightest touch, so it rarely spreads them",
+      "blocks": [
+      ]
+    },
+    {
+      "type": "Miscrit",
+      "name": "Dark Humbug",
+      "quote": "Dark Humbug's serrated beak is horribly, painfully sharp. It's so thin that it can reach through anywhere you try to hide",
+      "blocks": [
+      ]
+    },
+    {
+      "type": "Miscrit",
+      "name": "Kawanko",
+      "quote": "Kawanko is the male counterpart to Bunaken that inhabits the eastern seas of Miscria. Fishermen describe him as a playful creature, often spotted along riverbanks where his lively nature can be observed",
+      "blocks": [
+      ]
+    },
+    {
+      "type": "Miscrit",
+      "name": "Casanova",
+      "quote": "No one can resist the charms of Casanova. Everyone that crosses his path eventually ends up falling in love",
+      "blocks": [
+      ]
+    }
+  ]
+}
