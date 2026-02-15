@@ -426,3 +426,15 @@
 @media (max-width: 360px){
   .evo{ width: 100%; }
 }
+@media (hover: none), (max-width: 720px){
+  .abTip{
+    left: 12px !important;
+    right: 12px !important;
+    width: auto !important;
+    top: auto !important;
+    bottom: 12px !important;
+    max-height: 45vh;
+    overflow: auto;
+    pointer-events: auto;
+  }
+}
