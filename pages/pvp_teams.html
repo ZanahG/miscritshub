@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>PVP Teams | Miscrits HUB</title>
+
+  <link rel="icon" href="../assets/images/logo.png" sizes="32x32" />
+  <link rel="apple-touch-icon" href="../assets/images/logo.png" />
+
+  <link rel="stylesheet" href="../css/global.css" />
+  <link rel="stylesheet" href="../css/navbar.css" />
+  <link rel="stylesheet" href="../css/pvp_teams.css" />
+
+  <script defer src="../js/navbar.js"></script>
+  <script defer src="../js/pvp_teams.js"></script>
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <header class="nav">
+    <div class="nav__inner">
+      <a class="nav__brand" href="../index.html" aria-label="Go home">
+        <img src="../assets/images/logo.png" alt="Miscrits HUB" class="nav__logo" />
+      </a>
+
+      <button class="nav__toggle" type="button" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav__menu" aria-label="Primary navigation">
+        <a class="nav__link" href="./spawns.html">Spawns</a>
+        <a class="nav__link" href="./miscripedia.html">Miscripedia</a>
+
+        <div class="nav__dropdown" data-dropdown>
+          <button class="nav__link nav__dropBtn" type="button" aria-haspopup="true" aria-expanded="false">
+            PVP <span class="nav__chev" aria-hidden="true">▾</span>
+          </button>
+          <div class="nav__dropMenu" role="menu">
+            <a role="menuitem" class="nav__dropItem" href="./team_builder.html">Team Builder</a>
+            <a role="menuitem" class="nav__dropItem" href="./damage_calculator.html">Damage Calculator</a>
+            <a role="menuitem" class="nav__dropItem" href="./pvp_teams.html" aria-current="page">PVP Teams</a>
+          </div>
+        </div>
+
+        <div class="nav__dropdown" data-dropdown>
+          <button class="nav__link nav__dropBtn" type="button" aria-haspopup="true" aria-expanded="false">
+            Tools <span class="nav__chev" aria-hidden="true">▾</span>
+          </button>
+          <div class="nav__dropMenu" role="menu">
+            <a role="menuitem" class="nav__dropItem" href="./stats_calculator.html">Stats Calculator</a>
+            <a role="menuitem" class="nav__dropItem" href="./breeding_calculator.html">Breeding Calculator</a>
+          </div>
+        </div>
+
+        <a class="nav__link" href="./miscritdle.html">Miscritdle</a>
+        <a class="nav__link" href="./patch_notes.html">Patch notes</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap pvpPage">
+    <!-- MAIN GRID -->
+    <section class="card pvp">
+      <div class="pvp__left">
+        <div class="pvpLeft__head">
+          <div class="pvpLeft__title">Miscrits</div>
+          <div class="pvpLeft__meta">By rarity + Meta tiers</div>
+        </div>
+
+        <div id="rarityAccordions"></div>
+      </div>
+
+      <div class="pvp__right">
+        <div class="card pvp__panel" id="teamPanel">
+          <div class="pvp__panelHead">
+            <div class="pvp__panelTitle" id="panelTitle">Select Miscrit</div>
+            <div class="pvp__panelMeta" id="panelMeta">Teams will appear here.</div>
+          </div>
+
+          <div id="teamsList"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CAROUSEL -->
+    <section class="card pvp-carousel" aria-label="Top teams most used">
+      <div class="pvp-carousel__head">
+        <div class="pvp-carousel__title">Top 5 Platinum Arena Players Teams</div>
+        <div class="pvp-carousel__controls">
+          <span class="pvp-carousel__chip">Auto-scroll</span>
+        </div>
+      </div>
+
+      <div class="pvp-carousel__track" id="topTrack" tabindex="0" aria-label="Teams carousel"></div>
+
+      <div class="pvp-carousel__fade left" aria-hidden="true"></div>
+      <div class="pvp-carousel__fade right" aria-hidden="true"></div>
+    </section>
+  </main>
+
+  <!-- MODAL -->
+  <div class="modal" id="miscritModal" aria-hidden="true">
+    <div class="modal__backdrop" data-modal-close></div>
+
+    <div class="modal__card card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal__close" type="button" data-modal-close aria-label="Close">✕</button>
+
+      <!-- TOP CENTER -->
+      <div class="modal__topbar">
+        <div class="modal__tierWrap" id="modalTierWrap">
+          <span class="badge badge--tier" id="modalTier">Tier —</span>
+        </div>
+      </div>
+
+      <!-- HEADER -->
+      <div class="modal__header">
+        <img id="modalAvatar" class="modal__avatar" alt="">
+
+        <div class="modal__headText">
+          <div class="modal__titleRow">
+            <div id="modalTitle" class="modal__title">—</div>
+          </div>
+
+          <div class="modal__metaRow">
+            <img id="modalTypeIcon" class="typeIcon" alt="">
+            <span id="modalTypeText" class="typeText">—</span>
+
+            <span id="modalRarity" class="badge badge--rarity">—</span>
+            <span id="modalBestRank" class="badge badge--rank">—</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal__section">
+        <div class="modal__sectionTitle">Level 35</div>
+        <div class="modal__sectionSubtitle">
+          Stats simulated with all green + 20 bonus points on each attribute. Toggle relics to see deltas.
+        </div>
+        <div class="statsGrid" id="modalStatsGrid"></div>
+      </div>
+
+      <div class="modal__section">
+        <div class="modal__sectionTitle">Relics used</div>
+        <div class="relicRow" id="modalRelicsRow"></div>
+      </div>
+
+      <div class="modal__section">
+        <div class="modal__sectionTitle">Relics optionals</div>
+        <div class="relicRow" id="modalRelicsOptionalRow"></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

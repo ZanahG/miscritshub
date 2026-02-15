@@ -1,0 +1,444 @@
+{
+	"RELICS": {
+    "BLESSED_POLLEN": "../assets/images/relics/blessed_pollen.png",
+    "CLOUD_CAKE": "../assets/images/relics/cloud_cake.png",
+    "DARK_OWLIE_FEATHER": "../assets/images/relics/dark_owlie_feather.png",
+    "ELEFAUNA_FLOWER": "../assets/images/relics/elefauna_flower.png",
+    "PAMBOO_CANE": "../assets/images/relics/pamboo_cane.png",
+    "LAKE_AZORE_PEARL": "../assets/images/relics/lake_azore_pearl.png",
+    "GKS_SLIPPERS": "../assets/images/relics/gks_slippers.png",
+    "SKELEPUPS_SPARK": "../assets/images/relics/skelepups_spark.png",
+    "ETERNAL_FALL_MUSHROOM": "../assets/images/relics/eternal_fall_mushroom.png",
+    "WOODMANS_AXE_HEAD": "../assets/images/relics/woodmans_axe_head.png",
+    "QUARTEX_CRYSTAL": "../assets/images/relics/quartex_crystal.png",
+    "FROOST_ROOT": "../assets/images/relics/froost_root.png",
+    "MT_GEMMA_BANNER": "../assets/images/relics/mt._gemma_banner.png",
+    "SUNFALL_SHORES_BANNER": "../assets/images/relics/sunfall_shores_banner.png",
+    "MONKS_BANNER": "../assets/images/relics/monks_banner.png",
+    "FOREST_BANNER": "../assets/images/relics/forest_banner.png",
+    "VOLCANO_BANNER": "../assets/images/relics/volcano_banner.png",
+    "HELZBELZ_BELLS": "../assets/images/relics/helzbelz_bells.png",
+    "EMERALD_SCALES": "../assets/images/relics/emerald_scales.png",
+    "ELEMENTAL_EXPLOSION": "../assets/images/relics/elemental_explosion.png",
+    "FLOWER_OF_DESPAIR": "../assets/images/relics/flower_of_despair.png",
+    "JUNGLE_BANNER": "../assets/images/relics/jungle_banner.png",
+    "FROZEN_CLAWS": "../assets/images/relics/frozen_claws.png",
+    "SHIP_CAPTAINS_LOG": "../assets/images/relics/ship_captains_log.png",
+    "FORGING_HAMMER": "../assets/images/relics/forging_hammer.png",
+    "STONY_SHIELD": "../assets/images/relics/stony_shield.png",
+    "SKYLINE_PEAK_GEM": "../assets/images/relics/skyline_peak_gem.png",
+    "OBSIDIAN_LAVA": "../assets/images/relics/obsidian_lava.png",
+    "BEAN_STALK": "../assets/images/relics/bean_stalk.png",
+    "MONKS_ROBE": "../assets/images/relics/monks_robe.png",
+    "NEROS_ORB": "../assets/images/relics/neros_orb.png",
+    "GOLD_PIECE_DIE": "../assets/images/relics/gold_piece_die.png",
+    "PALMDAS_TALON": "../assets/images/relics/palmdas_talon.png",
+    "NOXS_NIGHTMARE": "../assets/images/relics/noxs_nightmare.png",
+    "CACTUS_FLOWER": "../assets/images/relics/cactus_flower.png",
+    "EVERLASTING_SNOWBALL": "../assets/images/relics/everlasting_snowball.png",
+    "MYSTIC_MAP": "../assets/images/relics/mystic_map.png",
+    "ECHINO_SHELL": "../assets/images/relics/echino_shell.png",
+    "FRACTURED_SHELL": "../assets/images/relics/fractured_shell.png",
+    "VANQUISHED_SOUL": "../assets/images/relics/vanquished_soul.png",
+    "MONASTERY_IDOL": "../assets/images/relics/monastery_idol.png",
+    "DARK_WARRO_THORN": "../assets/images/relics/dark_warro_thorn.png",
+    "TEMPLE_STONE": "../assets/images/relics/temple_stone.png",
+    "MAGICITE_STAFF": "../assets/images/relics/magicite_staff.png",
+    "PEEPSIE_EGGS": "../assets/images/relics/peepsie_eggs.png",
+    "TRUNCHEROUS_HAMMER": "../assets/images/relics/truncherous_hammer.png",
+    "MUSHLES": "../assets/images/relics/mushles.png",
+    "SHACKLERS_GEM": "../assets/images/relics/shacklers_gem.png",
+    "BAUBLE_OF_THE_DAWN": "../assets/images/relics/bauble_of_the_dawn.png",
+    "PAPAS_ANTLERS": "../assets/images/relics/papas_antlers.png",
+    "NANASLUGS_HORN": "../assets/images/relics/nanaslugs_horn.png",
+    "GEOTOAD_TEETH": "../assets/images/relics/geotoad_teeth.png",
+    "PATCHKINS_RIND": "../assets/images/relics/patchkins_rind.png",
+    "TIKI_IDOL": "../assets/images/relics/tiki_idol.png",
+    "LOST_SWORDS": "../assets/images/relics/lost_swords.png",
+    "GRAVITRON_PEBBLE": "../assets/images/relics/gravitron_pebble.png",
+    "ARROW_OF_LOVE": "../assets/images/relics/arrow_of_love.png",
+    "SHARD_OF_DAWNS_LANDING": "../assets/images/relics/shard_of_dawns_landing.png",
+    "SHATTERED_GATESTONE": "../assets/images/relics/shattered_gatestone.png",
+    "DRAGON_SHACKLE": "../assets/images/relics/dragon_shackle.png",
+    "MOON_ROCK": "../assets/images/relics/moon_rock.png",
+    "FLYING_CARPET_FRAGMENT": "../assets/images/relics/flying_carpet_fragment.png",
+    "GOGS_COG": "../assets/images/relics/gogs_cog.png",
+    "SHARD_OF_RUDOLFE": "../assets/images/relics/shard_of_rudolfe.png",
+    "SAYAMS_TRIDENT": "../assets/images/relics/sayams_trident.png",
+    "CAGE_OF_DESPAIR": "../assets/images/relics/cage_of_despair.png",
+    "FROZEN_COIN": "../assets/images/relics/frozen_coin.png",
+    "MOLTEN_COIN": "../assets/images/relics/molten_coin.png",
+    "PETRIFIED_DRAGON_EGG": "../assets/images/relics/petrified_dragon_egg.png",
+    "PETRIFIED_MAMA_BABY": "../assets/images/relics/petrified_mama_baby.png",
+    "LEGGY_EGGS": "../assets/images/relics/leggy_eggs.png",
+    "DARK_WINDS_VENOM": "../assets/images/relics/dark_winds_venom.png",
+    "SCENT_OF_SKUSTUNK": "../assets/images/relics/scent_of_skustunk.png",
+    "CHARCOAL_IDOL": "../assets/images/relics/charcoal_idol.png"
+  },
+  "trendingTeams": ["t001", "t002", "t003", "t004", "t005"],
+  "teams": [
+    {
+      "id": "t001",
+      "title": "Sammy",
+      "format": "Tournament Arena",
+      "patch": "2.2.0",
+      "miscrits": [
+        { "name": "Light Nibbles", "autoRelics": true },
+        { "name": "Light Quirk", "autoRelics": true },
+        { "name": "Phoboros", "autoRelics": true },
+        { "name": "Dark Quirk", "autoRelics": true }]
+    },
+    {
+      "id": "t002",
+      "title": "Jungle Explorer Team",
+      "format": "Tournament Arena",
+      "patch": "2.2.0",
+      "miscrits": [
+        { "name": "Light Quirk", "autoRelics": true },
+        { "name": "Light Nibbles", "autoRelics": true },
+        { "name": "Alpha", "autoRelics": true },
+        { "name": "Avarus", "autoRelics": true }]
+    },
+    {
+      "id": "t003",
+      "title": "Spallanzani Team",
+      "format": "Tournament Arena",
+      "patch": "2.2.0",
+      "miscrits": [
+        { "name": "Dark Quirk", "autoRelics": true },
+        { "name": "Light Nibbles", "autoRelics": true },
+        { "name": "Pangoleaf", "autoRelics": true },
+        { "name": "Gravitron", "autoRelics": true }]
+    },  
+    {
+      "id": "t004",
+      "title": "Miguel Robles Team",
+      "format": "Tournament Arena",
+      "patch": "2.2.0",
+      "miscrits": [
+        { "name": "Goo", "autoRelics": true },
+        { "name": "Owlie", "autoRelics": true },
+        { "name": "Light Ignios", "autoRelics": true },
+        { "name": "Geneseed", "autoRelics": true }]
+    },
+    {
+      "id": "t005",
+      "title": "Shembot Team",
+      "format": "Tournament Arena",
+      "patch": "2.2.0",
+      "miscrits": [
+        { "name": "Winnebeargo", "autoRelics": true },
+        { "name": "Nero", "autoRelics": true },
+        { "name": "Woolly", "autoRelics": true },
+        { "name": "Hotdog", "autoRelics": true }]
+    },
+    {
+      "id": "t006",
+      "title": "Suggested Team",
+      "format": "Platinum Arena",
+      "patch": "2.0.0",
+      "miscrits": [
+        { "name": "Dark Flue", "autoRelics": true },
+        { "name": "Light Quirk", "autoRelics": true },
+        { "name": "Lambolt", "autoRelics": true },
+        { "name": "Blighted Flue", "autoRelics": true }]
+    },
+    {
+      "id": "t007",
+      "title": "Suggested Team",
+      "format": "Platinum Arena",
+      "patch": "2.0.0",
+      "miscrits": [
+        { "name": "Dark Flue", "autoRelics": true },
+        { "name": "Deetlee", "autoRelics": true },
+        { "name": "Eclipso", "autoRelics": true },
+        { "name": "Damse", "autoRelics": true }]
+    },
+    {
+      "id": "t008",
+      "title": "Suggested Team",
+      "format": "Platinum Arena",
+      "patch": "2.0.0",
+      "miscrits": [
+        { "name": "Pamboo", "autoRelics": true },
+        { "name": "Light Nibbles", "autoRelics": true },
+        { "name": "Geneseed", "autoRelics": true },
+        { "name": "Sol", "autoRelics": true }]
+    },
+    {
+      "id": "t009",
+      "title": "Suggested Team",
+      "format": "Platinum Arena",
+      "patch": "2.0.0",
+      "miscrits": [
+        { "name": "Beateorite", "autoRelics": true },
+        { "name": "Beldame", "autoRelics": true },
+        { "name": "Goo", "autoRelics": true },
+        { "name": "Owlie", "autoRelics": true }]
+    },
+    {
+      "id": "t010",
+      "title": "Suggested Team",
+      "format": "Platinum Arena",
+      "patch": "2.0.0",
+      "miscrits": [
+        { "name": "Dark Flue", "autoRelics": true },
+        { "name": "Dark Weevern", "autoRelics": true },
+        { "name": "Inferno", "autoRelics": true },
+        { "name": "Blighted Flue", "autoRelics": true }]
+    },
+    {
+      "id": "t011",
+      "title": "Suggested Team",
+      "format": "Platinum Arena",
+      "patch": "2.0.0",
+      "miscrits": [
+        { "name": "Foil Croaky", "autoRelics": true },
+        { "name": "Deetlee", "autoRelics": true },
+        { "name": "Avarus", "autoRelics": true },
+        { "name": "Blighted Kiloray", "autoRelics": true }]
+    },
+    {
+      "id": "t012",
+      "title": "Suggested Team",
+      "format": "Platinum Arena",
+      "patch": "2.0.0",
+      "miscrits": [
+        { "name": "Dark Flue", "autoRelics": true },
+        { "name": "Inferno", "autoRelics": true },
+        { "name": "Lavazard", "autoRelics": true },
+        { "name": "Blighted Flowerpiller", "autoRelics": true }]
+    },
+    {
+      "id": "t013",
+      "title": "Suggested Team",
+      "format": "Platinum Arena",
+      "patch": "2.0.0",
+      "miscrits": [
+        { "name": "Pamboo", "autoRelics": true },
+        { "name": "Cadbunny", "autoRelics": true },
+        { "name": "Pangoleaf", "autoRelics": true },
+        { "name": "Phoboros", "autoRelics": true }]
+    },
+    {
+      "id": "t014",
+      "title": "Suggested Team",
+      "format": "Platinum Arena",
+      "patch": "2.0.0",
+      "miscrits": [
+        { "name": "Pamboo", "autoRelics": true },
+        { "name": "Cadbunny", "autoRelics": true },
+        { "name": "Da Windy", "autoRelics": true },
+        { "name": "Narlope", "autoRelics": true }]
+    },
+    {
+      "id": "t014",
+      "title": "Suggested Team",
+      "format": "Platinum Arena",
+      "patch": "2.0.0",
+      "miscrits": [
+        { "name": "Mech", "autoRelics": true },
+        { "name": "Dark Flue", "autoRelics": true },
+        { "name": "Blighted Flowerpiller", "autoRelics": true },
+        { "name": "Kitpole", "autoRelics": true }]
+    },
+    {
+      "id": "t015",
+      "title": "Suggested Team",
+      "format": "Platinum Arena",
+      "patch": "2.0.0",
+      "miscrits": [
+        { "name": "Voidotron", "autoRelics": true },
+        { "name": "Narlope", "autoRelics": true },
+        { "name": "Woolly", "autoRelics": true },
+        { "name": "Bubbles", "autoRelics": true }]
+    },
+    {
+      "id": "t016",
+      "title": "Suggested Team",
+      "format": "Platinum Arena",
+      "patch": "2.0.0",
+      "miscrits": [
+        { "name": "Lavazard", "autoRelics": true },
+        { "name": "Liothning", "autoRelics": true },
+        { "name": "Winnebeargo", "autoRelics": true },
+        { "name": "Light Quirk", "autoRelics": true }]
+    },
+    {
+      "id": "t017",
+      "title": "Suggested Team",
+      "format": "Platinum Arena",
+      "patch": "2.0.0",
+      "miscrits": [
+        { "name": "Dark Quirk", "autoRelics": true },
+        { "name": "Lagoony", "autoRelics": true },
+        { "name": "Geneseed", "autoRelics": true },
+        { "name": "Rexie", "autoRelics": true }]
+    },
+    {
+      "id": "t018",
+      "title": "Suggested Team",
+      "format": "Platinum Arena",
+      "patch": "2.0.0",
+      "miscrits": [
+        { "name": "Dark Prawnja", "autoRelics": true },
+        { "name": "Luvcraft", "autoRelics": true },
+        { "name": "Alpha", "autoRelics": true },
+        { "name": "Mooncrit", "autoRelics": true }]
+    },
+    {
+      "id": "t019",
+      "title": "Suggested Team",
+      "format": "Platinum Arena",
+      "patch": "2.0.0",
+      "miscrits": [
+        { "name": "Dark Snortus", "autoRelics": true },
+        { "name": "Luvcraft", "autoRelics": true },
+        { "name": "Narlope", "autoRelics": true },
+        { "name": "Eclipso", "autoRelics": true }]
+    },
+    {
+      "id": "t020",
+      "title": "Suggested Team",
+      "format": "Platinum Arena",
+      "patch": "2.0.0",
+      "miscrits": [
+        { "name": "Dark Tongutail", "autoRelics": true },
+        { "name": "Dark Flue", "autoRelics": true },
+        { "name": "Flurrious", "autoRelics": true },
+        { "name": "Owlie", "autoRelics": true }]
+    },
+    {
+      "id": "t021",
+      "title": "Suggested Team",
+      "format": "Platinum Arena",
+      "patch": "2.0.0",
+      "miscrits": [
+        { "name": "Dark Prawnja", "autoRelics": true },
+        { "name": "Rexie", "autoRelics": true },
+        { "name": "Geneseed", "autoRelics": true },
+        { "name": "Dark Nessy", "autoRelics": true }]
+    },
+    {
+      "id": "t022",
+      "title": "Suggested Team",
+      "format": "Platinum Arena",
+      "patch": "2.0.0",
+      "miscrits": [
+        { "name": "Deetlee", "autoRelics": true },
+        { "name": "Pamboo", "autoRelics": true },
+        { "name": "Foil Croaky", "autoRelics": true },
+        { "name": "Light Rafiery", "autoRelics": true }]
+    },
+    {
+      "id": "t023",
+      "title": "Suggested Team",
+      "format": "Platinum Arena",
+      "patch": "2.0.0",
+      "miscrits": [
+        { "name": "Dark Quirk", "autoRelics": true },
+        { "name": "Light Nibbles", "autoRelics": true },
+        { "name": "Dark Whik", "autoRelics": true },
+        { "name": "Geneseed", "autoRelics": true }]
+    },
+    {
+      "id": "t024",
+      "title": "Suggested Team",
+      "format": "Platinum Arena",
+      "patch": "2.0.0",
+      "miscrits": [
+        { "name": "Budillo", "autoRelics": true },
+        { "name": "Foil Liquifien", "autoRelics": true },
+        { "name": "Eclipso", "autoRelics": true },
+        { "name": "GrimM Kiloray", "autoRelics": true }]
+    },
+    {
+      "id": "t025",
+      "title": "Suggested Team",
+      "format": "Platinum Arena",
+      "patch": "2.0.0",
+      "miscrits": [
+        { "name": "Slithero", "autoRelics": true },
+        { "name": "Liquifien", "autoRelics": true },
+        { "name": "Geneseed", "autoRelics": true },
+        { "name": "Damse", "autoRelics": true }]
+    },
+    {
+      "id": "t026",
+      "title": "Suggested Team",
+      "format": "Platinum Arena",
+      "patch": "2.0.0",
+      "miscrits": [
+        { "name": "Dark quirk", "autoRelics": true },
+        { "name": "Bunaken", "autoRelics": true },
+        { "name": "Phoboros", "autoRelics": true },
+        { "name": "Pamboo", "autoRelics": true }]
+    },
+    {
+      "id": "t027",
+      "title": "Suggested Team",
+      "format": "Platinum Arena",
+      "patch": "2.0.0",
+      "miscrits": [
+        { "name": "Alpha", "autoRelics": true },
+        { "name": "Dark Nessy", "autoRelics": true },
+        { "name": "Rexie", "autoRelics": true },
+        { "name": "Light Quirk", "autoRelics": true }]
+    },
+    {
+      "id": "t028",
+      "title": "Suggested Team",
+      "format": "Platinum Arena",
+      "patch": "2.0.0",
+      "miscrits": [
+        { "name": "Mooncrit", "autoRelics": true },
+        { "name": "Beateorite", "autoRelics": true },
+        { "name": "Light Rafiery", "autoRelics": true },
+        { "name": "Deetlee", "autoRelics": true }]
+    },
+    {
+      "id": "t029",
+      "title": "Suggested Team",
+      "format": "Platinum Arena",
+      "patch": "2.0.0",
+      "miscrits": [
+        { "name": "Blub", "autoRelics": true },
+        { "name": "Eclipso", "autoRelics": true },
+        { "name": "Fennie", "autoRelics": true },
+        { "name": "Skelepup", "autoRelics": true }]
+    },
+    {
+      "id": "t030",
+      "title": "Suggested Team",
+      "format": "Platinum Arena",
+      "patch": "2.0.0",
+      "miscrits": [
+        { "name": "Owlie", "autoRelics": true },
+        { "name": "Flutterpat", "autoRelics": true },
+        { "name": "Cadbunny", "autoRelics": true },
+        { "name": "Geneseed", "autoRelics": true }]
+    },
+    {
+      "id": "t031",
+      "title": "Suggested Team",
+      "format": "Platinum Arena",
+      "patch": "2.0.0",
+      "miscrits": [
+        { "name": "Dark Quirk", "autoRelics": true },
+        { "name": "Aquarion", "autoRelics": true },
+        { "name": "Foil Pamboo", "autoRelics": true },
+        { "name": "Avarus", "autoRelics": true }]
+    },
+    {
+      "id": "t032",
+      "title": "Suggested Team",
+      "format": "Platinum Arena",
+      "patch": "2.0.0",
+      "miscrits": [
+        { "name": "Dark Flue", "autoRelics": true },
+        { "name": "Liothning", "autoRelics": true },
+        { "name": "Light Quirk", "autoRelics": true },
+        { "name": "Gravitron", "autoRelics": true }]
+    }
+  ]
+}

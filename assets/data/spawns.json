@@ -3327,8 +3327,8 @@
       "id": "332",
       "name": "Casanova",
       "type": "Fire",
-      "rarity": "Legendary",
-      "avatar": "casanova_avatar.png",
+      "rarity": "Exotic",
+      "avatar": "babakku_avatar.png",
       "spawns": [
         {"place": "Volcano Island","zone": ["4th Area on Volcano Island"],"view": "object","objectImage": "../assets/images/spawns/FoilPango.png","days": "ALL_DAYS"}
       ]
