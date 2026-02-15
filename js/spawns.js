@@ -83,7 +83,6 @@
     return Math.max(a, Math.min(b, n));
   }
 
-  // DOM
   const el = {
     q: $("#q"),
     day: $("#day"),
@@ -115,11 +114,10 @@
     mFav: $("#mFav"),
   };
 
-  // pager IDs (según tu HTML)
   const elPager = {
     info: $("#pageInfo"),
-    prev: $("#prevPage"),
-    next: $("#nextPage"),
+    prev: $("#btnPrev"),
+    next: $("#btnNext"),
   };
 
   const STATE = {
@@ -415,7 +413,6 @@
     `;
   }
 
-  // Background lazy-load (solo cuando entra cerca del viewport)
   let bgObserver;
   function observeBackgrounds() {
     if (bgObserver) bgObserver.disconnect();
@@ -443,11 +440,9 @@
       ? `<div class="muted">No results. Try removing filters.</div>`
       : paged.map(cardHTML).join("");
 
-    // IMPORTANT: activa lazy backgrounds
     observeBackgrounds();
   }
 
-  // Modal
   function updateFavButton() {
     if (!el.mFav) return;
     const isFav = currentKey && STATE.favorites.has(currentKey);
@@ -512,7 +507,6 @@
     }
   }
 
-  // rAF debounce (evita lag por sync excesivo)
   let rafPending = false;
   function requestSync(resetPage = false) {
     if (resetPage) PAGE = 1;
@@ -568,8 +562,6 @@
     const data = await res.json();
     STATE.raw = data;
     STATE.entries = flatten(data);
-
-    // map por key (modal rápido)
     STATE.entriesByKey = new Map(STATE.entries.map(e => [e.key, e]));
 
     fillSelect(el.place, uniqSorted(STATE.entries.map(e => e.place)), "All places");
@@ -579,7 +571,6 @@
 
     if (el.element) fillSelect(el.element, ["fire","water","nature","earth","wind","lightning"], "All elements");
 
-    // Inputs: usa requestSync (rAF)
     el.q?.addEventListener("input", () => requestSync(true));
     el.day?.addEventListener("change", () => requestSync(true));
     el.place?.addEventListener("change", () => requestSync(true));
@@ -598,11 +589,9 @@
       requestSync(true);
     });
 
-    // pager
     elPager.prev?.addEventListener("click", () => { PAGE = Math.max(1, PAGE - 1); requestSync(false); });
     elPager.next?.addEventListener("click", () => { PAGE = PAGE + 1; requestSync(false); });
 
-    // Modal close
     el.modal?.addEventListener("click", (ev) => {
       const t = ev.target;
       if (!(t instanceof Element)) return;
@@ -622,7 +611,6 @@
       requestSync(false);
     });
 
-    // ✅ Event delegation (solo 1 listener)
     el.grid?.addEventListener("click", (ev) => {
       const card = ev.target.closest("[data-key]");
       if (!card) return;
