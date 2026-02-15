@@ -131,8 +131,8 @@ function relicIconSrc(ent) {
   const key = typeof ent === "object" ? ent.key : ent;
   const k = relicNameToKey(key);
   if (!k) return RELIC_PLACEHOLDER;
-
-  return `${PATH.RELIC_ICON_FOLDER}${k}.png`;
+  const file = `${k}`.toLowerCase().replace(/\.(png|webp|jpg|jpeg)$/i, "") + ".png";
+  return `${PATH.RELIC_ICON_FOLDER}${file}`;
 }
 
 function formatRelicStatsLine(stats) {
