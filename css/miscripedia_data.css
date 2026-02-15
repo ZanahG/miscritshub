@@ -1,4 +1,12 @@
 /* Page wrapper */
+
+:root{
+  --tipAccent: #74c7ff;
+  --tipAccent2: #9ad7ff;
+  --tipMuted: rgba(255,255,255,0.72);
+  --tipDim: rgba(255,255,255,0.58);
+}
+
 .md{
   padding: 26px 0 56px;
 }
@@ -53,6 +61,7 @@
 }
 
 .md__name{
+  color: #a6cf44;
   margin: 0 0 6px;
   font-size: 30px;
   line-height: 1.05;
@@ -115,6 +124,7 @@
 
 /* Sections */
 .md__sectionTitle{
+  color: #f2b544;
   margin: 10px 0 10px;
   font-size: 18px;
   letter-spacing: 0.2px;
@@ -147,7 +157,7 @@
   padding: 12px;
 }
 .md__metaLabel{
-  color: rgba(255,255,255,0.65);
+  color: #a6cf44;
   font-weight: 800;
   font-size: 12px;
   text-transform: uppercase;
@@ -183,7 +193,7 @@
   margin: 12px 0;
 }
 .md__stats .statLabel{
-  color: rgba(255,255,255,0.70);
+  color: #a6cf44;
   font-weight: 800;
 }
 .pips{
@@ -283,7 +293,7 @@
 
 .abName{
   font-weight: 900;
-  color: rgba(255,255,255,0.88);
+  color: #74c7ff;
 }
 .abMeta{
   margin-top: 4px;
@@ -292,7 +302,6 @@
   font-weight: 700;
 }
 
-/* Tooltip (keep your existing styles, just align to theme) */
 .abTip{
   position: fixed;
   z-index: 9999;
@@ -343,6 +352,53 @@
   margin-top: 4px;
   color: rgba(255,255,255,0.80);
   font-weight: 700;
+}
+
+/* Tooltip: mejor jerarquía + color */
+.abTip{
+  background: rgba(10,16,30,0.97);
+  border-color: rgba(116,199,255,0.42);
+}
+
+.abTip__top{
+  font-size: 15px;
+  letter-spacing: .2px;
+}
+
+/* Nombre del ataque (izquierda) */
+.abTip__top > :first-child{
+  color: var(--tipAccent);
+  text-shadow: 0 10px 26px rgba(116,199,255,0.18);
+}
+
+/* Elemento / Tipo / Accuracy row */
+.abTip__row{
+  color: var(--tipMuted);
+}
+
+/* Si en el HTML tu .abTip__label es el label del lado izq ("Physical", "Fire", etc) */
+.abTip__label{
+  color: var(--tipAccent2);
+}
+
+/* Separadores un poco más visibles */
+.abTip__desc{
+  border-top-color: rgba(255,255,255,0.14);
+  color: rgba(255,255,255,0.86);
+}
+
+/* “Enchant” como título destacado */
+.abTip__enchantTitle{
+  color: var(--tipAccent);
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+/* Línea del enchant más clara */
+.abTip__enchant{
+  color: rgba(255,255,255,0.86);
 }
 
 /* Rarity classes (keep same as before) */

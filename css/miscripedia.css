@@ -1,5 +1,3 @@
-/* Miscripedia (NEW UI) - relies on global.css (.card, vars, etc.) */
-
 .mp{
   padding: 26px 0 54px;
 }
@@ -26,7 +24,6 @@
   gap: 12px;
 }
 
-/* Search */
 .mpSearch{
   display:flex;
   align-items:center;
@@ -59,7 +56,6 @@
   width: 100%;
 }
 
-/* Filters row */
 .mpFilters{
   display:flex;
   gap: 10px;
@@ -67,7 +63,6 @@
   align-items: center;
 }
 
-/* Selects consistent with glass */
 .mpFilters select{
   -webkit-appearance: none;
   appearance: none;
@@ -109,7 +104,6 @@
   font-weight: 700;
 }
 
-/* Element pills */
 .pills{
   display:flex;
   flex-wrap: wrap;
@@ -157,7 +151,6 @@
   flex: 0 0 auto;
 }
 
-/* Results grid */
 .mp__results{
   margin-top: 14px;
 }
@@ -168,7 +161,6 @@
   gap: 14px;
 }
 
-/* Cards (don’t override global .card; we scope to .mcard) */
 .mcard{
   padding: 14px;
   cursor: pointer;
@@ -262,7 +254,6 @@
   color: rgba(255,255,255,0.60);
 }
 
-/* Autocomplete dropdown */
 .miscritpicker{
   position: relative;
   width: 100%;
@@ -316,7 +307,6 @@
   flex: 0 0 auto;
 }
 
-/* Stats filter (kept, recolored) */
 .statsFilter{ position: relative; display: inline-flex; align-items: center; }
 
 .statsBtn{
@@ -433,7 +423,6 @@
   border-color: rgba(96,165,250,0.50);
 }
 
-/* Empty */
 .empty{
   text-align:center;
   padding: 34px 0;
@@ -441,7 +430,6 @@
 }
 .hidden{ display:none; }
 
-/* Rarity text colors (keep) */
 .rarity-common { color: #9ca3af; }
 .rarity-rare { color: #60a5fa; }
 .rarity-epic { color: #4ade80; }
@@ -453,6 +441,53 @@
 .rarity-epic {
   text-shadow: 0 0 10px rgba(255,255,255,.15);
 }
+
+.mp__head{
+  position: relative;
+  z-index: 200;
+}
+
+.mp__controls{
+  position: relative;
+  z-index: 200;
+}
+
+.mp__results{
+  position: relative;
+  z-index: 1;
+}
+
+.miscritpicker__dropdown{
+  z-index: 300;
+}
+/* NAV siempre sobre el contenido */
+.siteHeader{
+  position: sticky; /* o fixed si lo usas fijo */
+  top: 0;
+  z-index: 9999;
+}
+
+/* el contenedor interno también “crea capa” */
+.siteHeader__inner{
+  position: relative;
+  z-index: 9999;
+}
+
+/* dropdowns del navbar arriba de todo */
+.navDropdown,
+.navMenu,
+.dropdown,
+.menu{
+  position: absolute;
+  z-index: 10000;
+}
+
+/* si tienes overlay/blur en main que lo tapa, esto ayuda */
+main, .main, .page, .wrap{
+  position: relative;
+  z-index: 1;
+}
+
 
 /* Responsive */
 @media (max-width: 980px){

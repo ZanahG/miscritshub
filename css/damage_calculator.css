@@ -203,6 +203,7 @@
 }
 
 .miscritpicker__name{
+  color: white;
   font-weight: 800;
   white-space: nowrap;
   overflow: hidden;

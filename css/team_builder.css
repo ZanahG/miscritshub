@@ -754,6 +754,71 @@
 }
 
 /* =========================
+   TB BUTTON (Bonus & Relics)
+========================= */
+.tbBtn{
+  appearance: none;
+  -webkit-appearance: none;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(255,255,255,0.06);
+  color: var(--text);
+  border-radius: 14px;
+
+  padding: 8px 12px;
+  font: inherit;
+  font-weight: 800;
+  font-size: 12px;
+  letter-spacing: .2px;
+
+  cursor: pointer;
+  user-select: none;
+
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.05),
+    0 10px 22px rgba(0,0,0,0.22);
+
+  transition:
+    transform .12s ease,
+    background .12s ease,
+    border-color .12s ease,
+    box-shadow .12s ease;
+}
+
+.tbBtn:hover{
+  background: rgba(255,255,255,0.10);
+  border-color: rgba(96,165,250,0.30);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.06),
+    0 14px 26px rgba(0,0,0,0.28);
+}
+
+.tbBtn:active{
+  transform: translateY(1px);
+}
+
+.tbBtn:focus-visible{
+  outline: 2px solid rgba(96,165,250,0.55);
+  outline-offset: 2px;
+}
+
+/* opcional: versión más “accent” para acciones importantes */
+.tbBtn--accent{
+  background: rgba(96,165,250,0.18);
+  border-color: rgba(96,165,250,0.35);
+}
+.tbBtn--accent:hover{
+  background: rgba(96,165,250,0.24);
+  border-color: rgba(96,165,250,0.45);
+}
+
+/* opcional: si está dentro del slot y quieres que no “rompa” el layout */
+.tbSlot .tbBtn{
+  padding: 7px 10px;
+  border-radius: 12px;
+}
+
+
+/* =========================
    RESPONSIVE
 ========================= */
 @media (max-width: 980px){

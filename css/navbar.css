@@ -154,6 +154,42 @@ body{ margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial; 
   border-radius: 999px;
 }
 
+.nav__brand{
+  position: relative;
+}
+
+.nav__logo{
+  transform-origin: left center;
+  transition: transform .18s ease, filter .18s ease;
+  will-change: transform;
+}
+
+.nav__brand:hover .nav__logo,
+.nav__brand:focus-visible .nav__logo{
+  transform: scale(1.06);
+  filter: drop-shadow(0 10px 26px rgba(96,165,250,0.22));
+}
+
+.nav__brand::after{
+  content:"";
+  position:absolute;
+  inset: -8px -10px;
+  border-radius: 16px;
+  opacity: 0;
+  transition: opacity .18s ease;
+  pointer-events:none;
+}
+
+.nav__brand:hover::after,
+.nav__brand:focus-visible::after{
+  opacity: 1;
+}
+
+.nav__brand:hover .nav__brandText{
+  color: rgba(255,255,255,0.98);
+}
+
+
 /* Responsive */
 @media (max-width: 860px){
   .nav__toggle{ display:flex; }

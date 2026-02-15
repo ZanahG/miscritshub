@@ -9,7 +9,7 @@ const PATH = {
   RELICS: "../assets/data/relics.json",
 
   AVATAR_FOLDER: "../assets/images/miscrits_avatar/",
-  AVATAR_FALLBACK: "../assets/images/miscrits_avatar/preset_avatar.png",
+  AVATAR_FALLBACK: "../assets/images/relics/cruz.png",
 
   RELIC_ICON_FOLDER: "../assets/images/relics/",
   STAT_ICON_DIR: "../assets/images/icons/",
@@ -720,7 +720,7 @@ function pointsUsed() {
 function pointsLeftConsidering(slotIndex) {
   const usedBefore = pointsUsed();
   const currentSlot = slotIndex != null ? state.slots[slotIndex] : null;
-  const currentCost = currentSlot ? currentSlot.cost : 0;
+  const currentCost = currentSlot?.cost ?? 0;
   return POINT_CAP - (usedBefore - currentCost);
 }
 
@@ -764,12 +764,16 @@ function slotSubline(slot) {
 }
 
 function updateTopBadge() {
-  const count = state.slots.filter(Boolean).length;
+  const used = pointsUsed();
+  const left = POINT_CAP - used;
+
   const badge = $("#tbCountBadge");
-  if (badge) badge.textContent = `${count}/${TEAM_SIZE}`;
+  if (badge) badge.textContent = `${used}/${POINT_CAP} pts`;
 
   const hint = $("#tbHint");
-  if (hint) hint.textContent = count ? "Click a slot to replace, or Bonus & Relics to edit." : "Pick a slot to start";
+  if (hint) {
+    hint.textContent = ``;
+  }
 }
 
 function renderSlots() {

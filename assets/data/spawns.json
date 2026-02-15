@@ -10,7 +10,7 @@
       "rarity": "Common",
       "avatar": "flue_avatar.png",
       "spawns": [
-        {"place": "Forest","zone": ["Forest 1"],"view": "object","objectImage": "../assets/images/spawns/MAP_FOREST.png","days": "ALL_DAYS"}
+        {"place": "Forest","zone": ["Any Object 1st Area in Forest"],"view": "object","objectImage": "../assets/images/spawns/MAP_FOREST.png","days": "ALL_DAYS"}
       ]
     },
     {
@@ -20,7 +20,7 @@
       "rarity": "Common",
       "avatar": "flowerpiller_avatar.png",
       "spawns": [
-        {"place": "Forest","zone": ["Forest 1"],"view": "object","objectImage": "../assets/images/spawns/MAP_FOREST.png","days": "ALL_DAYS"}
+        {"place": "Forest","zone": ["Any Object 1st Area in Forest"],"view": "object","objectImage": "../assets/images/spawns/MAP_FOREST.png","days": "ALL_DAYS"}
       ]
     },
     {
@@ -29,7 +29,7 @@
       "type": "Water",
       "rarity": "Common",
       "spawns": [
-        {"place": "Forest","zone": ["Forest 1"],"view": "object","objectImage": "../assets/images/spawns/MAP_FOREST.png","days": "ALL_DAYS"}
+        {"place": "Forest","zone": ["Any Object 1st Area in Forest"],"view": "object","objectImage": "../assets/images/spawns/MAP_FOREST.png","days": "ALL_DAYS"}
       ],
       "avatar": "prawnja_avatar.png"
     },
@@ -49,7 +49,7 @@
       "type": "Nature",
       "rarity": "Common",
       "spawns": [
-        {"place": "Forest","zone": ["Forest 1"],"view": "object","objectImage": "../assets/images/spawns/MAP_FOREST.png","days": "ALL_DAYS"}
+        {"place": "Forest","zone": ["Any Object 1st Area in Forest"],"view": "object","objectImage": "../assets/images/spawns/MAP_FOREST.png","days": "ALL_DAYS"}
       ],
       "avatar": "cubsprout_avatar.png"
     },
@@ -59,7 +59,7 @@
       "type": "Fire",
       "rarity": "Common",
       "spawns": [
-        {"place": "Forest","zone": ["Forest 1"],"view": "object","objectImage": "../assets/images/spawns/MAP_FOREST.png","days": "ALL_DAYS"}
+        {"place": "Forest","zone": ["Any Object 1st Area in Forest"],"view": "object","objectImage": "../assets/images/spawns/MAP_FOREST.png","days": "ALL_DAYS"}
       ],
       "avatar": "sparkupine_avatar.png"
     },
@@ -69,7 +69,7 @@
       "type": "Water",
       "rarity": "Common",
       "spawns": [
-        {"place": "Forest","zone": ["Forest 1"],"view": "object","objectImage": "../assets/images/spawns/MAP_FOREST.png","days": "ALL_DAYS"}
+        {"place": "Forest","zone": ["Any Object 1st Area in Forest"],"view": "object","objectImage": "../assets/images/spawns/MAP_FOREST.png","days": "ALL_DAYS"}
       ],
       "avatar": "hydroseal_avatar.png"
     },
@@ -79,7 +79,7 @@
       "type": "Water",
       "rarity": "Common",
       "spawns": [
-        {"place": "Forest","zone": ["Forest 2"],"view": "object","objectImage": "../assets/images/spawns/MAP_FOREST.png","days": "ALL_DAYS"}
+        {"place": "Forest","zone": ["Any Object 2nd Area in Forest"],"view": "object","objectImage": "../assets/images/spawns/MAP_FOREST.png","days": "ALL_DAYS"}
       ],
       "avatar": "snortus_avatar.png"
     },
@@ -89,7 +89,7 @@
       "type": "Nature",
       "rarity": "Common",
       "spawns": [
-        {"place": "Forest","zone": ["Forest 2"],"view": "object","objectImage": "../assets/images/spawns/MAP_FOREST.png","days": "ALL_DAYS"}
+        {"place": "Forest","zone": ["Any Object 2nd Area in Forest"],"view": "object","objectImage": "../assets/images/spawns/MAP_FOREST.png","days": "ALL_DAYS"}
       ],
       "avatar": "quirk_avatar.png"
     },
@@ -99,7 +99,7 @@
       "type": "Fire",
       "rarity": "Common",
       "spawns": [
-        {"place": "Forest","zone": ["Forest 2"],"view": "object","objectImage": "../assets/images/spawns/MAP_FOREST.png","days": "ALL_DAYS"}
+        {"place": "Forest","zone": ["Any Object 2nd Area in Forest"],"view": "object","objectImage": "../assets/images/spawns/MAP_FOREST.png","days": "ALL_DAYS"}
       ],
       "avatar": "flameling_avatar.png"
     },
@@ -109,7 +109,7 @@
       "type": "Fire",
       "rarity": "Common",
       "spawns": [
-        {"place": "Forest","zone": ["Forest 2"],"view": "object","objectImage": "../assets/images/spawns/MAP_FOREST.png","days": "ALL_DAYS"}
+        {"place": "Forest","zone": ["Any Object 2nd Area in Forest"],"view": "object","objectImage": "../assets/images/spawns/MAP_FOREST.png","days": "ALL_DAYS"}
       ],
       "avatar": "lumera_avatar.png"
     },
@@ -119,7 +119,7 @@
       "type": "Nature",
       "rarity": "Common",
       "spawns": [
-        {"place": "Forest","zone": ["Forest 3"],"view": "object","objectImage": "../assets/images/spawns/MAP_FOREST.png","days": "ALL_DAYS"}
+        {"place": "Forest","zone": ["Any Object 3rd Area in Forest"],"view": "object","objectImage": "../assets/images/spawns/MAP_FOREST.png","days": "ALL_DAYS"}
       ],
       "avatar": "snatcher_avatar.png"
     },
@@ -129,7 +129,7 @@
       "type": "Nature",
       "rarity": "Common",
       "spawns": [
-        {"place": "Forest","zone": ["Forest 3"],"view": "object","objectImage": "../assets/images/spawns/MAP_FOREST.png","days": "ALL_DAYS"}
+        {"place": "Forest","zone": ["Any Object 3rd Area in Forest"],"view": "object","objectImage": "../assets/images/spawns/MAP_FOREST.png","days": "ALL_DAYS"}
       ],
       "avatar": "elefauna_avatar.png"
     },
@@ -139,7 +139,7 @@
       "type": "Water",
       "rarity": "Common",
       "spawns": [
-        {"place": "Forest","zone": ["Forest 4"],"view": "object","objectImage": "../assets/images/spawns/MAP_FOREST.png","days": "ALL_DAYS"}
+        {"place": "Forest","zone": ["Any Object 4th Area in Forest"],"view": "object","objectImage": "../assets/images/spawns/MAP_FOREST.png","days": "ALL_DAYS"}
       ],
       "avatar": "nessy_avatar.png"
     },
@@ -149,7 +149,7 @@
       "type": "Fire",
       "rarity": "Common",
       "spawns": [
-        {"place": "Forest","zone": ["Forest 3"],"view": "object","objectImage": "../assets/images/spawns/MAP_FOREST.png","days": "ALL_DAYS"}
+        {"place": "Forest","zone": ["Any Object 3rd Area in Forest"],"view": "object","objectImage": "../assets/images/spawns/MAP_FOREST.png","days": "ALL_DAYS"}
       ],
       "avatar": "hotfoot_avatar.png"
     },
@@ -159,7 +159,7 @@
       "type": "Nature",
       "rarity": "Common",
       "spawns": [
-        {"place": "Forest","zone": ["Forest 4"],"view": "object","objectImage": "../assets/images/spawns/MAP_FOREST.png","days": "ALL_DAYS"}
+        {"place": "Forest","zone": ["Any Object 4th Area in Forest"],"view": "object","objectImage": "../assets/images/spawns/MAP_FOREST.png","days": "ALL_DAYS"}
       ],
       "avatar": "twiggum_avatar.png"
     },
@@ -169,7 +169,7 @@
       "type": "Water",
       "rarity": "Common",
       "spawns": [
-        {"place": "Forest","zone": ["Forest 3"],"view": "object","objectImage": "../assets/images/spawns/MAP_FOREST.png","days": "ALL_DAYS"}
+        {"place": "Forest","zone": ["Any Object 3rd Area in Forest"],"view": "object","objectImage": "../assets/images/spawns/MAP_FOREST.png","days": "ALL_DAYS"}
       ],
       "avatar": "shellbee_avatar.png"
     },
@@ -179,7 +179,7 @@
       "type": "Water",
       "rarity": "Common",
       "spawns": [
-        {"place": "Forest","zone": ["Forest 4"],"view": "object","objectImage": "../assets/images/spawns/MAP_FOREST.png","days": "ALL_DAYS"}
+        {"place": "Forest","zone": ["Any Object 4th Area in Forest"],"view": "object","objectImage": "../assets/images/spawns/MAP_FOREST.png","days": "ALL_DAYS"}
       ],
       "avatar": "squibee_avatar.png"
     },
@@ -189,7 +189,7 @@
       "type": "Fire",
       "rarity": "Common",
       "spawns": [
-        {"place": "Forest","zone": ["Forest 4"],"view": "object","objectImage": "../assets/images/spawns/MAP_FOREST.png","days": "ALL_DAYS"}
+        {"place": "Forest","zone": ["Any Object 4th Area in Forest"],"view": "object","objectImage": "../assets/images/spawns/MAP_FOREST.png","days": "ALL_DAYS"}
       ],
       "avatar": "steamguin_avatar.png"
     },
@@ -219,7 +219,7 @@
       "type": "Nature",
       "rarity": "Rare",
       "spawns": [
-        {"place": "Forest","zone": ["Area 3 del Bosque"],"view": "object","objectImage": "../assets/images/spawns/Tulipinny.png","days": "MIE_SAB_DOM"}
+        {"place": "Forest","zone": ["Forest 3"],"view": "object","objectImage": "../assets/images/spawns/Tulipinny.png","days": "MIE_SAB_DOM"}
       ],
       "avatar": "tulipinny_avatar.png"
     },
@@ -229,7 +229,7 @@
       "type": "Fire",
       "rarity": "Rare",
       "spawns": [
-        {"place": "Forest","zone": ["Area 2 del Bosque"],"view": "object","objectImage": "../assets/images/spawns/PalmTree2.png","days": "MAR_VIE_DOM"}
+        {"place": "Forest","zone": ["Forest 2"],"view": "object","objectImage": "../assets/images/spawns/PalmTree2.png","days": "MAR_VIE_DOM"}
       ],
       "avatar": "dark_flue_avatar.png"
     },
@@ -239,7 +239,7 @@
       "type": "Nature",
       "rarity": "Rare",
       "spawns": [
-        {"place": "Forest","zone": ["Cualquier Objeto en el Area 4 del Bosque"],"view": "object","objectImage": "../assets/images/spawns/forest.jpg","days": ["Martes", "Viernes"]}
+        {"place": "Forest","zone": ["Any Object 4th Area in Forest"],"view": "object","objectImage": "../assets/images/spawns/forest.jpg","days": ["Martes", "Viernes"]}
       ],
       "avatar": "dark_flowerpiller_avatar.png"
     },
@@ -249,7 +249,7 @@
       "type": "Water",
       "rarity": "Rare",
       "spawns": [
-        {"place": "Forest","zone": ["Cualquier Objeto en el Area 4 del Bosque"],"view": "object","objectImage": "../assets/images/spawns/forest.jpg","days": ["Miercoles", "Sabado"]}
+        {"place": "Forest","zone": ["Any Object 4th Area in Forest"],"view": "object","objectImage": "../assets/images/spawns/forest.jpg","days": ["Miercoles", "Sabado"]}
       ],
       "avatar": "dark_prawnja_avatar.png"
     },
@@ -259,7 +259,7 @@
       "type": "Fire",
       "rarity": "Rare",
       "spawns": [
-        {"place": "Forest","zone": ["Area 4 del Bosque"],"view": "object","objectImage": "../assets/images/spawns/HugeTree.png","days": "LUN_JUE_DOM"}
+        {"place": "Forest","zone": ["Forest 4"],"view": "object","objectImage": "../assets/images/spawns/HugeTree.png","days": "LUN_JUE_DOM"}
       ],
       "avatar": "blazebit_avatar.png"
     },
@@ -269,7 +269,7 @@
       "type": "Water",
       "rarity": "Common",
       "spawns": [
-        {"place": "Cave","zone": ["Cualquier Objeto Zona 1 de la Cueva"],"view": "object","objectImage": "../assets/images/spawns/cave.jpg","days": "ALL_DAYS"}
+        {"place": "Cave","zone": ["Any Object 1st Area in Cave"],"view": "object","objectImage": "../assets/images/spawns/cave.jpg","days": "ALL_DAYS"}
       ],
       "avatar": "frostmite_avatar.png"
     },
