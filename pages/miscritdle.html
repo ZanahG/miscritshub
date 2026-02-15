@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Miscritdle | Miscrits HUB</title>
+
+  <link rel="icon" href="../assets/images/logo.png" sizes="32x32" />
+  <link rel="apple-touch-icon" href="../assets/images/logo.png" />
+
+  <link rel="stylesheet" href="../css/global.css" />
+  <link rel="stylesheet" href="../css/navbar.css" />
+  <link rel="stylesheet" href="../css/miscritdle.css" />
+
+  <script defer src="../js/navbar.js"></script>
+  <script defer src="../js/miscritdle.js"></script>
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <header class="nav">
+    <div class="nav__inner">
+      <a class="nav__brand" href="../index.html" aria-label="Ir al inicio">
+        <img src="../assets/images/logo.png" alt="Miscrits HUB" class="nav__logo" />
+      </a>
+
+      <button class="nav__toggle" type="button" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav__menu" aria-label="Navegación principal">
+        <a class="nav__link" href="./spawns.html">Spawns</a>
+        <a class="nav__link" href="./miscripedia.html">Miscripedia</a>
+
+        <div class="nav__dropdown" data-dropdown>
+          <button class="nav__link nav__dropBtn" type="button" aria-haspopup="true" aria-expanded="false">
+            PVP <span class="nav__chev" aria-hidden="true">▾</span>
+          </button>
+          <div class="nav__dropMenu" role="menu">
+            <a role="menuitem" class="nav__dropItem" href="./team_builder.html">Team Builder</a>
+            <a role="menuitem" class="nav__dropItem" href="./damage_calculator.html">Damage Calculator</a>
+            <a role="menuitem" class="nav__dropItem" href="./pvp_teams.html">PVP Teams</a>
+          </div>
+        </div>
+
+        <div class="nav__dropdown" data-dropdown>
+          <button class="nav__link nav__dropBtn" type="button" aria-haspopup="true" aria-expanded="false">
+            Tools <span class="nav__chev" aria-hidden="true">▾</span>
+          </button>
+          <div class="nav__dropMenu" role="menu">
+            <a role="menuitem" class="nav__dropItem" href="./stats_calculator.html">Stats Calculator</a>
+            <a role="menuitem" class="nav__dropItem" href="./breeding_calculator.html">Breeding Calculator</a>
+          </div>
+        </div>
+
+        <a class="nav__link is-active" href="./miscritdle.html">Miscritdle</a>
+        <a class="nav__link" href="./patch_notes.html">Patch notes</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main class="wrap">
+    <section class="miscritdle__hero card">
+      <h2>GUESS TODAY'S MISCRIT!</h2>
+      <p class="miscritdle__note muted">
+        Note: Miscritdle uses the current game roster (not the original)
+      </p>
+      <p class="miscritdle__note muted">
+        Variant/Form checks if the Miscrit is a special variant (Dark, Light, Foil, etc).
+      </p>
+    </section>
+
+    <section class="miscritdle card">
+      <div class="miscritdle__controls">
+        <div class="field">
+          <div class="miscritpicker miscritpicker--md">
+            <input
+              id="md-guess"
+              class="dmgx__search"
+              type="text"
+              placeholder="Write a Miscrit name"
+              autocomplete="off"
+            />
+            <div id="mdDropdown" class="miscritpicker__dropdown" hidden></div>
+          </div>
+        </div>
+
+        <div class="actions">
+          <button id="md-submit" class="btn btn--accent" type="button">Guess</button>
+        </div>
+      </div>
+
+      <div id="md-header" class="miscritdle__header"></div>
+      <div id="md-board" class="miscritdle__board"></div>
+
+      <section id="md-endcard" class="md-endcard" hidden>
+        <h2 id="md-end-title" class="md-endcard__title">VICTORY!</h2>
+
+        <div class="md-endcard__who">
+          <img
+            id="md-end-avatar"
+            class="md-endcard__avatar"
+            src="../assets/images/miscrits_avatar/preset_avatar.png"
+            alt=""
+          />
+          <div class="md-endcard__whoText">
+            <div id="md-end-line1" class="md-endcard__line">Congratulations, you guess</div>
+            <div id="md-end-name" class="md-endcard__name">miscrit_name</div>
+          </div>
+        </div>
+
+        <div class="md-endcard__next">
+          <div class="md-endcard__nextLabel">NEXT MISCRIT IN</div>
+          <div id="md-next-timer" class="md-endcard__timer">--:--:--</div>
+        </div>
+      </section>
+
+      <div class="miscritdle__footer">
+        <span id="md-status" class="muted"></span>
+
+        <!-- IMPORTANTE: tu JS lo usa -->
+        <button id="md-share" class="btn" type="button" disabled>Share</button>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
