@@ -10,6 +10,26 @@ const STATE = {
   sort: "idAsc",
 };
 
+const MISC_TYPE_ICON = {
+  Antiheal: "antiheal.png",
+  Bleed: "bleed.png",
+  Block: "block.png",
+  Bot: "buff_over_time.png",
+  Buff: "buff.png",
+  CI: "ci.png",
+  Cleanser: "cleanser.png",
+  Confuse: "confuse.png",
+  Debuff: "debuff.png",
+  ForcesSwitch: "forces_switch.png",
+  Heal: "heal.png",
+  Negate: "negate.png",
+  Paralyze: "paralyze.png",
+  Poison: "poison.png",
+  SI: "si.png",
+  Sleep: "sleep.png",
+  Special: "special.png",
+};
+
 const ELEMENTS_ORDER = ["Water","Fire","Nature","Wind","Earth","Lightning","Physical","Misc"];
 
 function prettyElementLabel(el){
@@ -132,16 +152,75 @@ function initStatsFilterUI(){
 ========================================================= */
 
 let ATTACK_NAMES = [];
+let ATTACK_ICON_BY_NAME = new Map();
 
 function buildAttackIndex(){
   const set = new Set();
+  const iconByName = new Map();
+
   for (const m of STATE.all){
     for (const a of (m.abilities ?? [])){
       const n = String(a?.name ?? "").trim();
-      if (n) set.add(n);
+      if (!n) continue;
+
+      set.add(n);
+
+      const icon = attackIconPathFromAbility(a);
+      
+      if (!iconByName.has(n)) {
+        iconByName.set(n, icon);
+      } else {
+        const cur = iconByName.get(n);
+        const curIsGenericMisc = String(cur).toLowerCase().includes("/misc.png");
+        const newIsGenericMisc = String(icon).toLowerCase().includes("/misc.png");
+
+        if (curIsGenericMisc && !newIsGenericMisc) {
+          iconByName.set(n, icon);
+        }
+      }
     }
   }
+
   ATTACK_NAMES = [...set].sort((a,b)=>a.localeCompare(b));
+  ATTACK_ICON_BY_NAME = iconByName;
+}
+
+function getAttackElement(a){
+  const raw =
+    a?.element ??
+    a?.attackElement ??
+    a?.attack_element ??
+    a?.school ??
+    a?.dmgElement ??
+    a?.damageElement ??
+    a?.typeElement ??
+    "";
+
+  const el = String(raw || "").trim();
+  if (!el) return "Physical";
+
+  const norm = el.charAt(0).toUpperCase() + el.slice(1).toLowerCase();
+
+  const alias = {
+    Electric: "Lightning",
+    Elec: "Lightning",
+  };
+
+  return alias[norm] || norm;
+}
+
+function attackIconPathFromAbility(a){
+  const el = String(a?.element ?? "").trim();
+  const type = String(a?.type ?? "").trim();
+
+  if (el && el.toLowerCase() !== "misc"){
+    return elementIconPath(el);
+  }
+
+  const file = MISC_TYPE_ICON[type];
+  if (file) return `../assets/images/type/${file}`;
+
+  return elementIconPath("Misc");
 }
 
 function escapeAttr(s){
@@ -181,12 +260,17 @@ function renderAttackDropdown(query){
   }
 
   dd.hidden = false;
-  dd.innerHTML = matches.map((name) => `
-    <div class="apItem" data-name="${escapeAttr(name)}">
-      <div class="apIcon"></div>
-      <div class="apName">${escapeHtml(name)}</div>
-    </div>
-  `).join("");
+  const icon = ATTACK_ICON_BY_NAME.get(name) || elementIconPath("Physical");
+  dd.innerHTML = matches.map((name) => {
+    const icon = ATTACK_ICON_BY_NAME.get(name) || elementIconPath("Physical");
+
+    return `
+      <div class="apItem" data-name="${escapeAttr(name)}">
+        <div class="apIcon" style="background-image:url('${escapeAttr(icon)}')"></div>
+        <div class="apName">${escapeHtml(name)}</div>
+      </div>
+    `;
+  }).join("");
 }
 
 function closeAttackDropdown(){

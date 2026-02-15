@@ -485,6 +485,19 @@ main, .main, .page, .wrap{
   z-index: 1;
 }
 
+.apIcon{
+  width: 22px;
+  height: 22px;
+  border-radius: 7px;
+  background-color: rgba(255,255,255,0.10);
+  border: 1px solid rgba(255,255,255,0.12);
+  flex: 0 0 auto;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 16px 16px;
+}
+
 
 /* Responsive */
 @media (max-width: 980px){
