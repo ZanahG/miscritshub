@@ -498,6 +498,14 @@ main, .main, .page, .wrap{
   background-size: 16px 16px;
 }
 
+.statsFilter{
+  position: relative;
+}
+
+.statsPanel{
+  right: 0;
+  left: auto;
+}
 
 /* Responsive */
 @media (max-width: 980px){
@@ -508,4 +516,28 @@ main, .main, .page, .wrap{
   .grid{ grid-template-columns: 1fr; }
   .statsPanel__grid{ grid-template-columns: 1fr; }
   .mpFilters select{ width: 100%; }
+}
+
+@media (max-width: 720px){
+  .statsPanel{
+    left: 50% !important;
+    right: auto !important;
+    transform: translateX(-50%);
+    width: min(560px, calc(100vw - 24px));
+    max-width: calc(100vw - 24px);
+  }
+}
+
+@media (max-width: 720px){
+  .statsPanel{
+    position: fixed !important;
+    left: 12px !important;
+    right: 12px !important;
+    top: 180px !important;
+    bottom: 12px !important;
+    width: auto !important;
+    transform: none !important;
+    overflow: auto;
+    z-index: 99999;
+  }
 }
