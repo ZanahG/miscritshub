@@ -1,0 +1,692 @@
+{
+  "version": "2.1.0",
+  "title": "Miscrits & Relics adjustments",
+
+  "visual": {
+    "buff": ["Bunaken", "Beldame", "Aquarion", "Dark Slithero", "Blighted Cubsprout", "Light Twiggum", "Mama", "Papa", "Foil Pamboo", "Light Snorkels", "Light Flue", "Fangly", "Slithero"],
+    "nerf": ["Geneseed","Eclipso", "Skelepup", "Flurrious", "Winnebeargo", "Hotdog", "Liothning", "Dreamger", "Narlope"],
+    "relics": ["Mystic Map", "Palmdas Talon", "Froost Root", "Quartex Crystal", "Sayams Trident"]
+  },
+  "intro": [
+    "PATCH NOTES VER 2.1.0",
+    "Patch focuses on fine-tuning ability scaling, utility, and stat distribution across multiple Miscrits. This update targets outliers in sustain, damage-over-time pressure, and stat stacking, while also introducing several ability reworks and utility shifts to improve combat clarity and strategic diversity. Overall, these changes aim to create healthier trade-offs between damage, control, and survivability across both PvE and PvP encounters"
+  ],
+  "sections": [
+    {
+      "type": "Miscrit",
+      "name": "Bunaken",
+      "blocks": [
+        {
+          "spell": "Storm -> Resplendent Rain",
+          "icon": "../assets/images/type/water.png",
+          "changes": [
+            {
+              "label": "Resplendent Rain",
+              "from": "Storm",
+              "to": "A 25 AP Water attack that raises your Elemental Attack by 10, with 90% Accuracy (Enchanted | +10% Accuracy)"
+            }
+          ]
+        },
+        {
+          "spell": "Tears of Adinda",
+          "icon": "../assets/images/type/cleanser.png",
+          "changes": [
+            {
+              "label": "Tears of Adinda",
+              "from": "Heals yourself by 10 HP and raises your Accuracy by 5%, with 110% Accuracy (Enchanted | +5 Heal)",
+              "to": "Cleanses user and heals yourself by 25 HP (2 turns cooldown), with 100% Accuracy (Enchanted | +10% Accuracy)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "Miscrit",
+      "name": "Beldame",
+      "blocks": [
+        {
+          "spell": "Dream Catcher",
+          "icon": "../assets/images/type/lightning.png",
+          "changes": [
+            {
+              "label": "Dream Catcher",
+              "from": "A 34 AP Lightning attack that provides 8 Block and raises your Elemental Attack by 8, with 95% Accuracy (Enchanted | +5% Accuracy)",
+              "to": "A 34 AP Lightning attack that provides 10 Block and raises your Elemental Attack by 8, with 95% Accuracy (Enchanted | +5% Accuracy)"
+            }
+          ]
+        },
+        {
+          "spell": "Voltage -> Plasma Pulse",
+          "icon": "../assets/images/type/lightning.png",
+          "changes": [
+            {
+              "label": "Voltage ",
+              "from": "Voltage ",
+              "to": "Plasma Pulse"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "Miscrit",
+      "name": "Aquarion",
+      "blocks": [
+        {
+          "spell": "Krakyn Klaw",
+          "icon": "../assets/images/type/physical.png",
+          "changes": [
+            {
+              "label": "Krakyn Klaw",
+              "from": "A 30 AP Physical attack that steals 8 Defenses from foe, with 100% Accuracy (Enchanted | +3 AP)",
+              "to": "A 30 AP Physical attack that steals 10 Defenses from foe, with 100% Accuracy (Enchanted | +3 AP)"
+            }
+          ]
+        },
+        {
+          "spell": "Tentacle Trench",
+          "icon": "../assets/images/type/water.png",
+          "changes": [
+            {
+              "label": "Tentacle Trench",
+              "from": "A 33 AP Water attack that inflicts Bleed and Anti-heal for 3 turns, with 95% Accuracy (Enchanted | +5% Accuracy)",
+              "to": "A 34 AP Water attack that inflicts Bleed and Anti-heal for 3 turns, with 95% Accuracy (Enchanted | +5% Accuracy)"
+            }
+          ]
+        },
+        {
+          "spell": "OverWater -> Whirlpool",
+          "icon": "../assets/images/type/water.png",
+          "changes": [
+            {
+              "label": "OverWater",
+              "from": "OverWater",
+              "to": "Whirlpool"
+            }
+          ]
+        },
+        {
+          "spell": "Mush -> OverWater",
+          "icon": "../assets/images/type/water.png",
+          "changes": [
+            {
+              "label": "Mush",
+              "from": "Mush",
+              "to": "OverWater"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "Miscrit",
+      "name": "Dark Slithero",
+      "blocks": [
+        {
+          "spell": "Dark Tainted Flame",
+          "icon": "../assets/images/type/fire.png",
+          "changes": [
+            {
+              "label": "Dark Tainted Flame",
+              "from": "A 33 AP Fire attack that inflicts 8 AP Poison for 3 turns, with 95% Accuracy (Enchanted | +5% Accuracy)",
+              "to": "A 33 AP Fire attack that inflicts 9 AP Poison for 3 turns, with 95% Accuracy (Enchanted | +5% Accuracy)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "Miscrit",
+      "name": "Blighted Cubsprout",
+      "blocks": [
+        {
+          "spell": "Blighted Ferocity",
+          "icon": "../assets/images/type/physical.png",
+          "changes": [
+            {
+              "label": "Blighted Ferocity",
+              "from": "A 48 AP Physical attack (2 turns cooldown), with 100% Accuracy (Enchanted | +5 AP)",
+              "to": "A 48 AP Physical attack that steals 10 Elemental Attack from foe (2 turns cooldown), with 100% Accuracy (Enchanted | +5 AP)"
+            }
+          ]
+        },
+        {
+          "spell": "Blighted Leaves",
+          "icon": "../assets/images/type/nature.png",
+          "changes": [
+            {
+              "label": "Blighted Leaves",
+              "from": "A 25 AP Nature attack that raises your Physical Attack by 12, with 90% Accuracy (Enchanted | +10% Accuracy)",
+              "to": "A 25 AP Nature attack that heals yourself by 15 HP, with 90% Accuracy (Enchanted | +10% Accuracy)"
+            }
+          ]
+        },
+        {
+          "spell": "Unbreakable -> Thrash",
+          "icon": "../assets/images/type/physical.png",
+          "changes": [
+            {
+              "label": "Unbreakable",
+              "from": "Unbreakable",
+              "to": "Thrash"
+            }
+          ]
+        },
+        {
+          "spell": "Gilly Weed -> Unbreakable",
+          "icon": "../assets/images/type/buff.png",
+          "changes": [
+            {
+              "label": "Gilly Weed",
+              "from": "Gilly Weed",
+              "to": "Unbreakable"
+            }
+          ]
+        },
+        {
+          "spell": "Claw -> Gilly Weed",
+          "icon": "../assets/images/type/negate.png",
+          "changes": [
+            {
+              "label": "Claw",
+              "from": "Claw",
+              "to": "Gilly Weed"
+            }
+          ]
+        },
+        {
+          "spell": "EA",
+          "icon": "../assets/images/icons/ea.png",
+          "changes": [
+            {
+              "label": "EA",
+              "from": "3/5",
+              "to": "2/5"
+            }
+          ]
+        },
+        {
+          "spell": "ED",
+          "icon": "../assets/images/icons/ed.png",
+          "changes": [
+            {
+              "label": "ED",
+              "from": "2/5",
+              "to": "3/5"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "Miscrit",
+      "name": "Light Twiggum",
+      "icon": "../assets/images/miscrits_avatar/light_twiggum_avatar.png",
+      "blocks": [
+        {
+          "spell": "PA",
+          "icon": "../assets/images/icons/pa.png",
+          "changes": [
+            {
+              "label": "PA",
+              "from": "2/5",
+              "to": "1/5"
+            }
+          ]
+        },
+        {
+          "spell": "HP",
+          "icon": "../assets/images/icons/hp.png",
+          "changes": [
+            {
+              "label": "HP",
+              "from": "4/5",
+              "to": "5/5"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "Miscrit",
+      "name": "Mama",
+      "icon": "../assets/images/miscrits_avatar/mama_avatar.png",
+      "blocks": [
+        {
+          "spell": "Mother's Instinct",
+          "icon": "../assets/images/type/physical.png",
+          "changes": [
+            {
+              "label": "Mother's Instinct",
+              "from": "A 30 AP Physical attack that raises your Attacks and Defenses by 5, with 90% Accuracy (Enchanted | +10% Accuracy)",
+              "to": "A 30 AP Physical attack that raises your Attacks and Defenses by 6, with 90% Accuracy (Enchanted | +10% Accuracy)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "Miscrit",
+      "name": "Papa",
+      "blocks": [
+        {
+          "spell": "Origin",
+          "icon": "../assets/images/type/lightning.png",
+          "changes": [
+            {
+              "label": "Origin",
+              "from": "A 25 AP Lightning attack that raises your Attacks and Defenses by 5, with 100% Accuracy (Enchanted | +5 AP)",
+              "to": "A 25 AP Lightning attack that raises your Attacks and Defenses by 6, with 100% Accuracy (Enchanted | +5 AP)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "Miscrit",
+      "name": "Foil Pamboo",
+      "blocks": [
+        {
+          "spell": "Foil Panda Bash",
+          "icon": "../assets/images/type/nature.png",
+          "changes": [
+            {
+              "label": "Foil Panda Bash",
+              "from": "A 29 AP Nature attack that inflicts Anti-heal for 3 turns and raises your Elemental Attack by 8, with 100% Accuracy (Enchanted | +3 AP)",
+              "to": "A 29 AP Nature attack that inflicts Anti-heal for 3 turns and raises your Elemental Attack by 10, with 100% Accuracy (Enchanted | +3 AP)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "Miscrit",
+      "name": "Light Snorkels",
+      "blocks": [
+        {
+          "spell": "Coral Tempest",
+          "icon": "../assets/images/type/wind.png",
+          "changes": [
+            {
+              "label": "Coral Tempest",
+              "from": "A 30 AP Wind attack that grants 9 healing for 2 turns, with 100% Accuracy (Enchanted | +2 AP)",
+              "to": "A 30 AP Wind attack that grants 10 healing for 2 turns, with 100% Accuracy (Enchanted | +2 AP)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "Miscrit",
+      "name": "Light Flue",
+      "blocks": [
+        {
+          "spell": "Mighty Winds",
+          "icon": "../assets/images/type/wind.png",
+          "changes": [
+            {
+              "label": "Mighty Winds",
+              "from": "A 29 AP Wind attack that inflicts 8 AP Fire DoT for 2 turns, with 100% Accuracy (Enchanted | +3 AP)",
+              "to": "A 29 AP Wind attack that inflicts 7 AP Fire DoT for 2 turns, with 100% Accuracy (Enchanted | +3 AP)"
+            }
+          ]
+        },
+        {
+          "spell": "Brimstone -> Passion",
+          "icon": "../assets/images/type/fire.png",
+          "changes": [
+            {
+              "label": "Brimstone ",
+              "from": "Brimstone ",
+              "to": "Passion"
+            }
+          ]
+        },
+        {
+          "spell": "PA",
+          "icon": "../assets/images/icons/pa.png",
+          "changes": [
+            {
+              "label": "PA ",
+              "from": "2/5",
+              "to": "1/5"
+            }
+          ]
+        },
+        {
+          "spell": "ED",
+          "icon": "../assets/images/icons/ed.png",
+          "changes": [
+            {
+              "label": "ED ",
+              "from": "3/5",
+              "to": "4/5"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "Miscrit",
+      "name": "Fangly",
+      "blocks": [
+        {
+          "spell": "Wailing Wind",
+          "icon": "../assets/images/type/wind.png",
+          "changes": [
+            {
+              "label": "Wailing Wind",
+              "from": "A 16 AP Wind attack that hits 2 times and inflicts 10 AP Poison for 3 turns, with 95% Accuracy (Enchanted | +5% Accuracy)",
+              "to": "A 15 AP Wind attack that hits 2 times and inflicts 10 AP Poison for 3 turns, with 95% Accuracy (Enchanted | +5% Accuracy)"
+            }
+          ]
+        },
+        {
+          "spell": "Hard Lock",
+          "icon": "../assets/images/type/paralyze.png",
+          "changes": [
+            {
+              "label": "Hard Lock",
+              "from": "Paralyzes your foe for 4 turns (1 Use), with --% Accuracy (Enchanted | Replenishes 5 Health) ",
+              "to": "Paralyzes your foe for 4 turns and raises your Physical Defense by 10 (1 Use), with --% Accuracy (Enchanted | Replenishes 5 Health)"
+            }
+          ]
+        },
+        {
+          "spell": "PA",
+          "icon": "../assets/images/icons/pa.png",
+          "changes": [
+            {
+              "label": "PA ",
+              "from": "3/5",
+              "to": "1/5"
+            }
+          ]
+        },
+        {
+          "spell": "ED",
+          "icon": "../assets/images/icons/ed.png",
+          "changes": [
+            {
+              "label": "ED ",
+              "from": "2/5",
+              "to": "3/5"
+            }
+          ]
+        },
+        {
+          "spell": "EA",
+          "icon": "../assets/images/icons/ea.png",
+          "changes": [
+            {
+              "label": "ED ",
+              "from": "4/5",
+              "to": "5/5"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "Miscrit",
+      "name": "Slithero",
+      "blocks": [
+        {
+          "spell": "Tainted Flame",
+          "icon": "../assets/images/type/wind.png",
+          "changes": [
+            {
+              "label": "Tainted Flame",
+              "from": "A 25 AP Fire attack that inflicts 6 AP Poison for 3 turns, with 100% Accuracy (Enchanted | +4 AP)",
+              "to": "A 25 AP Fire attack that inflicts 7 AP Poison for 3 turns, with 100% Accuracy (Enchanted | +4 AP)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "Miscrit",
+      "name": "Geneseed",
+      "blocks": [
+        {
+          "spell": "Reap -> Sow",
+          "icon": "../assets/images/type/nature.png",
+          "changes": [
+            {
+              "label": "Reap ",
+              "from": "Reap ",
+              "to": "Sow"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "Miscrit",
+      "name": "Eclipso",
+      "blocks": [
+        {
+          "spell": "Eclipse",
+          "icon": "../assets/images/type/wind.png",
+          "changes": [
+            {
+              "label": "Eclipse",
+              "from": "A 30 AP Wind attack that inflicts Bleed for 4 turns and Anti-heal for 2 turns, with 100% Accuracy (Enchanted | +3 AP)",
+              "to": "A 30 AP Wind attack that inflicts Bleed for 3 turns and Anti-heal for 2 turns, with 100% Accuracy (Enchanted | +3 AP)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "Miscrit",
+      "name": "Skelepup",
+      "blocks": [
+        {
+          "spell": "Brainy Bolts",
+          "icon": "../assets/images/type/lightning.png",
+          "changes": [
+            {
+              "label": "Brainy Bolts",
+              "from": "A 30 AP Lightning attack that steals 12 HP from foe (2 turns cooldown), with 100% Accuracy (Enchanted | +5 AP)",
+              "to": "A 30 AP Lightning attack that steals 11 HP from foe (2 turns cooldown), with 100% Accuracy (Enchanted | +5 AP)"
+            }
+          ]
+        },
+        {
+          "spell": "Monster Knuckle",
+          "icon": "../assets/images/type/physical.png",
+          "changes": [
+            {
+              "label": "Monster Knuckle",
+              "from": "A 29 AP Physical attack that inflicts Switch Curse (2 turns cooldown), with 90% Accuracy (Enchanted | +10% Accuracy)",
+              "to": "A 28 AP Physical attack that inflicts Switch Curse (2 turns cooldown), with 90% Accuracy (Enchanted | +10% Accuracy)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "Miscrit",
+      "name": "Flurrious",
+      "blocks": [
+        {
+          "spell": "Naughty List",
+          "icon": "../assets/images/type/physical.png",
+          "changes": [
+            {
+              "label": "Naughty List",
+              "from": "A 23 AP Physical attack with a 50% chance to inflict Surprise, with 95% Accuracy (Enchanted | +5% Accuracy)",
+              "to": "A 23 AP Physical attack with a 50% chance to inflict Stats Chaos, with 95% Accuracy (Enchanted | +5% Accuracy)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "Miscrit",
+      "name": "Winnebeargo",
+      "blocks": [
+        {
+          "spell": "Mauling Fury",
+          "icon": "../assets/images/type/wind.png",
+          "changes": [
+            {
+              "label": "Mauling Fury",
+              "from": "A 32 AP Wind attack that inflicts 9 AP Wind DoT for 3 turns, with 95% Accuracy (Enchanted | +5% Accuracy)",
+              "to": "A 32 AP Wind attack that inflicts 8 AP Wind DoT for 3 turns, with 95% Accuracy (Enchanted | +5% Accuracy)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "Miscrit",
+      "name": "Hotdog",
+      "blocks": [
+        {
+          "spell": "Ruff Rush",
+          "icon": "../assets/images/type/physical.png",
+          "changes": [
+            {
+              "label": "Ruff Rush",
+              "from": "A 27 AP Physical attack that inflicts 7 AP Physical DoT for 3 turns, with 100% Accuracy (Enchanted | +3 AP)",
+              "to": "A 27 AP Physical attack that inflicts 7 AP Physical DoT for 2 turns, with 100% Accuracy (Enchanted | +3 AP)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "Miscrit",
+      "name": "Liothning",
+      "blocks": [
+        {
+          "spell": "Poison Mauler",
+          "icon": "../assets/images/type/physical.png",
+          "changes": [
+            {
+              "label": "Poison Mauler",
+              "from": "A 28 AP Physical attack that inflicts 7 AP Physical DoT for 3 turns, with 100% Accuracy (Enchanted | +2 AP)",
+              "to": "A 28 AP Physical attack that inflicts 7 AP Physical DoT for 2 turns, with 100% Accuracy (Enchanted | +2 AP)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "Miscrit",
+      "name": "Dreamger",
+      "blocks": [
+        {
+          "spell": "Cry of the Tiger",
+          "icon": "../assets/images/type/physical.png",
+          "changes": [
+            {
+              "label": "Cry of the Tiger",
+              "from": "A 29 AP Physical attack that steals 10 HP from foe, with 100% Accuracy (Enchanted | +2 AP)",
+              "to": "A 29 AP Physical attack that steals 8 HP from foe, with 100% Accuracy (Enchanted | +2 AP)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "Miscrit",
+      "name": "Narlope",
+      "blocks": [
+        {
+          "spell": "Hoof Blast",
+          "icon": "../assets/images/type/lightning.png",
+          "changes": [
+            {
+              "label": "Hoof Blast",
+              "from": "A 25 AP Lightning attack that steals 8 HP from foe, with 100% Accuracy (Enchanted | +2 AP)",
+              "to": "A 25 AP Lightning attack that steals 6 HP from foe, with 100% Accuracy (Enchanted | +2 AP)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "Relic",
+      "name": "Mystic Map",
+      "blocks": [
+        {
+          "spell": "Mystic Map",
+          "changes": [
+            {
+              "label": "Mystic Map",
+              "from": "+8 HP, +8 EA, -10 SPD",
+              "to": "+9 HP, +9 EA, -10 SPD"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "Relic",
+      "name": "Palmdas Talon",
+      "blocks": [
+        {
+          "spell": "Palmdas Talon",
+          "changes": [
+            {
+              "label": "Palmdas Talon",
+              "from": "+8 HP, +8 PA, -10 SPD",
+              "to": "+9 HP, +9 PA, -10 SPD"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "Relic",
+      "name": "Frost Root",
+      "blocks": [
+        {
+          "spell": "Frost Root",
+          "changes": [
+            {
+              "label": "Frost Root",
+              "from": "Sleep Immunity, -10 HP",
+              "to": "Sleep Immunity, -7 HP"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "Relic",
+      "name": "Quartex Crystal",
+      "blocks": [
+        {
+          "spell": "Quartex Crystal",
+          "changes": [
+            {
+              "label": "Quartex Crystal",
+              "from": "Confuse Immunity, -10 HP",
+              "to": "Confuse Immunity, -7 HP"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "Relic",
+      "name": "Saiyams Trident",
+      "blocks": [
+        {
+          "spell": "Saiyams Trident",
+          "changes": [
+            {
+              "label": "Saiyams Trident",
+              "from": "+18 HP, +20 PA, +10 SPD",
+              "to": "+15 HP, +20 PA, +10 SPD"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

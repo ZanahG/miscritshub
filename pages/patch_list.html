@@ -3,23 +3,21 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Miscrits Data | Miscrits HUB</title>
+  <title>Patch notes | Miscrits HUB</title>
 
   <link rel="icon" href="../assets/images/logo.png" sizes="32x32" />
   <link rel="apple-touch-icon" href="../assets/images/logo.png" />
 
-  <!-- Global styles (NEW system) -->
   <link rel="stylesheet" href="../css/global.css" />
   <link rel="stylesheet" href="../css/navbar.css" />
-
-  <!-- Page styles -->
-  <link rel="stylesheet" href="../css/miscripedia_data.css" />
+  <link rel="stylesheet" href="../css/patch_list.css" />
 
   <script defer src="../js/navbar.js"></script>
+  <script defer src="../js/patch_list.js"></script>
 </head>
 
 <body>
-  <!-- NAVBAR (same as index) -->
+  <!-- NAVBAR -->
   <header class="nav">
     <div class="nav__inner">
       <a class="nav__brand" href="../index.html" aria-label="Ir al inicio">
@@ -32,7 +30,7 @@
 
       <nav class="nav__menu" aria-label="Navegación principal">
         <a class="nav__link" href="./spawns.html">Spawns</a>
-        <a class="nav__link is-active" href="./miscripedia.html">Miscripedia</a>
+        <a class="nav__link" href="./miscripedia.html">Miscripedia</a>
 
         <div class="nav__dropdown" data-dropdown>
           <button class="nav__link nav__dropBtn" type="button" aria-haspopup="true" aria-expanded="false">
@@ -56,72 +54,26 @@
         </div>
 
         <a class="nav__link" href="./miscritdle.html">Miscritdle</a>
-        <a class="nav__link" href="./patch_list.html">Patch notes</a>
+        <a class="nav__link is-active" href="./patch_list.html">Patch notes</a>
       </nav>
     </div>
   </header>
 
   <!-- MAIN -->
-  <main class="wrap md">
-    <a class="md__back" href="./miscripedia.html">← Back to Miscripedia</a>
-
-    <section class="md__shell card">
-      <div class="md__head">
-        <div class="md__titleRow">
-          <div class="md__elemBadge" id="elemBadge"></div>
-          <div class="md__titleText">
-            <h1 id="name" class="md__name"></h1>
-            <div class="md__metaLine">
-              <span id="rarityText" class="md__rarity"></span>
-              <span class="md__dot">•</span>
-              <span id="location" class="md__location"></span>
-            </div>
-          </div>
+  <main class="wrap pnList">
+    <section class="card pnList__card">
+      <div class="pnList__head">
+        <div>
+          <h1 class="pnList__title">Patch notes</h1>
+          <p class="pnList__sub">Cambios por versión, buffs/nerfs y ajustes del sistema.</p>
         </div>
 
-        <div id="tags" class="md__tags"></div>
+        <a class="btn btn--accent" href="./patch_list.html">Open latest</a>
       </div>
 
-      <div class="md__grid">
-        <!-- LEFT -->
-        <section class="md__left card">
-          <div class="md__spriteBox">
-            <img id="sprite" alt="" />
-          </div>
-
-          <h2 class="md__sectionTitle">Stats</h2>
-          <div class="md__stats" id="stats"></div>
-        </section>
-
-        <!-- RIGHT -->
-        <section class="md__right card">
-          <div class="md__block">
-            <h2 class="md__sectionTitle">Miscrit Lore</h2>
-            <p id="lore" class="md__lore"></p>
-          </div>
-
-          <div class="md__metaGrid">
-            <div class="md__meta">
-              <div class="md__metaLabel">Type</div>
-              <div id="type" class="md__metaValue"></div>
-            </div>
-            <div class="md__meta">
-              <div class="md__metaLabel">Location</div>
-              <div id="location2" class="md__metaValue"></div>
-            </div>
-          </div>
-
-          <div class="md__block">
-            <h2 class="md__sectionTitle">Abilities</h2>
-            <div id="abilities" class="md__abilities"></div>
-          </div>
-        </section>
-      </div>
+      <div id="patchList" class="pnList__grid"></div>
+      <div id="patchEmpty" class="pnList__empty" style="display:none;">No patches found.</div>
     </section>
   </main>
-
-  <div id="abTip" class="abTip" hidden></div>
-
-  <script src="../js/miscripedia_data.js"></script>
 </body>
 </html>

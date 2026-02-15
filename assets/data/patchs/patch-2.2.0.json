@@ -1,0 +1,45 @@
+{
+  "version": "2.2.0",
+  "title": "New Miscrits in Miscrian Jungle",
+  "intro": [
+    "PATCH NOTES VER 2.2.0",
+    "This version brings 5 New Miscrits to the Jungle, hurry up and catch them all!"
+  ],
+  "sections": [
+    {
+      "type": "Miscrit",
+      "name": "Lheon",
+      "quote": "Lheon is often seen sleeping under the trees, but this is a ruse. They are only pretending to sleep in order to ambush their prey",
+      "blocks": [
+      ]
+    },
+    {
+      "type": "Miscrit",
+      "name": "Dark Hoghedge",
+      "quote": "Dark Hoghedge's anxiety at meeting strangers can sometimes cause it to act out violently when approached",
+      "blocks": [
+      ]
+    },
+    {
+      "type": "Miscrit",
+      "name": "Dark Beetor",
+      "quote": "Dark Beetor's eerie, ultraviolet glow provides it with just enough light to hunt its prey. It is the reason why some children are afraid of the dark",
+      "blocks": [
+      ]
+    },
+    {
+      "type": "Miscrit",
+      "name": "Zhakor",
+      "quote": "Zhakor appears to be extremely venomous, but this is not the case. Its body is brightly colored by design in order to intimidate would be attackers",
+      "blocks": [
+      ]
+    },
+    {
+      "type": "Miscrit",
+      "name": "Foil Pangoleaf",
+      "quote": "Foil Pangoleaf's shiny exterior is distracting, which it will always use to its advantage during battle",
+      "blocks": [
+      ]
+    }
+  ]
+}
