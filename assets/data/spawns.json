@@ -3325,12 +3325,42 @@
     },
     {
       "id": "332",
+      "name": "Blug",
+      "type": "Fire",
+      "rarity": "Common",
+      "avatar": "blug_avatar.png",
+      "spawns": [
+        {"place": "Volcano Island","zone": ["3rd Area on Volcano Island"],"view": "object","objectImage": "../assets/images/spawns/volcanoisland.png","days": "ALL_DAYS"}
+      ]
+    },
+    {
+      "id": "333",
+      "name": "Dark Humbug",
+      "type": "Nature",
+      "rarity": "Rare",
+      "avatar": "dark_humbug_avatar.png",
+      "spawns": [
+        {"place": "Volcano Island","zone": ["4th Area on Volcano Island"],"view": "object","objectImage": "../assets/images/spawns/volcanoisland.png","days": ["Lunes", "Martes","Miercoles"]}
+      ]
+    },
+    {
+      "id": "334",
+      "name": "Kawanko",
+      "type": "Water",
+      "rarity": "Epic",
+      "avatar": "kawanko_avatar.png",
+      "spawns": [
+        {"place": "Volcano Island","zone": ["1st Area on Volcano Island"],"view": "object","objectImage": "../assets/images/spawns/Kawanko.png","days": ["Lunes", "Martes","Miercoles"]}
+      ]
+    },
+    {
+      "id": "335",
       "name": "Casanova",
       "type": "Fire",
       "rarity": "Exotic",
-      "avatar": "babakku_avatar.png",
+      "avatar": "casanova_avatar.png",
       "spawns": [
-        {"place": "Volcano Island","zone": ["4th Area on Volcano Island"],"view": "object","objectImage": "../assets/images/spawns/FoilPango.png","days": "ALL_DAYS"}
+        {"place": "Volcano Island","zone": ["3rd Area on Volcano Island"],"view": "object","objectImage": "../assets/images/spawns/Casanova.png","days": "ALL_DAYS"}
       ]
     }
   ]

@@ -75888,5 +75888,932 @@
                 "4": []
             }
         }
+    },
+    {
+        "id": 662,
+        "element": "Fire",
+        "names": [
+            "Blug",
+            "Motodo",
+            "Blyket",
+            "Flyetir"
+        ],
+        "rarity": "Common",
+        "hp": "Strong",
+        "spd": "Moderate",
+        "ea": "Weak",
+        "pa": "Max",
+        "ed": "Strong",
+        "pd": "Moderate",
+        "abilities": [
+            {
+                "id": 48,
+                "name": "Bash",
+                "ap": 15,
+                "accuracy": 95,
+                "enchant": {
+                    "ap": 3
+                },
+                "element": "Physical",
+                "type": "Attack",
+                "desc": "A powerful Physical attack",
+                "enchant_desc": "+3 Attack Power"
+            },
+            {
+                "id": 1378,
+                "name": "Wrap Up",
+                "ap": 5,
+                "enchant": {
+                    "turns": 1
+                },
+                "element": "Physical",
+                "type": "Dot",
+                "desc": "Inflicts Physical damage over 3 turns",
+                "enchant_desc": "+1 Round",
+                "turns": 3
+            },
+            {
+                "id": 1379,
+                "name": "Sharp Scales",
+                "ap": 25,
+                "enchant": {
+                    "ap": 3
+                },
+                "element": "Physical",
+                "type": "Attack",
+                "desc": "A massively powerful Physical attack that grants Ethereal for 3 turns",
+                "enchant_desc": "+3 Attack Power",
+                "additional": [
+                    {
+                        "type": "Ethereal"
+                    }
+                ]
+            },
+            {
+                "id": 197,
+                "name": "Destruction",
+                "ap": 25,
+                "accuracy": 90,
+                "enchant": {
+                    "accuracy": 10
+                },
+                "element": "Physical",
+                "type": "Attack",
+                "desc": "A massively powerful Physical attack",
+                "enchant_desc": "+10% Accuracy"
+            },
+            {
+                "id": 78,
+                "name": "Shy Smile",
+                "ap": -5,
+                "enchant": {
+                    "ap": -1
+                },
+                "element": "Misc",
+                "type": "Buff",
+                "desc": "Lowers your foe's Attacks by 5",
+                "enchant_desc": "+1 to Debuff",
+                "keys": [
+                    "ea",
+                    "pa"
+                ]
+            },
+            {
+                "id": 113,
+                "name": "Engulf",
+                "ap": 15,
+                "accuracy": 95,
+                "enchant": {
+                    "ap": 3
+                },
+                "element": "Fire",
+                "type": "Attack",
+                "desc": "A powerful Fire attack",
+                "enchant_desc": "+3 Attack Power"
+            },
+            {
+                "id": 175,
+                "name": "Shove",
+                "ap": 7,
+                "enchant": {
+                    "ap": 1
+                },
+                "element": "Physical",
+                "type": "Attack",
+                "desc": "A simple Physical attack",
+                "enchant_desc": "+1 Attack Power"
+            },
+            {
+                "id": 94,
+                "name": "Unbreakable",
+                "ap": 11,
+                "enchant": {
+                    "ap": 3
+                },
+                "element": "Misc",
+                "type": "Buff",
+                "target": "Self",
+                "desc": "Raises your Defenses by 11",
+                "enchant_desc": "+3 to Buff",
+                "keys": [
+                    "ed",
+                    "pd"
+                ]
+            },
+            {
+                "id": 101,
+                "name": "Cinders",
+                "ap": 7,
+                "enchant": {
+                    "ap": 1
+                },
+                "element": "Fire",
+                "type": "Attack",
+                "desc": "A simple Fire attack",
+                "enchant_desc": "+1 Attack Power"
+            },
+            {
+                "id": 1115,
+                "name": "Glare",
+                "ap": -25,
+                "accuracy": 95,
+                "enchant": {
+                    "accuracy": 5
+                },
+                "element": "Misc",
+                "type": "Buff",
+                "desc": "Lowers your foe's Speed by 25 and heals yourself by 5 HP",
+                "enchant_desc": "+5% Accuracy",
+                "additional": [
+                    {
+                        "type": "Heal"
+                    }
+                ],
+                "keys": [
+                    "spd"
+                ]
+            },
+            {
+                "id": 407,
+                "name": "Double Edged",
+                "ap": 15,
+                "enchant": {
+                    "ap": 2
+                },
+                "element": "Misc",
+                "type": "Buff",
+                "target": "Self",
+                "desc": "Raises your Physical Attack by 15 but lowers your Defenses by 5",
+                "enchant_desc": "+2 to Buff",
+                "additional": [
+                    {
+                        "keys": [
+                            "ed",
+                            "pd"
+                        ],
+                        "type": "Buff"
+                    }
+                ],
+                "keys": [
+                    "pa"
+                ]
+            },
+            {
+                "id": 963,
+                "name": "Fire Storm",
+                "ap": 5,
+                "enchant": {
+                    "times": 1
+                },
+                "element": "Fire",
+                "type": "Attack",
+                "desc": "A simple Fire attack that hits 5 times",
+                "enchant_desc": "+1 Repeat",
+                "times": 5
+            }
+        ],
+        "ability_order": [
+            101,
+            78,
+            175,
+            1115,
+            1378,
+            407,
+            48,
+            113,
+            94,
+            197,
+            963,
+            1379
+        ],
+        "descriptions": [
+            "Blug's wings are very fragile and can be damaged by even the slightest touch, so it rarely spreads them",
+            "Motodo's chitin is often used to create durable armor, as it can withstand high temperatures and a large number of strong attacks",
+            "The hairs on Blyket's body conceal small thorns that are very difficult to remove once they penetrate the skin due to their structure",
+            "Flyetir tries to keep its enemies at a distance by rising into the air, where its destructive flames can cover as much territory as possible"
+        ],
+        "locations": {
+            "Miscrian Jungle": {
+                "2": []
+            }
+        }
+    },
+    {
+        "id": 663,
+        "element": "Nature",
+        "names": [
+            "Dark Humbug",
+            "Dark Flittero",
+            "Dark Buzzaillia",
+            "Dark Aviona"
+        ],
+        "rarity": "Rare",
+        "hp": "Moderate",
+        "spd": "Max",
+        "ea": "Elite",
+        "pa": "Weak",
+        "ed": "Moderate",
+        "pd": "Moderate",
+        "abilities": [
+            {
+                "id": 1380,
+                "name": "Dark Beak Buds",
+                "ap": 11,
+                "enchant": {
+                    "ap": 2
+                },
+                "element": "Nature",
+                "type": "Attack",
+                "desc": "An average Nature attack",
+                "enchant_desc": "+2 Attack Power"
+            },
+            {
+                "id": 1381,
+                "name": "Dark Floral Fury",
+                "ap": 10,
+                "enchant": {
+                    "ap": 1
+                },
+                "element": "Nature",
+                "type": "Attack",
+                "desc": "An average Nature attack that hits 3 times and inflicts Bleed for 5 turns",
+                "enchant_desc": "+1 Attack Power",
+                "times": 3,
+                "additional": [
+                    {
+                        "type": "Bleed"
+                    }
+                ]
+            },
+            {
+                "id": 177,
+                "name": "Poke",
+                "ap": 7,
+                "enchant": {
+                    "ap": 1
+                },
+                "element": "Physical",
+                "type": "Attack",
+                "desc": "A simple Physical attack",
+                "enchant_desc": "+1 Attack Power"
+            },
+            {
+                "id": 69,
+                "name": "Intimidation",
+                "ap": -11,
+                "enchant": {
+                    "ap": -3
+                },
+                "element": "Misc",
+                "type": "Buff",
+                "desc": "Lowers your foe's Attacks by 11",
+                "enchant_desc": "+3 to Debuff",
+                "keys": [
+                    "ea",
+                    "pa"
+                ]
+            },
+            {
+                "id": 187,
+                "name": "Claw",
+                "ap": 15,
+                "accuracy": 95,
+                "enchant": {
+                    "ap": 3
+                },
+                "element": "Physical",
+                "type": "Attack",
+                "desc": "A powerful Physical attack",
+                "enchant_desc": "+3 Attack Power"
+            },
+            {
+                "id": 87,
+                "name": "Safeguard",
+                "ap": 8,
+                "enchant": {
+                    "ap": 2
+                },
+                "element": "Misc",
+                "type": "Buff",
+                "target": "Self",
+                "desc": "Raises your Defenses by 8",
+                "enchant_desc": "+2 to Buff",
+                "keys": [
+                    "ed",
+                    "pd"
+                ]
+            },
+            {
+                "id": 97,
+                "name": "Debaser",
+                "ap": -5,
+                "enchant": {
+                    "ap": -1
+                },
+                "element": "Misc",
+                "type": "Buff",
+                "desc": "Lowers your foe's Defenses by 5",
+                "enchant_desc": "+1 to Debuff",
+                "keys": [
+                    "ed",
+                    "pd"
+                ]
+            },
+            {
+                "id": 61,
+                "name": "Power Up",
+                "ap": 5,
+                "enchant": {
+                    "ap": 1
+                },
+                "element": "Misc",
+                "type": "Buff",
+                "target": "Self",
+                "desc": "Raises your Attacks by 5",
+                "enchant_desc": "+1 to Buff",
+                "keys": [
+                    "ea",
+                    "pa"
+                ]
+            },
+            {
+                "id": 299,
+                "name": "Noxious Fog",
+                "ap": 12,
+                "accuracy": 95,
+                "enchant": {
+                    "accuracy": 5
+                },
+                "element": "Misc",
+                "type": "Poison",
+                "desc": "Poisons your foe, causing 12 damage for 3 turns with a 30% chance to Confuse your foe for 1 turn. 3 turns cooldown",
+                "enchant_desc": "+5% Accuracy",
+                "turns": 3,
+                "additional": [
+                    {
+                        "type": "Confuse"
+                    }
+                ],
+                "cooldown": 3
+            },
+            {
+                "id": 144,
+                "name": "Wisp",
+                "ap": 7,
+                "enchant": {
+                    "ap": 1
+                },
+                "element": "Nature",
+                "type": "Attack",
+                "desc": "A simple Nature attack",
+                "enchant_desc": "+1 Attack Power"
+            },
+            {
+                "id": 162,
+                "name": "Lotus",
+                "ap": 20,
+                "accuracy": 90,
+                "enchant": {
+                    "accuracy": 10
+                },
+                "element": "Nature",
+                "type": "Attack",
+                "desc": "A very powerful Nature attack",
+                "enchant_desc": "+10% Accuracy"
+            },
+            {
+                "id": 296,
+                "name": "Renew",
+                "ap": 10,
+                "enchant": {
+                    "ap": 5
+                },
+                "element": "Misc",
+                "type": "Heal",
+                "target": "Self",
+                "desc": "Recovers a fair amount of your health",
+                "enchant_desc": "+5 Heal"
+            }
+        ],
+        "ability_order": [
+            97,
+            144,
+            177,
+            61,
+            1380,
+            296,
+            87,
+            187,
+            162,
+            69,
+            299,
+            1381
+        ],
+        "descriptions": [
+            "Dark Humbug's serrated beak is horribly, painfully sharp. It's so thin that it can reach through anywhere you try to hide",
+            "Dark Flittero can fly for many hours without ever tiring while it searches for the next place to strike",
+            "Dark Buzzaillia is one of the most terrifying dark Miscrits because of its ability to change its speed and trajectory at an agonizingly fast speed",
+            "Dark Aviona uses its tail to clip the blooms of any beautiful flowers that it passes, and then lets them fall sadly to the ground"
+        ],
+        "locations": {
+            "Miscrian Jungle": {
+                "4": [
+                    4,
+                    5
+                ]
+            }
+        }
+    },
+    {
+        "id": 664,
+        "element": "Water",
+        "names": [
+            "Kawanko",
+            "Urufumi",
+            "Inunagi",
+            "Ningyokami"
+        ],
+        "rarity": "Epic",
+        "hp": "Moderate",
+        "spd": "Weak",
+        "ea": "Max",
+        "pa": "Max",
+        "ed": "Strong",
+        "pd": "Strong",
+        "abilities": [
+            {
+                "id": 1382,
+                "name": "Kuma Wavecrash",
+                "ap": 5,
+                "enchant": {
+                    "ap": 1
+                },
+                "element": "Physical",
+                "type": "Attack",
+                "desc": "A simple Physical attack that inflicts 5 AP Water DoT for 2 turns",
+                "enchant_desc": "+1 Attack Power",
+                "additional": [
+                    {
+                        "type": "Dot",
+                        "element": "Water"
+                    }
+                ]
+            },
+            {
+                "id": 1383,
+                "name": "Wrath of Inunagi",
+                "ap": 8,
+                "enchant": {
+                    "accuracy": 10
+                },
+                "element": "Water",
+                "type": "Dot",
+                "desc": "Inflicts 8 AP Water DoT and 8 AP Physical DoT for 2 turns",
+                "enchant_desc": "+10% Accuracy",
+                "turns": 2,
+                "additional": [
+                    {
+                        "type": "Dot",
+                        "element": "Physical"
+                    }
+                ]
+            },
+            {
+                "id": 1384,
+                "name": "Splendid Storm",
+                "ap": 27,
+                "enchant": {
+                    "ap": 3
+                },
+                "element": "Water",
+                "type": "Attack",
+                "desc": "A massively powerful Water attack that heals yourself by 10 HP",
+                "enchant_desc": "+3 Attack Power",
+                "additional": [
+                    {
+                        "type": "Heal"
+                    }
+                ]
+            },
+            {
+                "id": 1385,
+                "name": "Ounabara Whirlpool",
+                "ap": 30,
+                "enchant": {
+                    "ap": 3
+                },
+                "element": "Physical",
+                "type": "Attack",
+                "desc": "A more than massively powerful Physical attack that steals 7 Defenses from foe",
+                "enchant_desc": "+3 Attack Power",
+                "additional": [
+                    {
+                        "keys": [
+                            "ed",
+                            "pd"
+                        ],
+                        "type": "StatSteal"
+                    }
+                ]
+            },
+            {
+                "id": 74,
+                "name": "Hyper Power",
+                "ap": 12,
+                "enchant": {
+                    "ap": 2
+                },
+                "element": "Misc",
+                "type": "Buff",
+                "target": "Self",
+                "desc": "Raises your Attacks by 12",
+                "enchant_desc": "+2 to Buff",
+                "keys": [
+                    "ea",
+                    "pa"
+                ]
+            },
+            {
+                "id": 78,
+                "name": "Shy Smile",
+                "ap": -5,
+                "enchant": {
+                    "ap": -1
+                },
+                "element": "Misc",
+                "type": "Buff",
+                "desc": "Lowers your foe's Attacks by 5",
+                "enchant_desc": "+1 to Debuff",
+                "keys": [
+                    "ea",
+                    "pa"
+                ]
+            },
+            {
+                "id": 122,
+                "name": "Sprinkle",
+                "ap": 7,
+                "enchant": {
+                    "ap": 1
+                },
+                "element": "Water",
+                "type": "Attack",
+                "desc": "A simple Water attack",
+                "enchant_desc": "+1 Attack Power"
+            },
+            {
+                "id": 230,
+                "name": "OverWater",
+                "enchant": {
+                    "additional": [
+                        {
+                            "ap": 5,
+                            "type": "Heal",
+                            "target": "Self"
+                        }
+                    ]
+                },
+                "element": "Misc",
+                "type": "Negate",
+                "target": "Self",
+                "desc": "Removes your elemental weakness",
+                "enchant_desc": "Replenishes 5 Health"
+            },
+            {
+                "id": 134,
+                "name": "H2O",
+                "ap": 15,
+                "accuracy": 90,
+                "enchant": {
+                    "accuracy": 10
+                },
+                "element": "Water",
+                "type": "Attack",
+                "desc": "A powerful Water attack",
+                "enchant_desc": "+10% Accuracy"
+            },
+            {
+                "id": 97,
+                "name": "Debaser",
+                "ap": -5,
+                "enchant": {
+                    "ap": -1
+                },
+                "element": "Misc",
+                "type": "Buff",
+                "desc": "Lowers your foe's Defenses by 5",
+                "enchant_desc": "+1 to Debuff",
+                "keys": [
+                    "ed",
+                    "pd"
+                ]
+            },
+            {
+                "id": 55,
+                "name": "Bite",
+                "ap": 7,
+                "enchant": {
+                    "ap": 1
+                },
+                "element": "Physical",
+                "type": "Attack",
+                "desc": "A simple Physical attack",
+                "enchant_desc": "+1 Attack Power"
+            },
+            {
+                "id": 181,
+                "name": "Whammy",
+                "ap": 10,
+                "enchant": {
+                    "ap": 2
+                },
+                "element": "Physical",
+                "type": "Attack",
+                "desc": "An average Physical attack",
+                "enchant_desc": "+2 Attack Power"
+            }
+        ],
+        "ability_order": [
+            122,
+            78,
+            55,
+            97,
+            1382,
+            181,
+            230,
+            134,
+            74,
+            1383,
+            1384,
+            1385
+        ],
+        "descriptions": [
+            "Kawanko is the male counterpart to Bunaken that inhabits the eastern seas of Miscria. Fishermen describe him as a playful creature, often spotted along riverbanks where his lively nature can be observed",
+            "Villages nestled along lakeshores and coastlines are often home to Urufumi who serve as a vigilant ward that defends people and Miscrits from intruders",
+            "Inunagi possesses the extraordinary ability to walk on water. Sailors sometimes spot Inunagi standing calmly on the ocean's surface, keeping a vigilant watch for any approaching threat that might endanger them",
+            "Ningyokami are revered sea warriors, sworn to protect both Miscrians and Miscrits from the ocean's perils. On rare occasions, a pack of Ningyokami serves as loyal retainers to Mermafox"
+        ],
+        "locations": {
+            "Miscrian Jungle": {
+                "1": []
+            }
+        }
+    },
+    {
+        "id": 665,
+        "element": "Fire",
+        "names": [
+            "Casanova",
+            "Heartstrings",
+            "Rosy",
+            "Quiver"
+        ],
+        "rarity": "Exotic",
+        "hp": "Max",
+        "spd": "Moderate",
+        "ea": "Max",
+        "pa": "Weak",
+        "ed": "Strong",
+        "pd": "Max",
+        "abilities": [
+            {
+                "id": 48,
+                "name": "Bash",
+                "ap": 15,
+                "accuracy": 95,
+                "enchant": {
+                    "ap": 3
+                },
+                "element": "Physical",
+                "type": "Attack",
+                "desc": "A powerful Physical attack",
+                "enchant_desc": "+3 Attack Power"
+            },
+            {
+                "id": 2,
+                "name": "Poison",
+                "ap": 5,
+                "accuracy": 95,
+                "enchant": {
+                    "ap": 1
+                },
+                "element": "Misc",
+                "type": "Poison",
+                "desc": "Poisons your foe, causing 5 damage for 3 turns",
+                "enchant_desc": "+1 Attack Power",
+                "turns": 3
+            },
+            {
+                "id": 1386,
+                "name": "Flaming Hearts",
+                "ap": 12,
+                "enchant": {
+                    "ap": 2
+                },
+                "element": "Fire",
+                "type": "Attack",
+                "desc": "An average Fire attack",
+                "enchant_desc": "+2 Attack Power"
+            },
+            {
+                "id": 1387,
+                "name": "Lover's Lullaby",
+                "ap": 6,
+                "enchant": {
+                    "ap": 1
+                },
+                "element": "Misc",
+                "type": "Bot",
+                "target": "Self",
+                "desc": "Continuously raises your Elemental Attack by 6 for 3 turns with a 40% chance to put foe to Sleep for 1 turn. 3 turns cooldown.",
+                "enchant_desc": "+1 to Buff",
+                "turns": 3,
+                "additional": [
+                    {
+                        "type": "Sleep"
+                    }
+                ],
+                "keys": [
+                    "ea"
+                ],
+                "cooldown": 3
+            },
+            {
+                "id": 1388,
+                "name": "Love Song",
+                "ap": 25,
+                "enchant": {
+                    "ap": 5
+                },
+                "element": "Misc",
+                "type": "Heal",
+                "target": "Self",
+                "desc": "Regains a significant amount of your health. 2 turns cooldown",
+                "enchant_desc": "+5 Heal",
+                "cooldown": 2
+            },
+            {
+                "id": 1389,
+                "name": "Love Hurts",
+                "ap": 6,
+                "accuracy": 110,
+                "enchant": {
+                    "times": 1
+                },
+                "element": "Fire",
+                "type": "Attack",
+                "desc": "A simple Fire attack that hits 5 times, inflicts Anti-heal for 3 turns and grants immunity to Sleep and Confuse for 3 turns",
+                "enchant_desc": "+1 Repeat",
+                "times": 5,
+                "additional": [
+                    {
+                        "type": "Antiheal"
+                    },
+                    {
+                        "type": "SI"
+                    },
+                    {
+                        "type": "CI"
+                    }
+                ]
+            },
+            {
+                "id": 1390,
+                "name": "Heart Stopper",
+                "ap": 20,
+                "accuracy": 95,
+                "enchant": {
+                    "accuracy": 5
+                },
+                "element": "Fire",
+                "type": "Attack",
+                "desc": "A very powerful Fire attack that inflicts 5 AP Disease for 2 turns",
+                "enchant_desc": "+5% Accuracy",
+                "additional": [
+                    {
+                        "type": "Disease"
+                    }
+                ]
+            },
+            {
+                "id": 62,
+                "name": "Tickle",
+                "ap": -8,
+                "enchant": {
+                    "ap": -2
+                },
+                "element": "Misc",
+                "type": "Buff",
+                "desc": "Lowers your foe's Attacks by 8",
+                "enchant_desc": "+2 to Debuff",
+                "keys": [
+                    "ea",
+                    "pa"
+                ]
+            },
+            {
+                "id": 232,
+                "name": "Firewater",
+                "enchant": {
+                    "additional": [
+                        {
+                            "ap": 5,
+                            "type": "Heal",
+                            "target": "Self"
+                        }
+                    ]
+                },
+                "element": "Misc",
+                "type": "Negate",
+                "target": "Self",
+                "desc": "Removes your elemental weakness",
+                "enchant_desc": "Replenishes 5 Health"
+            },
+            {
+                "id": 97,
+                "name": "Debaser",
+                "ap": -5,
+                "enchant": {
+                    "ap": -1
+                },
+                "element": "Misc",
+                "type": "Buff",
+                "desc": "Lowers your foe's Defenses by 5",
+                "enchant_desc": "+1 to Debuff",
+                "keys": [
+                    "ed",
+                    "pd"
+                ]
+            },
+            {
+                "id": 101,
+                "name": "Cinders",
+                "ap": 7,
+                "enchant": {
+                    "ap": 1
+                },
+                "element": "Fire",
+                "type": "Attack",
+                "desc": "A simple Fire attack",
+                "enchant_desc": "+1 Attack Power"
+            },
+            {
+                "id": 55,
+                "name": "Bite",
+                "ap": 7,
+                "enchant": {
+                    "ap": 1
+                },
+                "element": "Physical",
+                "type": "Attack",
+                "desc": "A simple Physical attack",
+                "enchant_desc": "+1 Attack Power"
+            }
+        ],
+        "ability_order": [
+            101,
+            97,
+            55,
+            2,
+            1386,
+            232,
+            62,
+            48,
+            1388,
+            1390,
+            1387,
+            1389
+        ],
+        "descriptions": [
+            "No one can resist the charms of Casanova. Everyone that crosses his path eventually ends up falling in love",
+            "Heartstrings uses its harp to play tunes that will tug on the... well, heartstrings! The beautiful sounds are made of pure love",
+            "Rosy chooses one person or Miscrit to receive a rose every day. His roses are a symbol for everything good in Miscria",
+            "Quiver can create incredible designs out of fire using its rosy wand. It particularly loves making designs for people who need to be cheered up"
+        ],
+        "locations": {
+            "Miscrian Jungle": {
+                "3": []
+            }
+        }
     }
 ]

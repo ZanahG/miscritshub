@@ -249,16 +249,6 @@ body{ margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial; 
 .nav__link.is-active{
   text-shadow: 0 0 14px rgba(96,165,250,0.35);
 }
-.nav__chev{
-  font-size: 11px;
-  opacity: 0.55;
-  transition: transform .18s ease, opacity .18s ease;
-}
-
-.nav__dropdown:hover .nav__chev{
-  transform: rotate(180deg);
-  opacity: 0.9;
-}
 
 /* Responsive */
 @media (max-width: 860px){
@@ -317,4 +307,66 @@ body{ margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial; 
   .nav__dropdown:focus-within .nav__chev{
     transform: translateY(1px) rotate(180deg);
   }
+}
+@media (max-width: 860px){
+  .nav__toggle{ display:flex; }
+
+  .nav__menu{
+    position: absolute;
+    left: 18px;
+    right: 18px;
+    top: calc(100% + 10px);
+
+    max-width: 1100px;
+    margin: 0 auto;
+    background: rgba(10, 16, 32, 0.92);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: var(--radius);
+    box-shadow: 0 18px 50px rgba(0,0,0,0.55);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    padding: 10px;
+    display:none;
+
+    flex-direction: column;
+    align-items: stretch;
+    gap: 4px;
+  }
+
+  .nav__menu.is-open{ display:flex; }
+
+  .nav__menu .nav__link{
+    color: rgba(255,255,255,0.92);
+    width: 100%;
+    justify-content: space-between;
+    padding: 12px 12px;
+  }
+
+  .nav__menu .nav__link:hover{
+    background: rgba(255,255,255,0.08);
+    transform: none;
+  }
+
+  .nav__dropMenu{
+    position: static;
+    display:none;
+    margin-top: 6px;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.10);
+  }
+
+  .nav__dropdown.is-open .nav__dropMenu{
+    display:block;
+  }
+
+  .nav__dropItem:hover{
+    background: rgba(255,255,255,0.08);
+  }
+}
+.nav__toggle{
+  background: rgba(10, 16, 32, 0.55);
+}
+.nav__toggle span{
+  background: rgba(255,255,255,0.90);
 }
