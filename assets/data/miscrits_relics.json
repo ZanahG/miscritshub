@@ -1,0 +1,2617 @@
+{
+  "meta": { "miscrits_meta": ["Geneseed", "Beateorite", "Blighted Flue", "Woolly", "Dark Poltergust", "Eclipso", "Winnebeargo", "Light Quirk", "Phoboros", 
+  "Aquarion", "Blighted Flowerpiller", "Blighted Cubsprout", "Cadbunny", "Skelepup", "Flurrious", "Damse", "Gravitron", "Dark Tulipinny", "Light Nibbles", "Lavazard", "Hotdog",
+  "Inferno", "Pangoleaf", "Dark Flue", "Dark Quirk", "Mooncrit", "Deetlee", "Dark Squibee", "Rexie", "Narlope", "Voidotron", "Da Windy", "Bunaken", "Beldame", "Alpha", "Dark Nessy", 
+  "Luvcraft", "Foil Liquifien", "Light Twiggum", "Lagoony", "Dark Slithero", "Dark Snortus", "Dark Flutterpat", "Fangly", "Dark Elefauna", "Light Rafiery", "Sledgehog", "Fennie",
+  "Nyma", "Dark Sparkslug", "Dreamger", "Dark Whik", "Dark Weevern", "Bloombat", "Flutterpat", "Lambolt", "Dark Lavarilla", "Pamboo", "Avarus", "Slithero", "Twiggum"] },
+  "miscrits": [
+    {
+      "name": "Flue",
+      "rarity": "Common",
+      "tierlist": null,
+      "best_rank": "S+",
+      "relics_by_level": {"10":["WOODMANS_AXE_HEAD"],"20":["EMERALD_SCALES"],"30":["VANQUISHED_SOUL"],"35":["GOGS_COG"]},
+      "relics_optional": {"10":[""],"20":[""],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Flowerpiller",
+      "rarity": "Common",
+      "tierlist": null,
+      "best_rank": "S+",
+      "relics_by_level": {"10":["CLOUD_CAKE"],"20":["STONY_SHIELD"],"30":["ARROW_OF_LOVE"],"35":["SHARD_OF_RUDOLFE"]},
+      "relics_optional": {"10":[""],"20":[""],"30":["MAGICITE_STAFF"],"35":[""]}
+    },
+    {
+      "name": "Prawnja",
+      "rarity": "Common",
+      "tierlist": null,
+      "best_rank": "S+",
+      "relics_by_level": {"10":["WOODMANS_AXE_HEAD"],"20":["OBSIDIAN_LAVA"],"30":["CACTUS_FLOWER"],"35":["CAGE_OF_DESPAIR"]},
+      "relics_optional": {"10":[""],"20":[""],"30":[""],"35":["GOGS_COG"]}
+    },
+    {
+      "name": "Weevern",
+      "rarity": "Common",
+      "tierlist": null,
+      "best_rank": "RS",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["HELZBELZ_BELLS"],"30":["ARROW_OF_LOVE"],"35":["SHARD_OF_RUDOLFE"]},
+      "relics_optional": {"10":["GKS_SLIPPERS"],"20":["STONY_SHIELD"],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Cubsprout",
+      "rarity": "Common",
+      "tierlist": null,
+      "best_rank": "RS",
+      "relics_by_level": {"10":["WOODMANS_AXE_HEAD"],"20":["EMERALD_SCALES"],"30":["VANQUISHED_SOUL"],"35":["FROZEN_COIN"]},
+      "relics_optional": {"10":[""],"20":[""],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Sparkupine",
+      "rarity": "Common",
+      "tierlist": null,
+      "best_rank": "RS/S+_(S+_Better)",
+      "relics_by_level": {"10":["WOODMANS_AXE_HEAD"],"20":["EMERALD_SCALES"],"30":["VANQUISHED_SOUL"],"35":["FROZEN_COIN"]},
+      "relics_optional": {"10":[""],"20":[""],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Hydroseal",
+      "rarity": "Common",
+      "tierlist": null,
+      "best_rank": "S+",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["STONY_SHIELD"],"30":["TEMPLE_STONE"],"35":["FLYING_CARPET_FRAGMENT"]},
+      "relics_optional": {"10":[""],"20":[""],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Snortus",
+      "rarity": "Common",
+      "tierlist": null,
+      "best_rank": "RS",
+      "relics_by_level": {"10":["WOODMANS_AXE_HEAD"],"20":["EMERALD_SCALES"],"30":["VANQUISHED_SOUL"],"35":["GOGS_COG"]},
+      "relics_optional": {"10":[""],"20":[""],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Quirk",
+      "rarity": "Common",
+      "tierlist": null,
+      "best_rank": "S+",
+      "relics_by_level": {"10":["WOODMANS_AXE_HEAD"],"20":["EMERALD_SCALES"],"30":["VANQUISHED_SOUL"],"35":["GOGS_COG"]},
+      "relics_optional": {"10":[""],"20":[""],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Flameling",
+      "rarity": "Common",
+      "tierlist": null,
+      "best_rank": "RS",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["HELZBELZ_BELLS"],"30":["ARROW_OF_LOVE"],"35":["SHARD_OF_RUDOLFE"]},
+      "relics_optional": {"10":["GKS_SLIPPERS"],"20":["STONY_SHIELD"],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Lumera",
+      "rarity": "Common",
+      "tierlist": null,
+      "best_rank": "RS",
+      "relics_by_level": {"10":["CLOUD_CAKE"],"20":["STONY_SHIELD"],"30":["ARROW_OF_LOVE"],"35":["SHARD_OF_RUDOLFE"]},
+      "relics_optional": {"10":[""],"20":[""],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Snatcher",
+      "rarity": "Common",
+      "tierlist": null,
+      "best_rank": "RS",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["STONY_SHIELD"],"30":["TEMPLE_STONE"],"35":["FLYING_CARPET_FRAGMENT"]},
+      "relics_optional": {"10":[""],"20":[""],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Elefauna",
+      "rarity": "Common",
+      "tierlist": null,
+      "best_rank": "S+",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["STONY_SHIELD"],"30":["PEEPSIE_EGGS"],"35":["FLYING_CARPET_FRAGMENT"]},
+      "relics_optional": {"10":[""],"20":[""],"30":["TEMPLE_STONE"],"35":[""]}
+    },
+    {
+      "name": "Nessy",
+      "rarity": "Common",
+      "tierlist": "C",
+      "best_rank": "S+",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["OBSIDIAN_LAVA"],"30":["PEEPSIE_EGGS"],"35":["FLYING_CARPET_FRAGMENT"]},
+      "relics_optional": {"10":[""],"20":[""],"30":["TEMPLE_STONE"],"35":[""]}
+    },
+    {
+      "name": "Hotfoot",
+      "rarity": "Common",
+      "tierlist": null,
+      "best_rank": "RS",
+      "relics_by_level": {"10":["BLESSED_POLLEN"],"20":["FORGING_HAMMER"],"30":["GOLD_PIECE_DIE"],"35":["MOLTEN_COIN"]},
+      "relics_optional": {"10":[""],"20":[""],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Twiggum",
+      "rarity": "Common",
+      "tierlist": null,
+      "best_rank": "RS",
+      "relics_by_level": {"10":["BLESSED_POLLEN"],"20":["OBSIDIAN_LAVA"],"30":["TEMPLE_STONE"],"35":["FLYING_CARPET_FRAGMENT"]},
+      "relics_optional": {"10":[""],"20":[""],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Shellbee",
+      "rarity": "Common",
+      "tierlist": null,
+      "best_rank": "S+",
+      "relics_by_level": {"10":["CLOUD_CAKE"],"20":["STONY_SHIELD"],"30":["MAGICITE_STAFF"],"35":["SHARD_OF_RUDOLFE"]},
+      "relics_optional": {"10":[""],"20":[""],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Squibee",
+      "rarity": "Common",
+      "tierlist": null,
+      "best_rank": "S+",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["HELZBELZ_BELLS"],"30":["ARROW_OF_LOVE"],"35":["SHARD_OF_RUDOLFE"]},
+      "relics_optional": {"10":["GKS_SLIPPERS"],"20":["STONY_SHIELD"],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Steamguin",
+      "rarity": "Common",
+      "tierlist": null,
+      "best_rank": "RS",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["STONY_SHIELD"],"30":["TEMPLE_STONE"],"35":["FLYING_CARPET_FRAGMENT"]},
+      "relics_optional": {"10":[""],"20":[""],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Waddles",
+      "rarity": "Rare",
+      "tierlist": null,
+      "best_rank": "RS",
+      "relics_by_level": {"10":["CLOUD_CAKE"],"20":["STONY_SHIELD"],"30":["MAGICITE_STAFF"],"35":["FLYING_CARPET_FRAGMENT"]},
+      "relics_optional": {"10":["ELEFAUNA_FLOWER"],"20":[""],"30":["TEMPLE_STONE"],"35":["SHARD_OF_RUDOLFE"]}
+    },
+    {
+      "name": "Treemur",
+      "rarity": "Rare",
+      "tierlist": null,
+      "best_rank": "RS",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["STONY_SHIELD"],"30":["TEMPLE_STONE"],"35":["FLYING_CARPET_FRAGMENT"]},
+      "relics_optional": {"10":[""],"20":[""],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Tulipinny",
+      "rarity": "Rare",
+      "tierlist": null,
+      "best_rank": "RS",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["STONY_SHIELD"],"30":["PEEPSIE_EGGS"],"35":["FLYING_CARPET_FRAGMENT"]},
+      "relics_optional": {"10":[""],"20":[""],"30":["TEMPLE_STONE"],"35":[""]}
+    },
+    {
+      "name": "Dark Flue",
+      "rarity": "Rare",
+      "tierlist": "B",
+      "best_rank": "RS",
+      "relics_by_level": {"10":["WOODMANS_AXE_HEAD"],"20":["EMERALD_SCALES"],"30":["VANQUISHED_SOUL"],"35":["GOGS_COG"]},
+      "relics_optional": {"10":["FROOST_ROOT"],"20":["MONKS_ROBE"],"30":["PAPAS_ANTLERS"],"35":[""]}
+    },
+    {
+      "name": "Dark Flowerpiller",
+      "rarity": "Rare",
+      "tierlist": null,
+      "best_rank": "RS",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["STONY_SHIELD"],"30":["PEEPSIE_EGGS"],"35":["FLYING_CARPET_FRAGMENT"]},
+      "relics_optional": {"10":[""],"20":[""],"30":["TEMPLE_STONE"],"35":[""]}
+    },
+    {
+      "name": "Dark Prawnja",
+      "rarity": "Rare",
+      "tierlist": "C",
+      "best_rank": "S+",
+      "relics_by_level": {"10":["WOODMANS_AXE_HEAD"],"20":["OBSIDIAN_LAVA"],"30":["CACTUS_FLOWER"],"35":["CAGE_OF_DESPAIR"]},
+      "relics_optional": {"10":[""],"20":[""],"30":[""],"35":["GOGS_COG"]}
+    },
+    {
+      "name": "Blazebit",
+      "rarity": "Rare",
+      "tierlist": null,
+      "best_rank": "RS",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["ELEMENTAL_EXPLOSION"],"30":["MAGICITE_STAFF"],"35":["SHARD_OF_RUDOLFE"]},
+      "relics_optional": {"10":[""],"20":[""],"30":["TEMPLE_STONE"],"35":[""]}
+    },
+    {
+      "name": "Frostmite",
+      "rarity": "Common",
+      "tierlist": null,
+      "best_rank": "RS",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["STONY_SHIELD"],"30":["MAGICITE_STAFF"],"35":[""]},
+      "relics_optional": {"10":[""],"20":[""],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Blazertooth",
+      "rarity": "Epic",
+      "tierlist": null,
+      "best_rank": ["RS", "S+"],
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["STONY_SHIELD"],"30":["PEEPSIE_EGGS"],"35":["FLYING_CARPET_FRAGMENT"]},
+      "relics_optional": {"10":[""],"20":[""],"30":["TEMPLE_STONE"],"35":[""]}
+    },
+    {
+      "name": "Statikat",
+      "rarity": "Common",
+      "tierlist": null,
+      "best_rank": "RS",
+      "relics_by_level": {"10":["CLOUD_CAKE"],"20":["STONY_SHIELD"],"30":["MAGICITE_STAFF"],"35":["SHARD_OF_RUDOLFE"]},
+      "relics_optional": {"10":[""],"20":[""],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Equestrion",
+      "rarity": "Common",
+      "tierlist": null,
+      "best_rank": "RS",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["STONY_SHIELD"],"30":["PEEPSIE_EGGS"],"35":["FLYING_CARPET_FRAGMENT"]},
+      "relics_optional": {"10":[""],"20":[""],"30":["TEMPLE_STONE"],"35":[""]}
+    },
+    {
+      "name": "Drilldent",
+      "rarity": "Common",
+      "tierlist": null,
+      "best_rank": "RS",
+      "relics_by_level": {"10":["WOODMANS_AXE_HEAD"],"20":["EMERALD_SCALES"],"30":["VANQUISHED_SOUL"],"35":["GOGS_COG"]},
+      "relics_optional": {"10":[""],"20":[""],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Kiloray",
+      "rarity": "Common",
+      "tierlist": null,
+      "best_rank": "S+",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["STONY_SHIELD"],"30":["PEEPSIE_EGGS"],"35":["FLYING_CARPET_FRAGMENT"]},
+      "relics_optional": {"10":[""],"20":[""],"30":["TEMPLE_STONE"],"35":[""]}
+    },
+    {
+      "name": "Breezycheeks",
+      "rarity": "Common",
+      "tierlist": null,
+      "best_rank": "S+",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["STONY_SHIELD"],"30":["MAGICITE_STAFF"],"35":["SHARD_OF_RUDOLFE"]},
+      "relics_optional": {"10":[""],"20":[""],"30":["TEMPLE_STONE"],"35":[""]}
+    },
+    {
+      "name": "Mumbah",
+      "rarity": "Common",
+      "tierlist": null,
+      "best_rank": "S+",
+      "relics_by_level": {"10":["CLOUD_CAKE"],"20":["STONY_SHIELD"],"30":["ARROW_OF_LOVE"],"35":["SHARD_OF_RUDOLFE"]},
+      "relics_optional": {"10":[""],"20":[""],"30":["MAGICITE_STAFF"],"35":[""]}
+    },
+    {
+      "name": "Aria",
+      "rarity": "Common",
+      "tierlist": null,
+      "best_rank": "S+",
+      "relics_by_level": {"10":["CLOUD_CAKE"],"20":["STONY_SHIELD"],"30":["ARROW_OF_LOVE"],"35":["SHARD_OF_RUDOLFE"]},
+      "relics_optional": {"10":[""],"20":[""],"30":["MAGICITE_STAFF"],"35":[""]}
+    },
+    {
+      "name": "Jellyshock",
+      "rarity": "Common",
+      "tierlist": null,
+      "best_rank": "S+",
+      "relics_by_level": {"10":["WOODMANS_AXE_HEAD"],"20":["NEROS_ORB"],"30":["DARK_WARRO_THORN"],"35":["FROZEN_COIN"]},
+      "relics_optional": {"10":[""],"20":[""],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Croaky",
+      "rarity": "Common",
+      "tierlist": null,
+      "best_rank": ["RS", "S+"],
+      "relics_by_level": {"10":["CLOUD_CAKE"],"20":["STONY_SHIELD"],"30":["MAGICITE_STAFF"],"35":["SHARD_OF_RUDOLFE"]},
+      "relics_optional": {"10":[""],"20":[""],"30":["TEMPLE_STONE"],"35":[""]}
+    },
+    {
+      "name": "Sparkslug",
+      "rarity": "Common",
+      "tierlist": null,
+      "best_rank": "S+",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["STONY_SHIELD"],"30":["CACTUS_FLOWER"],"35":["FLYING_CARPET_FRAGMENT"]},
+      "relics_optional": {"10":[""],"20":[""],"30":["TEMPLE_STONE"],"35":[""]}
+    },
+    {
+      "name": "Craggy",
+      "rarity": "Common",
+      "tierlist": null,
+      "best_rank": "S+",
+      "relics_by_level": {"10":["WOODMANS_AXE_HEAD"],"20":["EMERALD_SCALES"],"30":["VANQUISHED_SOUL"],"35":["GOGS_COG"]},
+      "relics_optional": {"10":[""],"20":[""],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Owlie",
+      "rarity": "Common",
+      "tierlist": "C",
+      "best_rank": "S+",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["STONY_SHIELD"],"30":["CACTUS_FLOWER"],"35":["FLYING_CARPET_FRAGMENT"]},
+      "relics_optional": {"10":["BLESSED_POLLEN"],"20":["BEAN_STALK"],"30":["TEMPLE_STONE"],"35":["CAGE_OF_DESPAIR"]}
+    },
+    {
+      "name": "Luna",
+      "rarity": "Rare",
+      "tierlist": null,
+      "best_rank": "RS",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["STONY_SHIELD"],"30":["PEEPSIE_EGGS"],"35":["SHARD_OF_RUDOLFE"]},
+      "relics_optional": {"10":[""],"20":[""],"30":["TEMPLE_STONE"],"35":[""]}
+    },
+    {
+      "name": "Poltergust",
+      "rarity": "Rare",
+      "tierlist": null,
+      "best_rank": "RS/S+_(S+_Better)",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["STONY_SHIELD"],"30":["TEMPLE_STONE"],"35":["FLYING_CARPET_FRAGMENT"]},
+      "relics_optional": {"10":[""],"20":[""],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Fossillia",
+      "rarity": "Rare",
+      "tierlist": null,
+      "best_rank": "S+",
+      "relics_by_level": {"10":["WOODMANS_AXE_HEAD"],"20":["EMERALD_SCALES"],"30":["VANQUISHED_SOUL"],"35":["GOGS_COG"]},
+      "relics_optional": {"10":[""],"20":[""],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Eggy",
+      "rarity": "Rare",
+      "tierlist": null,
+      "best_rank": "RS",
+      "relics_by_level": {"10":["WOODMANS_AXE_HEAD"],"20":["EMERALD_SCALES"],"30":["DARK_WARRO_THORN"],"35":["GOGS_COG"]},
+      "relics_optional": {"10":[""],"20":[""],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Thundercracker",
+      "rarity": "Rare",
+      "tierlist": null,
+      "best_rank": "RS",
+      "relics_by_level": {"10":["BLESSED_POLLEN"],"20":["FORGING_HAMMER"],"30":["GOLD_PIECE_DIE"],"35":["MOLTEN_COIN"]},
+      "relics_optional": {"10":[""],"20":[""],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Mun Kee",
+      "rarity": "Rare",
+      "tierlist": null,
+      "best_rank": "RS",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["STONY_SHIELD"],"30":["TEMPLE_STONE"],"35":["FLYING_CARPET_FRAGMENT"]},
+      "relics_optional": {"10":[""],"20":[""],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Microblast",
+      "rarity": "Epic",
+      "tierlist": null,
+      "best_rank": "RS",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["STONY_SHIELD"],"30":["MAGICITE_STAFF"],"35":["SHARD_OF_RUDOLFE"]},
+      "relics_optional": {"10":[""],"20":[""],"30":["TEMPLE_STONE"],"35":[""]}
+    },
+    {
+      "name": "Sledgehog",
+      "rarity": "Epic",
+      "tierlist": null,
+      "best_rank": "RS/S+_(S+_Better)",
+      "relics_by_level": {"10":["WOODMANS_AXE_HEAD"],"20":["OBSIDIAN_LAVA"],"30":["VANQUISHED_SOUL"],"35":["CAGE_OF_DESPAIR"]},
+      "relics_optional": {"10":[""],"20":[""],"30":[""],"35":["GOGS_COG"]}
+    },
+    {
+      "name": "Sapphron",
+      "rarity": "Epic",
+      "tierlist": null,
+      "best_rank": "RS",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["STONY_SHIELD"],"30":["MAGICITE_STAFF"],"35":["SHARD_OF_RUDOLFE"]},
+      "relics_optional": {"10":[""],"20":[""],"30":["TEMPLE_STONE"],"35":[""]}
+    },
+    {
+      "name": "Sparkspeck",
+      "rarity": "Common",
+      "tierlist": null,
+      "best_rank": "RS",
+      "relics_by_level": {"10":["CLOUD_CAKE"],"20":["STONY_SHIELD"],"30":["MAGICITE_STAFF"],"35":["SHARD_OF_RUDOLFE"]},
+      "relics_optional": {"10":[""],"20":[""],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Grubbean",
+      "rarity": "Common",
+      "tierlist": null,
+      "best_rank": "S+",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["STONY_SHIELD"],"30":["PEEPSIE_EGGS"],"35":["FLYING_CARPET_FRAGMENT"]},
+      "relics_optional": {"10":[""],"20":[""],"30":["TEMPLE_STONE"],"35":[""]}
+    },
+    {
+      "name": "Echino",
+      "rarity": "Common",
+      "tierlist": null,
+      "best_rank": "RS",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["STONY_SHIELD"],"30":["PEEPSIE_EGGS"],"35":["FLYING_CARPET_FRAGMENT"]},
+      "relics_optional": {"10":[""],"20":[""],"30":["TEMPLE_STONE"],"35":[""]}
+    },
+    {
+      "name": "Wavesling",
+      "rarity": "Common",
+      "tierlist": null,
+      "best_rank": "RS",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["STONY_SHIELD"],"30":["TEMPLE_STONE"],"35":["FLYING_CARPET_FRAGMENT"]},
+      "relics_optional": {"10":[""],"20":[""],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Sparkitten",
+      "rarity": "Common",
+      "tierlist": null,
+      "best_rank": "S+",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["STONY_SHIELD"],"30":["MAGICITE_STAFF"],"35":["SHARD_OF_RUDOLFE"]},
+      "relics_optional": {"10":[""],"20":[""],"30":["TEMPLE_STONE"],"35":[""]}
+    },
+    {
+      "name": "Arigato",
+      "rarity": "Common",
+      "tierlist": null,
+      "best_rank": "RS",
+      "relics_by_level": {"10":["CLOUD_CAKE"],"20":["STONY_SHIELD"],"30":["MAGICITE_STAFF"],"35":["SHARD_OF_RUDOLFE"]},
+      "relics_optional": {"10":[""],"20":[""],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Jack",
+      "rarity": "Common",
+      "tierlist": null,
+      "best_rank": "RS/S+_(S+_Better)",
+      "relics_by_level": {"10":["CLOUD_CAKE"],"20":["FORGING_HAMMER"],"30":["GOLD_PIECE_DIE"],"35":["FROZEN_COIN"]},
+      "relics_optional": {"10":[""],"20":[""],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Quebble",
+      "rarity": "Common",
+      "tierlist": null,
+      "best_rank": "S+",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["STONY_SHIELD"],"30":["PEEPSIE_EGGS"],"35":["FLYING_CARPET_FRAGMENT"]},
+      "relics_optional": {"10":[""],"20":[""],"30":["TEMPLE_STONE"],"35":[""]}
+    },
+    {
+      "name": "Digsy",
+      "rarity": "Common",
+      "tierlist": null,
+      "best_rank": "S+",
+      "relics_by_level": {"10":["WOODMANS_AXE_HEAD"],"20":["EMERALD_SCALES"],"30":["VANQUISHED_SOUL"],"35":["GOGS_COG"]},
+      "relics_optional": {"10":[""],"20":[""],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Hippoke",
+      "rarity": "Common",
+      "tierlist": null,
+      "best_rank": "S+",
+      "relics_by_level": {"10":["CLOUD_CAKE"],"20":["STONY_SHIELD"],"30":["MAGICITE_STAFF"],"35":["SHARD_OF_RUDOLFE"]},
+      "relics_optional": {"10":[""],"20":[""],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Leggy",
+      "rarity": "Common",
+      "tierlist": null,
+      "best_rank": "RS",
+      "relics_by_level": {"10":["WOODMANS_AXE_HEAD"],"20":["EMERALD_SCALES"],"30":["VANQUISHED_SOUL"],"35":["SAYAMS_TRIDENT"]},
+      "relics_optional": {"10":[""],"20":[""],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Orcatide",
+      "rarity": "Common",
+      "tierlist": null,
+      "best_rank": "S+",
+      "relics_by_level": {"10":["WOODMANS_AXE_HEAD"],"20":["EMERALD_SCALES"],"30":["VANQUISHED_SOUL"],"35":["GOGS_COG"]},
+      "relics_optional": {"10":[""],"20":[""],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Flutterpat",
+      "rarity": "Rare",
+      "tierlist": "C",
+      "best_rank": ["RS", "S+"],
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["STONY_SHIELD"],"30":["PEEPSIE_EGGS"],"35":["FLYING_CARPET_FRAGMENT"]},
+      "relics_optional": {"10":[""],"20":[""],"30":["TEMPLE_STONE"],"35":[""]}
+    },
+    {
+      "name": "Snorkels",
+      "rarity": "Rare",
+      "tierlist": null,
+      "best_rank": "S+",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["HELZBELZ_BELLS"],"30":["ARROW_OF_LOVE"],"35":["SHARD_OF_RUDOLFE"]},
+      "relics_optional": {"10":["GKS_SLIPPERS"],"20":["STONY_SHIELD"],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Kelpa",
+      "rarity": "Rare",
+      "tierlist": null,
+      "best_rank": "RS",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["OBSIDIAN_LAVA"],"30":["SHACKLERS_GEM"],"35":["CAGE_OF_DESPAIR"]},
+      "relics_optional": {"10":[""],"20":[""],"30":["TEMPLE_STONE"],"35":["FLYING_CARPET_FRAGMENT"]}
+    },
+    {
+      "name": "Ignios",
+      "rarity": "Rare",
+      "tierlist": null,
+      "best_rank": "RS",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["STONY_SHIELD"],"30":["PEEPSIE_EGGS"],"35":["FLYING_CARPET_FRAGMENT"]},
+      "relics_optional": {"10":[""],"20":[""],"30":["TEMPLE_STONE"],"35":[""]}
+    },
+    {
+      "name": "Beelzebug",
+      "rarity": "Epic",
+      "tierlist": null,
+      "best_rank": "RS",
+      "relics_by_level": {"10":["GKS_SLIPPERS"],"20":["STONY_SHIELD"],"30":["ARROW_OF_LOVE"],"35":["SHARD_OF_RUDOLFE"]},
+      "relics_optional": {"10":[""],"20":[""],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Winnebeargo",
+      "rarity": "Epic",
+      "tierlist": "C",
+      "best_rank": "RS",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["STONY_SHIELD"],"30":["MAGICITE_STAFF"],"35":["SHARD_OF_RUDOLFE"]},
+      "relics_optional": {"10":[""],"20":[""],"30":["TEMPLE_STONE","PEEPSIE_EGGS"],"35":[""]}
+    },
+    {
+      "name": "Fennie",
+      "rarity": "Epic",
+      "tierlist": "C",
+      "best_rank": "RS",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["STONY_SHIELD"],"30":["MAGICITE_STAFF"],"35":["SHARD_OF_RUDOLFE"]},
+      "relics_optional": {"10":[""],"20":[""],"30":["PEEPSIE_EGGS","TEMPLE_STONE"],"35":[""]}
+    },
+    {
+      "name": "Patchkin",
+      "rarity": "Exotic",
+      "tierlist": "C",
+      "best_rank": "RS",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["STONY_SHIELD"],"30":["PATCHKINS_RIND"],"35":["MOLTEN_COIN"]},
+      "relics_optional": {"10":[""],"20":[""],"30":["TEMPLE_STONE"],"35":[""]}
+    },
+    {
+      "name": "Flurrious",
+      "rarity": "Exotic",
+      "tierlist": "B",
+      "best_rank": "S+",
+      "relics_by_level": {"10":["WOODMANS_AXE_HEAD"],"20":["EMERALD_SCALES"],"30":["VANQUISHED_SOUL"],"35":["GOGS_COG"]},
+      "relics_optional": {"10":[""],"20":[""],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Fangly",
+      "rarity": "Epic",
+      "tierlist": null,
+      "best_rank": "RS",
+      "relics_by_level": {"10":["CLOUD_CAKE"],"20":["STONY_SHIELD"],"30":["MAGICITE_STAFF"],"35":["SHARD_OF_RUDOLFE"]},
+      "relics_optional": {"10":[""],"20":[""],"30":["TEMPLE_STONE"],"35":[""]}
+    },
+    {
+      "name": "Dark Kiloray",
+      "rarity": "Rare",
+      "tierlist": null,
+      "best_rank": "S+",
+      "relics_by_level": {"10":["FROOST_ROOT"],"20":["STONY_SHIELD"],"30":["PEEPSIE_EGGS"],"35":["FLYING_CARPET_FRAGMENT"]},
+      "relics_optional": {"10":[""],"20":[""],"30":["TEMPLE_STONE"],"35":[""]}
+    },
+    {
+      "name": "Dark Croaky",
+      "rarity": "Rare",
+      "tierlist": null,
+      "best_rank": "S+",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["OBSIDIAN_LAVA"],"30":["CACTUS_FLOWER"],"35":["CAGE_OF_DESPAIR"]},
+      "relics_optional": {"10":[""],"20":[""],"30":["PEEPSIE_EGGS","TEMPLE_STONE"],"35":[""]}
+    },
+    {
+      "name": "Valentino",
+      "rarity": "Exotic",
+      "tierlist": null,
+      "best_rank": "RS",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["STONY_SHIELD"],"30":["ARROW_OF_LOVE"],"35":["SHARD_OF_RUDOLFE"]},
+      "relics_optional": {"10":[""],"20":[""],"30":["MAGICITE_STAFF"],"35":[""]}
+    },
+    {
+      "name": "Dark Cubsprout",
+      "rarity": "Rare",
+      "tierlist": null,
+      "best_rank": "RS",
+      "relics_by_level": {"10":["WOODMANS_AXE_HEAD"],"20":["EMERALD_SCALES"],"30":["PAPAS_ANTLERS"],"35":["FROZEN_COIN"]},
+      "relics_optional": {"10":[""],"20":[""],"30":["VANQUISHED_SOUL"],"35":[""]}
+    },
+    {
+      "name": "Dark Sparkitten",
+      "rarity": "Rare",
+      "tierlist": null,
+      "best_rank": "RS",
+      "relics_by_level": {"10":["CLOUD_CAKE"],"20":["STONY_SHIELD"],"30":["MAGICITE_STAFF"],"35":["SHARD_OF_RUDOLFE"]},
+      "relics_optional": {"10":[""],"20":[""],"30":["TEMPLE_STONE"],"35":[""]}
+    },
+    {
+      "name": "Dark Snortus",
+      "rarity": "Epic",
+      "tierlist": "C",
+      "best_rank": ["RS", "S+"],
+      "relics_by_level": {"10":["WOODMANS_AXE_HEAD"],"20":["EMERALD_SCALES"],"30":["TRUNCHEROUS_HAMMER"],"35":["GOGS_COG"]},
+      "relics_optional": {"10":[""],"20":[""],"30":["VANQUISHED_SOUL"],"35":[""]}
+    },
+    {
+      "name": "Boltzee",
+      "rarity": "Epic",
+      "tierlist": null,
+      "best_rank": "RS",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["HELZBELZ_BELLS"],"30":["ARROW_OF_LOVE"],"35":["SHARD_OF_RUDOLFE"]},
+      "relics_optional": {"10":["GKS_SLIPPERS"],"20":["STONY_SHIELD"],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Dark Owlie",
+      "rarity": "Rare",
+      "tierlist": null,
+      "best_rank": "S+",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["STONY_SHIELD"],"30":["PEEPSIE_EGGS"],"35":["SHARD_OF_RUDOLFE"]},
+      "relics_optional": {"10":[""],"20":[""],"30":["TEMPLE_STONE"],"35":[""]}
+    },
+    {
+      "name": "Dark Echino",
+      "rarity": "Rare",
+      "tierlist": null,
+      "best_rank": "S+",
+      "relics_by_level": {"10":["BLESSED_POLLEN"],"20":["OBSIDIAN_LAVA"],"30":["CACTUS_FLOWER"],"35":["MOON_ROCK"]},
+      "relics_optional": {"10":[""],"20":[""],"30":["TEMPLE_STONE"],"35":[""]}
+    },
+    {
+      "name": "Dark Arigato",
+      "rarity": "Rare",
+      "tierlist": null,
+      "best_rank": ["RS", "S+"],
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["OBSIDIAN_LAVA"],"30":["CACTUS_FLOWER"],"35":["CAGE_OF_DESPAIR"]},
+      "relics_optional": {"10":[""],"20":[""],"30":["MYSTIC_MAP"],"35":["FLYING_CARPET_FRAGMENT"]}
+    },
+    {
+      "name": "Dark Hydroseal",
+      "rarity": "Rare",
+      "tierlist": null,
+      "best_rank": "RS",
+      "relics_by_level": {"10":["CLOUD_CAKE"],"20":["STONY_SHIELD"],"30":["MAGICITE_STAFF"],"35":["FLYING_CARPET_FRAGMENT"]},
+      "relics_optional": {"10":["ELEFAUNA_FLOWER"],"20":[""],"30":["TEMPLE_STONE"],"35":["SHARD_OF_RUDOLFE"]}
+    },
+    {
+      "name": "Peepsie",
+      "rarity": "Exotic",
+      "tierlist": null,
+      "best_rank": "RS",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["OBSIDIAN_LAVA"],"30":["CACTUS_FLOWER"],"35":["FLYING_CARPET_FRAGMENT"]},
+      "relics_optional": {"10":["QUARTEX_CRYSTAL"],"20":["STONY_SHIELD"],"30":["PEEPSIE_EGGS"],"35":[""]}
+    },
+    {
+      "name": "Dark Eggy",
+      "rarity": "Epic",
+      "tierlist": null,
+      "best_rank": "S+",
+      "relics_by_level": {"10":["WOODMANS_AXE_HEAD"],"20":["EMERALD_SCALES"],"30":["DARK_WARRO_THORN"],"35":["GOGS_COG"]},
+      "relics_optional": {"10":[""],"20":[""],"30":[""],"35":["MOON_ROCK"]}
+    },
+    {
+      "name": "Dark Flameling",
+      "rarity": "Rare",
+      "tierlist": null,
+      "best_rank": "RS",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["STONY_SHIELD"],"30":["PEEPSIE_EGGS"],"35":["FLYING_CARPET_FRAGMENT"]},
+      "relics_optional": {"10":[""],"20":[""],"30":["TEMPLE_STONE"],"35":[""]}
+    },
+    {
+      "name": "Dark Elefauna",
+      "rarity": "Epic",
+      "tierlist": null,
+      "best_rank": "RS",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["STONY_SHIELD"],"30":["PEEPSIE_EGGS"],"35":["FLYING_CARPET_FRAGMENT"]},
+      "relics_optional": {"10":[""],"20":[""],"30":["TEMPLE_STONE"],"35":[""]}
+    },
+    {
+      "name": "Mama",
+      "rarity": "Exotic",
+      "tierlist": null,
+      "best_rank": "RS",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["FORGING_HAMMER"],"30":["CACTUS_FLOWER"],"35":["FLYING_CARPET_FRAGMENT"]},
+      "relics_optional": {"10":[""],"20":[""],"30":["TEMPLE_STONE"],"35":["MOLTEN_COIN"]}
+    },
+    {
+      "name": "Dark Nessy",
+      "rarity": "Exotic",
+      "tierlist": "B",
+      "best_rank": "RS",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["ELEMENTAL_EXPLOSION"],"30":["MAGICITE_STAFF"],"35":["SHARD_OF_RUDOLFE"]},
+      "relics_optional": {"10":[""],"20":["STONY_SHIELD"],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Dark Hotfoot",
+      "rarity": "Rare",
+      "tierlist": null,
+      "best_rank": "RS",
+      "relics_by_level": {"10":["WOODMANS_AXE_HEAD"],"20":["EMERALD_SCALES"],"30":["VANQUISHED_SOUL"],"35":["GOGS_COG"]},
+      "relics_optional": {"10":[""],"20":[""],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Dark Breezycheeks",
+      "rarity": "Rare",
+      "tierlist": null,
+      "best_rank": "RS",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["HELZBELZ_BELLS"],"30":["ARROW_OF_LOVE"],"35":["SHARD_OF_RUDOLFE"]},
+      "relics_optional": {"10":["GKS_SLIPPERS"],"20":["STONY_SHIELD"],"30":["MAGICITE_STAFF"],"35":[""]}
+    },
+    {
+      "name": "Papa",
+      "rarity": "Exotic",
+      "tierlist": null,
+      "best_rank": "S+",
+      "relics_by_level": {"10":["FROOST_ROOT"],"20":["FORGING_HAMMER"],"30":["GOLD_PIECE_DIE"],"35":["MOLTEN_COIN"]},
+      "relics_optional": {"10":[""],"20":[""],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Whik",
+      "rarity": "Common",
+      "tierlist": null,
+      "best_rank": "RS/S+_(S+_Better)",
+      "relics_by_level": {"10":["CLOUD_CAKE"],"20":["STONY_SHIELD"],"30":["MAGICITE_STAFF"],"35":["SHARD_OF_RUDOLFE"]},
+      "relics_optional": {"10":[""],"20":[""],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Slithero",
+      "rarity": "Common",
+      "tierlist": null,
+      "best_rank": "RS",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["STONY_SHIELD"],"30":["TEMPLE_STONE"],"35":["FLYING_CARPET_FRAGMENT"]},
+      "relics_optional": {"10":[""],"20":["OBSIDIAN_LAVA"],"30":["MYSTIC_MAP"],"35":[""]}
+    },
+    {
+      "name": "Spinnerette",
+      "rarity": "Common",
+      "tierlist": null,
+      "best_rank": "RS",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["HELZBELZ_BELLS"],"30":["ARROW_OF_LOVE"],"35":["SHARD_OF_RUDOLFE"]},
+      "relics_optional": {"10":["GKS_SLIPPERS"],"20":["STONY_SHIELD"],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Crickin",
+      "rarity": "Common",
+      "tierlist": null,
+      "best_rank": "RS",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["STONY_SHIELD"],"30":["PEEPSIE_EGGS"],"35":["FLYING_CARPET_FRAGMENT"]},
+      "relics_optional": {"10":[""],"20":[""],"30":["TEMPLE_STONE"],"35":["MOON_ROCK"]}
+    },
+    {
+      "name": "Bubbles",
+      "rarity": "Common",
+      "tierlist": "C",
+      "best_rank": "RS",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["STONY_SHIELD"],"30":["PEEPSIE_EGGS"],"35":["FLYING_CARPET_FRAGMENT"]},
+      "relics_optional": {"10":[""],"20":[""],"30":["TEMPLE_STONE"],"35":[""]}
+    },
+    {
+      "name": "Humbug",
+      "rarity": "Common",
+      "tierlist": null,
+      "best_rank": "S+",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["STONY_SHIELD"],"30":["MAGICITE_STAFF"],"35":["SHARD_OF_RUDOLFE"]},
+      "relics_optional": {"10":[""],"20":[""],"30":["TEMPLE_STONE"],"35":[""]}
+    },
+    {
+      "name": "Lavarilla",
+      "rarity": "Common",
+      "tierlist": null,
+      "best_rank": "S+",
+      "relics_by_level": {"10":["WOODMANS_AXE_HEAD"],"20":["EMERALD_SCALES"],"30":["VANQUISHED_SOUL"],"35":["GOGS_COG"]},
+      "relics_optional": {"10":[""],"20":[""],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Bloomple",
+      "rarity": "Epic",
+      "tierlist": null,
+      "best_rank": "RS",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["STONY_SHIELD"],"30":["MAGICITE_STAFF"],"35":["SHARD_OF_RUDOLFE"]},
+      "relics_optional": {"10":[""],"20":[""],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Pamboo",
+      "rarity": "Rare",
+      "tierlist": "C",
+      "best_rank": "RS",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["OBSIDIAN_LAVA"],"30":["CACTUS_FLOWER"],"35":["FLYING_CARPET_FRAGMENT"]},
+      "relics_optional": {"10":["BLESSED_POLLEN"],"20":["SUNFALL_SHORES_BANNER","STONY_SHIELD"],"30":["TEMPLE_STONE"],"35":[""]}
+    },
+    {
+      "name": "Rockodile",
+      "rarity": "Rare",
+      "tierlist": null,
+      "best_rank": "RS",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["OBSIDIAN_LAVA"],"30":["PEEPSIE_EGGS"],"35":["FLYING_CARPET_FRAGMENT"]},
+      "relics_optional": {"10":[""],"20":[""],"30":["TEMPLE_STONE"],"35":[""]}
+    },
+    {
+      "name": "Boneshee",
+      "rarity": "Epic",
+      "tierlist": null,
+      "best_rank": "S+",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["STONY_SHIELD"],"30":["CACTUS_FLOWER"],"35":["FLYING_CARPET_FRAGMENT"]},
+      "relics_optional": {"10":[""],"20":[""],"30":["PEEPSIE_EGGS","TEMPLE_STONE"],"35":[""]}
+    },
+    {
+      "name": "Ursiwave",
+      "rarity": "Epic",
+      "tierlist": null,
+      "best_rank": "S+",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["STONY_SHIELD"],"30":["MAGICITE_STAFF"],"35":["MOON_ROCK"]},
+      "relics_optional": {"10":[""],"20":[""],"30":[""],"35":["SHARD_OF_RUDOLFE"]}
+    },
+    {
+      "name": "Bludger",
+      "rarity": "Common",
+      "tierlist": null,
+      "best_rank": "RS",
+      "relics_by_level": {"10":["WOODMANS_AXE_HEAD"],"20":["EMERALD_SCALES"],"30":["VANQUISHED_SOUL"],"35":["GOGS_COG"]},
+      "relics_optional": {"10":[""],"20":[""],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Zaptor",
+      "rarity": "Common",
+      "tierlist": null,
+      "best_rank": ["RS", "S+"],
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["STONY_SHIELD"],"30":["MAGICITE_STAFF"],"35":["SHARD_OF_RUDOLFE"]},
+      "relics_optional": {"10":[""],"20":[""],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Narlope",
+      "rarity": "Common",
+      "tierlist": "B",
+      "best_rank": "RS",
+      "relics_by_level": {"10":["FROOST_ROOT"],"20":["STONY_SHIELD"],"30":["TEMPLE_STONE"],"35":["FLYING_CARPET_FRAGMENT"]},
+      "relics_optional": {"10":["ELEFAUNA_FLOWER"],"20":["OBSIDIAN_LAVA"],"30":["CACTUS_FLOWER","PEEPSIE_EGGS"],"35":["CAGE_OF_DESPAIR"]}
+    },
+    {
+      "name": "Vexie",
+      "rarity": "Common",
+      "tierlist": null,
+      "best_rank": "S+",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["STONY_SHIELD"],"30":["PEEPSIE_EGGS"],"35":["FLYING_CARPET_FRAGMENT"]},
+      "relics_optional": {"10":[""],"20":[""],"30":["TEMPLE_STONE"],"35":[""]}
+    },
+    {
+      "name": "Tongutail",
+      "rarity": "Common",
+      "tierlist": null,
+      "best_rank": "S+",
+      "relics_by_level": {"10":["WOODMANS_AXE_HEAD"],"20":["EMERALD_SCALES"],"30":["VANQUISHED_SOUL"],"35":["GOGS_COG"]},
+      "relics_optional": {"10":[""],"20":[""],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Hawkai",
+      "rarity": "Common",
+      "tierlist": null,
+      "best_rank": "S+",
+      "relics_by_level": {"10":["CLOUD_CAKE"],"20":["STONY_SHIELD"],"30":["ARROW_OF_LOVE"],"35":["SHARD_OF_RUDOLFE"]},
+      "relics_optional": {"10":[""],"20":[""],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Nero",
+      "rarity": "Common",
+      "tierlist": null,
+      "best_rank": "S+",
+      "relics_by_level": {"10":["WOODMANS_AXE_HEAD"],"20":["FORGING_HAMMER"],"30":["VANQUISHED_SOUL"],"35":["MOON_ROCK"]},
+      "relics_optional": {"10":[""],"20":[""],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Pollifog",
+      "rarity": "Rare",
+      "tierlist": null,
+      "best_rank": "RS",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["HELZBELZ_BELLS"],"30":["ARROW_OF_LOVE"],"35":["SHARD_OF_RUDOLFE"]},
+      "relics_optional": {"10":["GKS_SLIPPERS"],"20":["STONY_SHIELD"],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Felis",
+      "rarity": "Common",
+      "tierlist": null,
+      "best_rank": "S+",
+      "relics_by_level": {"10":["WOODMANS_AXE_HEAD"],"20":["EMERALD_SCALES"],"30":["VANQUISHED_SOUL"],"35":["GOGS_COG"]},
+      "relics_optional": {"10":[""],"20":[""],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Tectonyx",
+      "rarity": "Common",
+      "tierlist": null,
+      "best_rank": "S+",
+      "relics_by_level": {"10":["WOODMANS_AXE_HEAD"],"20":["EMERALD_SCALES"],"30":["VANQUISHED_SOUL"],"35":["SAYAMS_TRIDENT"]},
+      "relics_optional": {"10":[""],"20":[""],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Nibbles",
+      "rarity": "Common",
+      "tierlist": null,
+      "best_rank": "S+",
+      "relics_by_level": {"10":["WOODMANS_AXE_HEAD"],"20":["EMERALD_SCALES"],"30":["DARK_WARRO_THORN"],"35":["MOON_ROCK"]},
+      "relics_optional": {"10":[""],"20":[""],"30":[""],"35":["SAYAMS_TRIDENT"]}
+    },
+    {
+      "name": "Skustunk",
+      "rarity": "Rare",
+      "tierlist": null,
+      "best_rank": "RS",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["STONY_SHIELD"],"30":["PEEPSIE_EGGS"],"35":["FLYING_CARPET_FRAGMENT"]},
+      "relics_optional": {"10":[""],"20":[""],"30":["TEMPLE_STONE"],"35":[""]}
+    },
+    {
+      "name": "Flintly",
+      "rarity": "Rare",
+      "tierlist": null,
+      "best_rank": "RS",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["STONY_SHIELD"],"30":["PEEPSIE_EGGS"],"35":["FLYING_CARPET_FRAGMENT"]},
+      "relics_optional": {"10":[""],"20":[""],"30":["TEMPLE_STONE"],"35":[""]}
+    },
+    {
+      "name": "Gog",
+      "rarity": "Epic",
+      "tierlist": null,
+      "best_rank": "S+",
+      "relics_by_level": {"10":["WOODMANS_AXE_HEAD"],"20":["MONKS_ROBE"],"30":["VANQUISHED_SOUL"],"35":["GOGS_COG"]},
+      "relics_optional": {"10":[""],"20":["OBSIDIAN_LAVA"],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Octavio",
+      "rarity": "Epic",
+      "tierlist": null,
+      "best_rank": "S+",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["OBSIDIAN_LAVA"],"30":["SHACKLERS_GEM"],"35":["FLYING_CARPET_FRAGMENT"]},
+      "relics_optional": {"10":[""],"20":[""],"30":["TEMPLE_STONE"],"35":[""]}
+    },
+    {
+      "name": "Crabbles",
+      "rarity": "Rare",
+      "tierlist": null,
+      "best_rank": "S+",
+      "relics_by_level": {"10":["WOODMANS_AXE_HEAD"],"20":["EMERALD_SCALES"],"30":["DARK_WARRO_THORN"],"35":["SAYAMS_TRIDENT"]},
+      "relics_optional": {"10":[""],"20":[""],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Inferno",
+      "rarity": "Epic",
+      "tierlist": null,
+      "best_rank": "S+",
+      "relics_by_level": {"10":["WOODMANS_AXE_HEAD"],"20":["EMERALD_SCALES"],"30":["VANQUISHED_SOUL"],"35":["GOGS_COG"]},
+      "relics_optional": {"10":[""],"20":[""],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Hotdog",
+      "rarity": "Epic",
+      "tierlist": "B",
+      "best_rank": "S+",
+      "relics_by_level": {"10":["WOODMANS_AXE_HEAD"],"20":["EMERALD_SCALES"],"30":["LOST_SWORDS"],"35":["SAYAMS_TRIDENT"]},
+      "relics_optional": {"10":[""],"20":["MONKS_BANNER"],"30":["VANQUISHED_SOUL"],"35":["GOGS_COG"]}
+    },
+    {
+      "name": "Rafiery",
+      "rarity": "Rare",
+      "tierlist": null,
+      "best_rank": "RS",
+      "relics_by_level": {"10":["WOODMANS_AXE_HEAD"],"20":["EMERALD_SCALES"],"30":["VANQUISHED_SOUL"],"35":["MOON_ROCK"]},
+      "relics_optional": {"10":[""],"20":[""],"30":[""],"35":["SAYAMS_TRIDENT"]}
+    },
+    {
+      "name": "Nanaslug",
+      "rarity": "Epic",
+      "tierlist": null,
+      "best_rank": "RS",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["STONY_SHIELD"],"30":["MAGICITE_STAFF"],"35":["SHARD_OF_RUDOLFE"]},
+      "relics_optional": {"10":[""],"20":[""],"30":["TEMPLE_STONE"],"35":[""]}
+    },
+    {
+      "name": "Vhisp",
+      "rarity": "Common",
+      "tierlist": null,
+      "best_rank": "RS",
+      "relics_by_level": {"10":["CLOUD_CAKE"],"20":["STONY_SHIELD"],"30":["ARROW_OF_LOVE"],"35":["SHARD_OF_RUDOLFE"]},
+      "relics_optional": {"10":[""],"20":[""],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Raldio",
+      "rarity": "Rare",
+      "tierlist": null,
+      "best_rank": "S+",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["HELZBELZ_BELLS"],"30":["ARROW_OF_LOVE"],"35":["SHARD_OF_RUDOLFE"]},
+      "relics_optional": {"10":["GKS_SLIPPERS"],"20":["STONY_SHIELD"],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Freedom",
+      "rarity": "Exotic",
+      "tierlist": null,
+      "best_rank": "RS",
+      "relics_by_level": {"10":["SKELEPUPS_SPARK"],"20":["FORGING_HAMMER"],"30":["CACTUS_FLOWER"],"35":["FROZEN_COIN"]},
+      "relics_optional": {"10":[""],"20":[""],"30":[""],"35":["MOLTEN_COIN"]}
+    },
+    {
+      "name": "Gemix",
+      "rarity": "Epic",
+      "tierlist": null,
+      "best_rank": "RS",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["HELZBELZ_BELLS"],"30":["ARROW_OF_LOVE"],"35":["SHARD_OF_RUDOLFE"]},
+      "relics_optional": {"10":["GKS_SLIPPERS"],"20":["STONY_SHIELD"],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Podo",
+      "rarity": "Epic",
+      "tierlist": null,
+      "best_rank": "RS",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["STONY_SHIELD"],"30":["PEEPSIE_EGGS"],"35":["FLYING_CARPET_FRAGMENT"]},
+      "relics_optional": {"10":[""],"20":[""],"30":["TEMPLE_STONE"],"35":[""]}
+    },
+    {
+      "name": "Lavazard",
+      "rarity": "Epic",
+      "tierlist": "A",
+      "best_rank": "RS/S+_(S+_Better)",
+      "relics_by_level": {"10":["WOODMANS_AXE_HEAD"],"20":["MONKS_BANNER"],"30":["VANQUISHED_SOUL"],"35":["GOGS_COG"]},
+      "relics_optional": {"10":["BLESSED_POLLEN"],"20":["EMERALD_SCALES"],"30":["PAPAS_ANTLERS"],"35":[""]}
+    },
+    {
+      "name": "Shurikoon",
+      "rarity": "Epic",
+      "tierlist": null,
+      "best_rank": "S+",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["HELZBELZ_BELLS"],"30":["ARROW_OF_LOVE"],"35":["SHARD_OF_RUDOLFE"]},
+      "relics_optional": {"10":["GKS_SLIPPERS"],"20":["STONY_SHIELD"],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Skelepup",
+      "rarity": "Exotic",
+      "tierlist": "S",
+      "best_rank": "S+",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["VOLCANO_BANNER"],"30":["MYSTIC_MAP"],"35":["CAGE_OF_DESPAIR"]},
+      "relics_optional": {"10":["FROOST_ROOT"],"20":["OBSIDIAN_LAVA","STONY_SHIELD"],"30":["CACTUS_FLOWER"],"35":[""]}
+    },
+    {
+      "name": "Foil Waddles",
+      "rarity": "Exotic",
+      "tierlist": null,
+      "best_rank": "S+",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["STONY_SHIELD"],"30":["PEEPSIE_EGGS"],"35":["FLYING_CARPET_FRAGMENT"]},
+      "relics_optional": {"10":[""],"20":[""],"30":["TEMPLE_STONE"],"35":[""]}
+    },
+    {
+      "name": "Foil Fossillia",
+      "rarity": "Exotic",
+      "tierlist": null,
+      "best_rank": "RS",
+      "relics_by_level": {"10":["WOODMANS_AXE_HEAD"],"20":["OBSIDIAN_LAVA"],"30":["SHACKLERS_GEM"],"35":["CAGE_OF_DESPAIR"]},
+      "relics_optional": {"10":[""],"20":[""],"30":[""],"35":["MOON_ROCK"]}
+    },
+    {
+      "name": "Foil Thundercracker",
+      "rarity": "Exotic",
+      "tierlist": null,
+      "best_rank": ["RS", "S+"],
+      "relics_by_level": {"10":["BLESSED_POLLEN"],"20":["FORGING_HAMMER"],"30":["GOLD_PIECE_DIE"],"35":["FROZEN_COIN"]},
+      "relics_optional": {"10":[""],"20":[""],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Hoopty",
+      "rarity": "Epic",
+      "tierlist": null,
+      "best_rank": "S+",
+      "relics_by_level": {"10":["BLESSED_POLLEN"],"20":["MONKS_ROBE"],"30":["MUSHLES"],"35":["FROZEN_COIN"]},
+      "relics_optional": {"10":[""],"20":[""],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Foil Kiloray",
+      "rarity": "Exotic",
+      "tierlist": null,
+      "best_rank": "S+",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["STONY_SHIELD"],"30":["PEEPSIE_EGGS"],"35":["FLYING_CARPET_FRAGMENT"]},
+      "relics_optional": {"10":[""],"20":[""],"30":["TEMPLE_STONE"],"35":[""]}
+    },
+    {
+      "name": "Spangles",
+      "rarity": "Exotic",
+      "tierlist": null,
+      "best_rank": "S+",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["STONY_SHIELD"],"30":["MAGICITE_STAFF"],"35":["SHARD_OF_RUDOLFE"]},
+      "relics_optional": {"10":[""],"20":[""],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Opigum",
+      "rarity": "Rare",
+      "tierlist": null,
+      "best_rank": "S+",
+      "relics_by_level": {"10":["BLESSED_POLLEN"],"20":["OBSIDIAN_LAVA"],"30":["CACTUS_FLOWER"],"35":["CAGE_OF_DESPAIR"]},
+      "relics_optional": {"10":[""],"20":[""],"30":["SHACKLERS_GEM"],"35":["MOON_ROCK"]}
+    },
+    {
+      "name": "Foil Flintly",
+      "rarity": "Exotic",
+      "tierlist": null,
+      "best_rank": "RS",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["STONY_SHIELD"],"30":["MAGICITE_STAFF"],"35":["SHARD_OF_RUDOLFE"]},
+      "relics_optional": {"10":[""],"20":[""],"30":["TEMPLE_STONE"],"35":[""]}
+    },
+    {
+      "name": "Light Tectonyx",
+      "rarity": "Exotic",
+      "tierlist": null,
+      "best_rank": "RS",
+      "relics_by_level": {"10":["WOODMANS_AXE_HEAD"],"20":["EMERALD_SCALES"],"30":["VANQUISHED_SOUL"],"35":["GOGS_COG"]},
+      "relics_optional": {"10":[""],"20":[""],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Flaring",
+      "rarity": "Epic",
+      "tierlist": null,
+      "best_rank": "S+",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["HELZBELZ_BELLS"],"30":["ARROW_OF_LOVE"],"35":["SHARD_OF_RUDOLFE"]},
+      "relics_optional": {"10":["GKS_SLIPPERS"],"20":["STONY_SHIELD"],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Cadbunny",
+      "rarity": "Exotic",
+      "tierlist": "C",
+      "best_rank": "RS",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["STONY_SHIELD"],"30":["MAGICITE_STAFF"],"35":["SHARD_OF_RUDOLFE"]},
+      "relics_optional": {"10":["GKS_SLIPPERS","FROOST_ROOT"],"20":["SHIP_CAPTAINS_LOG"],"30":["ARROW_OF_LOVE"],"35":[""]}
+    },
+    {
+      "name": "Fiender",
+      "rarity": "Rare",
+      "tierlist": null,
+      "best_rank": "RS",
+      "relics_by_level": {"10":["CLOUD_CAKE"],"20":["STONY_SHIELD"],"30":["MAGICITE_STAFF"],"35":["SHARD_OF_RUDOLFE"]},
+      "relics_optional": {"10":[""],"20":[""],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Pillblaze",
+      "rarity": "Rare",
+      "tierlist": null,
+      "best_rank": "RS",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["STONY_SHIELD"],"30":["CACTUS_FLOWER"],"35":["SCENT_OF_SKUSTUNK"]},
+      "relics_optional": {"10":[""],"20":[""],"30":["TEMPLE_STONE"],"35":[""]}
+    },
+    {
+      "name": "Blub",
+      "rarity": "Common",
+      "tierlist": null,
+      "best_rank": "RS",
+      "relics_by_level": {"10":["FROOST_ROOT"],"20":["EMERALD_SCALES"],"30":["VANQUISHED_SOUL"],"35":["GOGS_COG"]},
+      "relics_optional": {"10":["BLESSED_POLLEN"],"20":["OBSIDIAN_LAVA"],"30":["PALMDAS_TALON"],"35":[""]}
+    },
+    {
+      "name": "Cerberuff",
+      "rarity": "Common",
+      "tierlist": null,
+      "best_rank": "S+",
+      "relics_by_level": {"10":["WOODMANS_AXE_HEAD"],"20":["EMERALD_SCALES"],"30":["LOST_SWORDS"],"35":["SAYAMS_TRIDENT"]},
+      "relics_optional": {"10":[""],"20":[""],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Auger",
+      "rarity": "Common",
+      "tierlist": null,
+      "best_rank": "S+",
+      "relics_by_level": {"10":["WOODMANS_AXE_HEAD"],"20":["EMERALD_SCALES"],"30":["LOST_SWORDS"],"35":["SAYAMS_TRIDENT"]},
+      "relics_optional": {"10":[""],"20":[""],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Flurfy",
+      "rarity": "Common",
+      "tierlist": null,
+      "best_rank": "S+",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["STONY_SHIELD"],"30":["PEEPSIE_EGGS"],"35":["FLYING_CARPET_FRAGMENT"]},
+      "relics_optional": {"10":[""],"20":[""],"30":["TEMPLE_STONE"],"35":[""]}
+    },
+    {
+      "name": "Squirmle",
+      "rarity": "Common",
+      "tierlist": null,
+      "best_rank": "S+",
+      "relics_by_level": {"10":["CLOUD_CAKE"],"20":["STONY_SHIELD"],"30":["MAGICITE_STAFF"],"35":["SHARD_OF_RUDOLFE"]},
+      "relics_optional": {"10":[""],"20":[""],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Lil Bubs",
+      "rarity": "Rare",
+      "tierlist": null,
+      "best_rank": "RS/S+_(S+_Better)",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["STONY_SHIELD"],"30":["TEMPLE_STONE"],"35":["FLYING_CARPET_FRAGMENT"]},
+      "relics_optional": {"10":[""],"20":[""],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Peekly",
+      "rarity": "Common",
+      "tierlist": null,
+      "best_rank": "RS",
+      "relics_by_level": {"10":["WOODMANS_AXE_HEAD"],"20":["EMERALD_SCALES"],"30":["LOST_SWORDS"],"35":["GOGS_COG"]},
+      "relics_optional": {"10":[""],"20":[""],"30":["VANQUISHED_SOUL"],"35":[""]}
+    },
+    {
+      "name": "Splender",
+      "rarity": "Exotic",
+      "tierlist": null,
+      "best_rank": "RS",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["STONY_SHIELD"],"30":["ARROW_OF_LOVE"],"35":["SHARD_OF_RUDOLFE"]},
+      "relics_optional": {"10":["GKS_SLIPPERS"],"20":[""],"30":["MAGICITE_STAFF"],"35":[""]}
+    },
+    {
+      "name": "Dorux",
+      "rarity": "Epic",
+      "tierlist": null,
+      "best_rank": "RS/S+_(S+_Better)",
+      "relics_by_level": {"10":["FROOST_ROOT"],"20":["OBSIDIAN_LAVA"],"30":["ECHINO_SHELL"],"35":["FLYING_CARPET_FRAGMENT"]},
+      "relics_optional": {"10":[""],"20":["STONY_SHIELD"],"30":["PEEPSIE_EGGS","TEMPLE_STONE"],"35":[""]}
+    },
+    {
+      "name": "Fubby",
+      "rarity": "Exotic",
+      "tierlist": null,
+      "best_rank": "S+",
+      "relics_by_level": {"10":["WOODMANS_AXE_HEAD"],"20":["EMERALD_SCALES"],"30":["LOST_SWORDS"],"35":["SAYAMS_TRIDENT"]},
+      "relics_optional": {"10":[""],"20":[""],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Pennon",
+      "rarity": "Epic",
+      "tierlist": null,
+      "best_rank": ["RS", "S+"],
+      "relics_by_level": {"10":["WOODMANS_AXE_HEAD"],"20":["EMERALD_SCALES"],"30":["VANQUISHED_SOUL"],"35":["MOON_ROCK"]},
+      "relics_optional": {"10":[""],"20":[""],"30":[""],"35":["SAYAMS_TRIDENT"]}
+    },
+    {
+      "name": "Ekkult",
+      "rarity": "Exotic",
+      "tierlist": null,
+      "best_rank": "RS",
+      "relics_by_level": {"10":["BLESSED_POLLEN"],"20":["FORGING_HAMMER"],"30":["CACTUS_FLOWER"],"35":["MOLTEN_COIN"]},
+      "relics_optional": {"10":[""],"20":["OBSIDIAN_LAVA"],"30":["GOLD_PIECE_DIE"],"35":[""]}
+    },
+    {
+      "name": "Defilio",
+      "rarity": "Exotic",
+      "tierlist": null,
+      "best_rank": "RS",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["STONY_SHIELD"],"30":["TEMPLE_STONE"],"35":["FLYING_CARPET_FRAGMENT"]},
+      "relics_optional": {"10":[""],"20":[""],"30":[""],"35":["MOON_ROCK"]}
+    },
+    {
+      "name": "Blighted Cubsprout",
+      "rarity": "Exotic",
+      "tierlist": null,
+      "best_rank": "RS",
+      "relics_by_level": {"10":["WOODMANS_AXE_HEAD"],"20":["EMERALD_SCALES"],"30":["LOST_SWORDS"],"35":["SAYAMS_TRIDENT"]},
+      "relics_optional": {"10":[""],"20":[""],"30":["VANQUISHED_SOUL"],"35":[""]}
+    },
+    {
+      "name": "Blighted Flue",
+      "rarity": "Legendary",
+      "tierlist": "S",
+      "best_rank": ["RS", "S+"],
+      "relics_by_level": {"10":["WOODMANS_AXE_HEAD"],"20":["EMERALD_SCALES"],"30":["LOST_SWORDS"],"35":["SAYAMS_TRIDENT"]},
+      "relics_optional": {"10":[""],"20":[""],"30":["VANQUISHED_SOUL"],"35":[""]}
+    },
+    {
+      "name": "Blobroller",
+      "rarity": "Exotic",
+      "tierlist": null,
+      "best_rank": "S+",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["OBSIDIAN_LAVA"],"30":["CACTUS_FLOWER"],"35":["CAGE_OF_DESPAIR"]},
+      "relics_optional": {"10":[""],"20":["STONY_SHIELD"],"30":["SHACKLERS_GEM"],"35":["FLYING_CARPET_FRAGMENT"]}
+    },
+    {
+      "name": "Light Nibbles",
+      "rarity": "Epic",
+      "tierlist": "B",
+      "best_rank": "S+",
+      "relics_by_level": {"10":["GKS_SLIPPERS"],"20":["SHIP_CAPTAINS_LOG"],"30":["ARROW_OF_LOVE"],"35":["SHARD_OF_RUDOLFE"]},
+      "relics_optional": {"10":["ELEFAUNA_FLOWER"],"20":["STONY_SHIELD"],"30":["MAGICITE_STAFF"],"35":[""]}
+    },
+    {
+      "name": "Light Frostmite",
+      "rarity": "Exotic",
+      "tierlist": null,
+      "best_rank": "S+",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["STONY_SHIELD"],"30":["ARROW_OF_LOVE"],"35":["SHARD_OF_RUDOLFE"]},
+      "relics_optional": {"10":[""],"20":[""],"30":["MAGICITE_STAFF"],"35":[""]}
+    },
+    {
+      "name": "Light Bludger",
+      "rarity": "Exotic",
+      "tierlist": null,
+      "best_rank": "S+",
+      "relics_by_level": {"10":["FROOST_ROOT"],"20":["EMERALD_SCALES"],"30":["VANQUISHED_SOUL"],"35":["GOGS_COG"]},
+      "relics_optional": {"10":["WOODMANS_AXE_HEAD"],"20":[""],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Light Zaptor",
+      "rarity": "Exotic",
+      "tierlist": "C",
+      "best_rank": "S+",
+      "relics_by_level": {"10":["CLOUD_CAKE"],"20":["STONY_SHIELD"],"30":["ARROW_OF_LOVE"],"35":["SHARD_OF_RUDOLFE"]},
+      "relics_optional": {"10":[""],"20":[""],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Light Quirk",
+      "rarity": "Epic",
+      "tierlist": "B",
+      "best_rank": "S+",
+      "relics_by_level": {"10":["WOODMANS_AXE_HEAD"],"20":["MONKS_BANNER"],"30":["DARK_WARRO_THORN"],"35":["SAYAMS_TRIDENT"]},
+      "relics_optional": {"10":["BLESSED_POLLEN"],"20":["EMERALD_SCALES"],"30":["VANQUISHED_SOUL"],"35":["MOON_ROCK"]}
+    },
+    {
+      "name": "Light Statikat",
+      "rarity": "Exotic",
+      "tierlist": null,
+      "best_rank": "RS",
+      "relics_by_level": {"10":["BLESSED_POLLEN"],"20":["OBSIDIAN_LAVA"],"30":["SHACKLERS_GEM"],"35":["FLYING_CARPET_FRAGMENT"]},
+      "relics_optional": {"10":[""],"20":[""],"30":["TEMPLE_STONE"],"35":[""]}
+    },
+    {
+      "name": "Dark Spinnerette",
+      "rarity": "Exotic",
+      "tierlist": null,
+      "best_rank": "S+",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["HELZBELZ_BELLS"],"30":["ARROW_OF_LOVE"],"35":["SHARD_OF_RUDOLFE"]},
+      "relics_optional": {"10":["GKS_SLIPPERS"],"20":["STONY_SHIELD"],"30":["MAGICITE_STAFF"],"35":[""]}
+    },
+    {
+      "name": "Light Twiggum",
+      "rarity": "Exotic",
+      "tierlist": null,
+      "best_rank": "RS",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["STONY_SHIELD"],"30":["CACTUS_FLOWER"],"35":["FLYING_CARPET_FRAGMENT"]},
+      "relics_optional": {"10":[""],"20":[""],"30":["TEMPLE_STONE"],"35":[""]}
+    },
+    {
+      "name": "Aquarion",
+      "rarity": "Legendary",
+      "tierlist": null,
+      "best_rank": "S+",
+      "relics_by_level": {"10":["BLESSED_POLLEN"],"20":["FORGING_HAMMER"],"30":["MONASTERY_IDOL"],"35":["MOLTEN_COIN"]},
+      "relics_optional": {"10":["QUARTEX_CRYSTAL"],"20":[""],"30":["SHACKLERS_GEM"],"35":["MOON_ROCK"]}
+    },
+    {
+      "name": "Blighted Fiender",
+      "rarity": "Exotic",
+      "tierlist": null,
+      "best_rank": "S+",
+      "relics_by_level": {"10":["CLOUD_CAKE"],"20":["STONY_SHIELD"],"30":["ARROW_OF_LOVE"],"35":["SHARD_OF_RUDOLFE"]},
+      "relics_optional": {"10":[""],"20":[""],"30":["MAGICITE_STAFF"],"35":[""]}
+    },
+    {
+      "name": "Blighted Kiloray",
+      "rarity": "Exotic",
+      "tierlist": null,
+      "best_rank": "S+",
+      "relics_by_level": {"10":["WOODMANS_AXE_HEAD"],"20":["EMERALD_SCALES"],"30":["LOST_SWORDS"],"35":["SAYAMS_TRIDENT"]},
+      "relics_optional": {"10":[""],"20":["NEROS_ORB"],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Dark Shellbee",
+      "rarity": "Rare",
+      "tierlist": null,
+      "best_rank": "RS",
+      "relics_by_level": {"10":["CLOUD_CAKE"],"20":["STONY_SHIELD"],"30":["MAGICITE_STAFF"],"35":["SHARD_OF_RUDOLFE"]},
+      "relics_optional": {"10":[""],"20":[""],"30":["TEMPLE_STONE"],"35":[""]}
+    },
+    {
+      "name": "Liothning",
+      "rarity": "Epic",
+      "tierlist": "B",
+      "best_rank": "S+",
+      "relics_by_level": {"10":["WOODMANS_AXE_HEAD"],"20":["EMERALD_SCALES"],"30":["VANQUISHED_SOUL"],"35":["GOGS_COG"]},
+      "relics_optional": {"10":[""],"20":["OBSIDIAN_LAVA"],"30":[""],"35":["MOON_ROCK"]}
+    },
+    {
+      "name": "Dark Lumera",
+      "rarity": "Rare",
+      "tierlist": null,
+      "best_rank": "RS",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["HELZBELZ_BELLS"],"30":["ARROW_OF_LOVE"],"35":["SHARD_OF_RUDOLFE"]},
+      "relics_optional": {"10":["GKS_SLIPPERS"],"20":["STONY_SHIELD"],"30":["MAGICITE_STAFF"],"35":[""]}
+    },
+    {
+      "name": "Dark Steamguin",
+      "rarity": "Rare",
+      "tierlist": null,
+      "best_rank": "S+",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["STONY_SHIELD"],"30":["TEMPLE_STONE"],"35":["SHARD_OF_RUDOLFE"]},
+      "relics_optional": {"10":[""],"20":[""],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Dark Poltergust",
+      "rarity": "Legendary",
+      "tierlist": "S",
+      "best_rank": "S+",
+      "relics_by_level": {"10":["CLOUD_CAKE"],"20":["SHIP_CAPTAINS_LOG"],"30":["ARROW_OF_LOVE"],"35":["SHARD_OF_RUDOLFE"]},
+      "relics_optional": {"10":["ELEFAUNA_FLOWER","GKS_SLIPPERS"],"20":["HELZBELZ_BELLS","STONY_SHIELD"],"30":["MAGICITE_STAFF"],"35":[""]}
+    },
+    {
+      "name": "Dark Treemur",
+      "rarity": "Epic",
+      "tierlist": null,
+      "best_rank": "RS",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["STONY_SHIELD"],"30":["MAGICITE_STAFF"],"35":["SHARD_OF_RUDOLFE"]},
+      "relics_optional": {"10":[""],"20":[""],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Foil Vexie",
+      "rarity": "Exotic",
+      "tierlist": null,
+      "best_rank": "S+",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["OBSIDIAN_LAVA"],"30":["PEEPSIE_EGGS"],"35":["FLYING_CARPET_FRAGMENT"]},
+      "relics_optional": {"10":[""],"20":[""],"30":["TEMPLE_STONE"],"35":[""]}
+    },
+    {
+      "name": "Foil Vhisp",
+      "rarity": "Exotic",
+      "tierlist": null,
+      "best_rank": "S+",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["STONY_SHIELD"],"30":["ARROW_OF_LOVE"],"35":["SHARD_OF_RUDOLFE"]},
+      "relics_optional": {"10":[""],"20":[""],"30":["MAGICITE_STAFF"],"35":[""]}
+    },
+    {
+      "name": "Dark Sparkupine",
+      "rarity": "Rare",
+      "tierlist": null,
+      "best_rank": "S+",
+      "relics_by_level": {"10":["WOODMANS_AXE_HEAD"],"20":["EMERALD_SCALES"],"30":["VANQUISHED_SOUL"],"35":["FROZEN_COIN"]},
+      "relics_optional": {"10":[""],"20":[""],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Dark Squibee",
+      "rarity": "Rare",
+      "tierlist": "B",
+      "best_rank": "RS",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["STONY_SHIELD"],"30":["CACTUS_FLOWER"],"35":["FLYING_CARPET_FRAGMENT"]},
+      "relics_optional": {"10":[""],"20":[""],"30":["MYSTIC_MAP","TEMPLE_STONE"],"35":[""]}
+    },
+    {
+      "name": "Dark Waddles",
+      "rarity": "Epic",
+      "tierlist": null,
+      "best_rank": "RS",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["STONY_SHIELD"],"30":["PEEPSIE_EGGS"],"35":["FLYING_CARPET_FRAGMENT"]},
+      "relics_optional": {"10":[""],"20":[""],"30":["TEMPLE_STONE"],"35":[""]}
+    },
+    {
+      "name": "Dark Twiggum",
+      "rarity": "Epic",
+      "tierlist": null,
+      "best_rank": "RS",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["STONY_SHIELD"],"30":["CACTUS_FLOWER"],"35":["FLYING_CARPET_FRAGMENT"]},
+      "relics_optional": {"10":[""],"20":[""],"30":["TEMPLE_STONE"],"35":[""]}
+    },
+    {
+      "name": "Dark Auger",
+      "rarity": "Epic",
+      "tierlist": null,
+      "best_rank": "S+",
+      "relics_by_level": {"10":["WOODMANS_AXE_HEAD"],"20":["EMERALD_SCALES"],"30":["LOST_SWORDS"],"35":["SAYAMS_TRIDENT"]},
+      "relics_optional": {"10":[""],"20":[""],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Dark Aria",
+      "rarity": "Rare",
+      "tierlist": null,
+      "best_rank": "RS",
+      "relics_by_level": {"10":["CLOUD_CAKE"],"20":["STONY_SHIELD"],"30":["ARROW_OF_LOVE"],"35":["SHARD_OF_RUDOLFE"]},
+      "relics_optional": {"10":[""],"20":[""],"30":["MAGICITE_STAFF"],"35":[""]}
+    },
+    {
+      "name": "Light Rafiery",
+      "rarity": "Epic",
+      "tierlist": "B",
+      "best_rank": "S+",
+      "relics_by_level": {"10":["SKELEPUPS_SPARK"],"20":["SHIP_CAPTAINS_LOG"],"30":["ARROW_OF_LOVE"],"35":["SHARD_OF_RUDOLFE"]},
+      "relics_optional": {"10":["FROOST_ROOT"],"20":[""],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Light Fossillia",
+      "rarity": "Epic",
+      "tierlist": null,
+      "best_rank": "RS",
+      "relics_by_level": {"10":["CLOUD_CAKE"],"20":["STONY_SHIELD"],"30":["MAGICITE_STAFF"],"35":["SHARD_OF_RUDOLFE"]},
+      "relics_optional": {"10":[""],"20":[""],"30":["TEMPLE_STONE"],"35":[""]}
+    },
+    {
+      "name": "Light Nanaslug",
+      "rarity": "Exotic",
+      "tierlist": null,
+      "best_rank": "RS",
+      "relics_by_level": {"10":["CLOUD_CAKE"],"20":["STONY_SHIELD"],"30":["MAGICITE_STAFF"],"35":["SHARD_OF_RUDOLFE"]},
+      "relics_optional": {"10":[""],"20":[""],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Light Crickin",
+      "rarity": "Exotic",
+      "tierlist": null,
+      "best_rank": "S+",
+      "relics_by_level": {"10":["BLESSED_POLLEN"],"20":["STONY_SHIELD"],"30":["MAGICITE_STAFF"],"35":["MOON_ROCK"]},
+      "relics_optional": {"10":[""],"20":[""],"30":[""],"35":["SHARD_OF_RUDOLFE"]}
+    },
+    {
+      "name": "Light Flue",
+      "rarity": "Epic",
+      "tierlist": null,
+      "best_rank": "S+",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["STONY_SHIELD"],"30":["TEMPLE_STONE"],"35":["FLYING_CARPET_FRAGMENT"]},
+      "relics_optional": {"10":[""],"20":[""],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Light Grubbean",
+      "rarity": "Epic",
+      "tierlist": null,
+      "best_rank": "RS",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["HELZBELZ_BELLS"],"30":["ARROW_OF_LOVE"],"35":["SHARD_OF_RUDOLFE"]},
+      "relics_optional": {"10":["GKS_SLIPPERS"],"20":["STONY_SHIELD"],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Ribos",
+      "rarity": "Rare",
+      "tierlist": null,
+      "best_rank": "RS",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["STONY_SHIELD"],"30":["SHACKLERS_GEM"],"35":["FLYING_CARPET_FRAGMENT"]},
+      "relics_optional": {"10":[""],"20":[""],"30":["TEMPLE_STONE"],"35":[""]}
+    },
+    {
+      "name": "Light Sparkspeck",
+      "rarity": "Rare",
+      "tierlist": null,
+      "best_rank": "S+",
+      "relics_by_level": {"10":["CLOUD_CAKE"],"20":["HELZBELZ_BELLS"],"30":["ARROW_OF_LOVE"],"35":["SHARD_OF_RUDOLFE"]},
+      "relics_optional": {"10":[""],"20":[""],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Light Wavesling",
+      "rarity": "Rare",
+      "tierlist": null,
+      "best_rank": "S+",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["STONY_SHIELD"],"30":["MAGICITE_STAFF"],"35":["FLYING_CARPET_FRAGMENT"]},
+      "relics_optional": {"10":[""],"20":[""],"30":["TEMPLE_STONE"],"35":["SHARD_OF_RUDOLFE"]}
+    },
+    {
+      "name": "Light Jack",
+      "rarity": "Rare",
+      "tierlist": null,
+      "best_rank": "S+",
+      "relics_by_level": {"10":["BLESSED_POLLEN"],"20":["FORGING_HAMMER"],"30":["CACTUS_FLOWER"],"35":["FLYING_CARPET_FRAGMENT"]},
+      "relics_optional": {"10":[""],"20":[""],"30":["SHACKLERS_GEM"],"35":[""]}
+    },
+    {
+      "name": "Light Flurfy",
+      "rarity": "Rare",
+      "tierlist": null,
+      "best_rank": "RS",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["STONY_SHIELD"],"30":["PEEPSIE_EGGS"],"35":["FLYING_CARPET_FRAGMENT"]},
+      "relics_optional": {"10":[""],"20":[""],"30":["TEMPLE_STONE"],"35":[""]}
+    },
+    {
+      "name": "Light Slithero",
+      "rarity": "Rare",
+      "tierlist": null,
+      "best_rank": "S+",
+      "relics_by_level": {"10":["WOODMANS_AXE_HEAD"],"20":["FORGING_HAMMER"],"30":["DARK_WARRO_THORN"],"35":["MOLTEN_COIN"]},
+      "relics_optional": {"10":[""],"20":[""],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Light Squibee",
+      "rarity": "Rare",
+      "tierlist": null,
+      "best_rank": "RS",
+      "relics_by_level": {"10":["WOODMANS_AXE_HEAD"],"20":["FORGING_HAMMER"],"30":["DARK_WARRO_THORN"],"35":["MOLTEN_COIN"]},
+      "relics_optional": {"10":[""],"20":[""],"30":[""],"35":["MOON_ROCK"]}
+    },
+    {
+      "name": "Light Digsy",
+      "rarity": "Epic",
+      "tierlist": null,
+      "best_rank": "RS",
+      "relics_by_level": {"10":["BLESSED_POLLEN"],"20":["FORGING_HAMMER"],"30":["GOLD_PIECE_DIE"],"35":["MOLTEN_COIN"]},
+      "relics_optional": {"10":[""],"20":[""],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Light Ignios",
+      "rarity": "Legendary",
+      "tierlist": "C",
+      "best_rank": "S+",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["HELZBELZ_BELLS"],"30":["ARROW_OF_LOVE"],"35":["SHARD_OF_RUDOLFE"]},
+      "relics_optional": {"10":["GKS_SLIPPERS"],"20":["STONY_SHIELD"],"30":["MAGICITE_STAFF"],"35":[""]}
+    },
+    {
+      "name": "Light Mumbah",
+      "rarity": "Rare",
+      "tierlist": null,
+      "best_rank": "S+",
+      "relics_by_level": {"10":["CLOUD_CAKE"],"20":["STONY_SHIELD"],"30":["ARROW_OF_LOVE"],"35":["SHARD_OF_RUDOLFE"]},
+      "relics_optional": {"10":[""],"20":[""],"30":["MAGICITE_STAFF"],"35":[""]}
+    },
+    {
+      "name": "Dark Tongutail",
+      "rarity": "Rare",
+      "tierlist": "C",
+      "best_rank": "RS",
+      "relics_by_level": {"10":["WOODMANS_AXE_HEAD"],"20":["EMERALD_SCALES"],"30":["PAPAS_ANTLERS"],"35":["GOGS_COG"]},
+      "relics_optional": {"10":[""],"20":[""],"30":["VANQUISHED_SOUL"],"35":[""]}
+    },
+    {
+      "name": "Dark Lavarilla",
+      "rarity": "Rare",
+      "tierlist": "C",
+      "best_rank": "RS",
+      "relics_by_level": {"10":["FROOST_ROOT"],"20":["EMERALD_SCALES"],"30":["PAPAS_ANTLERS"],"35":["GOGS_COG"]},
+      "relics_optional": {"10":["WOODMANS_AXE_HEAD"],"20":["MONKS_ROBE"],"30":["VANQUISHED_SOUL"],"35":[""]}
+    },
+    {
+      "name": "Dark Frostmite",
+      "rarity": "Rare",
+      "tierlist": null,
+      "best_rank": "S+",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["STONY_SHIELD"],"30":["MAGICITE_STAFF"],"35":["SHARD_OF_RUDOLFE"]},
+      "relics_optional": {"10":[""],"20":[""],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Dark Tulipinny",
+      "rarity": "Epic",
+      "tierlist": null,
+      "best_rank": "RS",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["STONY_SHIELD"],"30":["PEEPSIE_EGGS"],"35":["FLYING_CARPET_FRAGMENT"]},
+      "relics_optional": {"10":[""],"20":[""],"30":["TEMPLE_STONE"],"35":[""]}
+    },
+    {
+      "name": "Dark Flutterpat",
+      "rarity": "Epic",
+      "tierlist": null,
+      "best_rank": "S+",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["BEAN_STALK"],"30":["PEEPSIE_EGGS"],"35":["FLYING_CARPET_FRAGMENT"]},
+      "relics_optional": {"10":[""],"20":["STONY_SHIELD"],"30":["TEMPLE_STONE"],"35":[""]}
+    },
+    {
+      "name": "Dark Slithero",
+      "rarity": "Exotic",
+      "tierlist": null,
+      "best_rank": "S+",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["OBSIDIAN_LAVA"],"30":["CACTUS_FLOWER"],"35":["FLYING_CARPET_FRAGMENT"]},
+      "relics_optional": {"10":[""],"20":["STONY_SHIELD"],"30":["TEMPLE_STONE"],"35":[""]}
+    },
+    {
+      "name": "Keeper",
+      "rarity": "Legendary",
+      "tierlist": null,
+      "best_rank": "S+",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["STONY_SHIELD"],"30":["ARROW_OF_LOVE"],"35":["SHARD_OF_RUDOLFE"]},
+      "relics_optional": {"10":[""],"20":[""],"30":["MAGICITE_STAFF"],"35":[""]}
+    },
+    {
+      "name": "Dark Luna",
+      "rarity": "Epic",
+      "tierlist": null,
+      "best_rank": "S+",
+      "relics_by_level": {"10":["CLOUD_CAKE"],"20":["STONY_SHIELD"],"30":["MAGICITE_STAFF"],"35":["SHARD_OF_RUDOLFE"]},
+      "relics_optional": {"10":[""],"20":[""],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Foil Luna",
+      "rarity": "Exotic",
+      "tierlist": null,
+      "best_rank": "RS",
+      "relics_by_level": {"10":["BLESSED_POLLEN"],"20":["STONY_SHIELD"],"30":["MAGICITE_STAFF"],"35":["FLYING_CARPET_FRAGMENT"]},
+      "relics_optional": {"10":[""],"20":[""],"30":[""],"35":["MOON_ROCK"]}
+    },
+    {
+      "name": "Sol",
+      "rarity": "Rare",
+      "tierlist": null,
+      "best_rank": "RS",
+      "relics_by_level": {"10":["CLOUD_CAKE"],"20":["STONY_SHIELD"],"30":["MAGICITE_STAFF"],"35":["SHARD_OF_RUDOLFE"]},
+      "relics_optional": {"10":[""],"20":[""],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Dreamger",
+      "rarity": "Rare",
+      "tierlist": null,
+      "best_rank": "S+",
+      "relics_by_level": {"10":["WOODMANS_AXE_HEAD"],"20":["EMERALD_SCALES"],"30":["LOST_SWORDS"],"35":["SAYAMS_TRIDENT"]},
+      "relics_optional": {"10":[""],"20":[""],"30":["VANQUISHED_SOUL"],"35":[""]}
+    },
+    {
+      "name": "Light Weevern",
+      "rarity": "Epic",
+      "tierlist": null,
+      "best_rank": "S+",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["HELZBELZ_BELLS"],"30":["ARROW_OF_LOVE"],"35":["SHARD_OF_RUDOLFE"]},
+      "relics_optional": {"10":["GKS_SLIPPERS"],"20":["STONY_SHIELD"],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Dark Quirk",
+      "rarity": "Rare",
+      "tierlist": "C",
+      "best_rank": "RS",
+      "relics_by_level": {"10":["WOODMANS_AXE_HEAD"],"20":["MT._GEMMA_BANNER"],"30":["CACTUS_FLOWER"],"35":["CAGE_OF_DESPAIR"]},
+      "relics_optional": {"10":[""],"20":["EMERALD_SCALES"],"30":[""],"35":["MOON_ROCK"]}
+    },
+    {
+      "name": "Dark Squirmle",
+      "rarity": "Rare",
+      "tierlist": null,
+      "best_rank": "S+",
+      "relics_by_level": {"10":["CLOUD_CAKE"],"20":["STONY_SHIELD"],"30":["MAGICITE_STAFF"],"35":["SHARD_OF_RUDOLFE"]},
+      "relics_optional": {"10":[""],"20":[""],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Blighted Flowerpiller",
+      "rarity": "Legendary",
+      "tierlist": "B",
+      "best_rank": "S+",
+      "relics_by_level": {"10":["GKS_SLIPPERS"],"20":["HELZBELZ_BELLS"],"30":["ARROW_OF_LOVE"],"35":["SHARD_OF_RUDOLFE"]},
+      "relics_optional": {"10":["CLOUD_CAKE","ELEFAUNA_FLOWER"],"20":["STONY_SHIELD"],"30":["MAGICITE_STAFF"],"35":[""]}
+    },
+    {
+      "name": "Dark Jellyshock",
+      "rarity": "Epic",
+      "tierlist": null,
+      "best_rank": "S+",
+      "relics_by_level": {"10":["WOODMANS_AXE_HEAD"],"20":["NEROS_ORB"],"30":["DARK_WARRO_THORN"],"35":["MOLTEN_COIN"]},
+      "relics_optional": {"10":[""],"20":[""],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Light Hawkai",
+      "rarity": "Rare",
+      "tierlist": null,
+      "best_rank": "S+",
+      "relics_by_level": {"10":["BLESSED_POLLEN"],"20":["FORGING_HAMMER"],"30":["GOLD_PIECE_DIE"],"35":["FROZEN_COIN"]},
+      "relics_optional": {"10":[""],"20":[""],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Dark Vexie",
+      "rarity": "Rare",
+      "tierlist": null,
+      "best_rank": ["RS", "S+"],
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["HELZBELZ_BELLS"],"30":["ARROW_OF_LOVE"],"35":["SHARD_OF_RUDOLFE"]},
+      "relics_optional": {"10":["GKS_SLIPPERS"],"20":["STONY_SHIELD"],"30":["MAGICITE_STAFF"],"35":[""]}
+    },
+    {
+      "name": "Da Windy",
+      "rarity": "Legendary",
+      "tierlist": "B",
+      "best_rank": "S+",
+      "relics_by_level": {"10":["BLESSED_POLLEN"],"20":["MT._GEMMA_BANNER"],"30":["CACTUS_FLOWER"],"35":["CAGE_OF_DESPAIR"]},
+      "relics_optional": {"10":["ELEFAUNA_FLOWER"],"20":["OBSIDIAN_LAVA","BEAN_STALK"],"30":["NOXS_NIGHTMARE"],"35":["DARK_WINDS_VENOM","PETRIFIED_MAMA_BABY"]}
+    },
+    {
+      "name": "Light Snorkels",
+      "rarity": "Exotic",
+      "tierlist": null,
+      "best_rank": "RS",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["HELZBELZ_BELLS"],"30":["ARROW_OF_LOVE"],"35":["SHARD_OF_RUDOLFE"]},
+      "relics_optional": {"10":["GKS_SLIPPERS"],"20":["STONY_SHIELD"],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Foil Croaky",
+      "rarity": "Legendary",
+      "tierlist": "A",
+      "best_rank": "RS",
+      "relics_by_level": {"10":["FROOST_ROOT"],"20":["FROZEN_CLAWS"],"30":["CACTUS_FLOWER"],"35":["CAGE_OF_DESPAIR"]},
+      "relics_optional": {"10":["BLESSED_POLLEN"],"20":["OBSIDIAN_LAVA","BEAN_STALK"],"30":[""],"35":["DARK_WINDS_VENOM"]}
+    },
+    {
+      "name": "Freezet",
+      "rarity": "Common",
+      "tierlist": null,
+      "best_rank": "S+",
+      "relics_by_level": {"10":["WOODMANS_AXE_HEAD"],"20":["EMERALD_SCALES"],"30":["VANQUISHED_SOUL"],"35":["GOGS_COG"]},
+      "relics_optional": {"10":[""],"20":[""],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Dark Pillblaze",
+      "rarity": "Epic",
+      "tierlist": null,
+      "best_rank": "S+",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["FORGING_HAMMER"],"30":["NOXS_NIGHTMARE"],"35":["MOLTEN_COIN"]},
+      "relics_optional": {"10":[""],"20":[""],"30":[""],"35":["MOON_ROCK"]}
+    },
+    {
+      "name": "Rudy",
+      "rarity": "Exotic",
+      "tierlist": null,
+      "best_rank": "RS",
+      "relics_by_level": {"10":["WOODMANS_AXE_HEAD"],"20":["FORGING_HAMMER"],"30":["VANQUISHED_SOUL"],"35":["FROZEN_COIN"]},
+      "relics_optional": {"10":[""],"20":[""],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Manio",
+      "rarity": "Legendary",
+      "tierlist": null,
+      "best_rank": "RS",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["FORGING_HAMMER"],"30":["GOLD_PIECE_DIE"],"35":["MOLTEN_COIN"]},
+      "relics_optional": {"10":["FROOST_ROOT"],"20":["OBSIDIAN_LAVA"],"30":["MONASTERY_IDOL"],"35":[""]}
+    },
+    {
+      "name": "Mistraxol",
+      "rarity": "Common",
+      "tierlist": null,
+      "best_rank": "S+",
+      "relics_by_level": {"10":["CLOUD_CAKE"],"20":["STONY_SHIELD"],"30":["MAGICITE_STAFF"],"35":["SHARD_OF_RUDOLFE"]},
+      "relics_optional": {"10":[""],"20":[""],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Orbling",
+      "rarity": "Common",
+      "tierlist": null,
+      "best_rank": "S+",
+      "relics_by_level": {"10":["BLESSED_POLLEN"],"20":["OBSIDIAN_LAVA"],"30":["CACTUS_FLOWER"],"35":["CAGE_OF_DESPAIR"]},
+      "relics_optional": {"10":[""],"20":[""],"30":["SHACKLERS_GEM"],"35":["MOON_ROCK"]}
+    },
+    {
+      "name": "Zappup",
+      "rarity": "Common",
+      "tierlist": null,
+      "best_rank": "S+",
+      "relics_by_level": {"10":["GKS_SLIPPERS"],"20":["STONY_SHIELD"],"30":["ARROW_OF_LOVE"],"35":["SHARD_OF_RUDOLFE"]},
+      "relics_optional": {"10":[""],"20":[""],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Pestling",
+      "rarity": "Common",
+      "tierlist": null,
+      "best_rank": "RS",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["STONY_SHIELD"],"30":["PEEPSIE_EGGS"],"35":["FLYING_CARPET_FRAGMENT"]},
+      "relics_optional": {"10":[""],"20":[""],"30":["TEMPLE_STONE"],"35":[""]}
+    },
+    {
+      "name": "Woolly",
+      "rarity": "Legendary",
+      "tierlist": null,
+      "best_rank": "S+",
+      "relics_by_level": {"10":["WOODMANS_AXE_HEAD"],"20":["EMERALD_SCALES"],"30":["VANQUISHED_SOUL"],"35":["GOGS_COG"]},
+      "relics_optional": {"10":[""],"20":["OBSIDIAN_LAVA"],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Frozy",
+      "rarity": "Common",
+      "tierlist": null,
+      "best_rank": "RS",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["STONY_SHIELD"],"30":["SHACKLERS_GEM"],"35":["DARK_WINDS_VENOM"]},
+      "relics_optional": {"10":[""],"20":[""],"30":[""],"35":["FLYING_CARPET_FRAGMENT"]}
+    },
+    {
+      "name": "Stalkra",
+      "rarity": "Common",
+      "tierlist": null,
+      "best_rank": "S+",
+      "relics_by_level": {"10":["WOODMANS_AXE_HEAD"],"20":["EMERALD_SCALES"],"30":["VANQUISHED_SOUL"],"35":["GOGS_COG"]},
+      "relics_optional": {"10":[""],"20":[""],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Mech",
+      "rarity": "Common",
+      "tierlist": null,
+      "best_rank": "RS",
+      "relics_by_level": {"10":["WOODMANS_AXE_HEAD"],"20":["MONKS_BANNER"],"30":["VANQUISHED_SOUL"],"35":["SAYAMS_TRIDENT"]},
+      "relics_optional": {"10":[""],"20":["EMERALD_SCALES"],"30":[""],"35":["GOGS_COG"]}
+    },
+    {
+      "name": "Rexie",
+      "rarity": "Common",
+      "tierlist": "C",
+      "best_rank": "S+",
+      "relics_by_level": {"10":["WOODMANS_AXE_HEAD"],"20":["EMERALD_SCALES"],"30":["LOST_SWORDS"],"35":["SAYAMS_TRIDENT"]},
+      "relics_optional": {"10":[""],"20":[""],"30":["VANQUISHED_SOUL"],"35":[""]}
+    },
+    {
+      "name": "Warrian",
+      "rarity": "Common",
+      "tierlist": null,
+      "best_rank": "RS/S+_(S+_Better)",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["STONY_SHIELD"],"30":["TEMPLE_STONE"],"35":["MOON_ROCK"]},
+      "relics_optional": {"10":[""],"20":[""],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Aebex",
+      "rarity": "Common",
+      "tierlist": null,
+      "best_rank": "RS",
+      "relics_by_level": {"10":["CLOUD_CAKE"],"20":["STONY_SHIELD"],"30":["ARROW_OF_LOVE"],"35":["SHARD_OF_RUDOLFE"]},
+      "relics_optional": {"10":[""],"20":[""],"30":["MAGICITE_STAFF"],"35":[""]}
+    },
+    {
+      "name": "Charix",
+      "rarity": "Rare",
+      "tierlist": null,
+      "best_rank": "S+",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["STONY_SHIELD"],"30":["PEEPSIE_EGGS"],"35":["FLYING_CARPET_FRAGMENT"]},
+      "relics_optional": {"10":[""],"20":[""],"30":["TEMPLE_STONE"],"35":[""]}
+    },
+    {
+      "name": "Alpha",
+      "rarity": "Exotic",
+      "tierlist": null,
+      "best_rank": "S+",
+      "relics_by_level": {"10":["WOODMANS_AXE_HEAD"],"20":["OBSIDIAN_LAVA"],"30":["CACTUS_FLOWER"],"35":["CAGE_OF_DESPAIR"]},
+      "relics_optional": {"10":[""],"20":[""],"30":["NOXS_NIGHTMARE"],"35":["SCENT_OF_SKUSTUNK"]}
+    },
+    {
+      "name": "Charpy",
+      "rarity": "Legendary",
+      "tierlist": null,
+      "best_rank": "S+",
+      "relics_by_level": {"10":["BLESSED_POLLEN"],"20":["FORGING_HAMMER"],"30":["GOLD_PIECE_DIE"],"35":["MOLTEN_COIN"]},
+      "relics_optional": {"10":[""],"20":[""],"30":["MONASTERY_IDOL"],"35":["MOON_ROCK"]}
+    },
+    {
+      "name": "Lambolt",
+      "rarity": "Rare",
+      "tierlist": "B",
+      "best_rank": "RS",
+      "relics_by_level": {"10":["WOODMANS_AXE_HEAD"],"20":["EMERALD_SCALES"],"30":["VANQUISHED_SOUL"],"35":["GOGS_COG"]},
+      "relics_optional": {"10":[""],"20":["FORGING_HAMMER"],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Gravitron",
+      "rarity": "Exotic",
+      "tierlist": "C",
+      "best_rank": "S+",
+      "relics_by_level": {"10":["WOODMANS_AXE_HEAD"],"20":["EMERALD_SCALES"],"30":["LOST_SWORDS"],"35":["SAYAMS_TRIDENT"]},
+      "relics_optional": {"10":[""],"20":[""],"30":["VANQUISHED_SOUL"],"35":[""]}
+    },
+    {
+      "name": "Babakku",
+      "rarity": "Epic",
+      "tierlist": null,
+      "best_rank": "RS",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["STONY_SHIELD"],"30":["PEEPSIE_EGGS"],"35":["FLYING_CARPET_FRAGMENT"]},
+      "relics_optional": {"10":[""],"20":[""],"30":["TEMPLE_STONE"],"35":[""]}
+    },
+    {
+      "name": "Smolderfry",
+      "rarity": "Exotic",
+      "tierlist": null,
+      "best_rank": "RS",
+      "relics_by_level": {"10":["WOODMANS_AXE_HEAD"],"20":["EMERALD_SCALES"],"30":["MONASTERY_IDOL"],"35":["GOGS_COG"]},
+      "relics_optional": {"10":[""],"20":[""],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Moondrip",
+      "rarity": "Common",
+      "tierlist": null,
+      "best_rank": "RS",
+      "relics_by_level": {"10":["WOODMANS_AXE_HEAD"],"20":["EMERALD_SCALES"],"30":["VANQUISHED_SOUL"],"35":["GOGS_COG"]},
+      "relics_optional": {"10":[""],"20":[""],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Shroolet",
+      "rarity": "Rare",
+      "tierlist": null,
+      "best_rank": ["RS", "S+"],
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["OBSIDIAN_LAVA"],"30":["CACTUS_FLOWER"],"35":["CAGE_OF_DESPAIR"]},
+      "relics_optional": {"10":[""],"20":[""],"30":["TEMPLE_STONE"],"35":["FLYING_CARPET_FRAGMENT"]}
+    },
+    {
+      "name": "Lumite",
+      "rarity": "Common",
+      "tierlist": null,
+      "best_rank": "S+",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["STONY_SHIELD"],"30":["TEMPLE_STONE"],"35":["FLYING_CARPET_FRAGMENT"]},
+      "relics_optional": {"10":[""],"20":[""],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Voidotron",
+      "rarity": "Legendary",
+      "tierlist": "B",
+      "best_rank": "RS/S+_(Both_work)",
+      "relics_by_level": {"10":["BLESSED_POLLEN"],"20":["STONY_SHIELD"],"30":["MAGICITE_STAFF"],"35":["MOON_ROCK"]},
+      "relics_optional": {"10":["ELEFAUNA_FLOWER"],"20":[""],"30":["MONASTERY_IDOL"],"35":[""]}
+    },
+    {
+      "name": "Niboro",
+      "rarity": "Epic",
+      "tierlist": null,
+      "best_rank": "S+",
+      "relics_by_level": {"10":["CLOUD_CAKE"],"20":["STONY_SHIELD"],"30":["MAGICITE_STAFF"],"35":["SHARD_OF_RUDOLFE"]},
+      "relics_optional": {"10":[""],"20":[""],"30":["TEMPLE_STONE"],"35":[""]}
+    },
+    {
+      "name": "Pinplar",
+      "rarity": "Exotic",
+      "tierlist": null,
+      "best_rank": "S+",
+      "relics_by_level": {"10":["WOODMANS_AXE_HEAD"],"20":["OBSIDIAN_LAVA"],"30":["VANQUISHED_SOUL"],"35":["GOGS_COG"]},
+      "relics_optional": {"10":[""],"20":[""],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Lithos",
+      "rarity": "Exotic",
+      "tierlist": null,
+      "best_rank": "S+",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["STONY_SHIELD"],"30":["MAGICITE_STAFF"],"35":["DARK_WINDS_VENOM"]},
+      "relics_optional": {"10":[""],"20":[""],"30":["TEMPLE_STONE"],"35":["MOON_ROCK","SHARD_OF_RUDOLFE"]}
+    },
+    {
+      "name": "Brainzer",
+      "rarity": "Common",
+      "tierlist": null,
+      "best_rank": "RS",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["OBSIDIAN_LAVA"],"30":["CACTUS_FLOWER"],"35":["FLYING_CARPET_FRAGMENT"]},
+      "relics_optional": {"10":[""],"20":[""],"30":["MYSTIC_MAP"],"35":[""]}
+    },
+    {
+      "name": "Pyrex",
+      "rarity": "Exotic",
+      "tierlist": null,
+      "best_rank": "RS",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["STONY_SHIELD"],"30":["ARROW_OF_LOVE"],"35":["SHARD_OF_RUDOLFE"]},
+      "relics_optional": {"10":[""],"20":[""],"30":["MAGICITE_STAFF"],"35":[""]}
+    },
+    {
+      "name": "Oozie",
+      "rarity": "Rare",
+      "tierlist": null,
+      "best_rank": "RS",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["STONY_SHIELD"],"30":["CACTUS_FLOWER"],"35":["FLYING_CARPET_FRAGMENT"]},
+      "relics_optional": {"10":[""],"20":[""],"30":["TEMPLE_STONE"],"35":[""]}
+    },
+    {
+      "name": "Lunako",
+      "rarity": "Rare",
+      "tierlist": null,
+      "best_rank": "S+",
+      "relics_by_level": {"10":["CLOUD_CAKE"],"20":["STONY_SHIELD"],"30":["MAGICITE_STAFF"],"35":["SHARD_OF_RUDOLFE"]},
+      "relics_optional": {"10":[""],"20":[""],"30":["TEMPLE_STONE"],"35":[""]}
+    },
+    {
+      "name": "Rephily",
+      "rarity": "Rare",
+      "tierlist": "C",
+      "best_rank": "RS",
+      "relics_by_level": {"10":["WOODMANS_AXE_HEAD"],"20":["EMERALD_SCALES"],"30":["VANQUISHED_SOUL"],"35":["GOGS_COG"]},
+      "relics_optional": {"10":[""],"20":[""],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Eluzar",
+      "rarity": "Common",
+      "tierlist": null,
+      "best_rank": "S+",
+      "relics_by_level": {"10":["WOODMANS_AXE_HEAD"],"20":["EMERALD_SCALES"],"30":["VANQUISHED_SOUL"],"35":["GOGS_COG"]},
+      "relics_optional": {"10":[""],"20":[""],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Furiko",
+      "rarity": "Rare",
+      "tierlist": null,
+      "best_rank": "RS",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["STONY_SHIELD"],"30":["TEMPLE_STONE"],"35":["FLYING_CARPET_FRAGMENT"]},
+      "relics_optional": {"10":[""],"20":[""],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Bunplop",
+      "rarity": "Epic",
+      "tierlist": null,
+      "best_rank": "RS",
+      "relics_by_level": {"10":["CLOUD_CAKE"],"20":["SHIP_CAPTAINS_LOG"],"30":["ARROW_OF_LOVE"],"35":["SHARD_OF_RUDOLFE"]},
+      "relics_optional": {"10":["GKS_SLIPPERS"],"20":[""],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Drilune",
+      "rarity": "Common",
+      "tierlist": null,
+      "best_rank": "S+",
+      "relics_by_level": {"10":["CLOUD_CAKE"],"20":["STONY_SHIELD"],"30":["MAGICITE_STAFF"],"35":["FLYING_CARPET_FRAGMENT"]},
+      "relics_optional": {"10":["ELEFAUNA_FLOWER"],"20":[""],"30":["TEMPLE_STONE"],"35":["SHARD_OF_RUDOLFE"]}
+    },
+    {
+      "name": "Flaclay",
+      "rarity": "Common",
+      "tierlist": null,
+      "best_rank": "RS",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["STONY_SHIELD"],"30":["PEEPSIE_EGGS"],"35":["FLYING_CARPET_FRAGMENT"]},
+      "relics_optional": {"10":[""],"20":[""],"30":["TEMPLE_STONE"],"35":[""]}
+    },
+    {
+      "name": "Enex",
+      "rarity": "Common",
+      "tierlist": null,
+      "best_rank": "RS",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["STONY_SHIELD"],"30":["MAGICITE_STAFF"],"35":["FLYING_CARPET_FRAGMENT"]},
+      "relics_optional": {"10":[""],"20":[""],"30":["TEMPLE_STONE"],"35":["SHARD_OF_RUDOLFE"]}
+    },
+    {
+      "name": "Voltombra",
+      "rarity": "Common",
+      "tierlist": null,
+      "best_rank": "RS",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["STONY_SHIELD"],"30":["MAGICITE_STAFF"],"35":["SHARD_OF_RUDOLFE"]},
+      "relics_optional": {"10":[""],"20":[""],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Eclipso",
+      "rarity": "Exotic",
+      "tierlist": "S",
+      "best_rank": "S+",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["STONY_SHIELD"],"30":["MAGICITE_STAFF"],"35":["SHARD_OF_RUDOLFE"]},
+      "relics_optional": {"10":[""],"20":[""],"30":["ARROW_OF_LOVE"],"35":[""]}
+    },
+    {
+      "name": "Osmeron",
+      "rarity": "Rare",
+      "tierlist": null,
+      "best_rank": "S+",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["STONY_SHIELD"],"30":["SHACKLERS_GEM"],"35":["SHARD_OF_RUDOLFE"]},
+      "relics_optional": {"10":[""],"20":[""],"30":["TEMPLE_STONE"],"35":[""]}
+    },
+    {
+      "name": "Mooncrit",
+      "rarity": "Rare",
+      "tierlist": null,
+      "best_rank": "S+",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["OBSIDIAN_LAVA"],"30":["CACTUS_FLOWER"],"35":["CAGE_OF_DESPAIR"]},
+      "relics_optional": {"10":[""],"20":["STONY_SHIELD"],"30":["TEMPLE_STONE"],"35":["FLYING_CARPET_FRAGMENT"]}
+    },
+    {
+      "name": "Beateorite",
+      "rarity": "Legendary",
+      "tierlist": null,
+      "best_rank": "S+",
+      "relics_by_level": {"10":["FROOST_ROOT"],"20":["FORGING_HAMMER"],"30":["GOLD_PIECE_DIE"],"35":["FROZEN_COIN"]},
+      "relics_optional": {"10":["BLESSED_POLLEN","WOODMANS_AXE_HEAD"],"20":[""],"30":["MONASTERY_IDOL","SHACKLERS_GEM"],"35":["MOLTEN_COIN","MOON_ROCK"]}
+    },
+    {
+      "name": "Silkire",
+      "rarity": "Common",
+      "tierlist": null,
+      "best_rank": "RS",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["STONY_SHIELD"],"30":["TEMPLE_STONE"],"35":["FLYING_CARPET_FRAGMENT"]},
+      "relics_optional": {"10":[""],"20":[""],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Zephry",
+      "rarity": "Common",
+      "tierlist": null,
+      "best_rank": "S+",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["STONY_SHIELD"],"30":["TEMPLE_STONE"],"35":["FLYING_CARPET_FRAGMENT"]},
+      "relics_optional": {"10":[""],"20":[""],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Fungask",
+      "rarity": "Common",
+      "tierlist": null,
+      "best_rank": "RS",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["STONY_SHIELD"],"30":["MAGICITE_STAFF"],"35":["SHARD_OF_RUDOLFE"]},
+      "relics_optional": {"10":[""],"20":[""],"30":["TEMPLE_STONE"],"35":[""]}
+    },
+    {
+      "name": "Larbunni",
+      "rarity": "Epic",
+      "tierlist": null,
+      "best_rank": "RS",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["STONY_SHIELD"],"30":["MAGICITE_STAFF"],"35":["SHARD_OF_RUDOLFE"]},
+      "relics_optional": {"10":[""],"20":[""],"30":["TEMPLE_STONE"],"35":[""]}
+    },
+    {
+      "name": "Yuefira",
+      "rarity": "Common",
+      "tierlist": null,
+      "best_rank": "RS",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["STONY_SHIELD"],"30":["MAGICITE_STAFF"],"35":["SHARD_OF_RUDOLFE"]},
+      "relics_optional": {"10":[""],"20":[""],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Mucora",
+      "rarity": "Common",
+      "tierlist": null,
+      "best_rank": "RS",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["STONY_SHIELD"],"30":["SHACKLERS_GEM"],"35":["FLYING_CARPET_FRAGMENT"]},
+      "relics_optional": {"10":[""],"20":[""],"30":["TEMPLE_STONE"],"35":["MOON_ROCK"]}
+    },
+    {
+      "name": "Goo",
+      "rarity": "Common",
+      "tierlist": "B",
+      "best_rank": "RS",
+      "relics_by_level": {"10":["BLESSED_POLLEN"],"20":["BEAN_STALK"],"30":["PEEPSIE_EGGS"],"35":["DARK_WINDS_VENOM"]},
+      "relics_optional": {"10":["ELEFAUNA_FLOWER"],"20":["STONY_SHIELD"],"30":["TEMPLE_STONE","FRACTURED_SHELL"],"35":["FLYING_CARPET_FRAGMENT"]}
+    },
+    {
+      "name": "Avarus",
+      "rarity": "Common",
+      "tierlist": "C",
+      "best_rank": "RS",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["STONY_SHIELD"],"30":["MAGICITE_STAFF"],"35":["SHARD_OF_RUDOLFE"]},
+      "relics_optional": {"10":[""],"20":["SUNFALL_SHORES_BANNER"],"30":["TEMPLE_STONE"],"35":[""]}
+    },
+    {
+      "name": "Beakka",
+      "rarity": "Common",
+      "tierlist": null,
+      "best_rank": "S+",
+      "relics_by_level": {"10":["WOODMANS_AXE_HEAD"],"20":["EMERALD_SCALES"],"30":["VANQUISHED_SOUL"],"35":["GOGS_COG"]},
+      "relics_optional": {"10":[""],"20":[""],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Whispen",
+      "rarity": "Common",
+      "tierlist": null,
+      "best_rank": "S+",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["STONY_SHIELD"],"30":["ARROW_OF_LOVE"],"35":["SHARD_OF_RUDOLFE"]},
+      "relics_optional": {"10":[""],"20":[""],"30":["MAGICITE_STAFF"],"35":[""]}
+    },
+    {
+      "name": "Fickra",
+      "rarity": "Common",
+      "tierlist": null,
+      "best_rank": "S+",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["STONY_SHIELD"],"30":["EVERLASTING_SNOWBALL"],"35":["DARK_WINDS_VENOM"]},
+      "relics_optional": {"10":[""],"20":[""],"30":["TEMPLE_STONE"],"35":["FLYING_CARPET_FRAGMENT"]}
+    },
+    {
+      "name": "Pirate Bludger",
+      "rarity": "Rare",
+      "tierlist": null,
+      "best_rank": "RS",
+      "relics_by_level": {"10":["WOODMANS_AXE_HEAD"],"20":["EMERALD_SCALES"],"30":["VANQUISHED_SOUL"],"35":["GOGS_COG"]},
+      "relics_optional": {"10":[""],"20":[""],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Lutox",
+      "rarity": "Rare",
+      "tierlist": null,
+      "best_rank": "RS/S+_(S+_Better)",
+      "relics_by_level": {"10":["BLESSED_POLLEN"],"20":["OBSIDIAN_LAVA"],"30":["GOLD_PIECE_DIE"],"35":["CAGE_OF_DESPAIR"]},
+      "relics_optional": {"10":[""],"20":[""],"30":[""],"35":["SCENT_OF_SKUSTUNK"]}
+    },
+    {
+      "name": "Deetlee",
+      "rarity": "Rare",
+      "tierlist": null,
+      "best_rank": "RS",
+      "relics_by_level": {"10":["WOODMANS_AXE_HEAD"],"20":["EMERALD_SCALES"],"30":["FRACTURED_SHELL"],"35":["DARK_WINDS_VENOM"]},
+      "relics_optional": {"10":["FROOST_ROOT"],"20":["BEAN_STALK"],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Ampupine",
+      "rarity": "Rare",
+      "tierlist": null,
+      "best_rank": "RS",
+      "relics_by_level": {"10":["WOODMANS_AXE_HEAD"],"20":["OBSIDIAN_LAVA"],"30":["CACTUS_FLOWER"],"35":["CAGE_OF_DESPAIR"]},
+      "relics_optional": {"10":[""],"20":[""],"30":["PALMDAS_TALON"],"35":["GOGS_COG"]}
+    },
+    {
+      "name": "Hekatom",
+      "rarity": "Epic",
+      "tierlist": null,
+      "best_rank": "S+",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["STONY_SHIELD"],"30":["PEEPSIE_EGGS"],"35":["DARK_WINDS_VENOM"]},
+      "relics_optional": {"10":[""],"20":[""],"30":["TEMPLE_STONE"],"35":["FLYING_CARPET_FRAGMENT"]}
+    },
+    {
+      "name": "Scarecrow Charix",
+      "rarity": "Epic",
+      "tierlist": null,
+      "best_rank": "S+",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["STONY_SHIELD"],"30":["MAGICITE_STAFF"],"35":["FLYING_CARPET_FRAGMENT"]},
+      "relics_optional": {"10":[""],"20":[""],"30":["TEMPLE_STONE"],"35":["SHARD_OF_RUDOLFE"]}
+    },
+    {
+      "name": "Vamp Skustunk",
+      "rarity": "Epic",
+      "tierlist": null,
+      "best_rank": "RS",
+      "relics_by_level": {"10":["WOODMANS_AXE_HEAD"],"20":["EMERALD_SCALES"],"30":["VANQUISHED_SOUL"],"35":["GOGS_COG"]},
+      "relics_optional": {"10":[""],"20":[""],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Grimm Kiloray",
+      "rarity": "Epic",
+      "tierlist": null,
+      "best_rank": "RS",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["STONY_SHIELD"],"30":["TEMPLE_STONE"],"35":["FLYING_CARPET_FRAGMENT"]},
+      "relics_optional": {"10":[""],"20":[""],"30":[""],"35":["MOON_ROCK"]}
+    },
+    {
+      "name": "Rocker Octavio",
+      "rarity": "Exotic",
+      "tierlist": null,
+      "best_rank": "S+",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["OBSIDIAN_LAVA"],"30":["CACTUS_FLOWER"],"35":["FLYING_CARPET_FRAGMENT"]},
+      "relics_optional": {"10":[""],"20":[""],"30":["TEMPLE_STONE"],"35":[""]}
+    },
+    {
+      "name": "Boo Blazertooth",
+      "rarity": "Exotic",
+      "tierlist": null,
+      "best_rank": "S+",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["STONY_SHIELD"],"30":["PEEPSIE_EGGS"],"35":["FLYING_CARPET_FRAGMENT"]},
+      "relics_optional": {"10":[""],"20":[""],"30":["TEMPLE_STONE"],"35":[""]}
+    },
+    {
+      "name": "Geneseed",
+      "rarity": "Legendary",
+      "tierlist": "S",
+      "best_rank": "S+",
+      "relics_by_level": {"10":["BLESSED_POLLEN"],"20":["STONY_SHIELD"],"30":["SHACKLERS_GEM"],"35":["MOON_ROCK"]},
+      "relics_optional": {"10":["ELEFAUNA_FLOWER"],"20":["OBSIDIAN_LAVA","SHORES_BANNER"],"30":["MAGICITE_STAFF","TEMPLE_STONE"],"35":[""]}
+    },
+    {
+      "name": "Sora",
+      "rarity": "Common",
+      "tierlist": null,
+      "best_rank": "S+",
+      "relics_by_level": {"10":["WOODMANS_AXE_HEAD"],"20":["MONKS_BANNER"],"30":["VANQUISHED_SOUL"],"35":["GOGS_COG"]},
+      "relics_optional": {"10":[""],"20":[""],"30":[""],"35":["MOON_ROCK"]}
+    },
+    {
+      "name": "Dark Sparkslug",
+      "rarity": "Rare",
+      "tierlist": null,
+      "best_rank": "S+",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["STONY_SHIELD"],"30":["PEEPSIE_EGGS"],"35":["FLYING_CARPET_FRAGMENT"]},
+      "relics_optional": {"10":[""],"20":[""],"30":["TEMPLE_STONE"],"35":["MOON_ROCK"]}
+    },
+    {
+      "name": "Phoboros",
+      "rarity": "Epic",
+      "tierlist": "A",
+      "best_rank": "S+",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["SUNFALL_SHORES_BANNER"],"30":["MAGICITE_STAFF"],"35":["SHARD_OF_RUDOLFE"]},
+      "relics_optional": {"10":[""],"20":["STONY_SHIELD"],"30":["TEMPLE_STONE"],"35":[""]}
+    },
+    {
+      "name": "Lagoony",
+      "rarity": "Exotic",
+      "tierlist": null,
+      "best_rank": "S+",
+      "relics_by_level": {"10":["CLOUD_CAKE"],"20":["SHIP_CAPTAINS_LOG"],"30":["ARROW_OF_LOVE"],"35":["SHARD_OF_RUDOLFE"]},
+      "relics_optional": {"10":["GKS_SLIPPERS","ELEFAUNA_FLOWER"],"20":["HELZBELZ_BELLS"],"30":["MAGICITE_STAFF"],"35":[""]}
+    },
+    {
+      "name": "Poppet",
+      "rarity": "Common",
+      "tierlist": null,
+      "best_rank": "RS",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["OBSIDIAN_LAVA"],"30":["SHACKLERS_GEM"],"35":["FLYING_CARPET_FRAGMENT"]},
+      "relics_optional": {"10":[""],"20":["STONY_SHIELD"],"30":["TEMPLE_STONE"],"35":["MOON_ROCK"]}
+    },
+    {
+      "name": "Nubyll",
+      "rarity": "Rare",
+      "tierlist": "B",
+      "best_rank": "S+",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["STONY_SHIELD"],"30":["ARROW_OF_LOVE"],"35":["SHARD_OF_RUDOLFE"]},
+      "relics_optional": {"10":[""],"20":[""],"30":["MAGICITE_STAFF"],"35":[""]}
+    },
+    {
+      "name": "Elphin",
+      "rarity": "Epic",
+      "tierlist": null,
+      "best_rank": "RS",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["STONY_SHIELD"],"30":["TEMPLE_STONE"],"35":["CAGE_OF_DESPAIR"]},
+      "relics_optional": {"10":[""],"20":[""],"30":[""],"35":["FLYING_CARPET_FRAGMENT"]}
+    },
+    {
+      "name": "Luvcraft",
+      "rarity": "Exotic",
+      "tierlist": "C",
+      "best_rank": "RS",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["STONY_SHIELD"],"30":["ARROW_OF_LOVE"],"35":["SHARD_OF_RUDOLFE"]},
+      "relics_optional": {"10":[""],"20":[""],"30":["MAGICITE_STAFF"],"35":[""]}
+    },
+    {
+      "name": "Damse",
+      "rarity": "Exotic",
+      "tierlist": "S",
+      "best_rank": "RS",
+      "relics_by_level": {"10":["WOODMANS_AXE_HEAD"],"20":["FORGING_HAMMER"],"30":["VANQUISHED_SOUL"],"35":["MOLTEN_COIN"]},
+      "relics_optional": {"10":[""],"20":[""],"30":["SHACKLERS_GEM"],"35":["MOON_ROCK"]}
+    },
+    {
+      "name": "Beldame",
+      "rarity": "Legendary",
+      "tierlist": "A",
+      "best_rank": "RS",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["STONY_SHIELD"],"30":["PEEPSIE_EGGS"],"35":["SHARD_OF_RUDOLFE"]},
+      "relics_optional": {"10":[""],"20":[""],"30":["MAGICITE_STAFF"],"35":["MOON_ROCK"]}
+    },
+    {
+      "name": "Blowpuffle",
+      "rarity": "Common",
+      "tierlist": null,
+      "best_rank": "RS",
+      "relics_by_level": {"10":[""],"20":[""],"30":[""],"35":[""]},
+      "relics_optional": {"10":[""],"20":[""],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Squawcat",
+      "rarity": "Rare",
+      "tierlist": "B",
+      "best_rank": ["RS", "S+"],
+      "relics_by_level": {"10":[""],"20":[""],"30":[""],"35":[""]},
+      "relics_optional": {"10":[""],"20":[""],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Dark Weevern",
+      "rarity": "Rare",
+      "tierlist": "A",
+      "best_rank": "S+",
+      "relics_by_level": {"10":["GKS_SLIPPERS"],"20":["SHIP_CAPTAINS_LOG"],"30":["ARROW_OF_LOVE"],"35":["SHARD_OF_RUDOLFE"]},
+      "relics_optional": {"10":[""],"20":["HELZBELZ_BELLS"],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Pangoleaf",
+      "rarity": "Epic",
+      "tierlist": "A",
+      "best_rank": "RS",
+      "relics_by_level": {"10":["WOODMANS_AXE_HEAD"],"20":["EMERALD_SCALES"],"30":["PAPAS_ANTLERS"],"35":["SCENT_OF_SKUSTUNK"]},
+      "relics_optional": {"10":["BLESSED_POLLEN"],"20":["MONKS_BANNER"],"30":["VANQUISHED_SOUL"],"35":["CAGE_OF_DESPAIR"]}
+    },
+    {
+      "name": "Foil Pamboo",
+      "rarity": "Exotic",
+      "tierlist": "C",
+      "best_rank": "RS",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["OBSIDIAN_LAVA"],"30":["CACTUS_FLOWER"],"35":["FLYING_CARPET_FRAGMENT"]},
+      "relics_optional": {"10":["BLESSED_POLLEN"],"20":["SUNFALL_SHORES_BANNER","STONY_SHIELD"],"30":["TEMPLE_STONE"],"35":[""]}
+    },
+    {
+      "name": "Gippo",
+      "rarity": "Common",
+      "tierlist": "C",
+      "best_rank": "S+",
+      "relics_by_level": {"10":[""],"20":[""],"30":[""],"35":[""]},
+      "relics_optional": {"10":[""],"20":[""],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Hoghedge",
+      "rarity": "Common",
+      "tierlist": "C",
+      "best_rank": "RS",
+      "relics_by_level": {"10":[""],"20":[""],"30":[""],"35":[""]},
+      "relics_optional": {"10":[""],"20":[""],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Shroomer",
+      "rarity": "Common",
+      "tierlist": null,
+      "best_rank": "RS",
+      "relics_by_level": {"10":[""],"20":[""],"30":[""],"35":[""]},
+      "relics_optional": {"10":[""],"20":[""],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Daloo",
+      "rarity": "Common",
+      "tierlist": "C",
+      "best_rank": "RS",
+      "relics_by_level": {"10":[""],"20":[""],"30":[""],"35":[""]},
+      "relics_optional": {"10":[""],"20":[""],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Dark Whik",
+      "rarity": "Rare",
+      "tierlist": "A",
+      "best_rank": "S+",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["SUNFALL_SHORES_BANNER"],"30":["MAGICITE_STAFF"],"35":["SHARD_OF_RUDOLFE"]},
+      "relics_optional": {"10":[""],"20":["SHIP_CAPTAINS_LOG"],"30":["PEEPSIE_EGGS"],"35":[""]}
+    },
+    {
+      "name": "Bloombat",
+      "rarity": "Rare",
+      "tierlist": "B",
+      "best_rank": "RS",
+      "relics_by_level": {"10":[""],"20":[""],"30":[""],"35":[""]},
+      "relics_optional": {"10":[""],"20":[""],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Nyma",
+      "rarity": "Epic",
+      "tierlist": "B",
+      "best_rank": "S+",
+      "relics_by_level": {"10":[""],"20":[""],"30":[""],"35":[""]},
+      "relics_optional": {"10":[""],"20":[""],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Kitpole",
+      "rarity": "Exotic",
+      "tierlist": "B",
+      "best_rank": "RS/S+ (RS Better)",
+      "relics_by_level": {"10":["FROOST_ROOT"],"20":["STONY_SHIELD"],"30":["PEEPSIE_EGGS"],"35":["FLYING_CARPET_FRAGMENT"]},
+      "relics_optional": {"10":[""],"20":[""],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Magpole",
+      "rarity": "Common",
+      "tierlist": null,
+      "best_rank": "S+",
+      "relics_by_level": {"10":[""],"20":[""],"30":[""],"35":[""]},
+      "relics_optional": {"10":[""],"20":[""],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Beetor",
+      "rarity": "Common",
+      "tierlist": null,
+      "best_rank": "RS/S+_(Both_work)",
+      "relics_by_level": {"10":[""],"20":[""],"30":[""],"35":[""]},
+      "relics_optional": {"10":[""],"20":[""],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Liquifien",
+      "rarity": "Rare",
+      "tierlist": "A",
+      "best_rank": "S+",
+      "relics_by_level": {"10":["BLESSED_POLLEN"],"20":["SUNFALL_SHORES_BANNER"],"30":["PEEPSIE_EGGS"],"35":["FLYING_CARPET_FRAGMENT"]},
+      "relics_optional": {"10":[""],"20":["OBSIDIAN_LAVA"],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Glary",
+      "rarity": "Epic",
+      "tierlist": "C",
+      "best_rank": "RS",
+      "relics_by_level": {"10":[""],"20":[""],"30":[""],"35":[""]},
+      "relics_optional": {"10":[""],"20":[""],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Foil Liquifien",
+      "rarity": "Exotic",
+      "tierlist": "A",
+      "best_rank": "S+",
+      "relics_by_level": {"10":["ELEFAUNA_FLOWER"],"20":["STONY_SHIELD"],"30":["MAGICITE_STAFF"],"35":["SHARD_OF_RUDOLFE"]},
+      "relics_optional": {"10":[""],"20":["SUNFALL_SHORES_BANNER"],"30":["PEEPSIE_EGGS"],"35":[""]}
+    },
+    {
+      "name": "Pachydo",
+      "rarity": "Common",
+      "tierlist": "C",
+      "best_rank": "RS",
+      "relics_by_level": {"10":[""],"20":[""],"30":[""],"35":[""]},
+      "relics_optional": {"10":[""],"20":[""],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Gurgleplops",
+      "rarity": "Common",
+      "tierlist": null,
+      "best_rank": "RS",
+      "relics_by_level": {"10":[""],"20":[""],"30":[""],"35":[""]},
+      "relics_optional": {"10":[""],"20":[""],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Budillo",
+      "rarity": "Common",
+      "tierlist": "C",
+      "best_rank": "RS",
+      "relics_by_level": {"10":["BLESSED_POLLEN"],"20":["OBSIDIAN_LAVA"],"30":["PEEPSIE_EGGS"],"35":["PETRIFIED_MAMA_BABY"]},
+      "relics_optional": {"10":["ELEFAUNA_FLOWER"],"20":["BEAN_STALK"],"30":["CACTUS_FLOWER"],"35":["FLYING_CARPET_FRAGMENT"]}
+    },
+    {
+      "name": "Pithapillar",
+      "rarity": "Common",
+      "tierlist": "C",
+      "best_rank": "RS",
+      "relics_by_level": {"10":[""],"20":[""],"30":[""],"35":[""]},
+      "relics_optional": {"10":[""],"20":[""],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Dark Bubbles",
+      "rarity": "Rare",
+      "tierlist": "C",
+      "best_rank": "RS",
+      "relics_by_level": {"10":[""],"20":[""],"30":[""],"35":[""]},
+      "relics_optional": {"10":[""],"20":[""],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Pyras",
+      "rarity": "Epic",
+      "tierlist": null,
+      "best_rank": "S+",
+      "relics_by_level": {"10":[""],"20":[""],"30":[""],"35":[""]},
+      "relics_optional": {"10":[""],"20":[""],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Foil Rockodile",
+      "rarity": "Exotic",
+      "tierlist": null,
+      "best_rank": "RS",
+      "relics_by_level": {"10":[""],"20":[""],"30":[""],"35":[""]},
+      "relics_optional": {"10":[""],"20":[""],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Bunaken",
+      "rarity": "Legendary",
+      "tierlist": "B",
+      "best_rank": "S+",
+      "relics_by_level": {"10":["SKELEPUPS_SPARK"],"20":["HELZBELZ_BELLS"],"30":["ARROW_OF_LOVE"],"35":["SHARD_OF_RUDOLFE"]},
+      "relics_optional": {"10":[""],"20":["SHIP_CAPTAINS_LOG"],"30":[""],"35":[""]}
+    },
+    {
+      "name": "Viper",
+      "rarity": "Common",
+      "tierlist": null,
+      "best_rank": "RS",
+      "relics_by_level": {"10":[""],"20":[""],"30":[""],"35":[""]},
+      "relics_optional": {"10":[""],"20":[""],"30":[""],"35":[""]}
+    }
+  ]
+}
