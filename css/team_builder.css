@@ -1199,6 +1199,51 @@
 .cfMeta--na{
   opacity:.6;
 }
+.tbImgCheck {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  color: rgba(255,255,255,0.85);
+  user-select: none;
+  transition: color .2s ease;
+}
+
+.tbImgCheck:hover {
+  color: #49e1fc;
+}
+
+.tbImgCheck input[type="checkbox"] {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 6px;
+  border: 1px solid rgba(255,255,255,0.25);
+  background: rgba(255,255,255,0.05);
+  position: relative;
+  cursor: pointer;
+  transition: all .2s ease;
+}
+
+.tbImgCheck input[type="checkbox"]:checked {
+  background: linear-gradient(135deg, #49e1fc, #1ba9ff);
+  border-color: #49e1fc;
+  box-shadow: 0 0 8px rgba(73,225,252,0.4);
+}
+
+.tbImgCheck input[type="checkbox"]:checked::after {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 6px;
+  width: 4px;
+  height: 8px;
+  border: solid #000;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
 
 /* =========================
    RESPONSIVE

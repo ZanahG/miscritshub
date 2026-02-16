@@ -656,6 +656,7 @@ const IMG_DEFAULT = {
   bgUrl: "",
   showTags: true,
   showRelics: true,
+  showGraphic: true,
 };
 
 let IMG_CFG = { ...IMG_DEFAULT };
@@ -939,14 +940,36 @@ async function renderImgPreview() {
         const cy = startY + k * step;
 
         ctx.save();
+        ctx.shadowColor = "rgba(0,0,0,0.55)";
+        ctx.shadowBlur = 16;
+        ctx.shadowOffsetY = 6;
+        ctx.beginPath();
+        ctx.arc(cx, cy, r + 2, 0, Math.PI * 2);
+        ctx.fillStyle = "rgba(0,0,0,0.28)";
+        ctx.fill();
+        ctx.closePath();
+        ctx.shadowColor = "transparent";
+        ctx.shadowBlur = 0;
+        ctx.shadowOffsetY = 0;
         ctx.beginPath();
         ctx.arc(cx, cy, r, 0, Math.PI * 2);
-        ctx.closePath();
         ctx.clip();
-
         const rim = relicImgs[k];
         if (rim) ctx.drawImage(rim, cx - r, cy - r, r * 2, r * 2);
         ctx.restore();
+        ctx.save();
+        ctx.beginPath();
+        ctx.arc(cx, cy, r + 0.5, 0, Math.PI * 2);
+        ctx.strokeStyle = "rgba(255,255,255,0.38)";
+        ctx.lineWidth = 3;
+        ctx.stroke();
+        ctx.beginPath();
+        ctx.arc(cx, cy, r - 1, 0, Math.PI * 2);
+        ctx.strokeStyle = "rgba(96,165,250,0.22)";
+        ctx.lineWidth = 2;
+        ctx.stroke();
+        ctx.restore();
+
       }
     }
   }
@@ -954,33 +977,35 @@ async function renderImgPreview() {
   // =========================
   // Radar
   // =========================
-  const teamAvg = avgTeamStats(state.slots);
+  if (IMG_CFG.showGraphic) {
+    const teamAvg = avgTeamStats(state.slots);
 
-  const values01 = STAT_KEYS.map((k) => {
-    const cap = toNum(RADAR_CAPS[k]) || 1;
-    const v = toNum(teamAvg[k]);
-    return Math.max(0, Math.min(1, v / cap));
-  });
+    const values01 = STAT_KEYS.map((k) => {
+      const cap = toNum(RADAR_CAPS[k]) || 1;
+      const v = toNum(teamAvg[k]);
+      return Math.max(0, Math.min(1, v / cap));
+    });
 
-  ctx.save();
-  ctx.lineWidth = 2;
-  ctx.strokeStyle = "rgb(255, 255, 255)";
-  ctx.fillStyle   = "rgba(0, 255, 242, 0.38)";
-  ctx.font = "900 14px system-ui, -apple-system, Segoe UI, Roboto, Arial";
-  ctx.textAlign = "center";
-  ctx.textBaseline = "middle";
+    ctx.save();
+    ctx.lineWidth = 2;
+    ctx.strokeStyle = "rgb(255, 255, 255)";
+    ctx.fillStyle   = "rgba(0, 255, 242, 0.38)";
+    ctx.font = "900 14px system-ui, -apple-system, Segoe UI, Roboto, Arial";
+    ctx.textAlign = "center";
+    ctx.textBaseline = "middle";
 
-  const radarX = 1400;
-  const radarY = 160;
-  const radarR = 105;
+    const radarX = 1400;
+    const radarY = 160;
+    const radarR = 105;
 
-  drawRadar(ctx, radarX, radarY, radarR, STAT_KEYS, values01, teamAvg, RADAR_CAPS);
-  ctx.restore();
+    drawRadar(ctx, radarX, radarY, radarR, STAT_KEYS, values01, teamAvg, RADAR_CAPS);
+    ctx.restore();
 
-  ctx.save();
-  ctx.fillStyle = "rgba(255,255,255,0.85)";
-  ctx.font = "800 18px system-ui, -apple-system, Segoe UI, Roboto, Arial";
-  ctx.restore();
+    ctx.save();
+    ctx.fillStyle = "rgba(255,255,255,0.85)";
+    ctx.font = "800 18px system-ui, -apple-system, Segoe UI, Roboto, Arial";
+    ctx.restore();
+  }
 
 }
 
@@ -1034,6 +1059,16 @@ function openImgModal() {
 
   const tTags = document.getElementById("tbImgShowTags");
   const tRelics = document.getElementById("tbImgShowRelics");
+  const tGraphic = document.getElementById("tbImgShowGraphic");
+
+  if (tGraphic) {
+    tGraphic.checked = !!IMG_CFG.showGraphic;
+    tGraphic.onchange = () => {
+      IMG_CFG.showGraphic = !!tGraphic.checked;
+      saveImgCfg();
+      renderImgPreview();
+    };
+  }
   if (tTags) {
     tTags.checked = !!IMG_CFG.showTags;
     tTags.onchange = () => {
@@ -1076,6 +1111,8 @@ function openImgModal() {
     if (tags) tags.checked = true;
     const rel = document.getElementById("tbImgShowRelics");
     if (rel) rel.checked = true;
+    const graphic = document.getElementById("tbImgShowGraphic");
+    if (graphic) graphic.checked = true;
     renderImgPreview();
     showToast("Export settings reset.");
   };
