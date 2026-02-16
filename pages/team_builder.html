@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="../css/team_builder.css" />
 
   <script defer src="../js/navbar.js"></script>
+  <script defer src="../js/element_chart.js"></script>
   <script type="module" src="../js/teambuilder.js"></script>
 </head>
 
@@ -69,39 +70,53 @@
           <button class="btn" id="tbExportTeamBtn" type="button">Export team</button>
           <button class="btn" id="tbClearBtn" type="button">Clear team</button>
           <button class="btn" id="tbShareBtn" type="button">Copy share link</button>
+          <button class="btn" id="btnFindCounters" type="button">Find Meta Counters</button>
         </div>
       </div>
     </section>
 
-    <!-- LAYOUT -->
-    <section class="tbGrid">
-      <!-- TEAM CANVAS -->
-      <section class="tbCanvas card" aria-label="Team canvas">
-        <div class="tbCanvas__head">
-          <div class="tbCanvas__title">Your Team</div>
-          <div class="tbCanvas__meta">
-            <span class="badge" id="tbCountBadge">0/4</span>
-            <span class="dot"></span>
-            <span class="muted" id="tbHint">Pick a slot to start</span>
-          </div>
-        </div>
-
-        <div class="tbStage" id="tbStage" data-bg="arena">
-          <div class="tbStage__overlay" aria-hidden="true"></div>
-
-          <div class="tbSlots" id="tbSlots" aria-label="Team slots">
-          </div>
-
-          <div class="tbStage__foot">
-            <div class="tbStage__left">
-              <span class="muted">Export looks like this.</span>
-            </div>
-            <div class="tbStage__right">
-              <button class="btn" id="tbExportBtn" type="button">Export image</button>
+    <!-- 2-COLUMN LAYOUT: TEAM (LEFT) + COUNTERS (RIGHT) -->
+    <section class="tbLayout">
+      <!-- LEFT COLUMN -->
+      <section class="tbMain">
+        <!-- TEAM CANVAS -->
+        <section class="tbCanvas card" aria-label="Team canvas">
+          <div class="tbCanvas__head">
+            <div class="tbCanvas__title">Your Team</div>
+            <div class="tbCanvas__meta">
+              <span class="badge" id="tbCountBadge">0/4</span>
+              <span class="dot"></span>
+              <span class="muted" id="tbHint">Pick a slot to start</span>
             </div>
           </div>
-        </div>
+
+          <div class="tbStage" id="tbStage" data-bg="arena">
+            <div class="tbStage__overlay" aria-hidden="true"></div>
+
+            <div class="tbSlots" id="tbSlots" aria-label="Team slots"></div>
+
+            <div class="tbStage__foot">
+              <div class="tbStage__left">
+                <span class="muted">Export looks like this.</span>
+              </div>
+              <div class="tbStage__right">
+                <button class="btn" id="tbExportBtn" type="button">Export image</button>
+              </div>
+            </div>
+          </div>
+        </section>
       </section>
+
+      <!-- RIGHT COLUMN (DOCKED PANEL) -->
+      <aside id="countersPanel" class="tbSide card" hidden aria-label="Counters panel">
+        <div class="tbPanel__head">
+          <h3>Counters</h3>
+          <button id="btnCloseCounters" class="btnIcon" type="button" aria-label="Close counters">✕</button>
+        </div>
+
+        <div id="countersMetaRisk" class="tbPanel__box"></div>
+        <div id="countersTopList" class="tbPanel__grid"></div>
+      </aside>
     </section>
   </main>
 
@@ -128,13 +143,10 @@
           <option value="Wind">Wind</option>
           <option value="Earth">Earth</option>
           <option value="Lightning">Lightning</option>
-          <option value="Physical">Physical</option>
-          <option value="Misc">Misc</option>
         </select>
         <select class="tbSelect" id="tbFilterRarity">
           <option value="">All rarities</option>
           <option value="common">Common</option>
-          <option value="uncommon">Uncommon</option>
           <option value="rare">Rare</option>
           <option value="epic">Epic</option>
           <option value="exotic">Exotic</option>
@@ -142,8 +154,7 @@
         </select>
       </div>
 
-      <div class="tbModal__list" id="tbList" aria-label="Miscrit results">
-      </div>
+      <div class="tbModal__list" id="tbList" aria-label="Miscrit results"></div>
 
       <div class="tbModal__foot">
         <div class="muted" id="tbResultsCount">0 results</div>
@@ -232,7 +243,6 @@
                 <span class="brPlus">+</span>
                 <span class="brLvl">35</span>
               </button>
-
             </div>
           </section>
 
@@ -295,7 +305,6 @@
           <input id="tbImgTeamName" class="tbInput" placeholder="e.g., Anti-Bleed Comp" />
 
           <div style="margin-top:10px; display:grid; gap:8px;">
-
             <label class="tbToggle">
               <input id="tbImgShowRelics" type="checkbox" checked />
               <span>Show relics</span>
@@ -360,5 +369,59 @@
       </div>
     </div>
   </div>
+
+  <!-- Counter Finder Disclaimer Modal -->
+  <div id="cfDisclaimer" class="cfModal" hidden aria-hidden="true">
+    <div class="cfModal__backdrop" data-cf-close></div>
+
+    <div class="cfModal__panel" role="dialog" aria-modal="true" aria-labelledby="cfTitle">
+      <div class="cfModal__head">
+        <div>
+          <div id="cfTitle" class="cfModal__title">Counter Finder — Disclaimer</div>
+          <div class="cfModal__sub">Read before continuing</div>
+        </div>
+        <button type="button" class="cfModal__x" data-cf-close aria-label="Close">✕</button>
+      </div>
+
+      <div class="cfModal__body">
+        <p>
+          This tool provides a <b>fast heuristic</b> based on <b>estimated damage</b> at <b>level 35</b>. It is
+          <b>not</b> a full battle simulator.
+        </p>
+
+        <p><b>What it uses</b></p>
+        <ul>
+          <li><b>Your team</b>: includes your selected colors, bonus points, and equipped relics (level 35 totals).</li>
+          <li><b>Candidates</b>: evaluated with <b>default</b> assumptions (all-green, no bonus points, no relics).</li>
+          <li><b>Damage model</b>: AP × hits, scaled by (PA vs PD) or (EA vs ED), plus elemental multiplier (if available).</li>
+        </ul>
+
+        <p><b>How the score works</b></p>
+        <ul>
+          <li><b>Offense (65%)</b>: how much %HP the candidate can remove from your team.</li>
+          <li><b>Defense (35%)</b>: how well the candidate survives your team’s best hits.</li>
+          <li>Percentages shown are <b>relative</b> to the top result (not a real win probability).</li>
+        </ul>
+
+        <p><b>What it does NOT simulate</b></p>
+        <ul>
+          <li>Speed/turn order, first strike, swaps, setups</li>
+          <li>Status effects, buffs/debuffs, crits</li>
+          <li>Fixed/true damage and special move rules</li>
+        </ul>
+
+        <label class="cfModal__remember">
+          <input id="cfRemember" type="checkbox" />
+          Don’t show this again
+        </label>
+      </div>
+
+      <div class="cfModal__foot">
+        <button type="button" class="cfBtn cfBtn--ghost" data-cf-close>Cancel</button>
+        <button type="button" class="cfBtn cfBtn--accent" id="cfContinue">Continue</button>
+      </div>
+    </div>
+  </div>
+
 </body>
 </html>

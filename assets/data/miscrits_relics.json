@@ -1985,7 +1985,7 @@
       "name": "Voidotron",
       "rarity": "Legendary",
       "tierlist": "B",
-      "best_rank": "RS/S+_(Both_work)",
+      "best_rank": ["RS", "S+"],
       "relics_by_level": {"10":["BLESSED_POLLEN"],"20":["STONY_SHIELD"],"30":["MAGICITE_STAFF"],"35":["MOON_ROCK"]},
       "relics_optional": {"10":["ELEFAUNA_FLOWER"],"20":[""],"30":["MONASTERY_IDOL"],"35":[""]}
     },
@@ -2398,6 +2398,14 @@
       "relics_optional": {"10":[""],"20":[""],"30":["MAGICITE_STAFF"],"35":["MOON_ROCK"]}
     },
     {
+      "name": "Viper",
+      "rarity": "Common",
+      "tierlist": null,
+      "best_rank": "RS",
+      "relics_by_level": {"10":[""],"20":[""],"30":[""],"35":[""]},
+      "relics_optional": {"10":[""],"20":[""],"30":[""],"35":[""]}
+    },
+    {
       "name": "Blowpuffle",
       "rarity": "Common",
       "tierlist": null,
@@ -2513,7 +2521,7 @@
       "name": "Beetor",
       "rarity": "Common",
       "tierlist": null,
-      "best_rank": "RS/S+_(Both_work)",
+      "best_rank": ["RS", "S+"],
       "relics_by_level": {"10":[""],"20":[""],"30":[""],"35":[""]},
       "relics_optional": {"10":[""],"20":[""],"30":[""],"35":[""]}
     },
@@ -2604,14 +2612,6 @@
       "best_rank": "S+",
       "relics_by_level": {"10":["SKELEPUPS_SPARK"],"20":["HELZBELZ_BELLS"],"30":["ARROW_OF_LOVE"],"35":["SHARD_OF_RUDOLFE"]},
       "relics_optional": {"10":[""],"20":["SHIP_CAPTAINS_LOG"],"30":[""],"35":[""]}
-    },
-    {
-      "name": "Viper",
-      "rarity": "Common",
-      "tierlist": null,
-      "best_rank": "RS",
-      "relics_by_level": {"10":[""],"20":[""],"30":[""],"35":[""]},
-      "relics_optional": {"10":[""],"20":[""],"30":[""],"35":[""]}
     }
   ]
 }

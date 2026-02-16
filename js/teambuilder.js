@@ -5,7 +5,7 @@ const $ = (sel) => document.querySelector(sel);
 const PATH = {
   DB: "../assets/data/miscritsdb.json",
   BASE_STATS: "../assets/data/base_stats.json",
-  META: "../assets/data/miscrits_meta.json",
+  META: "../assets/data/miscrits_relics.json",
   RELICS: "../assets/data/relics.json",
 
   AVATAR_FOLDER: "../assets/images/miscrits_avatar/",
@@ -81,9 +81,533 @@ let BR_SLOT_INDEX = null;
 let BR_DRAFT_COLORS = null;
 let BR_DRAFT_RELICS = null;
 
+/* =========================================================
+   Counter Finder
+========================================================= */
+
+const COUNTER_UI = {
+  BTN_ID: "btnFindCounters",
+  PANEL_ID: "countersPanel",
+  OUT_META: "countersMetaRisk",
+  OUT_LIST: "countersTopList",
+  OUT_RELIC: "countersRelicAdvice",
+  CLOSE_BTN: "btnCloseCounters",
+};
+
+const CF_DISCLAIMER_KEY = "miscrits_cf_disclaimer_v1";
+
+function openCounterDisclaimer() {
+  const modal = document.getElementById("cfDisclaimer");
+  if (!modal) return Promise.resolve(true);
+
+  // if user opted out, skip
+  const skip = localStorage.getItem(CF_DISCLAIMER_KEY) === "1";
+  if (skip) return Promise.resolve(true);
+
+  modal.hidden = false;
+  modal.setAttribute("aria-hidden", "false");
+
+  const remember = document.getElementById("cfRemember");
+  if (remember) remember.checked = false;
+
+  return new Promise((resolve) => {
+    const cleanup = () => {
+      modal.hidden = true;
+      modal.setAttribute("aria-hidden", "true");
+      modal.querySelectorAll("[data-cf-close]").forEach((x) =>
+        x.removeEventListener("click", onCancel)
+      );
+      document.getElementById("cfContinue")?.removeEventListener("click", onContinue);
+      document.removeEventListener("keydown", onKey);
+    };
+
+    const onCancel = () => { cleanup(); resolve(false); };
+
+    const onContinue = () => {
+      if (remember?.checked) localStorage.setItem(CF_DISCLAIMER_KEY, "1");
+      cleanup();
+      resolve(true);
+    };
+
+    const onKey = (e) => {
+      if (e.key === "Escape") onCancel();
+    };
+
+    modal.querySelectorAll("[data-cf-close]").forEach((x) => x.addEventListener("click", onCancel));
+    document.getElementById("cfContinue")?.addEventListener("click", onContinue);
+    document.addEventListener("keydown", onKey);
+  });
+}
+
+function ensureCountersUI() {
+  const btn = document.getElementById(COUNTER_UI.BTN_ID);
+  const panel = document.getElementById(COUNTER_UI.PANEL_ID);
+
+  if (!btn) {
+    console.warn("[Counter Finder] Missing button #btnFindCounters");
+    return;
+  }
+  if (!panel) {
+    console.warn("[Counter Finder] Missing panel #countersPanel");
+    return;
+  }
+
+  document.getElementById(COUNTER_UI.CLOSE_BTN)?.addEventListener("click", closeCountersPanel);
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key !== "Escape") return;
+    const p = document.getElementById(COUNTER_UI.PANEL_ID);
+    if (p && !p.hidden) closeCountersPanel();
+  });
+
+  btn.addEventListener("click", async () => {
+    if (!teamIsComplete()) {
+      showToast("Fill all 4 slots first.");
+      return;
+    }
+
+    const ok = await openCounterDisclaimer();
+    if (!ok) return;
+
+    openCountersPanel();
+    runCounterFinder().catch((err) => {
+      console.error(err);
+      showToast(err?.message || "Counter Finder failed.");
+    });
+  });
+
+}
+
+function openCountersPanel() {
+  const p = document.getElementById(COUNTER_UI.PANEL_ID);
+  if (!p) return;
+  p.hidden = false;
+
+  const meta = document.getElementById(COUNTER_UI.OUT_META);
+  const list = document.getElementById(COUNTER_UI.OUT_LIST);
+  const relic = document.getElementById(COUNTER_UI.OUT_RELIC);
+
+  if (meta) meta.textContent = "Analyzing…";
+  if (list) list.innerHTML = "";
+  if (relic) relic.textContent = "—";
+  p.scrollIntoView({ behavior: "smooth", block: "nearest" });
+}
+
+function closeCountersPanel() {
+  const p = document.getElementById(COUNTER_UI.PANEL_ID);
+  if (!p) return;
+  p.hidden = true;
+}
+
+/* =========================================================
+   Counter Finder
+========================================================= */
+
+const STAT_KEYS = ["HP", "SPD", "EA", "PA", "ED", "PD"];
+const RADAR_CAPS = {HP: 300,SPD: 180,EA: 195,PA: 195,ED: 210,PD: 210,};
+
+function statOfTotals(totals, key) {
+  return Math.max(0, toNum(totals?.[key]));
+}
+
+function getCandidateTotalsLevel35(name) {
+  const base15 = getBase15(name);
+  if (!base15) return null;
+  return computeTotalsLevel35(base15, DEFAULT_COLORS, DEFAULT_BONUS, null);
+}
+
+function getAttacksForName(name, enhanced = false) {
+  const m = DB_BY_NAME.get(normalize(name));
+  if (!m) return [];
+  return (enhanced ? m.enhancedAttacks : m.attacks) || [];
+}
+
+function isPhysicalMove(move) {
+  return normalize(move?.element) === "physical";
+}
+
+function elementMultiplier(attElem, defElems) {
+  const fn = window.MISCRITS_ELEMENT_MULT;
+  if (typeof fn === "function") {
+    try { return Number(fn(attElem, defElems)) || 1; } catch { return 1; }
+  }
+  return 1;
+}
+
+function estimateMoveDamage(attName, attTotals, move, defName, defTotals, defElems) {
+  const ap = toNum(move?.ap);
+  const hits = Math.max(1, toNum(move?.hits) || 1);
+  const base = ap * hits;
+
+  const attEA = statOfTotals(attTotals, "EA");
+  const attPA = statOfTotals(attTotals, "PA");
+  const defED = statOfTotals(defTotals, "ED");
+  const defPD = statOfTotals(defTotals, "PD");
+
+  let scale;
+  if (isPhysicalMove(move)) {
+    scale = (attPA + 1) / (defPD + 1);
+  } else {
+    scale = (attEA + 1) / (defED + 1);
+  }
+
+  const mvElem = normalize(move?.element);
+  const mult = isPhysicalMove(move) ? 1 : elementMultiplier(mvElem, defElems || []);
+  const dmg = base * scale * mult;
+  return Math.max(0, dmg);
+}
+
+function pickBestMoveVs(attName, attTotals, defName, defTotals, defElems) {
+  const moves = getAttacksForName(attName, false);
+  let best = null;
+  let bestD = -Infinity;
+
+  for (const mv of moves) {
+    const d = estimateMoveDamage(attName, attTotals, mv, defName, defTotals, defElems);
+    if (d > bestD) {
+      bestD = d;
+      best = mv;
+    }
+  }
+  return { move: best, dmg: Math.max(0, bestD) };
+}
+
+function counterScore(candidateName, yourTeamSlots) {
+  const candTotals = getCandidateTotalsLevel35(candidateName);
+  if (!candTotals) return -Infinity;
+
+  const candHP = Math.max(1, statOfTotals(candTotals, "HP"));
+
+  let offenseSum = 0;
+  let defenseSum = 0;
+  let n = 0;
+
+  for (const s of yourTeamSlots) {
+    if (!s?.name) continue;
+
+    const tTotals = s.totals;
+    const tHP = Math.max(1, statOfTotals(tTotals, "HP"));
+    const tElems = s.elements || getElementsForName(s.name);
+
+    const out = pickBestMoveVs(candidateName, candTotals, s.name, tTotals, tElems).dmg; // cand -> slot
+    const inn = pickBestMoveVs(s.name, tTotals, candidateName, candTotals, getElementsForName(candidateName)).dmg; // slot -> cand
+
+    const offense = out / tHP;
+    const defense = 1 - (inn / candHP);
+
+    offenseSum += offense;
+    defenseSum += defense;
+    n++;
+  }
+
+  if (!n) return -Infinity;
+
+  const offAvg = offenseSum / n;
+  const defAvg = defenseSum / n;
+
+  return offAvg * 0.65 + defAvg * 0.35;
+}
+
+function listAllMiscritsNames() {
+
+  const names = (BASE || [])
+    .filter((x) => x?.name && x?.baseStats)
+    .map((x) => x.name);
+
+  if (names.length) return names;
+
+  return (DB || []).filter((m) => m?.name).map((m) => m.name);
+}
+
+async function runCounterFinder() {
+  const teamSlots = (state.slots || []).filter((s) => s?.name);
+  if (teamSlots.length < TEAM_SIZE) return;
+
+  const yourNames = new Set(teamSlots.map((s) => normalize(s.name)));
+  const allNames = listMetaMiscritsNames();
+
+  if (!allNames.length) {
+    showToast("Meta pool is empty (no meta miscrits loaded).");
+    renderCounterResults([], { label: "N/A", losePct: null, samples: 0 }, { title: "—", body: "—" });
+    return;
+  }
+
+  const scored = [];
+  for (const name of allNames) {
+    if (!name) continue;
+    if (yourNames.has(normalize(name))) continue;
+
+    const score = counterScore(name, teamSlots);
+    if (Number.isFinite(score)) scored.push({ name, score });
+  }
+
+  scored.sort((a, b) => b.score - a.score);
+  const top = scored.slice(0, 5);
+
+  const metaPressure = estimateMetaPressure(teamSlots);
+  renderCounterResults(top, metaPressure, null);
+}
+
+function estimateMetaPressure(teamSlots) {
+  const metaPool = (() => {
+    const list = META_RAW_POOL();
+    return Array.isArray(list) ? list.slice(0, 120) : [];
+  })();
+
+  if (!metaPool.length) return { label: "N/A", losePct: null, samples: 0 };
+
+  const scores = [];
+  for (const name of metaPool) {
+    const s = counterScore(name, teamSlots);
+    if (Number.isFinite(s)) scores.push(s);
+  }
+  scores.sort((a, b) => b - a);
+  const top10 = scores.slice(0, 10);
+  const avg = top10.length ? top10.reduce((a, b) => a + b, 0) / top10.length : 0;
+
+  const losePct = Math.max(5, Math.min(95, Math.round((1 / (1 + Math.exp(-8 * (avg - 0.35)))) * 100)));
+
+  const label = losePct >= 70 ? "High" : losePct >= 45 ? "Medium" : "Low";
+  return { label, losePct, samples: metaPool.length };
+}
+
+function listMetaMiscritsNames() {
+  const raw = META_RAW_POOL();
+  if (!Array.isArray(raw) || !raw.length) return [];
+
+  const names = raw
+    .map(x => (typeof x === "string" ? x : x?.name))
+    .filter(Boolean);
+
+  const seen = new Set();
+  return names.filter(n => {
+    const k = normalize(n);
+    if (!k || seen.has(k)) return false;
+    seen.add(k);
+    return true;
+  });
+}
+
+function META_RAW_POOL() {
+  const raw = RELICS_RAW_META_CACHE?._metaPool;
+  return Array.isArray(raw) ? raw : [];
+}
+
+const RELICS_RAW_META_CACHE = { _metaPool: [] };
+
+function suggestRelicMitigation(teamSlots, counterName) {
+  const candTotals = getCandidateTotalsLevel35(counterName);
+  if (!candTotals) return { title: "No advice", body: "Missing base stats for counter." };
+
+  let worst = null;
+  for (let i = 0; i < teamSlots.length; i++) {
+    const s = teamSlots[i];
+    const tHP = Math.max(1, statOfTotals(s.totals, "HP"));
+    const tElems = s.elements || getElementsForName(s.name);
+    const res = pickBestMoveVs(counterName, candTotals, s.name, s.totals, tElems);
+    const ratio = res.dmg / tHP;
+
+    if (!worst || ratio > worst.ratio) {
+      worst = { index: i, slot: s, ratio, move: res.move, dmg: res.dmg };
+    }
+  }
+
+  if (!worst?.slot) return { title: "—", body: "—" };
+
+  const mv = worst.move;
+  const focus = isPhysicalMove(mv) ? "PD" : "ED";
+  const focusLabel = isPhysicalMove(mv) ? "Physical (PD)" : "Elemental (ED)";
+  const level = 35;
+
+  const pool = (RELICS_BY_LEVEL?.[level] || []).slice();
+  if (!pool.length) {
+    return {
+      title: `Mitigate vs ${counterName}`,
+      body: `No lvl ${level} relics found.`,
+    };
+  }
+
+  const current35 = (worst.slot.relics || []).find(r => toNum(r.level) === 35);
+  const currentKey = current35?.key ? relicNameToKey(current35.key) : "";
+
+  const baseTotals = worst.slot.totals;
+  const baseHP = statOfTotals(baseTotals, "HP");
+  const baseDef = statOfTotals(baseTotals, focus);
+
+  const ranked = [];
+  for (const r of pool) {
+    const key = r.key;
+    const st = getRelicStatsByLevel(level, key);
+    if (!st) continue;
+
+    const addHP = toNum(st.HP);
+    const addDef = toNum(st[focus]);
+
+    const score = (addDef * 1.3) + (addHP * 0.6) + (toNum(st.SPD) * 0.1);
+    ranked.push({ key, name: r.name, stats: st, score, addHP, addDef });
+  }
+
+  ranked.sort((a, b) => b.score - a.score);
+
+  const best = ranked.find(x => relicNameToKey(x.key) !== currentKey) || ranked[0];
+  const slotLabelText = `Slot ${worst.index + 1} (${worst.slot.name})`;
+  const currentTxt = currentKey ? `Current lvl35: ${currentKey}` : "Current lvl35: none";
+  const bestTxt = best ? `${best.name} (${best.key})` : "—";
+
+  const why = `You are most exposed on ${slotLabelText} vs ${counterName} using ${focusLabel}.`;
+
+  const body = [
+    why,
+    "",
+    `Suggested lvl35 relic swap: ${bestTxt}`,
+    `Relic bonus: ${formatRelicStatsLine(best?.stats)}`,
+    `${currentTxt}`,
+  ].join("\n");
+
+  return { title: `Mitigate vs ${counterName}`, body };
+}
+
+function renderCounterResults(top, metaPressure, advice) {
+  const metaEl = document.getElementById(COUNTER_UI.OUT_META);
+  const listEl = document.getElementById(COUNTER_UI.OUT_LIST);
+  const relicEl = document.getElementById(COUNTER_UI.OUT_RELIC);
+
+  if (metaEl) {
+    if (metaPressure?.losePct == null) {
+      metaEl.innerHTML = `
+        <div class="cfMeta cfMeta--na">
+          <span class="cfMeta__label">Meta pressure</span>
+          <span class="cfMeta__value">N/A</span>
+        </div>
+      `;
+    } else {
+      const pct = metaPressure.losePct;
+      let tone = "low";
+
+      if (pct >= 70) tone = "high";
+      else if (pct >= 40) tone = "medium";
+
+      metaEl.innerHTML = `
+        <div class="cfMeta cfMeta--${tone}">
+          <div class="cfMeta__left">
+            <span class="cfMeta__label">Meta Pressure</span>
+            <span class="cfMeta__state">${metaPressure.label}</span>
+          </div>
+          <div class="cfMeta__right">
+            <span class="cfMeta__risk">${pct}%</span>
+            <span class="cfMeta__sub">Lose Risk vs Meta</span>
+          </div>
+        </div>
+      `;
+    }
+  }
+
+
+  if (listEl) {
+    listEl.innerHTML = top
+      .map((c, i) => {
+        const ava = avatarSrcFromMetaOrInfer(c.name);
+        const best = top[0]?.score ?? 1;
+        const pct = Math.max(0, Math.min(99, Math.round((c.score / best) * 100)));
+        const reason = `#${i + 1} • score ${c.score.toFixed(3)}`;
+
+        return `
+          <div class="counterCard">
+            <img class="counterAvatar" src="${ava}" alt="" onerror="this.src='${PATH.AVATAR_FALLBACK}'">
+            <div class="counterMain">
+              <div class="counterName">${c.name}</div>
+              <div class="counterReason">${reason}</div>
+            </div>
+          </div>
+        `;
+      })
+      .join("");
+
+    listEl.querySelectorAll("[data-counter-add]").forEach((btn) => {
+      btn.addEventListener("click", (e) => {
+        const name = decodeURIComponent(e.currentTarget.getAttribute("data-counter-add") || "");
+        if (!name) return;
+
+        const idx = state.slots.findIndex((s) => !s?.name);
+        const target = idx >= 0 ? idx : 0;
+
+        state.slots[target] = buildSlotFromName(name);
+        renderSlots();
+        showToast(`Added ${name} to ${slotLabel(target)}.`);
+      });
+    });
+  }
+
+  if (relicEl) {
+    relicEl.innerHTML = "";
+    relicEl.style.display = "none";
+  }
+}
+
 // -------------------------
 // Utils
 // -------------------------
+
+function avgTeamStats(slots){
+  const acc = {HP:0,SPD:0,EA:0,PA:0,ED:0,PD:0};
+  const filled = (slots || []).filter(s => s?.name && s?.totals);
+  const n = filled.length || 1;
+
+  for (const s of filled){
+    for (const k of STAT_KEYS) acc[k] += toNum(s.totals?.[k]);
+  }
+  for (const k of STAT_KEYS) acc[k] = acc[k] / n;
+
+  return acc;
+}
+
+function drawRadar(ctx, x, y, r, labels, values01){
+  const N = labels.length;
+  const startAng = -Math.PI / 2;
+
+  const pt = (i, rr) => {
+    const a = startAng + (i * 2*Math.PI / N);
+    return { x: x + Math.cos(a)*rr, y: y + Math.sin(a)*rr };
+  };
+
+  ctx.save();
+  ctx.globalAlpha = 0.9;
+
+  for (let g=1; g<=4; g++){
+    const gr = r * (g/4);
+    ctx.beginPath();
+    for (let i=0;i<N;i++){
+      const p = pt(i, gr);
+      if (i===0) ctx.moveTo(p.x,p.y); else ctx.lineTo(p.x,p.y);
+    }
+    ctx.closePath();
+    ctx.stroke();
+  }
+
+  for (let i=0;i<N;i++){
+    const p = pt(i, r);
+    ctx.beginPath();
+    ctx.moveTo(x,y);
+    ctx.lineTo(p.x,p.y);
+    ctx.stroke();
+
+    const lp = pt(i, r + 16);
+    ctx.fillText(labels[i], lp.x, lp.y);
+  }
+
+  ctx.globalAlpha = 1;
+  ctx.beginPath();
+  for (let i=0;i<N;i++){
+    const p = pt(i, r * values01[i]);
+    if (i===0) ctx.moveTo(p.x,p.y); else ctx.lineTo(p.x,p.y);
+  }
+  ctx.closePath();
+  ctx.fill();
+  ctx.stroke();
+
+  ctx.restore();
+}
+
 function showToast(msg, ms = 1400) {
   const el = $("#tbToast");
   if (!el) { alert(msg); return; }
@@ -212,7 +736,6 @@ function renderBRRelicButtons() {
     btn.classList.add("has-img");
   });
 }
-
 
 function renderRelicPicker() {
   const host = document.getElementById("brRelicList");
@@ -404,6 +927,38 @@ async function renderImgPreview() {
       }
     }
   }
+
+  // =========================
+  // Radar
+  // =========================
+  const teamAvg = avgTeamStats(state.slots);
+
+  const values01 = STAT_KEYS.map((k) => {
+    const cap = toNum(RADAR_CAPS[k]) || 1;
+    const v = toNum(teamAvg[k]);
+    return Math.max(0, Math.min(1, v / cap));
+  });
+
+  ctx.save();
+  ctx.lineWidth = 2;
+  ctx.strokeStyle = "rgb(255, 255, 255)";
+  ctx.fillStyle   = "rgba(0, 255, 242, 0.38)";
+  ctx.font = "900 14px system-ui, -apple-system, Segoe UI, Roboto, Arial";
+  ctx.textAlign = "center";
+  ctx.textBaseline = "middle";
+
+  const radarX = 1400;
+  const radarY = 135;
+  const radarR = 105;
+
+  drawRadar(ctx, radarX, radarY, radarR, STAT_KEYS, values01);
+  ctx.restore();
+
+  ctx.save();
+  ctx.fillStyle = "rgba(255,255,255,0.85)";
+  ctx.font = "800 18px system-ui, -apple-system, Segoe UI, Roboto, Arial";
+  ctx.restore();
+
 }
 
 function openImgModal() {
@@ -765,8 +1320,6 @@ function slotSubline(slot) {
 
 function updateTopBadge() {
   const used = pointsUsed();
-  const left = POINT_CAP - used;
-
   const badge = $("#tbCountBadge");
   if (badge) badge.textContent = `${used}/${POINT_CAP} pts`;
 
@@ -1202,7 +1755,6 @@ async function exportTeamToClipboard() {
     await navigator.clipboard.writeText(json);
     showToast("Team JSON copied to clipboard.");
   } catch {
-    // fallback por si clipboard falla (http, permisos, etc.)
     const ta = document.createElement("textarea");
     ta.value = json;
     document.body.appendChild(ta);
@@ -1219,7 +1771,6 @@ function sanitizeImportedSlot(raw) {
 
   const slot = buildSlotFromName(raw.name);
 
-  // colors
   const c = raw.colors || {};
   slot.colors = {
     hp: normalize(c.hp) || "green",
@@ -1230,7 +1781,6 @@ function sanitizeImportedSlot(raw) {
     pd: normalize(c.pd) || "green",
   };
 
-  // bonus
   const b = raw.bonus || {};
   slot.bonus = {
     HP: toNum(b.HP),
@@ -1241,7 +1791,6 @@ function sanitizeImportedSlot(raw) {
     PD: toNum(b.PD),
   };
 
-  // relics (validar niveles)
   const allowedLevels = new Set(BR_RELIC_LEVELS);
   const relics = Array.isArray(raw.relics) ? raw.relics : [];
   slot.relics = relics
@@ -1260,9 +1809,6 @@ function importTeamFromJSON(text) {
     throw new Error("Invalid JSON.");
   }
 
-  // soporta 2 formatos:
-  // A) {version:1, team:[...]}
-  // B) directamente un array [slot, slot, ...]
   const arr = Array.isArray(data) ? data : Array.isArray(data?.team) ? data.team : null;
   if (!arr) throw new Error("JSON must contain a team array.");
 
@@ -1292,7 +1838,6 @@ function closeImportModal() {
   modal.setAttribute("aria-hidden", "true");
   modal.hidden = true;
 }
-
 
 // -------------------------
 // Bind UI
@@ -1364,7 +1909,6 @@ function bindUI() {
     if (m && !m.hidden) closeImportModal();
   });
 
-
   document.addEventListener("click", (e) => {
     const m = document.getElementById("brRelicModal");
     if (!m || m.hidden) return;
@@ -1408,7 +1952,7 @@ function bindUI() {
     e.preventDefault();
     openImgModal();
   });
-  
+
   document.addEventListener("click", (e) => {
     const m = document.getElementById("tbImgModal");
     if (!m || m.hidden) return;
@@ -1452,6 +1996,14 @@ async function loadAll() {
 
   DB = Array.isArray(dbJson) ? dbJson : dbJson?.miscrits ?? [];
   BASE = Array.isArray(baseJson) ? baseJson : baseJson?.miscrits ?? [];
+
+  // Keep full meta json pool in cache
+  try {
+    RELICS_RAW_META_CACHE._metaPool = Array.isArray(metaJson?.meta?.miscrits_meta) ? metaJson.meta.miscrits_meta : [];
+  } catch {
+    RELICS_RAW_META_CACHE._metaPool = [];
+  }
+
   META = metaJson?.miscrits ?? metaJson?.data ?? metaJson ?? [];
   RELICS_RAW = relicsJson;
 
@@ -1523,6 +2075,9 @@ async function init() {
     await loadAll();
     bindUI();
     renderSlots();
+
+    // NEW: Counter Finder UI
+    ensureCountersUI();
   } catch (e) {
     console.error(e);
     showToast(e?.message || "Error loading Team Builder data.");

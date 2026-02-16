@@ -64,8 +64,32 @@
 }
 
 /* =========================
-   MAIN GRID
+   LAYOUT (TEAM + RIGHT PANEL)
 ========================= */
+.tbLayout{
+  margin-top: 14px;
+  display:grid;
+  grid-template-columns: 1fr 360px;
+  gap: 16px;
+  align-items:start;
+}
+
+.tbMain{ min-width:0; }
+
+/* Right panel docked */
+.tbSide{
+  position: sticky;
+  top: 92px; /* ajusta según tu navbar */
+  max-height: calc(100vh - 110px);
+  overflow:auto;
+
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,.08);
+  background: rgba(10,16,28,.55);
+  backdrop-filter: blur(10px);
+}
+
+/* (compat) si aún te queda algo usando tbGrid */
 .tbGrid{
   margin-top: 14px;
   display: grid;
@@ -147,16 +171,24 @@
   z-index: 0;
 }
 
-#tbSlots{
-  position: relative;
-  z-index: 2;
-}
+#tbSlots{ position: relative; z-index: 2; }
 
 .tbSlots{
   padding: 14px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 12px;
+}
+
+.tbStage__foot{
+  position: relative;
+  z-index: 1;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 14px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  background: rgba(0,0,0,0.20);
 }
 
 /* =========================
@@ -238,22 +270,9 @@
 }
 .tbSlot__x:hover{ background: rgba(0,0,0,.45); }
 
-.tbStage__foot{
-  position: relative;
-  z-index: 1;
-  display:flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 12px 14px;
-  border-top: 1px solid rgba(255,255,255,0.08);
-  background: rgba(0,0,0,0.20);
-}
-
 /* =========================
-   SIDEBAR PANELS
+   PANELS / FORMS
 ========================= */
-.tbSide{ display:flex; flex-direction: column; gap: 14px; }
-
 .tbPanel{ padding: 14px; }
 .tbPanel__head{ margin-bottom: 10px; }
 .tbPanel__title{ font-weight: 900; margin-bottom: 4px; }
@@ -280,7 +299,7 @@
   outline: none;
 }
 
-.tbSelect{ cursor: pointer; }
+.tbSelect{ cursor: pointer; height: 44px; }
 .tbInput::placeholder{ color: rgba(255,255,255,0.45); }
 
 .tbRow{ display:flex; gap: 10px; }
@@ -386,8 +405,6 @@
     radial-gradient(220px 160px at 12% 30%, rgba(96,165,250,0.12), transparent 60%),
     rgba(255,255,255,0.06);
 }
-
-.tbSelect{ height: 44px; }
 
 .tbModal__list{
   padding: 12px 16px 16px;
@@ -588,9 +605,6 @@
   padding: 2px 7px;
 }
 
-.brRelicAssign{ display:flex; flex-direction: column; gap: 8px; }
-.brMini{ font-size: 12px; }
-
 .brWide__head{
   display:flex;
   align-items:center;
@@ -599,15 +613,33 @@
   margin-bottom: 10px;
 }
 
+/* Pills (UNIFICADO: antes estaba duplicado) */
 .brPills{ display:flex; gap: 8px; }
+
 .brPill{
   border-radius: 999px;
-  padding: 6px 10px;
-  border: 1px solid rgba(255,255,255,0.12);
-  background: rgba(34,197,94,0.10);
-  color: rgba(180,255,210,0.95);
+  padding: 6px 14px;
+  font-weight: 800;
   font-size: 12px;
-  font-weight: 900;
+  border: 1px solid rgba(255,255,255,0.15);
+  background: rgba(255,255,255,0.06);
+  color: rgba(255,255,255,0.85);
+  cursor: pointer;
+  transition: background .15s ease, border-color .15s ease, transform .15s ease;
+}
+
+.brPill:hover{ background: rgba(255,255,255,0.12); }
+.brPill:active{ transform: translateY(1px); }
+
+.brPill--green{
+  background: rgba(34,197,94,0.20);
+  border-color: rgba(34,197,94,0.55);
+  color: #4ade80;
+}
+.brPill--red{
+  background: rgba(239,68,68,0.20);
+  border-color: rgba(239,68,68,0.55);
+  color: #f87171;
 }
 
 .brStats{
@@ -642,7 +674,6 @@
 /* =========================
    RELIC PICKER CARDS
 ========================= */
-
 .brRelicCard{
   display:flex;
   gap: 12px;
@@ -672,10 +703,7 @@
   flex: 0 0 auto;
 }
 
-.brRelicMain{
-  flex: 1 1 auto;
-  min-width: 0;
-}
+.brRelicMain{ flex: 1 1 auto; min-width: 0; }
 
 .brRelicName{
   font-weight: 900;
@@ -708,9 +736,7 @@
   color: rgba(255,255,255,0.85);
 }
 
-#brRelicModal{
-  z-index: 20050; 
-}
+#brRelicModal{ z-index: 20050; }
 
 .brRelicImg{
   position:absolute;
@@ -722,36 +748,7 @@
   opacity: .95;
 }
 
-.brRelic.has-img .brPlus{
-  display:none;
-}
-.brPill{
-  border-radius: 999px;
-  padding: 6px 14px;
-  font-weight: 800;
-  font-size: 12px;
-  border: 1px solid rgba(255,255,255,0.15);
-  background: rgba(255,255,255,0.06);
-  color: rgba(255,255,255,0.85);
-  cursor: pointer;
-  transition: all .15s ease;
-}
-
-.brPill:hover{
-  background: rgba(255,255,255,0.12);
-}
-
-.brPill--green{
-  background: rgba(34,197,94,0.20);
-  border-color: rgba(34,197,94,0.55);
-  color: #4ade80;
-}
-
-.brPill--red{
-  background: rgba(239,68,68,0.20);
-  border-color: rgba(239,68,68,0.55);
-  color: #f87171;
-}
+.brRelic.has-img .brPlus{ display:none; }
 
 /* =========================
    TB BUTTON (Bonus & Relics)
@@ -792,16 +789,13 @@
     0 14px 26px rgba(0,0,0,0.28);
 }
 
-.tbBtn:active{
-  transform: translateY(1px);
-}
+.tbBtn:active{ transform: translateY(1px); }
 
 .tbBtn:focus-visible{
   outline: 2px solid rgba(96,165,250,0.55);
   outline-offset: 2px;
 }
 
-/* opcional: versión más “accent” para acciones importantes */
 .tbBtn--accent{
   background: rgba(96,165,250,0.18);
   border-color: rgba(96,165,250,0.35);
@@ -811,26 +805,421 @@
   border-color: rgba(96,165,250,0.45);
 }
 
-/* opcional: si está dentro del slot y quieres que no “rompa” el layout */
 .tbSlot .tbBtn{
   padding: 7px 10px;
   border-radius: 12px;
 }
 
+/* =========================
+   COUNTER FINDER UI
+========================= */
+#tbCountersBtn,
+#btnFindCounters{
+  margin-top: 14px;
+  width: 100%;
+  max-width: 360px;
+  border-radius: 16px;
+  border: 1px solid rgba(96,165,250,0.22);
+  background:
+    radial-gradient(240px 180px at 15% 25%, rgba(96,165,250,0.20), transparent 60%),
+    rgba(255,255,255,0.06);
+  color: rgba(255,255,255,0.92);
+  font-weight: 900;
+  letter-spacing: .2px;
+  padding: 12px 14px;
+  box-shadow: 0 18px 40px rgba(0,0,0,0.35), inset 0 1px 0 rgba(255,255,255,0.06);
+  cursor: pointer;
+  transition: transform .12s ease, background .12s ease, border-color .12s ease;
+}
+
+.tbActions #btnFindCounters{
+  width: auto;
+  max-width: none;
+  margin-top: 0;
+  padding: 10px 14px;
+  border-radius: 14px;
+  font-weight: 300;
+  letter-spacing: 0;
+  box-shadow: none;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+}
+.tbActions #btnFindCounters:hover{
+  transform: none;
+  background: rgba(255,255,255,0.10);
+  border-color: rgba(96,165,250,0.30);
+}
+
+#tbCountersBtn:hover,
+#btnFindCounters:hover{
+  transform: translateY(-1px);
+  border-color: rgba(96,165,250,0.38);
+  background:
+    radial-gradient(240px 180px at 15% 25%, rgba(96,165,250,0.26), transparent 60%),
+    rgba(255,255,255,0.09);
+}
+
+#tbCountersBtn:active,
+#btnFindCounters:active{ transform: translateY(0px); }
+
+#tbCountersBtn:focus-visible,
+#btnFindCounters:focus-visible{
+  outline: 2px solid rgba(96,165,250,0.55);
+  outline-offset: 2px;
+}
+
+#countersPanel{
+  margin-top: 14px;
+  border: 1px solid rgba(96,165,250,0.16);
+  background:
+    radial-gradient(520px 340px at 70% 10%, rgba(34,197,94,0.08), transparent 60%),
+    radial-gradient(520px 360px at 10% 90%, rgba(96,165,250,0.10), transparent 60%),
+    rgba(255,255,255,0.04);
+  box-shadow: 0 26px 70px rgba(0,0,0,0.40), inset 0 1px 0 rgba(255,255,255,0.06);
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+#countersPanel .tbPanel__head{
+  display:flex;
+  align-items:center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 14px 12px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  background: rgba(0,0,0,0.16);
+}
+
+#countersPanel .tbPanel__head h3{
+  margin: 0;
+  font-size: 14px;
+  font-weight: 900;
+  letter-spacing: .2px;
+}
+
+.btnIcon,
+#btnCloseCounters{
+  width: 36px;
+  height: 36px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(255,255,255,0.06);
+  color: rgba(255,255,255,0.88);
+  cursor: pointer;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  transition: background .12s ease, border-color .12s ease, transform .12s ease;
+}
+.btnIcon:hover,
+#btnCloseCounters:hover{
+  background: rgba(255,255,255,0.10);
+  border-color: rgba(96,165,250,0.30);
+}
+.btnIcon:active,
+#btnCloseCounters:active{ transform: translateY(1px); }
+
+#countersMetaRisk,
+#countersRelicAdvice{
+  padding: 12px 14px;
+  margin: 0;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  background: rgba(0,0,0,0.10);
+}
+
+#countersMetaRisk{
+  display:grid;
+  gap: 6px;
+}
+
+#countersMetaRisk .k{
+  font-size: 12px;
+  color: rgba(255,255,255,0.62);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+#countersMetaRisk .v{
+  font-weight: 900;
+  color: rgba(255,255,255,0.92);
+}
+
+#countersTopList{
+  padding: 14px;
+  display:grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  background: rgba(0,0,0,0.06);
+}
+
+.counterCard{
+  display:flex;
+  gap: 12px;
+  align-items:center;
+  padding: 12px;
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,0.10);
+  background: rgba(255,255,255,0.04);
+  box-shadow: 0 14px 30px rgba(0,0,0,0.28), inset 0 1px 0 rgba(255,255,255,0.05);
+  transition: transform .12s ease, border-color .12s ease, background .12s ease;
+}
+
+.counterCard:hover{
+  transform: translateY(-2px);
+  border-color: rgba(96,165,250,0.30);
+  background: rgba(255,255,255,0.07);
+}
+
+.counterAvatar{
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  border: 1px solid rgba(96,165,250,0.22);
+  background: rgba(0,0,0,0.18);
+  object-fit: contain;
+  flex: 0 0 auto;
+  filter: drop-shadow(0 10px 18px rgba(0,0,0,0.40));
+}
+
+.counterMain{ flex: 1 1 auto; min-width:0; }
+.counterName{
+  font-weight: 900;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.counterReason{
+  margin-top: 4px;
+  font-size: 12px;
+  color: rgba(255,255,255,0.70);
+  line-height: 1.25;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.counterScore{
+  text-align:right;
+  flex: 0 0 auto;
+  min-width: 84px;
+}
+.counterScore .pct{
+  font-weight: 900;
+  color: rgba(255,255,255,0.92);
+}
+.counterScore .lbl{
+  margin-top: 2px;
+  font-size: 11px;
+  color: rgba(255,255,255,0.60);
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+
+#countersRelicAdvice{
+  display:grid;
+  gap: 6px;
+}
+#countersRelicAdvice .title{
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.62);
+}
+#countersRelicAdvice .body{
+  font-size: 13px;
+  color: rgba(255,255,255,0.84);
+  line-height: 1.45;
+}
+
+.cfModal{ position:fixed; inset:0; z-index:9999; }
+.cfModal[hidden]{ display:none; }
+
+.cfModal__backdrop{
+  position:absolute; inset:0;
+  background: rgba(0,0,0,.55);
+  backdrop-filter: blur(6px);
+}
+
+.cfModal__panel{
+  position:relative;
+  width:min(720px, calc(100vw - 28px));
+  max-height: min(78vh, 720px);
+  margin: 8vh auto 0;
+  overflow:auto;
+
+  border-radius: 16px;
+  background: rgba(18,20,24,.92);
+  border: 1px solid rgba(255,255,255,.12);
+  box-shadow: 0 20px 60px rgba(0,0,0,.55);
+  color: rgba(255,255,255,.92);
+}
+
+.cfModal__head{
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap: 14px;
+  padding: 16px 16px 10px;
+  border-bottom: 1px solid rgba(255,255,255,.10);
+}
+
+.cfModal__title{ font-weight:900; letter-spacing:.2px; }
+.cfModal__sub{ font-size:12px; opacity:.75; margin-top:2px; }
+
+.cfModal__x{
+  border: 0;
+  background: rgba(255,255,255,.08);
+  color: rgba(255,255,255,.92);
+  border-radius: 10px;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+}
+.cfModal__x:hover{ background: rgba(255,255,255,.14); }
+
+.cfModal__body{
+  padding: 14px 16px 6px;
+  font-size: 13.5px;
+  line-height: 1.45;
+}
+.cfModal__body p{ margin: 10px 0; }
+.cfModal__body ul{
+  margin: 8px 0 10px 18px;
+  padding: 0;
+  opacity: .95;
+}
+.cfModal__body li{ margin: 6px 0; }
+
+.cfModal__remember{
+  display:flex;
+  align-items:center;
+  gap: 10px;
+  margin: 12px 0 4px;
+  opacity:.9;
+}
+
+.cfModal__foot{
+  display:flex;
+  justify-content:flex-end;
+  gap: 10px;
+  padding: 12px 16px 16px;
+  border-top: 1px solid rgba(255,255,255,.10);
+}
+
+.cfBtn{
+  border: 0;
+  border-radius: 12px;
+  padding: 10px 14px;
+  cursor: pointer;
+  font-weight: 800;
+  color: rgba(255,255,255,.92);
+}
+.cfBtn--ghost{ background: rgba(255,255,255,.08); }
+.cfBtn--ghost:hover{ background: rgba(255,255,255,.14); }
+.cfBtn--accent{ background: rgba(0,255,242,.20); border: 1px solid rgba(0,255,242,.35); }
+.cfBtn--accent:hover{ background: rgba(0,255,242,.28); }
+
+.cfMeta{
+  display:flex;
+  justify-content: space-between;
+  align-items:center;
+  gap:16px;
+  padding:12px 14px;
+  border-radius:14px;
+  border:1px solid rgba(255,255,255,.08);
+  background: rgba(255,255,255,.04);
+}
+
+.cfMeta__left{
+  display:flex;
+  flex-direction:column;
+  gap:2px;
+}
+
+.cfMeta__label{
+  font-size:11px;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  color:rgba(255,255,255,.55);
+}
+
+.cfMeta__state{
+  font-weight:900;
+  font-size:14px;
+}
+
+.cfMeta__right{
+  text-align:right;
+  display:flex;
+  flex-direction:column;
+  gap:2px;
+}
+
+.cfMeta__risk{
+  font-weight:900;
+  font-size:18px;
+}
+
+.cfMeta__sub{
+  font-size:11px;
+  color:rgba(255,255,255,.55);
+}
+
+/* TONES */
+
+.cfMeta--low{
+  border-color: rgba(34,197,94,.4);
+  background: rgba(34,197,94,.08);
+}
+
+.cfMeta--low .cfMeta__state,
+.cfMeta--low .cfMeta__risk{
+  color:#4ade80;
+}
+
+.cfMeta--medium{
+  border-color: rgba(250,204,21,.4);
+  background: rgba(250,204,21,.08);
+}
+
+.cfMeta--medium .cfMeta__state,
+.cfMeta--medium .cfMeta__risk{
+  color:#facc15;
+}
+
+.cfMeta--high{
+  border-color: rgba(239,68,68,.45);
+  background: rgba(239,68,68,.08);
+}
+
+.cfMeta--high .cfMeta__state,
+.cfMeta--high .cfMeta__risk{
+  color:#f87171;
+}
+
+.cfMeta--na{
+  opacity:.6;
+}
 
 /* =========================
    RESPONSIVE
 ========================= */
 @media (max-width: 980px){
   .tbTop{ grid-template-columns: 1fr; }
-  .tbGrid{ grid-template-columns: 1fr; }
-  .tbSlots{ grid-template-columns: 1fr; }
 
+  .tbLayout{ grid-template-columns: 1fr; }
+  .tbSide{ position: static; max-height: none; }
+
+  .tbGrid{ grid-template-columns: 1fr; }
+
+  .tbSlots{ grid-template-columns: 1fr; }
   .tbModal__tools{ grid-template-columns: 1fr; }
   .tbModal__list{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
 
   .brGrid{ grid-template-columns: 1fr; }
   .brStats{ grid-template-columns: 1fr; }
+
+  #tbCountersBtn,
+  #btnFindCounters{ max-width: 100%; }
 }
 
 @media (max-width: 560px){
