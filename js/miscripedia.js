@@ -468,7 +468,7 @@ function renderSelectedTags(){
   }
 
   bar.innerHTML = tags.map(t => `
-    <span class="tag" style="display:inline-flex;align-items:center;gap:8px;">
+    <span class="tag tag--active" style="display:inline-flex;align-items:center;gap:8px;">
       ${escapeHtml(t)}
       <button type="button"
         data-tag-remove="${escapeAttr(t)}"
@@ -518,7 +518,7 @@ function renderSelectedRarities(){
   }
 
   bar.innerHTML = list.map(r => `
-    <span class="tag" style="display:inline-flex;align-items:center;gap:8px;">
+    <span class="tag tag--active" style="display:inline-flex;align-items:center;gap:8px;">
       ${escapeHtml(r)}
       <button type="button"
         data-rarity-remove="${escapeAttr(r)}"

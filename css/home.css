@@ -11,7 +11,6 @@
   overflow: hidden;
 }
 
-/* Glow decor */
 .hero::after{
   content:"";
   position:absolute;
@@ -64,7 +63,6 @@
   font-size: 12px;
 }
 
-/* Right panel */
 .hero__panel{
   display:flex;
   flex-direction: column;
@@ -94,7 +92,6 @@
   font-size: 13px;
 }
 
-/* Mini grid */
 .grid2{
   display:grid;
   grid-template-columns: 1fr 1fr;
@@ -125,7 +122,6 @@
   font-size: 13px;
 }
 
-/* Section */
 .section{
   margin-top: 22px;
 }
@@ -168,7 +164,6 @@
   font-size: 13px;
 }
 
-/* Footer */
 .footer{
   border-top: 1px solid rgba(255,255,255,0.08);
   padding: 20px 0;
@@ -345,22 +340,20 @@
 
 .hero{
   position: relative;
-  overflow: hidden; /* para que el fondo no se salga del radius */
+  overflow: hidden;
 }
 
-/* Imagen de fondo sutil */
 .hero::before{
   content:"";
   position:absolute;
   inset:0;
   background: url("../assets/images/places/cave.webp") center/cover no-repeat;
-  opacity: .16;               /* súbelo/bájalo a gusto (0.10–0.22) */
+  opacity: .16;
   filter: blur(2px);
   transform: scale(1.05);
   z-index: 0;
 }
 
-/* Overlay para mantener legibilidad (azul oscuro) */
 .hero::after{
   content:"";
   position:absolute;
@@ -373,7 +366,6 @@
   z-index: 1;
 }
 
-/* Asegura que tu contenido quede arriba */
 .hero__content,
 .hero__panel{
   position: relative;

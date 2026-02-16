@@ -358,6 +358,308 @@ function syncMoveListPicker() {
 }
 
 /* =========================================================
+   PRESETS
+========================================================= */
+
+const PRESET_STORE_KEY = "miscritsHub.damageCalc.presets.v1";
+
+function readPresetStore() {
+  try {
+    const raw = localStorage.getItem(PRESET_STORE_KEY);
+    const parsed = raw ? JSON.parse(raw) : null;
+    if (!parsed || typeof parsed !== "object") return { atk: {}, def: {} };
+    if (!parsed.atk) parsed.atk = {};
+    if (!parsed.def) parsed.def = {};
+    return parsed;
+  } catch {
+    return { atk: {}, def: {} };
+  }
+}
+
+function writePresetStore(store) {
+  localStorage.setItem(PRESET_STORE_KEY, JSON.stringify(store));
+}
+
+function getSideMiscritName(side) {
+  const id = side === "atk" ? atkId : defId;
+  return (id ?? "").toString().trim();
+}
+
+function getSideRelics(side) {
+  const cls = side === "atk" ? ".atkRelic" : ".defRelic";
+  const arr = [ "", "", "", "" ];
+  document.querySelectorAll(cls).forEach(sel => {
+    const slot = toNum(sel.getAttribute("data-slot"));
+    if (slot >= 0 && slot < 4) arr[slot] = (sel.value ?? "").toString();
+  });
+  return arr;
+}
+
+function setSideRelics(side, relicArr) {
+  for (let i = 0; i < 4; i++) {
+    const sel = getRelicSelect(side, i);
+    if (!sel) continue;
+    sel.value = (relicArr?.[i] ?? "").toString();
+  }
+}
+
+function buildPreset(side) {
+  const miscrit = getSideMiscritName(side);
+  if (!miscrit) return null;
+
+  const preset = {
+    miscrit,
+    relics: getSideRelics(side),
+    bonus: { ...getCommittedBonus(side) },
+  };
+
+  // opcional: guardar toggle enhanced SOLO para attacker
+  if (side === "atk") preset.useEnhanced = !!atkUseEnhanced;
+
+  return preset;
+}
+
+function applyPreset(side, preset) {
+  if (!preset?.miscrit) return;
+
+  applyMiscritSelection(side, preset.miscrit);
+  setSideRelics(side, preset.relics);
+  refreshAllRelicSlots();
+  refreshSideStatsFromRelics(side);
+
+  const b = preset.bonus ?? { HP:0,EA:0,PA:0,SPD:0,ED:0,PD:0 };
+  setCommittedBonus(side, b);
+  writeBonusDraft(side, b);
+  updateBonusUI(side);
+  refreshSideStatsFromRelics(side);
+
+  if (side === "atk" && typeof preset.useEnhanced === "boolean") {
+    atkUseEnhanced = preset.useEnhanced;
+    const t = $("#atkEnhancedToggle");
+    if (t) t.checked = atkUseEnhanced;
+
+    atkAttackIndex = 0;
+    syncMoveListPicker();
+    renderSelectedMoveButton();
+  }
+
+  renderResult();
+}
+
+function savePresetFlow(side) {
+  const preset = buildPreset(side);
+  if (!preset) return;
+
+  const suggested = preset.miscrit;
+  const name = window.prompt("Preset name:", suggested);
+  if (!name) return;
+
+  const key = name.trim();
+  if (!key) return;
+
+  const store = readPresetStore();
+  store[side][key] = preset;
+  writePresetStore(store);
+}
+
+function loadPresetFlow(side) {
+  const store = readPresetStore();
+  const presets = store?.[side] ?? {};
+  const keys = Object.keys(presets);
+
+  if (!keys.length) {
+    window.alert("No presets saved yet.");
+    return;
+  }
+
+  const list = keys
+    .sort((a, b) => a.localeCompare(b, "es"))
+    .map((k, i) => `${i + 1}) ${k}`)
+    .join("\n");
+
+  const pick = window.prompt(
+    `Choose a preset (type number or exact name):\n\n${list}`,
+    keys[0]
+  );
+  if (!pick) return;
+
+  const raw = pick.trim();
+
+  let chosenKey = raw;
+  const asNum = Number(raw);
+  if (Number.isFinite(asNum) && asNum >= 1 && asNum <= keys.length) {
+    chosenKey = keys.sort((a, b) => a.localeCompare(b, "es"))[asNum - 1];
+  }
+
+  const preset = presets[chosenKey];
+  if (!preset) {
+    window.alert("Preset not found.");
+    return;
+  }
+
+  applyPreset(side, preset);
+}
+
+/* =========================================================
+   PRESET MODAL UI (ATTACKER)
+========================================================= */
+
+const STAT_ICON_FOLDER = "../assets/images/icons/";
+const STAT_ICON = {
+  HP:  `${STAT_ICON_FOLDER}hp.png`,
+  SPD: `${STAT_ICON_FOLDER}spd.png`,
+  EA:  `${STAT_ICON_FOLDER}ea.png`,
+  PA:  `${STAT_ICON_FOLDER}pa.png`,
+  ED:  `${STAT_ICON_FOLDER}ed.png`,
+  PD:  `${STAT_ICON_FOLDER}pd.png`,
+};
+
+function computeFinalStatsForPreset(preset){
+  // base
+  const m = findById(preset?.miscrit);
+  if (!m) return null;
+
+  const base = chooseBaseStatsForSide(m, "atk");
+  if (!base) return null;
+
+  // relics by slot (respecting SLOT_LEVELS[slot] match)
+  const selections = (preset.relics || []).map((name, slot) => {
+    const n = (name ?? "").toString().trim();
+    if (!n) return null;
+    return { name: n, slot, level: getSlotLevel(slot) };
+  }).filter(Boolean);
+
+  const withRelics = applyRelicStatsBySlot(
+    { HP: base.HP, SPD: base.SPD, PA: base.PA, EA: base.EA, PD: base.PD, ED: base.ED },
+    selections
+  );
+
+  const b = preset.bonus ?? {HP:0,EA:0,PA:0,SPD:0,ED:0,PD:0};
+
+  return {
+    HP:  toNum(withRelics.HP)  + toNum(b.HP),
+    SPD: toNum(withRelics.SPD) + toNum(b.SPD),
+    EA:  toNum(withRelics.EA)  + toNum(b.EA),
+    PA:  toNum(withRelics.PA)  + toNum(b.PA),
+    ED:  toNum(withRelics.ED)  + toNum(b.ED),
+    PD:  toNum(withRelics.PD)  + toNum(b.PD),
+  };
+}
+
+function avatarSrcForName(name){
+  const metaAvatar = AVATAR_BY_NAME.get(normalize(name));
+  const inferred = inferAvatarFromName(name);
+  return `../assets/images/miscrits_avatar/${metaAvatar || inferred}`;
+}
+
+function openPresetModal(){
+  const modal = $("#presetModal");
+  const grid  = $("#presetGrid");
+  const search = $("#presetSearch");
+  if (!modal || !grid || !search) return;
+
+  const store = readPresetStore();
+  const presets = store?.atk ?? {};
+  const keys = Object.keys(presets);
+
+  const render = (q) => {
+    const qq = normalize(q);
+    const list = keys
+      .filter(k => !qq || normalize(k).includes(qq) || normalize(presets[k]?.miscrit).includes(qq))
+      .sort((a,b) => a.localeCompare(b, "es"));
+
+    if (!list.length){
+      grid.innerHTML = `<div style="padding:10px;color:rgba(255,255,255,.65)">No presets saved.</div>`;
+      return;
+    }
+
+    grid.innerHTML = list.map((key) => {
+      const p = presets[key];
+      const mis = p?.miscrit ?? "—";
+      const stats = computeFinalStatsForPreset(p) || {HP:"—",SPD:"—",EA:"—",PA:"—",ED:"—",PD:"—"};
+      const avatar = avatarSrcForName(mis);
+      const relics = (p?.relics || ["","","",""]).slice(0,4);
+
+      const relicImgs = relics.map((name) => {
+        const n = (name ?? "").toString().trim();
+        const r = n ? RELIC_BY_NAME.get(n) : null;
+        const src = r ? relicIconSrc(r) : RELIC_PLACEHOLDER;
+        const alt = n || "Empty";
+        return `<img class="presetRelic" src="${src}" alt="${alt}" title="${alt}" onerror="this.src='${RELIC_PLACEHOLDER}'">`;
+      }).join("");
+
+      const statCell = (K) => `
+        <div class="presetStat">
+          <img class="presetStat__ico" src="${STAT_ICON[K]}" alt="">
+          <div class="presetStat__k">${K}</div>
+          <div class="presetStat__v">${stats[K]}</div>
+        </div>
+      `;
+
+      return `
+        <div class="presetCard" data-preset="${key}">
+          <img class="presetCard__avatar" src="${avatar}" alt="${mis}" onerror="this.src='../assets/images/miscrits_avatar/preset_avatar.png'">
+
+          <div class="presetCard__main">
+            <div class="presetCard__titleRow">
+              <div class="presetCard__name" title="${key}">${key}</div>
+              <div class="presetCard__miscrit">${mis}</div>
+            </div>
+
+            <div class="presetStats">
+              ${statCell("HP")}
+              ${statCell("SPD")}
+              ${statCell("EA")}
+              ${statCell("PA")}
+              ${statCell("ED")}
+              ${statCell("PD")}
+            </div>
+
+            <div class="presetRelics">
+              ${relicImgs}
+            </div>
+
+            <div class="presetActions">
+              <button class="btn btn--accent" type="button" data-act="load">Load</button>
+              <button class="btn" type="button" data-act="edit">Edit</button>
+            </div>
+          </div>
+        </div>
+      `;
+    }).join("");
+
+    // bind buttons
+    grid.querySelectorAll(".presetCard").forEach(card => {
+      const key = card.getAttribute("data-preset");
+      const preset = presets[key];
+      if (!preset) return;
+
+      card.querySelector('[data-act="load"]')?.addEventListener("click", () => {
+        applyPreset("atk", preset);
+        closePresetModal();
+      });
+
+      card.querySelector('[data-act="edit"]')?.addEventListener("click", () => {
+        // Edit = cargar preset y cerrar, para que lo modifiques en la UI
+        applyPreset("atk", preset);
+        closePresetModal();
+      });
+    });
+  };
+
+  search.value = "";
+  render("");
+  search.oninput = () => render(search.value);
+
+  modal.hidden = false;
+}
+
+function closePresetModal(){
+  const modal = $("#presetModal");
+  if (modal) modal.hidden = true;
+}
+
+/* =========================================================
    APPLY MISCRIT SELECTION
 ========================================================= */
 
@@ -931,7 +1233,11 @@ function bindAll() {
     renderResult();
   });
 
+  $("#atkLoadPreset")?.addEventListener("click", openPresetModal);
+  $("#atkSavePreset")?.addEventListener("click", () => savePresetFlow("atk"));
+
   document.addEventListener("click", (e) => {
+    if (e.target.closest('[data-action="close-presets"]')) closePresetModal();
     if (e.target.closest('[data-action="close-moves"]')) {
       const modal = $("#moveModal");
       if (modal) modal.hidden = true;
@@ -941,6 +1247,7 @@ function bindAll() {
 
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") {
+      closePresetModal();
       closeRelicModal();
       const modal = $("#moveModal");
       if (modal) modal.hidden = true;

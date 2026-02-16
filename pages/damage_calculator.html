@@ -88,6 +88,41 @@
 
 				<span>Swap</span>
 			</button>
+
+      <button id="atkSavePreset"
+            class="btnSwap"
+            type="button"
+            aria-label="Save attacker preset">
+
+      <svg viewBox="0 0 24 24" class="btnSwap__icon" aria-hidden="true">
+        <path d="M7 7h10v14H7zM9 3h6v4H9z"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"/>
+      </svg>
+
+      <span>Save</span>
+    </button>
+
+    <button id="atkLoadPreset"
+            class="btnSwap"
+            type="button"
+            aria-label="Load attacker preset">
+
+      <svg viewBox="0 0 24 24" class="btnSwap__icon" aria-hidden="true">
+        <path d="M12 3v10m0 0l-4-4m4 4l4-4M5 21h14"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"/>
+      </svg>
+
+      <span>Load</span>
+    </button>
+
 		</div>
 
 		<section class="dmgGrid">
@@ -372,6 +407,24 @@
 
         <div id="moveListGrid" class="movegrid"></div>
         <select id="atkAttackPicker" class="hidden"></select>
+      </div>
+    </div>
+
+    <!-- PRESET MODAL -->
+    <div class="modal" id="presetModal" hidden>
+      <div class="modal__overlay" data-action="close-presets"></div>
+
+      <div class="modal__card card modal__card--wide">
+        <div class="modal__head">
+          <div class="modal__title">Saved Miscrits</div>
+          <button class="btn" type="button" data-action="close-presets">Close</button>
+        </div>
+
+        <div class="modal__search">
+          <input id="presetSearch" class="input" type="text" placeholder="Search preset..." />
+        </div>
+
+        <div id="presetGrid" class="presetGrid"></div>
       </div>
     </div>
   </main>
