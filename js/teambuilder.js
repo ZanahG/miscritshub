@@ -100,7 +100,6 @@ function openCounterDisclaimer() {
   const modal = document.getElementById("cfDisclaimer");
   if (!modal) return Promise.resolve(true);
 
-  // if user opted out, skip
   const skip = localStorage.getItem(CF_DISCLAIMER_KEY) === "1";
   if (skip) return Promise.resolve(true);
 
@@ -289,8 +288,8 @@ function counterScore(candidateName, yourTeamSlots) {
     const tHP = Math.max(1, statOfTotals(tTotals, "HP"));
     const tElems = s.elements || getElementsForName(s.name);
 
-    const out = pickBestMoveVs(candidateName, candTotals, s.name, tTotals, tElems).dmg; // cand -> slot
-    const inn = pickBestMoveVs(s.name, tTotals, candidateName, candTotals, getElementsForName(candidateName)).dmg; // slot -> cand
+    const out = pickBestMoveVs(candidateName, candTotals, s.name, tTotals, tElems).dmg;
+    const inn = pickBestMoveVs(s.name, tTotals, candidateName, candTotals, getElementsForName(candidateName)).dmg;
 
     const offense = out / tHP;
     const defense = 1 - (inn / candHP);
@@ -561,7 +560,7 @@ function avgTeamStats(slots){
   return acc;
 }
 
-function drawRadar(ctx, x, y, r, labels, values01){
+function drawRadar(ctx, x, y, r, labels, values01, valuesRaw, capsByKey){
   const N = labels.length;
   const startAng = -Math.PI / 2;
 
@@ -573,6 +572,7 @@ function drawRadar(ctx, x, y, r, labels, values01){
   ctx.save();
   ctx.globalAlpha = 0.9;
 
+  // grid
   for (let g=1; g<=4; g++){
     const gr = r * (g/4);
     ctx.beginPath();
@@ -584,17 +584,41 @@ function drawRadar(ctx, x, y, r, labels, values01){
     ctx.stroke();
   }
 
+  // axis + labels + caps
   for (let i=0;i<N;i++){
     const p = pt(i, r);
+
     ctx.beginPath();
     ctx.moveTo(x,y);
     ctx.lineTo(p.x,p.y);
+    ctx.strokeStyle = "rgba(255,255,255,0.12)";
     ctx.stroke();
 
-    const lp = pt(i, r + 16);
-    ctx.fillText(labels[i], lp.x, lp.y);
+    const key = labels[i];
+    const raw = Math.round(Number(valuesRaw?.[key] ?? 0));
+    const cap = Math.round(Number(capsByKey?.[key] ?? 0));
+
+    const lp = pt(i, r + 22);
+    const tp = pt(i, r + 6);
+
+    ctx.save();
+    ctx.textAlign = "center";
+    ctx.textBaseline = "middle";
+
+    // ===== LABEL =====
+    ctx.font = "900 14px system-ui";
+    ctx.fillStyle = "rgba(255,255,255,0.85)";
+    ctx.fillText(key, lp.x, lp.y - 10);
+
+    // ===== AVG VALUE =====
+    ctx.font = "800 13px system-ui";
+    ctx.fillStyle = "#49e1fc";
+    ctx.fillText(raw, lp.x, lp.y + 15);
+
+    ctx.restore();
   }
 
+  // polygon
   ctx.globalAlpha = 1;
   ctx.beginPath();
   for (let i=0;i<N;i++){
@@ -604,7 +628,6 @@ function drawRadar(ctx, x, y, r, labels, values01){
   ctx.closePath();
   ctx.fill();
   ctx.stroke();
-
   ctx.restore();
 }
 
@@ -948,10 +971,10 @@ async function renderImgPreview() {
   ctx.textBaseline = "middle";
 
   const radarX = 1400;
-  const radarY = 135;
+  const radarY = 160;
   const radarR = 105;
 
-  drawRadar(ctx, radarX, radarY, radarR, STAT_KEYS, values01);
+  drawRadar(ctx, radarX, radarY, radarR, STAT_KEYS, values01, teamAvg, RADAR_CAPS);
   ctx.restore();
 
   ctx.save();
