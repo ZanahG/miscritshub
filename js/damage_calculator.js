@@ -15,6 +15,9 @@ const $ = (sel) => document.querySelector(sel);
 
 let DB = [];
 let RELICS = [];
+let MISCRITS_RELICS = [];
+let RELIC_NAME_BY_KEY = new Map();
+let REC_BY_NAME = new Map();
 let RELIC_BY_NAME = new Map();
 
 let MISCRITS_META = [];
@@ -49,6 +52,29 @@ let atkUseEnhanced = false;
 function getSideColors(side) {
   return side === "atk" ? ATK_COLORS : DEF_COLORS;
 }
+
+function relicKey(str){
+  return (str ?? "")
+    .toString()
+    .toLowerCase()
+    .replace(/['’]/g, "")
+    .replace(/\s+/g, "_")
+    .replace(/[^\w_]/g, "")
+    .trim();
+}
+window.relicKey = relicKey;
+
+function normalizeRelicValueToDisplayName(val){
+  const raw = (val ?? "").toString().trim();
+  if (!raw) return "";
+
+  if (RELIC_NAME_BY_KEY.has(relicKey(raw))) {
+    return RELIC_NAME_BY_KEY.get(relicKey(raw)) || raw;
+  }
+
+  return raw;
+}
+
 
 /* =========================================================
    BASE STATS CALCULATOR
@@ -399,7 +425,9 @@ function setSideRelics(side, relicArr) {
   for (let i = 0; i < 4; i++) {
     const sel = getRelicSelect(side, i);
     if (!sel) continue;
-    sel.value = (relicArr?.[i] ?? "").toString();
+
+    const v = normalizeRelicValueToDisplayName(relicArr?.[i]);
+    sel.value = v;
   }
 }
 
@@ -413,7 +441,6 @@ function buildPreset(side) {
     bonus: { ...getCommittedBonus(side) },
   };
 
-  // opcional: guardar toggle enhanced SOLO para attacker
   if (side === "atk") preset.useEnhanced = !!atkUseEnhanced;
 
   return preset;
@@ -582,7 +609,7 @@ function openPresetModal(){
 
       const relicImgs = relics.map((name) => {
         const n = (name ?? "").toString().trim();
-        const r = n ? RELIC_BY_NAME.get(n) : null;
+        const r = n ? RELIC_BY_NAME.get(relicKey(n)) : null;
         const src = r ? relicIconSrc(r) : RELIC_PLACEHOLDER;
         const alt = n || "Empty";
         return `<img class="presetRelic" src="${src}" alt="${alt}" title="${alt}" onerror="this.src='${RELIC_PLACEHOLDER}'">`;
@@ -782,7 +809,7 @@ function applyRelicStatsBySlot(stats, selections) {
   const out = { ...stats };
 
   for (const { slot, name } of selections) {
-    const r = RELIC_BY_NAME.get(name);
+    const r = name ? RELIC_BY_NAME.get(relicKey(name)) : null;
     if (!r) continue;
 
     const lvl = SLOT_LEVELS[slot] ?? 35;
@@ -888,7 +915,7 @@ function setSlotButtonUI(side, slot) {
   const sel = getRelicSelect(side, slot);
   const name = (sel?.value ?? "").toString().trim();
 
-  const r = name ? RELIC_BY_NAME.get(name) : null;
+  const r = name ? RELIC_BY_NAME.get(relicKey(name)) : null;
   const img = r ? relicIconSrc(r) : RELIC_PLACEHOLDER;
 
   host.dataset.relicName = name || "";
@@ -1006,6 +1033,35 @@ function populateRelicSelects() {
     sel.innerHTML = html;
   });
 }
+
+function applyStandardDefender() {
+  if (!defId) return;
+
+  const b = { HP:27, SPD:1, EA:27, PA:27, ED:27, PD:27 };
+  setCommittedBonus("def", b);
+  writeBonusDraft("def", b);
+  updateBonusUI("def");
+
+  const rec = REC_BY_NAME.get(normalize(defId));
+
+  if (rec?.relics_by_level) {
+    const by = rec.relics_by_level;
+
+    const picks = [ "", "", "", "" ];
+    for (let slot = 0; slot < 4; slot++) {
+      const lvl = String(getSlotLevel(slot));
+      const list = by[lvl] ?? by[toNum(lvl)];
+      picks[slot] = (Array.isArray(list) && list[0]) ? String(list[0]) : "";
+    }
+
+    setSideRelics("def", picks);
+  }
+
+  refreshAllRelicSlots();
+  refreshSideStatsFromRelics("def");
+  renderResult();
+}
+
 
 /* =========================================================
    RESULT
@@ -1170,20 +1226,31 @@ function swapSides() {
 ========================================================= */
 
 async function loadAll() {
-  const [dbRes, relicRes, metaRes, baseStatsRes] = await Promise.all([
+  const [dbRes, relicRes, metaRes, baseStatsRes, miscritsRelicsRes] = await Promise.all([
     fetch("../assets/data/miscritsdb.json", { cache: "no-store" }),
     fetch("../assets/data/relics.json", { cache: "no-store" }),
     fetch("../assets/data/miscrits_meta.json", { cache: "no-store" }),
     fetch("../assets/data/base_stats.json", { cache: "no-store" }),
+    fetch("../assets/data/miscrits_relics.json", { cache: "no-store" }),
   ]);
 
   if (!dbRes.ok) throw new Error(`HTTP ${dbRes.status} loading miscritsdb.json`);
   if (!relicRes.ok) throw new Error(`HTTP ${relicRes.status} loading relics.json`);
   if (!metaRes.ok) throw new Error(`HTTP ${metaRes.status} loading miscrits_meta.json`);
   if (!baseStatsRes.ok) throw new Error(`HTTP ${baseStatsRes.status} loading base_stats.json`);
+  if (!miscritsRelicsRes.ok) throw new Error(`HTTP ${miscritsRelicsRes.status} loading miscrits_relics.json`);
 
   DB = await dbRes.json();
   RELICS = await relicRes.json();
+
+  const miscritsRelicsJson = await miscritsRelicsRes.json();
+  MISCRITS_RELICS = miscritsRelicsJson?.miscrits ?? miscritsRelicsJson ?? [];
+
+  REC_BY_NAME = new Map(
+    MISCRITS_RELICS
+      .filter(x => x?.name)
+      .map(x => [normalize(x.name), x])
+  );
 
   const metaJson = await metaRes.json();
   MISCRITS_META = metaJson?.miscrits ?? metaJson ?? [];
@@ -1191,7 +1258,10 @@ async function loadAll() {
   const baseStatsJson = await baseStatsRes.json();
   BASE_STATS = Array.isArray(baseStatsJson) ? baseStatsJson : (baseStatsJson?.miscrits ?? []);
 
-  RELIC_BY_NAME = new Map(RELICS.map(r => [r.name, r]));
+  RELIC_BY_NAME = new Map(RELICS.map(r => [relicKey(r.name), r]));
+  RELIC_NAME_BY_KEY = new Map(RELICS.map(r => [relicKey(r.name), r.name]));
+
+  window.__RELIC_NAME_BY_KEY = RELIC_NAME_BY_KEY; 
 
   AVATAR_BY_NAME = new Map(
     MISCRITS_META
@@ -1212,6 +1282,8 @@ async function loadAll() {
 function bindAll() {
   bindMiscritPicker("atk");
   bindMiscritPicker("def");
+
+  $("#defStandardStats")?.addEventListener("click", applyStandardDefender);
 
   $("#openMoveList")?.addEventListener("click", () => {
     const modal = $("#moveModal");
