@@ -2645,7 +2645,7 @@
   },
   {
     "name": "Nanaslug",
-    "elements": ["water", "wind"],
+    "elements": ["water","wind"],
     "attacks": [
       {"name":"Spray","element":"water","ap":7,"hits":1},
       {"name":"Smack","element":"physical","ap":7,"hits":1},
@@ -2713,7 +2713,7 @@
   },
   {
     "name": "Freedom",
-    "elements": ["fire", "wind"],
+    "elements": ["fire","wind"],
     "attacks": [
       {"name":"Swipe","element":"physical","ap":7,"hits":1},
       {"name":"Cinders","element":"fire","ap":7,"hits":1},
@@ -2801,7 +2801,7 @@
   },
   {
     "name": "Shurikoon",
-    "elements": ["fire", "wind"],
+    "elements": ["fire","wind"],
     "attacks": [
       {"name":"Poke","element":"physical","ap":7,"hits":1},
       {"name":"Ghostly Glow","element":"fire","ap":11,"hits":1},
@@ -3061,7 +3061,7 @@
   },
   {
     "name": "Cadbunny",
-    "elements": ["water", "earth"],
+    "elements": ["water","earth"],
     "attacks": [
       {"name":"Rubble","element":"earth","ap":7,"hits":1},
       {"name":"Spray","element":"water","ap":7,"hits":1},
@@ -3267,7 +3267,7 @@
   },
   {
     "name": "Splender",
-    "elements": ["nature", "earth"],
+    "elements": ["nature","earth"],
     "attacks": [
       {"name":"Swipe","element":"physical","ap":7,"hits":1},
       {"name":"Bite","element":"physical","ap":7,"hits":1},
@@ -3291,7 +3291,7 @@
   },
   {
     "name": "Dorux",
-    "elements": ["fire", "lightning"],
+    "elements": ["fire","lightning"],
     "attacks": [
       {"name":"Swipe","element":"physical","ap":7,"hits":1},
       {"name":"Hard Jab","element":"physical","ap":20,"hits":1},
@@ -3381,7 +3381,7 @@
   },
   {
     "name": "Defilio",
-    "elements": ["nature", "earth"],
+    "elements": ["nature","earth"],
     "attacks": [
       {"name":"Spoiled Smack","element":"earth","ap":31,"hits":1},
       {"name":"Overgrowth","element":"nature","ap":25,"hits":1},
@@ -3447,7 +3447,7 @@
   },
   {
     "name": "Blobroller",
-    "elements": ["nature", "lightning"],
+    "elements": ["nature","lightning"],
     "attacks": [
       {"name":"Bite","element":"physical","ap":7,"hits":1},
       {"name":"Hogtied","element":"nature","ap":17,"hits":1},
@@ -3471,7 +3471,7 @@
   },
   {
     "name": "Light Nibbles",
-    "elements": ["water", "lightning"],
+    "elements": ["water","lightning"],
     "attacks": [
       {"name":"Sprinkle","element":"water","ap":7,"hits":1},
       {"name":"Zap","element":"lightning","ap":7,"hits":1},
@@ -3541,7 +3541,7 @@
   },
   {
     "name": "Light Zaptor",
-    "elements": ["nature", "lightning"],
+    "elements": ["nature","lightning"],
     "attacks": [
       {"name":"Poke","element":"physical","ap":7,"hits":1},
       {"name":"Reap","element":"nature","ap":15,"hits":1},
@@ -3587,7 +3587,7 @@
   },
   {
     "name": "Light Statikat",
-    "elements": ["fire", "lightning"],
+    "elements": ["fire","lightning"],
     "attacks": [
       {"name":"Headbutt","element":"physical","ap":7,"hits":1},
       {"name":"Electrify","element":"lightning","ap":15,"hits":1},
@@ -4026,7 +4026,7 @@
   },
   {
     "name": "Light Rafiery",
-    "elements": ["fire", "lightning"],
+    "elements": ["fire","lightning"],
     "attacks": [
       {"name":"Cinders","element":"fire","ap":7,"hits":1},
       {"name":"Zap","element":"lightning","ap":7,"hits":1},
@@ -4050,7 +4050,7 @@
   },
   {
     "name": "Light Fossillia",
-    "elements": ["water", "earth"],
+    "elements": ["water","earth"],
     "attacks": [
       {"name":"Swipe","element":"physical","ap":7,"hits":1},
       {"name":"Spray","element":"water","ap":7,"hits":1},
@@ -4113,7 +4113,7 @@
   },
   {
     "name": "Light Flue",
-    "elements": ["fire", "wind"],
+    "elements": ["fire","wind"],
     "attacks": [
       {"name":"Smack","element":"physical","ap":7,"hits":1},
       {"name":"Gale","element":"wind","ap":15,"hits":1},
@@ -4137,7 +4137,7 @@
   },
   {
     "name": "Light Grubbean",
-    "elements": ["nature", "wind"],
+    "elements": ["nature","wind"],
     "attacks": [
       {"name":"Bite","element":"physical","ap":7,"hits":1},
       {"name":"Leaves","element":"nature","ap":7,"hits":1},
@@ -4205,7 +4205,7 @@
   },
   {
     "name": "Light Wavesling",
-    "elements": ["water", "wind"],
+    "elements": ["water","wind"],
     "attacks": [
       {"name":"Headbutt","element":"physical","ap":7,"hits":1},
       {"name":"Sprinkle","element":"water","ap":7,"hits":1},
@@ -4313,7 +4313,7 @@
   },
   {
     "name": "Light Digsy",
-    "elements": ["fire", "earth"],
+    "elements": ["fire","earth"],
     "attacks": [
       {"name":"Balefire","element":"fire","ap":25,"hits":1},
       {"name":"Claw","element":"physical","ap":15,"hits":1},
@@ -4335,7 +4335,7 @@
   },
   {
     "name": "Light Ignios",
-    "elements": ["fire", "lightning"],
+    "elements": ["fire","lightning"],
     "attacks": [
       {"name":"Slayer Of Dark","element":"lightning","ap":29,"hits":1},
       {"name":"Zapping Burns","element":"fire","ap":7,"hits":1},
@@ -4507,7 +4507,7 @@
   },
   {
     "name": "Keeper",
-    "elements": ["nature", "earth"],
+    "elements": ["nature","earth"],
     "attacks": [
       {"name":"Leaves","element":"nature","ap":7,"hits":1},
       {"name":"Hit","element":"physical","ap":7,"hits":1},
@@ -4613,7 +4613,7 @@
   },
   {
     "name": "Light Weevern",
-    "elements": ["nature", "earth"],
+    "elements": ["nature","earth"],
     "attacks": [
       {"name":"Shove","element":"physical","ap":7,"hits":1},
       {"name":"Hard Jab","element":"physical","ap":20,"hits":1},
@@ -4787,7 +4787,7 @@
   },
   {
     "name": "Light Snorkels",
-    "elements": ["water", "wind"],
+    "elements": ["water","wind"],
     "attacks": [
       {"name":"Geyser","element":"water","ap":20,"hits":1},
       {"name":"Smack","element":"physical","ap":7,"hits":1},
@@ -5127,7 +5127,7 @@
   },
   {
     "name": "Aebex",
-    "elements": ["nature", "wind"],
+    "elements": ["nature","wind"],
     "attacks": [
       {"name":"Bite","element":"physical","ap":7,"hits":1},
       {"name":"Thump","element":"physical","ap":20,"hits":1},
@@ -5355,7 +5355,7 @@
   },
   {
     "name": "Voidotron",
-    "elements": ["fire", "wind"],
+    "elements": ["fire","wind"],
     "attacks": [
       {"name":"Burn","element":"fire","ap":7,"hits":1},
       {"name":"Blow","element":"wind","ap":7,"hits":1},
@@ -5487,7 +5487,7 @@
   },
   {
     "name": "Oozie",
-    "elements": ["water", "lightning"],
+    "elements": ["water","lightning"],
     "attacks": [
       {"name":"Headbutt","element":"physical","ap":7,"hits":1},
       {"name":"Electrify","element":"lightning","ap":15,"hits":1},
@@ -5509,7 +5509,7 @@
   },
   {
     "name": "Lunako",
-    "elements": ["fire", "earth"],
+    "elements": ["fire","earth"],
     "attacks": [
       {"name":"Smack","element":"physical","ap":7,"hits":1},
       {"name":"Moon Dust","element":"earth","ap":10,"hits":1},
@@ -5601,7 +5601,7 @@
   },
   {
     "name": "Bunplop",
-    "elements": ["water", "earth"],
+    "elements": ["water","earth"],
     "attacks": [
       {"name":"Bite","element":"physical","ap":7,"hits":1},
       {"name":"Earthquake","element":"earth","ap":30,"hits":1},
@@ -5649,7 +5649,7 @@
   },
   {
     "name": "Flaclay",
-    "elements": ["fire", "earth"],
+    "elements": ["fire","earth"],
     "attacks": [
       {"name":"Magma Blast","element":"fire","ap":5,"hits":1},
       {"name":"Subsuming Blaze","element":"fire","ap":25,"hits":1},
@@ -5758,7 +5758,7 @@
   },
   {
     "name": "Mooncrit",
-    "elements": ["water", "earth"],
+    "elements": ["water","earth"],
     "attacks": [
       {"name":"Hydro","element":"water","ap":25,"hits":1},
       {"name":"Stony Eclipse","element":"earth","ap":10,"hits":1},
@@ -5930,7 +5930,7 @@
   },
   {
     "name": "Goo",
-    "elements": ["water", "earth"],
+    "elements": ["water","earth"],
     "attacks": [
       {"name":"Crumble","element":"earth","ap":7,"hits":1},
       {"name":"Sprinkle","element":"water","ap":7,"hits":1},
@@ -5954,7 +5954,7 @@
   },
   {
     "name": "Avarus",
-    "elements": ["fire", "wind"],
+    "elements": ["fire","wind"],
     "attacks": [
       {"name":"Cinders","element":"fire","ap":7,"hits":1},
       {"name":"Breeze","element":"wind","ap":7,"hits":1},
@@ -6130,7 +6130,7 @@
   },
   {
     "name": "Hekatom",
-    "elements": ["nature", "wind"],
+    "elements": ["nature","wind"],
     "attacks": [
       {"name":"Wisp","element":"nature","ap":7,"hits":1},
       {"name":"Breeze","element":"wind","ap":7,"hits":1},
@@ -6365,6 +6365,84 @@
     ]
   },
   {
+    "name": "Poppet",
+    "elements": ["fire"],
+    "attacks": [
+      {"name":"Burn","element":"fire","ap":7,"hits":1},
+      {"name":"Poke","element":"physical","ap":7,"hits":1},
+      {"name":"Bash","element":"physical","ap":15,"hits":1},
+      {"name":"Bonfire","element":"fire","ap":20,"hits":1},
+      {"name":"Burn Out","element":"fire","ap":32,"hits":1}
+    ],
+    "enhancedAttacks": [
+      {"name":"Burn","element":"fire","ap":8,"hits":1},
+      {"name":"Poke","element":"physical","ap":8,"hits":1},
+      {"name":"Bash","element":"physical","ap":18,"hits":1},
+      {"name":"Bonfire","element":"fire","ap":22,"hits":1},
+      {"name":"Burn Out","element":"fire","ap":32,"hits":1}
+    ]
+  },
+  {
+    "name": "Nubyll",
+    "elements": ["lightning"],
+    "attacks": [
+      {"name":"Zap","element":"lightning","ap":7,"hits":1},
+      {"name":"Headbutt","element":"physical","ap":7,"hits":1},
+      {"name":"Precision Bolt","element":"lightning","ap":10,"hits":1},
+      {"name":"Strike","element":"physical","ap":15,"hits":1},
+      {"name":"Voltage","element":"lightning","ap":20,"hits":1},
+      {"name":"Enlightning","element":"lightning","ap":27,"hits":1}
+    ],
+    "enhancedAttacks": [
+      {"name":"Zap","element":"lightning","ap":8,"hits":1},
+      {"name":"Headbutt","element":"physical","ap":8,"hits":1},
+      {"name":"Precision Bolt","element":"lightning","ap":10,"hits":1},
+      {"name":"Strike","element":"physical","ap":18,"hits":1},
+      {"name":"Voltage","element":"lightning","ap":24,"hits":1},
+      {"name":"Enlightning","element":"lightning","ap":31,"hits":1}
+    ]
+  },
+  {
+    "name": "Elphin",
+    "elements": ["water"],
+    "attacks": [
+      {"name":"Sprinkle","element":"water","ap":7,"hits":1},
+      {"name":"Shove","element":"physical","ap":7,"hits":1},
+      {"name":"Roughhose","element":"water","ap":11,"hits":1},
+      {"name":"Geyser","element":"physical","ap":15,"hits":1},
+      {"name":"Geyser","element":"water","ap":20,"hits":1},
+      {"name":"Opulent Torrent","element":"water","ap":30,"hits":1}
+    ],
+    "enhancedAttacks": [
+      {"name":"Sprinkle","element":"water","ap":8,"hits":1},
+      {"name":"Shove","element":"physical","ap":8,"hits":1},
+      {"name":"Roughhose","element":"water","ap":13,"hits":1},
+      {"name":"Geyser","element":"physical","ap":18,"hits":1},
+      {"name":"Geyser","element":"water","ap":24,"hits":1},
+      {"name":"Opulent Torrent","element":"water","ap":32,"hits":1}
+    ]
+  },
+  {
+    "name": "Luvcraft",
+    "elements": ["fire"],
+    "attacks": [
+      {"name":"Burn","element":"fire","ap":7,"hits":1},
+      {"name":"Slap","element":"physical","ap":7,"hits":1},
+      {"name":"Toxic Love","element":"fire","ap":10,"hits":1},
+      {"name":"Whammy","element":"physical","ap":10,"hits":1},
+      {"name":"Passion","element":"fire","ap":20,"hits":1},
+      {"name":"Eldritch Inferno","element":"fire","ap":30,"hits":1}
+    ],
+    "enhancedAttacks": [
+      {"name":"Burn","element":"fire","ap":8,"hits":1},
+      {"name":"Slap","element":"physical","ap":8,"hits":1},
+      {"name":"Toxic Love","element":"fire","ap":10,"hits":1},
+      {"name":"Whammy","element":"physical","ap":12,"hits":1},
+      {"name":"Passion","element":"fire","ap":25,"hits":1},
+      {"name":"Eldritch Inferno","element":"fire","ap":33,"hits":1}
+    ]
+  },
+  {
     "name": "Damse",
     "elements": ["lightning"],
     "attacks": [
@@ -6407,209 +6485,43 @@
     ]
   },
   {
-    "name": "Dark Weevern",
-    "elements": ["nature"],
-    "attacks": [
-      {"name":"Wisp","element":"nature","ap":7,"hits":1},
-      {"name":"Shove","element":"physical","ap":7,"hits":1},
-      {"name":"Dark Leaf Blade","element":"nature","ap":11,"hits":1},
-      {"name":"Mother Nature","element":"nature","ap":20,"hits":1},
-      {"name":"Hard Jab","element":"physical","ap":20,"hits":1},
-      {"name":"Dark Dual Dragon","element":"nature","ap":17,"hits":2}
-    ],
-    "enhancedAttacks": [
-      {"name":"Wisp","element":"nature","ap":8,"hits":1},
-      {"name":"Shove","element":"physical","ap":8,"hits":1},
-      {"name":"Dark Leaf Blade","element":"nature","ap":13,"hits":1},
-      {"name":"Mother Nature","element":"nature","ap":24,"hits":1},
-      {"name":"Hard Jab","element":"physical","ap":24,"hits":1},
-      {"name":"Dark Dual Dragon","element":"nature","ap":17,"hits":2}
-    ]
-  },
-  {
-    "name": "Dark Whik",
-    "elements": ["fire"],
-    "attacks": [
-      {"name":"Cinders","element":"fire","ap":7,"hits":1},
-      {"name":"Bite","element":"physical","ap":7,"hits":1},
-      {"name":"Dark Gecko Glow","element":"fire","ap":10,"hits":1},
-      {"name":"Claw","element":"physical","ap":15,"hits":1},
-      {"name":"Passion","element":"fire","ap":20,"hits":1},
-      {"name":"Destruction","element":"physical","ap":25,"hits":1},
-      {"name":"Dark Rapid Oxidation","element":"fire","ap":27,"hits":1}
-    ],
-    "enhancedAttacks": [
-      {"name":"Cinders","element":"fire","ap":8,"hits":1},
-      {"name":"Bite","element":"physical","ap":8,"hits":1},
-      {"name":"Dark Gecko Glow","element":"fire","ap":13,"hits":1},
-      {"name":"Claw","element":"physical","ap":18,"hits":1},
-      {"name":"Passion","element":"fire","ap":25,"hits":1},
-      {"name":"Destruction","element":"physical","ap":25,"hits":1},
-      {"name":"Dark Rapid Oxidation","element":"fire","ap":31,"hits":1}
-    ]
-  },
-  {
-    "name": "Foil Liquifien",
-    "elements": ["water"],
-    "attacks": [
-      {"name":"Sprinkle","element":"water","ap":7,"hits":1},
-      {"name":"Slap","element":"physical","ap":7,"hits":1},
-      {"name":"Foil Freezing Stare","element":"water","ap":9,"hits":1},
-      {"name":"H2O","element":"water","ap":15,"hits":1},
-      {"name":"Geyser","element":"water","ap":20,"hits":1},
-      {"name":"Destruction","element":"physical","ap":25,"hits":1},
-      {"name":"Foil Ancient Splash","element":"water","ap":29,"hits":1}
-    ],
-    "enhancedAttacks": [
-      {"name":"Sprinkle","element":"water","ap":8,"hits":1},
-      {"name":"Slap","element":"physical","ap":8,"hits":1},
-      {"name":"Foil Freezing Stare","element":"water","ap":11,"hits":1},
-      {"name":"H2O","element":"water","ap":15,"hits":1},
-      {"name":"Geyser","element":"water","ap":24,"hits":1},
-      {"name":"Destruction","element":"physical","ap":25,"hits":1},
-      {"name":"Foil Ancient Splash","element":"water","ap":33,"hits":1}
-    ]
-  },
-  {
-    "name": "Liquifien",
-    "elements": ["water"],
-    "attacks": [
-      {"name":"Sprinkle","element":"water","ap":7,"hits":1},
-      {"name":"Slap","element":"physical","ap":7,"hits":1},
-      {"name":"Freezing Stare","element":"water","ap":7,"hits":1},
-      {"name":"H2O","element":"water","ap":15,"hits":1},
-      {"name":"Geyser","element":"water","ap":20,"hits":1},
-      {"name":"Destruction","element":"physical","ap":25,"hits":1},
-      {"name":"Ancient Splash","element":"water","ap":27,"hits":1}
-    ],
-    "enhancedAttacks": [
-      {"name":"Sprinkle","element":"water","ap":8,"hits":1},
-      {"name":"Slap","element":"physical","ap":8,"hits":1},
-      {"name":"Freezing Stare","element":"water","ap":9,"hits":1},
-      {"name":"H2O","element":"water","ap":15,"hits":1},
-      {"name":"Geyser","element":"water","ap":24,"hits":1},
-      {"name":"Destruction","element":"physical","ap":25,"hits":1},
-      {"name":"Ancient Splash","element":"water","ap":31,"hits":1}
-    ]
-  },
-  {
-    "name": "Pangoleaf",
+    "name": "Viperd",
     "elements": ["nature"],
     "attacks": [
       {"name":"Vines","element":"nature","ap":7,"hits":1},
-      {"name":"Bite","element":"physical","ap":7,"hits":1},
-      {"name":"Tail Spikes","element":"physical","ap":11,"hits":1},
-      {"name":"Claw","element":"physical","ap":15,"hits":1},
-      {"name":"Overgrowth","element":"nature","ap":25,"hits":1},
-      {"name":"Cactus Crash","element":"physical","ap":28,"hits":1}
+      {"name":"Headbutt","element":"physical","ap":7,"hits":1},
+      {"name":"Vine Lash","element":"nature","ap":3,"hits":3},
+      {"name":"Bash","element":"physical","ap":15,"hits":1},
+      {"name":"Mother Nature","element":"nature","ap":20,"hits":1},
+      {"name":"Beating Wings","element":"nature","ap":25,"hits":1}
     ],
     "enhancedAttacks": [
       {"name":"Vines","element":"nature","ap":8,"hits":1},
-      {"name":"Bite","element":"physical","ap":8,"hits":1},
-      {"name":"Tail Spikes","element":"physical","ap":13,"hits":1},
-      {"name":"Claw","element":"physical","ap":18,"hits":1},
-      {"name":"Overgrowth","element":"nature","ap":30,"hits":1},
-      {"name":"Cactus Crash","element":"physical","ap":31,"hits":1}
-    ]
-  },
-  {
-    "name": "Bloombat",
-    "elements": ["nature"],
-    "attacks": [
-      {"name":"Leaves","element":"nature","ap":7,"hits":1},
-      {"name":"Bite","element":"physical","ap":7,"hits":1},
-      {"name":"Sickly Sweet","element":"nature","ap":11,"hits":1},
-      {"name":"Mother Nature","element":"nature","ap":20,"hits":1},
-      {"name":"Destruction","element":"physical","ap":25,"hits":1},
-      {"name":"Feed","element":"nature","ap":27,"hits":1}
-    ],
-    "enhancedAttacks": [
-      {"name":"Leaves","element":"nature","ap":8,"hits":1},
-      {"name":"Bite","element":"physical","ap":8,"hits":1},
-      {"name":"Sickly Sweet","element":"nature","ap":13,"hits":1},
+      {"name":"Headbutt","element":"physical","ap":8,"hits":1},
+      {"name":"Vine Lash","element":"nature","ap":3,"hits":4},
+      {"name":"Bash","element":"physical","ap":18,"hits":1},
       {"name":"Mother Nature","element":"nature","ap":24,"hits":1},
-      {"name":"Destruction","element":"physical","ap":25,"hits":1},
-      {"name":"Feed","element":"nature","ap":31,"hits":1}
+      {"name":"Beating Wings","element":"nature","ap":30,"hits":1}
     ]
   },
   {
-    "name": "Bunaken",
+    "name": "Blowpuffle",
     "elements": ["water"],
     "attacks": [
-      {"name":"Sprinkle","element":"water","ap":7,"hits":1},
-      {"name":"Bite","element":"physical","ap":7,"hits":1},
-      {"name":"Masamba Water Beam","element":"water","ap":13,"hits":1},
-      {"name":"Whammy","element":"physical","ap":10,"hits":1},
-      {"name":"Resplendent Rain","element":"water","ap":25,"hits":1},
-      {"name":"Nusantara Whirlpool","element":"water","ap":30,"hits":1}
+      {"name":"Spray","element":"water","ap":7,"hits":1},
+      {"name":"Smack","element":"physical","ap":7,"hits":1},
+      {"name":"Torrent","element":"water","ap":10,"hits":1},
+      {"name":"H2O","element":"water","ap":15,"hits":1},
+      {"name":"Geyser","element":"water","ap":20,"hits":1},
+      {"name":"Feeler Flail","element":"water","ap":25,"hits":1}
     ],
     "enhancedAttacks": [
-      {"name":"Sprinkle","element":"water","ap":8,"hits":1},
-      {"name":"Bite","element":"physical","ap":8,"hits":1},
-      {"name":"Masamba Water Beam","element":"water","ap":15,"hits":1},
-      {"name":"Whammy","element":"physical","ap":12,"hits":1},
-      {"name":"Resplendent Rain","element":"water","ap":25,"hits":1},
-      {"name":"Nusantara Whirlpool","element":"water","ap":33,"hits":1}
-    ]
-  },
-  {
-    "name": "Kitpole",
-    "elements": ["fire"],
-    "attacks": [
-      {"name":"Cinders","element":"fire","ap":7,"hits":1},
-      {"name":"Headbutt","element":"physical","ap":7,"hits":1},
-      {"name":"Burning Tongue","element":"fire","ap":5,"hits":1},
-      {"name":"Engulf","element":"fire","ap":15,"hits":1},
-      {"name":"Passion","element":"fire","ap":20,"hits":1},
-      {"name":"Nine-Tailed Blaze","element":"fire","ap":30,"hits":1}
-    ],
-    "enhancedAttacks": [
-      {"name":"Cinders","element":"fire","ap":8,"hits":1},
-      {"name":"Headbutt","element":"physical","ap":8,"hits":1},
-      {"name":"Burning Tongue","element":"fire","ap":6,"hits":1},
-      {"name":"Engulf","element":"fire","ap":18,"hits":1},
-      {"name":"Passion","element":"fire","ap":25,"hits":1},
-      {"name":"Nine-Tailed Blaze","element":"fire","ap":33,"hits":1}
-    ]
-  },
-  {
-    "name": "Nubyll",
-    "elements": ["lightning"],
-    "attacks": [
-      {"name":"Zap","element":"lightning","ap":7,"hits":1},
-      {"name":"Headbutt","element":"physical","ap":7,"hits":1},
-      {"name":"Precision Bolt","element":"lightning","ap":10,"hits":1},
-      {"name":"Strike","element":"physical","ap":15,"hits":1},
-      {"name":"Voltage","element":"lightning","ap":20,"hits":1},
-      {"name":"Enlightning","element":"lightning","ap":27,"hits":1}
-    ],
-    "enhancedAttacks": [
-      {"name":"Zap","element":"lightning","ap":8,"hits":1},
-      {"name":"Headbutt","element":"physical","ap":8,"hits":1},
-      {"name":"Precision Bolt","element":"lightning","ap":10,"hits":1},
-      {"name":"Strike","element":"physical","ap":18,"hits":1},
-      {"name":"Voltage","element":"lightning","ap":24,"hits":1},
-      {"name":"Enlightning","element":"lightning","ap":31,"hits":1}
-    ]
-  },
-  {
-    "name": "Nyma",
-    "elements": ["water"],
-    "attacks": [
-      {"name":"Sprinkle","element":"water","ap":7,"hits":1},
-      {"name":"Swipe","element":"physical","ap":7,"hits":1},
-      {"name":"Toxicurrent","element":"water","ap":10,"hits":1},
-      {"name":"Soothing Strike","element":"physical","ap":15,"hits":1},
-      {"name":"Storm","element":"water","ap":20,"hits":1},
-      {"name":"Withering Waves","element":"water","ap":28,"hits":1}
-    ],
-    "enhancedAttacks": [
-      {"name":"Sprinkle","element":"water","ap":8,"hits":1},
-      {"name":"Swipe","element":"physical","ap":8,"hits":1},
-      {"name":"Toxicurrent","element":"water","ap":11,"hits":1},
-      {"name":"Soothing Strike","element":"physical","ap":15,"hits":1},
-      {"name":"Storm","element":"water","ap":24,"hits":1},
-      {"name":"Withering Waves","element":"water","ap":32,"hits":1}
+      {"name":"Spray","element":"water","ap":8,"hits":1},
+      {"name":"Smack","element":"physical","ap":8,"hits":1},
+      {"name":"Torrent","element":"water","ap":12,"hits":1},
+      {"name":"H2O","element":"water","ap":15,"hits":1},
+      {"name":"Geyser","element":"water","ap":24,"hits":1},
+      {"name":"Feeler Flail","element":"water","ap":28,"hits":1}
     ]
   },
   {
@@ -6635,23 +6547,131 @@
     ]
   },
   {
-    "name": "Budillo",
+    "name": "Dark Weevern",
+    "elements": ["nature"],
+    "attacks": [
+      {"name":"Wisp","element":"nature","ap":7,"hits":1},
+      {"name":"Shove","element":"physical","ap":7,"hits":1},
+      {"name":"Dark Leaf Blade","element":"nature","ap":11,"hits":1},
+      {"name":"Mother Nature","element":"nature","ap":20,"hits":1},
+      {"name":"Hard Jab","element":"physical","ap":20,"hits":1},
+      {"name":"Dark Dual Dragon","element":"nature","ap":17,"hits":2}
+    ],
+    "enhancedAttacks": [
+      {"name":"Wisp","element":"nature","ap":8,"hits":1},
+      {"name":"Shove","element":"physical","ap":8,"hits":1},
+      {"name":"Dark Leaf Blade","element":"nature","ap":13,"hits":1},
+      {"name":"Mother Nature","element":"nature","ap":24,"hits":1},
+      {"name":"Hard Jab","element":"physical","ap":24,"hits":1},
+      {"name":"Dark Dual Dragon","element":"nature","ap":17,"hits":2}
+    ]
+  },
+  {
+    "name": "Pangoleaf",
     "elements": ["nature"],
     "attacks": [
       {"name":"Vines","element":"nature","ap":7,"hits":1},
-      {"name":"Headbutt","element":"physical","ap":7,"hits":1},
-      {"name":"Blossom Blast","element":"nature","ap":10,"hits":1},
-      {"name":"Reap","element":"nature","ap":15,"hits":1},
-      {"name":"Lotus","element":"nature","ap":20,"hits":1},
-      {"name":"Snapping Heads","element":"nature","ap":32,"hits":1}
+      {"name":"Bite","element":"physical","ap":7,"hits":1},
+      {"name":"Tail Spikes","element":"physical","ap":11,"hits":1},
+      {"name":"Claw","element":"physical","ap":15,"hits":1},
+      {"name":"Overgrowth","element":"nature","ap":25,"hits":1},
+      {"name":"Cactus Crash","element":"physical","ap":28,"hits":1}
     ],
     "enhancedAttacks": [
       {"name":"Vines","element":"nature","ap":8,"hits":1},
-      {"name":"Headbutt","element":"physical","ap":8,"hits":1},
-      {"name":"Blossom Blast","element":"nature","ap":12,"hits":1},
+      {"name":"Bite","element":"physical","ap":8,"hits":1},
+      {"name":"Tail Spikes","element":"physical","ap":13,"hits":1},
+      {"name":"Claw","element":"physical","ap":18,"hits":1},
+      {"name":"Overgrowth","element":"nature","ap":30,"hits":1},
+      {"name":"Cactus Crash","element":"physical","ap":31,"hits":1}
+    ]
+  },
+  {
+    "name": "Foil Pamboo",
+    "elements": ["nature"],
+    "attacks": [
+      {"name":"Leaves","element":"nature","ap":7,"hits":1},
+      {"name":"Smack","element":"physical","ap":7,"hits":1},
+      {"name":"Foil Bamboo Bat","element":"nature","ap":12,"hits":1},
       {"name":"Reap","element":"nature","ap":15,"hits":1},
-      {"name":"Lotus","element":"nature","ap":20,"hits":1},
-      {"name":"Snapping Heads","element":"nature","ap":32,"hits":1}
+      {"name":"Bash","element":"physical","ap":15,"hits":1},
+      {"name":"Mother Nature","element":"nature","ap":20,"hits":1},
+      {"name":"Foil Panda Bash","element":"nature","ap":29,"hits":1}
+    ],
+    "enhancedAttacks": [
+      {"name":"Leaves","element":"nature","ap":8,"hits":1},
+      {"name":"Smack","element":"physical","ap":8,"hits":1},
+      {"name":"Foil Bamboo Bat","element":"nature","ap":14,"hits":1},
+      {"name":"Reap","element":"nature","ap":15,"hits":1},
+      {"name":"Bash","element":"physical","ap":18,"hits":1},
+      {"name":"Mother Nature","element":"nature","ap":24,"hits":1},
+      {"name":"Foil Panda Bash","element":"nature","ap":32,"hits":1}
+    ]
+  },
+  {
+    "name": "Gippo",
+    "elements": ["water"],
+    "attacks": [
+      {"name":"Spray","element":"water","ap":7,"hits":1},
+      {"name":"Bite","element":"physical","ap":7,"hits":1},
+      {"name":"Aqua Assault","element":"water","ap":4,"hits":3},
+      {"name":"Impact","element":"physical","ap":10,"hits":1},
+      {"name":"Spring Shower","element":"water","ap":15,"hits":1},
+      {"name":"Wallop","element":"physical","ap":20,"hits":1},
+      {"name":"Geyser","element":"water","ap":20,"hits":1},
+      {"name":"Chomp","element":"physical","ap":26,"hits":1}
+    ],
+    "enhancedAttacks": [
+      {"name":"Spray","element":"water","ap":8,"hits":1},
+      {"name":"Bite","element":"physical","ap":8,"hits":1},
+      {"name":"Aqua Assault","element":"water","ap":5,"hits":3},
+      {"name":"Impact","element":"physical","ap":12,"hits":1},
+      {"name":"Spring Shower","element":"water","ap":18,"hits":1},
+      {"name":"Wallop","element":"physical","ap":24,"hits":1},
+      {"name":"Geyser","element":"water","ap":24,"hits":1},
+      {"name":"Chomp","element":"physical","ap":31,"hits":1}
+    ]
+  },
+  {
+    "name": "Hoghedge",
+    "elements": ["nature"],
+    "attacks": [
+      {"name":"Leaves","element":"nature","ap":7,"hits":1},
+      {"name":"Headbutt","element":"physical","ap":7,"hits":1},
+      {"name":"Root Rash","element":"physical","ap":5,"hits":1},
+      {"name":"Bash","element":"physical","ap":15,"hits":1},
+      {"name":"Mother Nature","element":"nature","ap":20,"hits":1},
+      {"name":"Trunk Tusks","element":"physical","ap":25,"hits":1}
+    ],
+    "enhancedAttacks": [
+      {"name":"Leaves","element":"nature","ap":8,"hits":1},
+      {"name":"Headbutt","element":"physical","ap":8,"hits":1},
+      {"name":"Root Rash","element":"physical","ap":6,"hits":1},
+      {"name":"Bash","element":"physical","ap":18,"hits":1},
+      {"name":"Mother Nature","element":"nature","ap":24,"hits":1},
+      {"name":"Trunk Tusks","element":"physical","ap":30,"hits":1}
+    ]
+  },
+  {
+    "name": "Shroomer",
+    "elements": ["nature"],
+    "attacks": [
+      {"name":"Wisp","element":"nature","ap":7,"hits":1},
+      {"name":"Smack","element":"physical","ap":7,"hits":1},
+      {"name":"Fungal Fling","element":"nature","ap":10,"hits":1},
+      {"name":"Reap","element":"nature","ap":15,"hits":1},
+      {"name":"Overwhelm","element":"physical","ap":20,"hits":1},
+      {"name":"Nature's Poison","element":"nature","ap":12,"hits":1},
+      {"name":"Shroom Smash","element":"nature","ap":25,"hits":1}
+    ],
+    "enhancedAttacks": [
+      {"name":"Wisp","element":"nature","ap":8,"hits":1},
+      {"name":"Smack","element":"physical","ap":8,"hits":1},
+      {"name":"Fungal Fling","element":"nature","ap":12,"hits":1},
+      {"name":"Reap","element":"nature","ap":15,"hits":1},
+      {"name":"Overwhelm","element":"physical","ap":20,"hits":1},
+      {"name":"Nature's Poison","element":"nature","ap":12,"hits":1},
+      {"name":"Shroom Smash","element":"nature","ap":28,"hits":1}
     ]
   },
   {
@@ -6675,6 +6695,280 @@
     ]
   },
   {
+    "name": "Dark Whik",
+    "elements": ["fire"],
+    "attacks": [
+      {"name":"Cinders","element":"fire","ap":7,"hits":1},
+      {"name":"Bite","element":"physical","ap":7,"hits":1},
+      {"name":"Dark Gecko Glow","element":"fire","ap":10,"hits":1},
+      {"name":"Claw","element":"physical","ap":15,"hits":1},
+      {"name":"Passion","element":"fire","ap":20,"hits":1},
+      {"name":"Destruction","element":"physical","ap":25,"hits":1},
+      {"name":"Dark Rapid Oxidation","element":"fire","ap":27,"hits":1}
+    ],
+    "enhancedAttacks": [
+      {"name":"Cinders","element":"fire","ap":8,"hits":1},
+      {"name":"Bite","element":"physical","ap":8,"hits":1},
+      {"name":"Dark Gecko Glow","element":"fire","ap":13,"hits":1},
+      {"name":"Claw","element":"physical","ap":18,"hits":1},
+      {"name":"Passion","element":"fire","ap":25,"hits":1},
+      {"name":"Destruction","element":"physical","ap":25,"hits":1},
+      {"name":"Dark Rapid Oxidation","element":"fire","ap":31,"hits":1}
+    ]
+  },
+  {
+    "name": "Bloombat",
+    "elements": ["nature"],
+    "attacks": [
+      {"name":"Leaves","element":"nature","ap":7,"hits":1},
+      {"name":"Bite","element":"physical","ap":7,"hits":1},
+      {"name":"Sickly Sweet","element":"nature","ap":11,"hits":1},
+      {"name":"Mother Nature","element":"nature","ap":20,"hits":1},
+      {"name":"Destruction","element":"physical","ap":25,"hits":1},
+      {"name":"Feed","element":"nature","ap":27,"hits":1}
+    ],
+    "enhancedAttacks": [
+      {"name":"Leaves","element":"nature","ap":8,"hits":1},
+      {"name":"Bite","element":"physical","ap":8,"hits":1},
+      {"name":"Sickly Sweet","element":"nature","ap":13,"hits":1},
+      {"name":"Mother Nature","element":"nature","ap":24,"hits":1},
+      {"name":"Destruction","element":"physical","ap":25,"hits":1},
+      {"name":"Feed","element":"nature","ap":31,"hits":1}
+    ]
+  },
+  {
+    "name": "Nyma",
+    "elements": ["water"],
+    "attacks": [
+      {"name":"Sprinkle","element":"water","ap":7,"hits":1},
+      {"name":"Swipe","element":"physical","ap":7,"hits":1},
+      {"name":"Toxicurrent","element":"water","ap":10,"hits":1},
+      {"name":"Soothing Strike","element":"physical","ap":15,"hits":1},
+      {"name":"Storm","element":"water","ap":20,"hits":1},
+      {"name":"Withering Waves","element":"water","ap":28,"hits":1}
+    ],
+    "enhancedAttacks": [
+      {"name":"Sprinkle","element":"water","ap":8,"hits":1},
+      {"name":"Swipe","element":"physical","ap":8,"hits":1},
+      {"name":"Toxicurrent","element":"water","ap":11,"hits":1},
+      {"name":"Soothing Strike","element":"physical","ap":15,"hits":1},
+      {"name":"Storm","element":"water","ap":24,"hits":1},
+      {"name":"Withering Waves","element":"water","ap":32,"hits":1}
+    ]
+  },
+  {
+    "name": "Kitpole",
+    "elements": ["fire"],
+    "attacks": [
+      {"name":"Cinders","element":"fire","ap":7,"hits":1},
+      {"name":"Headbutt","element":"physical","ap":7,"hits":1},
+      {"name":"Burning Tongue","element":"fire","ap":5,"hits":1},
+      {"name":"Engulf","element":"fire","ap":15,"hits":1},
+      {"name":"Passion","element":"fire","ap":20,"hits":1},
+      {"name":"Nine-Tailed Blaze","element":"fire","ap":30,"hits":1}
+    ],
+    "enhancedAttacks": [
+      {"name":"Cinders","element":"fire","ap":8,"hits":1},
+      {"name":"Headbutt","element":"physical","ap":8,"hits":1},
+      {"name":"Burning Tongue","element":"fire","ap":6,"hits":1},
+      {"name":"Engulf","element":"fire","ap":18,"hits":1},
+      {"name":"Passion","element":"fire","ap":25,"hits":1},
+      {"name":"Nine-Tailed Blaze","element":"fire","ap":33,"hits":1}
+    ]
+  },
+  {
+    "name": "Magpole",
+    "elements": ["fire"],
+    "attacks": [
+      {"name":"Burn","element":"fire","ap":7,"hits":1},
+      {"name":"Swipe","element":"physical","ap":7,"hits":1},
+      {"name":"Hot Spot","element":"fire","ap":10,"hits":1},
+      {"name":"Bash","element":"physical","ap":15,"hits":1},
+      {"name":"Passion","element":"fire","ap":20,"hits":1},
+      {"name":"Wallop","element":"physical","ap":20,"hits":1},
+      {"name":"Flame Ball","element":"fire","ap":25,"hits":1}
+    ],
+    "enhancedAttacks": [
+      {"name":"Burn","element":"fire","ap":8,"hits":1},
+      {"name":"Swipe","element":"physical","ap":8,"hits":1},
+      {"name":"Hot Spot","element":"fire","ap":12,"hits":1},
+      {"name":"Bash","element":"physical","ap":18,"hits":1},
+      {"name":"Passion","element":"fire","ap":25,"hits":1},
+      {"name":"Wallop","element":"physical","ap":24,"hits":1},
+      {"name":"Flame Ball","element":"fire","ap":31,"hits":1}
+    ]
+  },
+  {
+    "name": "Beetor",
+    "elements": ["fire"],
+    "attacks": [
+      {"name":"Bite","element":"physical","ap":7,"hits":1},
+      {"name":"Poke","element":"physical","ap":7,"hits":1},
+      {"name":"Fuse Fire","element":"fire","ap":10,"hits":1},
+      {"name":"Campfire","element":"fire","ap":15,"hits":1},
+      {"name":"Claw","element":"physical","ap":15,"hits":1},
+      {"name":"Brimstone","element":"fire","ap":20,"hits":1},
+      {"name":"Explosion","element":"fire","ap":35,"hits":1}
+    ],
+    "enhancedAttacks": [
+      {"name":"Bite","element":"physical","ap":8,"hits":1},
+      {"name":"Poke","element":"physical","ap":8,"hits":1},
+      {"name":"Fuse Fire","element":"fire","ap":12,"hits":1},
+      {"name":"Campfire","element":"fire","ap":18,"hits":1},
+      {"name":"Claw","element":"physical","ap":18,"hits":1},
+      {"name":"Brimstone","element":"fire","ap":22,"hits":1},
+      {"name":"Explosion","element":"fire","ap":35,"hits":1}
+    ]
+  },
+  {
+    "name": "Liquifien",
+    "elements": ["water"],
+    "attacks": [
+      {"name":"Sprinkle","element":"water","ap":7,"hits":1},
+      {"name":"Slap","element":"physical","ap":7,"hits":1},
+      {"name":"Freezing Stare","element":"water","ap":7,"hits":1},
+      {"name":"H2O","element":"water","ap":15,"hits":1},
+      {"name":"Geyser","element":"water","ap":20,"hits":1},
+      {"name":"Destruction","element":"physical","ap":25,"hits":1},
+      {"name":"Ancient Splash","element":"water","ap":27,"hits":1}
+    ],
+    "enhancedAttacks": [
+      {"name":"Sprinkle","element":"water","ap":8,"hits":1},
+      {"name":"Slap","element":"physical","ap":8,"hits":1},
+      {"name":"Freezing Stare","element":"water","ap":9,"hits":1},
+      {"name":"H2O","element":"water","ap":15,"hits":1},
+      {"name":"Geyser","element":"water","ap":24,"hits":1},
+      {"name":"Destruction","element":"physical","ap":25,"hits":1},
+      {"name":"Ancient Splash","element":"water","ap":31,"hits":1}
+    ]
+  },
+  {
+    "name": "Glary",
+    "elements": ["water"],
+    "attacks": [
+      {"name":"Spray","element":"water","ap":7,"hits":1},
+      {"name":"Headbutt","element":"physical","ap":7,"hits":1},
+      {"name":"Ripples","element":"water","ap":5,"hits":1},
+      {"name":"Mush","element":"physical","ap":15,"hits":1},
+      {"name":"Whirlpool","element":"water","ap":20,"hits":1},
+      {"name":"Mossy Mop-Up","element":"water","ap":28,"hits":1}
+    ],
+    "enhancedAttacks": [
+      {"name":"Spray","element":"water","ap":8,"hits":1},
+      {"name":"Headbutt","element":"physical","ap":8,"hits":1},
+      {"name":"Ripples","element":"water","ap":5,"hits":1},
+      {"name":"Mush","element":"physical","ap":18,"hits":1},
+      {"name":"Whirlpool","element":"water","ap":20,"hits":1},
+      {"name":"Mossy Mop-Up","element":"water","ap":32,"hits":1}
+    ]
+  },
+  {
+    "name": "Foil Liquifien",
+    "elements": ["water"],
+    "attacks": [
+      {"name":"Sprinkle","element":"water","ap":7,"hits":1},
+      {"name":"Slap","element":"physical","ap":7,"hits":1},
+      {"name":"Foil Freezing Stare","element":"water","ap":9,"hits":1},
+      {"name":"H2O","element":"water","ap":15,"hits":1},
+      {"name":"Geyser","element":"water","ap":20,"hits":1},
+      {"name":"Destruction","element":"physical","ap":25,"hits":1},
+      {"name":"Foil Ancient Splash","element":"water","ap":29,"hits":1}
+    ],
+    "enhancedAttacks": [
+      {"name":"Sprinkle","element":"water","ap":8,"hits":1},
+      {"name":"Slap","element":"physical","ap":8,"hits":1},
+      {"name":"Foil Freezing Stare","element":"water","ap":11,"hits":1},
+      {"name":"H2O","element":"water","ap":15,"hits":1},
+      {"name":"Geyser","element":"water","ap":24,"hits":1},
+      {"name":"Destruction","element":"physical","ap":25,"hits":1},
+      {"name":"Foil Ancient Splash","element":"water","ap":33,"hits":1}
+    ]
+  },
+  {
+    "name": "Pachydo",
+    "elements": ["water"],
+    "attacks": [
+      {"name":"Spray","element":"water","ap":7,"hits":1},
+      {"name":"Smack","element":"physical","ap":7,"hits":1},
+      {"name":"Flipper Smack","element":"physical","ap":10,"hits":1},
+      {"name":"Spring Shower","element":"water","ap":15,"hits":1},
+      {"name":"Bash","element":"physical","ap":15,"hits":1},
+      {"name":"Geyser","element":"water","ap":20,"hits":1},
+      {"name":"Body Slam","element":"physical","ap":25,"hits":1}
+    ],
+    "enhancedAttacks": [
+      {"name":"Spray","element":"water","ap":8,"hits":1},
+      {"name":"Smack","element":"physical","ap":8,"hits":1},
+      {"name":"Flipper Smack","element":"physical","ap":12,"hits":1},
+      {"name":"Spring Shower","element":"water","ap":18,"hits":1},
+      {"name":"Bash","element":"physical","ap":18,"hits":1},
+      {"name":"Geyser","element":"water","ap":24,"hits":1},
+      {"name":"Body Slam","element":"physical","ap":30,"hits":1}
+    ]
+  },
+  {
+    "name": "Gurgleplops",
+    "elements": ["water"],
+    "attacks": [
+      {"name":"Spray","element":"water","ap":7,"hits":1},
+      {"name":"Smack","element":"physical","ap":7,"hits":1},
+      {"name":"Blergh","element":"water","ap":10,"hits":1},
+      {"name":"Bash","element":"physical","ap":15,"hits":1},
+      {"name":"Geyser","element":"water","ap":20,"hits":1},
+      {"name":"Tentadrool","element":"physical","ap":25,"hits":1}
+    ],
+    "enhancedAttacks": [
+      {"name":"Spray","element":"water","ap":8,"hits":1},
+      {"name":"Smack","element":"physical","ap":8,"hits":1},
+      {"name":"Blergh","element":"water","ap":10,"hits":1},
+      {"name":"Bash","element":"physical","ap":18,"hits":1},
+      {"name":"Geyser","element":"water","ap":24,"hits":1},
+      {"name":"Tentadrool","element":"physical","ap":30,"hits":1}
+    ]
+  },
+  {
+    "name": "Budillo",
+    "elements": ["nature"],
+    "attacks": [
+      {"name":"Vines","element":"nature","ap":7,"hits":1},
+      {"name":"Headbutt","element":"physical","ap":7,"hits":1},
+      {"name":"Blossom Blast","element":"nature","ap":10,"hits":1},
+      {"name":"Reap","element":"nature","ap":15,"hits":1},
+      {"name":"Lotus","element":"nature","ap":20,"hits":1},
+      {"name":"Snapping Heads","element":"nature","ap":32,"hits":1}
+    ],
+    "enhancedAttacks": [
+      {"name":"Vines","element":"nature","ap":8,"hits":1},
+      {"name":"Headbutt","element":"physical","ap":8,"hits":1},
+      {"name":"Blossom Blast","element":"nature","ap":12,"hits":1},
+      {"name":"Reap","element":"nature","ap":15,"hits":1},
+      {"name":"Lotus","element":"nature","ap":20,"hits":1},
+      {"name":"Snapping Heads","element":"nature","ap":32,"hits":1}
+    ]
+  },
+  {
+    "name": "Pithapillar",
+    "elements": ["nature"],
+    "attacks": [
+      {"name":"Vines","element":"nature","ap":7,"hits":1},
+      {"name":"Smack","element":"physical","ap":7,"hits":1},
+      {"name":"Prickle","element":"physical","ap":10,"hits":1},
+      {"name":"Tangle","element":"nature","ap":10,"hits":1},
+      {"name":"Overwhelm","element":"physical","ap":20,"hits":1},
+      {"name":"Overgrowth","element":"nature","ap":25,"hits":1},
+      {"name":"Oversow","element":"nature","ap":25,"hits":1}
+    ],
+    "enhancedAttacks": [
+      {"name":"Vines","element":"nature","ap":8,"hits":1},
+      {"name":"Smack","element":"physical","ap":8,"hits":1},
+      {"name":"Prickle","element":"physical","ap":10,"hits":1},
+      {"name":"Tangle","element":"nature","ap":10,"hits":1},
+      {"name":"Overwhelm","element":"physical","ap":20,"hits":1},
+      {"name":"Overgrowth","element":"nature","ap":30,"hits":1},
+      {"name":"Oversow","element":"nature","ap":29,"hits":1}
+    ]
+  },
+  {
     "name": "Dark Bubbles",
     "elements": ["water"],
     "attacks": [
@@ -6692,6 +6986,260 @@
       {"name":"Bash","element":"physical","ap":18,"hits":1},
       {"name":"Geyser","element":"water","ap":24,"hits":1},
       {"name":"Dark Bubble Trouble","element":"water","ap":32,"hits":1}
+    ]
+  },
+  {
+    "name": "Pyras",
+    "elements": ["fire"],
+    "attacks": [
+      {"name":"Cinders","element":"fire","ap":7,"hits":1},
+      {"name":"Slap","element":"physical","ap":7,"hits":1},
+      {"name":"Oversear","element":"fire","ap":12,"hits":1},
+      {"name":"Engulf","element":"fire","ap":15,"hits":1},
+      {"name":"Brimstone","element":"fire","ap":20,"hits":1},
+      {"name":"Reigning Flames","element":"fire","ap":29,"hits":1}
+    ],
+    "enhancedAttacks": [
+      {"name":"Cinders","element":"fire","ap":8,"hits":1},
+      {"name":"Slap","element":"physical","ap":8,"hits":1},
+      {"name":"Oversear","element":"fire","ap":12,"hits":1},
+      {"name":"Engulf","element":"fire","ap":18,"hits":1},
+      {"name":"Brimstone","element":"fire","ap":22,"hits":1},
+      {"name":"Reigning Flames","element":"fire","ap":33,"hits":1}
+    ]
+  },
+  {
+    "name": "Foil Rockodile",
+    "elements": ["water"],
+    "attacks": [
+      {"name":"Smack","element":"physical","ap":7,"hits":1},
+      {"name":"Sprinkle","element":"water","ap":7,"hits":1},
+      {"name":"Foil Gator Geyser","element":"water","ap":12,"hits":1},
+      {"name":"Bash","element":"physical","ap":15,"hits":1},
+      {"name":"Geyser","element":"water","ap":20,"hits":1},
+      {"name":"Destruction","element":"physical","ap":25,"hits":1},
+      {"name":"Foil Water Rattle","element":"water","ap":29,"hits":1}
+    ],
+    "enhancedAttacks": [
+      {"name":"Smack","element":"physical","ap":8,"hits":1},
+      {"name":"Sprinkle","element":"water","ap":8,"hits":1},
+      {"name":"Foil Gator Geyser","element":"water","ap":14,"hits":1},
+      {"name":"Bash","element":"physical","ap":18,"hits":1},
+      {"name":"Geyser","element":"water","ap":24,"hits":1},
+      {"name":"Destruction","element":"physical","ap":25,"hits":1},
+      {"name":"Foil Water Rattle","element":"water","ap":33,"hits":1}
+    ]
+  },
+  {
+    "name": "Bunaken",
+    "elements": ["water"],
+    "attacks": [
+      {"name":"Sprinkle","element":"water","ap":7,"hits":1},
+      {"name":"Bite","element":"physical","ap":7,"hits":1},
+      {"name":"Masamba Water Beam","element":"water","ap":13,"hits":1},
+      {"name":"Whammy","element":"physical","ap":10,"hits":1},
+      {"name":"Resplendent Rain","element":"water","ap":25,"hits":1},
+      {"name":"Nusantara Whirlpool","element":"water","ap":30,"hits":1}
+    ],
+    "enhancedAttacks": [
+      {"name":"Sprinkle","element":"water","ap":8,"hits":1},
+      {"name":"Bite","element":"physical","ap":8,"hits":1},
+      {"name":"Masamba Water Beam","element":"water","ap":15,"hits":1},
+      {"name":"Whammy","element":"physical","ap":12,"hits":1},
+      {"name":"Resplendent Rain","element":"water","ap":25,"hits":1},
+      {"name":"Nusantara Whirlpool","element":"water","ap":33,"hits":1}
+    ]
+  },
+  {
+    "name": "Lheon",
+    "elements": ["fire"],
+    "attacks": [
+      {"name":"Burn","element":"fire","ap":7,"hits":1},
+      {"name":"Bite","element":"physical","ap":7,"hits":1},
+      {"name":"Overwhelm","element":"physical","ap":20,"hits":1},
+      {"name":"Brimstone","element":"fire","ap":20,"hits":1},
+      {"name":"Prideful Trounce","element":"physical","ap":25,"hits":1}
+    ],
+    "enhancedAttacks": [
+      {"name":"Burn","element":"fire","ap":8,"hits":1},
+      {"name":"Bite","element":"physical","ap":8,"hits":1},
+      {"name":"Overwhelm","element":"physical","ap":20,"hits":1},
+      {"name":"Brimstone","element":"fire","ap":22,"hits":1},
+      {"name":"Prideful Trounce","element":"physical","ap":29,"hits":1}
+    ]
+  },
+  {
+    "name": "Dark Hoghedge",
+    "elements": ["nature"],
+    "attacks": [
+      {"name":"Leaves","element":"nature","ap":7,"hits":1},
+      {"name":"Headbutt","element":"physical","ap":7,"hits":1},
+      {"name":"Dark Root Rash","element":"physical","ap":7,"hits":1},
+      {"name":"Bash","element":"physical","ap":15,"hits":1},
+      {"name":"Thrash","element":"physical","ap":20,"hits":1},
+      {"name":"Mother Nature","element":"nature","ap":20,"hits":1},
+      {"name":"Dark Trunk Tusks","element":"physical","ap":25,"hits":1}
+    ],
+    "enhancedAttacks": [
+      {"name":"Leaves","element":"nature","ap":8,"hits":1},
+      {"name":"Headbutt","element":"physical","ap":8,"hits":1},
+      {"name":"Dark Root Rash","element":"physical","ap":8,"hits":1},
+      {"name":"Bash","element":"physical","ap":18,"hits":1},
+      {"name":"Thrash","element":"physical","ap":22,"hits":1},
+      {"name":"Mother Nature","element":"nature","ap":24,"hits":1},
+      {"name":"Dark Trunk Tusks","element":"physical","ap":30,"hits":1}
+    ]
+  },
+  {
+    "name": "Dark Beetor",
+    "elements": ["fire"],
+    "attacks": [
+      {"name":"Burn","element":"fire","ap":7,"hits":1},
+      {"name":"Poke","element":"physical","ap":7,"hits":1},
+      {"name":"Dark Fuse Fire","element":"fire","ap":11,"hits":1},
+      {"name":"Campfire","element":"fire","ap":15,"hits":1},
+      {"name":"Claw","element":"physical","ap":15,"hits":1},
+      {"name":"Brimstone","element":"fire","ap":20,"hits":1},
+      {"name":"Implosion","element":"fire","ap":25,"hits":1},
+      {"name":"Dark Explosion","element":"fire","ap":37,"hits":1}
+    ],
+    "enhancedAttacks": [
+      {"name":"Burn","element":"fire","ap":8,"hits":1},
+      {"name":"Poke","element":"physical","ap":8,"hits":1},
+      {"name":"Dark Fuse Fire","element":"fire","ap":13,"hits":1},
+      {"name":"Campfire","element":"fire","ap":18,"hits":1},
+      {"name":"Claw","element":"physical","ap":18,"hits":1},
+      {"name":"Brimstone","element":"fire","ap":22,"hits":1},
+      {"name":"Implosion","element":"fire","ap":30,"hits":1},
+      {"name":"Dark Explosion","element":"fire","ap":37,"hits":1}
+    ]
+  },
+  {
+    "name": "Zhakor",
+    "elements": ["fire"],
+    "attacks": [
+      {"name":"Burn","element":"fire","ap":7,"hits":1},
+      {"name":"Swipe","element":"physical","ap":7,"hits":1},
+      {"name":"Breakburn","element":"fire","ap":10,"hits":1},
+      {"name":"Strike","element":"physical","ap":15,"hits":1},
+      {"name":"Balefire","element":"fire","ap":25,"hits":1},
+      {"name":"Slice & Dice","element":"physical","ap":15,"hits":1},
+      {"name":"Guard Breaker","element":"fire","ap":30,"hits":1}
+    ],
+    "enhancedAttacks": [
+      {"name":"Burn","element":"fire","ap":8,"hits":1},
+      {"name":"Swipe","element":"physical","ap":8,"hits":1},
+      {"name":"Breakburn","element":"fire","ap":11,"hits":1},
+      {"name":"Strike","element":"physical","ap":18,"hits":1},
+      {"name":"Balefire","element":"fire","ap":25,"hits":1},
+      {"name":"Slice & Dice","element":"physical","ap":17,"hits":1},
+      {"name":"Guard Breaker","element":"fire","ap":33,"hits":1}
+    ]
+  },
+  {
+    "name": "Foil Pangoleaf",
+    "elements": ["nature"],
+    "attacks": [
+      {"name":"Vines","element":"nature","ap":7,"hits":1},
+      {"name":"Bite","element":"physical","ap":7,"hits":1},
+      {"name":"Foil Tail Spikes","element":"physical","ap":12,"hits":1},
+      {"name":"Overwhelm","element":"physical","ap":20,"hits":1},
+      {"name":"Overgrowth","element":"nature","ap":25,"hits":1},
+      {"name":"Foil Cactus Crash","element":"physical","ap":29,"hits":1}
+    ],
+    "enhancedAttacks": [
+      {"name":"Vines","element":"nature","ap":8,"hits":1},
+      {"name":"Bite","element":"physical","ap":8,"hits":1},
+      {"name":"Foil Tail Spikes","element":"physical","ap":14,"hits":1},
+      {"name":"Overwhelm","element":"physical","ap":20,"hits":1},
+      {"name":"Overgrowth","element":"nature","ap":30,"hits":1},
+      {"name":"Foil Cactus Crash","element":"physical","ap":32,"hits":1}
+    ]
+  },
+  {
+    "name": "Blug",
+    "elements": ["fire"],
+    "attacks": [
+      {"name":"Cinders","element":"fire","ap":7,"hits":1},
+      {"name":"Shove","element":"physical","ap":7,"hits":1},
+      {"name":"Wrap Up","element":"physical","ap":5,"hits":1},
+      {"name":"Bash","element":"physical","ap":15,"hits":1},
+      {"name":"Engulf","element":"fire","ap":15,"hits":1},
+      {"name":"Destruction","element":"physical","ap":25,"hits":1},
+      {"name":"Fire Storm","element":"fire","ap":5,"hits":5},
+      {"name":"Sharp Scales","element":"physical","ap":25,"hits":1}
+    ],
+    "enhancedAttacks": [
+      {"name":"Cinders","element":"fire","ap":8,"hits":1},
+      {"name":"Shove","element":"physical","ap":8,"hits":1},
+      {"name":"Wrap Up","element":"physical","ap":5,"hits":1},
+      {"name":"Bash","element":"physical","ap":18,"hits":1},
+      {"name":"Engulf","element":"fire","ap":18,"hits":1},
+      {"name":"Destruction","element":"physical","ap":25,"hits":1},
+      {"name":"Fire Storm","element":"fire","ap":5,"hits":6},
+      {"name":"Sharp Scales","element":"physical","ap":28,"hits":1}
+    ]
+  },
+  {
+    "name": "Dark Humbug",
+    "elements": ["nature"],
+    "attacks": [
+      {"name":"Wisp","element":"nature","ap":7,"hits":1},
+      {"name":"Poke","element":"physical","ap":7,"hits":1},
+      {"name":"Dark Beak Buds","element":"nature","ap":11,"hits":1},
+      {"name":"Claw","element":"physical","ap":15,"hits":1},
+      {"name":"Lotus","element":"nature","ap":20,"hits":1},
+      {"name":"Dark Floral Fury","element":"nature","ap":10,"hits":3}
+    ],
+    "enhancedAttacks": [
+      {"name":"Wisp","element":"nature","ap":8,"hits":1},
+      {"name":"Poke","element":"physical","ap":8,"hits":1},
+      {"name":"Dark Beak Buds","element":"nature","ap":13,"hits":1},
+      {"name":"Claw","element":"physical","ap":18,"hits":1},
+      {"name":"Lotus","element":"nature","ap":20,"hits":1},
+      {"name":"Dark Floral Fury","element":"nature","ap":11,"hits":3}
+    ]
+  },
+  {
+    "name": "Kawanko",
+    "elements": ["water"],
+    "attacks": [
+      {"name":"Sprinkle","element":"water","ap":7,"hits":1},
+      {"name":"Bite","element":"physical","ap":7,"hits":1},
+      {"name":"Kuma Wavecrash","element":"physical","ap":5,"hits":1},
+      {"name":"Whammy","element":"physical","ap":10,"hits":1},
+      {"name":"H2O","element":"water","ap":15,"hits":1},
+      {"name":"Splendid Storm","element":"water","ap":27,"hits":1},
+      {"name":"Ounabara Whirlpool","element":"physical","ap":30,"hits":1}
+    ],
+    "enhancedAttacks": [
+      {"name":"Sprinkle","element":"water","ap":8,"hits":1},
+      {"name":"Bite","element":"physical","ap":8,"hits":1},
+      {"name":"Kuma Wavecrash","element":"physical","ap":6,"hits":1},
+      {"name":"Whammy","element":"physical","ap":12,"hits":1},
+      {"name":"H2O","element":"water","ap":15,"hits":1},
+      {"name":"Splendid Storm","element":"water","ap":30,"hits":1},
+      {"name":"Ounabara Whirlpool","element":"physical","ap":33,"hits":1}
+    ]
+  },
+  {
+    "name": "Casanova",
+    "elements": ["fire"],
+    "attacks": [
+      {"name":"Cinders","element":"fire","ap":7,"hits":1},
+      {"name":"Bite","element":"physical","ap":7,"hits":1},
+      {"name":"Flaming Hearts","element":"fire","ap":12,"hits":1},
+      {"name":"Bash","element":"physical","ap":15,"hits":1},
+      {"name":"Heart Stopper","element":"fire","ap":20,"hits":1},
+      {"name":"Love Hurts","element":"fire","ap":6,"hits":5}
+    ],
+    "enhancedAttacks": [
+      {"name":"Cinders","element":"fire","ap":8,"hits":1},
+      {"name":"Bite","element":"physical","ap":8,"hits":1},
+      {"name":"Flaming Hearts","element":"fire","ap":14,"hits":1},
+      {"name":"Bash","element":"physical","ap":18,"hits":1},
+      {"name":"Heart Stopper","element":"fire","ap":20,"hits":1},
+      {"name":"Love Hurts","element":"fire","ap":6,"hits":6}
     ]
   }
 ]
