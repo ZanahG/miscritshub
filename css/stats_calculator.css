@@ -707,3 +707,131 @@ body.scCustomOn .scRow{
 #applyRelicsBtn:not(.is-active){
   opacity: .85;
 }
+.actionsRow--end{
+  justify-content:flex-end;
+}
+
+.btnSwapLike{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:10px 12px;
+}
+
+.btnSwapLike__icon{
+  width:18px;
+  height:18px;
+  opacity:.95;
+}
+
+.presetGrid{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap:12px;
+  margin-top:12px;
+}
+
+@media (max-width: 820px){
+  .presetGrid{ grid-template-columns: 1fr; }
+}
+
+.presetCard{
+  display:grid;
+  grid-template-columns: 84px 1fr;
+  gap:12px;
+  border: 1px solid rgba(255,255,255,0.10);
+  border-radius: var(--radius);
+  background: rgba(255,255,255,0.04);
+  padding:12px;
+}
+
+.presetCard__avatar{
+  width:84px;
+  height:84px;
+  border-radius: 18px;
+  background: rgba(0,0,0,0.18);
+  border: 1px solid rgba(255,255,255,0.10);
+  object-fit:contain;
+}
+
+.presetCard__titleRow{
+  display:flex;
+  align-items:baseline;
+  justify-content:space-between;
+  gap:10px;
+}
+
+.presetCard__name{
+  font-weight:900;
+  letter-spacing:.2px;
+  max-width: 70%;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+
+.presetCard__meta{
+  color: var(--muted);
+  font-size:12px;
+  font-variant-numeric: tabular-nums;
+  white-space:nowrap;
+}
+
+.presetStats{
+  display:grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap:8px;
+  margin-top:10px;
+}
+
+.presetStat{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 14px;
+  padding:8px;
+  background: rgba(255,255,255,0.03);
+}
+
+.presetStat__ico{
+  width:16px;
+  height:16px;
+  opacity:.95;
+}
+
+.presetStat__k{
+  color: var(--muted);
+  font-size:11px;
+  font-weight:800;
+}
+
+.presetStat__v{
+  margin-left:auto;
+  font-weight:900;
+  font-variant-numeric: tabular-nums;
+}
+
+.presetRelics{
+  display:grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap:8px;
+  margin-top:10px;
+}
+
+.presetRelic{
+  width:100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.10);
+  background: rgba(255,255,255,0.04);
+  object-fit: contain;
+  padding:8px;
+}
+
+.presetActions{
+  display:flex;
+  gap:10px;
+  justify-content:flex-end;
+  margin-top:10px;
+}

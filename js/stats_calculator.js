@@ -91,6 +91,20 @@
       },
     },
 
+    presets: {
+      saveBtn: byId("scSavePreset"),
+      loadBtn: byId("scLoadPreset"),
+
+      modal: byId("scPresetModal"),
+      search: byId("scPresetSearch"),
+      grid: byId("scPresetGrid"),
+
+      saveModal: byId("scSaveModal"),
+      saveName: byId("scSaveName"),
+      saveConfirm: byId("scSaveConfirm"),
+      saveHint: byId("scSaveHint"),
+    },
+
     relicTotals: byId("relicTotals"),
     relicModal: byId("relicModal"),
     relicTitle: byId("relicModalTitle"),
@@ -309,6 +323,287 @@
     }
     if (ui.relicTotals) ui.relicTotals.classList.toggle("is-off", !applyRelics);
   }
+
+  /* =========================================================
+  PRESETS
+  ========================================================= */
+  const SC_PRESET_KEY = "miscritsHub.statsCalc.presets.v1";
+
+  function readScPresetStore(){
+    try{
+      const raw = localStorage.getItem(SC_PRESET_KEY);
+      const parsed = raw ? JSON.parse(raw) : null;
+      if (!parsed || typeof parsed !== "object") return {};
+      return parsed;
+    }catch{
+      return {};
+    }
+  }
+
+  function writeScPresetStore(store){
+    localStorage.setItem(SC_PRESET_KEY, JSON.stringify(store));
+  }
+
+  function slugKey(s){
+    return (s ?? "").toString().trim();
+  }
+
+  function getSelectedRelicNames(){
+    const out = ["","","",""];
+    for (let slot=0; slot<4; slot++){
+      const sel = getScRelicSelect(slot);
+      out[slot] = (sel?.value ?? "").toString().trim();
+    }
+    return out;
+  }
+
+  function setSelectedRelicNames(arr){
+    for (let slot=0; slot<4; slot++){
+      const sel = getScRelicSelect(slot);
+      if (!sel) continue;
+      sel.value = (arr?.[slot] ?? "").toString();
+    }
+  }
+
+  function buildScPreset(){
+    if (!selected?.name) return null;
+
+    return {
+      name: selected.name,
+      level: clampInt(ui.level?.value, 1, 35),
+      colorMode,
+      colors: getSelectedColors(),
+      applyBonus: !!applyBonus,
+      bonus: sumInputs(ui.bonus.inputs),
+      applyRelics: !!applyRelics,
+      relics: getSelectedRelicNames(),
+    };
+  }
+
+  function applyScPreset(p){
+    if (!p?.name) return;
+
+    const m = MISCRITS.find(x => normalize(x.name) === normalize(p.name));
+    if (!m) return;
+
+    selected = m;
+    if (ui.guess) ui.guess.value = m.name;
+    setAvatar(m.name);
+
+    if (ui.level) ui.level.value = String(clampInt(p.level ?? 35, 1, 35));
+
+    applyBonus = !!p.applyBonus;
+    applyRelics = !!p.applyRelics;
+
+    colorMode = (p.colorMode ?? "none");
+    if (colorMode === "custom") {
+      const c = p.colors || {};
+      for (const k of BONUS_KEYS){
+        const sel = ui.colors?.[k];
+        if (!sel) continue;
+        sel.value = c[k] || "white";
+        setRowColorFromSelect(sel);
+      }
+    } else {
+      applyMode(colorMode);
+    }
+
+    const b = p.bonus || { hp:0, spd:0, ea:0, pa:0, ed:0, pd:0 };
+    writeInputs(ui.bonus.inputs, b);
+
+    setSelectedRelicNames(p.relics || ["","","",""]);
+    refreshAllScRelicSlots();
+
+    render();
+  }
+
+  function openScPresetModal(){
+    if (!ui.presets.modal || !ui.presets.grid || !ui.presets.search) return;
+
+    const store = readScPresetStore();
+    const keys = Object.keys(store);
+
+    const renderGrid = (q) => {
+      const qq = normalize(q);
+      const list = keys
+        .filter(k => {
+          const p = store[k];
+          return !qq || normalize(k).includes(qq) || normalize(p?.name).includes(qq);
+        })
+        .sort((a,b) => a.localeCompare(b, "es"));
+
+      if (!list.length){
+        ui.presets.grid.innerHTML = `<div style="padding:10px;color:rgba(255,255,255,.65)">No presets saved.</div>`;
+        return;
+      }
+
+      ui.presets.grid.innerHTML = list.map((key) => {
+        const p = store[key];
+        const avatar = avatarSrcFromName(p?.name);
+        const relics = (p?.relics || ["","","",""]).slice(0,4);
+
+        const statCell = (k, val) => `
+          <div class="presetStat">
+            <img class="presetStat__ico" src="${STAT_ICON[k]}" alt="">
+            <div class="presetStat__k">${STAT_KEY_MAP[k]}</div>
+            <div class="presetStat__v">${Number(val ?? 0)}</div>
+          </div>
+        `;
+
+        const s = p?.applyBonus || p?.applyRelics ? (p?.lastStats || null) : null;
+        const m = MISCRITS.find(x => normalize(x.name) === normalize(p?.name));
+        const t = m?.baseStats;
+        const lvl = clampInt(p?.level ?? 35, 1, 35);
+        const c = p?.colorMode === "custom" ? (p.colors || {}) : (p.colorMode === "rs"
+          ? { hp:"green", spd:"red", ea:"green", pa:"green", ed:"green", pd:"green" }
+          : p.colorMode === "splus"
+            ? { hp:"green", spd:"green", ea:"green", pa:"green", ed:"green", pd:"green" }
+            : { hp:"white", spd:"white", ea:"white", pa:"white", ed:"white", pd:"white" }
+        );
+
+        let calc = { hp:0, spd:0, ea:0, pa:0, ed:0, pd:0 };
+        if (t){
+          calc.hp  = statAtLevel(t.hp,  lvl, c.hp,  true);
+          calc.spd = statAtLevel(t.spd, lvl, c.spd, false);
+          calc.ea  = statAtLevel(t.ea,  lvl, c.ea,  false);
+          calc.pa  = statAtLevel(t.pa,  lvl, c.pa,  false);
+          calc.ed  = statAtLevel(t.ed,  lvl, c.ed,  false);
+          calc.pd  = statAtLevel(t.pd,  lvl, c.pd,  false);
+        }
+
+        if (p?.applyBonus){
+          const b = p.bonus || {};
+          for (const k of BONUS_KEYS) calc[k] += Number(b[k] || 0);
+        }
+
+        if (p?.applyRelics){
+          for (let slot=0; slot<4; slot++){
+            const name = (relics[slot] ?? "").toString().trim();
+            if (!name) continue;
+            const r = RELIC_BY_NAME.get(name);
+            if (!r) continue;
+            const lvlSlot = getSlotLevel(slot);
+            if (Number(r.level) !== Number(lvlSlot)) continue;
+            const st = r.stats || {};
+            calc.hp += Number(st.HP || 0);
+            calc.spd += Number(st.SPD || 0);
+            calc.ea += Number(st.EA || 0);
+            calc.pa += Number(st.PA || 0);
+            calc.ed += Number(st.ED || 0);
+            calc.pd += Number(st.PD || 0);
+          }
+        }
+
+        const relicImgs = relics.map((nm, i) => {
+          const n = (nm ?? "").toString().trim();
+          const r = n ? RELIC_BY_NAME.get(n) : null;
+          const src = r ? relicIconSrc(r) : RELIC_PLACEHOLDER;
+          const alt = n || "Empty";
+          return `<img class="presetRelic" src="${src}" alt="${alt}" title="${alt}" onerror="this.src='${RELIC_PLACEHOLDER}'">`;
+        }).join("");
+
+        return `
+          <div class="presetCard" data-key="${key}">
+            <img class="presetCard__avatar" src="${avatar}" alt="${p?.name || ""}" onerror="this.src='${AVATAR_FALLBACK}'">
+
+            <div>
+              <div class="presetCard__titleRow">
+                <div class="presetCard__name" title="${key}">${key}</div>
+                <div class="presetCard__meta">Lv ${lvl} • ${String(p?.colorMode || "none").toUpperCase()}</div>
+              </div>
+
+              <div class="presetStats">
+                ${statCell("hp", calc.hp)}
+                ${statCell("spd", calc.spd)}
+                ${statCell("ea", calc.ea)}
+                ${statCell("pa", calc.pa)}
+                ${statCell("ed", calc.ed)}
+                ${statCell("pd", calc.pd)}
+              </div>
+
+              <div class="presetRelics">${relicImgs}</div>
+
+              <div class="presetActions">
+                <button class="btn btn--accent" type="button" data-act="load">Load</button>
+                <button class="btn" type="button" data-act="edit">Edit</button>
+                <button class="btn btn--ghost" type="button" data-act="delete">Delete</button>
+              </div>
+            </div>
+          </div>
+        `;
+      }).join("");
+
+      ui.presets.grid.querySelectorAll(".presetCard").forEach(card => {
+        const key = card.getAttribute("data-key");
+        const p = store[key];
+        if (!p) return;
+
+        card.querySelector('[data-act="load"]')?.addEventListener("click", () => {
+          applyScPreset(p);
+          closeScPresetModal();
+        });
+
+        card.querySelector('[data-act="edit"]')?.addEventListener("click", () => {
+          applyScPreset(p);
+          closeScPresetModal();
+        });
+
+        card.querySelector('[data-act="delete"]')?.addEventListener("click", () => {
+          const s = readScPresetStore();
+          delete s[key];
+          writeScPresetStore(s);
+          openScPresetModal(); // re-render
+        });
+      });
+    };
+
+    ui.presets.search.value = "";
+    renderGrid("");
+    ui.presets.search.oninput = () => renderGrid(ui.presets.search.value);
+
+    ui.presets.modal.hidden = false;
+  }
+
+  function closeScPresetModal(){
+    if (ui.presets.modal) ui.presets.modal.hidden = true;
+  }
+
+  function openScSaveModal(){
+    if (!ui.presets.saveModal || !ui.presets.saveName) return;
+    const p = buildScPreset();
+    if (!p) return;
+
+    ui.presets.saveHint.textContent = "";
+    ui.presets.saveName.value = `${p.name}`; // sugerido
+    ui.presets.saveModal.hidden = false;
+    ui.presets.saveName.focus();
+    ui.presets.saveName.select();
+  }
+
+  function closeScSaveModal(){
+    if (ui.presets.saveModal) ui.presets.saveModal.hidden = true;
+  }
+
+  function confirmSavePreset(){
+    const p = buildScPreset();
+    if (!p) return;
+
+    const key = slugKey(ui.presets.saveName?.value);
+    if (!key) return;
+
+    const store = readScPresetStore();
+    const exists = Object.prototype.hasOwnProperty.call(store, key);
+
+    store[key] = p;
+    writeScPresetStore(store);
+
+    if (ui.presets.saveHint){
+      ui.presets.saveHint.textContent = exists ? "Updated existing preset." : "Saved new preset.";
+    }
+    closeScSaveModal();
+  }
+
+
 
   /* =========================================================
     COLOR ROW UI + MODES
@@ -1169,6 +1464,23 @@
         refreshAllScRelicSlots();
         render();
       });
+    });
+
+    ui.presets?.loadBtn?.addEventListener("click", openScPresetModal);
+    ui.presets?.saveBtn?.addEventListener("click", openScSaveModal);
+
+    ui.presets?.saveConfirm?.addEventListener("click", confirmSavePreset);
+
+    document.addEventListener("click", (e) => {
+      if (e.target.closest('[data-action="close-presets"]')) closeScPresetModal();
+      if (e.target.closest('[data-action="close-save"]')) closeScSaveModal();
+    });
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape"){
+        closeScPresetModal();
+        closeScSaveModal();
+      }
     });
 
     ui.export?.openBtn?.addEventListener("click", openExportModal);

@@ -174,6 +174,21 @@
 
         <div class="actionsRow">
           <button id="exportImgBtn" class="btn btn--accent" type="button">Export IMG</button>
+          <button id="scSavePreset" class="btn btnSwapLike" type="button" aria-label="Save preset">
+            <svg viewBox="0 0 24 24" class="btnSwapLike__icon" aria-hidden="true">
+              <path d="M7 7h10M7 12h10M7 17h7" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span>Save</span>
+          </button>
+
+          <button id="scLoadPreset" class="btn btnSwapLike" type="button" aria-label="Load preset">
+            <svg viewBox="0 0 24 24" class="btnSwapLike__icon" aria-hidden="true">
+              <path d="M12 3v10m0 0l-4-4m4 4l4-4M5 21h14" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span>Load</span>
+          </button>
         </div>
       </article>
 
@@ -294,6 +309,44 @@
             <button id="exportDownloadBtn" class="btn btn--accent" type="button">Download PNG</button>
           </div>
         </div>
+      </div>
+    </div>
+
+    <!-- Presets modal -->
+    <div id="scPresetModal" class="modal" hidden>
+      <div class="modal__backdrop" data-action="close-presets"></div>
+
+      <div class="modal__panel" role="dialog" aria-modal="true" aria-labelledby="scPresetModalTitle">
+        <div class="modal__head">
+          <div id="scPresetModalTitle" class="modal__title">Presets</div>
+          <button class="btn btn--ghost" type="button" data-action="close-presets">Close</button>
+        </div>
+
+        <input id="scPresetSearch" class="input" type="text" placeholder="Search preset..." />
+
+        <div id="scPresetGrid" class="presetGrid"></div>
+      </div>
+    </div>
+
+    <!-- Save name modal -->
+    <div id="scSaveModal" class="modal" hidden>
+      <div class="modal__backdrop" data-action="close-save"></div>
+
+      <div class="modal__panel" role="dialog" aria-modal="true" aria-labelledby="scSaveModalTitle">
+        <div class="modal__head">
+          <div id="scSaveModalTitle" class="modal__title">Save preset</div>
+          <button class="btn btn--ghost" type="button" data-action="close-save">Close</button>
+        </div>
+
+        <label class="label" for="scSaveName">Preset name</label>
+        <input id="scSaveName" class="input" type="text" placeholder="Ej: Phoboros RS + Relics" />
+
+        <div class="actionsRow actionsRow--end" style="margin-top:12px">
+          <button id="scSaveConfirm" class="btn btn--accent" type="button">Save</button>
+          <button id="scSaveCancel" class="btn btn--ghost" type="button" data-action="close-save">Cancel</button>
+        </div>
+
+        <div id="scSaveHint" class="muted" style="margin-top:8px"></div>
       </div>
     </div>
   </main>
