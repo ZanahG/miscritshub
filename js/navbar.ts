@@ -4,6 +4,7 @@
 
   const toggle = rootHeader.querySelector(".nav__toggle");
   const menu = rootHeader.querySelector(".nav__menu");
+  if (!menu) return;
   const dropdowns = Array.from(rootHeader.querySelectorAll("[data-dropdown]"));
 
   const isMobile = () => window.matchMedia("(max-width: 860px)").matches;
@@ -40,7 +41,7 @@
     const btn = dd.querySelector(".nav__dropBtn");
     if (!btn) return;
 
-    let closeTimer = null;
+    let closeTimer: ReturnType<typeof setTimeout> | null = null;
 
     const openDD = () => {
       if (closeTimer) clearTimeout(closeTimer);

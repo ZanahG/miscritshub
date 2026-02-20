@@ -1,19 +1,19 @@
 /* =========================================================
    SMALL UTILS
 ========================================================= */
-export function normalize(str) {
+export function normalize(str: any): string {
   return (str ?? "").toString().trim().toLowerCase();
 }
-export function toNum(v) {
+export function toNum(v: any): number {
   const n = Number(v);
   return Number.isFinite(n) ? n : 0;
 }
-export function clamp(n, a, b) {
+export function clamp(n: any, a: number, b: number): number {
   n = toNum(n);
   return Math.max(a, Math.min(b, n));
 }
 
-export function normalizeElements(elements) {
+export function normalizeElements(elements: any): string[] {
   if (Array.isArray(elements)) {
     return elements
       .map(e => (e ?? "").toString().trim().toLowerCase())
@@ -26,18 +26,18 @@ export function normalizeElements(elements) {
   if (raw.includes(" ")) {
     return raw
       .split(/\s+/g)
-      .map(s => s.trim().toLowerCase())
+      .map((s: string) => s.trim().toLowerCase())
       .filter(Boolean);
   }
 
   const tokens = raw.match(/[A-Z][a-z]*/g) || [];
-  return tokens.map(t => t.toLowerCase());
+  return tokens.map((t: string) => t.toLowerCase());
 }
 
 /* =========================================================
    ELEMENT MULTIPLIER
 ========================================================= */
-export const STRONG = {
+export const STRONG: Record<string, string[]> = {
   water: ["fire"],
   fire: ["nature"],
   nature: ["water"],
@@ -46,7 +46,7 @@ export const STRONG = {
   lightning: ["wind"],
 };
 
-export const WEAK = {
+export const WEAK: Record<string, string[]> = {
   water: ["nature"],
   fire: ["water"],
   nature: ["fire"],
@@ -55,7 +55,7 @@ export const WEAK = {
   lightning: ["earth"],
 };
 
-export function elementMultiplier(atkElem, defElems) {
+export function elementMultiplier(atkElem: string, defElems: string[]): number {
   const a = normalize(atkElem);
   const defs = (defElems ?? []).map(normalize);
 
@@ -67,7 +67,7 @@ export function elementMultiplier(atkElem, defElems) {
   return mul;
 }
 
-export function isElementalAttack(elem) {
+export function isElementalAttack(elem: string): boolean {
   const e = normalize(elem);
   return ["water", "fire", "nature", "earth", "wind", "lightning"].includes(e);
 }
@@ -75,7 +75,7 @@ export function isElementalAttack(elem) {
 /* =========================================================
    PICK ATK/DEF STAT
 ========================================================= */
-export function pickAtkDefStats(mode, attackElem, inputs) {
+export function pickAtkDefStats(mode: string, attackElem: string, inputs: any): any {
   if (mode === "physical") {
     return { atk: inputs.atkPA, def: inputs.defPD, label: "PA vs PD" };
   }
@@ -90,7 +90,7 @@ export function pickAtkDefStats(mode, attackElem, inputs) {
 /* =========================================================
    DAMAGE MATH
 ========================================================= */
-export function computePerHit(ap, atkStat, defStat, elemMul) {
+export function computePerHit(ap: number | string, atkStat: number | string, defStat: number | string, elemMul: number | string) {
   const a = toNum(ap);
   const atk = Math.max(1, toNum(atkStat));
   const def = Math.max(1, toNum(defStat));
@@ -109,7 +109,7 @@ export function calcDamageRange({
   defenderElements,
   negateElement = false,
   mode = "auto"
-}) {
+}: any) {
   if (!attackerTotals || !defenderTotals || !move) return null;
 
   const picked = pickAtkDefStats(mode, move.element, {
@@ -136,17 +136,17 @@ export function calcDamageRange({
 /* =========================================================
    MOVES
 ========================================================= */
-export function getMovesPvp(m) {
+export function getMovesPvp(m: any) {
   if (!m) return [];
   if (Array.isArray(m.enhancedAttacks) && m.enhancedAttacks.length) return m.enhancedAttacks;
   return Array.isArray(m.attacks) ? m.attacks : [];
 }
 
-export function pickBestMove(attackerMiscrit, attackerTotals, defenderMiscrit, defenderTotals, mode = "auto") {
+export function pickBestMove(attackerMiscrit: any, attackerTotals: any, defenderMiscrit: any, defenderTotals: any, mode = "auto") {
   const moves = getMovesPvp(attackerMiscrit);
   if (!moves.length) return null;
 
-  let best = null;
+  let best: any = null;
 
   for (const mv of moves) {
     const dmg = calcDamageRange({

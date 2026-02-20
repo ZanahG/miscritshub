@@ -1,4 +1,4 @@
-const $ = (sel) => document.querySelector(sel);
+const $ = (sel: string) => document.querySelector(sel) as HTMLElement | null;
 
 const TIMEZONE = "America/Santiago";
 const MAX_TRIES = 6;
@@ -11,12 +11,12 @@ const AVATAR_FALLBACK = `${AVATAR_FOLDER}preset_avatar.png`;
 const TYPE_FOLDER = "../assets/images/type/";
 
 const RESET_HOUR = 21;
-let endTimerInterval = null;
+let endTimerInterval: ReturnType<typeof setInterval> | null = null;
 
-let MISCRITS = [];
-let MISCRITDLE_POOL = [];
-let PLAYABLE = [];
-let todayTarget = null;
+let MISCRITS: any[] = [];
+let MISCRITDLE_POOL: any[] = [];
+let PLAYABLE: any[] = [];
+let todayTarget: any = null;
 
 const COLS = [
   { key: "miscrit", label: "MISCRIT" },
@@ -30,13 +30,13 @@ const RARITY_ORDER = ["Common", "Rare", "Epic", "Exotic", "Legendary"];
 
 const ELEMENTS = ["fire", "water", "nature", "earth", "wind","lightning"];
 
-function parseElements(typeRaw) {
+function parseElements(typeRaw: any) {
   const s = normalize(typeRaw).replace(/[^a-z]/g, "");
   const found = ELEMENTS.filter(el => s.includes(el));
   return [...new Set(found)];
 }
 
-function compareElements(guessType, targetType) {
+function compareElements(guessType: any, targetType: any) {
   const g = parseElements(guessType);
   const t = parseElements(targetType);
 
@@ -56,11 +56,11 @@ function compareElements(guessType, targetType) {
    Utils
 =============================== */
 
-function normalize(s) {
+function normalize(s: any) {
   return (s ?? "").toString().trim().toLowerCase();
 }
 
-function sameName(a, b) {
+function sameName(a: any, b: any) {
   return normalize(a) === normalize(b);
 }
 
@@ -73,28 +73,28 @@ const VARIANT_PREFIXES = [
   "alpha"
 ];
 
-function isVariantName(name) {
+function isVariantName(name: any) {
   const n = normalize(name);
   return VARIANT_PREFIXES.some(p => n.startsWith(p + " "));
 }
 
-function rarityRank(r) {
+function rarityRank(r: any) {
   const rr = (r ?? "").toString().trim().toLowerCase();
   const idx = RARITY_ORDER.findIndex(x => x.toLowerCase() === rr);
   return idx >= 0 ? idx : -1;
 }
 
-function avatarSrc(m) {
+function avatarSrc(m: any) {
   const file = (m?.avatar ?? "").toString().trim();
   return file ? `${AVATAR_FOLDER}${file}` : AVATAR_FALLBACK;
 }
 
-function elementIconSrc(type) {
+function elementIconSrc(type: any) {
   const el = normalize(type || "physical");
   return `${TYPE_FOLDER}${el}.png`;
 }
 
-function primaryPlace(m) {
+function primaryPlace(m: any) {
   return (m?.spawns?.[0]?.place ?? "Unknown").toString();
 }
 
@@ -135,7 +135,7 @@ function getNextResetTimestampChile() {
   return candidate.getTime();
 }
 
-function fmt2(n) {
+function fmt2(n: any) {
   return String(n).padStart(2, "0");
 }
 
@@ -200,7 +200,7 @@ function getGameDateKey() {
   return `${yy}-${mm2}-${dd2}`;
 }
 
-function hashStringToInt(str) {
+function hashStringToInt(str: string) {
   let h = 2166136261;
   for (let i = 0; i < str.length; i++) {
     h ^= str.charCodeAt(i);
@@ -228,14 +228,14 @@ async function loadMiscritdlePool() {
   const json = await res.json();
   if (Array.isArray(json?.pool)) {
     MISCRITDLE_POOL = json.pool
-      .map(n => n.toString().trim())
+      .map((n: any) => n.toString().trim())
       .filter(Boolean);
   } else {
     MISCRITDLE_POOL = [];
   }
 }
 
-function buildMiscritdlePool(allMiscrits) {
+function buildMiscritdlePool(allMiscrits: any[]) {
   if (!MISCRITDLE_POOL.length) return allMiscrits;
 
   const byName = new Map(allMiscrits.map(m => [normalize(m.name), m]));
@@ -255,7 +255,7 @@ function buildMiscritdlePool(allMiscrits) {
    Pick today target
 =============================== */
 
-function pickTodayTarget(list) {
+function pickTodayTarget(list: any[]) {
   const key = getGameDateKey();
   const idx = hashStringToInt(key) % list.length;
   return list[idx];
@@ -265,7 +265,7 @@ function pickTodayTarget(list) {
    State
 =============================== */
 
-function setStatus(txt) {
+function setStatus(txt: string) {
   const el = $("#md-status");
   if (el) el.textContent = txt || "";
 }
@@ -285,7 +285,7 @@ function loadState() {
   }
 }
 
-function saveState(state) {
+function saveState(state: any) {
   localStorage.setItem(storageKey(), JSON.stringify(state));
 }
 
@@ -293,7 +293,7 @@ function saveState(state) {
    Data helpers
 =============================== */
 
-function findByName(name) {
+function findByName(name: any) {
   const n = normalize(name);
   return MISCRITS.find(m => normalize(m?.name) === n) || null;
 }
@@ -315,7 +315,7 @@ function renderHeader() {
   }
 }
 
-function renderEndCard(state) {
+function renderEndCard(state: any) {
   const card = $("#md-endcard");
   if (!card) return;
 
@@ -326,7 +326,7 @@ function renderEndCard(state) {
   }
 
   const titleEl = $("#md-end-title");
-  const avatarEl = $("#md-end-avatar");
+  const avatarEl = $("#md-end-avatar") as HTMLImageElement | null;
   const line1El = $("#md-end-line1");
   const nameEl = $("#md-end-name");
 
@@ -344,7 +344,7 @@ function renderEndCard(state) {
   startNextTimer();
 }
 
-function renderRow(guess, target) {
+function renderRow(guess: any, target: any) {
   const row = document.createElement("div");
   row.className = "miscritdle__row";
 
@@ -434,7 +434,7 @@ function renderRow(guess, target) {
   return row;
 }
 
-function renderBoard(state) {
+function renderBoard(state: any) {
   const board = $("#md-board");
   if (!board) return;
 
@@ -446,7 +446,7 @@ function renderBoard(state) {
     board.appendChild(renderRow(gObj, todayTarget));
   }
 
-  const shareBtn = $("#md-share");
+  const shareBtn = $("#md-share") as HTMLButtonElement | null;
   if (state.solved) {
     setStatus(`You Win! ${state.guesses.length}/${MAX_TRIES}.`);
     if (shareBtn) shareBtn.disabled = false;
@@ -464,7 +464,7 @@ function renderBoard(state) {
    Share
 =============================== */
 
-function buildShareText(state, target) {
+function buildShareText(state: any, target: any) {
   const solved = state.solved === true;
   const tries = state.guesses.length;
   const dayKey = getGameDateKey();
@@ -476,7 +476,7 @@ function buildShareText(state, target) {
   const tP = normalize(primaryPlace(target));
   const tVariant = isVariantName(target.name);
 
-  const lines = state.guesses.map(g => {
+  const lines = state.guesses.map((g: any) => {
     const gObj = findByName(g.name) || g;
     const gType = normalize(gObj.type || "");
     const gRarity = normalize(gObj.rarity || "");
@@ -501,7 +501,7 @@ function buildShareText(state, target) {
    Dropdown
 =============================== */
 
-function renderDropdown(matches) {
+function renderDropdown(matches: any[]) {
   const dd = $("#mdDropdown");
   if (!dd) return;
 
@@ -522,7 +522,7 @@ function renderDropdown(matches) {
   dd.querySelectorAll(".miscritpicker__item").forEach(btn => {
     btn.addEventListener("click", () => {
       const name = btn.getAttribute("data-name") || "";
-      const input = $("#md-guess");
+      const input = $("#md-guess") as HTMLInputElement | null;
       if (input) input.value = name;
       dd.hidden = true;
     });
@@ -530,14 +530,14 @@ function renderDropdown(matches) {
 }
 
 function bindMiscritDropdown() {
-  const input = $("#md-guess");
+  const input = $("#md-guess") as HTMLInputElement | null;
   const dd = $("#mdDropdown");
   if (!input || !dd) return;
 
   const close = () => { dd.hidden = true; };
 
   const open = () => {
-    const q = normalize(input.value);
+    const q = normalize(input?.value);
     const base = PLAYABLE.length ? PLAYABLE : MISCRITS;
 
     const matches = base
@@ -554,13 +554,13 @@ function bindMiscritDropdown() {
     if (e.key === "Escape") close();
 
     if (e.key === "Enter") {
-      const exact = findByName(input.value);
+      const exact = findByName(input?.value);
       if (exact) return;
 
       const first = dd.querySelector(".miscritpicker__item");
       if (first) {
         e.preventDefault();
-        first.click();
+        (first as HTMLElement).click();
       }
     }
   });
@@ -568,7 +568,7 @@ function bindMiscritDropdown() {
   document.addEventListener("click", (e) => {
     const host = input.closest(".miscritpicker");
     if (!host) return;
-    if (!host.contains(e.target)) close();
+    if (!host.contains(e.target as Node | null)) close();
   });
 }
 
@@ -577,7 +577,7 @@ function bindMiscritDropdown() {
 =============================== */
 
 function initEvents() {
-  const input = $("#md-guess");
+  const input = $("#md-guess") as HTMLInputElement | null;
   const submit = $("#md-submit");
   const share = $("#md-share");
 
@@ -599,7 +599,7 @@ function initEvents() {
       return;
     }
 
-    if (state.guesses.some(g => sameName(g.name, gObj.name))) {
+    if (state.guesses.some((g: any) => sameName(g.name, gObj.name))) {
       setStatus("You already tried that Miscrit.");
       return;
     }
@@ -647,9 +647,9 @@ async function loadMiscrits() {
   const list = Array.isArray(json?.miscrits) ? json.miscrits : [];
 
   MISCRITS = list
-    .filter(m => m?.name)
+    .filter((m: any) => m?.name)
     .slice()
-    .sort((a, b) => (a.name ?? "").localeCompare((b.name ?? ""), "en", { sensitivity: "base" }));
+    .sort((a: any, b: any) => (a.name ?? "").localeCompare((b.name ?? ""), "en", { sensitivity: "base" }));
 
   if (!MISCRITS.length) throw new Error("miscrits.json empty or invalid structure.");
 

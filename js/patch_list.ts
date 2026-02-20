@@ -2,6 +2,8 @@ async function loadPatches(){
   const listEl = document.getElementById("patchList");
   const emptyEl = document.getElementById("patchEmpty");
 
+  if (!listEl || !emptyEl) return;
+
   try{
     const res = await fetch("../assets/data/patches.json", { cache: "no-store" });
     if(!res.ok) throw new Error("patches.json not found");

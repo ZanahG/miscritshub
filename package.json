@@ -1,0 +1,14 @@
+{
+  "name": "miscritshub",
+  "scripts": {
+    "dev": "bun --hot run bun-dev-server.ts",
+    "build": "bun build ./index.html ./pages/*.html --outdir ./dist --minify",
+    "check": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  }
+}

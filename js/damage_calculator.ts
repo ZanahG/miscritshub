@@ -7,41 +7,50 @@ import {
   computePerHit
 } from "./damage_core.js";
 
-const $ = (sel) => document.querySelector(sel);
+import type {
+  MiscritData,
+  MiscritStats,
+  MoveData,
+  RelicData,
+  MetaData,
+  BaseStatsData
+} from "./types";
+
+const $ = <T extends HTMLElement = HTMLElement>(sel: string): T | null => document.querySelector<T>(sel);
 
 /* =========================================================
    STATE
 ========================================================= */
 
-let DB = [];
-let RELICS = [];
-let MISCRITS_RELICS = [];
-let RELIC_NAME_BY_KEY = new Map();
-let REC_BY_NAME = new Map();
-let RELIC_BY_NAME = new Map();
+let DB: MiscritData[] = [];
+let RELICS: RelicData[] = [];
+let MISCRITS_RELICS: any[] = [];
+let RELIC_NAME_BY_KEY = new Map<string, string>();
+let REC_BY_NAME = new Map<string, any>();
+let RELIC_BY_NAME = new Map<string, RelicData>();
 
-let MISCRITS_META = [];
-let AVATAR_BY_NAME = new Map();
+let MISCRITS_META: MetaData[] = [];
+let AVATAR_BY_NAME = new Map<string, string>();
 
-let BASE_STATS = [];
-let BASE_BY_NAME = new Map();
+let BASE_STATS: BaseStatsData[] = [];
+let BASE_BY_NAME = new Map<string, MiscritStats>();
 
-let ATK_BASE = null;
-let DEF_BASE = null;
+let ATK_BASE: MiscritStats | null = null;
+let DEF_BASE: MiscritStats | null = null;
 
-let ATK_COLORS = { HP:"green", SPD:"green", EA:"green", PA:"green", ED:"green", PD:"green" };
-let DEF_COLORS = { HP:"green", SPD:"green", EA:"green", PA:"green", ED:"green", PD:"green" };
+let ATK_COLORS: Record<string, string> = { HP:"green", SPD:"green", EA:"green", PA:"green", ED:"green", PD:"green" };
+let DEF_COLORS: Record<string, string> = { HP:"green", SPD:"green", EA:"green", PA:"green", ED:"green", PD:"green" };
 
 const PVP_LEVEL = 35;
 const BONUS_POOL_MAX = 136;
 const SLOT_LEVELS = [10, 20, 30, 35];
 
-let BONUS_ATK = { HP:0, EA:0, PA:0, SPD:0, ED:0, PD:0 };
-let BONUS_DEF = { HP:0, EA:0, PA:0, SPD:0, ED:0, PD:0 };
+let BONUS_ATK: MiscritStats = { HP:0, EA:0, PA:0, SPD:0, ED:0, PD:0 } as MiscritStats;
+let BONUS_DEF: MiscritStats = { HP:0, EA:0, PA:0, SPD:0, ED:0, PD:0 } as MiscritStats;
 
 let negateElement = false;
-let atkId = null;
-let defId = null;
+let atkId: string | null = null;
+let defId: string | null = null;
 let atkAttackIndex = 0;
 let atkUseEnhanced = false;
 
@@ -49,11 +58,11 @@ let atkUseEnhanced = false;
    HELPERS
 ========================================================= */
 
-function getSideColors(side) {
+function getSideColors(side: "atk" | "def") {
   return side === "atk" ? ATK_COLORS : DEF_COLORS;
 }
 
-function relicKey(str){
+function relicKey(str: string | number | null | undefined): string {
   return (str ?? "")
     .toString()
     .toLowerCase()
@@ -62,9 +71,9 @@ function relicKey(str){
     .replace(/[^\w_]/g, "")
     .trim();
 }
-window.relicKey = relicKey;
+(window as any).relicKey = relicKey;
 
-function normalizeRelicValueToDisplayName(val){
+function normalizeRelicValueToDisplayName(val: string | number | null | undefined): string {
   const raw = (val ?? "").toString().trim();
   if (!raw) return "";
 
@@ -80,14 +89,14 @@ function normalizeRelicValueToDisplayName(val){
    BASE STATS CALCULATOR
 ========================================================= */
 
-function colorFactor(color) {
+function colorFactor(color: string | null | undefined): number {
   const c = normalize(color);
   if (c === "red") return 1;
   if (c === "white") return 2;
   return 3;
 }
 
-function statAtLevel(baseStat15, level, color, isHp) {
+function statAtLevel(baseStat15: number | string | null | undefined, level: number, color: string | null | undefined, isHp: boolean): number {
   const C = colorFactor(color);
   const L = clamp(level, 1, 35);
 
@@ -100,7 +109,7 @@ function statAtLevel(baseStat15, level, color, isHp) {
   }
 }
 
-function getBase15ForName(name) {
+function getBase15ForName(name: string): MiscritStats | null {
   const raw = BASE_BY_NAME.get(normalize(name));
   if (!raw) return null;
 
@@ -113,22 +122,22 @@ function getBase15ForName(name) {
 
   if (hp == null || spd == null || ea == null || pa == null || ed == null || pd == null) return null;
 
-  return { hp: toNum(hp), spd: toNum(spd), ea: toNum(ea), pa: toNum(pa), ed: toNum(ed), pd: toNum(pd) };
+  return { HP: toNum(hp), SPD: toNum(spd), EA: toNum(ea), PA: toNum(pa), ED: toNum(ed), PD: toNum(pd) };
 }
 
-function computeBaseStatsFromCalculator(name, side) {
+function computeBaseStatsFromCalculator(name: string, side: "atk" | "def"): MiscritStats | null {
   const base15 = getBase15ForName(name);
   if (!base15) return null;
 
   const c = getSideColors(side);
 
   return {
-    HP:  statAtLevel(base15.hp,  PVP_LEVEL, c.HP,  true),
-    SPD: statAtLevel(base15.spd, PVP_LEVEL, c.SPD, false),
-    EA:  statAtLevel(base15.ea,  PVP_LEVEL, c.EA,  false),
-    PA:  statAtLevel(base15.pa,  PVP_LEVEL, c.PA,  false),
-    ED:  statAtLevel(base15.ed,  PVP_LEVEL, c.ED,  false),
-    PD:  statAtLevel(base15.pd,  PVP_LEVEL, c.PD,  false),
+    HP:  statAtLevel(base15.HP,  PVP_LEVEL, c.HP,  true),
+    SPD: statAtLevel(base15.SPD, PVP_LEVEL, c.SPD, false),
+    EA:  statAtLevel(base15.EA,  PVP_LEVEL, c.EA,  false),
+    PA:  statAtLevel(base15.PA,  PVP_LEVEL, c.PA,  false),
+    ED:  statAtLevel(base15.ED,  PVP_LEVEL, c.ED,  false),
+    PD:  statAtLevel(base15.PD,  PVP_LEVEL, c.PD,  false),
   };
 }
 
@@ -136,7 +145,7 @@ function computeBaseStatsFromCalculator(name, side) {
    MOVES
 ========================================================= */
 
-function getAtkMoves(atk) {
+function getAtkMoves(atk: MiscritData | null | undefined): MoveData[] {
   if (!atk) return [];
   if (atkUseEnhanced && Array.isArray(atk.enhancedAttacks) && atk.enhancedAttacks.length) {
     return atk.enhancedAttacks;
@@ -144,7 +153,7 @@ function getAtkMoves(atk) {
   return atk.attacks ?? [];
 }
 
-function getAtkMovesSorted(atk) {
+function getAtkMovesSorted(atk: MiscritData | null | undefined): MoveData[] {
   const raw = getAtkMoves(atk).slice();
   raw.sort((a, b) => {
     const d = toNum(b?.ap) - toNum(a?.ap);
@@ -154,7 +163,7 @@ function getAtkMovesSorted(atk) {
   return raw;
 }
 
-function moveKey(a) {
+function moveKey(a: MoveData | null | undefined): string {
   return [
     normalize(a?.name),
     normalize(a?.element),
@@ -167,7 +176,7 @@ function moveKey(a) {
    MISCRITS PICKER
 ========================================================= */
 
-function findById(idOrName) {
+function findById(idOrName: string | number | null | undefined): MiscritData | null {
   if (idOrName == null) return null;
   const key = String(idOrName).trim();
   const byId = DB.find(m => m.id != null && String(m.id) === key);
@@ -176,17 +185,17 @@ function findById(idOrName) {
   return DB.find(m => normalize(m.name) === nk) ?? null;
 }
 
-function getMiscritPrimaryElement(m) {
+function getMiscritPrimaryElement(m: MiscritData | null | undefined): string {
   const el = Array.isArray(m?.elements) ? m.elements[0] : "";
   return normalize(el);
 }
 
-function miscritElementIconSrc(m) {
+function miscritElementIconSrc(m: MiscritData | null | undefined): string {
   const el = getMiscritPrimaryElement(m) || "physical";
   return `../assets/images/type/${el}.png`;
 }
 
-function renderMiscritDropdown(side, query) {
+function renderMiscritDropdown(side: "atk" | "def", query: string) {
   const dd = side === "atk" ? $("#atkMiscritDropdown") : $("#defMiscritDropdown");
   if (!dd) return;
 
@@ -219,17 +228,17 @@ function renderMiscritDropdown(side, query) {
   dd.querySelectorAll(".miscritpicker__item").forEach(btn => {
     btn.addEventListener("click", () => {
       const name = btn.getAttribute("data-name");
-      const input = side === "atk" ? $("#atkMiscritSearch") : $("#defMiscritSearch");
-      if (input) input.value = name;
+      const input = side === "atk" ? $<HTMLInputElement>("#atkMiscritSearch") : $<HTMLInputElement>("#defMiscritSearch");
+      if (input && name) input.value = name;
 
-      applyMiscritSelection(side, name);
+      if (name) applyMiscritSelection(side, name);
       dd.hidden = true;
     });
   });
 }
 
-function bindMiscritPicker(side) {
-  const input = side === "atk" ? $("#atkMiscritSearch") : $("#defMiscritSearch");
+function bindMiscritPicker(side: "atk" | "def") {
+  const input = side === "atk" ? $<HTMLInputElement>("#atkMiscritSearch") : $<HTMLInputElement>("#defMiscritSearch");
   const dd = side === "atk" ? $("#atkMiscritDropdown") : $("#defMiscritDropdown");
   if (!input || !dd) return;
 
@@ -251,7 +260,7 @@ function bindMiscritPicker(side) {
         close();
         return;
       }
-      const firstBtn = dd.querySelector(".miscritpicker__item");
+      const firstBtn = dd.querySelector<HTMLElement>(".miscritpicker__item");
       if (firstBtn) firstBtn.click();
     }
   });
@@ -259,7 +268,7 @@ function bindMiscritPicker(side) {
   document.addEventListener("click", (e) => {
     const host = input.closest(".miscritpicker");
     if (!host) return;
-    if (!host.contains(e.target)) close();
+    if (e.target instanceof Node && !host.contains(e.target)) close();
   });
 }
 
@@ -267,15 +276,15 @@ function bindMiscritPicker(side) {
    AVATAR
 ========================================================= */
 
-function inferAvatarFromName(name) {
+function inferAvatarFromName(name: string): string {
   const slug = normalize(name)
     .replace(/\s+/g, "_")
     .replace(/[^\w_]/g, "");
   return `${slug}_avatar.png`;
 }
 
-function setAvatarFromMiscrit(side, m) {
-  const imgEl = side === "atk" ? $("#atkAvatar") : $("#defAvatar");
+function setAvatarFromMiscrit(side: "atk" | "def", m: MiscritData | null | undefined) {
+  const imgEl = side === "atk" ? $<HTMLImageElement>("#atkAvatar") : $<HTMLImageElement>("#defAvatar");
   if (!imgEl || !m?.name) return;
 
   const metaAvatar = AVATAR_BY_NAME.get(normalize(m.name));
@@ -310,8 +319,8 @@ function renderSelectedMoveButton() {
 
 function syncMoveListPicker() {
   const atk = findById(atkId);
-  const sel = $("#atkAttack");
-  const picker = $("#atkAttackPicker");
+  const sel = $<HTMLSelectElement>("#atkAttack");
+  const picker = $<HTMLSelectElement>("#atkAttackPicker");
   const grid = $("#moveListGrid");
   if (!sel) return;
 
@@ -338,7 +347,7 @@ function syncMoveListPicker() {
   const left = attacks.slice(0, 5);
   const right = attacks.slice(5);
 
-  const makeCol = (list, offset) => {
+  const makeCol = (list: MoveData[], offset: number) => {
     const col = document.createElement("div");
     col.className = "movegrid__col";
 
@@ -383,13 +392,21 @@ function syncMoveListPicker() {
   if (right.length) grid.appendChild(makeCol(right, 5));
 }
 
-/* =========================================================
-   PRESETS
-========================================================= */
+interface Preset {
+  miscrit: string;
+  relics: string[];
+  bonus: MiscritStats;
+  useEnhanced?: boolean;
+}
+
+interface PresetStore {
+  atk: Record<string, Preset>;
+  def: Record<string, Preset>;
+}
 
 const PRESET_STORE_KEY = "miscritsHub.damageCalc.presets.v1";
 
-function readPresetStore() {
+function readPresetStore(): PresetStore {
   try {
     const raw = localStorage.getItem(PRESET_STORE_KEY);
     const parsed = raw ? JSON.parse(raw) : null;
@@ -402,26 +419,26 @@ function readPresetStore() {
   }
 }
 
-function writePresetStore(store) {
+function writePresetStore(store: PresetStore) {
   localStorage.setItem(PRESET_STORE_KEY, JSON.stringify(store));
 }
 
-function getSideMiscritName(side) {
+function getSideMiscritName(side: "atk" | "def"): string {
   const id = side === "atk" ? atkId : defId;
   return (id ?? "").toString().trim();
 }
 
-function getSideRelics(side) {
+function getSideRelics(side: "atk" | "def"): string[] {
   const cls = side === "atk" ? ".atkRelic" : ".defRelic";
   const arr = [ "", "", "", "" ];
-  document.querySelectorAll(cls).forEach(sel => {
+  document.querySelectorAll<HTMLSelectElement>(cls).forEach(sel => {
     const slot = toNum(sel.getAttribute("data-slot"));
     if (slot >= 0 && slot < 4) arr[slot] = (sel.value ?? "").toString();
   });
   return arr;
 }
 
-function setSideRelics(side, relicArr) {
+function setSideRelics(side: "atk" | "def", relicArr: string[]) {
   for (let i = 0; i < 4; i++) {
     const sel = getRelicSelect(side, i);
     if (!sel) continue;
@@ -431,14 +448,14 @@ function setSideRelics(side, relicArr) {
   }
 }
 
-function buildPreset(side) {
+function buildPreset(side: "atk" | "def"): Preset | null {
   const miscrit = getSideMiscritName(side);
   if (!miscrit) return null;
 
-  const preset = {
+  const preset: Preset = {
     miscrit,
     relics: getSideRelics(side),
-    bonus: { ...getCommittedBonus(side) },
+    bonus: { ...getCommittedBonus(side) } as MiscritStats,
   };
 
   if (side === "atk") preset.useEnhanced = !!atkUseEnhanced;
@@ -446,7 +463,7 @@ function buildPreset(side) {
   return preset;
 }
 
-function applyPreset(side, preset) {
+function applyPreset(side: "atk" | "def", preset: Preset) {
   if (!preset?.miscrit) return;
 
   applyMiscritSelection(side, preset.miscrit);
@@ -462,7 +479,7 @@ function applyPreset(side, preset) {
 
   if (side === "atk" && typeof preset.useEnhanced === "boolean") {
     atkUseEnhanced = preset.useEnhanced;
-    const t = $("#atkEnhancedToggle");
+    const t = $<HTMLInputElement>("#atkEnhancedToggle");
     if (t) t.checked = atkUseEnhanced;
 
     atkAttackIndex = 0;
@@ -473,7 +490,7 @@ function applyPreset(side, preset) {
   renderResult();
 }
 
-function savePresetFlow(side) {
+function savePresetFlow(side: "atk" | "def") {
   const preset = buildPreset(side);
   if (!preset) return;
 
@@ -489,7 +506,7 @@ function savePresetFlow(side) {
   writePresetStore(store);
 }
 
-function loadPresetFlow(side) {
+function loadPresetFlow(side: "atk" | "def") {
   const store = readPresetStore();
   const presets = store?.[side] ?? {};
   const keys = Object.keys(presets);
@@ -515,7 +532,7 @@ function loadPresetFlow(side) {
   let chosenKey = raw;
   const asNum = Number(raw);
   if (Number.isFinite(asNum) && asNum >= 1 && asNum <= keys.length) {
-    chosenKey = keys.sort((a, b) => a.localeCompare(b, "es"))[asNum - 1];
+    chosenKey = keys.sort((a, b) => a.localeCompare(b, "es"))[asNum - 1] ?? raw;
   }
 
   const preset = presets[chosenKey];
@@ -541,7 +558,7 @@ const STAT_ICON = {
   PD:  `${STAT_ICON_FOLDER}pd.png`,
 };
 
-function computeFinalStatsForPreset(preset){
+function computeFinalStatsForPreset(preset: Preset): MiscritStats | null {
   // base
   const m = findById(preset?.miscrit);
   if (!m) return null;
@@ -554,7 +571,7 @@ function computeFinalStatsForPreset(preset){
     const n = (name ?? "").toString().trim();
     if (!n) return null;
     return { name: n, slot, level: getSlotLevel(slot) };
-  }).filter(Boolean);
+  }).filter(Boolean) as { name: string, slot: number, level: number }[];
 
   const withRelics = applyRelicStatsBySlot(
     { HP: base.HP, SPD: base.SPD, PA: base.PA, EA: base.EA, PD: base.PD, ED: base.ED },
@@ -573,7 +590,7 @@ function computeFinalStatsForPreset(preset){
   };
 }
 
-function avatarSrcForName(name){
+function avatarSrcForName(name: string): string {
   const metaAvatar = AVATAR_BY_NAME.get(normalize(name));
   const inferred = inferAvatarFromName(name);
   return `../assets/images/miscrits_avatar/${metaAvatar || inferred}`;
@@ -582,14 +599,14 @@ function avatarSrcForName(name){
 function openPresetModal(){
   const modal = $("#presetModal");
   const grid  = $("#presetGrid");
-  const search = $("#presetSearch");
+  const search = $<HTMLInputElement>("#presetSearch");
   if (!modal || !grid || !search) return;
 
   const store = readPresetStore();
   const presets = store?.atk ?? {};
   const keys = Object.keys(presets);
 
-  const render = (q) => {
+  const render = (q: string) => {
     const qq = normalize(q);
     const list = keys
       .filter(k => !qq || normalize(k).includes(qq) || normalize(presets[k]?.miscrit).includes(qq))
@@ -603,7 +620,7 @@ function openPresetModal(){
     grid.innerHTML = list.map((key) => {
       const p = presets[key];
       const mis = p?.miscrit ?? "—";
-      const stats = computeFinalStatsForPreset(p) || {HP:"—",SPD:"—",EA:"—",PA:"—",ED:"—",PD:"—"};
+      const stats = (p ? computeFinalStatsForPreset(p) : null) || {HP:"—",SPD:"—",EA:"—",PA:"—",ED:"—",PD:"—"};
       const avatar = avatarSrcForName(mis);
       const relics = (p?.relics || ["","","",""]).slice(0,4);
 
@@ -615,11 +632,11 @@ function openPresetModal(){
         return `<img class="presetRelic" src="${src}" alt="${alt}" title="${alt}" onerror="this.src='${RELIC_PLACEHOLDER}'">`;
       }).join("");
 
-      const statCell = (K) => `
+      const statCell = (K: keyof MiscritStats) => `
         <div class="presetStat">
-          <img class="presetStat__ico" src="${STAT_ICON[K]}" alt="">
+          <img class="presetStat__ico" src="${STAT_ICON[K as keyof typeof STAT_ICON]}" alt="">
           <div class="presetStat__k">${K}</div>
-          <div class="presetStat__v">${stats[K]}</div>
+          <div class="presetStat__v">${(stats as any)[K]}</div>
         </div>
       `;
 
@@ -634,12 +651,12 @@ function openPresetModal(){
             </div>
 
             <div class="presetStats">
-              ${statCell("HP")}
-              ${statCell("SPD")}
-              ${statCell("EA")}
-              ${statCell("PA")}
-              ${statCell("ED")}
-              ${statCell("PD")}
+              ${(statCell as (k: keyof MiscritStats) => string)("HP")}
+              ${(statCell as (k: keyof MiscritStats) => string)("SPD")}
+              ${(statCell as (k: keyof MiscritStats) => string)("EA")}
+              ${(statCell as (k: keyof MiscritStats) => string)("PA")}
+              ${(statCell as (k: keyof MiscritStats) => string)("ED")}
+              ${(statCell as (k: keyof MiscritStats) => string)("PD")}
             </div>
 
             <div class="presetRelics">
@@ -656,9 +673,9 @@ function openPresetModal(){
     }).join("");
 
     // bind buttons
-    grid.querySelectorAll(".presetCard").forEach(card => {
+    grid.querySelectorAll(".presetCard").forEach((card: Element) => {
       const key = card.getAttribute("data-preset");
-      const preset = presets[key];
+      const preset = key ? presets[key] : null;
       if (!preset) return;
 
       card.querySelector('[data-act="load"]')?.addEventListener("click", () => {
@@ -667,7 +684,6 @@ function openPresetModal(){
       });
 
       card.querySelector('[data-act="edit"]')?.addEventListener("click", () => {
-        // Edit = cargar preset y cerrar, para que lo modifiques en la UI
         applyPreset("atk", preset);
         closePresetModal();
       });
@@ -690,17 +706,24 @@ function closePresetModal(){
    APPLY MISCRIT SELECTION
 ========================================================= */
 
-function setStatsInputsObj(prefix, stats) {
+function setStatsInputsObj(prefix: "atk" | "def", stats: MiscritStats | null) {
   if (!stats) return;
-  $(`#${prefix}HP`).value  = toNum(stats.HP);
-  $(`#${prefix}SPD`).value = toNum(stats.SPD);
-  $(`#${prefix}EA`).value  = toNum(stats.EA);
-  $(`#${prefix}PA`).value  = toNum(stats.PA);
-  $(`#${prefix}ED`).value  = toNum(stats.ED);
-  $(`#${prefix}PD`).value  = toNum(stats.PD);
+  const hpEl = $<HTMLInputElement>(`#${prefix}HP`);
+  const spdEl = $<HTMLInputElement>(`#${prefix}SPD`);
+  const eaEl = $<HTMLInputElement>(`#${prefix}EA`);
+  const paEl = $<HTMLInputElement>(`#${prefix}PA`);
+  const edEl = $<HTMLInputElement>(`#${prefix}ED`);
+  const pdEl = $<HTMLInputElement>(`#${prefix}PD`);
+
+  if(hpEl) hpEl.value  = String(toNum(stats.HP));
+  if(spdEl) spdEl.value = String(toNum(stats.SPD));
+  if(eaEl) eaEl.value  = String(toNum(stats.EA));
+  if(paEl) paEl.value  = String(toNum(stats.PA));
+  if(edEl) edEl.value  = String(toNum(stats.ED));
+  if(pdEl) pdEl.value  = String(toNum(stats.PD));
 }
 
-function setMeta(id, metaEl) {
+function setMeta(id: string | null | undefined, metaEl: HTMLElement | null) {
   const m = findById(id);
   if (!metaEl) return;
   if (!m) { metaEl.textContent = "—"; return; }
@@ -708,20 +731,21 @@ function setMeta(id, metaEl) {
   metaEl.textContent = elems ? `Elements: ${elems}` : "—";
 }
 
-function chooseBaseStatsForSide(m, side) {
+function chooseBaseStatsForSide(m: MiscritData, side: "atk" | "def"): MiscritStats | null {
   const computed = computeBaseStatsFromCalculator(m.name, side);
   if (computed) return computed;
   if (m?.stats) return { ...m.stats };
   return null;
 }
 
-function applyMiscritSelection(side, idOrName) {
+function applyMiscritSelection(side: "atk" | "def", idOrName: string | null | undefined) {
   const m = findById(idOrName);
   if (!m?.name) return;
 
   if (side === "atk") {
     atkId = m.name;
-    $("#atkMiscrit") && ($("#atkMiscrit").value = atkId);
+    const atkMiscritEl = $<HTMLInputElement>("#atkMiscrit");
+    if (atkMiscritEl) atkMiscritEl.value = atkId;
 
     ATK_BASE = chooseBaseStatsForSide(m, "atk");
     refreshSideStatsFromRelics("atk");
@@ -738,7 +762,8 @@ function applyMiscritSelection(side, idOrName) {
 
   if (side === "def") {
     defId = m.name;
-    $("#defMiscrit") && ($("#defMiscrit").value = defId);
+    const defMiscritEl = $<HTMLInputElement>("#defMiscrit");
+    if (defMiscritEl) defMiscritEl.value = defId;
 
     DEF_BASE = chooseBaseStatsForSide(m, "def");
     refreshSideStatsFromRelics("def");
@@ -757,7 +782,7 @@ function applyMiscritSelection(side, idOrName) {
 
 const RELIC_PLACEHOLDER = "../assets/images/relics/CRUZ.png";
 
-function slugFileName(name) {
+function slugFileName(name: any) {
   return (name ?? "")
     .toString()
     .trim()
@@ -766,14 +791,14 @@ function slugFileName(name) {
     .replace(/[^\w_]/g, "") + ".png";
 }
 
-function relicIconSrc(r) {
+function relicIconSrc(r: RelicData | null | undefined): string {
   if (!r) return RELIC_PLACEHOLDER;
   if (r.icon) return `../assets/images/relics/${r.icon}`;
   return `../assets/images/relics/${slugFileName(r.name)}`;
 }
 
-function relicBonusText(r) {
-  const s = r?.stats || {};
+function relicBonusText(r: RelicData | null | undefined): string {
+  const s = r?.stats || ({} as MiscritStats);
   const parts = [];
   if (toNum(s.HP))  parts.push(`+${toNum(s.HP)} HP`);
   if (toNum(s.SPD)) parts.push(`+${toNum(s.SPD)} SPD`);
@@ -784,29 +809,32 @@ function relicBonusText(r) {
   return parts.join(" • ");
 }
 
-function getSlotLevel(slot) {
+function getSlotLevel(slot: string | number): number {
   const s = Math.max(0, Math.min(3, toNum(slot)));
   return SLOT_LEVELS[s] ?? 35;
 }
 
-function getRelicSelect(side, slot) {
+function getRelicSelect(side: "atk" | "def", slot: number | string): HTMLSelectElement | null {
   const cls = side === "atk" ? ".atkRelic" : ".defRelic";
-  return document.querySelector(`${cls}[data-slot="${slot}"]`);
+  return document.querySelector<HTMLSelectElement>(`${cls}[data-slot="${slot}"]`);
 }
 
-function getRelicSelectionsDetailed(sideCls) {
-  return Array.from(document.querySelectorAll(sideCls))
+function getRelicSelectionsDetailed(sideCls: string): { name: string; slot: number; level: number }[] {
+  return Array.from(document.querySelectorAll<HTMLSelectElement>(sideCls))
     .map(sel => {
       const slot = toNum(sel.getAttribute("data-slot"));
       const name = (sel.value ?? "").toString().trim();
       if (!name) return null;
       return { name, slot, level: getSlotLevel(slot) };
     })
-    .filter(Boolean);
+    .filter(Boolean) as { name: string; slot: number; level: number }[];
 }
 
-function applyRelicStatsBySlot(stats, selections) {
-  const out = { ...stats };
+function applyRelicStatsBySlot(
+  stats: MiscritStats,
+  selections: { name: string; slot: number; level: number }[]
+): MiscritStats {
+  const out = { ...stats } as MiscritStats;
 
   for (const { slot, name } of selections) {
     const r = name ? RELIC_BY_NAME.get(relicKey(name)) : null;
@@ -827,42 +855,49 @@ function applyRelicStatsBySlot(stats, selections) {
   return out;
 }
 
-function sumBonus(b){
+function sumBonus(b: MiscritStats): number {
   return toNum(b.HP)+toNum(b.EA)+toNum(b.PA)+toNum(b.SPD)+toNum(b.ED)+toNum(b.PD);
 }
 
-function readBonusDraft(side){
+function readBonusDraft(side: "atk" | "def"): MiscritStats {
   const p = side === "atk" ? "atk" : "def";
   return {
-    HP: toNum($(`#${p}BonusHP`)?.value),
-    EA: toNum($(`#${p}BonusEA`)?.value),
-    PA: toNum($(`#${p}BonusPA`)?.value),
-    SPD: toNum($(`#${p}BonusSPD`)?.value),
-    ED: toNum($(`#${p}BonusED`)?.value),
-    PD: toNum($(`#${p}BonusPD`)?.value),
+    HP: toNum($<HTMLInputElement>(`#${p}BonusHP`)?.value),
+    EA: toNum($<HTMLInputElement>(`#${p}BonusEA`)?.value),
+    PA: toNum($<HTMLInputElement>(`#${p}BonusPA`)?.value),
+    SPD: toNum($<HTMLInputElement>(`#${p}BonusSPD`)?.value),
+    ED: toNum($<HTMLInputElement>(`#${p}BonusED`)?.value),
+    PD: toNum($<HTMLInputElement>(`#${p}BonusPD`)?.value),
   };
 }
 
-function writeBonusDraft(side, b){
+function writeBonusDraft(side: "atk" | "def", b: MiscritStats) {
   const p = side === "atk" ? "atk" : "def";
-  $(`#${p}BonusHP`).value  = toNum(b.HP);
-  $(`#${p}BonusEA`).value  = toNum(b.EA);
-  $(`#${p}BonusPA`).value  = toNum(b.PA);
-  $(`#${p}BonusSPD`).value = toNum(b.SPD);
-  $(`#${p}BonusED`).value  = toNum(b.ED);
-  $(`#${p}BonusPD`).value  = toNum(b.PD);
+  const hpEl = $<HTMLInputElement>(`#${p}BonusHP`);
+  const eaEl = $<HTMLInputElement>(`#${p}BonusEA`);
+  const paEl = $<HTMLInputElement>(`#${p}BonusPA`);
+  const spdEl = $<HTMLInputElement>(`#${p}BonusSPD`);
+  const edEl = $<HTMLInputElement>(`#${p}BonusED`);
+  const pdEl = $<HTMLInputElement>(`#${p}BonusPD`);
+
+  if(hpEl) hpEl.value  = String(toNum(b.HP));
+  if(eaEl) eaEl.value  = String(toNum(b.EA));
+  if(paEl) paEl.value  = String(toNum(b.PA));
+  if(spdEl) spdEl.value = String(toNum(b.SPD));
+  if(edEl) edEl.value  = String(toNum(b.ED));
+  if(pdEl) pdEl.value  = String(toNum(b.PD));
 }
 
-function getCommittedBonus(side){
+function getCommittedBonus(side: "atk" | "def"): MiscritStats {
   return side === "atk" ? BONUS_ATK : BONUS_DEF;
 }
 
-function setCommittedBonus(side, b){
-  if (side === "atk") BONUS_ATK = { ...b };
-  else BONUS_DEF = { ...b };
+function setCommittedBonus(side: "atk" | "def", b: MiscritStats) {
+  if (side === "atk") BONUS_ATK = { ...b } as MiscritStats;
+  else BONUS_DEF = { ...b } as MiscritStats;
 }
 
-function updateBonusUI(side){
+function updateBonusUI(side: "atk" | "def") {
   const p = side === "atk" ? "atk" : "def";
   const draft = readBonusDraft(side);
   const used = sumBonus(draft);
@@ -881,7 +916,7 @@ function updateBonusUI(side){
   });
 }
 
-function calcSideWithRelics(side) {
+function calcSideWithRelics(side: "atk" | "def"): MiscritStats | null {
   const base = side === "atk" ? ATK_BASE : DEF_BASE;
   if (!base) return null;
 
@@ -902,14 +937,14 @@ function calcSideWithRelics(side) {
   };
 }
 
-function refreshSideStatsFromRelics(side) {
+function refreshSideStatsFromRelics(side: "atk" | "def") {
   const total = calcSideWithRelics(side);
   if (!total) return;
   setStatsInputsObj(side, total);
 }
 
-function setSlotButtonUI(side, slot) {
-  const host = document.querySelector(`.relic-slot[data-side="${side}"][data-slot="${slot}"]`);
+function setSlotButtonUI(side: "atk" | "def", slot: number) {
+  const host = document.querySelector<HTMLElement>(`.relic-slot[data-side="${side}"][data-slot="${slot}"]`);
   if (!host) return;
 
   const sel = getRelicSelect(side, slot);
@@ -937,15 +972,15 @@ function refreshAllRelicSlots() {
   }
 }
 
-let RELIC_PICK = { side: null, slot: null };
+let RELIC_PICK: { side: "atk" | "def" | null; slot: number | null } = { side: null, slot: null };
 
-function openRelicModal(side, slot) {
+function openRelicModal(side: "atk" | "def", slot: number) {
   RELIC_PICK = { side, slot };
 
   const modal = $("#relicModal");
   const title = $("#relicModalTitle");
   const grid = $("#relicGrid");
-  const search = $("#relicSearch");
+  const search = $<HTMLInputElement>("#relicSearch");
 
   if (!modal || !title || !grid || !search) return;
 
@@ -955,7 +990,7 @@ function openRelicModal(side, slot) {
   search.value = "";
   grid.innerHTML = "";
 
-  const renderGrid = (q) => {
+  const renderGrid = (q: string) => {
     const qq = normalize(q);
     grid.innerHTML = "";
 
@@ -996,7 +1031,7 @@ function openRelicModal(side, slot) {
       `;
       el.addEventListener("click", () => {
         const sel = getRelicSelect(side, slot);
-        if (sel) sel.value = r.name;
+        if (sel) sel.value = r.name ?? "";
         refreshAllRelicSlots();
         refreshSideStatsFromRelics(side);
         closeRelicModal();
@@ -1069,19 +1104,19 @@ function applyStandardDefender() {
 
 function getInputsRaw() {
   return {
-    atkPA: toNum($("#atkPA")?.value),
-    atkEA: toNum($("#atkEA")?.value),
-    atkSPD: toNum($("#atkSPD")?.value),
-    atkPD: toNum($("#atkPD")?.value),
-    atkED: toNum($("#atkED")?.value),
-    atkHP: toNum($("#atkHP")?.value),
+    atkPA: toNum($<HTMLInputElement>("#atkPA")?.value),
+    atkEA: toNum($<HTMLInputElement>("#atkEA")?.value),
+    atkSPD: toNum($<HTMLInputElement>("#atkSPD")?.value),
+    atkPD: toNum($<HTMLInputElement>("#atkPD")?.value),
+    atkED: toNum($<HTMLInputElement>("#atkED")?.value),
+    atkHP: toNum($<HTMLInputElement>("#atkHP")?.value),
 
-    defPA: toNum($("#defPA")?.value),
-    defEA: toNum($("#defEA")?.value),
-    defSPD: toNum($("#defSPD")?.value),
-    defPD: toNum($("#defPD")?.value),
-    defED: toNum($("#defED")?.value),
-    defHP: toNum($("#defHP")?.value),
+    defPA: toNum($<HTMLInputElement>("#defPA")?.value),
+    defEA: toNum($<HTMLInputElement>("#defEA")?.value),
+    defSPD: toNum($<HTMLInputElement>("#defSPD")?.value),
+    defPD: toNum($<HTMLInputElement>("#defPD")?.value),
+    defED: toNum($<HTMLInputElement>("#defED")?.value),
+    defHP: toNum($<HTMLInputElement>("#defHP")?.value),
   };
 }
 
@@ -1099,7 +1134,7 @@ function renderResult() {
   const outAvg = $("#outAvg");
   const outKO  = $("#outKO");
 
-  const setUI = (minTxt, maxTxt, avgTxt, koTxt) => {
+  const setUI = (minTxt: string, maxTxt: string, avgTxt: string, koTxt: string) => {
     if (outMin) outMin.textContent = minTxt;
     if (outMax) outMax.textContent = maxTxt;
     if (outAvg) outAvg.textContent = avgTxt;
@@ -1124,7 +1159,7 @@ function renderResult() {
 
   const totals = readTotalStatsForCalc();
 
-  const mode = $("#atkMode")?.value ?? "auto";
+  const mode = $<HTMLSelectElement>("#atkMode")?.value ?? "auto";
   const picked = pickAtkDefStats(mode, a.element, {
     atkPA: totals.atk.PA,
     atkEA: totals.atk.EA,
@@ -1151,9 +1186,9 @@ function renderResult() {
    SWAP SIDES
 ========================================================= */
 
-function swapInputValues(aId, bId) {
-  const a = document.getElementById(aId);
-  const b = document.getElementById(bId);
+function swapInputValues(aId: string, bId: string) {
+  const a = document.getElementById(aId) as HTMLInputElement;
+  const b = document.getElementById(bId) as HTMLInputElement;
   if (!a || !b) return;
   const tmp = a.value;
   a.value = b.value;
@@ -1162,8 +1197,8 @@ function swapInputValues(aId, bId) {
 
 function swapRelicSelectValues() {
   for (let i = 0; i < 4; i++) {
-    const a = document.querySelector(`.atkRelic[data-slot="${i}"]`);
-    const b = document.querySelector(`.defRelic[data-slot="${i}"]`);
+    const a = document.querySelector<HTMLSelectElement>(`.atkRelic[data-slot="${i}"]`);
+    const b = document.querySelector<HTMLSelectElement>(`.defRelic[data-slot="${i}"]`);
     if (!a || !b) continue;
     const tmp = a.value;
     a.value = b.value;
@@ -1259,14 +1294,14 @@ async function loadAll() {
   BASE_STATS = Array.isArray(baseStatsJson) ? baseStatsJson : (baseStatsJson?.miscrits ?? []);
 
   RELIC_BY_NAME = new Map(RELICS.map(r => [relicKey(r.name), r]));
-  RELIC_NAME_BY_KEY = new Map(RELICS.map(r => [relicKey(r.name), r.name]));
+  RELIC_NAME_BY_KEY = new Map(RELICS.map(r => [relicKey(r.name), r.name!]));
 
-  window.__RELIC_NAME_BY_KEY = RELIC_NAME_BY_KEY; 
+  (window as any).__RELIC_NAME_BY_KEY = RELIC_NAME_BY_KEY;  
 
   AVATAR_BY_NAME = new Map(
     MISCRITS_META
       .filter(x => x?.name && x?.avatar)
-      .map(x => [normalize(x.name), x.avatar])
+      .map(x => [normalize(x.name), x.avatar!])
   );
 
   BASE_BY_NAME = new Map(
@@ -1274,7 +1309,7 @@ async function loadAll() {
       .filter(x => x?.name && (x?.baseStats || x?.stats || x?.base || x?.base_stats))
       .map(x => {
         const bs = x.baseStats ?? x.stats ?? x.base ?? x.base_stats;
-        return [normalize(x.name), bs];
+        return [normalize(x.name), bs as MiscritStats];
       })
   );
 }
@@ -1308,16 +1343,17 @@ function bindAll() {
   $("#atkLoadPreset")?.addEventListener("click", openPresetModal);
   $("#atkSavePreset")?.addEventListener("click", () => savePresetFlow("atk"));
 
-  document.addEventListener("click", (e) => {
-    if (e.target.closest('[data-action="close-presets"]')) closePresetModal();
-    if (e.target.closest('[data-action="close-moves"]')) {
+  document.addEventListener("click", (e: Event) => {
+    const target = e.target as HTMLElement | null;
+    if (target?.closest('[data-action="close-presets"]')) closePresetModal();
+    if (target?.closest('[data-action="close-moves"]')) {
       const modal = $("#moveModal");
       if (modal) modal.hidden = true;
     }
-    if (e.target.closest('[data-action="close-relic"]')) closeRelicModal();
+    if (target?.closest('[data-action="close-relic"]')) closeRelicModal();
   });
 
-  document.addEventListener("keydown", (e) => {
+  document.addEventListener("keydown", (e: KeyboardEvent) => {
     if (e.key === "Escape") {
       closePresetModal();
       closeRelicModal();
@@ -1349,15 +1385,16 @@ function bindAll() {
     });
   });
 
-  $("#atkEnhancedToggle")?.addEventListener("change", (e) => {
-    atkUseEnhanced = !!e.target.checked;
+  $("#atkEnhancedToggle")?.addEventListener("change", (e: Event) => {
+    const target = e.target as HTMLInputElement;
+    atkUseEnhanced = !!target.checked;
     atkAttackIndex = 0;
     syncMoveListPicker();
     renderSelectedMoveButton();
     renderResult();
   });
 
-  document.querySelectorAll(".tab").forEach(btn => {
+  document.querySelectorAll(".tab").forEach((btn: Element) => {
     btn.addEventListener("click", () => {
       const side = btn.getAttribute("data-side");
       const tab  = btn.getAttribute("data-tab");
@@ -1368,16 +1405,16 @@ function bindAll() {
       host.querySelectorAll(".tab").forEach(t => t.classList.remove("is-active"));
       btn.classList.add("is-active");
 
-      host.querySelectorAll(".panel").forEach(p => {
+      host.querySelectorAll<HTMLElement>(".panel").forEach(p => {
         const isTarget = p.getAttribute("data-panel") === tab && p.getAttribute("data-side") === side;
         p.hidden = !isTarget;
       });
 
-      if (tab === "bonus") updateBonusUI(side);
+      if (tab === "bonus" && (side === "atk" || side === "def")) updateBonusUI(side);
     });
   });
 
-  ["atk","def"].forEach(side => {
+  (["atk","def"] as const).forEach(side => {
     const ids = ["HP","EA","PA","SPD","ED","PD"].map(k => `#${side}Bonus${k}`);
     ids.forEach(sel => $(sel)?.addEventListener("input", () => updateBonusUI(side)));
 
@@ -1407,10 +1444,10 @@ async function init() {
   atkId = first ? String(first) : null;
   defId = first ? String(first) : null;
 
-  if ($("#atkMiscritSearch")) $("#atkMiscritSearch").value = atkId ?? "";
-  if ($("#defMiscritSearch")) $("#defMiscritSearch").value = defId ?? "";
-  if ($("#atkMiscrit")) $("#atkMiscrit").value = atkId ?? "";
-  if ($("#defMiscrit")) $("#defMiscrit").value = defId ?? "";
+  if ($<HTMLInputElement>("#atkMiscritSearch")) $<HTMLInputElement>("#atkMiscritSearch")!.value = atkId ?? "";
+  if ($<HTMLInputElement>("#defMiscritSearch")) $<HTMLInputElement>("#defMiscritSearch")!.value = defId ?? "";
+  if ($<HTMLSelectElement>("#atkMiscrit")) $<HTMLSelectElement>("#atkMiscrit")!.value = atkId ?? "";
+  if ($<HTMLSelectElement>("#defMiscrit")) $<HTMLSelectElement>("#defMiscrit")!.value = defId ?? "";
 
   setMeta(atkId, $("#atkMeta"));
   setMeta(defId, $("#defMeta"));

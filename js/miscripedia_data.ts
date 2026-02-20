@@ -1,15 +1,15 @@
-const $ = (s) => document.querySelector(s);
+const $ = (s: string) => document.querySelector(s) as HTMLElement;
 
-function getParam(name){
+function getParam(name: string){
   const u = new URL(location.href);
   return u.searchParams.get(name);
 }
 
-function stageName(m, stageIdx=0){
+function stageName(m: any, stageIdx=0){
   return m?.names?.[stageIdx] ?? m?.names?.[0] ?? "Unknown";
 }
 
-function escHtml(str){
+function escHtml(str: any){
   return String(str ?? "")
     .replaceAll("&","&amp;")
     .replaceAll("<","&lt;")
@@ -22,7 +22,7 @@ function escHtml(str){
    ICON HELPERS
 ========================================================= */
 
-const ABILITY_ICON_ALIAS = {
+const ABILITY_ICON_ALIAS: Record<string, string> = {
   // normalizeKey => lower_snake, así que SOLO llaves en lower
   hot: "heal",
   bot: "buff_over_time",
@@ -40,11 +40,11 @@ const ABILITY_ICON_ALIAS = {
   defensedeBuff: "debuff", // (no se usará, pero por si copias)
 };
 
-function resolveAbilityIcon(key){
+function resolveAbilityIcon(key: string){
   return key ? (ABILITY_ICON_ALIAS[key] ?? key) : "";
 }
 
-function normalizeKey(s){
+function normalizeKey(s: any){
   return String(s ?? "")
     .trim()
     .toLowerCase()
@@ -52,13 +52,13 @@ function normalizeKey(s){
     .replace(/[^a-z0-9_]/g, "");
 }
 
-function elementIconUrl(element){
+function elementIconUrl(element: string){
   if (!element) return "";
   const key = normalizeKey(element);
   return `../assets/images/type/${key}.png`;
 }
 
-function abilityIconUrl(ab){
+function abilityIconUrl(ab: any){
   const typeRaw = normalizeKey(ab?.type);
   const elRaw   = normalizeKey(ab?.element);
 
@@ -78,7 +78,7 @@ function abilityIconUrl(ab){
    SPRITES
 ========================================================= */
 
-function backSpriteUrl(m) {
+function backSpriteUrl(m: any) {
   const name = (m?.names?.[0] ?? "")
     .toLowerCase()
     .trim()
@@ -87,7 +87,7 @@ function backSpriteUrl(m) {
   return `../assets/images/backs/${name}_back.png`;
 }
 
-function evoSpriteUrl(m, stageIdx){
+function evoSpriteUrl(m: any, stageIdx: number){
   // si algún día tienes sprites por stage, aquí lo cambias
   return backSpriteUrl(m);
 }
@@ -96,7 +96,7 @@ function evoSpriteUrl(m, stageIdx){
    TAGS / META
 ========================================================= */
 
-function computeTags(m){
+function computeTags(m: any){
   const set = new Set();
   for (const ab of (m.abilities ?? [])){
     if (ab?.type) set.add(String(ab.type));
@@ -111,7 +111,7 @@ function computeTags(m){
   return out.length ? out : Array.from(set).slice(0,3);
 }
 
-function firstLocation(m){
+function firstLocation(m: any){
   const loc = m.locations ?? {};
   const zones = Object.keys(loc);
   return zones.length ? zones[0] : "Unknown";
@@ -121,7 +121,7 @@ function firstLocation(m){
    STATS
 ========================================================= */
 
-function statToPips(label){
+function statToPips(label: any){
   switch(String(label)){
     case "Weak": return 1;
     case "Moderate": return 2;
@@ -132,7 +132,7 @@ function statToPips(label){
   }
 }
 
-function renderStats(m){
+function renderStats(m: any){
   const statsEl = $("#stats");
   if (!statsEl) return;
 
@@ -164,9 +164,9 @@ function renderStats(m){
    ABILITIES
 ========================================================= */
 
-function orderAbilities(m){
+function orderAbilities(m: any){
   const abs = m.abilities ?? [];
-  const byId = new Map(abs.map(a => [a.id, a]));
+  const byId = new Map(abs.map((a: any) => [a.id, a]));
   const ordered = [];
 
   for (const id of (m.ability_order ?? [])){
@@ -179,7 +179,7 @@ function orderAbilities(m){
   return ordered;
 }
 
-function buildEnchantText(a){
+function buildEnchantText(a: any){
   const ed = String(a.enchant_desc ?? "").trim();
   if (ed) return ed;
 
@@ -200,7 +200,7 @@ function buildEnchantText(a){
 
 /* ---------- Tooltip ---------- */
 
-function positionTip(targetEl){
+function positionTip(targetEl: HTMLElement){
   const tip = $("#abTip");
   if (!tip || tip.hidden || !targetEl) return;
 
@@ -232,7 +232,7 @@ function hideAbTip(){
   tip.removeAttribute("data-open");
 }
 
-function showAbTip(targetEl, a){
+function showAbTip(targetEl: HTMLElement, a: any){
   const tip = $("#abTip");
   if (!tip) return;
 
@@ -271,7 +271,7 @@ function isTouchLike(){
   return window.matchMedia?.("(hover: none)").matches || ("ontouchstart" in window);
 }
 
-function renderAbilities(m){
+function renderAbilities(m: any){
   const box = $("#abilities");
   if (!box) return;
 
@@ -279,7 +279,7 @@ function renderAbilities(m){
   const list = absOrdered.slice(0,12);
 
   // index por id => O(1) lookup
-  const byId = new Map((m.abilities ?? []).map(a => [Number(a.id), a]));
+  const byId = new Map((m.abilities ?? []).map((a: any) => [Number(a.id), a]));
 
   box.innerHTML = list.map(a => {
     const icon = abilityIconUrl(a);
@@ -312,8 +312,8 @@ function renderAbilities(m){
   box.onmouseleave = null;
   box.onclick = null;
   box.onkeydown = null;
-  box.onfocusin = null;
-  box.onfocusout = null;
+  box.onfocus = null;
+  box.onblur = null;
 
   if (!touch){
     // Desktop hover
@@ -326,7 +326,8 @@ function renderAbilities(m){
     };
 
     box.onmouseover = (e) => {
-      const abEl = e.target.closest(".ab");
+      const t = e.target as HTMLElement;
+      const abEl = t.closest(".ab") as HTMLElement | null;
       if (!abEl) return;
       const id = Number(abEl.getAttribute("data-abid"));
       const a = byId.get(id);
@@ -338,7 +339,8 @@ function renderAbilities(m){
   } else {
     // Mobile / touch: tap to toggle tooltip
     box.onclick = (e) => {
-      const abEl = e.target.closest(".ab");
+      const t = e.target as HTMLElement;
+      const abEl = t.closest(".ab") as HTMLElement | null;
       if (!abEl) return;
       const id = Number(abEl.getAttribute("data-abid"));
       const a = byId.get(id);
@@ -348,20 +350,21 @@ function renderAbilities(m){
       const isOpen = tip && !tip.hidden && tip.getAttribute("data-open") === "1";
 
       // si tocas el mismo, toggle
-      if (isOpen && tip.__for === abEl){
+      if (isOpen && (tip as any).__for === abEl){
         hideAbTip();
         return;
       }
 
       showAbTip(abEl, a);
-      if (tip) tip.__for = abEl;
+      if (tip) (tip as any).__for = abEl;
     };
 
     // cerrar tocando fuera
     document.addEventListener("click", (e) => {
       const tip = $("#abTip");
       if (!tip || tip.hidden) return;
-      if (e.target.closest(".ab")) return;
+      const t = e.target as HTMLElement;
+      if (t.closest(".ab")) return;
       hideAbTip();
     }, { capture: true });
   }
@@ -375,7 +378,7 @@ function renderAbilities(m){
    EVOLUTIONS
 ========================================================= */
 
-function renderEvolutions(m, stageIdx){
+function renderEvolutions(m: any, stageIdx: number){
   const box = $("#evolutions");
   if (!box) return;
 
@@ -410,7 +413,7 @@ async function main(){
   const res = await fetch("../assets/data/miscripedia.json", { cache: "force-cache" });
   const data = await res.json();
   const all = Array.isArray(data) ? data : (data.miscrits ?? []);
-  const m = all.find(x => Number(x.id) === id);
+  const m = all.find((x: any) => Number(x.id) === id);
 
   if (!m){
     const nameEl = $("#name");
@@ -437,7 +440,7 @@ async function main(){
     tagsEl.innerHTML = tags.map(t => `<span class="tag">${escHtml(t)}</span>`).join("");
   }
 
-  const spriteEl = $("#sprite");
+  const spriteEl = $("#sprite") as HTMLImageElement;
   if (spriteEl){
     spriteEl.src = backSpriteUrl(m);
     spriteEl.alt = stageName(m, stageIdx);
@@ -454,8 +457,8 @@ async function main(){
   const loc = firstLocation(m);
   const locTop = $("#location");
   const loc2 = $("#location2");
-  if (locTop) locTop.textContent = loc;
-  if (loc2) loc2.textContent = loc;
+  if (locTop) locTop.textContent = loc ?? "";
+  if (loc2) loc2.textContent = loc ?? "";
 
   renderEvolutions(m, stageIdx);
   renderStats(m);

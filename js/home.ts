@@ -1,24 +1,24 @@
 (() => {
   const INDEX_PATH = "./assets/data/patches.json";
   const DETAIL_DIR = "./assets/data/patchs"; // tu carpeta se llama patchs
-  const $ = (s) => document.querySelector(s);
+  const $ = (s: string) => document.querySelector(s);
 
-  function escapeHtml(s){
+  function escapeHtml(s: any){
     return String(s ?? "")
       .replaceAll("&","&amp;")
       .replaceAll("<","&lt;")
       .replaceAll(">","&gt;");
   }
-  function escapeAttr(s){
+  function escapeAttr(s: any){
     return escapeHtml(s).replaceAll('"',"&quot;");
   }
 
-  function toDateValue(d){
+  function toDateValue(d: any){
     const t = Date.parse(String(d ?? ""));
     return Number.isFinite(t) ? t : -Infinity;
   }
 
-  function pickLatestIndex(items){
+  function pickLatestIndex(items: any[]){
     const hasDate = items.some(p => p?.date);
     if (hasDate){
       return items.slice().sort((a,b)=> toDateValue(b.date) - toDateValue(a.date))[0];
@@ -26,13 +26,13 @@
     return items[items.length - 1];
   }
 
-  function getMiscritSections(patchDetail){
-    return (patchDetail?.sections ?? []).filter(s =>
+  function getMiscritSections(patchDetail: any){
+    return (patchDetail?.sections ?? []).filter((s: any) =>
       String(s?.type ?? "").trim().toLowerCase() === "miscrit"
     );
   }
 
-  function miscritAvatarUrl(name){
+  function miscritAvatarUrl(name: any){
     const file = String(name ?? "")
       .toLowerCase()
       .trim()
@@ -43,7 +43,7 @@
     return `./assets/images/miscrits_avatar/${file}_avatar.png`;
   }
 
-  async function fetchJson(path){
+  async function fetchJson(path: string){
     const res = await fetch(path, { cache: "no-store" });
     if (!res.ok) throw new Error(`Fetch failed ${res.status}: ${path}`);
     return res.json();
@@ -63,7 +63,7 @@
     return idx;
   }
 
-  function miscritLinkFromName(name, index){
+  function miscritLinkFromName(name: any, index: Map<string, any>){
     const key = String(name ?? "").toLowerCase().trim();
     const hit = index.get(key);
     if (!hit) return `./pages/miscripedia.html?q=${encodeURIComponent(name)}`; // fallback
@@ -113,7 +113,7 @@
 
           ${miscrits.length ? `
             <div class="latestMiscrits">
-              ${miscrits.map(m => {
+              ${miscrits.map((m: any) => {
                 const href = miscritLinkFromName(m.name, miscritIndex);
                 return `
                   <a class="latestMiscrit" href="${href}">

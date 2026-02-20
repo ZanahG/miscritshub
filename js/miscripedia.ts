@@ -1,11 +1,11 @@
-const $ = (s) => document.querySelector(s);
+const $ = (s: string) => document.querySelector(s) as HTMLElement | null;
 
 const STATE = {
-  all: [],
+  all: [] as any[],
   q: "",
-  rarities: new Set(),
-  elements: new Set(),
-  tags: new Set(),
+  rarities: new Set<string>(),
+  elements: new Set<string>(),
+  tags: new Set<string>(),
   attack: "",
   sort: "idAsc",
 };
@@ -32,12 +32,12 @@ const MISC_TYPE_ICON = {
 
 const ELEMENTS_ORDER = ["Water","Fire","Nature","Wind","Earth","Lightning","Physical","Misc"];
 
-function prettyElementLabel(el){
+function prettyElementLabel(el: any){
   const parts = String(el ?? "").match(/[A-Z][a-z]*/g) || [];
   return parts.length >= 2 ? parts.join("/") : (el ?? "");
 }
 
-function elementIconPath(el){
+function elementIconPath(el: any){
   const parts = String(el ?? "").match(/[A-Z][a-z]*/g) || [];
   const file = parts.length >= 2
     ? parts.map(p => p.toLowerCase()).join("")
@@ -45,7 +45,7 @@ function elementIconPath(el){
   return `../assets/images/type/${file}.png`;
 }
 
-function stageName(m, stageIdx=0){
+function stageName(m: any, stageIdx=0){
   return m?.names?.[stageIdx] ?? m?.names?.[0] ?? "Unknown";
 }
 
@@ -55,11 +55,11 @@ function stageName(m, stageIdx=0){
 
 const STAT_LABELS = ["Weak","Moderate","Strong","Max","Elite"];
 
-const STATS_SELECTED = {
+const STATS_SELECTED: Record<string, string | null> = {
   hp: null, spd: null, ea: null, ed: null, pa: null, pd: null,
 };
 
-const STAT_META = [
+const STAT_META: [string, string][] = [
   ["hp", "HP"],
   ["spd","Speed"],
   ["ea", "Elemental Attack"],
@@ -68,11 +68,11 @@ const STAT_META = [
   ["pd", "Physical Defense"],
 ];
 
-function getStatValue(m, key){
+function getStatValue(m: any, key: string){
   return String(m?.[key] ?? "").trim();
 }
 
-function passesStatsFilter(m){
+function passesStatsFilter(m: any){
   for (const [key] of STAT_META){
     const wanted = STATS_SELECTED[key];
     if (!wanted) continue;
@@ -102,25 +102,25 @@ function initStatsFilterUI(){
     </div>
   `).join("");
 
-  function setOpen(open){
-    panel.hidden = !open;
-    btn.setAttribute("aria-expanded", open ? "true" : "false");
+  function setOpen(open: boolean){
+    if (panel) panel.hidden = !open;
+    if (btn) btn.setAttribute("aria-expanded", open ? "true" : "false");
   }
 
-  btn.addEventListener("click", (e) => {
+  btn.addEventListener("click", (e: any) => {
     e.preventDefault();
     e.stopPropagation();
     setOpen(panel.hidden);
   });
 
-  panel.addEventListener("click", (e) => e.stopPropagation());
+  panel.addEventListener("click", (e: any) => e.stopPropagation());
 
-  document.addEventListener("click", (e) => {
+  document.addEventListener("click", (e: any) => {
     if (panel.hidden) return;
     if (!root.contains(e.target)) setOpen(false);
   });
 
-  grid.addEventListener("click", (e) => {
+  grid.addEventListener("click", (e: any) => {
     const opt = e.target.closest(".statOpt");
     if (!opt) return;
 
@@ -132,14 +132,14 @@ function initStatsFilterUI(){
 
     STATS_SELECTED[key] = (STATS_SELECTED[key] === val) ? null : val;
 
-    group.querySelectorAll(".statOpt").forEach(el => {
+    group.querySelectorAll(".statOpt").forEach((el: any) => {
       el.classList.toggle("is-on", STATS_SELECTED[key] === el.dataset.val);
     });
 
     render();
   });
 
-  clearBtn?.addEventListener("click", (e) => {
+  clearBtn?.addEventListener("click", (e: any) => {
     e.preventDefault();
     for (const k in STATS_SELECTED) STATS_SELECTED[k] = null;
     grid.querySelectorAll(".statOpt").forEach(el => el.classList.remove("is-on"));
@@ -151,11 +151,11 @@ function initStatsFilterUI(){
    ATTACK AUTOCOMPLETE
 ========================================================= */
 
-let ATTACK_NAMES = [];
-let ATTACK_ICON_BY_NAME = new Map();
+let ATTACK_NAMES: string[] = [];
+let ATTACK_ICON_BY_NAME = new Map<string, string>();
 
 function buildAttackIndex(){
-  const set = new Set();
+  const set = new Set<string>();
   const iconByName = new Map();
 
   for (const m of STATE.all){
@@ -185,7 +185,7 @@ function buildAttackIndex(){
   ATTACK_ICON_BY_NAME = iconByName;
 }
 
-function getAttackElement(a){
+function getAttackElement(a: any){
   const raw =
     a?.element ??
     a?.attackElement ??
@@ -201,7 +201,7 @@ function getAttackElement(a){
 
   const norm = el.charAt(0).toUpperCase() + el.slice(1).toLowerCase();
 
-  const alias = {
+  const alias: Record<string, string> = {
     Electric: "Lightning",
     Elec: "Lightning",
   };
@@ -209,7 +209,7 @@ function getAttackElement(a){
   return alias[norm] || norm;
 }
 
-function attackIconPathFromAbility(a){
+function attackIconPathFromAbility(a: any){
   const el = String(a?.element ?? "").trim();
   const type = String(a?.type ?? "").trim();
 
@@ -217,27 +217,27 @@ function attackIconPathFromAbility(a){
     return elementIconPath(el);
   }
 
-  const file = MISC_TYPE_ICON[type];
+  const file = (MISC_TYPE_ICON as Record<string, string>)[type];
   if (file) return `../assets/images/type/${file}`;
 
   return elementIconPath("Misc");
 }
 
-function escapeAttr(s){
+function escapeAttr(s: string | null | undefined){
   return String(s)
     .replaceAll("&","&amp;")
     .replaceAll('"',"&quot;")
     .replaceAll("<","&lt;")
     .replaceAll(">","&gt;");
 }
-function escapeHtml(s){
+function escapeHtml(s: string | null | undefined){
   return String(s)
     .replaceAll("&","&amp;")
     .replaceAll("<","&lt;")
     .replaceAll(">","&gt;");
 }
 
-function renderAttackDropdown(query){
+function renderAttackDropdown(query: string){
   const dd = $("#attackDropdown");
   if (!dd) return;
 
@@ -260,8 +260,7 @@ function renderAttackDropdown(query){
   }
 
   dd.hidden = false;
-  const icon = ATTACK_ICON_BY_NAME.get(name) || elementIconPath("Physical");
-  dd.innerHTML = matches.map((name) => {
+  dd.innerHTML = matches.map((name: string) => {
     const icon = ATTACK_ICON_BY_NAME.get(name) || elementIconPath("Physical");
 
     return `
@@ -281,17 +280,17 @@ function closeAttackDropdown(){
 }
 
 function wireAttackAutocomplete(){
-  const input = $("#attackFilter");
+  const input = $("#attackFilter") as HTMLInputElement | null;
   const dd = $("#attackDropdown");
   if (!input || !dd) return;
 
-  input.addEventListener("input", (e) => {
+  input.addEventListener("input", (e: any) => {
     STATE.attack = e.target.value.trim();
     renderAttackDropdown(STATE.attack);
     render();
   });
 
-  dd.addEventListener("click", (e) => {
+  dd.addEventListener("click", (e: any) => {
     const item = e.target.closest(".apItem");
     if (!item) return;
 
@@ -302,12 +301,12 @@ function wireAttackAutocomplete(){
     render();
   });
 
-  document.addEventListener("click", (e) => {
+  document.addEventListener("click", (e: any) => {
     if (e.target.closest(".miscritpicker")) return;
     closeAttackDropdown();
   });
 
-  input.addEventListener("keydown", (e) => {
+  input.addEventListener("keydown", (e: any) => {
     if (e.key === "Escape"){
       closeAttackDropdown();
       input.blur();
@@ -319,7 +318,7 @@ function wireAttackAutocomplete(){
   });
 }
 
-function rarityClass(rarity){
+function rarityClass(rarity: string | null | undefined){
   switch ((rarity ?? "").toLowerCase()){
     case "common": return "rarity-common";
     case "rare": return "rarity-rare";
@@ -334,7 +333,7 @@ function rarityClass(rarity){
    SPRITES
 ========================================================= */
 
-function spriteUrl(m) {
+function spriteUrl(m: any) {
   const name = (m?.names?.[0] ?? "")
     .toLowerCase()
     .trim()
@@ -348,7 +347,7 @@ function spriteUrl(m) {
    FILTER HELPERS
 ========================================================= */
 
-function uniq(arr){ return Array.from(new Set(arr)); }
+function uniq(arr: any[]){ return Array.from(new Set(arr)); }
 
 const RARITY_ORDER = [
   "Common",
@@ -358,8 +357,8 @@ const RARITY_ORDER = [
   "Legendary"
 ];
 
-function hasFixedDamage(m){
-  const hay = (arr) => (arr ?? []).some(a =>
+function hasFixedDamage(m: any){
+  const hay = (arr: any[]) => (arr ?? []).some((a: any) =>
     String(a?.desc ?? "").toLowerCase().includes("fixed damage")
   );
 
@@ -372,8 +371,8 @@ function hasFixedDamage(m){
   return false;
 }
 
-function hasChaos(m){
-  const has = (arr) => (arr ?? []).some(a => {
+function hasChaos(m: any){
+  const has = (arr: any[]) => (arr ?? []).some((a: any) => {
     const desc = String(a?.desc ?? "").toLowerCase();
     const name = String(a?.name ?? "").toLowerCase();
 
@@ -390,7 +389,7 @@ function hasChaos(m){
 }
 
 
-function computeTags(m){
+function computeTags(m: any){
   const set = new Set();
 
   for (const ab of (m.abilities ?? [])){
@@ -406,10 +405,10 @@ function computeTags(m){
   if (hasChaos(m)) set.add("Chaos");
 
   const deny = new Set(["Attack", "Buff"]);
-  return [...set].filter(t => !deny.has(t));
+  return ([...set] as string[]).filter((t: string) => !deny.has(t));
 }
 
-function rarityColor(rarity){
+function rarityColor(rarity: string | null | undefined){
   switch ((rarity ?? "").toLowerCase()){
     case "common": return "#9ca3af";
     case "rare": return "#60a5fa";
@@ -420,11 +419,11 @@ function rarityColor(rarity){
   }
 }
 
-function hasAttack(m, attackName){
+function hasAttack(m: any, attackName: string){
   const q = String(attackName ?? "").toLowerCase().trim();
   if (!q) return true;
 
-  return (m.abilities ?? []).some(a =>
+  return (m.abilities ?? []).some((a: any) =>
     String(a?.name ?? "").toLowerCase().includes(q)
   );
 }
@@ -448,10 +447,10 @@ function ensureTagsUI(){
   row.insertAdjacentElement("afterend", bar);
 
   bar.addEventListener("click", (e) => {
-    const btn = e.target.closest("[data-tag-remove]");
+    const btn = (e.target as HTMLElement | null)?.closest?.("[data-tag-remove]");
     if (!btn) return;
     const t = btn.getAttribute("data-tag-remove");
-    STATE.tags.delete(t);
+    STATE.tags.delete(t as string);
     renderSelectedTags();
     render();
   });
@@ -495,10 +494,10 @@ function ensureRaritiesUI(){
   row.insertAdjacentElement("afterend", bar);
 
   bar.addEventListener("click", (e) => {
-    const btn = e.target.closest("[data-rarity-remove]");
+    const btn = (e.target as HTMLElement | null)?.closest?.("[data-rarity-remove]");
     if (!btn) return;
     const r = btn.getAttribute("data-rarity-remove");
-    STATE.rarities.delete(r);
+    STATE.rarities.delete(r as string);
     renderSelectedRarities();
     render();
   });
@@ -509,7 +508,7 @@ function renderSelectedRarities(){
   if (!bar) return;
 
   const list = [...STATE.rarities].sort(
-    (a,b)=>RARITY_ORDER.indexOf(a)-RARITY_ORDER.indexOf(b)
+    (a,b)=>RARITY_ORDER.indexOf(a as string)-RARITY_ORDER.indexOf(b as string)
   );
 
   if (!list.length){
@@ -543,23 +542,23 @@ function applyFilters(){
   if (q){
     out = out.filter(m => (
       stageName(m,0).toLowerCase().includes(q) ||
-      String(m.id).includes(q)
+      String((m as any).id).includes(q)
     ));
   }
 
   if (STATE.rarities.size){
-    out = out.filter(m => STATE.rarities.has(m.rarity));
+    out = out.filter((m: any) => STATE.rarities.has(m.rarity));
   }
 
   if (STATE.elements.size){
-    out = out.filter(m => STATE.elements.has(m.element ?? ""));
+    out = out.filter((m: any) => STATE.elements.has(m.element ?? ""));
   }
 
   if (STATE.tags.size){
     const need = [...STATE.tags];
     out = out.filter(m => {
       const mtags = computeTags(m);
-      return need.every(t => mtags.includes(t));
+      return need.every((t: string) => mtags.includes(t));
     });
   }
 
@@ -571,8 +570,8 @@ function applyFilters(){
     switch(STATE.sort){
       case "nameAsc": return an.localeCompare(bn);
       case "nameDesc": return bn.localeCompare(an);
-      case "idAsc": return (a.id??0) - (b.id??0);
-      case "idDesc": return (b.id??0) - (a.id??0);
+      case "idAsc": return ((a as any).id??0) - ((b as any).id??0);
+      case "idDesc": return ((b as any).id??0) - ((a as any).id??0);
       default: return 0;
     }
   });
@@ -742,9 +741,9 @@ async function main(){
   const tagEl = $("#tag");
   const sortEl = $("#sort");
 
-  if (qEl) qEl.addEventListener("input", (e)=>{ STATE.q = e.target.value; render(); });
+  if (qEl) qEl.addEventListener("input", (e: any)=>{ STATE.q = e.target.value; render(); });
 
-  if (rarityEl) rarityEl.addEventListener("change", (e)=> {
+  if (rarityEl) rarityEl.addEventListener("change", (e: any)=> {
     const v = String(e.target.value || "").trim();
     if (!v) return;
     STATE.rarities.add(v);
@@ -753,7 +752,7 @@ async function main(){
     render();
   });
 
-  if (tagEl) tagEl.addEventListener("change", (e)=>{
+  if (tagEl) tagEl.addEventListener("change", (e: any)=>{
     const v = String(e.target.value || "").trim();
     if (!v) return;
     STATE.tags.add(v);
@@ -762,7 +761,7 @@ async function main(){
     render();
   });
 
-  if (sortEl) sortEl.addEventListener("change", (e)=>{ STATE.sort = e.target.value; render(); });
+  if (sortEl) sortEl.addEventListener("change", (e: any)=>{ STATE.sort = e.target.value; render(); });
 
   render();
 }

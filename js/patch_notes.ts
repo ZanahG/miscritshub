@@ -1,11 +1,11 @@
-function qs(sel){ return document.querySelector(sel); }
+function qs(sel: string): HTMLElement | null { return document.querySelector(sel); }
 
-function getParam(name){
+function getParam(name: string){
   const url = new URL(window.location.href);
   return url.searchParams.get(name);
 }
 
-function esc(str){
+function esc(str: any){
   return String(str)
     .replaceAll("&","&amp;")
     .replaceAll("<","&lt;")
@@ -14,15 +14,15 @@ function esc(str){
     .replaceAll("'","&#039;");
 }
 
-function isEmptyChange(v){
+function isEmptyChange(v: any){
   const s = String(v ?? "").trim();
   return s === "" || s === "-" || s.toLowerCase() === "none" || s.toLowerCase() === "n/a";
 }
 
-function tokenizeStats(str){
+function tokenizeStats(str: any){
   const s = String(str ?? "");
   const re = /(-?\d+\/\d+|-?\d+(?:\.\d+)?%|-?\d+(?:\.\d+)?)/g;
-  const out = [];
+  const out: any[] = [];
   let m;
   while ((m = re.exec(s)) !== null){
     out.push({ token: m[0], index: m.index, length: m[0].length });
@@ -30,7 +30,7 @@ function tokenizeStats(str){
   return out;
 }
 
-function statValue(token){
+function statValue(token: any){
   if (!token) return null;
   const frac = token.match(/^(\d+)\/(\d+)$/);
   if (frac){
@@ -44,11 +44,11 @@ function statValue(token){
   return Number.isFinite(v) ? v : null;
 }
 
-function wrapChangedToken(token, cls){
+function wrapChangedToken(token: any, cls: string){
   return `<span class="pnNum pnNum--${cls}">${token}</span>`;
 }
 
-function diffHighlight(from, to){
+function diffHighlight(from: any, to: any){
   const fromStr = String(from ?? "");
   const toStr   = String(to ?? "");
   const fromTokens = tokenizeStats(fromStr).map(t => t.token);
@@ -93,7 +93,7 @@ function diffHighlight(from, to){
   return { fromHTML: esc(fromStr), toHTML: out, rowKind };
 }
 
-function renderDiffRow(label, from, to){
+function renderDiffRow(label: string, from: any, to: any){
   const { fromHTML, toHTML, rowKind } = diffHighlight(from, to);
 
   return `
@@ -110,7 +110,7 @@ function renderDiffRow(label, from, to){
 }
 
 /* ===== Paths ===== */
-function slugifyMiscritName(name){
+function slugifyMiscritName(name: any){
   return String(name || "")
     .trim()
     .toLowerCase()
@@ -118,12 +118,12 @@ function slugifyMiscritName(name){
     .replace(/[^a-z0-9]+/g, "_")
     .replace(/^_+|_+$/g, "");
 }
-function getMiscritAvatarPath(name){
+function getMiscritAvatarPath(name: any){
   const slug = slugifyMiscritName(name);
   return `../assets/images/miscrits_avatar/${slug}_avatar.png`;
 }
 
-function slugifyRelicName(name){
+function slugifyRelicName(name: any){
   return String(name || "")
     .trim()
     .toLowerCase()
@@ -131,12 +131,12 @@ function slugifyRelicName(name){
     .replace(/[^a-z0-9]+/g, "_")
     .replace(/^_+|_+$/g, "");
 }
-function getRelicIconPath(name){
+function getRelicIconPath(name: any){
   const slug = slugifyRelicName(name);
   return `../assets/images/relics/${slug}.png`;
 }
 
-function miniMD(text){
+function miniMD(text: any){
   const s = esc(text);
   return s
     .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
@@ -145,8 +145,8 @@ function miniMD(text){
 }
 
 /* ===== Section renders ===== */
-function renderSystemSection(sec){
-  const items = (sec.items ?? []).map(i => renderDiffRow(i.label, i.from, i.to)).join("");
+function renderSystemSection(sec: any){
+  const items = (sec.items ?? []).map((i: any) => renderDiffRow(i.label, i.from, i.to)).join("");
   return `
     <section class="card pnPanel">
       <h2 class="pnH2">${esc(sec.title)}</h2>
@@ -155,11 +155,11 @@ function renderSystemSection(sec){
   `;
 }
 
-function renderMiscritSection(sec){
+function renderMiscritSection(sec: any){
   const avatarSrc = sec.icon ? sec.icon : getMiscritAvatarPath(sec.name);
 
-  const blocks = (sec.blocks ?? []).map(b => {
-    const changes = (b.changes ?? []).map(c => renderDiffRow(c.label, c.from, c.to)).join("");
+  const blocks = (sec.blocks ?? []).map((b: any) => {
+    const changes = (b.changes ?? []).map((c: any) => renderDiffRow(c.label, c.from, c.to)).join("");
     return `
       <div class="pnBlock">
         <div class="pnBlockHead">
@@ -193,9 +193,9 @@ function renderMiscritSection(sec){
   `;
 }
 
-function renderRelicSection(sec){
-  const blocks = (sec.blocks ?? []).map(b => {
-    const changes = (b.changes ?? []).map(c => renderDiffRow(c.label, c.from, c.to)).join("");
+function renderRelicSection(sec: any){
+  const blocks = (sec.blocks ?? []).map((b: any) => {
+    const changes = (b.changes ?? []).map((c: any) => renderDiffRow(c.label, c.from, c.to)).join("");
     const iconSrc = b.icon ? b.icon : getRelicIconPath(b.spell ?? b.title ?? sec.name);
 
     return `
@@ -234,25 +234,26 @@ function renderRelicSection(sec){
 }
 
 /* ===== Visual Summary (canvas) ===== */
-async function renderPatchVisual(patch){
+async function renderPatchVisual(patch: any){
   if (!patch.visual) return null;
 
   const canvas = document.createElement("canvas");
   canvas.width = 1600;
   canvas.height = 900;
   const ctx = canvas.getContext("2d");
+  if (!ctx) return null;
 
-  function triDown(x, y, s, c){
-    ctx.fillStyle = c;
-    ctx.beginPath();
-    ctx.moveTo(x, y); ctx.lineTo(x + s, y); ctx.lineTo(x + s/2, y + s);
-    ctx.closePath(); ctx.fill();
+  function triDown(x: number, y: number, s: number, c: string){
+    ctx!.fillStyle = c;
+    ctx!.beginPath();
+    ctx!.moveTo(x, y); ctx!.lineTo(x + s, y); ctx!.lineTo(x + s/2, y + s);
+    ctx!.closePath(); ctx!.fill();
   }
-  function triUp(x, y, s, c){
-    ctx.fillStyle = c;
-    ctx.beginPath();
-    ctx.moveTo(x + s/2, y); ctx.lineTo(x, y + s); ctx.lineTo(x + s, y + s);
-    ctx.closePath(); ctx.fill();
+  function triUp(x: number, y: number, s: number, c: string){
+    ctx!.fillStyle = c;
+    ctx!.beginPath();
+    ctx!.moveTo(x + s/2, y); ctx!.lineTo(x, y + s); ctx!.lineTo(x + s, y + s);
+    ctx!.closePath(); ctx!.fill();
   }
 
   ctx.fillStyle = "#0b0f14";
@@ -294,7 +295,7 @@ async function renderPatchVisual(patch){
 
   ctx.fillText("RELICS", 1050, 340);
 
-  async function drawIcons(list, startX, startY, isMiscrit = true){
+  async function drawIcons(list: any[], startX: number, startY: number, isMiscrit = true){
     const ICON = 72, GAP = 12, PER_ROW = 8;
     let x = startX, y = startY;
 
@@ -303,7 +304,7 @@ async function renderPatchVisual(patch){
       const img = new Image();
       img.src = isMiscrit ? getMiscritAvatarPath(name) : getRelicIconPath(name);
       try { await img.decode(); } catch {}
-      ctx.drawImage(img, x, y, ICON, ICON);
+      ctx!.drawImage(img, x, y, ICON, ICON);
 
       if ((i + 1) % PER_ROW === 0){ x = startX; y += ICON + GAP; }
       else x += ICON + GAP;
@@ -340,26 +341,26 @@ async function loadPatch(){
   const res = await fetch(`../assets/data/patchs/patch-${encodeURIComponent(targetVersion)}.json`, { cache:"no-store" });
 
   if (!res.ok){
-    qs("#patchSections").innerHTML = `
+    if (qs("#patchSections")) qs("#patchSections")!.innerHTML = `
       <section class="card pnPanel">
         <h2 class="pnH2">No se encontró el parche ${esc(targetVersion)}</h2>
         <div class="pnMuted">Revisa que exista: assets/data/patchs/patch-${esc(targetVersion)}.json</div>
       </section>
     `;
-    qs("#patchVersion").textContent = "Patch";
-    qs("#patchTitle").textContent = "";
+    if (qs("#patchVersion")) qs("#patchVersion")!.textContent = "Patch";
+    if (qs("#patchTitle")) qs("#patchTitle")!.textContent = "";
     return;
   }
 
   const patch = await res.json();
   document.title = `Patch ${patch.version} | Miscrits HUB`;
 
-  qs("#patchVersion").textContent = `Patch ${patch.version}`;
-  qs("#patchTitle").textContent = patch.title ?? "";
+  if (qs("#patchVersion")) qs("#patchVersion")!.textContent = `Patch ${patch.version}`;
+  if (qs("#patchTitle")) qs("#patchTitle")!.textContent = patch.title ?? "";
 
   const visualDataURL = await renderPatchVisual(patch);
 
-  qs("#patchIntro").innerHTML = `
+  if (qs("#patchIntro")) qs("#patchIntro")!.innerHTML = `
     <h2 class="pnH2">Summary</h2>
     ${
       visualDataURL
@@ -369,7 +370,8 @@ async function loadPatch(){
   `;
 
   const sectionsEl = qs("#patchSections");
-  sectionsEl.innerHTML = (patch.sections ?? []).map(sec => {
+  if (sectionsEl) {
+    sectionsEl.innerHTML = (patch.sections ?? []).map((sec: any) => {
     const t = String(sec.type || "").toLowerCase();
 
     if (t === "system") return renderSystemSection(sec);
@@ -382,7 +384,8 @@ async function loadPatch(){
         <div class="pnMuted">Tipo de sección no soportado: ${esc(sec.type)}</div>
       </section>
     `;
-  }).join("");
+    }).join("");
+  }
 }
 
 loadPatch();

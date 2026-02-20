@@ -1,5 +1,5 @@
 (() => {
-  const $ = (s) => document.querySelector(s);
+  const $ = (s: string) => document.querySelector(s) as HTMLElement;
 
   const PATH = {
     TYPE_ICON_DIR: "../assets/images/type/",
@@ -26,14 +26,14 @@
     "shop": 9,
   };
 
-  function stripDiacritics(str) {
+  function stripDiacritics(str: any) {
     return (str ?? "")
       .toString()
       .normalize("NFD")
       .replace(/[\u0300-\u036f]/g, "");
   }
 
-  function normalize(str) {
+  function normalize(str: any) {
     return stripDiacritics(str ?? "").trim().toLowerCase();
   }
 
@@ -49,9 +49,9 @@
     sábado: "Sat",
   };
 
-  function dayToEnShort(dayEs) {
+  function dayToEnShort(dayEs: any) {
     const key = normalize(dayEs);
-    return DAY_ES_TO_EN[key] ?? dayEs;
+    return (DAY_ES_TO_EN as Record<string, string>)[key] ?? dayEs;
   }
 
   function getServerDayEs() {
@@ -65,7 +65,7 @@
     return daysEs[now.getDay()];
   }
 
-  function escapeHtml(str) {
+  function escapeHtml(str: any) {
     return String(str ?? "")
       .replaceAll("&", "&amp;")
       .replaceAll("<", "&lt;")
@@ -74,29 +74,29 @@
       .replaceAll("'", "&#039;");
   }
 
-  function clamp(n, a, b) {
+  function clamp(n: number, a: number, b: number) {
     return Math.max(a, Math.min(b, n));
   }
 
   const el = {
-    q: $("#q"),
-    day: $("#day"),
-    place: $("#place"),
-    zone: $("#zone"),
-    rarity: $("#rarity"),
-    element: $("#element"),
-    type: $("#type"),
-    typeIcon: $("#typeIcon"),
-    sort: $("#sort"),
-    onlyTodayNoAll: $("#onlyTodayNoAll"),
-    pageSize: $("#pageSize"),
+    q: $("#q") as HTMLInputElement,
+    day: $("#day") as HTMLSelectElement,
+    place: $("#place") as HTMLSelectElement,
+    zone: $("#zone") as HTMLSelectElement,
+    rarity: $("#rarity") as HTMLSelectElement,
+    element: $("#element") as HTMLSelectElement,
+    type: $("#type") as HTMLSelectElement,
+    typeIcon: $("#typeIcon") as HTMLImageElement,
+    sort: $("#sort") as HTMLSelectElement,
+    onlyTodayNoAll: $("#onlyTodayNoAll") as HTMLInputElement,
+    pageSize: $("#pageSize") as HTMLInputElement,
 
     chips: $("#activeChips"),
     grid: $("#grid"),
     count: $("#count"),
 
-    btnClear: $("#btnClear"),
-    btnFavorites: $("#btnFavorites"),
+    btnClear: $("#btnClear") as HTMLButtonElement,
+    btnFavorites: $("#btnFavorites") as HTMLButtonElement,
 
     modal: $("#modal"),
     mKicker: $("#mKicker"),
@@ -106,20 +106,20 @@
     mRarity: $("#mRarity"),
     mZones: $("#mZones"),
     mDays: $("#mDays"),
-    mMapImg: $("#mMapImg"),
-    mFav: $("#mFav"),
+    mMapImg: $("#mMapImg") as HTMLImageElement,
+    mFav: $("#mFav") as HTMLButtonElement,
   };
 
   const elPager = {
     info: $("#pageInfo"),
-    prev: $("#btnPrev"),
-    next: $("#btnNext"),
+    prev: $("#btnPrev") as HTMLButtonElement,
+    next: $("#btnNext") as HTMLButtonElement,
   };
 
   const STATE = {
-    raw: null,
-    entries: [],
-    entriesByKey: new Map(),
+    raw: null as any,
+    entries: [] as any[],
+    entriesByKey: new Map<string, any>(),
 
     q: "",
     day: "",
@@ -134,25 +134,25 @@
     favorites: new Set(JSON.parse(localStorage.getItem("mh_spawn_favs") || "[]")),
   };
 
-  let currentKey = null;
-  let DAY_PRESETS = {};
+  let currentKey: any = null;
+  let DAY_PRESETS: any = {};
 
-  function resolveDays(daysRaw) {
+  function resolveDays(daysRaw: any) {
     if (typeof daysRaw === "string") return DAY_PRESETS[daysRaw] ?? [];
     return Array.isArray(daysRaw) ? daysRaw : [];
   }
 
-  function isAllDaysPreset(daysRaw) {
+  function isAllDaysPreset(daysRaw: any) {
     if (typeof daysRaw === "string" && normalize(daysRaw) === "all_days") return true;
     const resolved = resolveDays(daysRaw);
     return Array.isArray(resolved) && resolved.length >= 7;
   }
 
-  function includesDay(daysArray, selectedDayEs) {
-    return (daysArray ?? []).some((d) => normalize(d) === normalize(selectedDayEs));
+  function includesDay(daysArray: any, selectedDayEs: any) {
+    return (daysArray ?? []).some((d: any) => normalize(d) === normalize(selectedDayEs));
   }
 
-  function fixPath(p) {
+  function fixPath(p: any) {
     const s = String(p ?? "");
     if (!s) return "";
     if (s.startsWith("../assets/")) return s;
@@ -161,7 +161,7 @@
     return s;
   }
 
-  function placeToImageFilename(place) {
+  function placeToImageFilename(place: any) {
     if (!place) return "default.webp";
     return (
       place
@@ -174,41 +174,46 @@
   }
 
 
-  function placeBg(place) {
+  function placeBg(place: any) {
     return `${PATH.PLACES_DIR}${placeToImageFilename(place)}`;
   }
 
-  function placeRank(place) {
-    return PLACE_ORDER[normalize(place)] ?? 999;
+  function placeRank(place: any) {
+    const o: Record<string, number> = PLACE_ORDER;
+    return o[normalize(place)] ?? 999;
   }
 
-  function rarityRank(r) {
-    return RARITY_ORDER[normalize(r)] ?? 999;
+  function rarityRank(r: any) {
+    const o: Record<string, number> = RARITY_ORDER;
+    return o[normalize(r)] ?? 999;
   }
 
   const ELEMENTS = ["fire", "water", "nature", "earth", "wind", "lightning"];
 
-  function typeRank(typeRaw){
+  function typeRank(typeRaw: any){
     const elems = parseElements(typeRaw);
     if (!elems.length) return 999999;
 
     const isCombo = elems.length > 1 ? 1 : 0;
-    const primary = TYPE_BASE_ORDER.indexOf(elems[0]);
+    const primary = TYPE_BASE_ORDER.indexOf(elems[0] || "");
     const primaryRank = primary === -1 ? 99 : primary;
-    const secondary = elems[1] ? TYPE_BASE_ORDER.indexOf(elems[1]) : -1;
+    const secondary = elems[1] ? TYPE_BASE_ORDER.indexOf(elems[1] || "") : -1;
     const secondaryRank = secondary === -1 ? 99 : secondary;
-
+    const order: Record<string, number> = {
+      fire:1, water:2, nature:3, earth:4, wind:5,
+      lightning:6, misc:7
+    };
     return isCombo * 10000 + primaryRank * 100 + secondaryRank;
   }
 
 
-  function primaryElement(entry){
+  function primaryElement(entry: any){
     const elems = parseElements(entry?.type ?? "");
     const priority = ["fire","water","nature","earth","wind","lightning"];
     return priority.find(p => elems.includes(p)) || elems[0] || "misc";
   }
 
-  function elementIconSrc(elKey){
+  function elementIconSrc(elKey: any){
     const key = normalize(elKey || "misc");
     return `${PATH.TYPE_ICON_DIR}${key}.png`;
   }
@@ -237,19 +242,19 @@
     el.typeIcon.alt = val;
   }
 
-  function parseElements(typeRaw) {
+  function parseElements(typeRaw: any) {
     const s = normalize(typeRaw).replace(/[^a-z]/g, "");
     const found = ELEMENTS.filter((el) => s.includes(el));
     return [...new Set(found)];
   }
 
-  function hasElement(entry, elKey) {
+  function hasElement(entry: any, elKey: any) {
     if (!elKey) return true;
     const elems = parseElements(entry?.type ?? "");
     return elems.includes(normalize(elKey));
   }
 
-  function flatten(data) {
+  function flatten(data: any) {
     DAY_PRESETS = data?.presets ?? {};
     const miscrits = Array.isArray(data?.miscrits) ? data.miscrits : [];
     const out = [];
@@ -280,11 +285,11 @@
     return out;
   }
 
-  function uniqSorted(arr) {
+  function uniqSorted(arr: any[]) {
     return [...new Set(arr.filter(Boolean))].sort((a, b) => a.localeCompare(b));
   }
 
-  function fillSelect(selectEl, values, allLabel) {
+  function fillSelect(selectEl: HTMLSelectElement, values: any[], allLabel: string) {
     if (!selectEl) return;
     const curr = selectEl.value;
     selectEl.innerHTML =
@@ -301,9 +306,9 @@
     if (!el.chips) return;
     el.chips.innerHTML = "";
 
-    const chips = [];
+    const chips: any[] = [];
 
-    const pushChip = (k, v, fn) => chips.push([k, v, fn]);
+    const pushChip = (k: string, v: string, fn: () => void) => chips.push([k, v, fn]);
 
     if (STATE.q) pushChip("Search", STATE.q, () => { STATE.q = ""; if (el.q) el.q.value = ""; PAGE = 1; sync(); });
     if (STATE.day) pushChip("Day", STATE.day, () => { STATE.day = ""; if (el.day) el.day.value = ""; PAGE = 1; sync(); });
@@ -356,7 +361,7 @@
     });
   }
 
-  function sortItems(arr) {
+  function sortItems(arr: any[]) {
     const copy = [...arr];
 
     const mode = STATE.sort || "placeRarityName";
@@ -395,7 +400,7 @@
     return copy;
   }
 
-  function getPaged(list) {
+  function getPaged(list: any[]) {
     const total = list.length;
     const totalPages = Math.max(1, Math.ceil(total / PER_PAGE));
     PAGE = clamp(PAGE, 1, totalPages);
@@ -405,7 +410,7 @@
     return { slice: list.slice(startIdx, endIdx), total, totalPages, startIdx, endIdx };
   }
 
-  function updatePagerUI(total, totalPages, startIdx, endIdx) {
+  function updatePagerUI(total: number, totalPages: number, startIdx: number, endIdx: number) {
     if (elPager.info) {
       elPager.info.textContent =
         total === 0 ? "No results" : `Showing ${startIdx + 1}-${endIdx} of ${total} • Page ${PAGE}/${totalPages}`;
@@ -414,17 +419,17 @@
     if (elPager.next) elPager.next.disabled = PAGE >= totalPages;
   }
 
-  function dayLabelShortToFull(d) {
-    const map = { Mon: "Monday", Tue: "Tuesday", Wed: "Wednesday", Thu: "Thursday", Fri: "Friday", Sat: "Saturday", Sun: "Sunday" };
+  function dayLabelShortToFull(d: any) {
+    const map: Record<string, string> = { Mon: "Monday", Tue: "Tuesday", Wed: "Wednesday", Thu: "Thursday", Fri: "Friday", Sat: "Saturday", Sun: "Sunday" };
     return map[d] || d;
   }
 
-  function cardHTML(e) {
+  function cardHTML(e: any) {
     const days = (e.daysEN?.length ? e.daysEN : ["Mon","Tue","Wed","Thu","Fri","Sat","Sun"]);
     const bgUrl = placeBg(e.place);
 
     const daysHtml = days
-      .map((d) => `<span class="dayChip">${escapeHtml(dayLabelShortToFull(d))}</span>`)
+      .map((d: any) => `<span class="dayChip">${escapeHtml(dayLabelShortToFull(d))}</span>`)
       .join("");
 
     return `
@@ -466,11 +471,11 @@
     `;
   }
 
-  let bgObserver;
+  let bgObserver: any;
   function observeBackgrounds() {
     if (bgObserver) bgObserver.disconnect();
 
-    bgObserver = new IntersectionObserver((entries) => {
+    bgObserver = new (window as any).IntersectionObserver((entries: any) => {
       for (const en of entries) {
         if (!en.isIntersecting) continue;
         const panel = en.target;
@@ -483,7 +488,7 @@
     document.querySelectorAll(".spawnPanel[data-bg]").forEach(p => bgObserver.observe(p));
   }
 
-  function render(paged, total, totalPages, startIdx, endIdx) {
+  function render(paged: any[], total: number, totalPages: number, startIdx: number, endIdx: number) {
     if (el.count) el.count.textContent = `${total} result${total === 1 ? "" : "s"}`;
     if (!el.grid) return;
 
@@ -502,7 +507,7 @@
     el.mFav.textContent = isFav ? "★ Favorited" : "☆ Favorite";
   }
 
-  function openModal(key) {
+  function openModal(key: string) {
     const e = STATE.entriesByKey.get(key);
     if (!e || !el.modal) return;
 
@@ -518,7 +523,7 @@
     const daysArr = (e.daysEN?.length ? e.daysEN : ["Mon","Tue","Wed","Thu","Fri","Sat","Sun"]);
     if (el.mDays){
       el.mDays.innerHTML = daysArr
-        .map(d => `<span class="mDayPill">${escapeHtml(dayLabelShortToFull(d))}</span>`)
+        .map((d: any) => `<span class="mDayPill">${escapeHtml(dayLabelShortToFull(d))}</span>`)
         .join("");
     }
 
@@ -621,18 +626,18 @@
     STATE.entries = flatten(data);
     STATE.entriesByKey = new Map(STATE.entries.map(e => [e.key, e]));
 
-    fillSelect(el.place, uniqSorted(STATE.entries.map(e => e.place)), "All places");
-    fillSelect(el.zone, uniqSorted(STATE.entries.flatMap(e => e.zones ?? [])), "All zones");
-    const rarityVals = [...new Set(STATE.entries.map(e => e.rarity).filter(Boolean))]
+    fillSelect(el.place as HTMLSelectElement, uniqSorted(STATE.entries.map((e: any) => e.place)), "All places");
+    fillSelect(el.zone as HTMLSelectElement, uniqSorted(STATE.entries.flatMap((e: any) => e.zones ?? [])), "All zones");
+    const rarityVals = [...new Set(STATE.entries.map((e: any) => e.rarity).filter(Boolean))]
       .sort((a, b) => rarityRank(a) - rarityRank(b) || a.localeCompare(b));
-    fillSelect(el.rarity, rarityVals, "All rarities");
-    const typeVals = [...new Set(STATE.entries.map(e => e.type).filter(Boolean))]
+    fillSelect(el.rarity as HTMLSelectElement, rarityVals, "All rarities");
+    const typeVals = [...new Set(STATE.entries.map((e: any) => e.type).filter(Boolean))]
       .sort((a, b) => typeRank(a) - typeRank(b) || normalize(a).localeCompare(normalize(b)));
 
-    fillSelect(el.type, typeVals, "All types");
+    fillSelect(el.type as HTMLSelectElement, typeVals, "All types");
     updateTypeSelectIcon();
 
-    if (el.element) fillSelect(el.element, ["fire","water","nature","earth","wind","lightning"], "All elements");
+    if (el.element) fillSelect(el.element as HTMLSelectElement, ["fire","water","nature","earth","wind","lightning"], "All elements");
 
     el.q?.addEventListener("input", () => requestSync(true));
     el.day?.addEventListener("change", () => requestSync(true));
@@ -678,14 +683,14 @@
     });
 
     el.grid?.addEventListener("click", (ev) => {
-      const card = ev.target.closest("[data-key]");
+      const card = (ev.target as HTMLElement).closest("[data-key]");
       if (!card) return;
       openModal(String(card.getAttribute("data-key")));
     });
 
     el.grid?.addEventListener("keydown", (ev) => {
       if (ev.key !== "Enter" && ev.key !== " ") return;
-      const card = ev.target.closest("[data-key]");
+      const card = (ev.target as HTMLElement).closest("[data-key]");
       if (!card) return;
       ev.preventDefault();
       openModal(String(card.getAttribute("data-key")));

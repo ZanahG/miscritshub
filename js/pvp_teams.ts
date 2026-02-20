@@ -1,24 +1,24 @@
-const $ = (sel) => document.querySelector(sel);
+const $ = (sel: string) => document.querySelector(sel) as HTMLElement | null;
 
 /* =========================================================
    STATE
 ========================================================= */
-let MISCRITS = [];
-let TEAMS = [];
-let TEAMS_BY_MISCRIT = {};
-let selectedName = null;
+let MISCRITS: any[] = [];
+let TEAMS: any[] = [];
+let TEAMS_BY_MISCRIT: Record<string, any[]> = {};
+let selectedName: string | null = null;
 
-let RELIC_MAP = {};
-let TRENDING_IDS = [];
-let MISCRITS_BY_NAME = {};
+let RELIC_MAP: Record<string, string> = {};
+let TRENDING_IDS: string[] = [];
+let MISCRITS_BY_NAME: Record<string, any> = {};
 
-let BEST_RELICS = {};
-let OPTIONAL_RELICS = {};
+let BEST_RELICS: Record<string, string[]> = {};
+let OPTIONAL_RELICS: Record<string, string[]> = {};
 
-let ACTIVE_RELICS = new Set();
-let MODAL_USED_KEYS = [];
-let MODAL_OPTIONAL_KEYS = [];
-let MODAL_BASE35 = null;
+let ACTIVE_RELICS = new Set<string>();
+let MODAL_USED_KEYS: string[] = [];
+let MODAL_OPTIONAL_KEYS: string[] = [];
+let MODAL_BASE35: any = null;
 
 const RARITIES = ["Meta", "Common", "Rare", "Epic", "Exotic", "Legendary"];
 const TIERS = ["S", "A", "B", "C", "D", "F"];
@@ -44,36 +44,36 @@ const PATH = {
 
 const TB_IMPORT_STORAGE_KEY = "TB_IMPORT_PAYLOAD";
 
-let MISCRITS_META = [];
-let TIER_BY_NAME = {};
-let BASE_BY_NAME = {};
-let RELICS_BY_KEY = {};
+let MISCRITS_META: any[] = [];
+let TIER_BY_NAME: Record<string, string> = {};
+let BASE_BY_NAME: Record<string, any> = {};
+let RELICS_BY_KEY: Record<string, any> = {};
 
 /* =========================================================
    UTILS
 ========================================================= */
-function stripDiacritics(str) {
+function stripDiacritics(str: any) {
   return (str ?? "")
     .toString()
     .normalize("NFD")
     .replace(/[\u0300-\u036f]/g, "");
 }
-function normalize(str) {
+function normalize(str: any) {
   return stripDiacritics(str).trim().toLowerCase();
 }
-function rarityKey(r) {
+function rarityKey(r: any) {
   return normalize(r);
 }
-function avatarSrc(m) {
+function avatarSrc(m: any) {
   return `${PATH.AVATAR_DIR}${m?.avatar ?? "preset_avatar.png"}`;
 }
-function safeImgSrc(path) {
+function safeImgSrc(path: any) {
   return path || PATH.RELIC_FALLBACK;
 }
-function findMiscritByName(name) {
+function findMiscritByName(name: any) {
   return MISCRITS_BY_NAME[normalize(name)] ?? null;
 }
-function typeIconSrc(type) {
+function typeIconSrc(type: any) {
   const t = normalize(type);
   if (!t) return PATH.TYPE_ICON_FALLBACK;
   return `${PATH.TYPE_ICON_DIR}${t}.png`;
@@ -98,7 +98,7 @@ function closeModal() {
 /* =========================================================
    MODAL HEADER HELPERS
 ========================================================= */
-function rarityBadgeClass(rarity) {
+function rarityBadgeClass(rarity: any) {
   const r = normalize(rarity);
   if (r === "meta") return "badge--meta";
   if (r === "common") return "badge--common";
@@ -109,20 +109,20 @@ function rarityBadgeClass(rarity) {
   return "badge--common";
 }
 
-function setBadge(id, text, extraClass) {
+function setBadge(id: string, text: string, extraClass: string) {
   const el = document.getElementById(id);
   if (!el) return;
   el.className = `badge ${extraClass || ""}`.trim();
   el.textContent = text ?? "—";
 }
 
-function setText(id, v) {
+function setText(id: string, v: string) {
   const el = document.getElementById(id);
   if (el) el.textContent = v ?? "—";
 }
 
-function setImg(id, src, alt = "") {
-  const el = document.getElementById(id);
+function setImg(id: string, src: string, alt = "") {
+  const el = document.getElementById(id) as HTMLImageElement | null;
   if (!el) return;
   el.src = src;
   el.alt = alt;
@@ -135,7 +135,7 @@ function setImg(id, src, alt = "") {
 /* =========================================================
    RELICS + STATS HELPERS
 ========================================================= */
-function relicNameToKey(name) {
+function relicNameToKey(name: any) {
   const s = (name ?? "").toString().trim();
   if (!s) return "";
   if (/^[A-Z0-9_]+$/.test(s)) return s;
@@ -147,24 +147,24 @@ function relicNameToKey(name) {
     .replace(/^_+|_+$/g, "");
 }
 
-function titleizeFromKey(key) {
+function titleizeFromKey(key: any) {
   return (key ?? "")
     .toString()
     .trim()
     .toLowerCase()
     .split("_")
     .filter(Boolean)
-    .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
+    .map((w: string) => w.charAt(0).toUpperCase() + w.slice(1))
     .join(" ");
 }
 
-function resolveRelic(ref) {
+function resolveRelic(ref: any) {
   if (!ref) return "";
   const key = relicNameToKey(ref);
   return RELIC_MAP[key] ?? RELIC_MAP[(ref ?? "").toString().trim()] ?? ref;
 }
 
-function getRelicStatsAnyLevelByKey(key) {
+function getRelicStatsAnyLevelByKey(key: any): any {
   const k = relicNameToKey(key);
   const byKey = RELICS_BY_KEY[k];
   if (byKey?.stats) return byKey.stats;
@@ -176,7 +176,7 @@ function getRelicStatsAnyLevelByKey(key) {
 function sumRelicBonusesActive() {
   const totals = { hp: 0, spd: 0, ea: 0, pa: 0, ed: 0, pd: 0 };
 
-  for (const key of ACTIVE_RELICS) {
+  for (const key of Array.from(ACTIVE_RELICS)) {
     const st = getRelicStatsAnyLevelByKey(key);
     if (!st) continue;
     totals.hp += Number(st.HP || 0);
@@ -194,13 +194,13 @@ function fixedBonus20() {
 }
 
 /* ---- stats formula ---- */
-function colorFactor(color) {
+function colorFactor(color: any) {
   const c = (color ?? "").toString().trim().toLowerCase();
   if (c === "red") return 1;
   if (c === "white") return 2;
   return 3;
 }
-function statAtLevel(baseStat15, level, color, isHp) {
+function statAtLevel(baseStat15: number, level: number, color: string, isHp: boolean) {
   const C = colorFactor(color);
   const L = level;
   if (isHp) {
@@ -211,7 +211,7 @@ function statAtLevel(baseStat15, level, color, isHp) {
     return Math.floor(perLevel * L + 5);
   }
 }
-function stats35AllGreenFromBase(baseStats) {
+function stats35AllGreenFromBase(baseStats: any) {
   const lvl = 35;
   const green = "green";
   return {
@@ -227,12 +227,12 @@ function stats35AllGreenFromBase(baseStats) {
 /* =========================================================
    MODAL RENDER
 ========================================================= */
-function renderStatsGrid(baseStats, fixedBonus, relicBonus) {
+function renderStatsGrid(baseStats: any, fixedBonus: any, relicBonus: any) {
   const host = document.getElementById("modalStatsGrid");
   if (!host) return;
   host.innerHTML = "";
 
-  const rows = [
+  const rows: [string, string][] = [
     ["HP", "hp"],
     ["SPD", "spd"],
     ["EA", "ea"],
@@ -276,7 +276,7 @@ function renderStatsGrid(baseStats, fixedBonus, relicBonus) {
   }
 }
 
-function renderRelicsRowTo(hostId, relicKeys) {
+function renderRelicsRowTo(hostId: string, relicKeys: string[]) {
   const host = document.getElementById(hostId);
   if (!host) return;
   host.innerHTML = "";
@@ -325,13 +325,14 @@ function recalcModalStats() {
 ========================================================= */
 function bindModal() {
   document.addEventListener("click", (e) => {
-    if (e.target.closest("[data-modal-close]")) {
+    const target = e.target as HTMLElement | null;
+    if (target?.closest("[data-modal-close]")) {
       e.preventDefault();
       closeModal();
       return;
     }
 
-    const pill = e.target.closest(".relicPill");
+    const pill = target?.closest(".relicPill") as HTMLElement | null;
     if (pill) {
       const k = pill.dataset.relickey;
       if (!k) return;
@@ -352,19 +353,19 @@ function bindModal() {
 /* =========================================================
    AUTO RELICS (from miscrits_meta)
 ========================================================= */
-function getUsedRelicsKeysForName(name) {
+function getUsedRelicsKeysForName(name: string) {
   const key = normalize(name);
   const arr = BEST_RELICS[key];
   if (!Array.isArray(arr)) return [];
   return arr.map(relicNameToKey).slice(0, 4);
 }
 
-function getOptionalRelicsKeysForName(name) {
+function getOptionalRelicsKeysForName(name: string) {
   const key = normalize(name);
   const arr = OPTIONAL_RELICS[key];
   if (!Array.isArray(arr)) return [];
   const used = new Set(getUsedRelicsKeysForName(name).map(relicNameToKey));
-  const out = [];
+  const out: string[] = [];
   for (const r of arr) {
     const k = relicNameToKey(r);
     if (!k || used.has(k)) continue;
@@ -377,14 +378,14 @@ function getOptionalRelicsKeysForName(name) {
 /* =========================================================
    OPEN MODAL
 ========================================================= */
-function openMiscritModal(name) {
+function openMiscritModal(name: string) {
   const m = findMiscritByName(name);
   if (!m) return;
 
   setImg("modalAvatar", avatarSrc(m), m.name);
   setText("modalTitle", m.name);
 
-  const typeIconEl = document.getElementById("modalTypeIcon");
+  const typeIconEl = document.getElementById("modalTypeIcon") as HTMLImageElement | null;
   if (typeIconEl) {
     typeIconEl.src = typeIconSrc(m.type);
     typeIconEl.alt = m.type || "";
@@ -426,7 +427,7 @@ function openMiscritModal(name) {
 /* =========================================================
    META + RELICS HELPERS
 ========================================================= */
-function getRelicsForMiscrit(mm) {
+function getRelicsForMiscrit(mm: any) {
   if (Array.isArray(mm?.relics) && mm.relics.length) return mm.relics.slice(0, 4);
   if (mm?.autoRelics !== true) return [];
 
@@ -437,7 +438,7 @@ function getRelicsForMiscrit(mm) {
   return best.map(relicNameToKey).slice(0, 4);
 }
 
-function getRelicsArray(mm) {
+function getRelicsArray(mm: any) {
   const list = getRelicsForMiscrit(mm);
   return list.map(resolveRelic).filter(Boolean).slice(0, 4);
 }
@@ -445,8 +446,8 @@ function getRelicsArray(mm) {
 /* =========================================================
    INDEXING + GROUPING
 ========================================================= */
-function indexTeamsByMiscrit(teams) {
-  const map = {};
+function indexTeamsByMiscrit(teams: any[]) {
+  const map: Record<string, any[]> = {};
   for (const t of teams) {
     for (const mm of t.miscrits ?? []) {
       const key = normalize(mm.name);
@@ -458,17 +459,17 @@ function indexTeamsByMiscrit(teams) {
   return map;
 }
 
-function groupByRarity(list) {
-  const map = {};
+function groupByRarity(list: any[]) {
+  const map: Record<string, any[]> = {};
   for (const r of RARITIES) map[r] = [];
 
   for (const m of list) {
     const rr = RARITIES.find((x) => rarityKey(x) === rarityKey(m.rarity)) ?? "Common";
-    if (rr !== "Meta") map[rr].push(m);
+    if (rr !== "Meta") map[rr]!.push(m);
   }
 
   for (const r of RARITIES) {
-    map[r].sort((a, b) => (a.name ?? "").localeCompare((b.name ?? ""), "es"));
+    if (map[r]) map[r]!.sort((a: any, b: any) => (a.name ?? "").localeCompare((b.name ?? ""), "es"));
   }
   return map;
 }
@@ -476,12 +477,12 @@ function groupByRarity(list) {
 /* =========================================================
    META SECTION (left)
 ========================================================= */
-function getTierOfMiscrit(m) {
+function getTierOfMiscrit(m: any) {
   return (TIER_BY_NAME[normalize(m?.name)] || "").toUpperCase();
 }
 
 function buildMetaTierGroups() {
-  const tiers = {};
+  const tiers: Record<string, any[]> = {};
   for (const t of TIERS) tiers[t] = [];
 
   for (const m of MISCRITS) {
@@ -492,14 +493,16 @@ function buildMetaTierGroups() {
   }
 
   for (const t of Object.keys(tiers)) {
-    tiers[t].sort((a, b) => (a.name ?? "").localeCompare((b.name ?? ""), "es"));
-    if (!tiers[t].length) delete tiers[t];
+    if (tiers[t]) {
+      tiers[t]!.sort((a: any, b: any) => (a.name ?? "").localeCompare((b.name ?? ""), "es"));
+      if (!tiers[t]!.length) delete tiers[t];
+    }
   }
 
   return tiers;
 }
 
-function renderMetaSection(host) {
+function renderMetaSection(host: HTMLElement) {
   const tierGroups = buildMetaTierGroups();
   const total = Object.values(tierGroups).reduce((acc, arr) => acc + arr.length, 0);
 
@@ -587,7 +590,7 @@ function renderMetaSection(host) {
 /* =========================================================
    UI helpers
 ========================================================= */
-function setActiveAvatar(name, originBtn = null) {
+function setActiveAvatar(name: string | null, originBtn: HTMLElement | null = null) {
   const key = normalize(name);
   document.querySelectorAll(".avatar-btn").forEach((b) => b.classList.remove("is-active"));
 
@@ -598,7 +601,7 @@ function setActiveAvatar(name, originBtn = null) {
   if (!key) return;
 
   document.querySelectorAll(".avatar-btn").forEach((b) => {
-    if (normalize(b.dataset.name) === key) b.classList.add("is-active");
+    if (normalize((b as HTMLElement).dataset.name) === key) b.classList.add("is-active");
   });
 }
 
@@ -615,7 +618,7 @@ function clearSelection() {
   if (teamsList) teamsList.innerHTML = "";
 }
 
-function openSectionForMiscrit(name, originBtn = null) {
+function openSectionForMiscrit(name: string, originBtn: HTMLElement | null = null) {
   const m = findMiscritByName(name);
   if (!m) return;
 
@@ -623,12 +626,12 @@ function openSectionForMiscrit(name, originBtn = null) {
   const originMetaSection = originBtn?.closest('.rare-section[data-rarity="Meta"]');
 
   if (originMetaSection) {
-    const metaBody = originMetaSection.querySelector(".rare-body");
+    const metaBody = originMetaSection.querySelector(".rare-body") as HTMLElement | null;
     if (metaBody) metaBody.style.display = "block";
     originMetaSection.classList.add("is-open");
 
     if (originMetaTier) {
-      const tierBody = originMetaTier.querySelector(".meta-tier__body");
+      const tierBody = originMetaTier.querySelector(".meta-tier__body") as HTMLElement | null;
       if (tierBody) tierBody.style.display = "block";
       originMetaTier.classList.add("is-open");
     }
@@ -639,7 +642,7 @@ function openSectionForMiscrit(name, originBtn = null) {
   const section = document.querySelector(`.rare-section[data-rarity="${rarity}"]`);
   if (!section) return;
 
-  const body = section.querySelector(".rare-body");
+  const body = section.querySelector(".rare-body") as HTMLElement | null;
   if (!body) return;
 
   body.style.display = "block";
@@ -649,15 +652,15 @@ function openSectionForMiscrit(name, originBtn = null) {
 /* =========================================================
    TEAM CARDS + ACTIONS
 ========================================================= */
-function teamDisplayTitle(t) {
+function teamDisplayTitle(t: any) {
   const raw = (t?.title ?? "").toString().trim();
   if (raw) return raw;
   const id = (t?.id ?? "").toString().trim().toUpperCase();
   return id ? `TEAM ${id}` : "TEAM";
 }
 
-function buildTeamImportPayload(t) {
-  const slots = (t?.miscrits ?? []).slice(0, 4).map((mm) => ({
+function buildTeamImportPayload(t: any) {
+  const slots = (t?.miscrits ?? []).slice(0, 4).map((mm: any) => ({
     name: (mm?.name ?? "").toString().trim(),
     relics: getRelicsForMiscrit(mm).map(relicNameToKey).slice(0, 4),
   }));
@@ -674,14 +677,14 @@ function buildTeamImportPayload(t) {
   };
 }
 
-function openInTeamBuilder(t) {
+function openInTeamBuilder(t: any) {
   const payload = buildTeamImportPayload(t);
   localStorage.setItem(TB_IMPORT_STORAGE_KEY, JSON.stringify(payload));
   const id = encodeURIComponent(String(t?.id ?? ""));
   window.location.href = `./team_builder.html?import=${id}`;
 }
 
-async function copyTeamLink(t) {
+async function copyTeamLink(t: any) {
   const id = String(t?.id ?? "");
   const url = `${location.origin}${location.pathname}?team=${encodeURIComponent(id)}`;
 
@@ -699,13 +702,13 @@ async function copyTeamLink(t) {
   }
 }
 
-function buildTeamCardEl(t, extraClass = "") {
+function buildTeamCardEl(t: any, extraClass = "") {
   const card = document.createElement("div");
   card.className = `team-card ${extraClass}`.trim();
 
   const slotsHTML = (t.miscrits ?? [])
     .slice(0, 4)
-    .map((mm) => {
+    .map((mm: any) => {
       const name = (mm.name ?? "").toString().trim();
       const full = findMiscritByName(name);
       const src = full ? avatarSrc(full) : PATH.AVATAR_FALLBACK;
@@ -713,7 +716,7 @@ function buildTeamCardEl(t, extraClass = "") {
 
       const relicsHTML = relics
         .map(
-          (r) => `
+          (r: any) => `
         <button class="relic-btn" type="button" data-mname="${name}" data-kind="relic">
           <img src="${safeImgSrc(r)}" alt="Relic" onerror="this.src='${PATH.RELIC_FALLBACK}'">
         </button>
@@ -776,7 +779,7 @@ function renderAccordions() {
     header.dataset.rarity = rarity;
     header.innerHTML = `
       <strong>${rarity}</strong>
-      <span>${grouped[rarity].length} Miscrits</span>
+      <span>${grouped[rarity] ? grouped[rarity]!.length : 0} Miscrits</span>
     `;
 
     const body = document.createElement("div");
@@ -786,7 +789,7 @@ function renderAccordions() {
     const grid = document.createElement("div");
     grid.className = "avatar-grid";
 
-    for (const m of grouped[rarity]) {
+    for (const m of (grouped[rarity] || [])) {
       const btn = document.createElement("button");
       btn.type = "button";
       btn.className = "avatar-btn";
@@ -816,7 +819,7 @@ function renderAccordions() {
 /* =========================================================
    RENDER RIGHT (panel)
 ========================================================= */
-function renderTeamsFor(selectedMiscritName) {
+function renderTeamsFor(selectedMiscritName: string) {
   const panelTitle = $("#panelTitle");
   const panelMeta = $("#panelMeta");
   const teamsList = $("#teamsList");
@@ -838,7 +841,7 @@ function renderTeamsFor(selectedMiscritName) {
   for (const t of teams) teamsList.appendChild(buildTeamCardEl(t, ""));
 }
 
-function renderSingleTeam(t) {
+function renderSingleTeam(t: any) {
   const panelTitle = $("#panelTitle");
   const panelMeta = $("#panelMeta");
   const teamsList = $("#teamsList");
@@ -852,7 +855,7 @@ function renderSingleTeam(t) {
   teamsList.appendChild(buildTeamCardEl(t, ""));
 }
 
-function selectMiscrit(name, originBtn = null) {
+function selectMiscrit(name: string, originBtn: HTMLElement | null = null) {
   selectedName = name;
   setActiveAvatar(name, originBtn);
   openSectionForMiscrit(name, originBtn);
@@ -893,7 +896,7 @@ function renderTopCarousel() {
   const marquee = document.createElement("div");
   marquee.className = "pvp-marquee";
 
-  const makeCard = (t) => {
+  const makeCard = (t: any) => {
     const c = buildTeamCardEl(t, "topteam-card");
     c.dataset.teamid = String(t.id);
     return c;
@@ -910,7 +913,8 @@ function renderTopCarousel() {
 ========================================================= */
 function bindDelegatedEvents() {
   document.addEventListener("click", (e) => {
-    const avatarBtn = e.target.closest(".avatar-btn");
+    const target = e.target as HTMLElement | null;
+    const avatarBtn = target?.closest(".avatar-btn") as HTMLElement | null;
     if (avatarBtn) {
       e.stopPropagation();
       const name = avatarBtn.dataset.name;
@@ -921,13 +925,13 @@ function bindDelegatedEvents() {
       return;
     }
 
-    const tierBtn = e.target.closest('[data-action="toggle-tier"]');
+    const tierBtn = target?.closest('[data-action="toggle-tier"]');
     if (tierBtn) {
       e.preventDefault();
       const sub = tierBtn.closest(".meta-tier");
       if (!sub) return;
 
-      const body = sub.querySelector(".meta-tier__body");
+      const body = sub.querySelector(".meta-tier__body") as HTMLElement | null;
       if (!body) return;
 
       const open = body.style.display !== "none";
@@ -936,13 +940,13 @@ function bindDelegatedEvents() {
       return;
     }
 
-    const toggleBtn = e.target.closest('[data-action="toggle-rarity"]');
+    const toggleBtn = target?.closest('[data-action="toggle-rarity"]');
     if (toggleBtn) {
       e.preventDefault();
       const section = toggleBtn.closest(".rare-section");
       if (!section) return;
 
-      const body = section.querySelector(".rare-body");
+      const body = section.querySelector(".rare-body") as HTMLElement | null;
       if (!body) return;
 
       const open = body.style.display !== "none";
@@ -952,7 +956,7 @@ function bindDelegatedEvents() {
     }
 
     // Click top carousel card anywhere loads it in panel
-    const topCard = e.target.closest(".topteam-card");
+    const topCard = target?.closest(".topteam-card");
     if (topCard) {
       const tid = topCard.getAttribute("data-teamid");
       const t = TEAMS.find((x) => String(x.id) === String(tid));
@@ -961,7 +965,7 @@ function bindDelegatedEvents() {
     }
 
     // Open modal from team slots
-    const miscritBtn = e.target.closest('[data-kind="miscrit"][data-mname]');
+    const miscritBtn = target?.closest('[data-kind="miscrit"][data-mname]');
     if (miscritBtn) {
       e.preventDefault();
       e.stopPropagation();
@@ -970,7 +974,7 @@ function bindDelegatedEvents() {
       return;
     }
 
-    const relicBtn = e.target.closest('[data-kind="relic"][data-mname]');
+    const relicBtn = target?.closest('[data-kind="relic"][data-mname]');
     if (relicBtn) {
       e.preventDefault();
       e.stopPropagation();
@@ -980,7 +984,7 @@ function bindDelegatedEvents() {
     }
 
     // Team actions
-    const openTB = e.target.closest('[data-action="open-tb"][data-teamid]');
+    const openTB = target?.closest('[data-action="open-tb"][data-teamid]');
     if (openTB) {
       const tid = openTB.getAttribute("data-teamid");
       const t = TEAMS.find((x) => String(x.id) === String(tid));
@@ -988,7 +992,7 @@ function bindDelegatedEvents() {
       return;
     }
 
-    const copy = e.target.closest('[data-action="copy-link"][data-teamid]');
+    const copy = target?.closest('[data-action="copy-link"][data-teamid]');
     if (copy) {
       const tid = copy.getAttribute("data-teamid");
       const t = TEAMS.find((x) => String(x.id) === String(tid));
@@ -1001,12 +1005,12 @@ function bindDelegatedEvents() {
 /* =========================================================
    LOADERS
 ========================================================= */
-function firstDefined(...vals){
+function firstDefined(...vals: any[]){
   for (const v of vals) if (v !== undefined && v !== null && String(v).trim() !== "") return v;
   return undefined;
 }
 
-function normalizeRarity(raw){
+function normalizeRarity(raw: any){
   const r = normalize(raw);
   if (!r) return "Common";
 
@@ -1030,7 +1034,7 @@ function normalizeRarity(raw){
   return "Common";
 }
 
-function coerceMiscrit(m){
+function coerceMiscrit(m: any){
   // intenta leer llaves típicas desde distintos formatos
   const name  = firstDefined(m?.name, m?.miscrit, m?.miscritName, m?.id, m?.key);
   if (!name) return null;
@@ -1047,8 +1051,8 @@ function coerceMiscrit(m){
   };
 }
 
-function collectFromUnknownSpawnsJson(data){
-  const out = [];
+function collectFromUnknownSpawnsJson(data: any){
+  const out: any[] = [];
 
   // Caso A: { miscrits: [...] } / { data: [...] }
   const direct = Array.isArray(data?.miscrits) ? data.miscrits
@@ -1057,11 +1061,12 @@ function collectFromUnknownSpawnsJson(data){
   if (direct) out.push(...direct);
 
   // Caso B: { places: [ { spawns:[...] } ] } o { zones:[...] } etc
-  const containers = []
-    .concat(Array.isArray(data?.places) ? data.places : [])
-    .concat(Array.isArray(data?.zones) ? data.zones : [])
-    .concat(Array.isArray(data?.areas) ? data.areas : [])
-    .concat(Array.isArray(data?.maps) ? data.maps : []);
+  const containers: any[] = [
+    ...(Array.isArray(data?.places) ? data.places : []),
+    ...(Array.isArray(data?.zones) ? data.zones : []),
+    ...(Array.isArray(data?.areas) ? data.areas : []),
+    ...(Array.isArray(data?.maps) ? data.maps : [])
+  ];
 
   for (const c of containers) {
     if (Array.isArray(c?.miscrits)) out.push(...c.miscrits);
@@ -1112,7 +1117,7 @@ async function loadMiscrits() {
   for (const m of MISCRITS) MISCRITS_BY_NAME[normalize(m.name)] = m;
 
   // Debug útil: mira cuántos quedaron por rareza
-  const counts = {};
+  const counts: Record<string, number> = {};
   for (const m of MISCRITS) counts[m.rarity] = (counts[m.rarity] || 0) + 1;
   console.log("[PVP] MISCRITS loaded:", MISCRITS.length, counts);
 }
@@ -1145,9 +1150,9 @@ async function loadMiscritsMeta() {
     const rb = m?.relics_by_level || {};
     const order = ["10", "20", "30", "35"];
 
-    const used = [];
-    const optionals = [];
-    const seen = new Set();
+    const used: string[] = [];
+    const optionals: string[] = [];
+    const seen = new Set<string>();
 
     for (const lvl of order) {
       const arr = Array.isArray(rb[lvl]) ? rb[lvl] : [];

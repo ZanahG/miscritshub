@@ -1,6 +1,6 @@
 import { normalize, toNum } from "./damage_core.js";
 
-const $ = (sel) => document.querySelector(sel);
+const $ = (sel: string) => document.querySelector(sel) as HTMLElement | null;
 
 const PATH = {
   DB: "../assets/data/miscritsdb.json",
@@ -13,13 +13,12 @@ const PATH = {
 
   RELIC_ICON_FOLDER: "../assets/images/relics/",
   STAT_ICON_DIR: "../assets/images/icons/",
+  TEAMBUILDER_BG_FOLDER: "../assets/images/teambuilder/",
 };
 
 const TEAM_SIZE = 4;
 const POINT_CAP = 12;
 const PVP_LEVEL = 35;
-
-PATH.TEAMBUILDER_BG_FOLDER = "../assets/images/teambuilder/";
 
 const TB_BACKGROUNDS = [
   { key: "arena", file: "arena.png", label: "Arena" },
@@ -57,29 +56,29 @@ const STAT_ICON = {
 
 const RELIC_PLACEHOLDER = `${PATH.RELIC_ICON_FOLDER}CRUZ.png`;
 
-let DB = [];
-let BASE = [];
-let META = [];
-let RELICS_RAW = null;
-let RELIC_PICK_LEVEL = null;
+let DB: any[] = [];
+let BASE: any[] = [];
+let META: any[] = [];
+let RELICS_RAW: any = null;
+let RELIC_PICK_LEVEL: number | null = null;
 let RELIC_PICK_QUERY = "";
 
-let DB_BY_NAME = new Map();
-let BASE_BY_NAME = new Map();
-let META_BY_NAME = new Map();
+let DB_BY_NAME = new Map<string, any>();
+let BASE_BY_NAME = new Map<string, any>();
+let META_BY_NAME = new Map<string, any>();
 
-let RELICS_BY_LEVEL = { 10: [], 20: [], 30: [], 35: [] };
-let RELIC_STATS_BY_LEVEL_KEY = { 10: {}, 20: {}, 30: {}, 35: {} };
-let RELICS_BY_KEY = {};
+let RELICS_BY_LEVEL: Record<number, any[]> = { 10: [], 20: [], 30: [], 35: [] };
+let RELIC_STATS_BY_LEVEL_KEY: Record<number, Record<string, any>> = { 10: {}, 20: {}, 30: {}, 35: {} };
+let RELICS_BY_KEY: Record<string, any> = {};
 
 const state = {
-  slots: Array.from({ length: TEAM_SIZE }, () => null),
+  slots: Array.from({ length: TEAM_SIZE }, () => <any>null),
 };
 
-let PICK_SLOT_INDEX = null;
-let BR_SLOT_INDEX = null;
-let BR_DRAFT_COLORS = null;
-let BR_DRAFT_RELICS = null;
+let PICK_SLOT_INDEX: number | null = null;
+let BR_SLOT_INDEX: number | null = null;
+let BR_DRAFT_COLORS: Record<string, string> | null = null;
+let BR_DRAFT_RELICS: any[] | null = null;
 
 /* =========================================================
    Counter Finder
@@ -106,7 +105,7 @@ function openCounterDisclaimer() {
   modal.hidden = false;
   modal.setAttribute("aria-hidden", "false");
 
-  const remember = document.getElementById("cfRemember");
+  const remember = document.getElementById("cfRemember") as HTMLInputElement | null;
   if (remember) remember.checked = false;
 
   return new Promise((resolve) => {
@@ -128,7 +127,7 @@ function openCounterDisclaimer() {
       resolve(true);
     };
 
-    const onKey = (e) => {
+    const onKey = (e: any) => {
       if (e.key === "Escape") onCancel();
     };
 
@@ -205,35 +204,35 @@ function closeCountersPanel() {
 const STAT_KEYS = ["HP", "SPD", "EA", "PA", "ED", "PD"];
 const RADAR_CAPS = {HP: 300,SPD: 180,EA: 195,PA: 195,ED: 210,PD: 210,};
 
-function statOfTotals(totals, key) {
+function statOfTotals(totals: any, key: any) {
   return Math.max(0, toNum(totals?.[key]));
 }
 
-function getCandidateTotalsLevel35(name) {
+function getCandidateTotalsLevel35(name: any) {
   const base15 = getBase15(name);
   if (!base15) return null;
   return computeTotalsLevel35(base15, DEFAULT_COLORS, DEFAULT_BONUS, null);
 }
 
-function getAttacksForName(name, enhanced = false) {
+function getAttacksForName(name: any, enhanced = false) {
   const m = DB_BY_NAME.get(normalize(name));
   if (!m) return [];
   return (enhanced ? m.enhancedAttacks : m.attacks) || [];
 }
 
-function isPhysicalMove(move) {
+function isPhysicalMove(move: any) {
   return normalize(move?.element) === "physical";
 }
 
-function elementMultiplier(attElem, defElems) {
-  const fn = window.MISCRITS_ELEMENT_MULT;
+function elementMultiplier(attElem: any, defElems: any) {
+  const fn = (window as any).MISCRITS_ELEMENT_MULT;
   if (typeof fn === "function") {
     try { return Number(fn(attElem, defElems)) || 1; } catch { return 1; }
   }
   return 1;
 }
 
-function estimateMoveDamage(attName, attTotals, move, defName, defTotals, defElems) {
+function estimateMoveDamage(attName: any, attTotals: any, move: any, defName: any, defTotals: any, defElems: any) {
   const ap = toNum(move?.ap);
   const hits = Math.max(1, toNum(move?.hits) || 1);
   const base = ap * hits;
@@ -256,7 +255,7 @@ function estimateMoveDamage(attName, attTotals, move, defName, defTotals, defEle
   return Math.max(0, dmg);
 }
 
-function pickBestMoveVs(attName, attTotals, defName, defTotals, defElems) {
+function pickBestMoveVs(attName: any, attTotals: any, defName: any, defTotals: any, defElems: any) {
   const moves = getAttacksForName(attName, false);
   let best = null;
   let bestD = -Infinity;
@@ -271,7 +270,7 @@ function pickBestMoveVs(attName, attTotals, defName, defTotals, defElems) {
   return { move: best, dmg: Math.max(0, bestD) };
 }
 
-function counterScore(candidateName, yourTeamSlots) {
+function counterScore(candidateName: any, yourTeamSlots: any[]) {
   const candTotals = getCandidateTotalsLevel35(candidateName);
   if (!candTotals) return -Infinity;
 
@@ -347,7 +346,7 @@ async function runCounterFinder() {
   renderCounterResults(top, metaPressure, null);
 }
 
-function estimateMetaPressure(teamSlots) {
+function estimateMetaPressure(teamSlots: any[]) {
   const metaPool = (() => {
     const list = META_RAW_POOL();
     return Array.isArray(list) ? list.slice(0, 120) : [];
@@ -375,7 +374,7 @@ function listMetaMiscritsNames() {
   if (!Array.isArray(raw) || !raw.length) return [];
 
   const names = raw
-    .map(x => (typeof x === "string" ? x : x?.name))
+    .map((x: any) => (typeof x === "string" ? x : x?.name))
     .filter(Boolean);
 
   const seen = new Set();
@@ -394,7 +393,7 @@ function META_RAW_POOL() {
 
 const RELICS_RAW_META_CACHE = { _metaPool: [] };
 
-function suggestRelicMitigation(teamSlots, counterName) {
+function suggestRelicMitigation(teamSlots: any[], counterName: any) {
   const candTotals = getCandidateTotalsLevel35(counterName);
   if (!candTotals) return { title: "No advice", body: "Missing base stats for counter." };
 
@@ -426,7 +425,7 @@ function suggestRelicMitigation(teamSlots, counterName) {
     };
   }
 
-  const current35 = (worst.slot.relics || []).find(r => toNum(r.level) === 35);
+  const current35 = (worst.slot.relics || []).find((r: any) => toNum(r.level) === 35);
   const currentKey = current35?.key ? relicNameToKey(current35.key) : "";
 
   const baseTotals = worst.slot.totals;
@@ -466,7 +465,7 @@ function suggestRelicMitigation(teamSlots, counterName) {
   return { title: `Mitigate vs ${counterName}`, body };
 }
 
-function renderCounterResults(top, metaPressure, advice) {
+function renderCounterResults(top: any[], metaPressure: any, advice: any) {
   const metaEl = document.getElementById(COUNTER_UI.OUT_META);
   const listEl = document.getElementById(COUNTER_UI.OUT_LIST);
   const relicEl = document.getElementById(COUNTER_UI.OUT_RELIC);
@@ -504,7 +503,7 @@ function renderCounterResults(top, metaPressure, advice) {
 
   if (listEl) {
     listEl.innerHTML = top
-      .map((c, i) => {
+      .map((c: any, i: any) => {
         const ava = avatarSrcFromMetaOrInfer(c.name);
         const best = top[0]?.score ?? 1;
         const pct = Math.max(0, Math.min(99, Math.round((c.score / best) * 100)));
@@ -524,7 +523,7 @@ function renderCounterResults(top, metaPressure, advice) {
 
     listEl.querySelectorAll("[data-counter-add]").forEach((btn) => {
       btn.addEventListener("click", (e) => {
-        const name = decodeURIComponent(e.currentTarget.getAttribute("data-counter-add") || "");
+        const name = decodeURIComponent((e.currentTarget as HTMLElement).getAttribute("data-counter-add") || "");
         if (!name) return;
 
         const idx = state.slots.findIndex((s) => !s?.name);
@@ -547,8 +546,8 @@ function renderCounterResults(top, metaPressure, advice) {
 // Utils
 // -------------------------
 
-function avgTeamStats(slots){
-  const acc = {HP:0,SPD:0,EA:0,PA:0,ED:0,PD:0};
+function avgTeamStats(slots: any[]){
+  const acc: any = {HP:0,SPD:0,EA:0,PA:0,ED:0,PD:0};
   const filled = (slots || []).filter(s => s?.name && s?.totals);
   const n = filled.length || 1;
 
@@ -560,11 +559,11 @@ function avgTeamStats(slots){
   return acc;
 }
 
-function drawRadar(ctx, x, y, r, labels, values01, valuesRaw, capsByKey){
+function drawRadar(ctx: any, x: any, y: any, r: any, labels: any, values01: any, valuesRaw: any, capsByKey: any){
   const N = labels.length;
   const startAng = -Math.PI / 2;
 
-  const pt = (i, rr) => {
+  const pt = (i: any, rr: any) => {
     const a = startAng + (i * 2*Math.PI / N);
     return { x: x + Math.cos(a)*rr, y: y + Math.sin(a)*rr };
   };
@@ -631,19 +630,19 @@ function drawRadar(ctx, x, y, r, labels, values01, valuesRaw, capsByKey){
   ctx.restore();
 }
 
-function showToast(msg, ms = 1400) {
+function showToast(msg: string, ms = 1400) {
   const el = $("#tbToast");
   if (!el) { alert(msg); return; }
   el.textContent = msg;
   el.hidden = false;
-  clearTimeout(showToast._t);
-  showToast._t = setTimeout(() => {
+  clearTimeout((showToast as any)._t);
+  (showToast as any)._t = setTimeout(() => {
     el.hidden = true;
     el.textContent = "";
   }, ms);
 }
 
-async function loadJSON(url) {
+async function loadJSON(url: string) {
   const res = await fetch(url, { cache: "no-store" });
   if (!res.ok) throw new Error(`HTTP ${res.status} loading ${url}`);
   return res.json();
@@ -675,7 +674,7 @@ function saveImgCfg() {
   localStorage.setItem(IMG_LAYOUT_KEY, JSON.stringify(IMG_CFG));
 }
 
-function relicIconSrc(ent) {
+function relicIconSrc(ent: any) {
   const key = typeof ent === "object" ? ent.key : ent;
   const k = relicNameToKey(key);
   if (!k) return RELIC_PLACEHOLDER;
@@ -683,7 +682,7 @@ function relicIconSrc(ent) {
   return `${PATH.RELIC_ICON_FOLDER}${file}`;
 }
 
-function formatRelicStatsLine(stats) {
+function formatRelicStatsLine(stats: any) {
   if (!stats) return "No bonus";
   const order = ["HP", "SPD", "EA", "PA", "ED", "PD"];
   const parts = [];
@@ -695,7 +694,7 @@ function formatRelicStatsLine(stats) {
   return parts.length ? parts.join(" • ") : "No bonus";
 }
 
-function openRelicPicker(level) {
+function openRelicPicker(level: any) {
   const lvl = toNum(level);
   if (!lvl) return;
 
@@ -708,7 +707,7 @@ function openRelicPicker(level) {
   const title = document.getElementById("brRelicTitle");
   if (title) title.textContent = `Relics lvl ${lvl}`;
 
-  const search = document.getElementById("brRelicSearch");
+  const search = document.getElementById("brRelicSearch") as HTMLInputElement | null;
   if (search) {
     search.value = "";
     search.oninput = () => {
@@ -742,7 +741,7 @@ function renderBRRelicButtons() {
     const lvl = toNum(btn.getAttribute("data-relic"));
     const key = lvlToKey.get(lvl) || "";
 
-    const img = btn.querySelector(".brRelicImg");
+    const img = btn.querySelector(".brRelicImg") as HTMLImageElement;
     if (!img) return;
 
     if (!key) {
@@ -766,7 +765,7 @@ function renderRelicPicker() {
   if (!host) return;
   if (!RELIC_PICK_LEVEL) return;
 
-  const lvl = RELIC_PICK_LEVEL;
+  const lvl = RELIC_PICK_LEVEL as number;
   const list = Array.isArray(RELICS_BY_LEVEL?.[lvl]) ? RELICS_BY_LEVEL[lvl] : [];
 
   let filtered = list.slice();
@@ -832,7 +831,7 @@ function renderRelicPicker() {
   }
 }
 
-function slotBadge(slot) {
+function slotBadge(slot: any) {
   const spd = normalize(slot?.colors?.spd);
   return spd === "red" ? "RS" : "S+";
 }
@@ -880,10 +879,11 @@ function setRS() {
 }
 
 async function renderImgPreview() {
-  const canvas = document.getElementById("tbImgCanvas");
+  const canvas = document.getElementById("tbImgCanvas") as HTMLCanvasElement;
   if (!canvas) return;
 
   const ctx = canvas.getContext("2d");
+  if (!ctx) return;
   const W = canvas.width, H = canvas.height;
   ctx.clearRect(0, 0, W, H);
 
@@ -929,7 +929,7 @@ async function renderImgPreview() {
 
     if (IMG_CFG.showRelics) {
       const relicEntries = Array.isArray(slot?.relics) ? slot.relics.slice(0, 4) : [];
-      const relicImgs = await Promise.all(relicEntries.map((ent) => loadImage(relicIconSrc(ent))));
+      const relicImgs = await Promise.all(relicEntries.map((ent: any) => loadImage(relicIconSrc(ent))));
 
       const r = 45;
       const step = 140;
@@ -981,8 +981,8 @@ async function renderImgPreview() {
     const teamAvg = avgTeamStats(state.slots);
 
     const values01 = STAT_KEYS.map((k) => {
-      const cap = toNum(RADAR_CAPS[k]) || 1;
-      const v = toNum(teamAvg[k]);
+      const cap = toNum(RADAR_CAPS[k as keyof typeof RADAR_CAPS]) || 1;
+      const v = toNum((teamAvg as any)[k]);
       return Math.max(0, Math.min(1, v / cap));
     });
 
@@ -1023,7 +1023,7 @@ function openImgModal() {
 
   loadImgCfg();
 
-  const bgSel = document.getElementById("tbImgBg");
+  const bgSel = document.getElementById("tbImgBg") as HTMLSelectElement | null;
   if (bgSel) {
     bgSel.innerHTML = TB_BACKGROUNDS.map((b) => `<option value="${b.key}">${b.label}</option>`).join("");
     bgSel.value = IMG_CFG.bgKey || (TB_BACKGROUNDS[0]?.key || "arena");
@@ -1031,13 +1031,13 @@ function openImgModal() {
       IMG_CFG.bgKey = bgSel.value;
       IMG_CFG.bgUrl = "";
       saveImgCfg();
-      const url = document.getElementById("tbImgBgUrl");
+      const url = document.getElementById("tbImgBgUrl") as HTMLInputElement | null;
       if (url) url.value = "";
       renderImgPreview();
     };
   }
 
-  const bgUrl = document.getElementById("tbImgBgUrl");
+  const bgUrl = document.getElementById("tbImgBgUrl") as HTMLInputElement | null;
   const bgApply = document.getElementById("tbImgBgApply");
   if (bgUrl) bgUrl.value = IMG_CFG.bgUrl || "";
   if (bgApply) {
@@ -1048,7 +1048,7 @@ function openImgModal() {
     };
   }
 
-  const nameInput = document.getElementById("tbImgTeamName");
+  const nameInput = document.getElementById("tbImgTeamName") as HTMLInputElement | null;
   if (nameInput) {
     nameInput.value = IMG_TEAMNAME || "TEAM NAME";
     nameInput.oninput = () => {
@@ -1057,9 +1057,9 @@ function openImgModal() {
     };
   }
 
-  const tTags = document.getElementById("tbImgShowTags");
-  const tRelics = document.getElementById("tbImgShowRelics");
-  const tGraphic = document.getElementById("tbImgShowGraphic");
+  const tTags = document.getElementById("tbImgShowTags") as HTMLInputElement | null;
+  const tRelics = document.getElementById("tbImgShowRelics") as HTMLInputElement | null;
+  const tGraphic = document.getElementById("tbImgShowGraphic") as HTMLInputElement | null;
 
   if (tGraphic) {
     tGraphic.checked = !!IMG_CFG.showGraphic;
@@ -1103,15 +1103,15 @@ function openImgModal() {
   if (btnReset) btnReset.onclick = () => {
     IMG_CFG = { ...IMG_DEFAULT };
     saveImgCfg();
-    const url = document.getElementById("tbImgBgUrl");
+    const url = document.getElementById("tbImgBgUrl") as HTMLInputElement | null;
     if (url) url.value = "";
-    const sel = document.getElementById("tbImgBg");
+    const sel = document.getElementById("tbImgBg") as HTMLSelectElement | null;
     if (sel) sel.value = IMG_CFG.bgKey;
-    const tags = document.getElementById("tbImgShowTags");
+    const tags = document.getElementById("tbImgShowTags") as HTMLInputElement | null;
     if (tags) tags.checked = true;
-    const rel = document.getElementById("tbImgShowRelics");
+    const rel = document.getElementById("tbImgShowRelics") as HTMLInputElement | null;
     if (rel) rel.checked = true;
-    const graphic = document.getElementById("tbImgShowGraphic");
+    const graphic = document.getElementById("tbImgShowGraphic") as HTMLInputElement | null;
     if (graphic) graphic.checked = true;
     renderImgPreview();
     showToast("Export settings reset.");
@@ -1119,7 +1119,7 @@ function openImgModal() {
 
   const btnDownload = document.getElementById("tbImgDownload");
   if (btnDownload) btnDownload.onclick = () => {
-    const canvas = document.getElementById("tbImgCanvas");
+    const canvas = document.getElementById("tbImgCanvas") as HTMLCanvasElement | null;
     if (!canvas) return;
     const a = document.createElement("a");
     a.download = `${(IMG_TEAMNAME || "TEAM_NAME").replace(/[^\w\-]+/g, "_")}_team.png`;
@@ -1132,7 +1132,7 @@ function openImgModal() {
   renderImgPreview();
 }
 
-function avatarSrcFromMetaOrInfer(name) {
+function avatarSrcFromMetaOrInfer(name: any) {
   const meta = META_BY_NAME.get(normalize(name));
   const metaAvatar = meta?.avatar;
 
@@ -1143,7 +1143,7 @@ function avatarSrcFromMetaOrInfer(name) {
   return `${PATH.AVATAR_FOLDER}${file}`;
 }
 
-function getMetaForName(name) {
+function getMetaForName(name: any) {
   return META_BY_NAME.get(normalize(name)) || null;
 }
 
@@ -1151,7 +1151,7 @@ function teamIsComplete() {
   return state.slots.filter((s) => s?.name).length === TEAM_SIZE;
 }
 
-function loadImage(src) {
+function loadImage(src: any): Promise<HTMLImageElement | null> {
   return new Promise((resolve) => {
     const img = new Image();
     img.crossOrigin = "anonymous";
@@ -1161,12 +1161,12 @@ function loadImage(src) {
   });
 }
 
-function drawCenteredText(ctx, text, x, y) {
+function drawCenteredText(ctx: any, text: any, x: any, y: any) {
   const m = ctx.measureText(text);
   ctx.fillText(text, x - m.width / 2, y);
 }
 
-function getRarityForName(name) {
+function getRarityForName(name: any) {
   const meta = getMetaForName(name);
   if (meta?.rarity) return meta.rarity;
 
@@ -1177,21 +1177,21 @@ function getRarityForName(name) {
   return "Common";
 }
 
-function getTierForName(name) {
+function getTierForName(name: any) {
   const meta = getMetaForName(name);
   return meta?.tierlist ?? meta?.tier ?? meta?.Tier ?? null;
 }
 
-function getElementsForName(name) {
+function getElementsForName(name: any) {
   const m = DB_BY_NAME.get(normalize(name));
   return Array.isArray(m?.elements) ? m.elements : [];
 }
 
-function getBase15(name) {
+function getBase15(name: any) {
   return BASE_BY_NAME.get(normalize(name)) || null;
 }
 
-function relicNameToKey(name) {
+function relicNameToKey(name: any) {
   const s = (name ?? "").toString().trim();
   if (!s) return "";
   if (/^[A-Z0-9_]+$/.test(s)) return s;
@@ -1203,9 +1203,9 @@ function relicNameToKey(name) {
     .replace(/^_+|_+$/g, "");
 }
 
-function normalizeRelicStats(stats) {
+function normalizeRelicStats(stats: any) {
   const s = stats || {};
-  const get = (k) => {
+  const get = (k: any) => {
     const v =
       s[k] ??
       s[k.toLowerCase()] ??
@@ -1224,7 +1224,7 @@ function normalizeRelicStats(stats) {
   };
 }
 
-function getRelicStatsByLevel(level, keyOrName) {
+function getRelicStatsByLevel(level: any, keyOrName: any) {
   const lvl = toNum(level);
   const key = relicNameToKey(keyOrName);
   if (!lvl || !key) return null;
@@ -1233,7 +1233,7 @@ function getRelicStatsByLevel(level, keyOrName) {
   return stats ? normalizeRelicStats(stats) : null;
 }
 
-function sumRelicBonuses(relicEntries) {
+function sumRelicBonuses(relicEntries: any) {
   const totals = { HP: 0, SPD: 0, EA: 0, PA: 0, ED: 0, PD: 0 };
 
   for (const ent of relicEntries || []) {
@@ -1254,14 +1254,14 @@ function sumRelicBonuses(relicEntries) {
   return totals;
 }
 
-function colorFactor(color) {
+function colorFactor(color: any) {
   const c = normalize(color);
   if (c === "red") return 1;
   if (c === "white") return 2;
   return 3;
 }
 
-function statAtLevel(baseStat15, level, color, isHp) {
+function statAtLevel(baseStat15: any, level: any, color: any, isHp: any) {
   const C = colorFactor(color);
   const L = Math.max(1, Math.min(35, Number(level) || 35));
 
@@ -1274,7 +1274,7 @@ function statAtLevel(baseStat15, level, color, isHp) {
   }
 }
 
-function computeTotalsLevel35(base15, colors = DEFAULT_COLORS, bonus = DEFAULT_BONUS, relicBonus = null) {
+function computeTotalsLevel35(base15: any, colors = DEFAULT_COLORS, bonus = DEFAULT_BONUS, relicBonus: any = null) {
   if (!base15) return null;
 
   const c = colors || DEFAULT_COLORS;
@@ -1307,7 +1307,7 @@ function computeTotalsLevel35(base15, colors = DEFAULT_COLORS, bonus = DEFAULT_B
   return totals;
 }
 
-function recalcSlotTotals(slot) {
+function recalcSlotTotals(slot: any) {
   if (!slot?.name) return;
 
   const base15 = getBase15(slot.name);
@@ -1323,16 +1323,16 @@ function recalcSlotTotals(slot) {
 // -------------------------
 // Points
 // -------------------------
-function getSlotCost(slot) {
+function getSlotCost(slot: any) {
   if (!slot?.rarity) return 0;
-  return COST_BY_RARITY[slot.rarity] ?? 0;
+  return (COST_BY_RARITY as any)[slot.rarity] ?? 0;
 }
 
 function pointsUsed() {
   return state.slots.reduce((sum, s) => sum + (s ? getSlotCost(s) : 0), 0);
 }
 
-function pointsLeftConsidering(slotIndex) {
+function pointsLeftConsidering(slotIndex: any) {
   const usedBefore = pointsUsed();
   const currentSlot = slotIndex != null ? state.slots[slotIndex] : null;
   const currentCost = currentSlot?.cost ?? 0;
@@ -1342,9 +1342,9 @@ function pointsLeftConsidering(slotIndex) {
 // -------------------------
 // Slot model
 // -------------------------
-function buildSlotFromName(name) {
+function buildSlotFromName(name: any) {
   const rarity = getRarityForName(name);
-  const cost = COST_BY_RARITY[rarity] ?? 0;
+  const cost = (COST_BY_RARITY as any)[rarity] ?? 0;
 
   const slot = {
     name,
@@ -1368,11 +1368,11 @@ function buildSlotFromName(name) {
 // -------------------------
 // Render slots
 // -------------------------
-function slotLabel(i) {
+function slotLabel(i: any) {
   return `Slot ${i + 1}`;
 }
 
-function slotSubline(slot) {
+function slotSubline(slot: any) {
   if (!slot) return "Empty";
   const elems = slot.elements?.length ? slot.elements.join(", ") : "—";
   return `${slot.rarity} • ${slot.cost} pts • ${elems}`;
@@ -1401,7 +1401,7 @@ function renderSlots() {
     const card = document.createElement("div");
     card.className = "tbSlot";
     card.setAttribute("data-slot", String(i));
-    card.addEventListener("click", (e) => {
+    card.addEventListener("click", (e: any) => {
       if (e.target.closest(".tbSlot__x")) return;
       if (e.target.closest("button")) return;
       openPicker(i);
@@ -1426,7 +1426,7 @@ function renderSlots() {
     x.setAttribute("aria-label", "Clear slot");
     x.textContent = "✕";
     x.style.display = slot ? "" : "none";
-    x.addEventListener("click", (e) => {
+    x.addEventListener("click", (e: any) => {
       e.stopPropagation();
       state.slots[i] = null;
       renderSlots();
@@ -1441,7 +1441,7 @@ function renderSlots() {
     btnBR.className = "tbBtn";
     btnBR.textContent = "Bonus & Relics";
     btnBR.disabled = !slot;
-    btnBR.addEventListener("click", (e) => {
+    btnBR.addEventListener("click", (e: any) => {
       e.stopPropagation();
       openBRModal(i);
     });
@@ -1462,7 +1462,7 @@ function renderSlots() {
 // -------------------------
 // Picker modal
 // -------------------------
-function openPicker(slotIndex) {
+function openPicker(slotIndex: any) {
   PICK_SLOT_INDEX = slotIndex;
 
   const modal = $("#tbModal");
@@ -1470,13 +1470,13 @@ function openPicker(slotIndex) {
 
   modal.setAttribute("aria-hidden", "false");
 
-  const search = $("#tbSearch");
+  const search = $("#tbSearch") as HTMLInputElement | null;
   if (search) search.value = "";
 
-  const elSel = $("#tbFilterElement");
+  const elSel = $("#tbFilterElement") as HTMLSelectElement | null;
   if (elSel) elSel.value = "";
 
-  const raritySel = $("#tbFilterRarity");
+  const raritySel = $("#tbFilterRarity") as HTMLSelectElement | null;
   if (raritySel) raritySel.value = "";
 
   renderPickerList();
@@ -1494,9 +1494,9 @@ function closePicker() {
 }
 
 function getPickerFilters() {
-  const q = normalize($("#tbSearch")?.value || "");
-  const element = ($("#tbFilterElement")?.value || "").trim();
-  const rarity = normalize($("#tbFilterRarity")?.value || "");
+  const q = normalize(($("#tbSearch") as HTMLInputElement)?.value || "");
+  const element = (($("#tbFilterElement") as HTMLSelectElement)?.value || "").trim();
+  const rarity = normalize(($("#tbFilterRarity") as HTMLSelectElement)?.value || "");
   const onlyAffordable = false;
   return { q, element, rarity, onlyAffordable };
 }
@@ -1517,7 +1517,7 @@ function renderPickerList() {
 
   if (element) {
     list = list.filter((n) => {
-      const els = getElementsForName(n).map((e) => String(e));
+      const els = getElementsForName(n).map((e: any) => String(e));
       return els.includes(element);
     });
   }
@@ -1532,7 +1532,7 @@ function renderPickerList() {
 
   for (const name of list) {
     const r = getRarityForName(name);
-    const cost = COST_BY_RARITY[r] ?? 0;
+    const cost = (COST_BY_RARITY as any)[r] ?? 0;
     const canPick = cost <= effectiveLeft;
     if (onlyAffordable && !canPick) continue;
 
@@ -1584,14 +1584,14 @@ function renderPickerList() {
 // -------------------------
 // Bonus & Relics modal
 // -------------------------
-function statIconHTML(statKey) {
-  const file = STAT_ICON[statKey];
+function statIconHTML(statKey: any) {
+  const file = (STAT_ICON as any)[statKey];
   if (!file) return "";
   const src = PATH.STAT_ICON_DIR + file;
   return `<img class="brStatIcon" src="${src}" alt="" draggable="false" onerror="this.style.display='none'">`;
 }
 
-function openBRModal(slotIndex) {
+function openBRModal(slotIndex: any) {
   const slot = state.slots[slotIndex];
   if (!slot?.name) return;
 
@@ -1601,7 +1601,7 @@ function openBRModal(slotIndex) {
 
   const ensured = [];
   for (const lvl of BR_RELIC_LEVELS) {
-    const existing = (slot.relics || []).find((r) => toNum(r.level) === lvl);
+    const existing = (slot.relics || []).find((r: any) => toNum(r.level) === lvl);
     ensured.push({ level: lvl, key: existing?.key ? relicNameToKey(existing.key) : "" });
   }
   BR_DRAFT_RELICS = ensured;
@@ -1615,15 +1615,18 @@ function openBRModal(slotIndex) {
   $("#brRSBtn")?.classList.remove("brPill--green");
   $("#brRSBtn")?.classList.remove("brPill--red");
 
-  $("#brTitle") && ($("#brTitle").textContent = `Bonus & Relics • ${slot.name}`);
-  $("#brSub") && ($("#brSub").textContent = `Slot ${slotIndex + 1} • ${slot.elements?.join(", ") || "—"} • ${slot.rarity}`);
+  const titleElem = $("#brTitle");
+  if (titleElem) titleElem.textContent = `Bonus & Relics • ${slot.name}`;
+  
+  const subElem = $("#brSub");
+  if (subElem) subElem.textContent = `Slot ${slotIndex + 1} • ${slot.elements?.join(", ") || "—"} • ${slot.rarity}`;
 
-  $("#brHP") && ($("#brHP").value = String(slot.bonus?.HP ?? 0));
-  $("#brSPD") && ($("#brSPD").value = String(slot.bonus?.SPD ?? 0));
-  $("#brEA") && ($("#brEA").value = String(slot.bonus?.EA ?? 0));
-  $("#brPA") && ($("#brPA").value = String(slot.bonus?.PA ?? 0));
-  $("#brED") && ($("#brED").value = String(slot.bonus?.ED ?? 0));
-  $("#brPD") && ($("#brPD").value = String(slot.bonus?.PD ?? 0));
+  $("#brHP") && (($("#brHP") as HTMLInputElement).value = String(slot.bonus?.HP ?? 0));
+  $("#brSPD") && (($("#brSPD") as HTMLInputElement).value = String(slot.bonus?.SPD ?? 0));
+  $("#brEA") && (($("#brEA") as HTMLInputElement).value = String(slot.bonus?.EA ?? 0));
+  $("#brPA") && (($("#brPA") as HTMLInputElement).value = String(slot.bonus?.PA ?? 0));
+  $("#brED") && (($("#brED") as HTMLInputElement).value = String(slot.bonus?.ED ?? 0));
+  $("#brPD") && (($("#brPD") as HTMLInputElement).value = String(slot.bonus?.PD ?? 0));
 
   renderBRRelicPreview();
   renderBRFinalStats();
@@ -1645,12 +1648,12 @@ function closeBRModal() {
 
 function readBonusFromInputs() {
   return {
-    HP: toNum($("#brHP")?.value),
-    SPD: toNum($("#brSPD")?.value),
-    EA: toNum($("#brEA")?.value),
-    PA: toNum($("#brPA")?.value),
-    ED: toNum($("#brED")?.value),
-    PD: toNum($("#brPD")?.value),
+    HP: toNum(($("#brHP") as HTMLInputElement)?.value),
+    SPD: toNum(($("#brSPD") as HTMLInputElement)?.value),
+    EA: toNum(($("#brEA") as HTMLInputElement)?.value),
+    PA: toNum(($("#brPA") as HTMLInputElement)?.value),
+    ED: toNum(($("#brED") as HTMLInputElement)?.value),
+    PD: toNum(($("#brPD") as HTMLInputElement)?.value),
   };
 }
 
@@ -1733,7 +1736,7 @@ function resetBRModal() {
   BR_DRAFT_COLORS = { ...DEFAULT_COLORS };
 
   ["HP", "SPD", "EA", "PA", "ED", "PD"].forEach((k) => {
-    const el = document.getElementById("br" + k);
+    const el = document.getElementById("br" + k) as HTMLInputElement | null;
     if (el) el.value = "0";
   });
 
@@ -1748,7 +1751,7 @@ function resetBRModal() {
 // -------------------------
 // Relics
 // -------------------------
-function setRelicForLevel(level) {
+function setRelicForLevel(level: any) {
   const lvl = toNum(level);
   if (!lvl) return;
 
@@ -1758,7 +1761,7 @@ function setRelicForLevel(level) {
     return;
   }
 
-  const names = relics.map(r => r.name).join("\n");
+  const names = relics.map((r: any) => r.name).join("\n");
 
   const input = prompt(
     `Select relic for level ${lvl}:\n\n${names}\n\n(Type exact name)`
@@ -1766,7 +1769,7 @@ function setRelicForLevel(level) {
 
   if (!input) return;
 
-  const found = relics.find(r =>
+  const found = relics.find((r: any) =>
     normalize(r.name) === normalize(input)
   );
 
@@ -1778,7 +1781,7 @@ function setRelicForLevel(level) {
   const idx = BR_RELIC_LEVELS.indexOf(lvl);
   if (idx < 0) return;
 
-  BR_DRAFT_RELICS[idx] = {
+  if (BR_DRAFT_RELICS) BR_DRAFT_RELICS[idx] = {
     level: lvl,
     key: found.key
   };
@@ -1801,7 +1804,7 @@ function teamToExportPayload() {
         rarity: s.rarity,
         colors: s.colors || { ...DEFAULT_COLORS },
         bonus: s.bonus || { ...DEFAULT_BONUS },
-        relics: Array.isArray(s.relics) ? s.relics.map(r => ({ level: toNum(r.level), key: relicNameToKey(r.key) })) : [],
+        relics: Array.isArray(s.relics) ? s.relics.map((r: any) => ({ level: toNum(r.level), key: relicNameToKey(r.key) })) : [],
       };
     }),
   };
@@ -1825,7 +1828,7 @@ async function exportTeamToClipboard() {
   }
 }
 
-function sanitizeImportedSlot(raw) {
+function sanitizeImportedSlot(raw: any) {
   if (!raw || typeof raw !== "object") return null;
   if (!raw.name) return null;
 
@@ -1854,14 +1857,14 @@ function sanitizeImportedSlot(raw) {
   const allowedLevels = new Set(BR_RELIC_LEVELS);
   const relics = Array.isArray(raw.relics) ? raw.relics : [];
   slot.relics = relics
-    .map(r => ({ level: toNum(r.level), key: relicNameToKey(r.key) }))
-    .filter(r => allowedLevels.has(r.level) && r.key);
+    .map((r: any) => ({ level: toNum(r.level), key: relicNameToKey(r.key) }))
+    .filter((r: any) => allowedLevels.has(r.level) && r.key);
 
   recalcSlotTotals(slot);
   return slot;
 }
 
-function importTeamFromJSON(text) {
+function importTeamFromJSON(text: any) {
   let data;
   try {
     data = JSON.parse(text);
@@ -1882,7 +1885,7 @@ function openImportModal() {
   const modal = document.getElementById("tbImportModal");
   if (!modal) return;
 
-  const ta = document.getElementById("tbImportText");
+  const ta = document.getElementById("tbImportText") as HTMLTextAreaElement | null;
   const hint = document.getElementById("tbImportHint");
   if (ta) ta.value = "";
   if (hint) hint.textContent = "";
@@ -1908,12 +1911,12 @@ function bindUI() {
     renderSlots();
   });
 
-  document.addEventListener("click", (e) => {
+  document.addEventListener("click", (e: any) => {
     const modal = $("#tbModal");
     if (!modal || modal.hidden) return;
-
-    if (e.target?.matches("[data-close]")) closePicker();
-    if (e.target?.closest?.("[data-close]")) closePicker();
+    const t = e.target as HTMLElement;
+    if (t?.matches?.("[data-close]")) closePicker();
+    if (t?.closest?.("[data-close]")) closePicker();
   });
 
   $("#tbSearch")?.addEventListener("input", renderPickerList);
@@ -1921,38 +1924,38 @@ function bindUI() {
   $("#tbFilterRarity")?.addEventListener("change", renderPickerList);
   $("#brAllGreenBtn")?.addEventListener("click", setAllGreen);
   $("#brRSBtn")?.addEventListener("click", setRS);
-  $("#tbExportTeamBtn")?.addEventListener("click", (e) => {
+  $("#tbExportTeamBtn")?.addEventListener("click", (e: any) => {
     e.preventDefault();
     exportTeamToClipboard();
   });
 
-  $("#tbImportBtn")?.addEventListener("click", (e) => {
+  $("#tbImportBtn")?.addEventListener("click", (e: any) => {
     e.preventDefault();
     openImportModal();
   });
 
-  document.addEventListener("click", (e) => {
+  document.addEventListener("click", (e: any) => {
     const m = document.getElementById("tbImportModal");
     if (!m || m.hidden) return;
-
-    if (e.target?.matches?.("[data-import-close]") || e.target?.closest?.("[data-import-close]")) {
+    const t = e.target as HTMLElement;
+    if (t?.matches?.("[data-import-close]") || t?.closest?.("[data-import-close]")) {
       closeImportModal();
     }
   });
 
   $("#tbImportApplyBtn")?.addEventListener("click", () => {
-    const ta = document.getElementById("tbImportText");
+    const ta = document.getElementById("tbImportText") as HTMLTextAreaElement | null;
     const hint = document.getElementById("tbImportHint");
     try {
       importTeamFromJSON(ta?.value || "");
       closeImportModal();
     } catch (err) {
-      if (hint) hint.textContent = err?.message || "Import failed.";
+      if (hint) hint.textContent = (err as Error)?.message || "Import failed.";
     }
   });
 
   $("#tbImportPasteBtn")?.addEventListener("click", async () => {
-    const ta = document.getElementById("tbImportText");
+    const ta = document.getElementById("tbImportText") as HTMLTextAreaElement | null;
     const hint = document.getElementById("tbImportHint");
     try {
       const txt = await navigator.clipboard.readText();
@@ -1963,32 +1966,33 @@ function bindUI() {
     }
   });
 
-  document.addEventListener("keydown", (e) => {
+  document.addEventListener("keydown", (e: any) => {
     if (e.key !== "Escape") return;
     const m = document.getElementById("tbImportModal");
     if (m && !m.hidden) closeImportModal();
   });
 
-  document.addEventListener("click", (e) => {
+  document.addEventListener("click", (e: any) => {
     const m = document.getElementById("brRelicModal");
     if (!m || m.hidden) return;
-    if (e.target?.matches?.("[data-relic-close]") || e.target?.closest?.("[data-relic-close]")) {
+    const t = e.target as HTMLElement;
+    if (t?.matches?.("[data-relic-close]") || t?.closest?.("[data-relic-close]")) {
       closeRelicPicker();
     }
   });
 
-  document.addEventListener("keydown", (e) => {
+  document.addEventListener("keydown", (e: any) => {
     if (e.key !== "Escape") return;
     const m = document.getElementById("brRelicModal");
     if (m && !m.hidden) closeRelicPicker();
   });
 
-  document.addEventListener("click", (e) => {
+  document.addEventListener("click", (e: any) => {
     const modal = $("#brModal");
     if (!modal || modal.hidden) return;
-
-    if (e.target?.matches("[data-br-close]")) closeBRModal();
-    if (e.target?.closest?.("[data-br-close]")) closeBRModal();
+    const t = e.target as HTMLElement;
+    if (t?.matches?.("[data-br-close]")) closeBRModal();
+    if (t?.closest?.("[data-br-close]")) closeBRModal();
   });
 
   $("#brApplyBtn")?.addEventListener("click", applyBRModal);
@@ -2008,22 +2012,22 @@ function bindUI() {
     });
   });
 
-  $("#tbExportBtn")?.addEventListener("click", (e) => {
+  $("#tbExportBtn")?.addEventListener("click", (e: any) => {
     e.preventDefault();
     openImgModal();
   });
 
-  document.addEventListener("click", (e) => {
+  document.addEventListener("click", (e: any) => {
     const m = document.getElementById("tbImgModal");
     if (!m || m.hidden) return;
-
-    if (e.target?.matches?.("[data-img-close]")) {
+    const t = e.target as HTMLElement;
+    if (t?.matches?.("[data-img-close]")) {
       m.hidden = true;
       m.setAttribute("aria-hidden", "true");
     }
   });
 
-  document.addEventListener("keydown", (e) => {
+  document.addEventListener("keydown", (e: any) => {
     if (e.key !== "Escape") return;
     const m = document.getElementById("tbImgModal");
     if (m && !m.hidden) {
@@ -2032,7 +2036,7 @@ function bindUI() {
     }
   });
 
-  document.addEventListener("keydown", (e) => {
+  document.addEventListener("keydown", (e: any) => {
     if (e.key !== "Escape") return;
 
     const br = $("#brModal");
@@ -2048,10 +2052,10 @@ function bindUI() {
 // -------------------------
 async function loadAll() {
   const [dbJson, baseJson, metaJson, relicsJson] = await Promise.all([
-    loadJSON(PATH.DB),
-    loadJSON(PATH.BASE_STATS),
-    loadJSON(PATH.META),
-    loadJSON(PATH.RELICS).catch(() => null),
+    loadJSON(PATH.DB as string),
+    loadJSON(PATH.BASE_STATS as string),
+    loadJSON(PATH.META as string),
+    loadJSON(PATH.RELICS as string).catch(() => null),
   ]);
 
   DB = Array.isArray(dbJson) ? dbJson : dbJson?.miscrits ?? [];
@@ -2067,16 +2071,16 @@ async function loadAll() {
   META = metaJson?.miscrits ?? metaJson?.data ?? metaJson ?? [];
   RELICS_RAW = relicsJson;
 
-  DB_BY_NAME = new Map(DB.filter((m) => m?.name).map((m) => [normalize(m.name), m]));
+  DB_BY_NAME = new Map(DB.filter((m: any) => m?.name).map((m: any) => [normalize(m.name), m]));
   BASE_BY_NAME = new Map(
     BASE
-      .filter((x) => x?.name && x?.baseStats)
-      .map((x) => [normalize(x.name), x.baseStats])
+      .filter((x: any) => x?.name && x?.baseStats)
+      .map((x: any) => [normalize(x.name), x.baseStats])
   );
   META_BY_NAME = new Map(
     (Array.isArray(META) ? META : [])
-      .filter((x) => x?.name)
-      .map((x) => [normalize(x.name), x])
+      .filter((x: any) => x?.name)
+      .map((x: any) => [normalize(x.name), x])
   );
 
   RELICS_BY_LEVEL = { 10: [], 20: [], 30: [], 35: [] };
@@ -2107,8 +2111,8 @@ async function loadAll() {
 
     const key = relicNameToKey(r?.key ?? r?.Key ?? name);
 
-    RELIC_STATS_BY_LEVEL_KEY[level][key] = stats;
-    RELICS_BY_LEVEL[level].push({ key, name });
+    if (RELIC_STATS_BY_LEVEL_KEY[level]) RELIC_STATS_BY_LEVEL_KEY[level][key] = stats;
+    if (RELICS_BY_LEVEL[level]) RELICS_BY_LEVEL[level].push({ key, name });
 
     RELICS_BY_KEY[key] = { key, name, level, stats };
     RELICS_BY_KEY[normalize(name)] = { key, name, level, stats };
@@ -2116,14 +2120,15 @@ async function loadAll() {
 
   for (const lvl of [10, 20, 30, 35]) {
     const seen = new Set();
-    RELICS_BY_LEVEL[lvl] = RELICS_BY_LEVEL[lvl]
-      .filter((x) => x?.key && x?.name)
-      .filter((x) => {
+    const arr = RELICS_BY_LEVEL[lvl] || [];
+    RELICS_BY_LEVEL[lvl] = arr
+      .filter((x: any) => x?.key && x?.name)
+      .filter((x: any) => {
         if (seen.has(x.key)) return false;
         seen.add(x.key);
         return true;
       })
-      .sort((a, b) => a.name.localeCompare(b.name, "en", { sensitivity: "base" }));
+      .sort((a: any, b: any) => a.name.localeCompare(b.name, "en", { sensitivity: "base" }));
   }
 }
 
@@ -2140,7 +2145,7 @@ async function init() {
     ensureCountersUI();
   } catch (e) {
     console.error(e);
-    showToast(e?.message || "Error loading Team Builder data.");
+    showToast((e as any)?.message || "Error loading Team Builder data.");
   }
 }
 
