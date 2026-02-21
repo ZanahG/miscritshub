@@ -6,6 +6,7 @@ const STATE = {
   rarities: new Set(),
   elements: new Set(),
   tags: new Set(),
+  locationFilter: new Set(),
   attack: "",
   sort: "idAsc",
 };
@@ -409,6 +410,19 @@ function computeTags(m){
   return [...set].filter(t => !deny.has(t));
 }
 
+function computeLocations(m){
+  const locs = m?.locations;
+  if (!locs) return [];
+
+  const set = new Set();
+
+  for (const key of Object.keys(locs)){
+    if (key) set.add(String(key));
+  }
+
+  return [...set];
+}
+
 function rarityColor(rarity){
   switch ((rarity ?? "").toLowerCase()){
     case "common": return "#9ca3af";
@@ -473,6 +487,53 @@ function renderSelectedTags(){
       <button type="button"
         data-tag-remove="${escapeAttr(t)}"
         aria-label="Remove ${escapeAttr(t)}"
+        style="border:0;cursor:pointer;background:transparent;color:inherit;font-weight:900;opacity:.85;line-height:1;">
+        ×
+      </button>
+    </span>
+  `).join("");
+}
+
+function ensureLocationsUI(){
+  const row = document.querySelector(".mpFilters");
+  if (!row) return;
+  if ($("#locationFilterBar")) return;
+
+  const bar = document.createElement("div");
+  bar.id = "locationFilterBar";
+  bar.style.display = "flex";
+  bar.style.gap = "8px";
+  bar.style.flexWrap = "wrap";
+  bar.style.justifyContent = "center";
+  bar.style.margin = "10px 0 0";
+  row.insertAdjacentElement("afterend", bar);
+
+  bar.addEventListener("click", (e) => {
+    const btn = e.target.closest("[data-location-remove]");
+    if (!btn) return;
+    const t = btn.getAttribute("data-location-remove");
+    STATE.locationFilter.delete(t);
+    renderSelectedLocations();
+    render();
+  });
+}
+
+function renderSelectedLocations(){
+  const bar = $("#locationFilterBar");
+  if (!bar) return;
+
+  const locs = [...STATE.locationFilter].sort((a,b)=>a.localeCompare(b));
+  if (!locs.length){
+    bar.innerHTML = "";
+    return;
+  }
+
+  bar.innerHTML = locs.map(l => `
+    <span class="tag tag--active" style="display:inline-flex;align-items:center;gap:8px;">
+      ${escapeHtml(l)}
+      <button type="button"
+        data-location-remove="${escapeAttr(l)}"
+        aria-label="Remove ${escapeAttr(l)}"
         style="border:0;cursor:pointer;background:transparent;color:inherit;font-weight:900;opacity:.85;line-height:1;">
         ×
       </button>
@@ -563,6 +624,15 @@ function applyFilters(){
     });
   }
 
+  if(STATE.locationFilter.size){
+    let need = [...STATE.locationFilter];
+    out = out.filter(m => {
+      const locs = computeLocations(m);
+      if (!locs || Object.keys(locs).length === 0) return need.includes("Miscrit Shop");
+      return locs.some(loc => need.includes(loc));
+    });
+  }
+
   out = out.filter(m => passesStatsFilter(m));
 
   out.sort((a,b) => {
@@ -587,6 +657,7 @@ function render(){
 
   renderSelectedRarities();
   renderSelectedTags();
+  renderSelectedLocations();
 
   const list = applyFilters();
 
@@ -690,10 +761,13 @@ function renderElementPills() {
 function fillSelects(){
   const raritySel = $("#rarity");
   const tagSel = $("#tag");
-  if (!raritySel || !tagSel) return;
+  const locationFilterSel = $("#locationFilter");
+
+  if (!raritySel || !tagSel || !locationFilterSel) return;
 
   raritySel.innerHTML = `<option value="">All Rarities</option>`;
   tagSel.innerHTML = `<option value="">Filter by Tags</option>`;
+  locationFilterSel.innerHTML = `<option value="">Filter by Location</option>`;
 
   const rarities = uniq(STATE.all.map(m => m.rarity).filter(Boolean))
     .sort((a, b) =>
@@ -712,6 +786,14 @@ function fillSelects(){
     opt.value = t;
     opt.textContent = t;
     tagSel.appendChild(opt);
+  }
+
+  const locations = uniq([...STATE.all.flatMap(computeLocations), "Miscrit Shop"]).sort((a,b)=>a.localeCompare(b));
+  for (const l of locations){
+    const opt = document.createElement("option");
+    opt.value = l;
+    opt.textContent = l;
+    locationFilterSel.appendChild(opt);
   }
 }
 
@@ -733,13 +815,16 @@ async function main(){
   initStatsFilterUI();
 
   ensureTagsUI();
+  ensureLocationsUI();
   ensureRaritiesUI();
   renderSelectedRarities();
   renderSelectedTags();
+  renderSelectedLocations();
 
   const qEl = $("#q");
   const rarityEl = $("#rarity");
   const tagEl = $("#tag");
+  const locationFilterEl = $("#locationFilter");
   const sortEl = $("#sort");
 
   if (qEl) qEl.addEventListener("input", (e)=>{ STATE.q = e.target.value; render(); });
@@ -759,6 +844,15 @@ async function main(){
     STATE.tags.add(v);
     e.target.value = "";
     renderSelectedTags();
+    render();
+  });
+
+  if (locationFilterEl) locationFilterEl.addEventListener("change", (e)=>{
+    const v = String(e.target.value || "").trim();
+    if (!v) return;
+    STATE.locationFilter.add(v);
+    e.target.value = "";
+    renderSelectedLocations();
     render();
   });
 
