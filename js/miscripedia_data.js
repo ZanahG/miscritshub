@@ -114,7 +114,7 @@ function computeTags(m){
 function firstLocation(m){
   const loc = m.locations ?? {};
   const zones = Object.keys(loc);
-  return zones.length ? zones[0] : "Unknown";
+  return zones.length ? zones[0] : "Miscrit Shop";
 }
 
 /* =========================================================
